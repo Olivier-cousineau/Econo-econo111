@@ -1,217 +1,202 @@
-name: Nightly data organize (21:00 Québec)
+name: Nightly import + organize (21:00 Québec)
 
 on:
   schedule:
-    - cron: "0 1 * * *"   # 21:00 Québec en été (EDT)
-    - cron: "0 2 * * *"   # 21:00 Québec en hiver (EST)
+    - cron: "0 1 * * *"   # 21:00 Québec (été, EDT)
+    - cron: "0 2 * * *"   # 21:00 Québec (hiver, EST)
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  organize:
+  import_and_organize:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          ref: main
+
+      - name: Install rclone
+        run: |
+          curl -fsSL https://rclone.org/install.sh | sudo bash
+
+      - name: Write rclone config from secrets
+        env:
+          GDRIVE_SA_JSON: ${{ secrets.GDRIVE_SA_JSON }}
+        run: |
+          echo "$GDRIVE_SA_JSON" > sa.json
+          cat > rclone.conf <<'RC'
+          [gdrive]
+          type = drive
+          scope = drive.readonly
+          service_account_file = sa.json
+          RC
+          mkdir -p incoming
+
+      - name: Sync Google Drive -> repo/incoming (miroir strict)
+        env:
+          RCLONE_CONFIG: ${{ github.workspace }}/rclone.conf
+          DRIVE_FOLDER_ID: ${{ secrets.DRIVE_FOLDER_ID }}
+        run: |
+          # ⚠️ 'sync' = écrase ET supprime ce qui n'est pas dans Drive
+          rclone sync gdrive: incoming \
+            --drive-root-folder-id "$DRIVE_FOLDER_ID" \
+            --fast-list --transfers=8 --checkers=8 \
+            --drive-acknowledge-abuse=true --verbose
 
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Run organizer
+      - name: Organize into data/<store>/<city>.json + previews
+        shell: bash
         run: |
           python - << 'PY'
-          import os, re, json, html
+          import os, re, json, html, shutil
 
           STORES = {
-            "walmart": "Walmart",
-            "home-depot": "Home Depot",
-            "canadian-tire": "Canadian Tire",
-            "rona": "Rona",
-            "patrick-morin": "Patrick Morin",
-            "sporting-life": "Sporting Life",
+              "walmart": "Walmart",
+              "home-depot": "Home Depot",
+              "canadian-tire": "Canadian Tire",
+              "rona": "Rona",
+              "patrick-morin": "Patrick Morin",
+              "sporting-life": "Sporting Life",
           }
           CITIES = {
-            "montreal": "Montréal",
-            "laval": "Laval",
-            "saint-jerome": "Saint-Jérôme",
-            "st-jerome": "Saint-Jérôme",
-            "stjerome": "Saint-Jérôme",
-            "st-jerôme": "Saint-Jérôme",
+              "montreal": "Montréal",
+              "laval": "Laval",
+              "saint-jerome": "Saint-Jérôme",
+              "st-jerome": "Saint-Jérôme",
+              "stjerome": "Saint-Jérôme",
+              "st-jerôme": "Saint-Jérôme",
           }
 
-          def slugify(s):
-            s = s.lower()
-            s = s.replace("é","e").replace("è","e").replace("ê","e").replace("à","a").replace("î","i").replace("ï","i").replace("ô","o").replace("ç","c")
-            s = re.sub(r"[^a-z0-9]+","-", s).strip("-")
-            return s
+          def slugify(s: str) -> str:
+              s = s.lower()
+              s = (s.replace("é","e").replace("è","e").replace("ê","e")
+                     .replace("à","a").replace("î","i").replace("ï","i")
+                     .replace("ô","o").replace("ç","c"))
+              s = re.sub(r"[^a-z0-9]+","-", s).strip("-")
+              return s
 
-          def ensure_dir(p):
-            os.makedirs(p, exist_ok=True)
+          def ensure(p): os.makedirs(p, exist_ok=True)
+
+          def as_price(v):
+              if isinstance(v, (int, float)): return float(v)
+              if not v: return None
+              s = str(v).replace("\xa0"," ")
+              m = re.search(r"([0-9]+(?:[.,][0-9]{1,2})?)", s)
+              return float(m.group(1).replace(",", ".")) if m else None
 
           def write_preview(items, store_label, city_label, path):
-            def money(x): 
-              return f"{x:,.2f}".replace(",", " ").replace(".", ",") + " $"
-            cards = []
-            for d in items:
-              pct = round((1 - (d["salePrice"]/d["price"])) * 100) if d["price"] else 0
-              cards.append(f"""
-              <article class="card">
-                <img src="{html.escape(d.get('image',''))}" alt="{html.escape(d['title'])}" loading="lazy"/>
-                <div class="body">
-                  <div class="badge">-{pct}% <span class="label">Rabais</span></div>
-                  <h3 style="margin:8px 0 6px;font-size:16px">{html.escape(d['title'])}</h3>
-                  <div class="muted" style="font-size:13px">{html.escape(store_label)} · {html.escape(city_label)}</div>
-                  <div class="price">
-                    <div class="old">{money(d['price'])}</div>
-                    <div style="font-weight:800">{money(d['salePrice'])}</div>
-                  </div>
-                  <a class="btn" href="{html.escape(d.get('url',''))}" target="_blank" rel="noopener" style="width:100%;margin-top:6px">Voir</a>
-                </div>
-              </article>
-              """)
-            html_doc = f"""<!doctype html>
-            <meta charset="utf-8">
-            <title>{store_label} — {city_label}</title>
-            <style>
-              body{{font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;background:#0f172a;color:#e5e7eb;margin:0;padding:24px}}
-              h1{{font-size:22px;margin:0 0 16px}}
-              .grid{{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}}
-              .card{{background:linear-gradient(180deg,#111827,#0b1220);border:1px solid #2b3446;border-radius:14px;overflow:hidden}}
-              .card img{{width:100%;height:160px;object-fit:cover;background:#0b0b10}}
-              .body{{padding:14px}}
-              .price{{display:flex;gap:10px;align-items:baseline;margin:8px 0}}
-              .price .old{{color:#9ca3af;text-decoration:line-through}}
-              .badge{{display:inline-flex;gap:6px;align-items:center;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.35);color:#86efac;border-radius:999px;padding:6px 10px;font-weight:600;font-size:12px}}
-              .btn{{display:inline-flex;justify-content:center;align-items:center;padding:10px 14px;border:1px solid #2b3446;border-radius:12px;color:#e5e7eb;text-decoration:none}}
-              .muted{{color:#9ca3af}}
-            </style>
-            <h1>{store_label} — {city_label} ({len(items)} articles)</h1>
-            <div class="grid">{''.join(cards)}</div>"""
-            with open(path, "w", encoding="utf-8") as f:
-              f.write(html_doc)
+              def money(x): 
+                  return f"{x:,.2f}".replace(",", " ").replace(".", ",") + " $"
+              cards=[]
+              for d in items:
+                  pct = round((1 - (d["salePrice"]/d["price"])) * 100) if d["price"] else 0
+                  cards.append(f'''
+                  <article class="card" style="background:linear-gradient(180deg,#111827,#0b1220);border:1px solid #2b3446;border-radius:14px;overflow:hidden">
+                    <img src="{html.escape(d.get('image',''))}" alt="{html.escape(d['title'])}" loading="lazy" style="width:100%;height:160px;object-fit:cover;background:#0b0b10"/>
+                    <div class="body" style="padding:14px">
+                      <div class="badge" style="display:inline-flex;gap:6px;align-items:center;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.35);color:#86efac;border-radius:999px;padding:6px 10px;font-weight:600;font-size:12px">-{pct}% <span class="label">Rabais</span></div>
+                      <h3 style="margin:8px 0 6px;font-size:16px">{html.escape(d['title'])}</h3>
+                      <div class="muted" style="font-size:13px;color:#9ca3af">{html.escape(store_label)} · {html.escape(city_label)}</div>
+                      <div class="price" style="display:flex;gap:10px;align-items:baseline;margin:8px 0">
+                        <div class="old" style="text-decoration:line-through;color:#9ca3af">{money(d['price'])}</div>
+                        <div style="font-weight:800">{money(d['salePrice'])}</div>
+                      </div>
+                      <a class="btn" href="{html.escape(d.get('url',''))}" target="_blank" rel="noopener" style="display:inline-flex;justify-content:center;align-items:center;padding:10px 14px;border:1px solid #2b3446;border-radius:12px;color:#e5e7eb;text-decoration:none;width:100%">Voir</a>
+                    </div>
+                  </article>
+                  ''')
+              html_doc=f'''<!doctype html>
+              <meta charset="utf-8">
+              <title>{store_label} — {city_label}</title>
+              <body style="font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;background:#0f172a;color:#e5e7eb;margin:0;padding:24px">
+              <h1 style="font-size:22px;margin:0 0 16px">{store_label} — {city_label} ({len(items)} articles)</h1>
+              <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px">{''.join(cards)}</div>
+              </body>'''
+              with open(path, "w", encoding="utf-8") as f:
+                  f.write(html_doc)
 
-          # 1) Parcourt /incoming, détermine magasin/ville depuis le nom de fichier
-          #    Exemples de noms acceptés:
-          #    walmart_saint-jerome.json
-          #    Walmart-Saint-Jérôme.html
-          #    walmart saint jerome (2025-09-29).json
-          incoming = "incoming"
-          ensure_dir(incoming)
-          changed = False
+          ensure("incoming"); ensure("data"); ensure("previews"); ensure("archive")
+          changed=False
 
-          for fname in os.listdir(incoming):
-            src = os.path.join(incoming, fname)
-            if not os.path.isfile(src): 
-              continue
-            base = os.path.splitext(fname)[0]
-            ext = os.path.splitext(fname)[1].lower()
+          for fname in sorted(os.listdir("incoming")):
+              src=os.path.join("incoming", fname)
+              if not os.path.isfile(src): 
+                  continue
+              base, ext = os.path.splitext(fname); ext=ext.lower()
 
-            # extrait tokens "store" et "city" du nom
-            tokens = re.split(r"[^A-Za-z0-9éèêàîïôçÉÈÊÀÎÏÔÇ]+", base)
-            toks = [t for t in tokens if t]
-            if len(toks) < 2:
-              print("Skip (cannot parse):", fname)
-              continue
+              tokens = re.split(r"[^A-Za-z0-9éèêàîïôçÉÈÊÀÎÏÔÇ]+", base)
+              toks=[t for t in tokens if t]
+              if len(toks) < 2:
+                  print("Skip (cannot parse):", fname); 
+                  continue
 
-            # store = 1er token significatif, city = reste
-            store_token = slugify(toks[0])
-            city_token = slugify("-".join(toks[1:]))
+              store_token = slugify(toks[0])
+              city_token  = slugify("-".join(toks[1:]))
 
-            # normalise avec dictionnaires
-            store_slug = store_token
-            city_slug  = city_token
-            store_label = STORES.get(store_slug, None)
-            if not store_label and store_slug in ("walmartca","walmart-canada","walmartcom"): store_label = "Walmart"; store_slug="walmart"
-            if not store_label:
-              print("Unknown store, using raw:", store_slug)
-              store_label = store_slug.replace("-", " ").title()
+              store_slug = store_token
+              store_label = STORES.get(store_slug)
+              if not store_label and store_slug in ("walmartca","walmart-canada","walmartcom"):
+                  store_slug, store_label = "walmart", "Walmart"
+              if not store_label:
+                  store_label = store_slug.replace("-", " ").title()
 
-            # map city variants
-            city_label = CITIES.get(city_slug, None)
-            if not city_label:
-              # quelques variantes communes
-              if city_slug.startswith("saint-jerome") or city_slug.startswith("st-jerome") or city_slug.startswith("stjerome"):
-                city_slug = "saint-jerome"; city_label = "Saint-Jérôme"
+              if city_token.startswith("saint-jerome") or city_token.startswith("st-jerome") or city_token.startswith("stjerome"):
+                  city_slug, city_label = "saint-jerome", "Saint-Jérôme"
               else:
-                city_label = city_slug.replace("-", " ").title()
+                  city_slug = city_token
+                  city_label = CITIES.get(city_slug) or city_slug.replace("-", " ").title()
 
-            # 2) charge et convertit en JSON d'app
-            items = []
-            try:
+              data_dir=os.path.join("data", store_slug); ensure(data_dir)
+              prev_dir=os.path.join("previews", store_slug); ensure(prev_dir)
+
               if ext == ".json":
-                data = json.load(open(src, "r", encoding="utf-8"))
-                # essaie de reconnaître champs usuels; sinon prend déjà au bon format
-                for row in data:
-                  title = (row.get("title") or row.get("name") or row.get("w_q67L") or "").strip()
-                  image = row.get("image") or row.get("img") or row.get("absolute src") or ""
-                  url   = row.get("url") or row.get("href") or row.get("w-100 href") or ""
-                  # prix — si déjà numériques, garde-les, sinon tente extraction
-                  def as_price(v):
-                    if isinstance(v, (int,float)): return float(v)
-                    if not v: return None
-                    s = str(v).replace("\xa0"," ").replace(","," .")  # protège la virgule
-                    import re
-                    m = re.search(r"([0-9]+(?:[.,][0-9]{1,2})?)", s)
-                    return float(m.group(1).replace(",", ".") ) if m else None
-                  price = as_price(row.get("price")) or as_price(row.get("strike")) or as_price(row.get("regularPrice"))
-                  sale  = as_price(row.get("salePrice")) or as_price(row.get("current")) or as_price(row.get("mr1"))
-                  if price is None and sale is not None: price = sale
-                  if sale  is None and price is not None: sale  = price
-                  if title and price and sale:
-                    items.append({
-                      "title": title, "image": image, "price": round(price,2),
-                      "salePrice": round(sale,2), "store": store_label, "city": city_label, "url": url
-                    })
+                  items=[]
+                  try:
+                      data=json.load(open(src,"r",encoding="utf-8"))
+                      for row in data:
+                          title=(row.get("title") or row.get("name") or row.get("w_q67L") or "").strip()
+                          image=row.get("image") or row.get("img") or row.get("absolute src") or ""
+                          url  =row.get("url") or row.get("href") or row.get("w-100 href") or ""
+                          price=as_price(row.get("price")) or as_price(row.get("strike")) or as_price(row.get("regularPrice"))
+                          sale =as_price(row.get("salePrice")) or as_price(row.get("current")) or as_price(row.get("mr1"))
+                          if price is None and sale is not None: price=sale
+                          if sale  is None and price is not None: sale=price
+                          if title and price and sale:
+                              items.append({"title":title,"image":image,"price":round(price,2),"salePrice":round(sale,2),"store":store_label,"city":city_label,"url":url})
+                  except Exception as e:
+                      print("Parse error", fname, e); 
+                      continue
+
+                  if items:
+                      out_json=os.path.join(data_dir, f"{city_slug}.json")
+                      with open(out_json,"w",encoding="utf-8") as f: 
+                          json.dump(items, f, ensure_ascii=False, indent=2)
+                      write_preview(items, store_label, city_label, os.path.join(prev_dir, f"{city_slug}.html"))
+                      changed=True
+
+                  ensure("archive")
+                  shutil.move(src, os.path.join("archive", fname)); 
+                  changed=True
+
               elif ext == ".html":
-                # si tu déposes un HTML brut, on le copie simplement comme "preview"
-                pass
+                  out_html=os.path.join(prev_dir, f"{city_slug}.html")
+                  shutil.move(src, out_html); 
+                  changed=True
+
               else:
-                print("Skip (ext not supported):", fname)
-                continue
-            except Exception as e:
-              print("Parse error", fname, e)
-              continue
-
-            # 3) écrit aux bons endroits
-            data_dir = os.path.join("data", store_slug)
-            prev_dir = os.path.join("previews", store_slug)
-            os.makedirs(data_dir, exist_ok=True)
-            os.makedirs(prev_dir, exist_ok=True)
-
-            # JSON pour l'app
-            if items:
-              out_json = os.path.join(data_dir, f"{city_slug}.json")
-              with open(out_json, "w", encoding="utf-8") as f:
-                json.dump(items, f, ensure_ascii=False, indent=2)
-              changed = True
-              # aperçu HTML
-              out_html = os.path.join(prev_dir, f"{city_slug}.html")
-              write_preview(items, store_label, city_label, out_html)
-              changed = True
-
-            # si source est déjà HTML, on le range comme preview
-            if ext == ".html":
-              out_html = os.path.join(prev_dir, f"{city_slug}.html")
-              os.replace(src, out_html)
-              changed = True
-            else:
-              # on peut archiver la source brute
-              os.makedirs("archive", exist_ok=True)
-              os.replace(src, os.path.join("archive", fname))
-              changed = True
+                  print("Skip (ext not supported):", fname)
 
           if changed:
-            os.system('git config user.name "econodeal-bot"')
-            os.system('git config user.email "bot@users.noreply.github.com"')
-            os.system('git add data previews archive || true')
-            os.system('git commit -m "chore: organize by store/city" || true')
-            os.system('git push || true')
+              os.system('git config user.name "econodeal-bot"')
+              os.system('git config user.email "bot@users.noreply.github.com"')
+              os.system('git add data previews archive incoming || true')
+              os.system('git commit -m "chore: nightly sync + organize by store/city" || true')
+              os.system('git push || true')
           else:
-            print("No changes.")
+              print("No changes.")
           PY
