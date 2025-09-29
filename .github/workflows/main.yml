@@ -1,60 +1,33 @@
-name: Nightly import + organize (21:00 Québec)
+name: Organize incoming -> data/<store>/<city>.json + previews (21:00 Québec)
 
 on:
   schedule:
-    - cron: "0 1 * * *"   # 21:00 Québec (été, EDT)
-    - cron: "0 2 * * *"   # 21:00 Québec (hiver, EST)
-  workflow_dispatch:
+    - cron: "0 1 * * *"   # 21:00 (Québec) l'été (EDT)
+    - cron: "0 2 * * *"   # 21:00 (Québec) l'hiver (EST)
+  workflow_dispatch:       # bouton "Run workflow" dans l'onglet Actions
 
 permissions:
   contents: write
 
 jobs:
-  import_and_organize:
+  organize:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Install rclone
-        run: |
-          curl -fsSL https://rclone.org/install.sh | sudo bash
-
-      - name: Write rclone config from secrets
-        env:
-          GDRIVE_SA_JSON: ${{ secrets.GDRIVE_SA_JSON }}
-        run: |
-          echo "$GDRIVE_SA_JSON" > sa.json
-          cat > rclone.conf <<'RC'
-          [gdrive]
-          type = drive
-          scope = drive.readonly
-          service_account_file = sa.json
-          RC
-          mkdir -p incoming
-
-      - name: Sync Google Drive -> repo/incoming (miroir strict)
-        env:
-          RCLONE_CONFIG: ${{ github.workspace }}/rclone.conf
-          DRIVE_FOLDER_ID: ${{ secrets.DRIVE_FOLDER_ID }}
-        run: |
-          # ⚠️ 'sync' = écrase ET supprime ce qui n'est pas dans Drive
-          rclone sync gdrive: incoming \
-            --drive-root-folder-id "$DRIVE_FOLDER_ID" \
-            --fast-list --transfers=8 --checkers=8 \
-            --drive-acknowledge-abuse=true --verbose
 
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Organize into data/<store>/<city>.json + previews
+      - name: Organize files
         shell: bash
         run: |
           python - << 'PY'
           import os, re, json, html, shutil
 
+          # === Config de base (ajoute des magasins/villes si besoin) ===
           STORES = {
               "walmart": "Walmart",
               "home-depot": "Home Depot",
@@ -120,6 +93,7 @@ jobs:
               with open(path, "w", encoding="utf-8") as f:
                   f.write(html_doc)
 
+          # Dossiers
           ensure("incoming"); ensure("data"); ensure("previews"); ensure("archive")
           changed=False
 
@@ -129,6 +103,7 @@ jobs:
                   continue
               base, ext = os.path.splitext(fname); ext=ext.lower()
 
+              # Déduire magasin et ville depuis le nom de fichier (ex: walmart_saint-jerome.json)
               tokens = re.split(r"[^A-Za-z0-9éèêàîïôçÉÈÊÀÎÏÔÇ]+", base)
               toks=[t for t in tokens if t]
               if len(toks) < 2:
@@ -179,11 +154,13 @@ jobs:
                       write_preview(items, store_label, city_label, os.path.join(prev_dir, f"{city_slug}.html"))
                       changed=True
 
+                  # Archive le brut importé
                   ensure("archive")
                   shutil.move(src, os.path.join("archive", fname)); 
                   changed=True
 
               elif ext == ".html":
+                  # Range directement l'HTML comme preview (remplace l'ancien)
                   out_html=os.path.join(prev_dir, f"{city_slug}.html")
                   shutil.move(src, out_html); 
                   changed=True
@@ -195,7 +172,7 @@ jobs:
               os.system('git config user.name "econodeal-bot"')
               os.system('git config user.email "bot@users.noreply.github.com"')
               os.system('git add data previews archive incoming || true')
-              os.system('git commit -m "chore: nightly sync + organize by store/city" || true')
+              os.system('git commit -m "chore: nightly organize by store/city" || true')
               os.system('git push || true')
           else:
               print("No changes.")
