@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EconoDeal — Canada</title>
+  <style>
+    :root{
+      --bg:#0f172a; /* slate-900 */
+      --panel:#111827; /* gray-900 */
+      --panel-2:#1f2937; /* gray-800 */
+      --text:#e5e7eb; /* gray-200 */
+      --muted:#9ca3af; /* gray-400 */
+      --accent:#22c55e; /* green-500 */
+      --accent-2:#60a5fa; /* blue-400 */
+      --danger:#ef4444; /* red-500 */
+      --warning:#f59e0b; /* amber-500 */
+      --card:#0b1220; /* custom */
+      --border: #2b3446;
+      --radius: 14px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),#0b1020 50%,#0a0f1a);color:var(--text)}
+    header{
+      position:sticky;top:0;z-index:20;background:rgba(15,23,42,.85);backdrop-filter: blur(8px);border-bottom:1px solid var(--border)
+    }
+    .container{max-width:1200px;margin:0 auto;padding:18px}
+    .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+    .logo{display:flex;gap:12px;align-items:center;font-weight:800;letter-spacing:.3px}
+    .logo svg{width:38px;height:38px}
+    .tag{font-size:12px;color:var(--muted)}
+    .slogan{font-size:12px;color:var(--muted)}
+    .pill{background:var(--panel-2);border:1px solid var(--border);padding:10px 14px;border-radius:999px}
+    select, input[type="range"], button{background:var(--panel-2);color:var(--text);border:1px solid var(--border);border-radius:10px;padding:10px 12px}
+    select:focus, input[type="range"]:focus, button:focus{outline:2px solid var(--accent);outline-offset:1px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+    .card{background:linear-gradient(180deg,var(--panel),#0e1626);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    .card img{width:100%;height:160px;object-fit:cover;background:#0b0b10}
+    .card .body{padding:14px}
+    .price{display:flex;align-items:baseline;gap:10px;margin:8px 0}
+    .price .old{text-decoration:line-through;color:var(--muted)}
+    .badge{display:inline-flex;gap:6px;align-items:center;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.35);color:#86efac;border-radius:999px;padding:6px 10px;font-weight:600;font-size:12px}
+    .filters{display:grid;grid-template-columns:repeat(4,minmax(180px,1fr));gap:12px}
+    @media (max-width:900px){.filters{grid-template-columns:1fr 1fr}}
+    @media (max-width:560px){.filters{grid-template-columns:1fr}}
+    .section{padding:28px 0}
+    .section h2{margin:0 0 12px;font-size:24px}
+    .muted{color:var(--muted);font-size:14px}
+    .footer{border-top:1px solid var(--border);padding:20px 0;color:var(--muted);text-align:center}
+    .pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+    .plan{background:linear-gradient(180deg,#111827,#0b1220);border:1px solid var(--border);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:12px}
+    .plan h3{margin:0;font-size:18px}
+    .plan .priceTag{font-size:28px;font-weight:800}
+    .btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid var(--border);cursor:pointer}
+    .btn.primary{background:var(--accent);color:#06210f;border-color:transparent;font-weight:800}
+    .lang-toggle{display:flex;gap:8px;align-items:center}
+    .label{font-size:12px;color:var(--muted)}
+    .split{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
+    @media (max-width:980px){.split{grid-template-columns:1fr}}
+    .kbd{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px;background:var(--panel-2);border:1px solid var(--border);padding:2px 6px;border-radius:6px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container row" style="justify-content:space-between">
+      <div class="logo">
+        <!-- Minimal SVG logo: tag + magnifier + cart -->
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#22c55e"/>
+              <stop offset="100%" stop-color="#60a5fa"/>
+            </linearGradient>
+          </defs>
+          <rect x="6" y="10" width="34" height="26" rx="6" stroke="url(#g)" stroke-width="3"></rect>
+          <path d="M40 31l12 12" stroke="url(#g)" stroke-width="4" stroke-linecap="round"/>
+          <path d="M13 46h34l-2 8H15l-2-8z" stroke="url(#g)" stroke-width="3" fill="transparent"/>
+        </svg>
+        <div>
+          <div style="font-size:18px;line-height:1">EconoDeal</div>
+          <div class="slogan" data-i18n="slogan">Le meilleur outil pour dénicher, revendre et économiser.</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="lang-toggle">
+          <span class="label" data-i18n="language">Langue</span>
+          <button class="btn" id="btn-fr">FR</button>
+          <button class="btn" id="btn-en">EN</button>
+        </div>
+        <a class="btn" href="#pricing" data-i18n="seePlans">Voir les forfaits</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section split" id="search">
+      <div>
+        <h2 data-i18n="findDeals">Trouver des liquidations</h2>
+        <p class="muted" data-i18n="findDealsDesc">Filtrez par magasin, ville et rabais minimal. Branchez vos JSON plus tard.</p>
+
+        <div class="filters" style="margin-top:12px">
+          <div>
+            <div class="label" data-i18n="store">Magasin</div>
+            <select id="storeSelect">
+              <option value="" data-i18n="any">(Tous)</option>
+              <option>Home Depot</option>
+              <option>Walmart</option>
+              <option>Canadian Tire</option>
+              <option>Rona</option>
+              <option>Patrick Morin</option>
+              <option>Sporting Life</option>
+            </select>
+          </div>
+          <div>
+            <div class="label" data-i18n="city">Ville</div>
+            <select id="citySelect">
+              <option value="" data-i18n="any">(Toutes)</option>
+              <option>Montréal</option>
+              <option>Laval</option>
+              <option>Saint‑Jérôme</option>
+            </select>
+          </div>
+          <div>
+            <div class="label"><span data-i18n="minDiscount">% de rabais minimal</span>: <span id="discountValue" class="kbd">40%</span></div>
+            <input id="discountRange" type="range" min="0" max="90" step="5" value="40" />
+          </div>
+          <div style="align-self:end">
+            <button id="btnClear" class="btn" data-i18n="clear">Réinitialiser</button>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="row" style="justify-content:space-between;align-items:center">
+            <h2 style="margin:0" data-i18n="results">Résultats</h2>
+            <div class="muted"><span id="resultCount">0</span> <span data-i18n="items">articles</span></div>
+          </div>
+          <div id="cards" class="grid" style="margin-top:10px"></div>
+        </div>
+      </div>
+      <aside>
+        <div class="card" style="padding:16px">
+          <h3 style="margin-top:6px" data-i18n="howToTitle">Brancher vos données</h3>
+          <ol class="muted" style="line-height:1.7">
+            <li data-i18n="how1">Préparez un fichier JSON par magasin ou par ville (ex: <span class="kbd">walmart_laval.json</span>).</li>
+            <li data-i18n="how2">Exposez les champs: <span class="kbd">title, image, price, salePrice, store, city, url</span>.</li>
+            <li data-i18n="how3">Placez les fichiers dans <span class="kbd">/data</span> et ajustez <span class="kbd">fetchDeals()</span> ci‑dessous.</li>
+          </ol>
+          <div class="tag" data-i18n="note">Note: Cette page attend vos données réelles.</div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="pricing" class="section">
+      <h2 data-i18n="plans">Forfaits</h2>
+      <p class="muted" data-i18n="plansDesc">Commencez gratuitement. Passez au Premium pour 19,99 $ avec des options avancées en cours. Premium + ajoute la Prédiction IA.</p>
+      <div class="pricing">
+        <div class="plan">
+          <h3 data-i18n="free">Plan de base (Gratuit)</h3>
+          <div class="priceTag" data-i18n="priceFree">0 $</div>
+          <ul class="muted">
+            <li data-i18n="free1">Recherche et filtres essentiels</li>
+            <li data-i18n="free2">Aperçu des meilleures liquidations</li>
+            <li data-i18n="free3">Accès web</li>
+          </ul>
+          <button class="btn" data-i18n="choose">Choisir</button>
+        </div>
+        <div class="plan" style="border-color:transparent;box-shadow:0 0 0 2px var(--accent) inset">
+          <h3 data-i18n="premium">Premium</h3>
+          <div class="priceTag">19.99 $</div>
+          <ul class="muted">
+            <li data-i18n="prem1">Alertes et accès illimité</li>
+            <li data-i18n="prem2">Options avancées (en cours)</li>
+            <li data-i18n="prem3">Support prioritaire</li>
+          </ul>
+          <button class="btn primary" data-i18n="getPremium">Obtenir Premium</button>
+        </div>
+        <div class="plan">
+          <h3 data-i18n="premiumPlus">Premium + (Prédiction IA)</h3>
+          <div class="priceTag" data-i18n="contact">Sur demande</div>
+          <ul class="muted">
+            <li data-i18n="plus1">Prédictions de chute de prix</li>
+            <li data-i18n="plus2">Alertes intelligentes multi‑magasins</li>
+            <li data-i18n="plus3">Intégrations et API</li>
+          </ul>
+          <button class="btn" data-i18n="talkSales">Parler aux ventes</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="container footer">
+    © <span id="year"></span> EconoDeal · <span data-i18n="rights">Tous droits réservés</span>
+  </div>
+
+  <script>
+    // --- i18n dictionary ---
+    const I18N = {
+      fr: {
+        slogan: "Le meilleur outil pour dénicher, revendre et économiser.",
+        language: "Langue",
+        seePlans: "Voir les forfaits",
+        findDeals: "Trouver des liquidations",
+        findDealsDesc: "Filtrez par magasin, ville et rabais minimal. Branchez vos JSON plus tard.",
+        store: "Magasin",
+        city: "Ville",
+        any: "(Tous)",
+        minDiscount: "% de rabais minimal",
+        clear: "Réinitialiser",
+        results: "Résultats",
+        items: "articles",
+        howToTitle: "Brancher vos données",
+        how1: "Préparez un fichier JSON par magasin ou par ville (ex: walmart_laval.json).",
+        how2: "Exposez les champs: title, image, price, salePrice, store, city, url.",
+        how3: "Placez les fichiers dans /data et ajustez fetchDeals() ci‑dessous.",
+        note: "Note: Cette page attend vos données réelles.",
+        plans: "Forfaits",
+        plansDesc: "Commencez gratuitement. Passez au Premium pour 19,99 $ avec des options avancées en cours. Premium + ajoute la Prédiction IA.",
+        free: "Plan de base (Gratuit)",
+        priceFree: "0 $",
+        free1: "Recherche et filtres essentiels",
+        free2: "Aperçu des meilleures liquidations",
+        free3: "Accès web",
+        choose: "Choisir",
+        premium: "Premium",
+        prem1: "Alertes et accès illimité",
+        prem2: "Options avancées (en cours)",
+        prem3: "Support prioritaire",
+        getPremium: "Obtenir Premium",
+        premiumPlus: "Premium + (Prédiction IA)",
+        contact: "Sur demande",
+        plus1: "Prédictions de chute de prix",
+        plus2: "Alertes intelligentes multi‑magasins",
+        plus3: "Intégrations et API",
+        talkSales: "Parler aux ventes",
+        rights: "Tous droits réservés",
+        discount: "Rabais"
+      },
+      en: {
+        slogan: "The best tool to find, resell & save.",
+        language: "Language",
+        seePlans: "See plans",
+        findDeals: "Find clearance deals",
+        findDealsDesc: "Filter by store, city and minimum discount. Plug your JSON later.",
+        store: "Store",
+        city: "City",
+        any: "(Any)",
+        min. discount %: "Min. discount %",
+        clear: "Reset",
+        results: "Results",
+        items: "items",
+        howToTitle: "Connect your data",
+        how1: "Prepare one JSON per store or city (e.g., walmart_laval.json).",
+        how2: "Expose fields: title, image, price, salePrice, store, city, url.",
+        how3: "Put files under /data and adjust fetchDeals() below.",
+        note: "Note: This page shows local demo data.",
+        plans: "Plans",
+        plansDesc: "Start free. Go Premium for $19.99 with advanced options in progress. Premium+ adds AI Prediction.",
+        free: "Basic plan (Free)",
+        priceFree: "$0",
+        free1: "Core search & filters",
+        free2: "Top clearance overview",
+        free3: "Web access",
+        choose: "Choose",
+        premium: "Premium",
+        prem1: "Alerts & unlimited access",
+        prem2: "Advanced options (in progress)",
+        prem3: "Priority support",
+        getPremium: "Get Premium",
+        premiumPlus: "Premium+ (AI Prediction)",
+        contact: "Contact us",
+        plus1: "Price‑drop predictions",
+        plus2: "Smart multi‑store alerts",
+        plus3: "Integrations & API",
+        talkSales: "Talk to sales",
+        rights: "All rights reserved",
+        discount: "Off"
+      }
+    };
+
+    let currentLang = 'fr';
+    const t = (key) => I18N[currentLang][key] || key;
+
+    function applyI18n(){
+      document.querySelectorAll('[data-i18n]').forEach(el=>{
+        const k = el.getAttribute('data-i18n');
+        el.textContent = t(k);
+      });
+      // Update placeholders in selects for (Tous)/(Any)
+      document.querySelector('#storeSelect option[value=""]').textContent = t('any');
+      document.querySelector('#citySelect option[value=""]').textContent = t('any');
+    }
+
+    document.getElementById('btn-fr').addEventListener('click',()=>{currentLang='fr';applyI18n();render()});
+    document.getElementById('btn-en').addEventListener('click',()=>{currentLang='en';applyI18n();render()});
+
+    const storeSelect = document.getElementById('storeSelect');
+    const citySelect = document.getElementById('citySelect');
+    const range = document.getElementById('discountRange');
+    const rangeLabel = document.getElementById('discountValue');
+    const cardsEl = document.getElementById('cards');
+    const countEl = document.getElementById('resultCount');
+
+    function render(){
+      rangeLabel.textContent = range.value + '%';
+      const s = storeSelect.value;
+      const c = citySelect.value;
+      const min = parseInt(range.value,10);
+
+      const filtered = []; // no demo items
+
+      countEl.textContent = filtered.length;
+      cardsEl.innerHTML = filtered.map(d => {
+        return "";
+      }).join('');
+    }
+
+    document.getElementById('btnClear').addEventListener('click', ()=>{
+      storeSelect.value = '';
+      citySelect.value = '';
+      range.value = 40;
+      render();
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+    applyI18n();
+    render();
+  </script>
+</body>
+</html>
