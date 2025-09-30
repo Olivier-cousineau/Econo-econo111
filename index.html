@@ -1,175 +1,199 @@
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const STORES = [
-    {label:'Home Depot', slug:'home-depot'},
-    {label:'Walmart', slug:'walmart'},
-    {label:'Canadian Tire', slug:'canadian-tire'},
-    {label:'Rona', slug:'rona'},
-    {label:'Patrick Morin', slug:'patrick-morin'},
-    {label:'Sporting Life', slug:'sporting-life'}
-  ];
-  const CITIES = [
-    {label:'Montréal', slug:'montreal'},
-    {label:'Laval', slug:'laval'},
-    {label:'Saint-Jérôme', slug:'saint-jerome'}
-  ];
-
-  const storeSelect = document.getElementById('storeSelect');
-  const citySelect  = document.getElementById('citySelect');
-  const range       = document.getElementById('discountRange');
-  const rangeLabel  = document.getElementById('discountValue');
-  const cardsEl     = document.getElementById('cards');
-  const countEl     = document.getElementById('resultCount');
-  const btnClear    = document.getElementById('btnClear');
-  const devError    = document.getElementById('devError');
-
-  // Show year
-  const y = new Date().getFullYear();
-  document.getElementById('year').textContent = y;
-  document.getElementById('yearFooter').textContent = y;
-
-  // Normalization helper: lowercase, remove accents, trim
-  function norm(s){
-    if(!s) return '';
-    s = String(s).toLowerCase().trim();
-    s = s.normalize('NFD').replace(/[\u0300-\u036f]/g, ''); // remove accents
-    s = s.replace(/[^a-z0-9\s\-]/g, ''); // keep letters/numbers/spaces/dash
-    return s.replace(/\s+/g, ' ').trim();
-  }
-
-  // safe discount calc: returns integer >=0 or 0 if invalid
-  function discount(original, sale){
-    const p = Number(original);
-    const s = Number(sale);
-    if(!isFinite(p) || !isFinite(s) || p <= 0) return 0;
-    return Math.max(0, Math.round((1 - (s / p)) * 100));
-  }
-
-  // safe currency display: show "-" when missing
-  function currency(n){
-    if(!isFinite(Number(n))) return "-";
-    return Number(n).toLocaleString('fr-CA', {style:'currency', currency:'CAD'});
-  }
-
-  // show dev error banner
-  function showError(msg){
-    devError.style.display = 'block';
-    devError.textContent = msg;
-  }
-  function hideError(){ devError.style.display = 'none'; devError.textContent = ''; }
-
-  const deals = [];
-
-  function render(){
-    hideError();
-    rangeLabel.textContent = range.value + '%';
-    const selectedStore = norm(storeSelect.value);
-    const selectedCity  = norm(citySelect.value);
-    const min = parseInt(range.value, 10) || 0;
-
-    const filtered = deals.filter(d => {
-      // ensure numbers are usable
-      const p = Number(d.price);
-      const s = Number(d.salePrice);
-      if(!isFinite(p) || !isFinite(s)) return false;
-      const pct = discount(p, s);
-
-      // tolerant match: store and city may include extra text (e.g. "Home Depot - Laval")
-      const storeOK = !selectedStore || norm(d.store || '').includes(selectedStore);
-      const cityOK  = !selectedCity  || norm(d.city  || '').includes(selectedCity);
-      return storeOK && cityOK && pct >= min;
-    });
-
-    countEl.textContent = filtered.length;
-    if(filtered.length === 0){
-      cardsEl.innerHTML = '<p class="muted">Aucun article correspondant aux filtres.</p>';
-      return;
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EconoDeal — Canada</title>
+  <style>
+    :root{
+      --bg:#0f172a; --panel:#111827; --panel-2:#1f2937; --text:#e5e7eb;
+      --muted:#9ca3af; --accent:#22c55e; --border:#2b3446; --radius:14px;
     }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),#0b1020 50%,#0a0f1a);color:var(--text)}
+    header{position:sticky;top:0;z-index:20;background:rgba(15,23,42,.85);backdrop-filter: blur(8px);border-bottom:1px solid var(--border)}
+    .container{max-width:1100px;margin:0 auto;padding:18px}
+    .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+    h1{margin:0;font-size:18px}
+    label{display:block;font-size:12px;color:var(--muted);margin-bottom:6px}
+    select,input[type="range"],button{background:var(--panel-2);color:var(--text);border:1px solid var(--border);border-radius:10px;padding:10px 12px}
+    select:focus,input[type="range"]:focus,button:focus{outline:2px solid var(--accent);outline-offset:1px}
+    .filters{display:grid;grid-template-columns:repeat(4,minmax(180px,1fr));gap:12px}
+    @media (max-width:900px){.filters{grid-template-columns:1fr 1fr}}
+    @media (max-width:560px){.filters{grid-template-columns:1fr}}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+    .card{background:linear-gradient(180deg,var(--panel),#0e1626);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+    .card img{width:100%;height:160px;object-fit:cover;background:#0b0b10}
+    .card .body{padding:14px}
+    .price{display:flex;gap:10px;align-items:baseline;margin:8px 0}
+    .price .old{text-decoration:line-through;color:var(--muted)}
+    .badge{display:inline-flex;gap:6px;align-items:center;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.35);color:#86efac;border-radius:999px;padding:6px 10px;font-weight:600;font-size:12px}
+    .section{padding:26px 0}
+    .muted{color:var(--muted)}
+    .footer{border-top:1px solid var(--border);padding:20px 0;color:var(--muted);text-align:center}
+    .kbd{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;background:var(--panel-2);border:1px solid var(--border);padding:2px 6px;border-radius:6px;color:var(--muted)}
+    .dev-banner{background:#1f2937;border:1px dashed #ef4444;color:#fecaca;padding:10px 12px;border-radius:10px;margin:12px 0;display:none}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container row" style="justify-content:space-between">
+      <div class="row" style="gap:10px;align-items:center">
+        <h1>EconoDeal</h1>
+      </div>
+      <div class="muted">© <span id="year"></span></div>
+    </div>
+  </header>
 
-    cardsEl.innerHTML = filtered.map(d => {
-      const pct = discount(d.price, d.salePrice);
-      return `
-      <article class="card">
-        <img src="${d.image || ''}" alt="${(d.title || '').replace(/"/g,'')}" loading="lazy"/>
-        <div class="body">
-          <div class="badge">-${pct}% Rabais</div>
-          <h3>${d.title || ''}</h3>
-          <div class="muted">${d.store || ''} · ${d.city || ''}</div>
-          <div class="price"><div class="old">${currency(d.price)}</div><div>${currency(d.salePrice)}</div></div>
-          <a class="btn" href="${d.url || '#'}" target="_blank" rel="noopener" style="width:100%">Voir</a>
+  <main class="container">
+    <section class="section" id="search">
+      <h2 style="margin:0 0 10px">Trouver des liquidations</h2>
+      <p class="muted">Les fichiers sont chargés depuis <span class="kbd">data/&lt;magasin&gt;/&lt;ville&gt;.json</span>.</p>
+
+      <!-- ✅ Les éléments requis existent et leurs IDs correspondent au script -->
+      <div class="filters" style="margin-top:12px">
+        <div>
+          <label for="storeSelect">Magasin</label>
+          <select id="storeSelect">
+            <option value="">(Tous)</option>
+            <option>Home Depot</option>
+            <option>Walmart</option>
+            <option>Canadian Tire</option>
+            <option>Rona</option>
+            <option>Patrick Morin</option>
+            <option>Sporting Life</option>
+          </select>
         </div>
-      </article>`;
-    }).join('');
-  }
+        <div>
+          <label for="citySelect">Ville</label>
+          <select id="citySelect">
+            <option value="">(Toutes)</option>
+            <option>Montréal</option>
+            <option>Laval</option>
+            <option>Saint-Jérôme</option>
+          </select>
+        </div>
+        <div>
+          <label for="discountRange">% de rabais minimal : <span id="discountValue" class="kbd">0%</span></label>
+          <input id="discountRange" type="range" min="0" max="90" step="5" value="0" />
+        </div>
+        <div style="align-self:end">
+          <button id="btnClear">Réinitialiser</button>
+        </div>
+      </div>
 
-  function filePathFor(storeLabel, cityLabel){
-    const s = (STORES.find(x => x.label === storeLabel) || {}).slug;
-    const c = (CITIES.find(x => x.label === cityLabel) || {}).slug;
-    if(!s || !c) return null;
-    return `data/${s}/${c}.json`;
-  }
+      <div id="devError" class="dev-banner"></div>
 
-  async function fetchOne(path){
-    try{
-      const res = await fetch(path, {cache:'no-store'});
-      if(!res.ok){
-        // show a visible error for debugging
-        showError(`Échec du chargement : ${path} (status ${res.status})`);
-        console.warn('fetch non ok', path, res.status);
-        return [];
-      }
-      const j = await res.json();
-      if(!Array.isArray(j)) {
-        showError(`Format invalide JSON: ${path} (attendu tableau)`);
-        return [];
-      }
-      return j;
-    } catch(e){
-      console.warn('fetch fail', path, e);
-      showError(`Impossible de charger ${path} — voir console.`);
-      return [];
+      <div class="section">
+        <div class="row" style="justify-content:space-between;align-items:center">
+          <h3 style="margin:0">Résultats</h3>
+          <div class="muted"><span id="resultCount">0</span> articles</div>
+        </div>
+        <div id="cards" class="grid" style="margin-top:12px"></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="container footer">
+    © <span id="yearFooter"></span> EconoDeal · Tous droits réservés
+  </div>
+
+  <script>
+  // === Initialisation sûre ===
+  document.addEventListener('DOMContentLoaded', () => {
+    const STORES = [
+      {label:'Home Depot', slug:'home-depot'},
+      {label:'Walmart', slug:'walmart'},
+      {label:'Canadian Tire', slug:'canadian-tire'},
+      {label:'Rona', slug:'rona'},
+      {label:'Patrick Morin', slug:'patrick-morin'},
+      {label:'Sporting Life', slug:'sporting-life'}
+    ];
+    const CITIES = [
+      {label:'Montréal', slug:'montreal'},
+      {label:'Laval', slug:'laval'},
+      {label:'Saint-Jérôme', slug:'saint-jerome'}
+    ];
+
+    const storeSelect = document.getElementById('storeSelect');
+    const citySelect  = document.getElementById('citySelect');
+    const range       = document.getElementById('discountRange');
+    const rangeLabel  = document.getElementById('discountValue');
+    const cardsEl     = document.getElementById('cards');
+    const countEl     = document.getElementById('resultCount');
+    const btnClear    = document.getElementById('btnClear');
+    const devError    = document.getElementById('devError');
+
+    // Affiche l'année
+    const y = new Date().getFullYear();
+    document.getElementById('year').textContent = y;
+    document.getElementById('yearFooter').textContent = y;
+
+    function discount(p,s){ return Math.round((1-(s/p))*100); }
+    function currency(n){ return n.toLocaleString('fr-CA',{style:'currency',currency:'CAD'}); }
+
+    const deals = [];
+
+    function render(){
+      rangeLabel.textContent = range.value + '%';
+      const s=storeSelect.value, c=citySelect.value, min=parseInt(range.value,10);
+      const filtered=deals.filter(d=>{
+        const pct=discount(d.price,d.salePrice);
+        return(!s||d.store===s)&&(!c||d.city===c)&&pct>=min
+      });
+      countEl.textContent = filtered.length;
+      cardsEl.innerHTML = filtered.map(d=>`
+        <article class="card">
+          <img src="${d.image}" alt="${d.title}" loading="lazy"/>
+          <div class="body">
+            <div class="badge">-${discount(d.price,d.salePrice)}% Rabais</div>
+            <h3>${d.title}</h3>
+            <div class="muted">${d.store} · ${d.city}</div>
+            <div class="price"><div class="old">${currency(d.price)}</div><div>${currency(d.salePrice)}</div></div>
+            <a class="btn" href="${d.url||'#'}" target="_blank" rel="noopener" style="width:100%">Voir</a>
+          </div>
+        </article>`).join('');
     }
-  }
 
-  async function fetchData(){
-    hideError();
-    deals.length = 0;
-    const stores = storeSelect.value ? [storeSelect.value] : STORES.map(s => s.label);
-    const cities = citySelect.value  ? [citySelect.value]  : CITIES.map(c => c.label);
+    function filePathFor(storeLabel, cityLabel){
+      const s = (STORES.find(x=>x.label===storeLabel)||{}).slug;
+      const c = (CITIES.find(x=>x.label===cityLabel)||{}).slug;
+      if(!s || !c) return null;
+      return `data/${s}/${c}.json`;
+    }
 
-    for(const s of stores){
-      for(const c of cities){
-        const path = filePathFor(s, c);
+    async function fetchOne(path){
+      try{
+        const res = await fetch(path, {cache:'no-store'});
+        if(!res.ok) return [];
+        return await res.json();
+      }catch(e){ console.warn('fetch fail', path, e); return []; }
+    }
+
+    async function fetchData(){
+      deals.length = 0;
+      const stores = storeSelect.value ? [storeSelect.value] : STORES.map(s=>s.label);
+      const cities = citySelect.value  ? [citySelect.value]  : CITIES.map(c=>c.label);
+      for(const s of stores){ for(const c of cities){
+        const path = filePathFor(s,c);
         if(!path) continue;
         const arr = await fetchOne(path);
-        for(const d of arr){
-          // normalize keys that frontend expects
-          const item = {
-            title: d.title || d.name || d.name_fr || '',
-            price: (d.price != null ? Number(d.price) : (d.original_price != null ? Number(d.original_price) : null)),
-            salePrice: (d.salePrice != null ? Number(d.salePrice) : (d.price != null ? Number(d.price) : null)),
-            image: d.image || d.img || d.image_url || '',
-            url: d.url || d.link || '',
-            store: d.store || s,
-            city: d.city || c
-          };
-          deals.push(item);
-        }
-      }
+        for(const d of arr){ deals.push(d); }
+      }}
+      render();
     }
-    render();
-  }
 
-  // Events
-  storeSelect.addEventListener('change', fetchData);
-  citySelect.addEventListener('change', fetchData);
-  range.addEventListener('input', render);
-  btnClear.addEventListener('click', () => { storeSelect.value = ''; citySelect.value = ''; range.value = 0; fetchData(); });
+    storeSelect.addEventListener('change', fetchData);
+    citySelect.addEventListener('change', fetchData);
+    range.addEventListener('input', render);
+    btnClear.addEventListener('click', ()=>{ storeSelect.value=''; citySelect.value=''; range.value=0; fetchData(); });
 
-  // Initial values — choisis une valeur par défaut qui existe dans tes fichiers
-  storeSelect.value = 'Rona';            // <-- change si besoin
-  citySelect.value  = 'Saint-Jérôme';   // <-- change si besoin
-  range.value = 0;
-  fetchData();
-});
-</script>
+    // Démarrage
+    storeSelect.value = 'Walmart';
+    citySelect.value  = 'Saint-Jérôme';
+    range.value = 0; // ← 0% par défaut
+    fetchData();
+  });
+  </script>
+</body>
+</html>
