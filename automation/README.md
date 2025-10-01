@@ -52,6 +52,32 @@ Options utiles :
 2. Enregistre les produits dans la base SQLite (`INSERT ... ON CONFLICT`).
 3. Transmet les produits à votre site via `POST` JSON (sauf `--dry-run`).
 
+## Endpoint de réception pour le site statique
+
+Si votre site est purement statique (fichiers JSON dans `data/`), vous pouvez
+utiliser `site_endpoint.py` comme petit serveur HTTP recevant les données du
+scraper et les écrivant automatiquement dans `data/canadian-tire/`.
+
+```bash
+python site_endpoint.py --host 0.0.0.0 --port 8000 \
+    --data-root ../data/canadian-tire --api-key secret-token
+```
+
+Dans votre `config.json`, configurez ensuite le bloc `site_endpoint` ainsi :
+
+```json
+{
+  "site_endpoint": {
+    "url": "http://127.0.0.1:8000/api/liquidations",
+    "api_key": "secret-token"
+  }
+}
+```
+
+Chaque POST reçu met à jour `stores.json` et le fichier `<slug>.json` du magasin
+concerné. Un point de terminaison `/health` renvoie un statut `ok` pour vos
+sondes.
+
 ## Planification quotidienne (17h, heure du Québec)
 
 Activez l'environnement virtuel et créez un script shell `run-scraper.sh` :
