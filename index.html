@@ -33,6 +33,16 @@
     .footer{border-top:1px solid var(--border);padding:20px 0;color:var(--muted);text-align:center}
     .kbd{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;background:var(--panel-2);border:1px solid var(--border);padding:2px 6px;border-radius:6px;color:var(--muted)}
     .dev-banner{background:#1f2937;border:1px dashed #ef4444;color:#fecaca;padding:10px 12px;border-radius:10px;margin:12px 0;display:none}
+    .pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+    .pricing-card{background:linear-gradient(180deg,var(--panel),#111a2a);border:1px solid var(--border);border-radius:var(--radius);padding:18px;display:flex;flex-direction:column;gap:14px;position:relative;overflow:hidden}
+    .pricing-card::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,rgba(34,197,94,.6),rgba(59,130,246,.6));opacity:.6}
+    .pricing-card h4{margin:0;font-size:18px}
+    .pricing-price{font-size:26px;font-weight:700;color:#86efac}
+    .pricing-features{list-style:none;padding:0;margin:0;display:grid;gap:8px;font-size:14px;color:var(--muted)}
+    .pricing-tag{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+    .pricing-highlight{outline:2px solid rgba(34,197,94,.4);outline-offset:4px;transition:outline-color .3s ease}
+    @keyframes pricingPulse{0%{box-shadow:0 0 0 0 rgba(34,197,94,.45)}70%{box-shadow:0 0 0 12px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
+    #pricing.pricing-pulse{animation:pricingPulse 1.3s ease-out 1}
   </style>
 </head>
 <body>
@@ -41,7 +51,10 @@
       <div class="row" style="gap:10px;align-items:center">
         <h1>EconoDeal</h1>
       </div>
-      <div class="muted">© <span id="year"></span></div>
+      <div class="row" style="gap:12px;align-items:center">
+        <button id="btnPricing" style="white-space:nowrap">Forfaits / prix</button>
+        <div class="muted">© <span id="year"></span></div>
+      </div>
     </div>
   </header>
 
@@ -92,6 +105,43 @@
         <div id="cards" class="grid" style="margin-top:12px"></div>
       </div>
     </section>
+
+    <section class="section" id="pricing" style="padding-top:10px">
+      <h2 style="margin:0 0 10px">Forfaits adaptés à vos besoins</h2>
+      <p class="muted" style="max-width:620px">Choisissez l'option qui correspond le mieux à votre façon de surveiller les rabais et liquidations au Canada. Chaque forfait inclut une période d'essai de 7 jours.</p>
+      <div class="pricing-grid">
+        <article class="pricing-card">
+          <div class="pricing-tag">Essentiel</div>
+          <h4>Accès de base</h4>
+          <div class="pricing-price">9,99&nbsp;$</div>
+          <ul class="pricing-features">
+            <li>Accès aux liquidations populaires</li>
+            <li>3 alertes courriel par semaine</li>
+            <li>Historique de prix sur 30 jours</li>
+          </ul>
+        </article>
+        <article class="pricing-card pricing-highlight">
+          <div class="pricing-tag">Le plus populaire</div>
+          <h4>Forfait Avancé</h4>
+          <div class="pricing-price">19,99&nbsp;$</div>
+          <ul class="pricing-features">
+            <li>Accès illimité au catalogue</li>
+            <li>Alertes personnalisées en temps réel</li>
+            <li>Listes partagées avec votre équipe</li>
+          </ul>
+        </article>
+        <article class="pricing-card">
+          <div class="pricing-tag">Premium</div>
+          <h4>Analyse IA complète</h4>
+          <div class="pricing-price">29,99&nbsp;$</div>
+          <ul class="pricing-features">
+            <li>Alertes illimitées multicanal</li>
+            <li>Analyse des prix assistée par IA</li>
+            <li>Prévisions de tendances du marché</li>
+          </ul>
+        </article>
+      </div>
+    </section>
   </main>
 
   <div class="container footer">
@@ -123,11 +173,22 @@
     const countEl     = document.getElementById('resultCount');
     const btnClear    = document.getElementById('btnClear');
     const devError    = document.getElementById('devError');
+    const btnPricing  = document.getElementById('btnPricing');
+    const pricingSection = document.getElementById('pricing');
 
     // Affiche l'année
     const y = new Date().getFullYear();
     document.getElementById('year').textContent = y;
     document.getElementById('yearFooter').textContent = y;
+
+    if(btnPricing && pricingSection){
+      btnPricing.addEventListener('click', () => {
+        pricingSection.scrollIntoView({behavior:'smooth', block:'start'});
+        pricingSection.classList.remove('pricing-pulse');
+        void pricingSection.offsetWidth;
+        pricingSection.classList.add('pricing-pulse');
+      });
+    }
 
     function toNumber(value){
       if(typeof value === 'number' && Number.isFinite(value)) return value;
