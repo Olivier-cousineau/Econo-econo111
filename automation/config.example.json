@@ -1,0 +1,27 @@
+{
+  "timezone": "America/Toronto",
+  "request_delay": 1.5,
+  "stores": [
+    {
+      "store_id": "0403",
+      "nickname": "Montréal - Centre",
+      "city": "Montréal",
+      "province": "QC"
+    },
+    {
+      "store_id": "0474",
+      "nickname": "Québec - Lebourgneuf",
+      "city": "Québec",
+      "province": "QC"
+    }
+  ],
+  "departments": [
+    {"department_id": "auto", "query": "liquidation"},
+    {"department_id": "hardware"}
+  ],
+  "site_endpoint": {
+    "url": "https://example.com/api/liquidations",
+    "api_key": "remplace-moi-par-ton-token",
+    "timeout": 20
+  }
+}
