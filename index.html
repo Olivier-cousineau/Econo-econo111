@@ -36,6 +36,13 @@
     .field-helper{font-size:12px;color:var(--muted);margin:6px 0 0}
     .field-helper.error{color:#fca5a5}
     input[aria-invalid="true"],select[aria-invalid="true"]{border-color:#ef4444;box-shadow:0 0 0 1px rgba(239,68,68,.25)}
+    .exchange-card{margin-top:16px;background:linear-gradient(180deg,var(--panel),#101a28);border:1px solid var(--border);border-radius:var(--radius);padding:18px;display:grid;gap:14px}
+    .exchange-header{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline;justify-content:space-between}
+    .exchange-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+    .exchange-item{background:var(--panel-2);border:1px solid rgba(148,163,184,.25);border-radius:12px;padding:12px;display:grid;gap:6px}
+    .exchange-label{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+    .exchange-value{font-size:20px;font-weight:600;color:#f8fafc}
+    .exchange-card[data-loading="true"] .exchange-value{opacity:.55}
     @media (max-width:900px){.filters{grid-template-columns:1fr 1fr}}
     @media (max-width:560px){.filters{grid-template-columns:1fr}}
     .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
@@ -153,6 +160,43 @@
           <button type="button" class="country-button" data-country="europe" aria-pressed="false">Europe</button>
         </div>
       </div>
+
+      <section class="exchange-card" id="exchangeRates" aria-live="polite">
+        <div class="exchange-header">
+          <div>
+            <div class="exchange-label">Taux de change</div>
+            <strong>Conversion Canada · États-Unis · Europe</strong>
+          </div>
+          <div class="muted">Mise à jour&nbsp;: <span data-exchange-updated>—</span></div>
+        </div>
+        <div class="exchange-grid">
+          <div class="exchange-item">
+            <span class="exchange-label">1 CAD → USD</span>
+            <span class="exchange-value" data-rate-pair="CAD-USD">—</span>
+          </div>
+          <div class="exchange-item">
+            <span class="exchange-label">1 CAD → EUR</span>
+            <span class="exchange-value" data-rate-pair="CAD-EUR">—</span>
+          </div>
+          <div class="exchange-item">
+            <span class="exchange-label">1 USD → CAD</span>
+            <span class="exchange-value" data-rate-pair="USD-CAD">—</span>
+          </div>
+          <div class="exchange-item">
+            <span class="exchange-label">1 EUR → CAD</span>
+            <span class="exchange-value" data-rate-pair="EUR-CAD">—</span>
+          </div>
+          <div class="exchange-item">
+            <span class="exchange-label">1 USD → EUR</span>
+            <span class="exchange-value" data-rate-pair="USD-EUR">—</span>
+          </div>
+          <div class="exchange-item">
+            <span class="exchange-label">1 EUR → USD</span>
+            <span class="exchange-value" data-rate-pair="EUR-USD">—</span>
+          </div>
+        </div>
+        <p class="field-helper error" data-exchange-error hidden>Impossible de charger les taux de change en direct pour le moment.</p>
+      </section>
 
       <div class="filters" style="margin-top:12px">
         <div>
@@ -315,6 +359,76 @@
     const submitBtn = document.getElementById('registrationSubmit');
     const regulationCheckbox = document.getElementById('regulationCheckbox');
     const clientCountDisplays = Array.from(document.querySelectorAll('[data-client-count]'));
+    const exchangeCard = document.getElementById('exchangeRates');
+    const exchangeUpdatedEl = document.querySelector('[data-exchange-updated]');
+    const exchangeErrorEl = document.querySelector('[data-exchange-error]');
+    const exchangeValueMap = new Map();
+    document.querySelectorAll('[data-rate-pair]').forEach(el => {
+      if(el?.dataset?.ratePair){
+        exchangeValueMap.set(el.dataset.ratePair, el);
+      }
+    });
+
+    function formatRateValue(value){
+      if(typeof value !== 'number' || !Number.isFinite(value)) return '—';
+      return value.toLocaleString('fr-CA', {minimumFractionDigits:4, maximumFractionDigits:4});
+    }
+
+    function setExchangeLoading(isLoading){
+      if(!exchangeCard) return;
+      if(isLoading){
+        exchangeCard.setAttribute('data-loading', 'true');
+      }else{
+        exchangeCard.removeAttribute('data-loading');
+      }
+    }
+
+    async function refreshExchangeRates(){
+      if(!exchangeCard) return;
+      setExchangeLoading(true);
+      if(exchangeErrorEl){
+        exchangeErrorEl.hidden = true;
+      }
+      try{
+        const res = await fetch('https://api.exchangerate.host/latest?base=CAD&symbols=USD,EUR', {cache:'no-store'});
+        if(!res.ok) throw new Error(`HTTP ${res.status}`);
+        const json = await res.json();
+        const rates = json?.rates || {};
+        const cadUsd = typeof rates.USD === 'number' ? rates.USD : null;
+        const cadEur = typeof rates.EUR === 'number' ? rates.EUR : null;
+        if(!cadUsd || !cadEur) throw new Error('Données manquantes');
+        const computed = {
+          'CAD-USD': cadUsd,
+          'CAD-EUR': cadEur,
+          'USD-CAD': cadUsd ? 1 / cadUsd : null,
+          'EUR-CAD': cadEur ? 1 / cadEur : null,
+          'USD-EUR': cadUsd && cadEur ? cadEur / cadUsd : null,
+          'EUR-USD': cadUsd && cadEur ? cadUsd / cadEur : null
+        };
+        for(const [pair, value] of Object.entries(computed)){
+          const target = exchangeValueMap.get(pair);
+          if(target){
+            target.textContent = formatRateValue(value);
+          }
+        }
+        if(exchangeUpdatedEl){
+          const formatter = new Intl.DateTimeFormat('fr-CA', {dateStyle:'medium', timeStyle:'short'});
+          exchangeUpdatedEl.textContent = formatter.format(new Date());
+        }
+      }catch(err){
+        console.warn('Impossible de charger les taux de change', err);
+        if(exchangeErrorEl){
+          exchangeErrorEl.hidden = false;
+        }
+      }finally{
+        setExchangeLoading(false);
+      }
+    }
+
+    if(exchangeCard){
+      refreshExchangeRates();
+      setInterval(refreshExchangeRates, 5 * 60 * 1000);
+    }
 
     function parseJson(value){
       if(!value) return null;
