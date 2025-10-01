@@ -112,14 +112,18 @@ input[aria-invalid="true"],select[aria-invalid="true"]{border-color:#f97316;box-
 .pricing-grid,.roadmap-grid{margin-top:1.8rem}
 #registrationOverlay{position:fixed;inset:0;background:rgba(4,7,20,.82);display:flex;align-items:center;justify-content:center;padding:1.5rem;z-index:2000;backdrop-filter:blur(16px)}
 #registrationOverlay.hidden{display:none}
-.registration-card{background:rgba(13,18,35,.85);border:1px solid rgba(148,163,184,.32);border-radius:var(--radius-lg);max-width:420px;width:100%;padding:clamp(1.6rem,3vw,2.2rem);display:grid;gap:1.2rem;box-shadow:var(--shadow-lg);backdrop-filter:blur(14px)}
+.registration-card{position:relative;background:rgba(13,18,35,.85);border:1px solid rgba(148,163,184,.32);border-radius:var(--radius-lg);max-width:420px;width:100%;padding:clamp(2.3rem,3vw,2.8rem) clamp(1.6rem,3vw,2.2rem) clamp(1.8rem,3vw,2.3rem);display:grid;gap:1.2rem;box-shadow:var(--shadow-lg);backdrop-filter:blur(14px)}
 .registration-card h2{margin:0}
 .registration-card form{display:grid;gap:1rem}
+.overlay-close{position:absolute;top:1rem;right:1rem;border:none;border-radius:999px;width:34px;height:34px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;background:rgba(15,23,42,.6);color:var(--text-muted);cursor:pointer;transition:all .2s ease}
+.overlay-close:hover,.overlay-close:focus-visible{background:rgba(96,165,250,.18);color:var(--text-strong);outline:none;box-shadow:0 0 0 2px rgba(96,165,250,.25)}
 .checkbox-row{display:flex;gap:.9rem;align-items:flex-start;background:rgba(56,248,174,.08);border:1px solid rgba(56,248,174,.25);padding:.9rem;border-radius:var(--radius-sm)}
 .checkbox-row input[type="checkbox"]{margin-top:.35rem}
-.registration-card button{background:linear-gradient(120deg,#38f8ae,#60a5fa);color:#020617;border:none;font-weight:600;cursor:pointer;border-radius:999px;padding:.75rem 1.3rem;transition:transform .2s ease,box-shadow .2s ease}
-.registration-card button:hover:not(:disabled){transform:translateY(-1px);box-shadow:0 16px 40px rgba(56,248,174,.35)}
-.registration-card button:disabled{opacity:.45;cursor:not-allowed;box-shadow:none}
+.overlay-actions{display:grid;gap:.75rem}
+.overlay-actions .ghost-button{width:100%;text-align:center;font-weight:600}
+.registration-card button[type="submit"]{background:linear-gradient(120deg,#38f8ae,#60a5fa);color:#020617;border:none;font-weight:600;cursor:pointer;border-radius:999px;padding:.75rem 1.3rem;transition:transform .2s ease,box-shadow .2s ease}
+.registration-card button[type="submit"]:hover:not(:disabled){transform:translateY(-1px);box-shadow:0 16px 40px rgba(56,248,174,.35)}
+.registration-card button[type="submit"]:disabled{opacity:.45;cursor:not-allowed;box-shadow:none}
 body.overlay-active{overflow:hidden}
 body.overlay-active header,body.overlay-active main,body.overlay-active .footer{filter:blur(2px);pointer-events:none;user-select:none}
 .glass-panel .grid{margin-top:1.2rem}

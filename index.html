@@ -6,9 +6,10 @@
   <title>EconoDeal — Canada</title>
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
-<body class="overlay-active">
-  <div id="registrationOverlay" role="dialog" aria-modal="true" aria-labelledby="registrationTitle">
+<body>
+  <div id="registrationOverlay" class="hidden" role="dialog" aria-modal="true" aria-labelledby="registrationTitle" aria-hidden="true">
     <div class="registration-card">
+      <button type="button" class="overlay-close" data-close-overlay aria-label="Fermer la fenêtre d'inscription">&times;</button>
       <h2 id="registrationTitle">Accès réservé aux membres</h2>
       <p class="muted" style="margin:0">Rejoignez <strong><span data-client-count>0</span></strong> chasseurs de rabais et accédez au catalogue complet.</p>
       <form id="registrationForm">
@@ -24,7 +25,10 @@
           <input id="regulationCheckbox" name="regulation" type="checkbox" required />
           <label for="regulationCheckbox" style="margin:0">Je confirme avoir lu et accepté les réglementations d'utilisation du site.</label>
         </div>
-        <button id="registrationSubmit" type="submit" disabled>S'inscrire et accéder</button>
+        <div class="overlay-actions">
+          <button id="registrationSubmit" type="submit" disabled>S'inscrire et accéder</button>
+          <button type="button" class="ghost-button" data-close-overlay>Plus tard</button>
+        </div>
       </form>
     </div>
   </div>
@@ -232,6 +236,8 @@
     const regulationCheckbox = document.getElementById('regulationCheckbox');
     const clientCountDisplays = Array.from(document.querySelectorAll('[data-client-count]'));
     const overlayToggleButtons = Array.from(document.querySelectorAll('[data-open-overlay]'));
+    const overlayCloseButtons = Array.from(document.querySelectorAll('[data-close-overlay]'));
+    let lastFocusedElement = null;
 
     function parseJson(value){
       if(!value) return null;
@@ -331,20 +337,49 @@
       overlay.classList.add('hidden');
       overlay.setAttribute('aria-hidden', 'true');
       document.body.classList.remove('overlay-active');
+      if(lastFocusedElement && typeof lastFocusedElement.focus === 'function'){
+        lastFocusedElement.focus();
+      }
+      lastFocusedElement = null;
     }
 
     function showOverlay(){
       if(!overlay) return;
+      lastFocusedElement = document.activeElement instanceof HTMLElement ? document.activeElement : null;
       overlay.classList.remove('hidden');
       overlay.removeAttribute('aria-hidden');
       document.body.classList.add('overlay-active');
       updateClientCountDisplays();
+      const firstField = overlay.querySelector('input, button, select, textarea, [tabindex]:not([tabindex="-1"])');
+      if(firstField instanceof HTMLElement){
+        firstField.focus();
+      }
     }
 
     overlayToggleButtons.forEach(button => {
       button.addEventListener('click', () => {
         showOverlay();
       });
+    });
+
+    overlayCloseButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        hideOverlay();
+      });
+    });
+
+    if(overlay){
+      overlay.addEventListener('click', (event) => {
+        if(event.target === overlay){
+          hideOverlay();
+        }
+      });
+    }
+
+    document.addEventListener('keydown', (event) => {
+      if(event.key === 'Escape' && document.body.classList.contains('overlay-active')){
+        hideOverlay();
+      }
     });
 
     updateClientCountDisplays();
