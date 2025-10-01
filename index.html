@@ -652,8 +652,8 @@
       const rate = Number(settings.cadToLocalRate);
       const normalizedRate = Number.isFinite(rate) && rate > 0 ? rate : 1;
       if(activeCountry === 'canada'){
-        const segments = [`1 ${baseCode} = 1 ${baseCode}`];
-        const ariaSegments = [`1 ${baseCode} pour 1 ${baseCode}`];
+        const segments = [];
+        const ariaSegments = [];
         const usdSettings = getCurrencySettings('usa');
         const usdCode = usdSettings.code || 'USD';
         const usdRate = Number(usdSettings.cadToLocalRate);
@@ -667,6 +667,10 @@
           if(inverseText && inverseValue){
             ariaSegments.push(`1 ${usdCode} pour environ ${inverseValue} ${baseCode}`);
           }
+        }
+        if(segments.length === 0){
+          segments.push(`1 ${baseCode} = 1 ${baseCode}`);
+          ariaSegments.push(`1 ${baseCode} pour 1 ${baseCode}`);
         }
         exchangeIndicator.textContent = segments.join(' · ');
         exchangeIndicator.setAttribute('aria-label', `Taux de change ${ariaSegments.join(' et ')}`);
