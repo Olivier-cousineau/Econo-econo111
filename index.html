@@ -1154,6 +1154,27 @@
       return blocks.length ? `<div class="country-preview">${blocks.join('')}</div>` : '';
     }
 
+    function sanitizeAmazonQuery(value){
+      if(typeof value !== 'string' || !value.trim()){
+        return 'liquidation';
+      }
+      const normalized = value
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-zA-Z0-9\s-]/g, ' ');
+      const collapsed = normalized.trim().replace(/\s+/g, ' ');
+      if(!collapsed){
+        return 'liquidation';
+      }
+      const words = collapsed.split(' ').slice(0, 8);
+      return words.join(' ');
+    }
+
+    function buildAmazonLink(title){
+      const query = sanitizeAmazonQuery(title);
+      return `https://www.amazon.ca/s?k=${encodeURIComponent(query)}&ref=nb_sb_noss`;
+    }
+
     function render(){
       rangeLabel.textContent = range.value + '%';
       if(activeCountry !== 'canada'){
@@ -1173,7 +1194,7 @@
       });
       countEl.textContent = filtered.length;
       cardsEl.innerHTML = filtered.map(d=>{
-        const amazonLink = d.amazonUrl || `https://www.amazon.ca/s?k=${encodeURIComponent(d.title)}`;
+        const amazonLink = d.amazonUrl || buildAmazonLink(d.title);
         const ebayLink = d.ebayUrl || `https://www.ebay.ca/sch/i.html?_nkw=${encodeURIComponent(d.title)}`;
         return `
         <article class="card">
