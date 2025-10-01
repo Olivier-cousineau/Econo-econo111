@@ -403,7 +403,7 @@
       ];
     }
 
-    function bestBuyBranches(){
+    function fullBestBuyBranches(){
       return [
         {label:'Anjou (1)', slug:'anjou', city:'Anjou'},
         {label:'Baie Comeau (1)', slug:'baie-comeau', city:'Baie-Comeau'},
@@ -453,17 +453,17 @@
 
     const DEFAULT_BRANCH_SLUGS = new Set(baseBranches().map(branch => branch.slug));
 
-    const bestBuyBranches = baseBranches().map(branch => ({...branch, hasData:false}));
+    const baseBestBuyBranches = baseBranches().map(branch => ({...branch, hasData:false}));
 
     const STORES = [
-      {label:'Best Buy', slug:'best-buy', branches: bestBuyBranches},
+      {label:'Best Buy', slug:'best-buy', branches: baseBestBuyBranches},
       {label:'Home Depot', slug:'home-depot', branches: baseBranches()},
       {label:'Walmart', slug:'walmart', branches: baseBranches()},
       {label:'Canadian Tire', slug:'canadian-tire', branches: baseBranches()},
       {label:'Rona', slug:'rona', branches: baseBranches()},
       {label:'Patrick Morin', slug:'patrick-morin', branches: baseBranches()},
       {label:'Sporting Life', slug:'sporting-life', branches: baseBranches()},
-      {label:'Best Buy', slug:'best-buy', branches: bestBuyBranches()}
+      {label:'Best Buy', slug:'best-buy', branches: fullBestBuyBranches()}
     ];
 
     const POSTAL_DIRECTORY = [
