@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EconoDeal — Meilleurs rabais</title>
+  <style>
+    :root{
+      --bg:#0f172a; --panel:#111827; --panel-2:#1f2937; --text:#e5e7eb;
+      --muted:#9ca3af; --accent:#22c55e; --border:#2b3446; --radius:14px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),#0b1020 50%,#0a0f1a);color:var(--text)}
+    header{position:sticky;top:0;z-index:20;background:rgba(15,23,42,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+    .container{max-width:1100px;margin:0 auto;padding:18px}
+    .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+    h1{margin:0;font-size:18px}
+    h2{margin:0;font-size:24px}
+    .nav-button{display:inline-flex;align-items:center;justify-content:center;background:var(--panel-2);color:var(--text);border:1px solid var(--border);border-radius:10px;padding:10px 12px;text-decoration:none;transition:background .2s ease,color .2s ease}
+    .nav-button:hover{background:var(--panel);color:#fff}
+    .nav-button:focus{outline:2px solid var(--accent);outline-offset:1px}
+    .nav-button.current{background:linear-gradient(120deg,rgba(34,197,94,.25),rgba(59,130,246,.25));border-color:rgba(34,197,94,.6)}
+    .badge{display:inline-flex;gap:6px;align-items:center;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.35);color:#86efac;border-radius:999px;padding:6px 10px;font-weight:600;font-size:12px}
+    .muted{color:var(--muted)}
+    .section{padding:26px 0}
+    .hero{display:grid;gap:12px}
+    .filters{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:12px}
+    select,button{background:var(--panel-2);color:var(--text);border:1px solid var(--border);border-radius:10px;padding:10px 12px}
+    select:focus,button:focus{outline:2px solid var(--accent);outline-offset:1px}
+    button{cursor:pointer}
+    button:disabled{opacity:.5;cursor:not-allowed}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+    .card{background:linear-gradient(180deg,var(--panel),#0e1626);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
+    .card img{width:100%;height:140px;object-fit:cover;background:#0b0b10}
+    .card .body{padding:12px;display:grid;gap:8px;flex:1}
+    .card h3{margin:0;font-size:16px;line-height:1.4}
+    .price{display:flex;gap:10px;align-items:baseline}
+    .price .old{text-decoration:line-through;color:var(--muted)}
+    .footer{border-top:1px solid var(--border);padding:20px 0;color:var(--muted);text-align:center}
+    .status-banner{display:flex;gap:10px;align-items:center;background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.35);color:#bfdbfe;padding:10px 12px;border-radius:10px;font-size:13px}
+    .status-banner.error{background:rgba(239,68,68,.12);border-color:rgba(239,68,68,.4);color:#fecaca}
+    .empty{border:1px dashed var(--border);padding:30px;border-radius:var(--radius);text-align:center;color:var(--muted)}
+    @media (max-width:640px){
+      header{position:static}
+      .hero{gap:16px}
+      .card img{height:180px}
+    }
+  </style>
+</head>
+<body class="overlay-active">
+  <div id="registrationOverlay" role="dialog" aria-modal="true" aria-labelledby="registrationTitle">
+    <div class="registration-card">
+      <h2 id="registrationTitle">Accès réservé aux membres</h2>
+      <p class="muted" style="margin:0">Rejoignez <strong><span data-client-count>0</span></strong> chasseurs de rabais et accédez au classement des meilleures offres.</p>
+      <form id="registrationForm">
+        <div>
+          <label for="fullName">Nom complet</label>
+          <input id="fullName" name="fullName" type="text" placeholder="Entrez votre nom" autocomplete="name" required />
+        </div>
+        <div>
+          <label for="email">Courriel</label>
+          <input id="email" name="email" type="email" placeholder="nom@exemple.com" autocomplete="email" required />
+        </div>
+        <div class="checkbox-row">
+          <input id="regulationCheckbox" name="regulation" type="checkbox" required />
+          <label for="regulationCheckbox" style="margin:0">Je confirme avoir lu et accepté les réglementations d'utilisation du site.</label>
+        </div>
+        <button id="registrationSubmit" type="submit" disabled>S'inscrire et accéder</button>
+      </form>
+    </div>
+  </div>
+  <header>
+    <div class="container row" style="justify-content:space-between">
+      <div class="row" style="gap:10px;align-items:center">
+        <a class="nav-button" href="index.html" style="padding:8px 12px">Accueil</a>
+        <h1>EconoDeal</h1>
+      </div>
+      <div class="row" style="gap:12px;align-items:center">
+        <a class="nav-button current" href="best-deals.html" style="white-space:nowrap">Meilleurs rabais</a>
+        <a class="nav-button" href="pricing.html" style="white-space:nowrap">Forfaits / prix</a>
+        <a class="nav-button" href="roadmap.html" style="white-space:nowrap">Roadmap / vision</a>
+        <div class="muted" style="white-space:nowrap">Clients inscrits&nbsp;: <span data-client-count>0</span></div>
+        <div class="muted">© <span id="year"></span></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section" style="padding-bottom:10px">
+      <div class="hero">
+        <div class="badge">Mise à jour après chaque collecte</div>
+        <h2>Classement des meilleures liquidations</h2>
+        <p class="muted" style="max-width:720px">Découvrez les rabais les plus agressifs détectés par nos robots sur l'ensemble des détaillants surveillés. Le classement se rafraîchit automatiquement dès que les scrapers terminent leur collecte. Rechargez la page pour voir les dernières offres et consultez le top 100 des meilleures liquidations triées par pourcentage de rabais.</p>
+        <div class="status-banner" id="statusBanner" role="status">
+          <span id="statusText">Analyse des dernières collectes en cours...</span>
+        </div>
+        <div class="filters">
+          <div>
+            <label for="storeFilter" class="muted" style="font-size:12px;display:block;margin-bottom:4px">Filtrer par détaillant</label>
+            <select id="storeFilter">
+              <option value="">Tous les détaillants</option>
+            </select>
+          </div>
+          <div style="margin-left:auto" class="muted">Total&nbsp;: <span id="dealCount">0</span> offres</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:12px">
+      <div id="cards" class="grid" aria-live="polite"></div>
+      <div id="emptyState" class="empty" style="display:none">Aucune liquidation trouvée pour le moment. Réessayez plus tard!</div>
+    </section>
+  </main>
+
+  <div class="container footer">
+    © <span id="yearFooter"></span> EconoDeal · Tous droits réservés
+  </div>
+
+  <style>
+    /* Compléments stylistiques partagés avec l'accueil */
+    #registrationOverlay{position:fixed;inset:0;background:rgba(15,23,42,.95);display:flex;align-items:center;justify-content:center;padding:20px;z-index:2000}
+    #registrationOverlay.hidden{display:none}
+    .registration-card{background:linear-gradient(180deg,var(--panel),#0e1626);border:1px solid var(--border);border-radius:var(--radius);max-width:420px;width:100%;padding:26px;display:grid;gap:16px;box-shadow:0 24px 60px rgba(15,23,42,.5)}
+    .registration-card form{display:grid;gap:12px}
+    .registration-card input{width:100%;background:var(--panel-2);color:var(--text);border:1px solid var(--border);border-radius:10px;padding:10px 12px}
+    .registration-card button{background:linear-gradient(120deg,rgba(34,197,94,.9),rgba(59,130,246,.85));color:#fff;border:none;font-weight:600;cursor:pointer;transition:opacity .2s ease,transform .2s ease}
+    .registration-card button:hover:not(:disabled){opacity:.9;transform:translateY(-1px)}
+    .checkbox-row{display:flex;gap:10px;align-items:flex-start;background:rgba(34,197,94,.05);border:1px solid rgba(34,197,94,.3);padding:12px;border-radius:10px}
+    body.overlay-active{overflow:hidden}
+    body.overlay-active header,body.overlay-active main,body.overlay-active .footer{filter:blur(2px);pointer-events:none;user-select:none}
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const overlay = document.getElementById('registrationOverlay');
+      const form = document.getElementById('registrationForm');
+      const submitBtn = document.getElementById('registrationSubmit');
+      const regulationCheckbox = document.getElementById('regulationCheckbox');
+      const clientCountDisplays = Array.from(document.querySelectorAll('[data-client-count]'));
+      const statusBanner = document.getElementById('statusBanner');
+      const statusText = document.getElementById('statusText');
+      const cardsEl = document.getElementById('cards');
+      const emptyState = document.getElementById('emptyState');
+      const storeFilter = document.getElementById('storeFilter');
+      const dealCount = document.getElementById('dealCount');
+      const year = document.getElementById('year');
+      const yearFooter = document.getElementById('yearFooter');
+      const currentYear = new Date().getFullYear();
+      if(year) year.textContent = currentYear;
+      if(yearFooter) yearFooter.textContent = currentYear;
+
+      function parseJson(value){
+        if(!value) return null;
+        try{ return JSON.parse(value); }
+        catch(err){ console.warn('Impossible de lire les données existantes', err); return null; }
+      }
+      function safeGet(key){
+        try{ return localStorage.getItem(key); }
+        catch(err){ console.warn('Stockage local indisponible', err); return null; }
+      }
+      function safeSet(key, value){
+        try{ localStorage.setItem(key, value); }
+        catch(err){ console.warn('Impossible d\'enregistrer les données', err); }
+      }
+      function cleanText(value){ return typeof value === 'string' ? value.trim() : ''; }
+      function getRegistrations(){
+        const parsed = parseJson(safeGet('econodealRegistrations'));
+        if(!Array.isArray(parsed)) return [];
+        return parsed
+          .filter(item => item && typeof item === 'object')
+          .map(item => ({
+            name: cleanText(item.name),
+            email: cleanText(item.email).toLowerCase(),
+            registeredAt: cleanText(item.registeredAt)
+          }))
+          .filter(item => item.email);
+      }
+      function saveRegistrations(items){ safeSet('econodealRegistrations', JSON.stringify(items)); }
+      function upsertRegistration(entry){
+        const collection = getRegistrations();
+        const email = cleanText(entry.email).toLowerCase();
+        if(!email) return;
+        const normalized = {
+          name: cleanText(entry.name),
+          email,
+          registeredAt: cleanText(entry.registeredAt)
+        };
+        const existingIndex = collection.findIndex(item => item.email === email);
+        if(existingIndex >= 0){ collection[existingIndex] = {...collection[existingIndex], ...normalized}; }
+        else{ collection.push(normalized); }
+        saveRegistrations(collection);
+      }
+      function parseCount(value){
+        const parsed = parseInt(value ?? '0', 10);
+        return Number.isFinite(parsed) && parsed >= 0 ? parsed : 0;
+      }
+      function getClientCount(){ return parseCount(safeGet('econodealClientCount')); }
+      function setClientCount(value){ safeSet('econodealClientCount', String(Math.max(0, value))); }
+      function updateClientCountDisplays(){
+        const formatter = new Intl.NumberFormat('fr-CA');
+        const count = getClientCount();
+        clientCountDisplays.forEach(el => { el.textContent = formatter.format(count); });
+      }
+      function hideOverlay(){ if(!overlay) return; overlay.classList.add('hidden'); overlay.setAttribute('aria-hidden','true'); document.body.classList.remove('overlay-active'); }
+      function showOverlay(){ if(!overlay) return; overlay.classList.remove('hidden'); overlay.removeAttribute('aria-hidden'); document.body.classList.add('overlay-active'); updateClientCountDisplays(); }
+      updateClientCountDisplays();
+      const alreadyRegistered = safeGet('econodealClientRegistered') === 'true';
+      if(alreadyRegistered){ hideOverlay(); }
+      else{ showOverlay(); }
+      if(submitBtn && regulationCheckbox){
+        submitBtn.disabled = !regulationCheckbox.checked;
+        regulationCheckbox.addEventListener('change', () => { submitBtn.disabled = !regulationCheckbox.checked; });
+      }
+      if(form){
+        form.addEventListener('submit', (event) => {
+          event.preventDefault();
+          if(!form.reportValidity()) return;
+          const wasRegistered = safeGet('econodealClientRegistered') === 'true';
+          if(!wasRegistered){
+            const current = getClientCount();
+            setClientCount(current + 1);
+          }
+          const payload = {
+            name: (form.fullName?.value ?? '').trim(),
+            email: (form.email?.value ?? '').trim(),
+            consent: true,
+            registeredAt: new Date().toISOString()
+          };
+          safeSet('econodealUser', JSON.stringify(payload));
+          upsertRegistration(payload);
+          safeSet('econodealClientRegistered', 'true');
+          updateClientCountDisplays();
+          hideOverlay();
+        });
+      }
+
+      function baseBranches(){
+        return [
+          {label:'Montréal', slug:'montreal', city:'Montréal'},
+          {label:'Laval', slug:'laval', city:'Laval'},
+          {label:'Saint-Jérôme', slug:'saint-jerome', city:'Saint-Jérôme'}
+        ];
+      }
+      function fullBestBuyBranches(){
+        return [
+          {label:'Anjou (1)', slug:'anjou', city:'Anjou'},
+          {label:'Baie Comeau (1)', slug:'baie-comeau', city:'Baie-Comeau'},
+          {label:'Beloeil (1)', slug:'beloeil', city:'Beloeil'},
+          {label:'Brossard (1)', slug:'brossard', city:'Brossard'},
+          {label:'Chomedey (2)', slug:'chomedey', city:'Chomedey'},
+          {label:'Chateauguay (1)', slug:'chateauguay', city:'Chateauguay'},
+          {label:'Chicoutimi (1)', slug:'chicoutimi', city:'Chicoutimi'},
+          {label:'Drummondville (1)', slug:'drummondville', city:'Drummondville'},
+          {label:'Gatineau (3)', slug:'gatineau', city:'Gatineau'},
+          {label:'Granby (1)', slug:'granby', city:'Granby'},
+          {label:'Joliette (1)', slug:'joliette', city:'Joliette'},
+          {label:'LaSalle (1)', slug:'lasalle', city:'LaSalle'},
+          {label:'Laval (2)', slug:'laval-best-buy', city:'Laval'},
+          {label:'Longueuil (1)', slug:'longueuil', city:'Longueuil'},
+          {label:'Mascouche (1)', slug:'mascouche', city:'Mascouche'},
+          {label:'Montmagny (1)', slug:'montmagny', city:'Montmagny'},
+          {label:'Montreal (2)', slug:'montreal-best-buy', city:'Montréal'},
+          {label:'Pointe-Claire (2)', slug:'pointe-claire', city:'Pointe-Claire'},
+          {label:'Quebec (4)', slug:'quebec', city:'Québec'},
+          {label:'Rawdon (1)', slug:'rawdon', city:'Rawdon'},
+          {label:'Repentigny (2)', slug:'repentigny', city:'Repentigny'},
+          {label:'Rimouski (1)', slug:'rimouski', city:'Rimouski'},
+          {label:'Riviere Du Loup (1)', slug:'riviere-du-loup', city:'Rivière-du-Loup'},
+          {label:'Rosemere (1)', slug:'rosemere', city:'Rosemère'},
+          {label:'Rouyn Noranda (1)', slug:'rouyn-noranda', city:'Rouyn-Noranda'},
+          {label:'Saint-Eustache (1)', slug:'saint-eustache', city:'Saint-Eustache'},
+          {label:'Saint-Hyacinthe (1)', slug:'saint-hyacinthe', city:'Saint-Hyacinthe'},
+          {label:'Saint-Jean-sur-Richelieu (1)', slug:'saint-jean-sur-richelieu', city:'Saint-Jean-sur-Richelieu'},
+          {label:'Saint-Jerome (1)', slug:'saint-jerome', city:'Saint-Jérôme'},
+          {label:'Sainte-Marie (1)', slug:'sainte-marie', city:'Sainte-Marie'},
+          {label:'Sept Iles (1)', slug:'sept-iles', city:'Sept-Îles'},
+          {label:'Sherbrooke (1)', slug:'sherbrooke', city:'Sherbrooke'},
+          {label:'St Georges (1)', slug:'st-georges', city:'Saint-Georges'},
+          {label:'St Hyacinthe (1)', slug:'st-hyacinthe', city:'Saint-Hyacinthe'},
+          {label:'St Jerome (1)', slug:'st-jerome', city:'Saint-Jérôme'},
+          {label:'St-Bruno-de Montarville (1)', slug:'st-bruno-de-montarville', city:'Saint-Bruno-de-Montarville'},
+          {label:'Terrebonne (1)', slug:'terrebonne', city:'Terrebonne'},
+          {label:'Thetford Mines (1)', slug:'thetford-mines', city:'Thetford Mines'},
+          {label:'Trois-Rivieres (1)', slug:'trois-rivieres', city:'Trois-Rivières'},
+          {label:"Val-d'Or (1)", slug:'val-d-or', city:"Val-d'Or"},
+          {label:'Vaudreuil-Dorion (1)', slug:'vaudreuil-dorion', city:'Vaudreuil-Dorion'},
+          {label:'Victoriaville (1)', slug:'victoriaville', city:'Victoriaville'},
+          {label:'Ville Mont Royal (1)', slug:'ville-mont-royal', city:'Mont-Royal'}
+        ];
+      }
+      const STORES = [
+        {label:'Best Buy', slug:'best-buy', branches: fullBestBuyBranches()},
+        {label:'Home Depot', slug:'home-depot', branches: baseBranches()},
+        {label:'Walmart', slug:'walmart', branches: baseBranches()},
+        {label:'Canadian Tire', slug:'canadian-tire', branches: baseBranches()},
+        {label:'Rona', slug:'rona', branches: baseBranches()},
+        {label:'Patrick Morin', slug:'patrick-morin', branches: baseBranches()},
+        {label:'Sporting Life', slug:'sporting-life', branches: baseBranches()}
+      ];
+
+      function slugify(value){
+        if(value === undefined || value === null) return '';
+        const text = String(value).normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        return text.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').replace(/--+/g,'-');
+      }
+      function firstDefined(...values){
+        for(const value of values){ if(value !== undefined && value !== null && value !== '') return value; }
+        return null;
+      }
+      function toNumber(value){
+        if(typeof value === 'number' && Number.isFinite(value)) return value;
+        if(typeof value === 'string' && value.trim()){
+          const parsed = Number(value.replace(/[^0-9,.-]/g,'').replace(',','.'));
+          return Number.isFinite(parsed) ? parsed : null;
+        }
+        return null;
+      }
+      function normalizeDeal(item, storeLabel, branch){
+        const branchLabel = typeof branch === 'object' && branch ? branch.label : branch;
+        const branchSlug = typeof branch === 'object' && branch && branch.slug ? branch.slug : slugify(branchLabel || item.city || storeLabel);
+        const cityLabel = typeof branch === 'object' && branch && branch.city ? branch.city : firstDefined(item.city, branchLabel, storeLabel);
+        const citySlug = slugify(cityLabel);
+        const regular = toNumber(firstDefined(item.original_price, item.originalPrice, item.regular_price, item.regularPrice, item.price_before, item.priceBefore, item.listPrice, item.price));
+        const sale = toNumber(firstDefined(item.salePrice, item.sale_price, item.discount_price, item.discountPrice, item.current_price, item.currentPrice, item.price));
+        const finalRegular = regular ?? sale ?? 0;
+        const finalSale = sale ?? regular ?? 0;
+        return {
+          title: firstDefined(item.title, item.name, 'Article en liquidation'),
+          image: firstDefined(item.image, item.image_url, item.imageUrl, item.img, 'https://via.placeholder.com/400x300?text=Liquidation'),
+          price: finalRegular,
+          salePrice: finalSale,
+          store: item.store ?? storeLabel,
+          city: item.city ?? cityLabel,
+          branch: branchLabel ?? cityLabel,
+          branchSlug,
+          citySlug,
+          url: firstDefined(item.url, item.link, '#')
+        };
+      }
+      function discount(p,s){
+        if(!p || !s || !Number.isFinite(p) || !Number.isFinite(s) || p === 0) return 0;
+        const pct = Math.round((1 - (s / p)) * 100);
+        return Number.isFinite(pct) ? Math.max(pct, 0) : 0;
+      }
+      function currency(n){ return Number.isFinite(n) ? n.toLocaleString('fr-CA',{style:'currency',currency:'CAD'}) : '—'; }
+      function filePathFor(store, branch){
+        const s = store?.slug;
+        const c = typeof branch === 'object' ? branch?.slug : branch;
+        if(!s || !c) return null;
+        return `data/${s}/${c}.json`;
+      }
+
+      async function loadCanadianTireDirectory(){
+        const store = STORES.find(entry => entry.slug === 'canadian-tire');
+        if(!store) return;
+        try{
+          const res = await fetch('data/canadian-tire/stores.json', {cache:'no-store'});
+          if(!res.ok) return;
+          const json = await res.json();
+          if(!Array.isArray(json)) return;
+          const seen = new Map();
+          for(const branch of store.branches ?? []){
+            seen.set(branch.slug, {...branch, hasData:true});
+          }
+          for(const entry of json){
+            if(!entry || typeof entry !== 'object') continue;
+            const rawSlug = typeof entry.slug === 'string' && entry.slug ? entry.slug : slugify(entry.nickname || entry.city || entry.label);
+            if(!rawSlug) continue;
+            const label = (entry.nickname || (entry.label || '').replace(/^Canadian Tire\s*/i, '') || entry.city || rawSlug).trim();
+            const city = entry.city || label;
+            seen.set(rawSlug, {label, slug: rawSlug, city});
+          }
+          store.branches = Array.from(seen.values()).sort((a,b)=>a.label.localeCompare(b.label,'fr'));
+        }catch(err){
+          console.warn('Impossible de charger les succursales Canadian Tire', err);
+        }
+      }
+
+      async function fetchOne(path, storeLabel, branch){
+        try{
+          const res = await fetch(path, {cache:'no-store'});
+          if(!res.ok) return {entries:[], updatedAt:null};
+          let updatedAt = null;
+          const lastModified = res.headers?.get?.('Last-Modified');
+          if(lastModified){
+            const parsed = Date.parse(lastModified);
+            if(Number.isFinite(parsed)) updatedAt = parsed;
+          }
+          const json = await res.json();
+          if(!Array.isArray(json)) return {entries:[], updatedAt};
+          return {
+            entries: json.map(item => normalizeDeal(item, storeLabel, branch)),
+            updatedAt
+          };
+        }catch(error){
+          console.warn('fetch fail', path, error);
+          return {entries:[], updatedAt:null};
+        }
+      }
+
+      let allDeals = [];
+      function render(){
+        const filter = storeFilter.value;
+        const subset = filter ? allDeals.filter(deal => deal.store === filter) : allDeals;
+        const sorted = subset
+          .map(deal => ({...deal, discountPct: discount(deal.price, deal.salePrice)}))
+          .filter(deal => deal.discountPct > 0)
+          .sort((a,b) => {
+            if(b.discountPct !== a.discountPct) return b.discountPct - a.discountPct;
+            return (a.salePrice ?? Number.POSITIVE_INFINITY) - (b.salePrice ?? Number.POSITIVE_INFINITY);
+          });
+        const top = sorted.slice(0, 100);
+        dealCount.textContent = top.length.toString();
+        if(top.length === 0){
+          cardsEl.innerHTML = '';
+          emptyState.style.display = '';
+          return;
+        }
+        emptyState.style.display = 'none';
+        cardsEl.innerHTML = top.map(deal => `
+          <article class="card">
+            <img src="${deal.image}" alt="${deal.title}" loading="lazy" />
+            <div class="body">
+              <div class="badge">-${deal.discountPct}% Rabais</div>
+              <h3>${deal.title}</h3>
+              <div class="muted">${deal.store} · ${deal.branch ?? deal.city ?? ''}</div>
+              <div class="price"><div class="old">${currency(deal.price)}</div><div>${currency(deal.salePrice)}</div></div>
+              <a class="nav-button" href="${deal.url || '#'}" target="_blank" rel="noopener" style="justify-content:center;width:100%">Voir l'offre</a>
+            </div>
+          </article>`).join('');
+      }
+
+      async function fetchAllDeals(){
+        statusBanner.classList.remove('error');
+        statusText.textContent = 'Analyse des dernières collectes en cours...';
+        const tasks = [];
+        for(const store of STORES){
+          const branches = store.branches ?? [];
+          for(const branch of branches){
+            const path = filePathFor(store, branch);
+            if(path) tasks.push({store, branch, path});
+          }
+        }
+        const seen = new Set();
+        const aggregated = [];
+        let latestUpdated = 0;
+        for(const task of tasks){
+          if(seen.has(task.path)) continue;
+          seen.add(task.path);
+          const {entries, updatedAt} = await fetchOne(task.path, task.store.label, task.branch);
+          for(const entry of entries){ aggregated.push(entry); }
+          if(updatedAt && updatedAt > latestUpdated){ latestUpdated = updatedAt; }
+        }
+        return {deals: aggregated, lastUpdated: latestUpdated || null};
+      }
+
+      function populateStoreFilter(){
+        const options = ['<option value="">Tous les détaillants</option>'];
+        for(const store of STORES){
+          options.push(`<option value="${store.label}">${store.label}</option>`);
+        }
+        storeFilter.innerHTML = options.join('');
+      }
+
+      populateStoreFilter();
+      storeFilter.addEventListener('change', render);
+
+      await loadCanadianTireDirectory();
+      try{
+        const result = await fetchAllDeals();
+        allDeals = result.deals;
+        let displayDate;
+        if(result.lastUpdated){
+          displayDate = new Date(result.lastUpdated);
+        }else{
+          displayDate = new Date();
+        }
+        statusText.textContent = `Dernière collecte analysée le ${displayDate.toLocaleString('fr-CA', {dateStyle:'medium', timeStyle:'short'})}`;
+      }catch(err){
+        console.error('Impossible de récupérer les liquidations', err);
+        statusText.textContent = "Erreur lors du chargement des liquidations.";
+        statusBanner.classList.add('error');
+      }
+      render();
+    });
+  </script>
+</body>
+</html>
