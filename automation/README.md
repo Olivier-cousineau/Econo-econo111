@@ -1,7 +1,43 @@
-# Automatisation des liquidations Canadian Tire & Best Buy
+# Automatisation des liquidations (Canadian Tire, Best Buy, Patrick Morin)
 
 Ce dossier contient plusieurs scripts Python pour collecter les liquidations de
 magasins québécois et publier les données sur votre site web.
+
+## Patrick Morin – Succursale de Prévost
+
+- Script : `patrick_morin_prevost.py`
+- Dépendances : `requests`
+- Fichier de sortie par défaut : `../data/patrick-morin/prevost.json`
+
+### Lancement manuel
+
+```bash
+cd automation
+python patrick_morin_prevost.py --run-once
+```
+
+Le script interroge l'API de recherche VTEX utilisée par la page publique
+``https://patrickmorin.com/fr/liquidation`` et convertit les produits en format
+JSON compatible avec le site statique (`data/README.md`).
+
+### Rafraîchissement continu (toutes les 3 heures)
+
+Par défaut le programme reste en mémoire et recharge les liquidations toutes les
+trois heures comme demandé. Laisser tourner le processus dans `tmux`, `screen`,
+un conteneur ou un service `systemd`.
+
+```bash
+python patrick_morin_prevost.py
+```
+
+Options utiles :
+
+- `--interval-hours 1.5` : change l'intervalle entre deux mises à jour.
+- `--dry-run` : affiche le nombre d'items sans écrire sur disque.
+- `--log-level DEBUG` : active les logs détaillés (URLs, tailles de lots, etc.).
+
+> ℹ️ Le fichier de sortie est écrasé à chaque exécution. Montez-le sur votre
+> site (`data/patrick-morin/prevost.json`) pour exposer les liquidations à jour.
 
 ## Best Buy (API officielle)
 
