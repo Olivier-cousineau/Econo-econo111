@@ -556,14 +556,28 @@
         if(!res.ok) return;
         const json = await res.json();
         if(!Array.isArray(json)) return;
-        const seen = new Map(store.branches.map(branch => [branch.slug, branch]));
+        const availabilityCache = new Map();
+        async function branchHasData(slug){
+          if(availabilityCache.has(slug)) return availabilityCache.get(slug);
+          const hasData = await canadianTireHasData(slug);
+          availabilityCache.set(slug, hasData);
+          return hasData;
+        }
+        const seen = new Map();
+        for(const branch of store.branches){
+          const slug = branch?.slug;
+          if(!slug) continue;
+          const hasData = await branchHasData(slug);
+          seen.set(slug, {...branch, hasData});
+        }
         for(const entry of json){
           const rawSlug = typeof entry.slug === 'string' && entry.slug ? entry.slug : slugify(entry.nickname || entry.city || entry.label);
-          if(!rawSlug || seen.has(rawSlug)) continue;
-          if(!await canadianTireHasData(rawSlug)) continue;
+          if(!rawSlug) continue;
           const label = (entry.nickname || (entry.label || '').replace(/^Canadian Tire\s*/i, '') || entry.city || rawSlug).trim();
           const city = entry.city || label;
-          seen.set(rawSlug, {label, slug: rawSlug, city});
+          const hasData = await branchHasData(rawSlug);
+          const previous = seen.get(rawSlug) || {};
+          seen.set(rawSlug, {...previous, label, slug: rawSlug, city, hasData});
         }
         store.branches = Array.from(seen.values()).sort((a,b)=>a.label.localeCompare(b.label,'fr'));
       }catch(err){
@@ -581,7 +595,9 @@
       }
       const options = ['<option value="">(Toutes)</option>'];
       for(const branch of branches){
-        options.push(`<option value="${branch.slug}">${branch.label}</option>`);
+        const label = branch.hasData === false ? `${branch.label} (bientôt)` : branch.label;
+        const attrs = branch.hasData === false ? ' data-empty="true"' : '';
+        options.push(`<option value="${branch.slug}"${attrs}>${label}</option>`);
       }
       citySelect.innerHTML = options.join('');
       if(preserveSelection && branches.some(branch => branch.slug === previous)){
@@ -622,6 +638,7 @@
           branches = store.branches.filter(branch => DEFAULT_BRANCH_SLUGS.has(branch.slug));
         }
         for(const branch of branches){
+          if(branch.hasData === false) continue;
           const path = filePathFor(store, branch);
           if(path) tasks.push({store, branch, path});
         }
