@@ -238,6 +238,7 @@
     const overlayToggleButtons = Array.from(document.querySelectorAll('[data-open-overlay]'));
     const overlayCloseButtons = Array.from(document.querySelectorAll('[data-close-overlay]'));
     let lastFocusedElement = null;
+    const OVERLAY_DISMISSED_KEY = 'econodealOverlayDismissed';
 
     function parseJson(value){
       if(!value) return null;
@@ -263,6 +264,14 @@
         localStorage.setItem(key, value);
       }catch(err){
         console.warn('Impossible d\'enregistrer les données', err);
+      }
+    }
+
+    function safeRemove(key){
+      try{
+        localStorage.removeItem(key);
+      }catch(err){
+        console.warn('Impossible de supprimer les données', err);
       }
     }
 
@@ -332,7 +341,7 @@
       });
     }
 
-    function hideOverlay(){
+    function hideOverlay(options = {}){
       if(!overlay) return;
       overlay.classList.add('hidden');
       overlay.setAttribute('aria-hidden', 'true');
@@ -341,6 +350,9 @@
         lastFocusedElement.focus();
       }
       lastFocusedElement = null;
+      if(options.persistDismissal){
+        safeSet(OVERLAY_DISMISSED_KEY, 'true');
+      }
     }
 
     function showOverlay(){
@@ -349,6 +361,7 @@
       overlay.classList.remove('hidden');
       overlay.removeAttribute('aria-hidden');
       document.body.classList.add('overlay-active');
+      safeRemove(OVERLAY_DISMISSED_KEY);
       updateClientCountDisplays();
       const firstField = overlay.querySelector('input, button, select, textarea, [tabindex]:not([tabindex="-1"])');
       if(firstField instanceof HTMLElement){
@@ -364,31 +377,39 @@
 
     overlayCloseButtons.forEach(button => {
       button.addEventListener('click', () => {
-        hideOverlay();
+        hideOverlay({persistDismissal:true});
       });
     });
 
     if(overlay){
       overlay.addEventListener('click', (event) => {
         if(event.target === overlay){
-          hideOverlay();
+          hideOverlay({persistDismissal:true});
         }
       });
     }
 
     document.addEventListener('keydown', (event) => {
       if(event.key === 'Escape' && document.body.classList.contains('overlay-active')){
-        hideOverlay();
+        hideOverlay({persistDismissal:true});
       }
     });
 
     updateClientCountDisplays();
 
     const alreadyRegistered = safeGet('econodealClientRegistered') === 'true';
+    const overlayDismissed = safeGet(OVERLAY_DISMISSED_KEY) === 'true';
     if(alreadyRegistered){
+      safeSet(OVERLAY_DISMISSED_KEY, 'true');
       hideOverlay();
     }else{
-      showOverlay();
+      const currentUrl = new URL(window.location.href);
+      const wantsOverlay = currentUrl.hash === '#inscription' || currentUrl.searchParams.get('inscription') === '1';
+      if(wantsOverlay && !overlayDismissed){
+        showOverlay();
+      }else{
+        hideOverlay();
+      }
     }
 
     if(submitBtn && regulationCheckbox){
@@ -420,7 +441,7 @@
         upsertRegistration(payload);
         safeSet('econodealClientRegistered', 'true');
         updateClientCountDisplays();
-        hideOverlay();
+        hideOverlay({persistDismissal:true});
       });
     }
 
