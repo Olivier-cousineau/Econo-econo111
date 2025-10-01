@@ -120,6 +120,7 @@
           <label for="storeSelect">Magasin</label>
           <select id="storeSelect">
             <option value="">(Tous)</option>
+            <option>Best Buy</option>
             <option>Home Depot</option>
             <option>Walmart</option>
             <option>Canadian Tire</option>
@@ -403,7 +404,10 @@
 
     const DEFAULT_BRANCH_SLUGS = new Set(baseBranches().map(branch => branch.slug));
 
+    const bestBuyBranches = baseBranches().map(branch => ({...branch, hasData:false}));
+
     const STORES = [
+      {label:'Best Buy', slug:'best-buy', branches: bestBuyBranches},
       {label:'Home Depot', slug:'home-depot', branches: baseBranches()},
       {label:'Walmart', slug:'walmart', branches: baseBranches()},
       {label:'Canadian Tire', slug:'canadian-tire', branches: baseBranches()},
