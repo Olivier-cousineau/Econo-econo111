@@ -1,4 +1,4 @@
 # Données Best Buy
 
-Ce dossier reçoit `liquidations.json`, généré automatiquement par
-`automation/bestbuy_liquidations.py`.
+Ce dossier reçoit `liquidations.json`, que vous pouvez mettre à jour manuellement
+selon vos besoins.
