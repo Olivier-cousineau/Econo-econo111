@@ -134,7 +134,7 @@
         <a class="nav-button" href="best-deals.html" style="white-space:nowrap">Meilleurs rabais</a>
         <a class="nav-button" href="pricing.html" style="white-space:nowrap">Forfaits / prix</a>
         <a class="nav-button" href="roadmap.html" style="white-space:nowrap">Roadmap / vision</a>
-        <span class="header-region" aria-label="Couverture actuelle Canada et États-Unis">US · CA</span>
+        <span class="header-region" data-exchange-indicator aria-live="polite" aria-label="Taux de change 1 CAD pour 1 CAD">1 CAD = 1 CAD</span>
         <div class="muted" style="white-space:nowrap">Clients inscrits&nbsp;: <span data-client-count>0</span></div>
         <div class="muted">© <span id="year"></span></div>
       </div>
@@ -148,7 +148,7 @@
 
       <!-- ✅ Les éléments requis existent et leurs IDs correspondent au script -->
       <div class="row" style="gap:12px;align-items:center;flex-wrap:wrap;margin-top:12px">
-        <span class="muted" data-country-label>Pays couvert&nbsp;: Canada</span>
+        <span class="muted" data-country-label>Pays couvert&nbsp;: Canada · Devise&nbsp;: CAD</span>
         <div class="country-toggle" role="group" aria-label="Choisir le pays">
           <button type="button" class="country-button active" data-country="canada" aria-pressed="true">Canada</button>
           <button type="button" class="country-button" data-country="usa" aria-pressed="false">États-Unis</button>
@@ -580,38 +580,92 @@
     const postalHelper = document.getElementById('postalHelper');
     const countryButtons = Array.from(document.querySelectorAll('.country-button[data-country]'));
     const countryLabel = document.querySelector('[data-country-label]');
+    const exchangeIndicator = document.querySelector('[data-exchange-indicator]');
 
     const DEFAULT_POSTAL_MESSAGE = 'Entrez les 3 premiers caractères du code postal pour trouver les succursales dans un rayon de 50 km (ex. H2X).';
+    const BASE_CURRENCY = { code:'CAD', locale:'fr-CA' };
+    // currency.cadToLocalRate indique la conversion d'un dollar canadien vers la devise locale.
     const COUNTRY_CONFIG = {
       canada: {
         titleSuffix: 'Canada',
         postalMessage: DEFAULT_POSTAL_MESSAGE,
-        emptyNotice: 'Sélectionnez un magasin pour afficher les liquidations canadiennes disponibles en ce moment.'
+        emptyNotice: 'Sélectionnez un magasin pour afficher les liquidations canadiennes disponibles en ce moment.',
+        currency: {
+          code: 'CAD',
+          locale: 'fr-CA',
+          cadToLocalRate: 1
+        }
       },
       usa: {
         titleSuffix: 'États-Unis',
         postalMessage: 'Les filtres seront activés dès le lancement de la plateforme aux États-Unis.',
-        emptyNotice: 'Nous finalisons notre catalogue américain. Revenez bientôt pour découvrir les meilleures aubaines aux États-Unis.'
+        emptyNotice: 'Nous finalisons notre catalogue américain. Revenez bientôt pour découvrir les meilleures aubaines aux États-Unis.',
+        currency: {
+          code: 'USD',
+          locale: 'en-US',
+          cadToLocalRate: 0.74
+        }
       },
       europe: {
         titleSuffix: 'Europe',
         postalMessage: 'Les fonctions de recherche seront disponibles lors du déploiement européen.',
-        emptyNotice: 'La couverture européenne est en préparation. Abonnez-vous pour être informé de l’ouverture officielle.'
+        emptyNotice: 'La couverture européenne est en préparation. Abonnez-vous pour être informé de l’ouverture officielle.',
+        currency: {
+          code: 'EUR',
+          locale: 'fr-FR',
+          cadToLocalRate: 0.68
+        }
       }
     };
     let activeCountry = 'canada';
     let savedFilters = null;
 
+    const EXCHANGE_FORMATTER = new Intl.NumberFormat('fr-CA',{minimumFractionDigits:2,maximumFractionDigits:2});
+
     function getCountryConfig(country){
       return COUNTRY_CONFIG[country] ?? COUNTRY_CONFIG.canada;
+    }
+
+    function getCurrencySettings(country){
+      const fallback = COUNTRY_CONFIG.canada?.currency ?? { code: BASE_CURRENCY.code, locale: BASE_CURRENCY.locale, cadToLocalRate: 1 };
+      const config = COUNTRY_CONFIG[country];
+      if(config && config.currency){
+        return {...fallback, ...config.currency};
+      }
+      return fallback;
+    }
+
+    function updateExchangeIndicator(){
+      if(!exchangeIndicator) return;
+      const settings = getCurrencySettings(activeCountry);
+      const baseCode = BASE_CURRENCY.code;
+      const targetCode = settings.code || baseCode;
+      const rate = Number(settings.cadToLocalRate);
+      const normalizedRate = Number.isFinite(rate) && rate > 0 ? rate : 1;
+      if(activeCountry === 'canada' || Math.abs(normalizedRate - 1) < 1e-6){
+        exchangeIndicator.textContent = `1 ${baseCode} = 1 ${baseCode}`;
+        exchangeIndicator.setAttribute('aria-label', `Taux de change 1 ${baseCode} pour 1 ${baseCode}`);
+        return;
+      }
+      const direct = EXCHANGE_FORMATTER.format(normalizedRate);
+      const inverse = normalizedRate > 0 ? EXCHANGE_FORMATTER.format(1 / normalizedRate) : null;
+      const baseText = `1 ${baseCode} ≈ ${direct} ${targetCode}`;
+      const inverseText = inverse ? `1 ${targetCode} ≈ ${inverse} ${baseCode}` : '';
+      const combined = inverseText ? `${baseText} · ${inverseText}` : baseText;
+      exchangeIndicator.textContent = combined;
+      const ariaText = inverseText ? `${baseText} et ${inverseText}` : baseText;
+      exchangeIndicator.setAttribute('aria-label', `Taux de change ${ariaText}`);
     }
 
     function updateCountryMeta(){
       const config = getCountryConfig(activeCountry);
       document.title = `EconoDeal — ${config.titleSuffix}`;
       if(countryLabel){
-        countryLabel.textContent = `Pays couvert : ${config.titleSuffix}`;
+        const currency = getCurrencySettings(activeCountry);
+        const currencyPart = currency?.code ? ` · Devise : ${currency.code}` : '';
+        countryLabel.textContent = `Pays couvert : ${config.titleSuffix}${currencyPart}`;
       }
+      updateExchangeIndicator();
     }
 
     function updateCountryButtons(){
@@ -952,7 +1006,21 @@
       const pct = Math.round((1 - (s / p)) * 100);
       return Number.isFinite(pct) ? Math.max(pct, 0) : 0;
     }
-    function currency(n){ return n.toLocaleString('fr-CA',{style:'currency',currency:'CAD'}); }
+    function currency(value){
+      const numeric = Number(value);
+      if(!Number.isFinite(numeric)) return '—';
+      const settings = getCurrencySettings(activeCountry);
+      const rate = Number(settings.cadToLocalRate);
+      const normalizedRate = Number.isFinite(rate) && rate > 0 ? rate : 1;
+      const converted = numeric * normalizedRate;
+      const locale = settings.locale || BASE_CURRENCY.locale;
+      const code = settings.code || BASE_CURRENCY.code;
+      try{
+        return converted.toLocaleString(locale,{style:'currency',currency:code});
+      }catch(_err){
+        return converted.toLocaleString(BASE_CURRENCY.locale,{style:'currency',currency:BASE_CURRENCY.code});
+      }
+    }
 
     const deals = [];
 
