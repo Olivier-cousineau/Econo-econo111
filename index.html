@@ -170,13 +170,6 @@
           <label for="storeSelect">Magasin</label>
           <select id="storeSelect">
             <option value="">(Tous)</option>
-            <option>Best Buy</option>
-            <option>Home Depot</option>
-            <option>Walmart</option>
-            <option>Canadian Tire</option>
-            <option>Rona</option>
-            <option>Patrick Morin</option>
-            <option>Sporting Life</option>
           </select>
         </div>
         <div>
@@ -758,6 +751,29 @@
       }
     }
 
+    function populateStoreSelect(country){
+      if(!storeSelect) return;
+      const options = ['<option value="">(Tous)</option>'];
+      if(country === 'canada'){
+        for(const store of STORES){
+          const label = store?.label;
+          if(!label) continue;
+          const option = `<option value="${label}">${label}</option>`;
+          options.push(option);
+        }
+      }else{
+        const config = getCountryConfig(country);
+        const menu = Array.isArray(config?.storeMenu) ? config.storeMenu : [];
+        for(const entry of menu){
+          const label = entry?.label;
+          if(!label) continue;
+          const option = `<option value="${label}" disabled>${label}</option>`;
+          options.push(option);
+        }
+      }
+      storeSelect.innerHTML = options.join('');
+    }
+
     function setCountry(country){
       const isKnown = Object.prototype.hasOwnProperty.call(COUNTRY_CONFIG, country);
       const next = isKnown ? country : 'canada';
@@ -772,15 +788,23 @@
       }
 
       activeCountry = next;
+      populateStoreSelect(activeCountry);
       updateCountryButtons();
       updateCountryMeta();
 
       if(activeCountry !== 'canada'){
+        const config = getCountryConfig(activeCountry);
         setFiltersDisabled(true);
         resetPostalFilter();
         postalBranchSlugs = null;
         if(storeSelect){
           storeSelect.value = '';
+          const hasPreviewMenu = Array.isArray(config?.storeMenu) && config.storeMenu.some(item => item && item.label);
+          if(hasPreviewMenu){
+            storeSelect.removeAttribute('disabled');
+            storeSelect.setAttribute('aria-disabled', 'true');
+            storeSelect.dataset.preview = 'true';
+          }
         }
         setCityOptions('', false);
         if(citySelect){
@@ -789,7 +813,6 @@
         if(range){
           range.value = 0;
         }
-        const config = getCountryConfig(activeCountry);
         updatePostalHelper(config.postalMessage, false);
         deals.length = 0;
         render();
@@ -797,6 +820,9 @@
       }
 
       setFiltersDisabled(false);
+      if(storeSelect){
+        delete storeSelect.dataset.preview;
+      }
       const filters = savedFilters ?? {store:'Walmart', city:'saint-jerome', discount:'0'};
       if(storeSelect){
         storeSelect.value = filters.store || '';
@@ -818,6 +844,7 @@
     updateCountryButtons();
     updateCountryMeta();
     setFiltersDisabled(false);
+    populateStoreSelect(activeCountry);
 
     for(const button of countryButtons){
       button.addEventListener('click', () => {
