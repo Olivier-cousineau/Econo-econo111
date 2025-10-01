@@ -20,6 +20,5 @@ Site statique bilingue (FR/EN) avec filtres Magasin/Ville et barre de % de rabai
 - Dépose tes JSON dans `/data` (voir `/data/README.md`).
 - Dans `index.html`, remplace `render()` pour faire des `fetch('/data/ton_fichier.json')`,
   merger les tableaux, appliquer les filtres et générer les cartes.
-- Besoin d'automatiser un import Google Drive ? Consulte `automation/GOOGLE_DRIVE.md`.
 
 © 2025 EconoDeal
