@@ -10,9 +10,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Indisponible pour livraison / 0 à Laval",
-    "store": "Home Depot - Laval",
+    "store": "Home Depot",
     "store_id": "LAV-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Laval"
   },
   {
     "sku": "1001779828",
@@ -25,9 +26,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison gratuite / Expédition gratuite à Laval",
-    "store": "Home Depot - Laval",
+    "store": "Home Depot",
     "store_id": "LAV-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Laval"
   },
   {
     "sku": "1000680603",
@@ -40,9 +42,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison gratuite / Expédition gratuite à Laval",
-    "store": "Home Depot - Laval",
+    "store": "Home Depot",
     "store_id": "LAV-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Laval"
   },
   {
     "sku": "1001872453",
@@ -55,9 +58,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison gratuite / 0 à Laval",
-    "store": "Home Depot - Laval",
+    "store": "Home Depot",
     "store_id": "LAV-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Laval"
   },
   {
     "sku": "1001792743",
@@ -70,9 +74,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison gratuite / 0 à Laval",
-    "store": "Home Depot - Laval",
+    "store": "Home Depot",
     "store_id": "LAV-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Laval"
   },
   {
     "sku": "1001857144",
@@ -85,9 +90,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Expédition gratuite à Laval",
-    "store": "Home Depot - Laval",
+    "store": "Home Depot",
     "store_id": "LAV-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Laval"
   },
   {
     "sku": "1001763201",
@@ -100,9 +106,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison gratuite / Expédition gratuite à Laval",
-    "store": "Home Depot - Laval",
+    "store": "Home Depot",
     "store_id": "LAV-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Laval"
   },
   {
     "sku": "1001872354",
@@ -115,9 +122,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison gratuite / Expédition gratuite à Laval",
-    "store": "Home Depot - Laval",
+    "store": "Home Depot",
     "store_id": "LAV-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Laval"
   },
   {
     "sku": "1001888878",
@@ -130,9 +138,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "En rupture de stock en ligne / 5 à Laval",
-    "store": "Home Depot - Laval",
+    "store": "Home Depot",
     "store_id": "LAV-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Laval"
   },
   {
     "sku": "1001888877",
@@ -145,9 +154,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison gratuite / 11 à Laval",
-    "store": "Home Depot - Laval",
+    "store": "Home Depot",
     "store_id": "LAV-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Laval"
   },
   {
     "sku": "1001869621",
@@ -160,8 +170,9 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison gratuite / 10 à Laval",
-    "store": "Home Depot - Laval",
+    "store": "Home Depot",
     "store_id": "LAV-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Laval"
   }
 ]
