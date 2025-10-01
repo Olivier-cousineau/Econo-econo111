@@ -238,6 +238,16 @@
     const regulationCheckbox = document.getElementById('regulationCheckbox');
     const clientCountDisplays = Array.from(document.querySelectorAll('[data-client-count]'));
 
+    function parseJson(value){
+      if(!value) return null;
+      try{
+        return JSON.parse(value);
+      }catch(err){
+        console.warn('Impossible de lire les données existantes', err);
+        return null;
+      }
+    }
+
     function safeGet(key){
       try{
         return localStorage.getItem(key);
@@ -253,6 +263,51 @@
       }catch(err){
         console.warn('Impossible d\'enregistrer les données', err);
       }
+    }
+
+    function cleanText(value){
+      return typeof value === 'string' ? value.trim() : '';
+    }
+
+    function getRegistrations(){
+      const parsed = parseJson(safeGet('econodealRegistrations'));
+      if(!Array.isArray(parsed)) return [];
+      return parsed
+        .filter(item => item && typeof item === 'object')
+        .map(item => ({
+          name: cleanText(item.name),
+          email: cleanText(item.email).toLowerCase(),
+          registeredAt: cleanText(item.registeredAt)
+        }))
+        .filter(item => item.email);
+    }
+
+    function saveRegistrations(items){
+      safeSet('econodealRegistrations', JSON.stringify(items));
+    }
+
+    function upsertRegistration(entry){
+      const collection = getRegistrations();
+      const email = cleanText(entry.email).toLowerCase();
+      if(!email) return;
+
+      const normalized = {
+        name: cleanText(entry.name),
+        email,
+        registeredAt: cleanText(entry.registeredAt)
+      };
+
+      const existingIndex = collection.findIndex(item => item.email === email);
+      if(existingIndex >= 0){
+        collection[existingIndex] = {
+          ...collection[existingIndex],
+          ...normalized
+        };
+      }else{
+        collection.push(normalized);
+      }
+
+      saveRegistrations(collection);
     }
 
     function parseCount(value){
@@ -326,6 +381,7 @@
         };
 
         safeSet('econodealUser', JSON.stringify(payload));
+        upsertRegistration(payload);
         safeSet('econodealClientRegistered', 'true');
         updateClientCountDisplays();
         hideOverlay();
