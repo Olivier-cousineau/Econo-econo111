@@ -43,6 +43,15 @@
     .pricing-highlight{outline:2px solid rgba(34,197,94,.4);outline-offset:4px;transition:outline-color .3s ease}
     @keyframes pricingPulse{0%{box-shadow:0 0 0 0 rgba(34,197,94,.45)}70%{box-shadow:0 0 0 12px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
     #pricing.pricing-pulse{animation:pricingPulse 1.3s ease-out 1}
+    .roadmap{background:linear-gradient(180deg,var(--panel),#101b2d);border:1px solid var(--border);border-radius:var(--radius);padding:22px;display:grid;gap:18px;margin-top:22px;position:relative;overflow:hidden}
+    .roadmap::before{content:"Roadmap stratégique";position:absolute;top:16px;right:-80px;width:220px;text-align:center;transform:rotate(45deg);background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.35);color:#86efac;padding:6px 0;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+    .roadmap-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+    .roadmap-card{background:var(--panel-2);border:1px solid var(--border);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:12px;position:relative;overflow:hidden}
+    .roadmap-year{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+    .roadmap-year strong{display:block;font-size:20px;color:var(--text)}
+    .roadmap-card ul{margin:0;padding-left:18px;display:grid;gap:6px;font-size:14px;color:var(--muted)}
+    .roadmap-ai{border-left:3px solid var(--accent);padding-left:12px;background:rgba(34,197,94,.08);border-radius:8px}
+    @media (max-width:600px){.roadmap::before{right:-120px}}
   </style>
 </head>
 <body>
@@ -140,6 +149,39 @@
             <li>Prévisions de tendances du marché</li>
           </ul>
         </article>
+      </div>
+    </section>
+
+    <section class="section" id="roadmap" style="padding-top:0">
+      <h2 style="margin:0 0 10px">Notre feuille de route</h2>
+      <p class="muted" style="max-width:640px">Une vision triennale pour propulser EconoDeal sur la scène internationale, avec une intégration progressive de l'intelligence artificielle au cœur de nos services.</p>
+      <div class="roadmap">
+        <div class="roadmap-grid">
+          <article class="roadmap-card">
+            <div class="roadmap-year"><strong>Année 1</strong> Canada</div>
+            <ul>
+              <li>Consolider la couverture des détaillants nationaux.</li>
+              <li>Optimiser les alertes de rabais en temps réel.</li>
+              <li>Lancer des tableaux de bord régionaux bilingues.</li>
+            </ul>
+          </article>
+          <article class="roadmap-card">
+            <div class="roadmap-year"><strong>Année 2</strong> États-Unis</div>
+            <ul>
+              <li>Élargir le catalogue aux grandes bannières américaines.</li>
+              <li>Déployer la surveillance des stocks multi-états.</li>
+              <li>Introduire l'analyse prédictive des tendances d'achat.</li>
+            </ul>
+          </article>
+          <article class="roadmap-card roadmap-ai">
+            <div class="roadmap-year"><strong>Année 3</strong> Europe</div>
+            <ul>
+              <li>Localiser l'expérience pour les principaux marchés européens.</li>
+              <li>Activer un moteur de recommandations IA multilingue.</li>
+              <li>Automatiser les stratégies de prix grâce à l'apprentissage continu.</li>
+            </ul>
+          </article>
+        </div>
       </div>
     </section>
   </main>
