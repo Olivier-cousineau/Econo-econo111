@@ -21,6 +21,11 @@
     .nav-button{display:inline-flex;align-items:center;justify-content:center;background:var(--panel-2);color:var(--text);border:1px solid var(--border);border-radius:10px;padding:10px 12px;text-decoration:none;transition:background .2s ease,color .2s ease}
     .nav-button:hover{background:var(--panel);color:#fff}
     .nav-button.current{background:linear-gradient(120deg,rgba(34,197,94,.25),rgba(59,130,246,.25));border-color:rgba(34,197,94,.6)}
+    .country-toggle{display:inline-flex;align-items:center;gap:6px;background:var(--panel-2);padding:6px;border-radius:12px;border:1px solid var(--border)}
+    .country-toggle .country-button{background:transparent;border:none;color:var(--muted);padding:8px 14px;border-radius:8px;font-weight:600;cursor:pointer;transition:background .2s ease,color .2s ease}
+    .country-toggle .country-button:hover{color:#fff;background:rgba(59,130,246,.18)}
+    .country-toggle .country-button.active,.country-toggle .country-button[aria-pressed="true"]{background:linear-gradient(120deg,rgba(34,197,94,.22),rgba(59,130,246,.18));color:#fff}
+    .country-toggle .country-button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
     select:focus,input[type="range"]:focus,button:focus,.nav-button:focus{outline:2px solid var(--accent);outline-offset:1px}
     .filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
     .field-helper{font-size:12px;color:var(--muted);margin:6px 0 0}
@@ -59,6 +64,7 @@
     .roadmap-card ul{margin:0;padding-left:18px;display:grid;gap:6px;font-size:14px;color:var(--muted)}
     .roadmap-ai{border-left:3px solid var(--accent);padding-left:12px;background:rgba(34,197,94,.08);border-radius:8px}
     @media (max-width:600px){.roadmap::before{right:-120px}}
+    .notice-card{background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.35);color:#bfdbfe;border-radius:12px;padding:18px;font-size:14px;line-height:1.55}
     #registrationOverlay{position:fixed;inset:0;background:rgba(15,23,42,.95);display:flex;align-items:center;justify-content:center;padding:20px;z-index:2000}
     #registrationOverlay.hidden{display:none}
     .registration-card{background:linear-gradient(180deg,var(--panel),#0e1626);border:1px solid var(--border);border-radius:var(--radius);max-width:420px;width:100%;padding:26px;display:grid;gap:16px;box-shadow:0 24px 60px rgba(15,23,42,.5)}
@@ -116,6 +122,15 @@
       <p class="muted">Les fichiers sont chargés depuis <span class="kbd">data/&lt;magasin&gt;/&lt;ville&gt;.json</span>.</p>
 
       <!-- ✅ Les éléments requis existent et leurs IDs correspondent au script -->
+      <div class="row" style="gap:12px;align-items:center;flex-wrap:wrap;margin-top:12px">
+        <span class="muted" data-country-label>Pays couvert&nbsp;: Canada</span>
+        <div class="country-toggle" role="group" aria-label="Choisir le pays">
+          <button type="button" class="country-button active" data-country="canada" aria-pressed="true">Canada</button>
+          <button type="button" class="country-button" data-country="usa" aria-pressed="false">États-Unis</button>
+          <button type="button" class="country-button" data-country="europe" aria-pressed="false">Europe</button>
+        </div>
+      </div>
+
       <div class="filters" style="margin-top:12px">
         <div>
           <label for="storeSelect">Magasin</label>
@@ -506,8 +521,142 @@
     const devError    = document.getElementById('devError');
     const postalInput = document.getElementById('postalInput');
     const postalHelper = document.getElementById('postalHelper');
+    const countryButtons = Array.from(document.querySelectorAll('.country-button[data-country]'));
+    const countryLabel = document.querySelector('[data-country-label]');
 
     const DEFAULT_POSTAL_MESSAGE = 'Entrez les 3 premiers caractères du code postal pour trouver les succursales dans un rayon de 50 km (ex. H2X).';
+    const COUNTRY_CONFIG = {
+      canada: {
+        titleSuffix: 'Canada',
+        postalMessage: DEFAULT_POSTAL_MESSAGE,
+        emptyNotice: 'Sélectionnez un magasin pour afficher les liquidations canadiennes disponibles en ce moment.'
+      },
+      usa: {
+        titleSuffix: 'États-Unis',
+        postalMessage: 'Les filtres seront activés dès le lancement de la plateforme aux États-Unis.',
+        emptyNotice: 'Nous finalisons notre catalogue américain. Revenez bientôt pour découvrir les meilleures aubaines aux États-Unis.'
+      },
+      europe: {
+        titleSuffix: 'Europe',
+        postalMessage: 'Les fonctions de recherche seront disponibles lors du déploiement européen.',
+        emptyNotice: 'La couverture européenne est en préparation. Abonnez-vous pour être informé de l’ouverture officielle.'
+      }
+    };
+    let activeCountry = 'canada';
+    let savedFilters = null;
+
+    function getCountryConfig(country){
+      return COUNTRY_CONFIG[country] ?? COUNTRY_CONFIG.canada;
+    }
+
+    function updateCountryMeta(){
+      const config = getCountryConfig(activeCountry);
+      document.title = `EconoDeal — ${config.titleSuffix}`;
+      if(countryLabel){
+        countryLabel.textContent = `Pays couvert : ${config.titleSuffix}`;
+      }
+    }
+
+    function updateCountryButtons(){
+      for(const button of countryButtons){
+        const isActive = button.dataset.country === activeCountry;
+        button.classList.toggle('active', isActive);
+        button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+      }
+    }
+
+    function setFiltersDisabled(disabled){
+      const elements = [storeSelect, citySelect, postalInput, range, btnClear];
+      for(const el of elements){
+        if(!el) continue;
+        if(disabled){
+          el.setAttribute('disabled', 'disabled');
+        }else{
+          el.removeAttribute('disabled');
+        }
+        if(el !== btnClear){
+          if(disabled){
+            el.setAttribute('aria-disabled', 'true');
+          }else{
+            el.removeAttribute('aria-disabled');
+          }
+        }
+      }
+      if(btnClear){
+        if(disabled){
+          btnClear.setAttribute('aria-disabled', 'true');
+        }else{
+          btnClear.removeAttribute('aria-disabled');
+        }
+      }
+    }
+
+    function setCountry(country){
+      const isKnown = Object.prototype.hasOwnProperty.call(COUNTRY_CONFIG, country);
+      const next = isKnown ? country : 'canada';
+      if(next === activeCountry) return;
+
+      if(activeCountry === 'canada'){
+        savedFilters = {
+          store: storeSelect?.value || '',
+          city: citySelect?.value || '',
+          discount: range?.value || '0'
+        };
+      }
+
+      activeCountry = next;
+      updateCountryButtons();
+      updateCountryMeta();
+
+      if(activeCountry !== 'canada'){
+        setFiltersDisabled(true);
+        resetPostalFilter();
+        postalBranchSlugs = null;
+        if(storeSelect){
+          storeSelect.value = '';
+        }
+        setCityOptions('', false);
+        if(citySelect){
+          citySelect.value = '';
+        }
+        if(range){
+          range.value = 0;
+        }
+        const config = getCountryConfig(activeCountry);
+        updatePostalHelper(config.postalMessage, false);
+        deals.length = 0;
+        render();
+        return;
+      }
+
+      setFiltersDisabled(false);
+      const filters = savedFilters ?? {store:'Walmart', city:'saint-jerome', discount:'0'};
+      if(storeSelect){
+        storeSelect.value = filters.store || '';
+      }
+      setCityOptions(filters.store || '', false);
+      if(citySelect){
+        const options = Array.from(citySelect.options || []);
+        const hasCity = options.some(option => option.value === (filters.city || ''));
+        citySelect.value = hasCity ? (filters.city || '') : '';
+      }
+      if(range){
+        range.value = filters.discount || 0;
+      }
+      postalBranchSlugs = null;
+      updatePostalHelper(DEFAULT_POSTAL_MESSAGE, false);
+      fetchData();
+    }
+
+    updateCountryButtons();
+    updateCountryMeta();
+    setFiltersDisabled(false);
+
+    for(const button of countryButtons){
+      button.addEventListener('click', () => {
+        setCountry(button.dataset.country);
+      });
+    }
     const POSTAL_RADIUS_KM = 50;
 
     const BRANCH_COORDINATES = {
@@ -578,6 +727,7 @@
 
     async function applyPostalSearch(raw){
       if(!postalInput) return;
+      if(activeCountry !== 'canada') return;
       const hadFilter = postalBranchSlugs && postalBranchSlugs.size > 0;
       const normalized = normalizePostal(raw);
       if(!normalized){
@@ -751,6 +901,12 @@
 
     function render(){
       rangeLabel.textContent = range.value + '%';
+      if(activeCountry !== 'canada'){
+        const config = getCountryConfig(activeCountry);
+        countEl.textContent = '0';
+        cardsEl.innerHTML = `<div class="notice-card">${config.emptyNotice}</div>`;
+        return;
+      }
       const s = storeSelect.value;
       const c = citySelect.value;
       const min = parseInt(range.value,10);
@@ -883,6 +1039,10 @@
     }
 
     async function fetchData(){
+      if(activeCountry !== 'canada'){
+        render();
+        return;
+      }
       deals.length = 0;
       const storeFilter = storeSelect.value;
       const branchFilter = citySelect.value;
@@ -927,10 +1087,12 @@
     }
 
     storeSelect.addEventListener('change', () => {
+      if(activeCountry !== 'canada') return;
       setCityOptions(storeSelect.value, false);
       fetchData();
     });
     citySelect.addEventListener('change', () => {
+      if(activeCountry !== 'canada') return;
       if(postalInput && !normalizePostal(postalInput.value)){
         updatePostalHelper(DEFAULT_POSTAL_MESSAGE, false);
       }
@@ -938,6 +1100,7 @@
     });
     range.addEventListener('input', render);
     btnClear.addEventListener('click', ()=>{
+      if(activeCountry !== 'canada') return;
       storeSelect.value='';
       setCityOptions('', false);
       citySelect.value='';
