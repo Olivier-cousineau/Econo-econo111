@@ -137,7 +137,7 @@
         <div>
           <label for="postalInput">Code postal</label>
           <input id="postalInput" name="postal" type="text" inputmode="text" placeholder="Ex. H2X 1Y4" autocomplete="postal-code" />
-          <p id="postalHelper" class="field-helper">Entrez les 3 premiers caractères du code postal (ex. H2X).</p>
+          <p id="postalHelper" class="field-helper">Entrez les 3 premiers caractères du code postal pour trouver les succursales dans un rayon de 50&nbsp;km (ex. H2X).</p>
         </div>
         <div>
           <label for="discountRange">% de rabais minimal : <span id="discountValue" class="kbd">0%</span></label>
@@ -449,7 +449,46 @@
     const postalInput = document.getElementById('postalInput');
     const postalHelper = document.getElementById('postalHelper');
 
-    const DEFAULT_POSTAL_MESSAGE = 'Entrez les 3 premiers caractères du code postal (ex. H2X).';
+    const DEFAULT_POSTAL_MESSAGE = 'Entrez les 3 premiers caractères du code postal pour trouver les succursales dans un rayon de 50 km (ex. H2X).';
+    const POSTAL_RADIUS_KM = 50;
+
+    const BRANCH_COORDINATES = {
+      'montreal': {lat:45.5019, lng:-73.5674},
+      'laval': {lat:45.6066, lng:-73.7124},
+      'saint-jerome': {lat:45.7811, lng:-74.0036}
+    };
+
+    let postalBranchSlugs = null;
+
+    function toRadians(value){
+      return value * Math.PI / 180;
+    }
+
+    function haversineDistanceKm(lat1, lon1, lat2, lon2){
+      const R = 6371;
+      const dLat = toRadians(lat2 - lat1);
+      const dLon = toRadians(lon2 - lon1);
+      const a = Math.sin(dLat / 2) ** 2 + Math.cos(toRadians(lat1)) * Math.cos(toRadians(lat2)) * Math.sin(dLon / 2) ** 2;
+      const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+      return R * c;
+    }
+
+    function findNearbyBranches(referenceSlug, radiusKm){
+      if(!referenceSlug) return [];
+      const origin = BRANCH_COORDINATES[referenceSlug];
+      if(!origin) return [];
+      const branches = baseBranches();
+      const nearby = [];
+      for(const branch of branches){
+        const coords = BRANCH_COORDINATES[branch.slug];
+        if(!coords) continue;
+        const distance = haversineDistanceKm(origin.lat, origin.lng, coords.lat, coords.lng);
+        if(distance <= radiusKm){
+          nearby.push({...branch, distance});
+        }
+      }
+      return nearby.sort((a,b) => a.distance - b.distance);
+    }
 
     function normalizePostal(value){
       if(!value) return '';
@@ -472,40 +511,82 @@
       postalInput.value = '';
       postalInput.removeAttribute('aria-invalid');
       updatePostalHelper(DEFAULT_POSTAL_MESSAGE, false);
-    }
-
-    function ensureBranchOption(slug){
-      if(!slug) return;
-      const hasOption = Array.from(citySelect?.options ?? []).some(option => option.value === slug);
-      if(hasOption) return;
-      setCityOptions(storeSelect?.value ?? '', true);
+      const hadFilter = postalBranchSlugs && postalBranchSlugs.size > 0;
+      postalBranchSlugs = null;
+      if(hadFilter){
+        setCityOptions(storeSelect?.value ?? '', true);
+      }
     }
 
     async function applyPostalSearch(raw){
       if(!postalInput) return;
+      const hadFilter = postalBranchSlugs && postalBranchSlugs.size > 0;
       const normalized = normalizePostal(raw);
       if(!normalized){
         postalInput.removeAttribute('aria-invalid');
         updatePostalHelper(DEFAULT_POSTAL_MESSAGE, false);
+        if(hadFilter){
+          postalBranchSlugs = null;
+          setCityOptions(storeSelect?.value ?? '', true);
+          if(citySelect){
+            citySelect.value = '';
+          }
+          await fetchData();
+        }
         return;
       }
       if(normalized.length < 3){
         postalInput.setAttribute('aria-invalid','true');
         updatePostalHelper('Indiquez au moins les 3 premiers caractères du code postal.', true);
+        if(hadFilter){
+          postalBranchSlugs = null;
+          setCityOptions(storeSelect?.value ?? '', true);
+          if(citySelect){
+            citySelect.value = '';
+          }
+          await fetchData();
+        }
         return;
       }
       const match = findPostalMatch(normalized);
       if(!match){
         postalInput.setAttribute('aria-invalid','true');
         updatePostalHelper('Code postal non reconnu dans les succursales couvertes.', true);
+        if(hadFilter){
+          postalBranchSlugs = null;
+          setCityOptions(storeSelect?.value ?? '', true);
+          if(citySelect){
+            citySelect.value = '';
+          }
+          await fetchData();
+        }
         return;
       }
       postalInput.removeAttribute('aria-invalid');
-      updatePostalHelper(`Succursale détectée : ${match.cityLabel}.`, false);
-      ensureBranchOption(match.branchSlug);
-      if(citySelect){
-        citySelect.value = match.branchSlug;
+      const nearbyBranches = findNearbyBranches(match.branchSlug, POSTAL_RADIUS_KM);
+      const nextSlugs = new Set(nearbyBranches.map(branch => branch.slug));
+      if(nextSlugs.size === 0){
+        nextSlugs.add(match.branchSlug);
       }
+      let changed = nextSlugs.size !== (postalBranchSlugs?.size ?? 0);
+      if(!changed && postalBranchSlugs){
+        for(const slug of nextSlugs){
+          if(!postalBranchSlugs.has(slug)){
+            changed = true;
+            break;
+          }
+        }
+      }
+      postalBranchSlugs = nextSlugs;
+      if(changed){
+        setCityOptions(storeSelect?.value ?? '', true);
+        if(citySelect && citySelect.value && !postalBranchSlugs.has(citySelect.value)){
+          citySelect.value = '';
+        }
+      }
+      const helperBranches = nearbyBranches.length ? nearbyBranches : [{label: match.cityLabel}];
+      const helperList = helperBranches.map(branch => branch.label).join(', ');
+      updatePostalHelper(`Succursales dans un rayon de ${POSTAL_RADIUS_KM} km : ${helperList}.`, false);
       await fetchData();
     }
 
@@ -707,10 +788,16 @@
         branches = baseBranches();
       }
       const options = ['<option value="">(Toutes)</option>'];
+      const postalFilter = postalBranchSlugs && postalBranchSlugs.size ? postalBranchSlugs : null;
       for(const branch of branches){
-        const label = branch.hasData === false ? `${branch.label} (bientôt)` : branch.label;
-        const attrs = branch.hasData === false ? ' data-empty="true"' : '';
-        options.push(`<option value="${branch.slug}"${attrs}>${label}</option>`);
+        const baseLabel = branch.hasData === false ? `${branch.label} (bientôt)` : branch.label;
+        const isNearby = postalFilter ? postalFilter.has(branch.slug) : false;
+        const displayLabel = isNearby ? `${baseLabel} – à proximité` : baseLabel;
+        const attrs = [];
+        if(branch.hasData === false) attrs.push('data-empty="true"');
+        if(isNearby) attrs.push('data-nearby="true"');
+        const attrString = attrs.length ? ` ${attrs.join(' ')}` : '';
+        options.push(`<option value="${branch.slug}"${attrString}>${displayLabel}</option>`);
       }
       citySelect.innerHTML = options.join('');
       if(preserveSelection && branches.some(branch => branch.slug === previous)){
@@ -734,6 +821,7 @@
       deals.length = 0;
       const storeFilter = storeSelect.value;
       const branchFilter = citySelect.value;
+      const postalFilter = postalBranchSlugs && postalBranchSlugs.size ? postalBranchSlugs : null;
       const selectedStores = storeFilter ? [storeFilter] : STORES.map(store => store.label);
       const tasks = [];
       for(const storeLabel of selectedStores){
@@ -743,12 +831,19 @@
         if(branchFilter){
           branches = branches.filter(branch => branch.slug === branchFilter);
           if(branches.length === 0) continue;
+        }else if(postalFilter){
+          const filtered = branches.filter(branch => postalFilter.has(branch.slug));
+          if(filtered.length === 0) continue;
+          branches = filtered;
         }else if(!storeFilter){
           const defaults = branches.filter(branch => DEFAULT_BRANCH_SLUGS.has(branch.slug));
           branches = defaults.length ? defaults : branches;
         }
         if(branches.length === 0){
-          branches = store.branches.filter(branch => DEFAULT_BRANCH_SLUGS.has(branch.slug));
+          if(postalFilter){
+            continue;
+          }
+          branches = (store.branches ?? []).filter(branch => DEFAULT_BRANCH_SLUGS.has(branch.slug));
         }
         for(const branch of branches){
           if(branch.hasData === false) continue;
