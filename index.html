@@ -95,6 +95,15 @@
     .registration-card button:disabled{opacity:.45;cursor:not-allowed}
     body.overlay-active{overflow:hidden}
     body.overlay-active header,body.overlay-active main,body.overlay-active .footer{filter:blur(2px);pointer-events:none;user-select:none}
+    .country-preview{display:grid;gap:18px}
+    .store-menu{background:linear-gradient(180deg,var(--panel-2),#111a2c);border:1px solid var(--border);border-radius:14px;padding:20px;display:grid;gap:16px}
+    .store-menu h3{margin:0;font-size:18px}
+    .store-menu p{margin:0;font-size:14px;color:var(--muted);line-height:1.55}
+    .store-menu-list{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+    .store-menu-item{display:flex;flex-direction:column;gap:4px;padding:12px 14px;border-radius:12px;background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.25);font-weight:600;color:var(--text)}
+    .store-menu-item:hover{background:rgba(59,130,246,.12)}
+    .store-menu-label{font-size:15px;letter-spacing:-.01em}
+    .store-menu-note{font-size:13px;color:var(--muted);font-weight:500}
   </style>
 </head>
 <body class="overlay-active">
@@ -541,6 +550,19 @@
       {label:'Sporting Life', slug:'sporting-life', branches: baseBranches()}
     ];
 
+    const USA_STORE_MENU = [
+      {label:'Amazon Warehouse', description:'Lots de retours et inventaires reconditionnés'},
+      {label:'Best Buy USA', description:'Électronique, électroménagers et gaming'},
+      {label:'Home Depot US', description:'Amélioration résidentielle et outils'},
+      {label:'Walmart US', description:'Grande distribution et épicerie sèche'},
+      {label:'Target', description:'Lifestyle, maison et exclusivités marque privée'},
+      {label:'Lowe’s', description:'Matériaux de rénovation et jardinage'},
+      {label:'Costco Wholesale', description:'Lots en gros propices au FBA'},
+      {label:'Sam’s Club', description:'Opportunités en vrac pour la revente'},
+      {label:'Kohl’s', description:'Mode, maison et articles saisonniers'},
+      {label:"BJ's Wholesale Club", description:'Inventaire régional à forte rotation'}
+    ];
+
     const POSTAL_DIRECTORY = [
       {
         branchSlug:'montreal',
@@ -600,6 +622,9 @@
         titleSuffix: 'États-Unis',
         postalMessage: 'Les filtres seront activés dès le lancement de la plateforme aux États-Unis.',
         emptyNotice: 'Nous finalisons notre catalogue américain. Revenez bientôt pour découvrir les meilleures aubaines aux États-Unis.',
+        storeMenuTitle: 'Magasins couverts au lancement américain',
+        storeMenuDescription: 'Ces enseignes seront intégrées à notre radar de liquidations pour les États-Unis dès l’ouverture officielle.',
+        storeMenu: USA_STORE_MENU,
         currency: {
           code: 'USD',
           locale: 'en-US',
@@ -1055,12 +1080,46 @@
 
     const deals = [];
 
+    function renderStoreMenu(config){
+      if(!config) return '';
+      const items = Array.isArray(config.storeMenu) ? config.storeMenu.filter(item => item && item.label) : [];
+      if(items.length === 0) return '';
+      const title = config.storeMenuTitle || 'Magasins couverts';
+      const description = config.storeMenuDescription || '';
+      const list = items.map(item => {
+        const label = item.label;
+        const note = item.description ? `<span class="store-menu-note">${item.description}</span>` : '';
+        return `<li><span class="store-menu-item" role="text"><span class="store-menu-label">${label}</span>${note}</span></li>`;
+      }).join('');
+      return `
+        <nav class="store-menu" aria-label="${title}">
+          <div>
+            <h3>${title}</h3>
+            ${description ? `<p>${description}</p>` : ''}
+          </div>
+          <ul class="store-menu-list">${list}</ul>
+        </nav>
+      `;
+    }
+
+    function renderCountryPreview(config){
+      const blocks = [];
+      if(config?.emptyNotice){
+        blocks.push(`<div class="notice-card">${config.emptyNotice}</div>`);
+      }
+      const menu = renderStoreMenu(config);
+      if(menu){
+        blocks.push(menu);
+      }
+      return blocks.length ? `<div class="country-preview">${blocks.join('')}</div>` : '';
+    }
+
     function render(){
       rangeLabel.textContent = range.value + '%';
       if(activeCountry !== 'canada'){
         const config = getCountryConfig(activeCountry);
         countEl.textContent = '0';
-        cardsEl.innerHTML = `<div class="notice-card">${config.emptyNotice}</div>`;
+        cardsEl.innerHTML = renderCountryPreview(config);
         return;
       }
       const s = storeSelect.value;
