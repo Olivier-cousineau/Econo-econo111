@@ -635,6 +635,15 @@
       return fallback;
     }
 
+    function formatExchange(baseCode, targetCode, rate){
+      const normalizedRate = Number.isFinite(rate) && rate > 0 ? rate : 1;
+      const direct = EXCHANGE_FORMATTER.format(normalizedRate);
+      const inverse = normalizedRate > 0 ? EXCHANGE_FORMATTER.format(1 / normalizedRate) : null;
+      const baseText = `1 ${baseCode} ≈ ${direct} ${targetCode}`;
+      const inverseText = inverse ? `1 ${targetCode} ≈ ${inverse} ${baseCode}` : '';
+      return { baseText, inverseText, directValue: direct, inverseValue: inverse };
+    }
+
     function updateExchangeIndicator(){
       if(!exchangeIndicator) return;
       const settings = getCurrencySettings(activeCountry);
@@ -642,15 +651,33 @@
       const targetCode = settings.code || baseCode;
       const rate = Number(settings.cadToLocalRate);
       const normalizedRate = Number.isFinite(rate) && rate > 0 ? rate : 1;
-      if(activeCountry === 'canada' || Math.abs(normalizedRate - 1) < 1e-6){
+      if(activeCountry === 'canada'){
+        const segments = [`1 ${baseCode} = 1 ${baseCode}`];
+        const ariaSegments = [`1 ${baseCode} pour 1 ${baseCode}`];
+        const usdSettings = getCurrencySettings('usa');
+        const usdCode = usdSettings.code || 'USD';
+        const usdRate = Number(usdSettings.cadToLocalRate);
+        if(usdCode && usdCode !== baseCode && Number.isFinite(usdRate) && usdRate > 0){
+          const { baseText, inverseText, directValue, inverseValue } = formatExchange(baseCode, usdCode, usdRate);
+          segments.push(baseText);
+          if(inverseText){
+            segments.push(inverseText);
+          }
+          ariaSegments.push(`1 ${baseCode} pour environ ${directValue} ${usdCode}`);
+          if(inverseText && inverseValue){
+            ariaSegments.push(`1 ${usdCode} pour environ ${inverseValue} ${baseCode}`);
+          }
+        }
+        exchangeIndicator.textContent = segments.join(' · ');
+        exchangeIndicator.setAttribute('aria-label', `Taux de change ${ariaSegments.join(' et ')}`);
+        return;
+      }
+      if(Math.abs(normalizedRate - 1) < 1e-6){
         exchangeIndicator.textContent = `1 ${baseCode} = 1 ${baseCode}`;
         exchangeIndicator.setAttribute('aria-label', `Taux de change 1 ${baseCode} pour 1 ${baseCode}`);
         return;
       }
-      const direct = EXCHANGE_FORMATTER.format(normalizedRate);
-      const inverse = normalizedRate > 0 ? EXCHANGE_FORMATTER.format(1 / normalizedRate) : null;
-      const baseText = `1 ${baseCode} ≈ ${direct} ${targetCode}`;
-      const inverseText = inverse ? `1 ${targetCode} ≈ ${inverse} ${baseCode}` : '';
+      const { baseText, inverseText } = formatExchange(baseCode, targetCode, normalizedRate);
       const combined = inverseText ? `${baseText} · ${inverseText}` : baseText;
       exchangeIndicator.textContent = combined;
       const ariaText = inverseText ? `${baseText} et ${inverseText}` : baseText;
