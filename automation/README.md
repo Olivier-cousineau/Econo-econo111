@@ -1,8 +1,63 @@
-# Automatisation des liquidations Canadian Tire
+# Automatisation des liquidations Canadian Tire & Best Buy
 
-Ce dossier contient un exemple complet de scraper Python qui récupère les
-produits en liquidation de plusieurs succursales Canadian Tire du Québec puis
-les injecte sur votre site web.
+Ce dossier contient plusieurs scripts Python pour collecter les liquidations de
+magasins québécois et publier les données sur votre site web.
+
+## Best Buy (API officielle)
+
+- Script : `bestbuy_liquidations.py`
+- Dépendances : `requests`, `zoneinfo` (builtin Python ≥ 3.9)
+- Fichier de sortie par défaut : `../data/best-buy/liquidations.json`
+
+### Lancement manuel
+
+```bash
+cd automation
+python bestbuy_liquidations.py --api-key "AFFuUk09sNekxlWbbForMFoh" --run-once
+```
+
+### Service automatisé (dimanche 04:00, heure du Québec)
+
+Le script embarque un mini scheduler :
+
+```bash
+python bestbuy_liquidations.py --api-key "AFFuUk09sNekxlWbbForMFoh"
+```
+
+Laissez le processus tourner en tâche de fond (ex. `screen`, `tmux`, service
+systemd ou conteneur). Chaque dimanche à 04:00 (`America/Toronto`), le scraper :
+
+1. Télécharge tous les produits en liquidation (`onSale=true`).
+2. Convertit les résultats au format JSON attendu par le site (`data/README.md`).
+3. Écrase le fichier `data/best-buy/liquidations.json` avec les nouvelles
+   données.
+
+> ℹ️ Vous pouvez remplacer l’argument `--api-key` par la variable d’environnement
+> `BESTBUY_API_KEY`.
+
+Pour inspecter les logs en continu :
+
+```bash
+python bestbuy_liquidations.py --api-key "$BESTBUY_API_KEY" --log-level DEBUG
+```
+
+### Cron hebdomadaire (alternative)
+
+Si vous préférez un cron plutôt qu’un processus long-vivant :
+
+```bash
+#!/bin/bash
+cd /chemin/vers/Econo-econo111/automation
+python bestbuy_liquidations.py --api-key "$BESTBUY_API_KEY" --run-once >> bestbuy.log 2>&1
+```
+
+Ajoutez ensuite dans `crontab -e` :
+
+```
+0 4 * * 0 /chemin/vers/Econo-econo111/automation/run-bestbuy.sh
+```
+
+Le fuseau `America/Toronto` correspond à l’heure du Québec.
 
 > ⚠️ Les API internes de Canadian Tire ne sont pas publiques. Le script fourni
 > ici repose sur des points de terminaison observés publiquement et peut cesser
