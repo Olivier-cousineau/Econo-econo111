@@ -70,6 +70,18 @@
     .roadmap-ai{border-left:3px solid var(--accent);padding-left:12px;background:rgba(34,197,94,.08);border-radius:8px}
     @media (max-width:600px){.roadmap::before{right:-120px}}
     .notice-card{background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.35);color:#bfdbfe;border-radius:12px;padding:18px;font-size:14px;line-height:1.55}
+    .amazon-section{background:linear-gradient(180deg,var(--panel),#101a2c);border:1px solid rgba(34,197,94,.25);border-radius:var(--radius);padding:24px;display:grid;gap:18px;margin-top:24px}
+    .amazon-section h2{margin:0;font-size:26px}
+    .amazon-intro{font-size:15px;line-height:1.6;color:var(--muted);max-width:760px;margin:0}
+    .seller-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+    .seller-card{background:var(--panel-2);border:1px solid var(--border);border-radius:14px;padding:18px;display:grid;gap:10px;position:relative;overflow:hidden}
+    .seller-card::before{content:"";position:absolute;inset:0 auto auto 0;width:3px;background:linear-gradient(180deg,rgba(34,197,94,.6),rgba(59,130,246,.4));opacity:.7}
+    .seller-card h3{margin:0;font-size:17px;color:#fff}
+    .seller-card p{margin:0;font-size:14px;color:var(--muted);line-height:1.55}
+    .seller-icon{font-size:28px}
+    .seller-list{list-style:none;padding:0;margin:0;display:grid;gap:8px;font-size:14px;color:var(--muted)}
+    .seller-list li{display:flex;gap:8px;align-items:flex-start}
+    .seller-list li span{font-size:16px;color:#86efac;line-height:1.4}
     #registrationOverlay{position:fixed;inset:0;background:rgba(15,23,42,.95);display:flex;align-items:center;justify-content:center;padding:20px;z-index:2000}
     #registrationOverlay.hidden{display:none}
     .registration-card{background:linear-gradient(180deg,var(--panel),#0e1626);border:1px solid var(--border);border-radius:var(--radius);max-width:420px;width:100%;padding:26px;display:grid;gap:16px;box-shadow:0 24px 60px rgba(15,23,42,.5)}
@@ -88,7 +100,7 @@
   <div id="registrationOverlay" role="dialog" aria-modal="true" aria-labelledby="registrationTitle">
     <div class="registration-card">
       <h2 id="registrationTitle">Accès réservé aux membres</h2>
-      <p class="muted" style="margin:0">Rejoignez <strong><span data-client-count>0</span></strong> chasseurs de rabais et accédez au catalogue complet.</p>
+      <p class="muted" style="margin:0">Rejoignez <strong><span data-client-count>0</span></strong> revendeurs Amazon et chasseurs de rabais, puis accédez au catalogue complet.</p>
       <form id="registrationForm">
         <div>
           <label for="fullName">Nom complet</label>
@@ -110,10 +122,10 @@
     <div class="container row" style="justify-content:space-between">
       <div class="row" style="gap:10px;align-items:center">
         <a class="brand" href="index.html">
-          <img src="assets/logo.svg" alt="EconoDeal – accélérateur de revendeurs" />
+          <img src="assets/logo.svg" alt="EconoDeal – accélérateur de revendeurs Amazon" />
           <span class="brand-text">
             <span class="brand-title">EconoDeal</span>
-            <span class="brand-tagline">Revendeur gagnant</span>
+            <span class="brand-tagline">Votre hub Amazon</span>
           </span>
         </a>
       </div>
@@ -129,8 +141,8 @@
 
   <main class="container">
     <section class="section" id="search">
-      <h2 style="margin:0 0 10px">Trouver des liquidations</h2>
-      <p class="muted">Les fichiers sont chargés depuis <span class="kbd">data/&lt;magasin&gt;/&lt;ville&gt;.json</span>.</p>
+      <h2 style="margin:0 0 10px">Trouver des liquidations pour vos listings Amazon</h2>
+      <p class="muted">Les fichiers sont chargés depuis <span class="kbd">data/&lt;magasin&gt;/&lt;ville&gt;.json</span> afin de repérer rapidement les opportunités d'arbitrage.</p>
 
       <!-- ✅ Les éléments requis existent et leurs IDs correspondent au script -->
       <div class="row" style="gap:12px;align-items:center;flex-wrap:wrap;margin-top:12px">
@@ -187,16 +199,49 @@
       </div>
     </section>
 
+    <section class="amazon-section" id="amazon-sellers">
+      <div>
+        <h2>Une expérience pensée pour les revendeurs Amazon</h2>
+        <p class="amazon-intro">Profitez d'un hub d'approvisionnement bâti pour les opérations FBA et FBM&nbsp;: détectez les liquidations rentables en quelques secondes, sécurisez vos marges et automatisez vos routines de sourcing pour Amazon.ca et Amazon.com.</p>
+      </div>
+      <div class="seller-grid">
+        <article class="seller-card">
+          <div class="seller-icon" aria-hidden="true">🚀</div>
+          <h3>Onboarding FBA simplifié</h3>
+          <p>Des modèles prêts à l'emploi pour calculer les frais FBA, estimer la rotation et synchroniser vos listes Amazon sans feuille de calcul complexe.</p>
+        </article>
+        <article class="seller-card">
+          <div class="seller-icon" aria-hidden="true">📦</div>
+          <h3>Veille des stocks multi-fournisseurs</h3>
+          <p>Combinez les inventaires de Best Buy, Walmart, Canadian Tire et plus afin de détecter les écarts de prix exploitables avant vos concurrents Amazon.</p>
+        </article>
+        <article class="seller-card">
+          <div class="seller-icon" aria-hidden="true">🤝</div>
+          <h3>Communauté dédiée</h3>
+          <p>Accédez à un salon privé de revendeurs Amazon, partagez vos stratégies de repricing et bénéficiez de comparatifs de produits validés par la communauté.</p>
+        </article>
+        <article class="seller-card">
+          <div class="seller-icon" aria-hidden="true">⚙️</div>
+          <h3>Automations prêtes à lancer</h3>
+          <ul class="seller-list">
+            <li><span aria-hidden="true">✔</span>Alertes quand la Buy Box chute sous votre cible.</li>
+            <li><span aria-hidden="true">✔</span>Exports compatibles Seller Central et outils d'analyse FBA.</li>
+            <li><span aria-hidden="true">✔</span>Suggestions IA pour reconditionner ou arbitrer selon la saison.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
     <section class="section" id="pricing" style="padding-top:10px">
       <h2 style="margin:0 0 10px">Forfaits adaptés à vos besoins</h2>
-      <p class="muted" style="max-width:620px">Choisissez l'option qui correspond le mieux à votre façon de surveiller les rabais et liquidations au Canada. Chaque forfait inclut une période d'essai de 7 jours.</p>
+      <p class="muted" style="max-width:620px">Choisissez l'option qui correspond le mieux à votre façon de surveiller les rabais, d'alimenter vos listings Amazon et de sécuriser vos marges. Chaque forfait inclut une période d'essai de 7 jours.</p>
       <div class="pricing-grid">
         <article class="pricing-card">
           <div class="pricing-tag">Essentiel</div>
           <h4>Accès de base</h4>
           <div class="pricing-price">9,99&nbsp;$</div>
           <ul class="pricing-features">
-            <li>Accès aux liquidations populaires</li>
+            <li>Accès aux liquidations populaires prêtes pour Amazon</li>
             <li>3 alertes courriel par semaine</li>
             <li>Historique de prix sur 30 jours</li>
           </ul>
@@ -206,9 +251,9 @@
           <h4>Forfait Avancé</h4>
           <div class="pricing-price">19,99&nbsp;$</div>
           <ul class="pricing-features">
-            <li>Accès illimité au catalogue</li>
+            <li>Accès illimité au catalogue optimisé Amazon</li>
             <li>Alertes personnalisées en temps réel</li>
-            <li>Listes partagées avec votre équipe</li>
+            <li>Exports Seller Central et listes partagées avec votre équipe</li>
           </ul>
         </article>
         <article class="pricing-card">
@@ -217,8 +262,8 @@
           <div class="pricing-price">29,99&nbsp;$</div>
           <ul class="pricing-features">
             <li>Alertes illimitées multicanal</li>
-            <li>Analyse des prix assistée par IA</li>
-            <li>Prévisions de tendances du marché</li>
+            <li>Analyse des prix assistée par IA dédiée à Amazon</li>
+            <li>Prévisions de tendances du marché et simulation FBA</li>
           </ul>
         </article>
       </div>
