@@ -15,6 +15,7 @@ les injecte sur votre site web.
 - `config.example.json` – configuration à dupliquer et personnaliser (`cp config.example.json config.json`).
 - `requirements.txt` – dépendances Python minimales.
 - `liquidations.sqlite` – base SQLite créée au premier lancement (peut être changée via `--database`).
+- `canadian_tire_stores_qc.json` – annuaire des succursales Canadian Tire du Québec utilisé pour compléter automatiquement les métadonnées.
 
 ## Préparation de l'environnement
 
@@ -28,7 +29,7 @@ cp config.example.json config.json
 
 Modifiez `config.json` pour y inscrire :
 
-- La liste des succursales (identifiant Canadian Tire `store_id`).
+- La liste des succursales (identifiant Canadian Tire `store_id`). Le fichier `canadian_tire_stores_qc.json` fournit plus de 80 emplacements québécois avec leur slug; complétez le `store_id` pour ceux que vous ciblez.
 - Les départements / mots-clés à cibler.
 - L'URL d'injection de votre site (`site_endpoint.url`) ainsi que le token API si nécessaire.
 
@@ -43,6 +44,7 @@ Options utiles :
 - `--dry-run` : n'envoie pas les données vers votre site, affiche simplement un résumé.
 - `--config /chemin/vers/config.json`
 - `--database /chemin/vers/liquidations.sqlite`
+- `--list-stores` : affiche l'annuaire `canadian_tire_stores_qc.json` avec les slugs à utiliser dans vos configurations.
 
 À chaque exécution, le script :
 

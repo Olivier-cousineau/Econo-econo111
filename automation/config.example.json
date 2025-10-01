@@ -4,12 +4,14 @@
   "stores": [
     {
       "store_id": "0403",
+      "slug": "montreal-centre",
       "nickname": "Montréal - Centre",
       "city": "Montréal",
       "province": "QC"
     },
     {
       "store_id": "0474",
+      "slug": "quebec-lebourgneuf",
       "nickname": "Québec - Lebourgneuf",
       "city": "Québec",
       "province": "QC"
