@@ -533,6 +533,21 @@
       return `data/${s}/${c}.json`;
     }
 
+    async function canadianTireHasData(slug){
+      if(DEFAULT_BRANCH_SLUGS.has(slug)) return true;
+      const path = `data/canadian-tire/${slug}.json`;
+      try{
+        const head = await fetch(path, {method:'HEAD'});
+        if(head.ok) return true;
+      }catch(_err){ /* noop */ }
+      try{
+        const res = await fetch(path, {cache:'no-store'});
+        return res.ok;
+      }catch(_err){
+        return false;
+      }
+    }
+
     async function loadCanadianTireDirectory(){
       const store = STORES.find(entry => entry.slug === 'canadian-tire');
       if(!store) return;
@@ -545,6 +560,7 @@
         for(const entry of json){
           const rawSlug = typeof entry.slug === 'string' && entry.slug ? entry.slug : slugify(entry.nickname || entry.city || entry.label);
           if(!rawSlug || seen.has(rawSlug)) continue;
+          if(!await canadianTireHasData(rawSlug)) continue;
           const label = (entry.nickname || (entry.label || '').replace(/^Canadian Tire\s*/i, '') || entry.city || rawSlug).trim();
           const city = entry.city || label;
           seen.set(rawSlug, {label, slug: rawSlug, city});
