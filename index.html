@@ -129,9 +129,6 @@
           <label for="citySelect">Ville</label>
           <select id="citySelect">
             <option value="">(Toutes)</option>
-            <option>Montréal</option>
-            <option>Laval</option>
-            <option>Saint-Jérôme</option>
           </select>
         </div>
         <div>
@@ -231,7 +228,7 @@
 
   <script>
   // === Initialisation sûre ===
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', async () => {
     const overlay = document.getElementById('registrationOverlay');
     const form = document.getElementById('registrationForm');
     const submitBtn = document.getElementById('registrationSubmit');
@@ -388,18 +385,23 @@
       });
     }
 
+    function baseBranches(){
+      return [
+        {label:'Montréal', slug:'montreal', city:'Montréal'},
+        {label:'Laval', slug:'laval', city:'Laval'},
+        {label:'Saint-Jérôme', slug:'saint-jerome', city:'Saint-Jérôme'}
+      ];
+    }
+
+    const DEFAULT_BRANCH_SLUGS = new Set(baseBranches().map(branch => branch.slug));
+
     const STORES = [
-      {label:'Home Depot', slug:'home-depot'},
-      {label:'Walmart', slug:'walmart'},
-      {label:'Canadian Tire', slug:'canadian-tire'},
-      {label:'Rona', slug:'rona'},
-      {label:'Patrick Morin', slug:'patrick-morin'},
-      {label:'Sporting Life', slug:'sporting-life'}
-    ];
-    const CITIES = [
-      {label:'Montréal', slug:'montreal'},
-      {label:'Laval', slug:'laval'},
-      {label:'Saint-Jérôme', slug:'saint-jerome'}
+      {label:'Home Depot', slug:'home-depot', branches: baseBranches()},
+      {label:'Walmart', slug:'walmart', branches: baseBranches()},
+      {label:'Canadian Tire', slug:'canadian-tire', branches: baseBranches()},
+      {label:'Rona', slug:'rona', branches: baseBranches()},
+      {label:'Patrick Morin', slug:'patrick-morin', branches: baseBranches()},
+      {label:'Sporting Life', slug:'sporting-life', branches: baseBranches()}
     ];
 
     const storeSelect = document.getElementById('storeSelect');
@@ -436,7 +438,17 @@
       return null;
     }
 
-    function normalizeDeal(item, storeLabel, cityLabel){
+    function slugify(value){
+      if(value === undefined || value === null) return '';
+      const text = String(value).normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      return text.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').replace(/--+/g,'-');
+    }
+
+    function normalizeDeal(item, storeLabel, branch){
+      const branchLabel = typeof branch === 'object' && branch ? branch.label : branch;
+      const branchSlug = typeof branch === 'object' && branch && branch.slug ? branch.slug : slugify(branchLabel || item.city || storeLabel);
+      const cityLabel = typeof branch === 'object' && branch && branch.city ? branch.city : firstDefined(item.city, branchLabel, storeLabel);
+      const citySlug = slugify(cityLabel);
       const regular = toNumber(firstDefined(
         item.original_price,
         item.originalPrice,
@@ -469,6 +481,9 @@
         salePrice: finalSale,
         store: item.store ?? storeLabel,
         city: item.city ?? cityLabel,
+        branch: branchLabel ?? cityLabel,
+        branchSlug,
+        citySlug,
         url: firstDefined(item.url, item.link, '#')
       };
     }
@@ -484,10 +499,14 @@
 
     function render(){
       rangeLabel.textContent = range.value + '%';
-      const s=storeSelect.value, c=citySelect.value, min=parseInt(range.value,10);
-      const filtered=deals.filter(d=>{
-        const pct=discount(d.price,d.salePrice);
-        return(!s||d.store===s)&&(!c||d.city===c)&&pct>=min
+      const s = storeSelect.value;
+      const c = citySelect.value;
+      const min = parseInt(range.value,10);
+      const filtered = deals.filter(d => {
+        const pct = discount(d.price,d.salePrice);
+        if(s && d.store !== s) return false;
+        if(c && d.branchSlug !== c && d.citySlug !== c) return false;
+        return pct >= min;
       });
       countEl.textContent = filtered.length;
       cardsEl.innerHTML = filtered.map(d=>`
@@ -496,53 +515,132 @@
           <div class="body">
             <div class="badge">-${discount(d.price,d.salePrice)}% Rabais</div>
             <h3>${d.title}</h3>
-            <div class="muted">${d.store} · ${d.city}</div>
+            <div class="muted">${d.store} · ${d.branch ?? d.city}</div>
             <div class="price"><div class="old">${currency(d.price)}</div><div>${currency(d.salePrice)}</div></div>
             <a class="btn" href="${d.url||'#'}" target="_blank" rel="noopener" style="width:100%">Voir</a>
           </div>
         </article>`).join('');
     }
 
-    function filePathFor(storeLabel, cityLabel){
-      const s = (STORES.find(x=>x.label===storeLabel)||{}).slug;
-      const c = (CITIES.find(x=>x.label===cityLabel)||{}).slug;
+    function getStoreDefinition(label){
+      return STORES.find(store => store.label === label);
+    }
+
+    function filePathFor(store, branch){
+      const s = store?.slug;
+      const c = branch?.slug;
       if(!s || !c) return null;
       return `data/${s}/${c}.json`;
     }
 
-    async function fetchOne(path, storeLabel, cityLabel){
+    async function loadCanadianTireDirectory(){
+      const store = STORES.find(entry => entry.slug === 'canadian-tire');
+      if(!store) return;
+      try{
+        const res = await fetch('data/canadian-tire/stores.json', {cache:'no-store'});
+        if(!res.ok) return;
+        const json = await res.json();
+        if(!Array.isArray(json)) return;
+        const seen = new Map(store.branches.map(branch => [branch.slug, branch]));
+        for(const entry of json){
+          const rawSlug = typeof entry.slug === 'string' && entry.slug ? entry.slug : slugify(entry.nickname || entry.city || entry.label);
+          if(!rawSlug || seen.has(rawSlug)) continue;
+          const label = (entry.nickname || (entry.label || '').replace(/^Canadian Tire\s*/i, '') || entry.city || rawSlug).trim();
+          const city = entry.city || label;
+          seen.set(rawSlug, {label, slug: rawSlug, city});
+        }
+        store.branches = Array.from(seen.values()).sort((a,b)=>a.label.localeCompare(b.label,'fr'));
+      }catch(err){
+        console.warn('Impossible de charger les succursales Canadian Tire', err);
+      }
+    }
+
+    function setCityOptions(storeLabel, preserveSelection){
+      const previous = preserveSelection ? citySelect.value : '';
+      let branches;
+      if(storeLabel){
+        branches = getStoreDefinition(storeLabel)?.branches ?? baseBranches();
+      }else{
+        branches = baseBranches();
+      }
+      const options = ['<option value="">(Toutes)</option>'];
+      for(const branch of branches){
+        options.push(`<option value="${branch.slug}">${branch.label}</option>`);
+      }
+      citySelect.innerHTML = options.join('');
+      if(preserveSelection && branches.some(branch => branch.slug === previous)){
+        citySelect.value = previous;
+      }else{
+        citySelect.value = '';
+      }
+    }
+
+    async function fetchOne(path, storeLabel, branch){
       try{
         const res = await fetch(path, {cache:'no-store'});
         if(!res.ok) return [];
         const json = await res.json();
         if(!Array.isArray(json)) return [];
-        return json.map(item => normalizeDeal(item, storeLabel, cityLabel));
+        return json.map(item => normalizeDeal(item, storeLabel, branch));
       }catch(e){ console.warn('fetch fail', path, e); return []; }
     }
 
     async function fetchData(){
       deals.length = 0;
-      const stores = storeSelect.value ? [storeSelect.value] : STORES.map(s=>s.label);
-      const cities = citySelect.value  ? [citySelect.value]  : CITIES.map(c=>c.label);
-      for(const s of stores){ for(const c of cities){
-        const path = filePathFor(s,c);
-        if(!path) continue;
-        const arr = await fetchOne(path, s, c);
+      const storeFilter = storeSelect.value;
+      const branchFilter = citySelect.value;
+      const selectedStores = storeFilter ? [storeFilter] : STORES.map(store => store.label);
+      const tasks = [];
+      for(const storeLabel of selectedStores){
+        const store = getStoreDefinition(storeLabel);
+        if(!store) continue;
+        let branches = store.branches ?? [];
+        if(branchFilter){
+          branches = branches.filter(branch => branch.slug === branchFilter);
+          if(branches.length === 0) continue;
+        }else if(!storeFilter){
+          const defaults = branches.filter(branch => DEFAULT_BRANCH_SLUGS.has(branch.slug));
+          branches = defaults.length ? defaults : branches;
+        }
+        if(branches.length === 0){
+          branches = store.branches.filter(branch => DEFAULT_BRANCH_SLUGS.has(branch.slug));
+        }
+        for(const branch of branches){
+          const path = filePathFor(store, branch);
+          if(path) tasks.push({store, branch, path});
+        }
+      }
+      const seen = new Set();
+      for(const task of tasks){
+        if(seen.has(task.path)) continue;
+        seen.add(task.path);
+        const arr = await fetchOne(task.path, task.store.label, task.branch);
         for(const d of arr){ deals.push(d); }
-      }}
+      }
       render();
     }
 
-    storeSelect.addEventListener('change', fetchData);
+    storeSelect.addEventListener('change', () => {
+      setCityOptions(storeSelect.value, false);
+      fetchData();
+    });
     citySelect.addEventListener('change', fetchData);
     range.addEventListener('input', render);
-    btnClear.addEventListener('click', ()=>{ storeSelect.value=''; citySelect.value=''; range.value=0; fetchData(); });
+    btnClear.addEventListener('click', ()=>{
+      storeSelect.value='';
+      setCityOptions('', false);
+      citySelect.value='';
+      range.value=0;
+      fetchData();
+    });
 
     // Démarrage
+    await loadCanadianTireDirectory();
     storeSelect.value = 'Walmart';
-    citySelect.value  = 'Saint-Jérôme';
+    setCityOptions('Walmart', false);
+    citySelect.value = 'saint-jerome';
     range.value = 0; // ← 0% par défaut
-    fetchData();
+    await fetchData();
   });
   </script>
 </body>

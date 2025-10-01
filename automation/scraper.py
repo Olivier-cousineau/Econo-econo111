@@ -18,11 +18,13 @@ from __future__ import annotations
 
 import argparse
 import dataclasses
+import functools
 import json
 import logging
 import os
 import sqlite3
 import time
+import unicodedata
 from datetime import datetime
 from pathlib import Path
 from typing import Iterable, List, Optional
@@ -35,6 +37,9 @@ LOGGER = logging.getLogger(__name__)
 DEFAULT_DB_PATH = Path(__file__).resolve().parent / "liquidations.sqlite"
 DEFAULT_CONFIG = Path(__file__).resolve().parent / "config.json"
 DEFAULT_TIMEZONE = "America/Toronto"  # Covers Québec (EST/EDT).
+STORE_DIRECTORY_PATH = (
+    Path(__file__).resolve().parent / "canadian_tire_stores_qc.json"
+)
 CANADIAN_TIRE_CLEARANCE_ENDPOINT = (
     "https://www.canadiantire.ca/services/specialoffers/v1/deals"
 )
@@ -44,7 +49,8 @@ CANADIAN_TIRE_CLEARANCE_ENDPOINT = (
 class StoreConfig:
     """Represents a Canadian Tire store to visit."""
 
-    store_id: str
+    store_id: Optional[str] = None
+    slug: Optional[str] = None
     nickname: Optional[str] = None
     city: Optional[str] = None
     province: Optional[str] = None
@@ -78,7 +84,10 @@ class ScraperConfig:
 
     @staticmethod
     def from_dict(data: dict) -> "ScraperConfig":
-        stores = [StoreConfig(**item) for item in data.get("stores", [])]
+        stores = [
+            enrich_store_metadata(StoreConfig(**item))
+            for item in data.get("stores", [])
+        ]
         departments = [
             DepartmentConfig(**item) for item in data.get("departments", [])
         ]
@@ -100,6 +109,91 @@ def load_config(path: Path) -> ScraperConfig:
     with path.open("r", encoding="utf-8") as fh:
         data = json.load(fh)
     return ScraperConfig.from_dict(data)
+
+
+def slugify(text: str) -> str:
+    text = unicodedata.normalize("NFKD", text or "")
+    text = "".join(ch for ch in text if ord(ch) < 0x0300)
+    text = text.lower()
+    result = []
+    for ch in text:
+        if ch.isalnum():
+            result.append(ch)
+        elif ch in {" ", "-", "/", "_", "(", ")"}:
+            if result and result[-1] != "-":
+                result.append("-")
+        else:
+            if result and result[-1] != "-":
+                result.append("-")
+    slug = "".join(result).strip("-")
+    while "--" in slug:
+        slug = slug.replace("--", "-")
+    return slug
+
+
+@functools.lru_cache()
+def load_store_directory() -> List[dict]:
+    if not STORE_DIRECTORY_PATH.exists():
+        LOGGER.debug("Répertoire des magasins introuvable: %s", STORE_DIRECTORY_PATH)
+        return []
+    try:
+        with STORE_DIRECTORY_PATH.open("r", encoding="utf-8") as fh:
+            data = json.load(fh)
+    except (OSError, json.JSONDecodeError) as exc:
+        LOGGER.warning("Impossible de lire %s: %s", STORE_DIRECTORY_PATH, exc)
+        return []
+    if not isinstance(data, list):
+        LOGGER.warning("Format inattendu pour le répertoire des magasins")
+        return []
+    return data
+
+
+def find_store_entry(store: StoreConfig) -> Optional[dict]:
+    directory = load_store_directory()
+    if not directory:
+        return None
+
+    # Priority: explicit store_id, slug, nickname/city slug
+    if store.store_id:
+        for entry in directory:
+            if str(entry.get("store_id")) == str(store.store_id):
+                return entry
+
+    if store.slug:
+        for entry in directory:
+            if entry.get("slug") == store.slug:
+                return entry
+
+    slug_candidates = []
+    if store.nickname:
+        slug_candidates.append(slugify(store.nickname))
+    if store.city:
+        slug_candidates.append(slugify(store.city))
+    for candidate in slug_candidates:
+        for entry in directory:
+            if entry.get("slug") == candidate:
+                return entry
+    return None
+
+
+def enrich_store_metadata(store: StoreConfig) -> StoreConfig:
+    entry = find_store_entry(store)
+    if not entry:
+        return store
+
+    if not store.store_id and entry.get("store_id"):
+        store.store_id = str(entry["store_id"])
+    if not store.slug and entry.get("slug"):
+        store.slug = entry["slug"]
+    if not store.nickname and entry.get("nickname"):
+        store.nickname = entry["nickname"]
+    if not store.city and entry.get("city"):
+        store.city = entry["city"]
+    if not store.province and entry.get("province"):
+        store.province = entry["province"]
+    if not store.postal_code and entry.get("postal_code"):
+        store.postal_code = entry["postal_code"]
+    return store
 
 
 def ensure_schema(db_path: Path) -> sqlite3.Connection:
@@ -135,6 +229,13 @@ def fetch_liquidations(
     "circulaires" / deals sections.  If the endpoint changes, the fallback HTML
     scraping routine (``_parse_from_html``) still returns best-effort results.
     """
+
+    if not store.store_id:
+        LOGGER.warning(
+            "Succursale ignorée: aucun identifiant store_id fourni (%s)",
+            store.nickname or store.slug or store.city or "inconnu",
+        )
+        return []
 
     params = {
         "storeId": store.store_id,
@@ -342,12 +443,33 @@ def parse_args() -> argparse.Namespace:
         default=os.environ.get("LOG_LEVEL", "INFO"),
         help="Niveau de log (DEBUG, INFO, WARNING, ERROR)",
     )
+    parser.add_argument(
+        "--list-stores",
+        action="store_true",
+        help=(
+            "Affiche les succursales Canadian Tire connues depuis "
+            "canadian_tire_stores_qc.json"
+        ),
+    )
     return parser.parse_args()
 
 
 def main() -> None:
     args = parse_args()
     logging.basicConfig(level=getattr(logging, str(args.log_level).upper(), logging.INFO))
+
+    if args.list_stores:
+        directory = load_store_directory()
+        if not directory:
+            print("Aucun répertoire des magasins n'est disponible.")
+            return
+        print("Magasins Canadian Tire (Québec):")
+        for entry in sorted(directory, key=lambda item: item.get("label", "")):
+            label = entry.get("label") or "—"
+            store_id = entry.get("store_id") or "(store_id inconnu)"
+            slug_value = entry.get("slug") or slugify(label)
+            print(f"- {label} — store_id={store_id} — slug={slug_value}")
+        return
 
     if not args.config.exists():
         raise SystemExit(
