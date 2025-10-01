@@ -10,9 +10,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison gratuite",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1000726724",
@@ -25,9 +26,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison aujourd'hui/demain",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1000753038",
@@ -40,9 +42,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison aujourd'hui/demain",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1000858233",
@@ -55,9 +58,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "En rupture de stock en ligne",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001006125",
@@ -70,9 +74,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "En rupture de stock en ligne",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001010745",
@@ -85,9 +90,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison aujourd'hui/demain",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001013969",
@@ -100,9 +106,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison aujourd'hui/demain",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001106609",
@@ -115,9 +122,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison aujourd'hui/demain",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001109948",
@@ -130,9 +138,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison aujourd'hui/demain",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001133513",
@@ -145,9 +154,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison aujourd'hui/demain",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001266713",
@@ -160,9 +170,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison gratuite",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001341406",
@@ -175,9 +186,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison aujourd'hui/demain",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001391027",
@@ -190,9 +202,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison aujourd'hui/demain",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001540401",
@@ -205,9 +218,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison gratuite",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001625585",
@@ -220,9 +234,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison gratuite",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001713108",
@@ -235,9 +250,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison gratuite",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001718411",
@@ -250,9 +266,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison gratuite",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001779909",
@@ -265,9 +282,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison aujourd'hui/demain",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001792901",
@@ -280,9 +298,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison gratuite",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001801607",
@@ -295,9 +314,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison gratuite",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001820519",
@@ -310,9 +330,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison aujourd'hui/demain",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001826694",
@@ -325,9 +346,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Indisponible pour livraison",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001826781",
@@ -340,9 +362,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison gratuite",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001826784",
@@ -355,9 +378,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Indisponible pour livraison",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001851954",
@@ -370,9 +394,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison aujourd'hui/demain",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001851975",
@@ -385,9 +410,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison aujourd'hui/demain",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001851976",
@@ -400,9 +426,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison aujourd'hui/demain",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001852629",
@@ -415,9 +442,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison aujourd'hui/demain",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001852630",
@@ -430,9 +458,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison aujourd'hui/demain",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001852659",
@@ -445,9 +474,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison aujourd'hui/demain",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001852660",
@@ -460,9 +490,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison aujourd'hui/demain",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001852942",
@@ -475,9 +506,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison aujourd'hui/demain",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001852945",
@@ -490,9 +522,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison aujourd'hui/demain",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001862502",
@@ -505,9 +538,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison aujourd'hui/demain",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001865997",
@@ -520,9 +554,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison gratuite",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001866964",
@@ -535,9 +570,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison aujourd'hui/demain",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001869621",
@@ -550,9 +586,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison gratuite",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001870654",
@@ -565,9 +602,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison aujourd'hui/demain",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001872350",
@@ -580,9 +618,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Indisponible pour livraison",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001872449",
@@ -595,9 +634,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison gratuite",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001885573",
@@ -610,9 +650,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Indisponible pour livraison",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001885880",
@@ -625,9 +666,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Indisponible pour livraison",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001885881",
@@ -640,9 +682,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Indisponible pour livraison",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001885884",
@@ -655,9 +698,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Indisponible pour livraison",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001888877",
@@ -670,9 +714,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison gratuite",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001888878",
@@ -685,9 +730,10 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "En rupture de stock en ligne",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   },
   {
     "sku": "1001905243",
@@ -700,8 +746,9 @@
     "original_price": null,
     "discount_pct": null,
     "availability": "Livraison gratuite",
-    "store": "Home Depot - Saint-Jérôme",
+    "store": "Home Depot",
     "store_id": "STJ-01",
-    "last_updated": "2025-09-30"
+    "last_updated": "2025-09-30",
+    "city": "Saint-Jérôme"
   }
 ]
