@@ -4,34 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>EconoDeal — Roadmap</title>
-  <style>
-    :root{
-      --bg:#0f172a; --panel:#111827; --panel-2:#1f2937; --text:#e5e7eb;
-      --muted:#9ca3af; --accent:#22c55e; --border:#2b3446; --radius:14px;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),#0b1020 50%,#0a0f1a);color:var(--text)}
-    header{position:sticky;top:0;z-index:20;background:rgba(15,23,42,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
-    .container{max-width:1100px;margin:0 auto;padding:18px}
-    .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
-    h1{margin:0;font-size:18px}
-    .nav-button{display:inline-flex;align-items:center;justify-content:center;background:var(--panel-2);color:var(--text);border:1px solid var(--border);border-radius:10px;padding:10px 12px;text-decoration:none;transition:background .2s ease,color .2s ease}
-    .nav-button:hover{background:var(--panel);color:#fff}
-    .nav-button:focus{outline:2px solid var(--accent);outline-offset:1px}
-    .nav-button.current{background:linear-gradient(120deg,rgba(34,197,94,.25),rgba(59,130,246,.25));border-color:rgba(34,197,94,.6)}
-    .section{padding:36px 0}
-    .muted{color:var(--muted)}
-    .roadmap{background:linear-gradient(180deg,var(--panel),#101b2d);border:1px solid var(--border);border-radius:var(--radius);padding:22px;display:grid;gap:18px;margin-top:22px;position:relative;overflow:hidden}
-    .roadmap::before{content:"Roadmap stratégique";position:absolute;top:16px;right:-80px;width:220px;text-align:center;transform:rotate(45deg);background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.35);color:#86efac;padding:6px 0;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
-    .roadmap-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-    .roadmap-card{background:var(--panel-2);border:1px solid var(--border);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:12px;position:relative;overflow:hidden}
-    .roadmap-year{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
-    .roadmap-year strong{display:block;font-size:20px;color:var(--text)}
-    .roadmap-card ul{margin:0;padding-left:18px;display:grid;gap:6px;font-size:14px;color:var(--muted)}
-    .roadmap-ai{border-left:3px solid var(--accent);padding-left:12px;background:rgba(34,197,94,.08);border-radius:8px}
-    .footer{border-top:1px solid var(--border);padding:20px 0;color:var(--muted);text-align:center}
-    @media (max-width:600px){.roadmap::before{right:-120px}}
-  </style>
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
   <header>
@@ -50,35 +23,61 @@
 
   <main class="container">
     <section class="section">
-      <h2 style="margin:0 0 10px">Notre feuille de route</h2>
-      <p class="muted" style="max-width:640px">Une vision triennale pour propulser EconoDeal sur la scène internationale, avec une intégration progressive de l'intelligence artificielle au cœur de nos services.</p>
+      <div class="section-intro">
+        <span class="chip">Vision 2025</span>
+        <h2 style="margin:0">Notre expansion mondiale orchestrée</h2>
+        <p class="muted">Nous transformons la veille des liquidations en intelligence exploitable. Au cours des trois prochaines années, nous étendrons nos capacités d'IA, notre couverture géographique et nos intégrations partenaires.</p>
+      </div>
       <div class="roadmap">
         <div class="roadmap-grid">
           <article class="roadmap-card">
             <div class="roadmap-year"><strong>Année 1</strong> Canada</div>
             <ul>
-              <li>Consolider la couverture des détaillants nationaux.</li>
-              <li>Optimiser les alertes de rabais en temps réel.</li>
-              <li>Lancer des tableaux de bord régionaux bilingues.</li>
+              <li>Couverture à 360° des principaux détaillants nationaux.</li>
+              <li>Algorithmes d'alertes IA calibrés sur les comportements régionaux.</li>
+              <li>Tableaux de bord bilingues et partage d'équipes en temps réel.</li>
             </ul>
           </article>
           <article class="roadmap-card">
             <div class="roadmap-year"><strong>Année 2</strong> États-Unis</div>
             <ul>
-              <li>Élargir le catalogue aux grandes bannières américaines.</li>
-              <li>Déployer la surveillance des stocks multi-états.</li>
-              <li>Introduire l'analyse prédictive des tendances d'achat.</li>
+              <li>Intégration de 200+ bannières américaines avec disponibilité des stocks.</li>
+              <li>Infrastructure de données multi-états et couverture horaire continue.</li>
+              <li>Analyse prédictive des tendances d'achat inter-États.</li>
             </ul>
           </article>
           <article class="roadmap-card roadmap-ai">
             <div class="roadmap-year"><strong>Année 3</strong> Europe</div>
             <ul>
-              <li>Localiser l'expérience pour les principaux marchés européens.</li>
-              <li>Activer un moteur de recommandations IA multilingue.</li>
-              <li>Automatiser les stratégies de prix grâce à l'apprentissage continu.</li>
+              <li>Localisation complète (langues, devises, taxes) pour les marchés clés.</li>
+              <li>Moteur de recommandations IA multilingue avec apprentissage continu.</li>
+              <li>Automatisation des stratégies de prix et scénarios de réapprovisionnement.</li>
             </ul>
           </article>
         </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="glass-panel">
+        <div class="section-intro">
+          <h3 style="margin:0">Jalons clés à venir</h3>
+          <p class="muted">Ces étapes structurent notre feuille de route et garantissent une expérience haut de gamme pour nos membres.</p>
+        </div>
+        <ul class="feature-grid">
+          <li>
+            <strong>Plateforme API ouverte</strong>
+            <span>Connecteurs REST et webhook pour relier EconoDeal à vos outils BI et ERP.</span>
+          </li>
+          <li>
+            <strong>Indice de confiance des liquidations</strong>
+            <span>Score en temps réel sur la fiabilité des aubaines basé sur 50 signaux qualitatifs.</span>
+          </li>
+          <li>
+            <strong>Copilote d'achat IA</strong>
+            <span>Assistant conversationnel pour simuler des scénarios de prix et générer des recommandations instantanées.</span>
+          </li>
+        </ul>
       </div>
     </section>
   </main>

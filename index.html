@@ -4,74 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>EconoDeal — Canada</title>
-  <style>
-    :root{
-      --bg:#0f172a; --panel:#111827; --panel-2:#1f2937; --text:#e5e7eb;
-      --muted:#9ca3af; --accent:#22c55e; --border:#2b3446; --radius:14px;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),#0b1020 50%,#0a0f1a);color:var(--text)}
-    header{position:sticky;top:0;z-index:20;background:rgba(15,23,42,.85);backdrop-filter: blur(8px);border-bottom:1px solid var(--border)}
-    .container{max-width:1100px;margin:0 auto;padding:18px}
-    .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
-    h1{margin:0;font-size:18px}
-    label{display:block;font-size:12px;color:var(--muted);margin-bottom:6px}
-    select,input[type="range"],button{background:var(--panel-2);color:var(--text);border:1px solid var(--border);border-radius:10px;padding:10px 12px}
-    input[type="text"],input[type="email"]{width:100%;background:var(--panel-2);color:var(--text);border:1px solid var(--border);border-radius:10px;padding:10px 12px}
-    .nav-button{display:inline-flex;align-items:center;justify-content:center;background:var(--panel-2);color:var(--text);border:1px solid var(--border);border-radius:10px;padding:10px 12px;text-decoration:none;transition:background .2s ease,color .2s ease}
-    .nav-button:hover{background:var(--panel);color:#fff}
-    .nav-button.current{background:linear-gradient(120deg,rgba(34,197,94,.25),rgba(59,130,246,.25));border-color:rgba(34,197,94,.6)}
-    select:focus,input[type="range"]:focus,button:focus,.nav-button:focus{outline:2px solid var(--accent);outline-offset:1px}
-    .filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
-    .field-helper{font-size:12px;color:var(--muted);margin:6px 0 0}
-    .field-helper.error{color:#fca5a5}
-    input[aria-invalid="true"],select[aria-invalid="true"]{border-color:#ef4444;box-shadow:0 0 0 1px rgba(239,68,68,.25)}
-    @media (max-width:900px){.filters{grid-template-columns:1fr 1fr}}
-    @media (max-width:560px){.filters{grid-template-columns:1fr}}
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
-    .card{background:linear-gradient(180deg,var(--panel),#0e1626);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
-    .card img{width:100%;height:140px;object-fit:cover;background:#0b0b10}
-    .card .body{padding:12px}
-    .price{display:flex;gap:10px;align-items:baseline;margin:6px 0}
-    .price .old{text-decoration:line-through;color:var(--muted)}
-    .badge{display:inline-flex;gap:6px;align-items:center;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.35);color:#86efac;border-radius:999px;padding:6px 10px;font-weight:600;font-size:12px}
-    .section{padding:26px 0}
-    .muted{color:var(--muted)}
-    .footer{border-top:1px solid var(--border);padding:20px 0;color:var(--muted);text-align:center}
-    .kbd{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;background:var(--panel-2);border:1px solid var(--border);padding:2px 6px;border-radius:6px;color:var(--muted)}
-    .dev-banner{background:#1f2937;border:1px dashed #ef4444;color:#fecaca;padding:10px 12px;border-radius:10px;margin:12px 0;display:none}
-    .pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
-    .pricing-card{background:linear-gradient(180deg,var(--panel),#111a2a);border:1px solid var(--border);border-radius:var(--radius);padding:18px;display:flex;flex-direction:column;gap:14px;position:relative;overflow:hidden}
-    .pricing-card::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,rgba(34,197,94,.6),rgba(59,130,246,.6));opacity:.6}
-    .pricing-card h4{margin:0;font-size:18px}
-    .pricing-price{font-size:26px;font-weight:700;color:#86efac}
-    .pricing-features{list-style:none;padding:0;margin:0;display:grid;gap:8px;font-size:14px;color:var(--muted)}
-    .pricing-tag{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
-    .pricing-highlight{outline:2px solid rgba(34,197,94,.4);outline-offset:4px;transition:outline-color .3s ease}
-    @keyframes pricingPulse{0%{box-shadow:0 0 0 0 rgba(34,197,94,.45)}70%{box-shadow:0 0 0 12px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
-    #pricing.pricing-pulse{animation:pricingPulse 1.3s ease-out 1}
-    .roadmap{background:linear-gradient(180deg,var(--panel),#101b2d);border:1px solid var(--border);border-radius:var(--radius);padding:22px;display:grid;gap:18px;margin-top:22px;position:relative;overflow:hidden}
-    .roadmap::before{content:"Roadmap stratégique";position:absolute;top:16px;right:-80px;width:220px;text-align:center;transform:rotate(45deg);background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.35);color:#86efac;padding:6px 0;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
-    .roadmap-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-    .roadmap-card{background:var(--panel-2);border:1px solid var(--border);border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:12px;position:relative;overflow:hidden}
-    .roadmap-year{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
-    .roadmap-year strong{display:block;font-size:20px;color:var(--text)}
-    .roadmap-card ul{margin:0;padding-left:18px;display:grid;gap:6px;font-size:14px;color:var(--muted)}
-    .roadmap-ai{border-left:3px solid var(--accent);padding-left:12px;background:rgba(34,197,94,.08);border-radius:8px}
-    @media (max-width:600px){.roadmap::before{right:-120px}}
-    #registrationOverlay{position:fixed;inset:0;background:rgba(15,23,42,.95);display:flex;align-items:center;justify-content:center;padding:20px;z-index:2000}
-    #registrationOverlay.hidden{display:none}
-    .registration-card{background:linear-gradient(180deg,var(--panel),#0e1626);border:1px solid var(--border);border-radius:var(--radius);max-width:420px;width:100%;padding:26px;display:grid;gap:16px;box-shadow:0 24px 60px rgba(15,23,42,.5)}
-    .registration-card h2{margin:0}
-    .registration-card form{display:grid;gap:12px}
-    .checkbox-row{display:flex;gap:10px;align-items:flex-start;background:rgba(34,197,94,.05);border:1px solid rgba(34,197,94,.3);padding:12px;border-radius:10px}
-    .checkbox-row input[type="checkbox"]{margin-top:4px}
-    .registration-card button{background:linear-gradient(120deg,rgba(34,197,94,.9),rgba(59,130,246,.85));color:#fff;border:none;font-weight:600;cursor:pointer;transition:opacity .2s ease,transform .2s ease}
-    .registration-card button:hover:not(:disabled){opacity:.9;transform:translateY(-1px)}
-    .registration-card button:disabled{opacity:.45;cursor:not-allowed}
-    body.overlay-active{overflow:hidden}
-    body.overlay-active header,body.overlay-active main,body.overlay-active .footer{filter:blur(2px);pointer-events:none;user-select:none}
-  </style>
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body class="overlay-active">
   <div id="registrationOverlay" role="dialog" aria-modal="true" aria-labelledby="registrationTitle">
@@ -110,95 +43,151 @@
   </header>
 
   <main class="container">
+    <section class="hero">
+      <div>
+        <span class="chip">Plateforme 2025</span>
+        <h2>La nouvelle façon de traquer les liquidations</h2>
+        <p>Anticipez les meilleures aubaines canadiennes grâce à un suivi intelligent, des alertes instantanées et une analyse propulsée par l'IA.</p>
+        <div class="hero-actions">
+          <button type="button" class="btn-primary" data-open-overlay>Créer mon accès</button>
+          <a class="ghost-button" href="pricing.html">Explorer les forfaits</a>
+        </div>
+        <div class="hero-meta">
+          <div class="meta-card">
+            <strong><span data-client-count>0</span> membres</strong>
+            <span class="muted">font confiance à EconoDeal</span>
+          </div>
+          <div class="meta-card">
+            <strong>IA prédictive</strong>
+            <span class="muted">Prévisions 48&nbsp;h à l'avance</span>
+          </div>
+          <div class="meta-card">
+            <strong>Couverture nationale</strong>
+            <span class="muted">120+ détaillants monitorés</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-glow"></div>
+        <div class="hero-card">
+          <span class="chip" style="width:max-content">Flux en direct</span>
+          <h3>Liquidations à fort impact</h3>
+          <div class="status">
+            <span class="muted">Mise à jour</span>
+            <strong>Il y a 3 min</strong>
+          </div>
+          <div class="sparkline">
+            <div class="sparkline-bar"><span style="width:92%"></span></div>
+            <div class="sparkline-bar"><span style="width:78%"></span></div>
+            <div class="sparkline-bar"><span style="width:64%"></span></div>
+          </div>
+          <div class="meta-card" style="margin:0">
+            <strong>+34&nbsp;% d'économie moyenne</strong>
+            <span class="muted">chez nos membres actifs</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="search">
-      <h2 style="margin:0 0 10px">Trouver des liquidations</h2>
-      <p class="muted">Les fichiers sont chargés depuis <span class="kbd">data/&lt;magasin&gt;/&lt;ville&gt;.json</span>.</p>
+      <div>
+        <h2 style="margin:0">Trouver des liquidations</h2>
+        <p class="muted">Les fichiers sont chargés depuis <span class="kbd">data/&lt;magasin&gt;/&lt;ville&gt;.json</span>.</p>
+      </div>
 
       <!-- ✅ Les éléments requis existent et leurs IDs correspondent au script -->
-      <div class="filters" style="margin-top:12px">
-        <div>
-          <label for="storeSelect">Magasin</label>
-          <select id="storeSelect">
-            <option value="">(Tous)</option>
-            <option>Home Depot</option>
-            <option>Walmart</option>
-            <option>Canadian Tire</option>
-            <option>Rona</option>
-            <option>Patrick Morin</option>
-            <option>Sporting Life</option>
-          </select>
-        </div>
-        <div>
-          <label for="citySelect">Ville</label>
-          <select id="citySelect">
-            <option value="">(Toutes)</option>
-          </select>
-        </div>
-        <div>
-          <label for="postalInput">Code postal</label>
-          <input id="postalInput" name="postal" type="text" inputmode="text" placeholder="Ex. H2X 1Y4" autocomplete="postal-code" />
-          <p id="postalHelper" class="field-helper">Entrez les 3 premiers caractères du code postal (ex. H2X).</p>
-        </div>
-        <div>
-          <label for="discountRange">% de rabais minimal : <span id="discountValue" class="kbd">0%</span></label>
-          <input id="discountRange" type="range" min="0" max="90" step="5" value="0" />
-        </div>
-        <div style="align-self:end">
-          <button id="btnClear">Réinitialiser</button>
+      <div class="glass-panel filters-wrapper">
+        <div class="filters">
+          <div>
+            <label for="storeSelect">Magasin</label>
+            <select id="storeSelect">
+              <option value="">(Tous)</option>
+              <option>Home Depot</option>
+              <option>Walmart</option>
+              <option>Canadian Tire</option>
+              <option>Rona</option>
+              <option>Patrick Morin</option>
+              <option>Sporting Life</option>
+            </select>
+          </div>
+          <div>
+            <label for="citySelect">Ville</label>
+            <select id="citySelect">
+              <option value="">(Toutes)</option>
+            </select>
+          </div>
+          <div>
+            <label for="postalInput">Code postal</label>
+            <input id="postalInput" name="postal" type="text" inputmode="text" placeholder="Ex. H2X 1Y4" autocomplete="postal-code" />
+            <p id="postalHelper" class="field-helper">Entrez les 3 premiers caractères du code postal (ex. H2X).</p>
+          </div>
+          <div>
+            <label for="discountRange">% de rabais minimal : <span id="discountValue" class="kbd">0%</span></label>
+            <input id="discountRange" type="range" min="0" max="90" step="5" value="0" />
+          </div>
+          <div style="align-self:end">
+            <button id="btnClear">Réinitialiser</button>
+          </div>
         </div>
       </div>
 
       <div id="devError" class="dev-banner"></div>
 
-      <div class="section">
-        <div class="row" style="justify-content:space-between;align-items:center">
+      <div class="glass-panel">
+        <div class="results-header">
           <h3 style="margin:0">Résultats</h3>
           <div class="muted"><span id="resultCount">0</span> articles</div>
         </div>
-        <div id="cards" class="grid" style="margin-top:12px"></div>
+        <div id="cards" class="grid"></div>
       </div>
     </section>
 
     <section class="section" id="pricing" style="padding-top:10px">
-      <h2 style="margin:0 0 10px">Forfaits adaptés à vos besoins</h2>
-      <p class="muted" style="max-width:620px">Choisissez l'option qui correspond le mieux à votre façon de surveiller les rabais et liquidations au Canada. Chaque forfait inclut une période d'essai de 7 jours.</p>
-      <div class="pricing-grid">
-        <article class="pricing-card">
-          <div class="pricing-tag">Essentiel</div>
-          <h4>Accès de base</h4>
-          <div class="pricing-price">9,99&nbsp;$</div>
-          <ul class="pricing-features">
-            <li>Accès aux liquidations populaires</li>
-            <li>3 alertes courriel par semaine</li>
-            <li>Historique de prix sur 30 jours</li>
-          </ul>
-        </article>
-        <article class="pricing-card pricing-highlight">
-          <div class="pricing-tag">Le plus populaire</div>
-          <h4>Forfait Avancé</h4>
-          <div class="pricing-price">19,99&nbsp;$</div>
-          <ul class="pricing-features">
-            <li>Accès illimité au catalogue</li>
-            <li>Alertes personnalisées en temps réel</li>
-            <li>Listes partagées avec votre équipe</li>
-          </ul>
-        </article>
-        <article class="pricing-card">
-          <div class="pricing-tag">Premium</div>
-          <h4>Analyse IA complète</h4>
-          <div class="pricing-price">29,99&nbsp;$</div>
-          <ul class="pricing-features">
-            <li>Alertes illimitées multicanal</li>
-            <li>Analyse des prix assistée par IA</li>
-            <li>Prévisions de tendances du marché</li>
-          </ul>
-        </article>
+      <div class="glass-panel">
+        <div class="section-intro">
+          <h2 style="margin:0">Forfaits adaptés à vos besoins</h2>
+          <p class="muted">Choisissez l'option qui correspond le mieux à votre façon de surveiller les rabais et liquidations au Canada. Chaque forfait inclut une période d'essai de 7 jours.</p>
+        </div>
+        <div class="pricing-grid">
+          <article class="pricing-card">
+            <div class="pricing-tag">Essentiel</div>
+            <h4>Accès de base</h4>
+            <div class="pricing-price">9,99&nbsp;$</div>
+            <ul class="pricing-features">
+              <li>Accès aux liquidations populaires</li>
+              <li>3 alertes courriel par semaine</li>
+              <li>Historique de prix sur 30 jours</li>
+            </ul>
+          </article>
+          <article class="pricing-card pricing-highlight">
+            <div class="pricing-tag">Le plus populaire</div>
+            <h4>Forfait Avancé</h4>
+            <div class="pricing-price">19,99&nbsp;$</div>
+            <ul class="pricing-features">
+              <li>Accès illimité au catalogue</li>
+              <li>Alertes personnalisées en temps réel</li>
+              <li>Listes partagées avec votre équipe</li>
+            </ul>
+          </article>
+          <article class="pricing-card">
+            <div class="pricing-tag">Premium</div>
+            <h4>Analyse IA complète</h4>
+            <div class="pricing-price">29,99&nbsp;$</div>
+            <ul class="pricing-features">
+              <li>Alertes illimitées multicanal</li>
+              <li>Analyse des prix assistée par IA</li>
+              <li>Prévisions de tendances du marché</li>
+            </ul>
+          </article>
+        </div>
       </div>
     </section>
 
     <section class="section" id="roadmap" style="padding-top:0">
-      <h2 style="margin:0 0 10px">Notre feuille de route</h2>
-      <p class="muted" style="max-width:640px">Une vision triennale pour propulser EconoDeal sur la scène internationale, avec une intégration progressive de l'intelligence artificielle au cœur de nos services.</p>
+      <div class="section-intro">
+        <h2 style="margin:0">Notre feuille de route</h2>
+        <p class="muted">Une vision triennale pour propulser EconoDeal sur la scène internationale, avec une intégration progressive de l'intelligence artificielle au cœur de nos services.</p>
+      </div>
       <div class="roadmap">
         <div class="roadmap-grid">
           <article class="roadmap-card">
@@ -242,6 +231,7 @@
     const submitBtn = document.getElementById('registrationSubmit');
     const regulationCheckbox = document.getElementById('regulationCheckbox');
     const clientCountDisplays = Array.from(document.querySelectorAll('[data-client-count]'));
+    const overlayToggleButtons = Array.from(document.querySelectorAll('[data-open-overlay]'));
 
     function parseJson(value){
       if(!value) return null;
@@ -350,6 +340,12 @@
       document.body.classList.add('overlay-active');
       updateClientCountDisplays();
     }
+
+    overlayToggleButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        showOverlay();
+      });
+    });
 
     updateClientCountDisplays();
 

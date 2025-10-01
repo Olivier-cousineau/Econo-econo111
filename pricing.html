@@ -4,33 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>EconoDeal — Forfaits</title>
-  <style>
-    :root{
-      --bg:#0f172a; --panel:#111827; --panel-2:#1f2937; --text:#e5e7eb;
-      --muted:#9ca3af; --accent:#22c55e; --border:#2b3446; --radius:14px;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),#0b1020 50%,#0a0f1a);color:var(--text)}
-    header{position:sticky;top:0;z-index:20;background:rgba(15,23,42,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
-    .container{max-width:1100px;margin:0 auto;padding:18px}
-    .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
-    h1{margin:0;font-size:18px}
-    .nav-button{display:inline-flex;align-items:center;justify-content:center;background:var(--panel-2);color:var(--text);border:1px solid var(--border);border-radius:10px;padding:10px 12px;text-decoration:none;transition:background .2s ease,color .2s ease}
-    .nav-button:hover{background:var(--panel);color:#fff}
-    .nav-button:focus{outline:2px solid var(--accent);outline-offset:1px}
-    .nav-button.current{background:linear-gradient(120deg,rgba(34,197,94,.25),rgba(59,130,246,.25));border-color:rgba(34,197,94,.6)}
-    .section{padding:36px 0}
-    .muted{color:var(--muted)}
-    .pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
-    .pricing-card{background:linear-gradient(180deg,var(--panel),#111a2a);border:1px solid var(--border);border-radius:var(--radius);padding:18px;display:flex;flex-direction:column;gap:14px;position:relative;overflow:hidden}
-    .pricing-card::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,rgba(34,197,94,.6),rgba(59,130,246,.6));opacity:.6}
-    .pricing-card h4{margin:0;font-size:18px}
-    .pricing-price{font-size:26px;font-weight:700;color:#86efac}
-    .pricing-features{list-style:none;padding:0;margin:0;display:grid;gap:8px;font-size:14px;color:var(--muted)}
-    .pricing-tag{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
-    .pricing-highlight{outline:2px solid rgba(34,197,94,.4);outline-offset:4px;transition:outline-color .3s ease}
-    .footer{border-top:1px solid var(--border);padding:20px 0;color:var(--muted);text-align:center}
-  </style>
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
   <header>
@@ -49,39 +23,70 @@
 
   <main class="container">
     <section class="section">
-      <h2 style="margin:0 0 10px">Forfaits adaptés à vos besoins</h2>
-      <p class="muted" style="max-width:620px">Choisissez l'option qui correspond le mieux à votre façon de surveiller les rabais et liquidations au Canada. Chaque forfait inclut une période d'essai de 7 jours.</p>
-      <div class="pricing-grid">
-        <article class="pricing-card">
-          <div class="pricing-tag">Essentiel</div>
-          <h4>Accès de base</h4>
-          <div class="pricing-price">9,99&nbsp;$</div>
-          <ul class="pricing-features">
-            <li>Accès aux liquidations populaires</li>
-            <li>3 alertes courriel par semaine</li>
-            <li>Historique de prix sur 30 jours</li>
-          </ul>
-        </article>
-        <article class="pricing-card pricing-highlight">
-          <div class="pricing-tag">Le plus populaire</div>
-          <h4>Forfait Avancé</h4>
-          <div class="pricing-price">19,99&nbsp;$</div>
-          <ul class="pricing-features">
-            <li>Accès illimité au catalogue</li>
-            <li>Alertes personnalisées en temps réel</li>
-            <li>Listes partagées avec votre équipe</li>
-          </ul>
-        </article>
-        <article class="pricing-card">
-          <div class="pricing-tag">Premium</div>
-          <h4>Analyse IA complète</h4>
-          <div class="pricing-price">29,99&nbsp;$</div>
-          <ul class="pricing-features">
-            <li>Alertes illimitées multicanal</li>
-            <li>Analyse des prix assistée par IA</li>
-            <li>Prévisions de tendances du marché</li>
-          </ul>
-        </article>
+      <div class="section-intro">
+        <span class="chip">Forfaits 2025</span>
+        <h2 style="margin:0">Des plans flexibles pour chaque équipe</h2>
+        <p class="muted">Accédez aux liquidations canadiennes en temps réel, orchestrez vos achats stratégiques et profitez d'une expérience d'analyse propulsée par l'intelligence artificielle.</p>
+      </div>
+      <div class="glass-panel">
+        <div class="pricing-grid">
+          <article class="pricing-card">
+            <div class="pricing-tag">Essentiel</div>
+            <h4>Accès de base</h4>
+            <div class="pricing-price">9,99&nbsp;$</div>
+            <ul class="pricing-features">
+              <li>Flux des liquidations populaires mis à jour quotidiennement</li>
+              <li>3 alertes intelligentes par semaine</li>
+              <li>Historique de prix sur 30 jours</li>
+            </ul>
+            <a class="btn" href="index.html">Choisir Essentiel</a>
+          </article>
+          <article class="pricing-card pricing-highlight">
+            <div class="pricing-tag">Le plus populaire</div>
+            <h4>Forfait Avancé</h4>
+            <div class="pricing-price">19,99&nbsp;$</div>
+            <ul class="pricing-features">
+              <li>Accès illimité au catalogue pancanadien</li>
+              <li>Alertes multi-canaux et segmentation IA</li>
+              <li>Listes collaboratives pour votre équipe</li>
+            </ul>
+            <a class="btn" href="index.html">Choisir Avancé</a>
+          </article>
+          <article class="pricing-card">
+            <div class="pricing-tag">Premium</div>
+            <h4>Analyse IA complète</h4>
+            <div class="pricing-price">29,99&nbsp;$</div>
+            <ul class="pricing-features">
+              <li>Alertes illimitées hyper-personnalisées</li>
+              <li>Analyse prédictive et recommandations IA</li>
+              <li>Prévisions de tendances jusqu'à 60 jours</li>
+            </ul>
+            <a class="btn" href="index.html">Choisir Premium</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="glass-panel">
+        <div class="section-intro">
+          <h3 style="margin:0">Tous les forfaits incluent</h3>
+          <p class="muted">Peu importe la formule, vous restez en avance sur le marché avec un arsenal complet d'outils d'analyse et de collaboration.</p>
+        </div>
+        <ul class="feature-grid">
+          <li>
+            <strong>Alertes IA en temps réel</strong>
+            <span>Recevez des notifications ciblées selon vos catégories, régions et seuils de rabais préférés.</span>
+          </li>
+          <li>
+            <strong>Tableaux de bord collaboratifs</strong>
+            <span>Partagez vos listes de liquidations avec vos collègues et synchronisez vos campagnes d'achat.</span>
+          </li>
+          <li>
+            <strong>Insights et tendances</strong>
+            <span>Suivez l'évolution des prix, des stocks et des prévisions 48&nbsp;h pour déclencher vos actions au meilleur moment.</span>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
