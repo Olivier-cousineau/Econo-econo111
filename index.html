@@ -22,7 +22,10 @@
     .nav-button:hover{background:var(--panel);color:#fff}
     .nav-button.current{background:linear-gradient(120deg,rgba(34,197,94,.25),rgba(59,130,246,.25));border-color:rgba(34,197,94,.6)}
     select:focus,input[type="range"]:focus,button:focus,.nav-button:focus{outline:2px solid var(--accent);outline-offset:1px}
-    .filters{display:grid;grid-template-columns:repeat(4,minmax(180px,1fr));gap:12px}
+    .filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+    .field-helper{font-size:12px;color:var(--muted);margin:6px 0 0}
+    .field-helper.error{color:#fca5a5}
+    input[aria-invalid="true"],select[aria-invalid="true"]{border-color:#ef4444;box-shadow:0 0 0 1px rgba(239,68,68,.25)}
     @media (max-width:900px){.filters{grid-template-columns:1fr 1fr}}
     @media (max-width:560px){.filters{grid-template-columns:1fr}}
     .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
@@ -130,6 +133,11 @@
           <select id="citySelect">
             <option value="">(Toutes)</option>
           </select>
+        </div>
+        <div>
+          <label for="postalInput">Code postal</label>
+          <input id="postalInput" name="postal" type="text" inputmode="text" placeholder="Ex. H2X 1Y4" autocomplete="postal-code" />
+          <p id="postalHelper" class="field-helper">Entrez les 3 premiers caractères du code postal (ex. H2X).</p>
         </div>
         <div>
           <label for="discountRange">% de rabais minimal : <span id="discountValue" class="kbd">0%</span></label>
@@ -404,6 +412,32 @@
       {label:'Sporting Life', slug:'sporting-life', branches: baseBranches()}
     ];
 
+    const POSTAL_DIRECTORY = [
+      {
+        branchSlug:'montreal',
+        cityLabel:'Montréal (Île)',
+        prefixes:[
+          'H1A','H1B','H1C','H1E','H1G','H1H','H1J','H1K','H1L','H1M','H1N','H1P','H1R','H1S','H1T','H1V','H1W','H1X','H1Y','H1Z',
+          'H2A','H2B','H2C','H2E','H2G','H2H','H2J','H2K','H2L','H2M','H2N','H2P','H2R','H2S','H2T','H2V','H2W','H2X','H2Y','H2Z',
+          'H3A','H3B','H3C','H3E','H3G','H3H','H3J','H3K','H3L','H3M','H3N','H3R','H3S','H3T','H3V','H3W','H3X','H3Y','H3Z',
+          'H4A','H4B','H4C','H4E','H4G','H4H','H4J','H4K','H4L','H4M','H4N','H4P','H4R','H4S','H4T','H4V','H4W','H4X'
+        ]
+      },
+      {
+        branchSlug:'laval',
+        cityLabel:'Laval',
+        prefixes:[
+          'H7A','H7B','H7C','H7E','H7G','H7H','H7J','H7K','H7L','H7M','H7N','H7P','H7R','H7S','H7T','H7V','H7W','H7X','H7Y','H7Z',
+          'H8N','H8P','H8R','H8T','H8Y'
+        ]
+      },
+      {
+        branchSlug:'saint-jerome',
+        cityLabel:'Saint-Jérôme',
+        prefixes:['J5L','J7Y','J7Z','J8A']
+      }
+    ];
+
     const storeSelect = document.getElementById('storeSelect');
     const citySelect  = document.getElementById('citySelect');
     const range       = document.getElementById('discountRange');
@@ -412,6 +446,85 @@
     const countEl     = document.getElementById('resultCount');
     const btnClear    = document.getElementById('btnClear');
     const devError    = document.getElementById('devError');
+    const postalInput = document.getElementById('postalInput');
+    const postalHelper = document.getElementById('postalHelper');
+
+    const DEFAULT_POSTAL_MESSAGE = 'Entrez les 3 premiers caractères du code postal (ex. H2X).';
+
+    function normalizePostal(value){
+      if(!value) return '';
+      return String(value).toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^A-Z0-9]/g,'');
+    }
+
+    function findPostalMatch(normalized){
+      if(!normalized) return null;
+      return POSTAL_DIRECTORY.find(entry => entry.prefixes.some(prefix => normalized.startsWith(prefix)));
+    }
+
+    function updatePostalHelper(message, isError){
+      if(!postalHelper) return;
+      postalHelper.textContent = message;
+      postalHelper.classList.toggle('error', Boolean(isError));
+    }
+
+    function resetPostalFilter(){
+      if(!postalInput) return;
+      postalInput.value = '';
+      postalInput.removeAttribute('aria-invalid');
+      updatePostalHelper(DEFAULT_POSTAL_MESSAGE, false);
+    }
+
+    function ensureBranchOption(slug){
+      if(!slug) return;
+      const hasOption = Array.from(citySelect?.options ?? []).some(option => option.value === slug);
+      if(hasOption) return;
+      setCityOptions(storeSelect?.value ?? '', true);
+    }
+
+    async function applyPostalSearch(raw){
+      if(!postalInput) return;
+      const normalized = normalizePostal(raw);
+      if(!normalized){
+        postalInput.removeAttribute('aria-invalid');
+        updatePostalHelper(DEFAULT_POSTAL_MESSAGE, false);
+        return;
+      }
+      if(normalized.length < 3){
+        postalInput.setAttribute('aria-invalid','true');
+        updatePostalHelper('Indiquez au moins les 3 premiers caractères du code postal.', true);
+        return;
+      }
+      const match = findPostalMatch(normalized);
+      if(!match){
+        postalInput.setAttribute('aria-invalid','true');
+        updatePostalHelper('Code postal non reconnu dans les succursales couvertes.', true);
+        return;
+      }
+      postalInput.removeAttribute('aria-invalid');
+      updatePostalHelper(`Succursale détectée : ${match.cityLabel}.`, false);
+      ensureBranchOption(match.branchSlug);
+      if(citySelect){
+        citySelect.value = match.branchSlug;
+      }
+      await fetchData();
+    }
+
+    if(postalInput){
+      resetPostalFilter();
+      let postalDebounce;
+      postalInput.addEventListener('input', () => {
+        clearTimeout(postalDebounce);
+        const value = postalInput.value;
+        postalDebounce = setTimeout(() => { applyPostalSearch(value); }, 300);
+      });
+      postalInput.addEventListener('blur', () => { applyPostalSearch(postalInput.value); });
+      postalInput.addEventListener('keydown', (event) => {
+        if(event.key === 'Enter'){
+          event.preventDefault();
+          applyPostalSearch(postalInput.value);
+        }
+      });
+    }
 
     // Affiche l'année
     const y = new Date().getFullYear();
@@ -657,13 +770,19 @@
       setCityOptions(storeSelect.value, false);
       fetchData();
     });
-    citySelect.addEventListener('change', fetchData);
+    citySelect.addEventListener('change', () => {
+      if(postalInput && !normalizePostal(postalInput.value)){
+        updatePostalHelper(DEFAULT_POSTAL_MESSAGE, false);
+      }
+      fetchData();
+    });
     range.addEventListener('input', render);
     btnClear.addEventListener('click', ()=>{
       storeSelect.value='';
       setCityOptions('', false);
       citySelect.value='';
       range.value=0;
+      resetPostalFilter();
       fetchData();
     });
 
