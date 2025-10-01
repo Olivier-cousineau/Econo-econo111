@@ -36,13 +36,27 @@ jobs:
               "patrick-morin": "Patrick Morin",
               "sporting-life": "Sporting Life",
           }
-          CITIES = {
+          CITY_LABELS = {
               "montreal": "Montréal",
               "laval": "Laval",
               "saint-jerome": "Saint-Jérôme",
-              "st-jerome": "Saint-Jérôme",
-              "stjerome": "Saint-Jérôme",
-              "st-jerôme": "Saint-Jérôme",
+              "quebec": "Québec",
+          }
+          CITY_ALIASES = {
+              "montreal": "montreal",
+              "mtl": "montreal",
+              "ile-de-montreal": "montreal",
+              "ile-montreal": "montreal",
+              "laval": "laval",
+              "saint-jerome": "saint-jerome",
+              "st-jerome": "saint-jerome",
+              "stjerome": "saint-jerome",
+              "st-jerôme": "saint-jerome",
+              "quebec": "quebec",
+              "quebec-city": "quebec",
+              "ville-de-quebec": "quebec",
+              "ville-quebec": "quebec",
+              "ville-de-quebec-city": "quebec",
           }
 
           def slugify(s: str) -> str:
@@ -99,7 +113,9 @@ jobs:
 
           for fname in sorted(os.listdir("incoming")):
               src=os.path.join("incoming", fname)
-              if not os.path.isfile(src): 
+              if not os.path.isfile(src):
+                  continue
+              if fname.startswith('.'):
                   continue
               base, ext = os.path.splitext(fname); ext=ext.lower()
 
@@ -111,7 +127,11 @@ jobs:
                   continue
 
               store_token = slugify(toks[0])
-              city_token  = slugify("-".join(toks[1:]))
+              city_parts = []
+              for t in toks[1:]:
+                  slug = slugify(t)
+                  if slug:
+                      city_parts.append(slug)
 
               store_slug = store_token
               store_label = STORES.get(store_slug)
@@ -120,11 +140,33 @@ jobs:
               if not store_label:
                   store_label = store_slug.replace("-", " ").title()
 
-              if city_token.startswith("saint-jerome") or city_token.startswith("st-jerome") or city_token.startswith("stjerome"):
-                  city_slug, city_label = "saint-jerome", "Saint-Jérôme"
-              else:
-                  city_slug = city_token
-                  city_label = CITIES.get(city_slug) or city_slug.replace("-", " ").title()
+              city_slug = None
+              if city_parts:
+                  # Remove tokens that are pure numbers or map markers (ex: "2100", "8")
+                  filtered = [p for p in city_parts if not p.isdigit()]
+                  parts_for_matching = filtered or city_parts
+
+                  # Try to match the longest sequence of tokens against known aliases
+                  for size in range(len(parts_for_matching), 0, -1):
+                      matched = False
+                      for start in range(0, len(parts_for_matching) - size + 1):
+                          candidate = "-".join(parts_for_matching[start:start + size])
+                          canonical = CITY_ALIASES.get(candidate)
+                          if canonical:
+                              city_slug = canonical
+                              matched = True
+                              break
+                      if matched:
+                          break
+
+                  if not city_slug:
+                      city_slug = "-".join(filtered) if filtered else "-".join(city_parts)
+
+              if not city_slug:
+                  print("Skip (cannot determine city):", fname)
+                  continue
+
+              city_label = CITY_LABELS.get(city_slug) or city_slug.replace("-", " ").title()
 
               data_dir=os.path.join("data", store_slug); ensure(data_dir)
               prev_dir=os.path.join("previews", store_slug); ensure(prev_dir)
