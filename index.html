@@ -44,10 +44,17 @@
     .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
     .card{background:linear-gradient(180deg,var(--panel),#0e1626);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
     .card img{width:100%;height:140px;object-fit:cover;background:#0b0b10}
-    .card .body{padding:12px}
+    .card .body{padding:12px;display:grid;gap:10px}
     .price{display:flex;gap:10px;align-items:baseline;margin:6px 0}
     .price .old{text-decoration:line-through;color:var(--muted)}
     .badge{display:inline-flex;gap:6px;align-items:center;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.35);color:#86efac;border-radius:999px;padding:6px 10px;font-weight:600;font-size:12px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;width:100%;padding:10px 12px;border-radius:10px;font-weight:600;text-decoration:none;font-size:14px;transition:background .2s ease,color .2s ease,border-color .2s ease}
+    .btn-primary{background:linear-gradient(120deg,rgba(34,197,94,.85),rgba(59,130,246,.75));color:#fff;border:none}
+    .btn-primary:hover{background:linear-gradient(120deg,rgba(34,197,94,.95),rgba(59,130,246,.85))}
+    .btn-secondary{background:var(--panel-2);color:var(--text);border:1px solid rgba(148,163,184,.35)}
+    .btn-secondary:hover{background:rgba(148,163,184,.18);color:#fff;border-color:rgba(148,163,184,.55)}
+    .comparison-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+    .action-stack{display:grid;gap:8px;margin-top:4px}
     .section{padding:26px 0}
     .muted{color:var(--muted)}
     .footer{border-top:1px solid var(--border);padding:20px 0;color:var(--muted);text-align:center}
@@ -1165,7 +1172,10 @@
         return pct >= min;
       });
       countEl.textContent = filtered.length;
-      cardsEl.innerHTML = filtered.map(d=>`
+      cardsEl.innerHTML = filtered.map(d=>{
+        const amazonLink = d.amazonUrl || `https://www.amazon.ca/s?k=${encodeURIComponent(d.title)}`;
+        const ebayLink = d.ebayUrl || `https://www.ebay.ca/sch/i.html?_nkw=${encodeURIComponent(d.title)}`;
+        return `
         <article class="card">
           <img src="${d.image}" alt="${d.title}" loading="lazy"/>
           <div class="body">
@@ -1173,9 +1183,16 @@
             <h3>${d.title}</h3>
             <div class="muted">${d.store} · ${d.branch ?? d.city}</div>
             <div class="price"><div class="old">${currency(d.price)}</div><div>${currency(d.salePrice)}</div></div>
-            <a class="btn" href="${d.url||'#'}" target="_blank" rel="noopener" style="width:100%">Voir</a>
+            <div class="action-stack">
+              <a class="btn btn-primary" href="${d.url||'#'}" target="_blank" rel="noopener noreferrer">Voir</a>
+              <div class="comparison-links">
+                <a class="btn btn-secondary" href="${amazonLink}" target="_blank" rel="noopener noreferrer">Amazon</a>
+                <a class="btn btn-secondary" href="${ebayLink}" target="_blank" rel="noopener noreferrer">eBay</a>
+              </div>
+            </div>
           </div>
-        </article>`).join('');
+        </article>`;
+      }).join('');
     }
 
     function getStoreDefinition(label){
