@@ -404,54 +404,56 @@
 
     function fullBestBuyBranches(){
       return [
-        {label:'Anjou (1)', slug:'anjou', city:'Anjou'},
-        {label:'Baie Comeau (1)', slug:'baie-comeau', city:'Baie-Comeau'},
-        {label:'Beloeil (1)', slug:'beloeil', city:'Beloeil'},
-        {label:'Brossard (1)', slug:'brossard', city:'Brossard'},
-        {label:'Chomedey (2)', slug:'chomedey', city:'Chomedey'},
-        {label:'Chateauguay (1)', slug:'chateauguay', city:'Chateauguay'},
-        {label:'Chicoutimi (1)', slug:'chicoutimi', city:'Chicoutimi'},
-        {label:'Drummondville (1)', slug:'drummondville', city:'Drummondville'},
-        {label:'Gatineau (3)', slug:'gatineau', city:'Gatineau'},
-        {label:'Granby (1)', slug:'granby', city:'Granby'},
-        {label:'Joliette (1)', slug:'joliette', city:'Joliette'},
-        {label:'LaSalle (1)', slug:'lasalle', city:'LaSalle'},
-        {label:'Laval (2)', slug:'laval-best-buy', city:'Laval'},
-        {label:'Longueuil (1)', slug:'longueuil', city:'Longueuil'},
-        {label:'Mascouche (1)', slug:'mascouche', city:'Mascouche'},
-        {label:'Montmagny (1)', slug:'montmagny', city:'Montmagny'},
-        {label:'Montreal (2)', slug:'montreal-best-buy', city:'Montréal'},
-        {label:'Pointe-Claire (2)', slug:'pointe-claire', city:'Pointe-Claire'},
-        {label:'Quebec (4)', slug:'quebec', city:'Québec'},
-        {label:'Rawdon (1)', slug:'rawdon', city:'Rawdon'},
-        {label:'Repentigny (2)', slug:'repentigny', city:'Repentigny'},
-        {label:'Rimouski (1)', slug:'rimouski', city:'Rimouski'},
-        {label:'Riviere Du Loup (1)', slug:'riviere-du-loup', city:'Rivière-du-Loup'},
-        {label:'Rosemere (1)', slug:'rosemere', city:'Rosemère'},
-        {label:'Rouyn Noranda (1)', slug:'rouyn-noranda', city:'Rouyn-Noranda'},
-        {label:'Saint-Eustache (1)', slug:'saint-eustache', city:'Saint-Eustache'},
-        {label:'Saint-Hyacinthe (1)', slug:'saint-hyacinthe', city:'Saint-Hyacinthe'},
-        {label:'Saint-Jean-sur-Richelieu (1)', slug:'saint-jean-sur-richelieu', city:'Saint-Jean-sur-Richelieu'},
-        {label:'Saint-Jerome (1)', slug:'saint-jerome', city:'Saint-Jérôme'},
-        {label:'Sainte-Marie (1)', slug:'sainte-marie', city:'Sainte-Marie'},
-        {label:'Sept Iles (1)', slug:'sept-iles', city:'Sept-Îles'},
-        {label:'Sherbrooke (1)', slug:'sherbrooke', city:'Sherbrooke'},
-        {label:'St Georges (1)', slug:'st-georges', city:'Saint-Georges'},
-        {label:'St Hyacinthe (1)', slug:'st-hyacinthe', city:'Saint-Hyacinthe'},
-        {label:'St Jerome (1)', slug:'st-jerome', city:'Saint-Jérôme'},
-        {label:'St-Bruno-de Montarville (1)', slug:'st-bruno-de-montarville', city:'Saint-Bruno-de-Montarville'},
-        {label:'Terrebonne (1)', slug:'terrebonne', city:'Terrebonne'},
-        {label:'Thetford Mines (1)', slug:'thetford-mines', city:'Thetford Mines'},
-        {label:'Trois-Rivieres (1)', slug:'trois-rivieres', city:'Trois-Rivières'},
-        {label:"Val-d'Or (1)", slug:'val-d-or', city:"Val-d'Or"},
-        {label:'Vaudreuil-Dorion (1)', slug:'vaudreuil-dorion', city:'Vaudreuil-Dorion'},
-        {label:'Victoriaville (1)', slug:'victoriaville', city:'Victoriaville'},
-        {label:'Ville Mont Royal (1)', slug:'ville-mont-royal', city:'Mont-Royal'}
+        {label:'En ligne (Canada)', slug:'en-ligne', city:'En ligne', hasData:true},
+        {label:'Anjou (1)', slug:'anjou', city:'Anjou', hasData:false},
+        {label:'Baie Comeau (1)', slug:'baie-comeau', city:'Baie-Comeau', hasData:false},
+        {label:'Beloeil (1)', slug:'beloeil', city:'Beloeil', hasData:false},
+        {label:'Brossard (1)', slug:'brossard', city:'Brossard', hasData:false},
+        {label:'Chomedey (2)', slug:'chomedey', city:'Chomedey', hasData:false},
+        {label:'Chateauguay (1)', slug:'chateauguay', city:'Chateauguay', hasData:false},
+        {label:'Chicoutimi (1)', slug:'chicoutimi', city:'Chicoutimi', hasData:false},
+        {label:'Drummondville (1)', slug:'drummondville', city:'Drummondville', hasData:false},
+        {label:'Gatineau (3)', slug:'gatineau', city:'Gatineau', hasData:false},
+        {label:'Granby (1)', slug:'granby', city:'Granby', hasData:false},
+        {label:'Joliette (1)', slug:'joliette', city:'Joliette', hasData:false},
+        {label:'LaSalle (1)', slug:'lasalle', city:'LaSalle', hasData:false},
+        {label:'Laval (2)', slug:'laval-best-buy', city:'Laval', hasData:false},
+        {label:'Longueuil (1)', slug:'longueuil', city:'Longueuil', hasData:false},
+        {label:'Mascouche (1)', slug:'mascouche', city:'Mascouche', hasData:false},
+        {label:'Montmagny (1)', slug:'montmagny', city:'Montmagny', hasData:false},
+        {label:'Montreal (2)', slug:'montreal-best-buy', city:'Montréal', hasData:false},
+        {label:'Pointe-Claire (2)', slug:'pointe-claire', city:'Pointe-Claire', hasData:false},
+        {label:'Quebec (4)', slug:'quebec', city:'Québec', hasData:false},
+        {label:'Rawdon (1)', slug:'rawdon', city:'Rawdon', hasData:false},
+        {label:'Repentigny (2)', slug:'repentigny', city:'Repentigny', hasData:false},
+        {label:'Rimouski (1)', slug:'rimouski', city:'Rimouski', hasData:false},
+        {label:'Riviere Du Loup (1)', slug:'riviere-du-loup', city:'Rivière-du-Loup', hasData:false},
+        {label:'Rosemere (1)', slug:'rosemere', city:'Rosemère', hasData:false},
+        {label:'Rouyn Noranda (1)', slug:'rouyn-noranda', city:'Rouyn-Noranda', hasData:false},
+        {label:'Saint-Eustache (1)', slug:'saint-eustache', city:'Saint-Eustache', hasData:false},
+        {label:'Saint-Hyacinthe (1)', slug:'saint-hyacinthe', city:'Saint-Hyacinthe', hasData:false},
+        {label:'Saint-Jean-sur-Richelieu (1)', slug:'saint-jean-sur-richelieu', city:'Saint-Jean-sur-Richelieu', hasData:false},
+        {label:'Saint-Jerome (1)', slug:'saint-jerome', city:'Saint-Jérôme', hasData:false},
+        {label:'Sainte-Marie (1)', slug:'sainte-marie', city:'Sainte-Marie', hasData:false},
+        {label:'Sept Iles (1)', slug:'sept-iles', city:'Sept-Îles', hasData:false},
+        {label:'Sherbrooke (1)', slug:'sherbrooke', city:'Sherbrooke', hasData:false},
+        {label:'St Georges (1)', slug:'st-georges', city:'Saint-Georges', hasData:false},
+        {label:'St Hyacinthe (1)', slug:'st-hyacinthe', city:'Saint-Hyacinthe', hasData:false},
+        {label:'St Jerome (1)', slug:'st-jerome', city:'Saint-Jérôme', hasData:false},
+        {label:'St-Bruno-de Montarville (1)', slug:'st-bruno-de-montarville', city:'Saint-Bruno-de-Montarville', hasData:false},
+        {label:'Terrebonne (1)', slug:'terrebonne', city:'Terrebonne', hasData:false},
+        {label:'Thetford Mines (1)', slug:'thetford-mines', city:'Thetford Mines', hasData:false},
+        {label:'Trois-Rivieres (1)', slug:'trois-rivieres', city:'Trois-Rivières', hasData:false},
+        {label:"Val-d'Or (1)", slug:'val-d-or', city:"Val-d'Or", hasData:false},
+        {label:'Vaudreuil-Dorion (1)', slug:'vaudreuil-dorion', city:'Vaudreuil-Dorion', hasData:false},
+        {label:'Victoriaville (1)', slug:'victoriaville', city:'Victoriaville', hasData:false},
+        {label:'Ville Mont Royal (1)', slug:'ville-mont-royal', city:'Mont-Royal', hasData:false}
       ];
     }
 
     const DEFAULT_BRANCH_SLUGS = new Set([
       ...baseBranches().map(branch => branch.slug),
+      'en-ligne',
       'montreal-best-buy',
       'laval-best-buy'
     ]);
@@ -775,10 +777,17 @@
       return STORES.find(store => store.label === label);
     }
 
+    const BEST_BUY_AGGREGATE_PATH = 'data/best-buy/liquidations.json';
+
     function filePathFor(store, branch){
       const s = store?.slug;
       const c = branch?.slug;
-      if(!s || !c) return null;
+      if(!s) return null;
+      if(s === 'best-buy'){
+        if(c === 'en-ligne') return BEST_BUY_AGGREGATE_PATH;
+        if(!c) return BEST_BUY_AGGREGATE_PATH;
+      }
+      if(!c) return null;
       return `data/${s}/${c}.json`;
     }
 
