@@ -5,6 +5,11 @@ on:
     - cron: "0 1 * * *"   # 21:00 (Québec) l'été (EDT)
     - cron: "0 2 * * *"   # 21:00 (Québec) l'hiver (EST)
   workflow_dispatch:       # bouton "Run workflow" dans l'onglet Actions
+    inputs:
+      reason:
+        description: "Motif du déclenchement manuel (affiché dans le rapport)"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -25,7 +30,7 @@ jobs:
         shell: bash
         run: |
           python - << 'PY'
-          import os, re, json, html, shutil
+          import os, re, json, html, shutil, subprocess
 
           # === Config de base (ajoute des magasins/villes si besoin) ===
           STORES = {
@@ -110,6 +115,10 @@ jobs:
           # Dossiers
           ensure("incoming"); ensure("data"); ensure("previews"); ensure("archive")
           changed=False
+          processed_json=[]
+          processed_html=[]
+          skipped_files=[]
+          error_files=[]
 
           for fname in sorted(os.listdir("incoming")):
               src=os.path.join("incoming", fname)
@@ -186,36 +195,121 @@ jobs:
                           if title and price and sale:
                               items.append({"title":title,"image":image,"price":round(price,2),"salePrice":round(sale,2),"store":store_label,"city":city_label,"url":url})
                   except Exception as e:
-                      print("Parse error", fname, e); 
+                      print("Parse error", fname, e);
+                      error_files.append({"filename": fname, "error": f"{type(e).__name__}: {e}"});
                       continue
 
+                  out_json=os.path.join(data_dir, f"{city_slug}.json")
+                  preview_path=os.path.join(prev_dir, f"{city_slug}.html")
+                  entry={
+                      "filename": fname,
+                      "destination": out_json,
+                      "preview": preview_path,
+                      "store_label": store_label,
+                      "city_label": city_label,
+                      "item_count": len(items),
+                  }
                   if items:
-                      out_json=os.path.join(data_dir, f"{city_slug}.json")
-                      with open(out_json,"w",encoding="utf-8") as f: 
+                      with open(out_json,"w",encoding="utf-8") as f:
                           json.dump(items, f, ensure_ascii=False, indent=2)
-                      write_preview(items, store_label, city_label, os.path.join(prev_dir, f"{city_slug}.html"))
+                      write_preview(items, store_label, city_label, preview_path)
+                      entry["status"]="updated"
                       changed=True
+                  else:
+                      entry["status"]="empty"
+                  processed_json.append(entry)
 
                   # Archive le brut importé
                   ensure("archive")
-                  shutil.move(src, os.path.join("archive", fname)); 
+                  shutil.move(src, os.path.join("archive", fname));
                   changed=True
 
               elif ext == ".html":
                   # Range directement l'HTML comme preview (remplace l'ancien)
                   out_html=os.path.join(prev_dir, f"{city_slug}.html")
-                  shutil.move(src, out_html); 
+                  shutil.move(src, out_html);
+                  processed_html.append({
+                      "filename": fname,
+                      "destination": out_html,
+                      "store_label": store_label,
+                      "city_label": city_label,
+                  })
                   changed=True
 
               else:
                   print("Skip (ext not supported):", fname)
+                  skipped_files.append({"filename": fname, "reason": "extension non prise en charge"})
+
+          summary_lines=["## Résumé de l'organisation"]
+          event_name=os.environ.get("GITHUB_EVENT_NAME")
+          manual_reason=os.environ.get("INPUT_REASON")
+          if event_name or manual_reason:
+              summary_lines.append("")
+              summary_lines.append("### Déclencheur")
+              if event_name:
+                  summary_lines.append(f"- Type : {event_name}")
+              if manual_reason:
+                  summary_lines.append(f"- Motif : {manual_reason}")
+          if processed_json:
+              summary_lines.append("")
+              summary_lines.append("### Fichiers JSON importés")
+              for entry in processed_json:
+                  status_icon = "✅" if entry.get("status") == "updated" else "⚠️"
+                  status_text = "mise à jour" if entry.get("status") == "updated" else "aucun article détecté"
+                  preview_note = f" — aperçu : `{entry['preview']}`" if entry.get("status") == "updated" else ""
+                  summary_lines.append(
+                      f"- {status_icon} `{entry['filename']}` → `{entry['destination']}` "
+                      f"({entry['store_label']} · {entry['city_label']}, {entry['item_count']} articles, {status_text}){preview_note}"
+                  )
+          if processed_html:
+              summary_lines.append("")
+              summary_lines.append("### Prévisualisations HTML importées")
+              for entry in processed_html:
+                  summary_lines.append(
+                      f"- ✅ `{entry['filename']}` → `{entry['destination']}` ({entry['store_label']} · {entry['city_label']})"
+                  )
+          if skipped_files:
+              summary_lines.append("")
+              summary_lines.append("### Fichiers ignorés")
+              for entry in skipped_files:
+                  summary_lines.append(f"- `{entry['filename']}` — {entry['reason']}")
+          if error_files:
+              summary_lines.append("")
+              summary_lines.append("### Erreurs pendant l'analyse")
+              for entry in error_files:
+                  summary_lines.append(f"- `{entry['filename']}` — {entry['error']}")
+          if not any([processed_json, processed_html, skipped_files, error_files]):
+              summary_lines.append("")
+              summary_lines.append("- Aucun fichier à traiter dans incoming/.")
 
           if changed:
-              os.system('git config user.name "econodeal-bot"')
-              os.system('git config user.email "bot@users.noreply.github.com"')
-              os.system('git add data previews archive incoming || true')
-              os.system('git commit -m "chore: nightly organize by store/city" || true')
-              os.system('git push || true')
+              git_commands = [
+                  ["git", "config", "user.name", "econodeal-bot"],
+                  ["git", "config", "user.email", "bot@users.noreply.github.com"],
+                  ["git", "add", "data", "previews", "archive", "incoming"],
+                  ["git", "commit", "-m", "chore: nightly organize by store/city"],
+                  ["git", "push"],
+              ]
+              git_success = True
+              for cmd in git_commands:
+                  result = subprocess.run(cmd, check=False)
+                  if result.returncode != 0:
+                      git_success = False
+              summary_lines.append("")
+              if git_success:
+                  summary_lines.append("✅ Commit/push effectués (des changements ont été détectés).")
+              else:
+                  summary_lines.append("⚠️ Des changements ont été détectés mais le commit/push a rencontré des erreurs (consultez les logs).")
           else:
               print("No changes.")
+              summary_lines.append("")
+              summary_lines.append("ℹ️ Aucun changement détecté — pas de commit/push.")
+
+          summary_text="\n".join(summary_lines)
+          print(summary_text)
+          step_summary=os.environ.get("GITHUB_STEP_SUMMARY")
+          if step_summary:
+              with open(step_summary, "a", encoding="utf-8") as fh:
+                  fh.write(summary_text)
+                  fh.write("\n")
           PY
