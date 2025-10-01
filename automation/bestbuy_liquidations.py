@@ -12,8 +12,9 @@ Two usage modes are available:
 * ``--run-once`` – fetch the inventory a single time. This is ideal for
   immediate updates or testing the credentials.
 * Scheduler (default) – keep the process running and automatically refresh the
-  dataset every Sunday at 04:00 (America/Toronto timezone) as requested by the
-  client. The scheduler is implemented without external dependencies.
+  dataset immediately and then every day at 05:00 (America/Toronto timezone)
+  as requested by the client. The scheduler is implemented without external
+  dependencies.
 
 Example (manual run):
 
@@ -50,8 +51,7 @@ LOGGER = logging.getLogger("bestbuy_liquidations")
 BESTBUY_API_URL = "https://api.bestbuy.com/v1/products((onSale=true)&(marketplace=false))"
 DEFAULT_OUTPUT = Path("data/best-buy/liquidations.json")
 DEFAULT_TIMEZONE = "America/Toronto"
-TARGET_WEEKDAY = 6  # Sunday (Monday=0)
-TARGET_HOUR = 4
+TARGET_HOUR = 5
 
 
 def parse_args(argv: Iterable[str] | None = None) -> argparse.Namespace:
@@ -82,7 +82,7 @@ def parse_args(argv: Iterable[str] | None = None) -> argparse.Namespace:
     parser.add_argument(
         "--timezone",
         default=DEFAULT_TIMEZONE,
-        help="Timezone used for the Sunday 04:00 schedule (default: America/Toronto).",
+        help="Timezone used for the 05:00 daily schedule (default: America/Toronto).",
     )
     parser.add_argument(
         "--dry-run",
@@ -197,13 +197,11 @@ def write_output(output_path: Path, items: List[dict]) -> None:
 
 def compute_next_run(now: datetime, tz: ZoneInfo) -> datetime:
     target = now.astimezone(tz)
-    target = target.replace(hour=TARGET_HOUR, minute=0, second=0, microsecond=0)
+    run_at = target.replace(hour=TARGET_HOUR, minute=0, second=0, microsecond=0)
 
-    days_ahead = (TARGET_WEEKDAY - target.weekday()) % 7
-    if days_ahead == 0 and target <= now.astimezone(tz):
-        days_ahead = 7
+    if run_at <= target:
+        run_at += timedelta(days=1)
 
-    run_at = target + timedelta(days=days_ahead)
     return run_at
 
 
@@ -242,10 +240,17 @@ def main(argv: Iterable[str] | None = None) -> int:
         return 0
 
     LOGGER.info(
-        "Scheduler actif – la collecte Best Buy s'exécutera chaque dimanche à %02d:00 (%s)",
+        "Scheduler actif – la collecte Best Buy s'exécutera immédiatement puis chaque jour à %02d:00 (%s)",
         TARGET_HOUR,
         args.timezone,
     )
+
+    LOGGER.info("Exécution initiale immédiate du scraper Best Buy")
+    try:
+        run_job(args.api_key, args.output, args.page_size, args.dry_run)
+    except Exception as exc:  # pragma: no cover - defensive logging
+        LOGGER.exception("Échec lors de l'exécution initiale du scraper Best Buy: %s", exc)
+
     while True:
         run_at = compute_next_run(datetime.now(tz), tz)
         LOGGER.info("Prochaine collecte prévue le %s", run_at.isoformat())
