@@ -1085,8 +1085,12 @@
     }
 
     function discount(p,s){
-      if(!p || !s || !Number.isFinite(p) || !Number.isFinite(s) || p === 0) return 0;
-      const pct = Math.round((1 - (s / p)) * 100);
+      const price = Number(p);
+      const sale = Number(s);
+      if(!Number.isFinite(price) || price <= 0) return 0;
+      if(!Number.isFinite(sale)) return 0;
+      const clampedSale = Math.max(0, sale);
+      const pct = Math.round((1 - (clampedSale / price)) * 100);
       return Number.isFinite(pct) ? Math.max(pct, 0) : 0;
     }
     function currency(value){
