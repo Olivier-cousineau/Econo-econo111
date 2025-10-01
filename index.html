@@ -129,7 +129,68 @@
     document.getElementById('year').textContent = y;
     document.getElementById('yearFooter').textContent = y;
 
-    function discount(p,s){ return Math.round((1-(s/p))*100); }
+    function toNumber(value){
+      if(typeof value === 'number' && Number.isFinite(value)) return value;
+      if(typeof value === 'string'){
+        const sanitized = value
+          .replace(/[^0-9,.-]/g,'')
+          .replace(/,(?=[^,]*,)/g,'')
+          .replace(',','.');
+        const num = Number(sanitized);
+        return Number.isFinite(num) ? num : null;
+      }
+      return null;
+    }
+
+    function firstDefined(...values){
+      for(const value of values){
+        if(value !== undefined && value !== null && value !== '') return value;
+      }
+      return null;
+    }
+
+    function normalizeDeal(item, storeLabel, cityLabel){
+      const regular = toNumber(firstDefined(
+        item.original_price,
+        item.originalPrice,
+        item.regular_price,
+        item.regularPrice,
+        item.price_before,
+        item.priceBefore,
+        item.listPrice,
+        item.price // fallback when only one price exists
+      ));
+
+      const sale = toNumber(firstDefined(
+        item.salePrice,
+        item.sale_price,
+        item.discount_price,
+        item.discountPrice,
+        item.current_price,
+        item.currentPrice,
+        // When only price and original exist, price is the reduced amount
+        item.price
+      ));
+
+      const finalRegular = regular ?? sale ?? 0;
+      const finalSale = sale ?? regular ?? 0;
+
+      return {
+        title: firstDefined(item.title, item.name, 'Article en liquidation'),
+        image: firstDefined(item.image, item.image_url, item.imageUrl, item.img, 'https://via.placeholder.com/400x300?text=Liquidation'),
+        price: finalRegular,
+        salePrice: finalSale,
+        store: item.store ?? storeLabel,
+        city: item.city ?? cityLabel,
+        url: firstDefined(item.url, item.link, '#')
+      };
+    }
+
+    function discount(p,s){
+      if(!p || !s || !Number.isFinite(p) || !Number.isFinite(s) || p === 0) return 0;
+      const pct = Math.round((1 - (s / p)) * 100);
+      return Number.isFinite(pct) ? Math.max(pct, 0) : 0;
+    }
     function currency(n){ return n.toLocaleString('fr-CA',{style:'currency',currency:'CAD'}); }
 
     const deals = [];
@@ -162,11 +223,13 @@
       return `data/${s}/${c}.json`;
     }
 
-    async function fetchOne(path){
+    async function fetchOne(path, storeLabel, cityLabel){
       try{
         const res = await fetch(path, {cache:'no-store'});
         if(!res.ok) return [];
-        return await res.json();
+        const json = await res.json();
+        if(!Array.isArray(json)) return [];
+        return json.map(item => normalizeDeal(item, storeLabel, cityLabel));
       }catch(e){ console.warn('fetch fail', path, e); return []; }
     }
 
@@ -177,7 +240,7 @@
       for(const s of stores){ for(const c of cities){
         const path = filePathFor(s,c);
         if(!path) continue;
-        const arr = await fetchOne(path);
+        const arr = await fetchOne(path, s, c);
         for(const d of arr){ deals.push(d); }
       }}
       render();
