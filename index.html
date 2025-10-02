@@ -684,11 +684,6 @@
       return `${count} succursale${suffix} suivie${suffix}`;
     }
 
-    const CANADA_STORE_MENU = STORES.map(store => ({
-      label: store.label,
-      description: formatBranchCoverage(store.branches)
-    }));
-
     const USA_STORE_MENU = [
       {label:'Amazon Warehouse', description:'Lots de retours et inventaires reconditionnés'},
       {label:'Best Buy USA', description:'Électronique, électroménagers et gaming'},
@@ -785,9 +780,7 @@
         titleSuffix: 'Canada',
         postalMessage: DEFAULT_POSTAL_MESSAGE,
         emptyNotice: 'Sélectionnez un magasin pour afficher les liquidations canadiennes disponibles en ce moment.',
-        storeMenuTitle: 'Magasins actuellement couverts',
-        storeMenuDescription: 'Même liste que le sélecteur de magasins disponibles ci-dessus.',
-        storeMenu: CANADA_STORE_MENU,
+        hideStoreMenu: true,
         currency: {
           code: 'CAD',
           locale: 'fr-CA',
@@ -1360,7 +1353,7 @@
     const deals = [];
 
     function renderStoreMenu(config){
-      if(!config) return '';
+      if(!config || config.hideStoreMenu) return '';
       const items = Array.isArray(config.storeMenu) ? config.storeMenu.filter(item => item && item.label) : [];
       if(items.length === 0) return '';
       const title = config.storeMenuTitle || 'Magasins couverts';
