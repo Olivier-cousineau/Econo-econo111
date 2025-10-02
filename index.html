@@ -618,7 +618,8 @@
           code: 'CAD',
           locale: 'fr-CA',
           cadToLocalRate: 1
-        }
+        },
+        amazonDomain: 'www.amazon.ca'
       },
       usa: {
         titleSuffix: 'États-Unis',
@@ -631,7 +632,8 @@
           code: 'USD',
           locale: 'en-US',
           cadToLocalRate: 0.74
-        }
+        },
+        amazonDomain: 'www.amazon.com'
       },
       europe: {
         titleSuffix: 'Europe',
@@ -641,7 +643,8 @@
           code: 'EUR',
           locale: 'fr-FR',
           cadToLocalRate: 0.68
-        }
+        },
+        amazonDomain: 'www.amazon.fr'
       }
     };
     let activeCountry = 'canada';
@@ -1079,6 +1082,53 @@
       const finalRegular = regular ?? sale ?? 0;
       const finalSale = sale ?? regular ?? 0;
 
+      const brand = firstDefined(
+        item.brand,
+        item.manufacturer,
+        item.maker,
+        item.vendor,
+        item.brandName,
+        item.brand_name
+      );
+
+      const model = firstDefined(
+        item.model,
+        item.modelNumber,
+        item.model_number,
+        item.modelNo,
+        item.model_no,
+        item.partNumber,
+        item.part_number,
+        item.mpn
+      );
+
+      const sku = firstDefined(
+        item.sku,
+        item.productCode,
+        item.product_code,
+        item.productId,
+        item.product_id,
+        item.itemNumber,
+        item.item_number,
+        item.id
+      );
+
+      const asin = firstDefined(item.asin, item.ASIN);
+
+      const searchKeywords = firstDefined(
+        item.searchKeywords,
+        item.search_keywords,
+        item.keywords,
+        item.keyword
+      );
+
+      const amazonUrl = firstDefined(
+        item.amazonUrl,
+        item.amazon_url,
+        item.amazonLink,
+        item.amazon_link
+      );
+
       return {
         title: firstDefined(item.title, item.name, 'Article en liquidation'),
         image: firstDefined(item.image, item.image_url, item.imageUrl, item.img, 'https://via.placeholder.com/400x300?text=Liquidation'),
@@ -1089,7 +1139,13 @@
         branch: branchLabel ?? cityLabel,
         branchSlug,
         citySlug,
-        url: firstDefined(item.url, item.link, '#')
+        url: firstDefined(item.url, item.link, '#'),
+        brand,
+        model,
+        sku,
+        asin,
+        searchKeywords,
+        amazonUrl
       };
     }
 
@@ -1170,9 +1226,48 @@
       return words.join(' ');
     }
 
-    function buildAmazonLink(title){
-      const query = sanitizeAmazonQuery(title);
-      return `https://www.amazon.ca/s?k=${encodeURIComponent(query)}&ref=nb_sb_noss`;
+    function getAmazonDomain(country){
+      const config = getCountryConfig(country);
+      const domain = typeof config?.amazonDomain === 'string' ? config.amazonDomain.trim() : '';
+      return domain || 'www.amazon.ca';
+    }
+
+    function normalizeAsin(value){
+      if(value === undefined || value === null) return '';
+      const text = String(value).trim();
+      return /^[A-Z0-9]{8,}$/i.test(text) ? text : '';
+    }
+
+    function buildAmazonLink(deal){
+      const domain = getAmazonDomain(activeCountry);
+      if(!deal){
+        const fallbackQuery = sanitizeAmazonQuery('liquidation');
+        return `https://${domain}/s?k=${encodeURIComponent(fallbackQuery)}&ref=nb_sb_noss`;
+      }
+
+      const asin = normalizeAsin(deal.asin);
+      if(asin){
+        return `https://${domain}/dp/${encodeURIComponent(asin)}`;
+      }
+
+      const segments = [];
+      const pushSegment = (value) => {
+        if(value === undefined || value === null) return;
+        const text = String(value).trim();
+        if(text){
+          segments.push(text);
+        }
+      };
+
+      pushSegment(deal.searchKeywords);
+      pushSegment(deal.brand);
+      pushSegment(deal.model);
+      pushSegment(deal.sku);
+      pushSegment(deal.title);
+
+      const querySource = segments.join(' ').trim();
+      const query = sanitizeAmazonQuery(querySource || deal.title || 'liquidation');
+      return `https://${domain}/s?k=${encodeURIComponent(query)}&ref=nb_sb_noss`;
     }
 
     function render(){
@@ -1194,7 +1289,7 @@
       });
       countEl.textContent = filtered.length;
       cardsEl.innerHTML = filtered.map(d=>{
-        const amazonLink = d.amazonUrl || buildAmazonLink(d.title);
+        const amazonLink = d.amazonUrl || buildAmazonLink(d);
         const ebayLink = d.ebayUrl || `https://www.ebay.ca/sch/i.html?_nkw=${encodeURIComponent(d.title)}`;
         return `
         <article class="card">
