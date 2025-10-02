@@ -222,6 +222,10 @@
 
       <div class="filters" style="margin-top:12px">
         <div>
+          <label for="searchInput">Recherche rapide</label>
+          <input id="searchInput" name="search" type="text" inputmode="search" placeholder="Ex. Nintendo Switch, Lego..." autocomplete="off" />
+        </div>
+        <div>
           <label for="storeSelect">Magasin</label>
           <select id="storeSelect">
             <option value="">(Tous)</option>
@@ -763,6 +767,7 @@
       }
     ];
 
+    const searchInput = document.getElementById('searchInput');
     const storeSelect = document.getElementById('storeSelect');
     const citySelect  = document.getElementById('citySelect');
     const range       = document.getElementById('discountRange');
@@ -824,6 +829,7 @@
     let activeCountry = 'canada';
     let savedFilters = null;
     const DEFAULT_FILTERS = Object.freeze({
+      search: '',
       store: 'walmart',
       city: 'saint-jerome',
       discount: '0'
@@ -917,7 +923,7 @@
     }
 
     function setFiltersDisabled(disabled){
-      const elements = [storeSelect, citySelect, postalInput, range, btnClear];
+      const elements = [searchInput, storeSelect, citySelect, postalInput, range, btnClear];
       for(const el of elements){
         if(!el) continue;
         if(disabled){
@@ -974,6 +980,7 @@
 
       if(activeCountry === 'canada'){
         savedFilters = {
+          search: searchInput?.value || '',
           store: storeSelect?.value || '',
           city: citySelect?.value || '',
           discount: range?.value || '0'
@@ -1019,6 +1026,9 @@
       const filters = savedFilters ?? DEFAULT_FILTERS;
       const initialStore = getStoreByIdentifier(filters.store);
       const storeValue = initialStore?.slug || '';
+      if(searchInput){
+        searchInput.value = filters.search || '';
+      }
       if(storeSelect){
         storeSelect.value = storeValue;
       }
@@ -1235,6 +1245,18 @@
       return text.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').replace(/--+/g,'-');
     }
 
+    function normalizeSearchText(value){
+      if(value === undefined || value === null) return '';
+      const text = String(value)
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase()
+        .replace(/[^a-z0-9\s]/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim();
+      return text;
+    }
+
     function normalizeDeal(item, storeLabel, branch){
       const branchLabel = typeof branch === 'object' && branch ? branch.label : branch;
       const branchSlug = typeof branch === 'object' && branch && branch.slug ? branch.slug : slugify(branchLabel || item.city || storeLabel);
@@ -1312,13 +1334,31 @@
         item.amazon_link
       );
 
+      const title = firstDefined(item.title, item.name, 'Article en liquidation');
+      const cityDisplay = item.city ?? cityLabel;
+      const searchSegments = [
+        title,
+        storeLabel,
+        branchLabel,
+        cityDisplay,
+        brand,
+        model,
+        sku,
+        asin,
+        searchKeywords
+      ];
+      const searchIndex = searchSegments
+        .map(segment => normalizeSearchText(segment))
+        .filter(Boolean)
+        .join(' ');
+
       return {
-        title: firstDefined(item.title, item.name, 'Article en liquidation'),
+        title,
         image: firstDefined(item.image, item.image_url, item.imageUrl, item.img, 'https://via.placeholder.com/400x300?text=Liquidation'),
         price: finalRegular,
         salePrice: finalSale,
         store: item.store ?? storeLabel,
-        city: item.city ?? cityLabel,
+        city: cityDisplay,
         branch: branchLabel ?? cityLabel,
         branchSlug,
         citySlug,
@@ -1328,7 +1368,8 @@
         sku,
         asin,
         searchKeywords,
-        amazonUrl
+        amazonUrl,
+        searchIndex
       };
     }
 
@@ -1463,11 +1504,14 @@
       }
       const s = storeSelect.value;
       const c = citySelect.value;
+      const query = normalizeSearchText(searchInput?.value || '');
+      const terms = query ? query.split(' ') : [];
       const min = parseInt(range.value,10);
       const filtered = deals.filter(d => {
         const pct = discount(d.price,d.salePrice);
         if(s && d.store !== s) return false;
         if(c && d.branchSlug !== c && d.citySlug !== c) return false;
+        if(terms.length && !terms.every(term => d.searchIndex.includes(term))) return false;
         return pct >= min;
       });
       countEl.textContent = filtered.length;
@@ -1670,9 +1714,18 @@
       fetchData();
     });
     range.addEventListener('input', render);
+    if(searchInput){
+      searchInput.addEventListener('input', () => {
+        if(activeCountry !== 'canada') return;
+        render();
+      });
+    }
     btnClear.addEventListener('click', async ()=>{
       if(activeCountry !== 'canada') return;
       const defaults = DEFAULT_FILTERS;
+      if(searchInput){
+        searchInput.value = defaults.search ?? '';
+      }
       const defaultStore = getStoreByIdentifier(defaults.store);
       const defaultStoreValue = defaultStore?.slug || '';
       storeSelect.value = defaultStoreValue;
@@ -1694,6 +1747,9 @@
     await loadCanadianTireDirectory();
     const defaultStore = getStoreByIdentifier(DEFAULT_FILTERS.store);
     const defaultStoreValue = defaultStore?.slug || '';
+    if(searchInput){
+      searchInput.value = DEFAULT_FILTERS.search ?? '';
+    }
     storeSelect.value = defaultStoreValue;
     setCityOptions(defaultStoreValue, false);
     citySelect.value = DEFAULT_FILTERS.city;
