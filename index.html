@@ -764,6 +764,11 @@
     };
     let activeCountry = 'canada';
     let savedFilters = null;
+    const DEFAULT_FILTERS = Object.freeze({
+      store: 'Walmart',
+      city: 'saint-jerome',
+      discount: '0'
+    });
 
     const EXCHANGE_FORMATTER = new Intl.NumberFormat('fr-CA',{minimumFractionDigits:2,maximumFractionDigits:2});
 
@@ -950,7 +955,7 @@
       if(storeSelect){
         delete storeSelect.dataset.preview;
       }
-      const filters = savedFilters ?? {store:'Walmart', city:'saint-jerome', discount:'0'};
+      const filters = savedFilters ?? DEFAULT_FILTERS;
       if(storeSelect){
         storeSelect.value = filters.store || '';
       }
@@ -1600,22 +1605,30 @@
       fetchData();
     });
     range.addEventListener('input', render);
-    btnClear.addEventListener('click', ()=>{
+    btnClear.addEventListener('click', async ()=>{
       if(activeCountry !== 'canada') return;
-      storeSelect.value='';
-      setCityOptions('', false);
-      citySelect.value='';
-      range.value=0;
+      const defaults = DEFAULT_FILTERS;
+      storeSelect.value = defaults.store || '';
+      setCityOptions(storeSelect.value || '', false);
+      if(citySelect){
+        if(defaults.city){
+          const options = Array.from(citySelect.options || []);
+          citySelect.value = options.some(option => option.value === defaults.city) ? defaults.city : '';
+        }else{
+          citySelect.value='';
+        }
+      }
+      range.value = defaults.discount ?? '0';
       resetPostalFilter();
-      fetchData();
+      await fetchData();
     });
 
     // Démarrage
     await loadCanadianTireDirectory();
-    storeSelect.value = 'Walmart';
-    setCityOptions('Walmart', false);
-    citySelect.value = 'saint-jerome';
-    range.value = 0; // ← 0% par défaut
+    storeSelect.value = DEFAULT_FILTERS.store;
+    setCityOptions(DEFAULT_FILTERS.store, false);
+    citySelect.value = DEFAULT_FILTERS.city;
+    range.value = DEFAULT_FILTERS.discount; // ← 0% par défaut
     await fetchData();
   });
   </script>
