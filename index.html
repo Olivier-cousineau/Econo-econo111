@@ -603,6 +603,67 @@
       {label:'Sporting Life', slug:'sporting-life', branches: baseBranches()}
     ];
 
+    const WALMART_QUEBEC_MENU = [
+      {label:'Alma — Walmart #10036849', description:'1755 avenue du Pont Sud'},
+      {label:'Baie-Comeau — Walmart #10036620', description:'630 boul. Laflèche'},
+      {label:'Beauport — Walmart #10036820', description:'224 boul. Joseph-Casavant'},
+      {label:'Blainville — Walmart Supercentre #1185', description:'1333 boulevard Michèle-Bohec'},
+      {label:'Brossard — Walmart #10036625', description:'9000 boul. Leduc'},
+      {label:'Candiac — Walmart', description:'201 rue de Strasbourg'},
+      {label:'Cap-de-la-Madeleine — Walmart #10036632', description:'rue Barkoff'},
+      {label:'Châteauguay — Walmart Supercentre #1132', description:'250 boul. Brisebois'},
+      {label:'Chicoutimi — Walmart #10036635', description:'1451 boul. Talbot'},
+      {label:'Cowansville — Walmart #10036857', description:'1770 rue du Sud'},
+      {label:'Drummondville — Walmart #10036641', description:'1205 boul. René-Lévesque'},
+      {label:'Gatineau — Walmart #10036601', description:'51 boul. de la Gappe'},
+      {label:'Gatineau — Walmart #10036743', description:'640 boul. Maloney Ouest'},
+      {label:'Granby — Walmart #10036653', description:'75 rue Simonds Nord'},
+      {label:'Hull — Walmart #10036761', description:'35 boul. du Plateau'},
+      {label:'Joliette — Walmart #10036657', description:'1505 boul. Firestone'},
+      {label:'Kirkland — Walmart #10036662', description:'17 000 route Transcanadienne'},
+      {label:'La Pocatière — Walmart', description:'160 QC-230'},
+      {label:'Lac-Mégantic — Walmart #10036547', description:'3130 rue Laval'},
+      {label:'Lachenaie — Walmart #10036600', description:'1001 rue des Migrateurs'},
+      {label:'Lachute — Walmart #10036750', description:'480 rue Bethany'},
+      {label:'LaSalle — Walmart #10036664', description:'6797 boul. Newman'},
+      {label:'Laval — Walmart Supercentre #10036665', description:'2075 boul. Chomedey'},
+      {label:'Laval Est — Walmart #10036558', description:'5205 boul. de Val-des-Brises'},
+      {label:'Lévis — Walmart #3148', description:'1200 boul. Alphonse-Desjardins'},
+      {label:'Longueuil — Walmart #1167', description:'2877 chemin de Chambly'},
+      {label:'Magog — Walmart #10036592', description:'1935 rue Sherbrooke'},
+      {label:'Mascouche — Walmart #10036767', description:'155 montée Masson'},
+      {label:'Matane — Walmart #10036551', description:'150 rue Piuze'},
+      {label:'Montréal — Walmart #10036783', description:'5400 rue Jean-Talon Ouest'},
+      {label:'Montréal-Nord — Walmart #10036828', description:'6140 boul. Henri-Bourassa Est'},
+      {label:'Québec — Walmart #10036692', description:'1700 boul. Lebourgneuf'},
+      {label:'Repentigny — Walmart #10036697', description:'100 boul. Brien'},
+      {label:'Rimouski — Walmart #10036809', description:'415 montée Industrielle-et-Commerciale'},
+      {label:'Rivière-du-Loup — Walmart #10036827', description:'100 rue des Cerisiers'},
+      {label:'Rosemère — Walmart #10036698', description:'401 boul. Curé-Labelle'},
+      {label:'Rouyn-Noranda — Walmart #10036754', description:'275 boul. Rideau'},
+      {label:'Saint-Bruno-de-Montarville — Walmart #10036758', description:'1475 boul. Saint-Bruno'},
+      {label:'Saint-Constant — Walmart #10036817', description:'500 voie de desserte de la route 132'},
+      {label:'Saint-Eustache — Walmart #10036707', description:'764 boul. Arthur-Sauvé'},
+      {label:'Saint-Georges — Walmart #10036565', description:'750 107e rue'},
+      {label:'Saint-Hyacinthe — Walmart #10036755', description:'5950 rue Martineau'},
+      {label:'Saint-Jean-sur-Richelieu — Walmart #10036708', description:'100 rue Omer-Marcil'},
+      {label:'Saint-Jérôme — Walmart #10036803', description:'1030 boul. du Grand-Héron'},
+      {label:"Saint-Léonard — Walmart #10036712", description:'7445 boul. Langelier'},
+      {label:'Saint-Romuald — Walmart #10036569', description:'700 rue de la Concorde'},
+      {label:'Sainte-Agathe-des-Monts — Walmart #10036548', description:'400 rue Laverdure'},
+      {label:'Sainte-Foy — Walmart #10036764', description:'1470 rue Jules-Verne'},
+      {label:'Salaberry-de-Valleyfield — Walmart #10036815', description:'2050 boul. Monseigneur-Langlois'},
+      {label:'Sept-Îles — Walmart #10036703', description:'1005 boul. Laure'},
+      {label:'Shawinigan — Walmart #10036821', description:'1600 boul. Royal'},
+      {label:'Sherbrooke — Walmart #10036704', description:'4050 boul. Josaphat-Rancourt'},
+      {label:'Sainte-Dorothée — Walmart #10036802', description:'700 autoroute Chomedey Ouest'},
+      {label:'Thetford Mines — Walmart #10036853', description:'1025 boul. Frontenac Est'},
+      {label:'Trois-Rivières — Walmart #10036726', description:'4520 boul. Royal'},
+      {label:"Val-d'Or — Walmart #10036757", description:'1855 3e avenue Ouest'},
+      {label:'Vaudreuil-Dorion — Walmart #10036578', description:'3050 boul. de la Gare'},
+      {label:'Victoriaville — Walmart #10036836', description:'110 boul. Arthabaska Ouest'}
+    ];
+
     const USA_STORE_MENU = [
       {label:'Amazon Warehouse', description:'Lots de retours et inventaires reconditionnés'},
       {label:'Best Buy USA', description:'Électronique, électroménagers et gaming'},
@@ -665,6 +726,9 @@
         titleSuffix: 'Canada',
         postalMessage: DEFAULT_POSTAL_MESSAGE,
         emptyNotice: 'Sélectionnez un magasin pour afficher les liquidations canadiennes disponibles en ce moment.',
+        storeMenuTitle: 'Walmart au Québec',
+        storeMenuDescription: 'Toutes les succursales Walmart du Québec actuellement suivies.',
+        storeMenu: WALMART_QUEBEC_MENU,
         currency: {
           code: 'CAD',
           locale: 'fr-CA',
@@ -1339,6 +1403,11 @@
         return pct >= min;
       });
       countEl.textContent = filtered.length;
+      if(filtered.length === 0){
+        const config = getCountryConfig(activeCountry);
+        cardsEl.innerHTML = renderCountryPreview(config) || '';
+        return;
+      }
       cardsEl.innerHTML = filtered.map(d=>{
         const amazonLink = d.amazonUrl || buildAmazonLink(d);
         const ebayLink = d.ebayUrl || `https://www.ebay.ca/sch/i.html?_nkw=${encodeURIComponent(d.title)}`;
