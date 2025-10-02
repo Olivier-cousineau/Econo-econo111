@@ -21,6 +21,12 @@ Site statique bilingue (FR/EN) avec filtres Magasin/Ville et barre de % de rabai
 - Dans `index.html`, remplace `render()` pour faire des `fetch('/data/ton_fichier.json')`,
   merger les tableaux, appliquer les filtres et générer les cartes.
 
+## Aperçus HTML rapides
+- Les jeux de données organisés génèrent un aperçu statique dans `previews/<magasin>/<ville>.html`.
+- Par exemple : `previews/sporting-life/montreal.html`, `previews/sporting-life/laval.html` et
+  `previews/sporting-life/saint-jerome.html` permettent de feuilleter les aubaines Sporting Life
+  directement depuis GitHub sans devoir lancer le site.
+
 © 2025 EconoDeal
 
 ## Automatisation du scraper Walmart
