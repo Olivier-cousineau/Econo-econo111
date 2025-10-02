@@ -473,12 +473,30 @@
       return Number.isFinite(parsed) && parsed >= 0 ? parsed : 0;
     }
 
-    function getClientCount(){
-      return parseCount(safeGet('econodealClientCount'));
+    function setClientCount(value){
+      const normalized = Math.max(0, value);
+      safeSet('econodealClientCount', String(normalized));
+      return normalized;
     }
 
-    function setClientCount(value){
-      safeSet('econodealClientCount', String(Math.max(0, value)));
+    function deriveClientCountFromRegistrations(){
+      const registrations = getRegistrations();
+      if(!registrations.length) return 0;
+      const uniqueEmails = new Set();
+      registrations.forEach(item => {
+        if(item?.email) uniqueEmails.add(item.email);
+      });
+      return uniqueEmails.size;
+    }
+
+    function getClientCount(){
+      const stored = parseCount(safeGet('econodealClientCount'));
+      const derived = deriveClientCountFromRegistrations();
+      const resolved = Math.max(stored, derived);
+      if(resolved !== stored){
+        setClientCount(resolved);
+      }
+      return resolved;
     }
 
     function updateClientCountDisplays(){
