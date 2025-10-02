@@ -655,11 +655,6 @@
       {label: 'Victoriaville — Walmart #10036836', slug: 'victoriaville-10036836', city: 'Victoriaville', address: '110 boul. Arthabaska Ouest', hasData: false}
     ];
 
-    const WALMART_QUEBEC_MENU = WALMART_QUEBEC_BRANCHES.map(branch => ({
-      label: branch.label,
-      description: branch.address
-    }));
-
     const STORES = [
       {label:'Best Buy', slug:'best-buy', branches: fullBestBuyBranches()},
       {label:'Home Depot', slug:'home-depot', branches: baseBranches()},
@@ -669,6 +664,18 @@
       {label:'Patrick Morin', slug:'patrick-morin', branches: baseBranches()},
       {label:'Sporting Life', slug:'sporting-life', branches: baseBranches()}
     ];
+
+    function formatBranchCoverage(branches){
+      const count = Array.isArray(branches) ? branches.length : 0;
+      if(count <= 0) return '';
+      const suffix = count > 1 ? 's' : '';
+      return `${count} succursale${suffix} suivie${suffix}`;
+    }
+
+    const CANADA_STORE_MENU = STORES.map(store => ({
+      label: store.label,
+      description: formatBranchCoverage(store.branches)
+    }));
 
     const USA_STORE_MENU = [
       {label:'Amazon Warehouse', description:'Lots de retours et inventaires reconditionnés'},
@@ -732,9 +739,9 @@
         titleSuffix: 'Canada',
         postalMessage: DEFAULT_POSTAL_MESSAGE,
         emptyNotice: 'Sélectionnez un magasin pour afficher les liquidations canadiennes disponibles en ce moment.',
-        storeMenuTitle: 'Walmart au Québec',
-        storeMenuDescription: 'Toutes les succursales Walmart du Québec actuellement suivies.',
-        storeMenu: WALMART_QUEBEC_MENU,
+        storeMenuTitle: 'Magasins actuellement couverts',
+        storeMenuDescription: 'Même liste que le sélecteur de magasins disponibles ci-dessus.',
+        storeMenu: CANADA_STORE_MENU,
         currency: {
           code: 'CAD',
           locale: 'fr-CA',
