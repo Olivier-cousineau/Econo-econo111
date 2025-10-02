@@ -154,14 +154,14 @@
     @keyframes storeAdsScroll{0%{transform:translateY(0)}100%{transform:translateY(-50%)}}
   </style>
 </head>
-<body class="overlay-active">
+<body>
   <div class="bg-visuals" aria-hidden="true">
     <div class="bg-grid"></div>
     <div class="bg-orb bg-orb--one"></div>
     <div class="bg-orb bg-orb--two"></div>
     <div class="bg-orb bg-orb--three"></div>
   </div>
-  <div id="registrationOverlay" role="dialog" aria-modal="true" aria-labelledby="registrationTitle">
+  <div id="registrationOverlay" class="hidden" role="dialog" aria-modal="true" aria-labelledby="registrationTitle" aria-hidden="true">
     <div class="registration-card">
       <h2 id="registrationTitle">Accès réservé aux membres</h2>
       <p class="muted" style="margin:0">Rejoignez <strong><span data-client-count>0</span></strong> revendeurs Amazon et chasseurs de rabais, puis accédez au catalogue complet.</p>
