@@ -1,0 +1,43 @@
+name: Walmart liquidation scraper
+
+on:
+  schedule:
+    # 17:00 America/Toronto == 21:00 UTC
+    - cron: '0 21 * * *'
+  workflow_dispatch:
+    inputs:
+      comment:
+        description: "Note facultative pour cette exécution"
+        required: false
+        type: string
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install playwright
+          playwright install --with-deps chromium
+
+      - name: Run Walmart scraper
+        env:
+          WALMART_PROXIES: ${{ secrets.WALMART_PROXIES }}
+        run: python incoming/walmart_scraper.py
+
+      - name: Upload liquidation report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: walmart-liquidations-${{ github.run_id }}
+          path: liquidations_walmart_qc.json
+          if-no-files-found: warn

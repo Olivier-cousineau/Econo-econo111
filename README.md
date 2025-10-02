@@ -22,3 +22,24 @@ Site statique bilingue (FR/EN) avec filtres Magasin/Ville et barre de % de rabai
   merger les tableaux, appliquer les filtres et générer les cartes.
 
 © 2025 EconoDeal
+
+## Automatisation du scraper Walmart
+
+Le script asynchrone `incoming/walmart_scraper.py` peut tourner automatiquement via
+GitHub Actions :
+
+1. Dans **Settings → Secrets and variables → Actions**, ajoute un secret
+   `WALMART_PROXIES` contenant ta liste JSON de proxies, par exemple :
+   `[
+   "http://user:pass@proxy1:port", "http://user:pass@proxy2:port"
+   ]`.
+2. Complète la liste `magasins` dans le script avec l'identifiant, la ville et
+   l'adresse de chacun des magasins.
+3. Le workflow `.github/workflows/walmart-scraper.yml` s'exécute chaque jour à
+   **17 h (heure de l'Est)**, ce qui correspond à 21 h UTC.
+4. Pour lancer le scraper manuellement vers 16 h, ouvre l'onglet **Actions**,
+   sélectionne *Walmart liquidation scraper* puis clique sur **Run workflow**.
+   Tu peux ajouter une note facultative avant de déclencher l'exécution.
+
+Chaque exécution produit un fichier `liquidations_walmart_qc.json` et le met à
+disposition en tant qu'artéfact téléchargeable depuis l'interface des Actions.
