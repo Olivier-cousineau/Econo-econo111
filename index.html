@@ -765,7 +765,7 @@
     let activeCountry = 'canada';
     let savedFilters = null;
     const DEFAULT_FILTERS = Object.freeze({
-      store: 'Walmart',
+      store: 'walmart',
       city: 'saint-jerome',
       discount: '0'
     });
@@ -889,8 +889,9 @@
       if(country === 'canada'){
         for(const store of STORES){
           const label = store?.label;
-          if(!label) continue;
-          const option = `<option value="${label}">${label}</option>`;
+          const value = store?.slug;
+          if(!label || !value) continue;
+          const option = `<option value="${value}">${label}</option>`;
           options.push(option);
         }
       }else{
@@ -899,7 +900,8 @@
         for(const entry of menu){
           const label = entry?.label;
           if(!label) continue;
-          const option = `<option value="${label}" disabled>${label}</option>`;
+          const value = entry?.slug || slugify(label || '');
+          const option = `<option value="${value}" disabled>${label}</option>`;
           options.push(option);
         }
       }
@@ -956,10 +958,12 @@
         delete storeSelect.dataset.preview;
       }
       const filters = savedFilters ?? DEFAULT_FILTERS;
+      const initialStore = getStoreByIdentifier(filters.store);
+      const storeValue = initialStore?.slug || '';
       if(storeSelect){
-        storeSelect.value = filters.store || '';
+        storeSelect.value = storeValue;
       }
-      setCityOptions(filters.store || '', false);
+      setCityOptions(storeValue, false);
       if(citySelect){
         const options = Array.from(citySelect.options || []);
         const hasCity = options.some(option => option.value === (filters.city || ''));
@@ -1436,8 +1440,13 @@
       }).join('');
     }
 
-    function getStoreDefinition(label){
-      return STORES.find(store => store.label === label);
+    function getStoreBySlug(slug){
+      return STORES.find(store => store.slug === slug);
+    }
+
+    function getStoreByIdentifier(identifier){
+      if(!identifier) return null;
+      return getStoreBySlug(identifier) || STORES.find(store => store.label === identifier);
     }
 
     const BEST_BUY_AGGREGATE_PATH = 'data/best-buy/liquidations.json';
@@ -1506,14 +1515,10 @@
       }
     }
 
-    function setCityOptions(storeLabel, preserveSelection){
+    function setCityOptions(storeSlug, preserveSelection){
       const previous = preserveSelection ? citySelect.value : '';
-      let branches;
-      if(storeLabel){
-        branches = getStoreDefinition(storeLabel)?.branches ?? baseBranches();
-      }else{
-        branches = baseBranches();
-      }
+      const store = getStoreByIdentifier(storeSlug);
+      const branches = store?.branches ?? baseBranches();
       const options = ['<option value="">(Toutes)</option>'];
       const postalFilter = postalBranchSlugs && postalBranchSlugs.size ? postalBranchSlugs : null;
       for(const branch of branches){
@@ -1553,10 +1558,10 @@
       const storeFilter = storeSelect.value;
       const branchFilter = citySelect.value;
       const postalFilter = postalBranchSlugs && postalBranchSlugs.size ? postalBranchSlugs : null;
-      const selectedStores = storeFilter ? [storeFilter] : STORES.map(store => store.label);
+      const selectedStores = storeFilter ? [storeFilter] : STORES.map(store => store.slug);
       const tasks = [];
-      for(const storeLabel of selectedStores){
-        const store = getStoreDefinition(storeLabel);
+      for(const storeSlug of selectedStores){
+        const store = getStoreByIdentifier(storeSlug);
         if(!store) continue;
         let branches = store.branches ?? [];
         if(branchFilter){
@@ -1608,8 +1613,10 @@
     btnClear.addEventListener('click', async ()=>{
       if(activeCountry !== 'canada') return;
       const defaults = DEFAULT_FILTERS;
-      storeSelect.value = defaults.store || '';
-      setCityOptions(storeSelect.value || '', false);
+      const defaultStore = getStoreByIdentifier(defaults.store);
+      const defaultStoreValue = defaultStore?.slug || '';
+      storeSelect.value = defaultStoreValue;
+      setCityOptions(defaultStoreValue, false);
       if(citySelect){
         if(defaults.city){
           const options = Array.from(citySelect.options || []);
@@ -1625,8 +1632,10 @@
 
     // Démarrage
     await loadCanadianTireDirectory();
-    storeSelect.value = DEFAULT_FILTERS.store;
-    setCityOptions(DEFAULT_FILTERS.store, false);
+    const defaultStore = getStoreByIdentifier(DEFAULT_FILTERS.store);
+    const defaultStoreValue = defaultStore?.slug || '';
+    storeSelect.value = defaultStoreValue;
+    setCityOptions(defaultStoreValue, false);
     citySelect.value = DEFAULT_FILTERS.city;
     range.value = DEFAULT_FILTERS.discount; // ← 0% par défaut
     await fetchData();
