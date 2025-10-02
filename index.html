@@ -823,8 +823,8 @@
     let savedFilters = null;
     const DEFAULT_FILTERS = Object.freeze({
       search: '',
-      store: 'walmart',
-      city: 'saint-jerome',
+      store: '',
+      city: '',
       discount: '0'
     });
 
@@ -1250,6 +1250,32 @@
       return text;
     }
 
+    function buildSearchIndex(...segments){
+      return segments
+        .map(segment => normalizeSearchText(segment))
+        .filter(Boolean)
+        .join(' ');
+    }
+
+    function ensureSearchIndex(deal){
+      if(!deal || typeof deal !== 'object') return '';
+      const existing = typeof deal.searchIndex === 'string' ? deal.searchIndex : '';
+      if(existing) return existing;
+      const regenerated = buildSearchIndex(
+        deal.title,
+        deal.store,
+        deal.branch,
+        deal.city,
+        deal.brand,
+        deal.model,
+        deal.sku,
+        deal.asin,
+        deal.searchKeywords
+      );
+      deal.searchIndex = regenerated;
+      return regenerated;
+    }
+
     function normalizeDeal(item, storeLabel, branch){
       const branchLabel = typeof branch === 'object' && branch ? branch.label : branch;
       const branchSlug = typeof branch === 'object' && branch && branch.slug ? branch.slug : slugify(branchLabel || item.city || storeLabel);
@@ -1329,7 +1355,7 @@
 
       const title = firstDefined(item.title, item.name, 'Article en liquidation');
       const cityDisplay = item.city ?? cityLabel;
-      const searchSegments = [
+      const searchIndex = buildSearchIndex(
         title,
         storeLabel,
         branchLabel,
@@ -1339,11 +1365,7 @@
         sku,
         asin,
         searchKeywords
-      ];
-      const searchIndex = searchSegments
-        .map(segment => normalizeSearchText(segment))
-        .filter(Boolean)
-        .join(' ');
+      );
 
       return {
         title,
@@ -1504,7 +1526,8 @@
         const pct = discount(d.price,d.salePrice);
         if(s && d.store !== s) return false;
         if(c && d.branchSlug !== c && d.citySlug !== c) return false;
-        if(terms.length && !terms.every(term => d.searchIndex.includes(term))) return false;
+        const searchIndex = ensureSearchIndex(d);
+        if(terms.length && !terms.every(term => searchIndex.includes(term))) return false;
         return pct >= min;
       });
       countEl.textContent = filtered.length;
