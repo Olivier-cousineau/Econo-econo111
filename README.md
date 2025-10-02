@@ -33,8 +33,9 @@ GitHub Actions :
    `[
    "http://user:pass@proxy1:port", "http://user:pass@proxy2:port"
    ]`.
-2. Complète la liste `magasins` dans le script avec l'identifiant, la ville et
-   l'adresse de chacun des magasins.
+2. Complète la liste `magasins` dans le script (ou crée un fichier
+   `incoming/walmart_stores.json`) avec l'identifiant, la ville et l'adresse de
+   chacun des magasins.
 3. Le workflow `.github/workflows/walmart-scraper.yml` s'exécute chaque jour à
    **17 h (heure de l'Est)**, ce qui correspond à 21 h UTC.
 4. Pour lancer le scraper manuellement vers 16 h, ouvre l'onglet **Actions**,
@@ -43,3 +44,6 @@ GitHub Actions :
 
 Chaque exécution produit un fichier `liquidations_walmart_qc.json` et le met à
 disposition en tant qu'artéfact téléchargeable depuis l'interface des Actions.
+Les jeux de données par magasin sont également mis à jour dans `data/walmart/`
+(`data/walmart/laval.json`, `data/walmart/moncton.json`, etc.) afin d'être
+consommés directement par le site statique.
