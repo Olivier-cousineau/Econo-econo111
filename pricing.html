@@ -34,10 +34,47 @@
     .pricing-features{list-style:none;padding:0;margin:0;display:grid;gap:8px;font-size:14px;color:var(--muted)}
     .pricing-tag{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
     .pricing-highlight{outline:2px solid rgba(34,197,94,.4);outline-offset:4px;transition:outline-color .3s ease}
-    .footer{border-top:1px solid var(--border);padding:20px 0;color:var(--muted);text-align:center}
+    .footer{border-top:1px solid var(--border);padding:20px 0 16px;color:var(--muted);text-align:center}
+    .footer-links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:10px;font-size:13px}
+    .footer-links a{color:var(--muted);text-decoration:none;transition:color .2s ease}
+    .footer-links a:hover{color:#fff}
+    #registrationOverlay{position:fixed;inset:0;background:rgba(15,23,42,.94);display:flex;align-items:center;justify-content:center;padding:20px;z-index:2000}
+    #registrationOverlay.hidden{display:none}
+    .registration-card{background:linear-gradient(180deg,var(--panel),#111a2a);border:1px solid var(--border);border-radius:var(--radius);max-width:420px;width:100%;padding:26px;display:grid;gap:16px;box-shadow:0 24px 60px rgba(15,23,42,.5)}
+    .registration-card form{display:grid;gap:12px}
+    .registration-card input{width:100%;background:var(--panel-2);color:var(--text);border:1px solid var(--border);border-radius:10px;padding:10px 12px}
+    .registration-card button{background:linear-gradient(120deg,rgba(34,197,94,.9),rgba(59,130,246,.85));color:#fff;border:none;font-weight:600;cursor:pointer;transition:opacity .2s ease,transform .2s ease}
+    .registration-card button:hover:not(:disabled){opacity:.9;transform:translateY(-1px)}
+    .checkbox-row{display:flex;gap:10px;align-items:flex-start;background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.3);padding:12px;border-radius:10px}
+    body.overlay-active{overflow:hidden}
+    body.overlay-active header,body.overlay-active main,body.overlay-active .footer{filter:blur(2px);pointer-events:none;user-select:none}
   </style>
 </head>
 <body>
+  <div id="registrationOverlay" class="hidden" role="dialog" aria-modal="true" aria-labelledby="registrationTitle">
+    <div class="registration-card">
+      <h2 id="registrationTitle">Accès réservé aux membres</h2>
+      <p class="muted" style="margin:0">Rejoignez <strong><span data-client-count>0</span></strong> membres et débloquez les forfaits détaillés.</p>
+      <form id="registrationForm">
+        <div>
+          <label for="fullName">Nom complet</label>
+          <input id="fullName" name="fullName" type="text" placeholder="Entrez votre nom" autocomplete="name" required />
+        </div>
+        <div>
+          <label for="email">Courriel</label>
+          <input id="email" name="email" type="email" placeholder="nom@exemple.com" autocomplete="email" required />
+        </div>
+        <div class="checkbox-row">
+          <input id="regulationCheckbox" name="regulation" type="checkbox" required />
+          <label for="regulationCheckbox" style="margin:0">Je confirme avoir lu et accepté les <a href="conditions-utilisation.html" data-public-link>Conditions d'utilisation</a> et la <a href="politique-confidentialite.html" data-public-link>Politique de confidentialité</a>.</label>
+        </div>
+        <div class="action-stack">
+          <button id="registrationSubmit" type="submit" disabled>S'inscrire et accéder</button>
+          <button type="button" class="nav-button" data-public-action="close-overlay">Continuer la visite</button>
+        </div>
+      </form>
+    </div>
+  </div>
   <header>
     <div class="container row" style="justify-content:space-between">
       <div class="row" style="gap:10px;align-items:center">
@@ -98,14 +135,196 @@
   </main>
 
   <div class="container footer">
-    © <span id="yearFooter"></span> EconoDeal · Tous droits réservés
+    <div>© <span id="yearFooter"></span> EconoDeal · Tous droits réservés</div>
+    <div class="footer-links">
+      <a href="conditions-utilisation.html" data-public-link>Conditions d'utilisation</a>
+      <a href="politique-confidentialite.html" data-public-link>Politique de confidentialité</a>
+      <a href="contact.html" data-public-link>Nous joindre</a>
+    </div>
   </div>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const y = new Date().getFullYear();
-      document.getElementById('year').textContent = y;
-      document.getElementById('yearFooter').textContent = y;
+      const overlay = document.getElementById('registrationOverlay');
+      const form = document.getElementById('registrationForm');
+      const submitBtn = document.getElementById('registrationSubmit');
+      const regulationCheckbox = document.getElementById('regulationCheckbox');
+      const clientCountDisplays = Array.from(document.querySelectorAll('[data-client-count]'));
+      const year = document.getElementById('year');
+      const yearFooter = document.getElementById('yearFooter');
+      const currentYear = new Date().getFullYear();
+      if(year) year.textContent = currentYear;
+      if(yearFooter) yearFooter.textContent = currentYear;
+
+      function safeGet(key){
+        try{ return localStorage.getItem(key); }
+        catch(err){ console.warn('Stockage local indisponible', err); return null; }
+      }
+
+      function safeSet(key, value){
+        try{ localStorage.setItem(key, value); }
+        catch(err){ console.warn('Impossible d\'enregistrer les données', err); }
+      }
+
+      function parseJson(value){
+        if(!value) return null;
+        try{ return JSON.parse(value); }
+        catch(err){ console.warn('Impossible de lire les données existantes', err); return null; }
+      }
+
+      function cleanText(value){ return typeof value === 'string' ? value.trim() : ''; }
+
+      function getRegistrations(){
+        const parsed = parseJson(safeGet('econodealRegistrations'));
+        if(!Array.isArray(parsed)) return [];
+        return parsed
+          .filter(item => item && typeof item === 'object')
+          .map(item => ({
+            name: cleanText(item.name),
+            email: cleanText(item.email).toLowerCase(),
+            registeredAt: cleanText(item.registeredAt)
+          }))
+          .filter(item => item.email);
+      }
+
+      function saveRegistrations(items){ safeSet('econodealRegistrations', JSON.stringify(items)); }
+
+      function upsertRegistration(entry){
+        const collection = getRegistrations();
+        const email = cleanText(entry.email).toLowerCase();
+        if(!email) return;
+        const normalized = {
+          name: cleanText(entry.name),
+          email,
+          registeredAt: cleanText(entry.registeredAt)
+        };
+        const existingIndex = collection.findIndex(item => item.email === email);
+        if(existingIndex >= 0){ collection[existingIndex] = {...collection[existingIndex], ...normalized}; }
+        else{ collection.push(normalized); }
+        saveRegistrations(collection);
+      }
+
+      function parseCount(value){
+        const parsed = parseInt(value ?? '0', 10);
+        return Number.isFinite(parsed) && parsed >= 0 ? parsed : 0;
+      }
+
+      function setClientCount(value){
+        const normalized = Math.max(0, value);
+        safeSet('econodealClientCount', String(normalized));
+        return normalized;
+      }
+
+      function deriveClientCountFromRegistrations(){
+        const registrations = getRegistrations();
+        if(!registrations.length) return 0;
+        const uniqueEmails = new Set();
+        registrations.forEach(item => { if(item?.email) uniqueEmails.add(item.email); });
+        return uniqueEmails.size;
+      }
+
+      function getClientCount(){
+        const stored = parseCount(safeGet('econodealClientCount'));
+        const derived = deriveClientCountFromRegistrations();
+        const resolved = Math.max(stored, derived);
+        if(resolved !== stored){ setClientCount(resolved); }
+        return resolved;
+      }
+
+      function updateClientCountDisplays(){
+        const formatter = new Intl.NumberFormat('fr-CA');
+        const count = getClientCount();
+        clientCountDisplays.forEach(el => { el.textContent = formatter.format(count); });
+      }
+
+      function hideOverlay(){
+        if(!overlay) return;
+        overlay.classList.add('hidden');
+        overlay.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('overlay-active');
+      }
+
+      function showOverlay(){
+        if(!overlay) return;
+        overlay.classList.remove('hidden');
+        overlay.removeAttribute('aria-hidden');
+        document.body.classList.add('overlay-active');
+        updateClientCountDisplays();
+      }
+
+      updateClientCountDisplays();
+      hideOverlay();
+      if(safeGet('econodealClientRegistered') === 'true'){
+        safeSet('econodealClientRegistered', 'true');
+      }
+
+      if(submitBtn && regulationCheckbox){
+        submitBtn.disabled = !regulationCheckbox.checked;
+        regulationCheckbox.addEventListener('change', () => {
+          submitBtn.disabled = !regulationCheckbox.checked;
+        });
+      }
+
+      if(form){
+        form.addEventListener('submit', (event) => {
+          event.preventDefault();
+          if(!form.reportValidity()) return;
+          const wasRegistered = safeGet('econodealClientRegistered') === 'true';
+          if(!wasRegistered){
+            const current = getClientCount();
+            setClientCount(current + 1);
+          }
+          const payload = {
+            name: (form.fullName?.value ?? '').trim(),
+            email: (form.email?.value ?? '').trim(),
+            consent: true,
+            registeredAt: new Date().toISOString()
+          };
+          safeSet('econodealUser', JSON.stringify(payload));
+          upsertRegistration(payload);
+          safeSet('econodealClientRegistered', 'true');
+          updateClientCountDisplays();
+          hideOverlay();
+        });
+      }
+
+      const closeOverlayBtn = document.querySelector('[data-public-action="close-overlay"]');
+      if(closeOverlayBtn){
+        closeOverlayBtn.addEventListener('click', () => {
+          hideOverlay();
+        });
+      }
+
+      const GATE_SELECTORS = [
+        'a[href]:not([data-public-link])',
+        'button:not([data-public-action])',
+        '[role="button"]:not([data-public-action])',
+        '.pricing-card'
+      ];
+
+      function shouldGate(event){
+        if(safeGet('econodealClientRegistered') === 'true') return false;
+        if(document.body.classList.contains('overlay-active')) return false;
+        if(event.defaultPrevented) return false;
+        if(event.target.closest('#registrationOverlay')) return false;
+        if(event.target.closest('[data-public-link]')) return false;
+        if(event.target.closest('[data-public-action]')) return false;
+        for(const selector of GATE_SELECTORS){
+          if(event.target.closest(selector)){
+            return true;
+          }
+        }
+        return false;
+      }
+
+      document.addEventListener('click', (event) => {
+        if(event.button !== 0) return;
+        if(shouldGate(event)){
+          event.preventDefault();
+          event.stopPropagation();
+          showOverlay();
+        }
+      }, true);
     });
   </script>
 </body>

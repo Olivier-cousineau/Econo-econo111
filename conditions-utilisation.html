@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Conditions d'utilisation — EconoDeal</title>
+  <style>
+    :root{
+      --bg:#0f172a; --panel:#111827; --panel-2:#1f2937; --text:#e5e7eb;
+      --muted:#9ca3af; --accent:#22c55e; --border:#2b3446; --radius:14px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),#0b1020 50%,#0a0f1a);color:var(--text);min-height:100vh;display:flex;flex-direction:column}
+    header{background:rgba(15,23,42,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+    .container{max-width:900px;margin:0 auto;padding:24px 18px}
+    .brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:var(--text)}
+    .brand img{width:42px;height:42px}
+    .brand span{font-weight:600;font-size:18px}
+    main{flex:1}
+    h1{margin:0 0 16px;font-size:32px}
+    h2{margin:32px 0 12px;font-size:22px}
+    p{margin:0 0 14px;line-height:1.6;color:var(--muted)}
+    ul{margin:0 0 16px;padding-left:20px;color:var(--muted);line-height:1.6}
+    .panel{background:linear-gradient(180deg,var(--panel),#101a2a);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin-top:24px;box-shadow:0 24px 60px rgba(15,23,42,.45)}
+    .footer{border-top:1px solid var(--border);padding:20px 0;color:var(--muted);text-align:center}
+    .footer-links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:10px;font-size:13px}
+    .footer-links a{color:var(--muted);text-decoration:none;transition:color .2s ease}
+    .footer-links a:hover{color:#fff}
+    a{color:#86efac}
+    a:hover{color:#bbf7d0}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.svg" alt="EconoDeal" />
+        <span>EconoDeal</span>
+      </a>
+      <nav style="display:flex;gap:14px;flex-wrap:wrap">
+        <a href="politique-confidentialite.html">Politique de confidentialité</a>
+        <a href="contact.html">Nous joindre</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="panel">
+        <h1>Conditions d'utilisation</h1>
+        <p>Bienvenue sur EconoDeal. En accédant à nos sites, applications ou services, vous acceptez les présentes conditions d'utilisation. Elles visent à protéger nos membres ainsi que les données commerciales que nous collectons.</p>
+        <h2>1. Objet du service</h2>
+        <p>EconoDeal agrège des promotions et des liquidations provenant de détaillants nord-américains. Les informations fournies servent uniquement à soutenir la prise de décision des revendeurs et ne constituent pas des conseils financiers.</p>
+        <h2>2. Création de compte et exactitude des données</h2>
+        <p>Vous devez fournir des informations exactes lors de l'inscription. Nous pouvons suspendre l'accès en cas d'informations trompeuses ou d'utilisation abusive de la plateforme.</p>
+        <h2>3. Utilisation autorisée</h2>
+        <ul>
+          <li>Analyse et consultation des promotions dans le cadre d'activités de revente légitimes.</li>
+          <li>Création d'alertes personnalisées pour usage interne.</li>
+          <li>Partage des tableaux de bord avec les membres de votre équipe.</li>
+        </ul>
+        <p>Toute tentative de revente, de republication ou d'extraction massive des données sans consentement écrit est prohibée.</p>
+        <h2>4. Propriété intellectuelle</h2>
+        <p>Les contenus, visuels, scripts et bases de données demeurent la propriété d'EconoDeal. Les logos et marques des détaillants appartiennent à leurs propriétaires respectifs.</p>
+        <h2>5. Disponibilité du service</h2>
+        <p>Nous nous efforçons de maintenir une disponibilité continue, mais certaines interruptions peuvent survenir lors de collectes de données ou de mises à jour. EconoDeal ne saurait être tenu responsable des pertes liées à une indisponibilité temporaire.</p>
+        <h2>6. Limitation de responsabilité</h2>
+        <p>Les informations sont fournies « telles quelles ». Nous ne garantissons pas l'exactitude ou l'exhaustivité des inventaires ni les prix affichés par les détaillants tiers.</p>
+        <h2>7. Durée et résiliation</h2>
+        <p>Vous pouvez résilier votre abonnement en tout temps via le centre de facturation. Nous pouvons suspendre l'accès en cas de violation des présentes conditions.</p>
+        <h2>8. Modifications</h2>
+        <p>Les présentes conditions peuvent être mises à jour. Les changements majeurs seront communiqués par courriel et via une notification dans l'application.</p>
+        <p>Dernière mise à jour : 12 septembre 2023.</p>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div>© <span id="yearFooter"></span> EconoDeal · Tous droits réservés</div>
+    <div class="footer-links">
+      <a href="conditions-utilisation.html">Conditions d'utilisation</a>
+      <a href="politique-confidentialite.html">Politique de confidentialité</a>
+      <a href="contact.html">Nous joindre</a>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('yearFooter').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
