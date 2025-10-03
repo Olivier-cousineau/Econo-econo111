@@ -218,7 +218,7 @@
         });
         return uniqueEmails.size;
       }
-      function getClientCount(){
+      function resolveClientCount(){
         const stored = parseCount(safeGet('econodealClientCount'));
         const derived = deriveClientCountFromRegistrations();
         const resolved = Math.max(stored, derived);
@@ -227,11 +227,12 @@
       }
       function updateClientCountDisplays(){
         const formatter = new Intl.NumberFormat('fr-CA');
-        const count = getClientCount();
+        const count = resolveClientCount();
         clientCountDisplays.forEach(el => { el.textContent = formatter.format(count); });
       }
       function hideOverlay(){ if(!overlay) return; overlay.classList.add('hidden'); overlay.setAttribute('aria-hidden','true'); document.body.classList.remove('overlay-active'); }
       function showOverlay(){ if(!overlay) return; overlay.classList.remove('hidden'); overlay.removeAttribute('aria-hidden'); document.body.classList.add('overlay-active'); updateClientCountDisplays(); }
+      resolveClientCount();
       updateClientCountDisplays();
       const alreadyRegistered = safeGet('econodealClientRegistered') === 'true';
       if(alreadyRegistered){ hideOverlay(); }
@@ -244,11 +245,6 @@
         form.addEventListener('submit', (event) => {
           event.preventDefault();
           if(!form.reportValidity()) return;
-          const wasRegistered = safeGet('econodealClientRegistered') === 'true';
-          if(!wasRegistered){
-            const current = getClientCount();
-            setClientCount(current + 1);
-          }
           const payload = {
             name: (form.fullName?.value ?? '').trim(),
             email: (form.email?.value ?? '').trim(),
@@ -257,11 +253,19 @@
           };
           safeSet('econodealUser', JSON.stringify(payload));
           upsertRegistration(payload);
+          resolveClientCount();
           safeSet('econodealClientRegistered', 'true');
           updateClientCountDisplays();
           hideOverlay();
         });
       }
+
+      window.addEventListener('storage', (event) => {
+        if(!event) return;
+        if(event.key === 'econodealRegistrations' || event.key === 'econodealClientCount'){
+          updateClientCountDisplays();
+        }
+      });
 
       function baseBranches(){
         return [
