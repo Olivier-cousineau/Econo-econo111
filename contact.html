@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nous joindre — EconoDeal</title>
+  <style>
+    :root{
+      --bg:#0f172a; --panel:#111827; --panel-2:#1f2937; --text:#e5e7eb;
+      --muted:#9ca3af; --accent:#22c55e; --border:#2b3446; --radius:14px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),#0b1020 50%,#0a0f1a);color:var(--text);min-height:100vh;display:flex;flex-direction:column}
+    header{background:rgba(15,23,42,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+    .container{max-width:900px;margin:0 auto;padding:24px 18px}
+    .brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:var(--text)}
+    .brand img{width:42px;height:42px}
+    .brand span{font-weight:600;font-size:18px}
+    main{flex:1}
+    h1{margin:0 0 16px;font-size:32px}
+    h2{margin:28px 0 12px;font-size:22px}
+    p{margin:0 0 14px;line-height:1.6;color:var(--muted)}
+    .panel{background:linear-gradient(180deg,var(--panel),#101a2a);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin-top:24px;box-shadow:0 24px 60px rgba(15,23,42,.45);display:grid;gap:18px}
+    .contact-grid{display:grid;gap:18px}
+    .contact-card{background:var(--panel-2);border:1px solid var(--border);border-radius:12px;padding:18px;display:grid;gap:8px}
+    .contact-card strong{font-size:18px}
+    .footer{border-top:1px solid var(--border);padding:20px 0;color:var(--muted);text-align:center}
+    .footer-links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:10px;font-size:13px}
+    .footer-links a{color:var(--muted);text-decoration:none;transition:color .2s ease}
+    .footer-links a:hover{color:#fff}
+    a{color:#86efac}
+    a:hover{color:#bbf7d0}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.svg" alt="EconoDeal" />
+        <span>EconoDeal</span>
+      </a>
+      <nav style="display:flex;gap:14px;flex-wrap:wrap">
+        <a href="conditions-utilisation.html">Conditions d'utilisation</a>
+        <a href="politique-confidentialite.html">Politique de confidentialité</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="panel">
+        <h1>Nous joindre</h1>
+        <p>Notre équipe répond sous 24 heures ouvrables. Choisissez le canal qui correspond le mieux à votre demande.</p>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <strong>Support général</strong>
+            <p>Questions sur les forfaits, accès aux données ou gestion de compte.</p>
+            <a href="mailto:support@econodeal.ca">support@econodeal.ca</a>
+          </div>
+          <div class="contact-card">
+            <strong>Protection des données</strong>
+            <p>Demandes d'accès, de rectification ou de suppression de vos informations personnelles.</p>
+            <a href="mailto:confidentialite@econodeal.ca">confidentialite@econodeal.ca</a>
+          </div>
+          <div class="contact-card">
+            <strong>Partenariats détaillants</strong>
+            <p>Intégrer votre bannière, partager un flux d'inventaire ou lancer une campagne conjointe.</p>
+            <a href="mailto:partenaires@econodeal.ca">partenaires@econodeal.ca</a>
+          </div>
+        </div>
+        <h2>Adresse postale</h2>
+        <p>EconoDeal Inc.<br />5455 Avenue de Gaspé, bureau 305<br />Montréal (Québec) H2T 3B3</p>
+        <h2>Médias sociaux</h2>
+        <p>Suivez nos mises à jour sur <a href="https://www.linkedin.com/company/econodeal" target="_blank" rel="noopener">LinkedIn</a> et <a href="https://twitter.com/econodeal" target="_blank" rel="noopener">Twitter</a>.</p>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div>© <span id="yearFooter"></span> EconoDeal · Tous droits réservés</div>
+    <div class="footer-links">
+      <a href="conditions-utilisation.html">Conditions d'utilisation</a>
+      <a href="politique-confidentialite.html">Politique de confidentialité</a>
+      <a href="contact.html">Nous joindre</a>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('yearFooter').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

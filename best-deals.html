@@ -41,7 +41,10 @@
     .card h3{margin:0;font-size:16px;line-height:1.4}
     .price{display:flex;gap:10px;align-items:baseline}
     .price .old{text-decoration:line-through;color:var(--muted)}
-    .footer{border-top:1px solid var(--border);padding:20px 0;color:var(--muted);text-align:center}
+    .footer{border-top:1px solid var(--border);padding:20px 0 16px;color:var(--muted);text-align:center}
+    .footer-links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:10px;font-size:13px}
+    .footer-links a{color:var(--muted);text-decoration:none;transition:color .2s ease}
+    .footer-links a:hover{color:#fff}
     .status-banner{display:flex;gap:10px;align-items:center;background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.35);color:#bfdbfe;padding:10px 12px;border-radius:10px;font-size:13px}
     .status-banner.error{background:rgba(239,68,68,.12);border-color:rgba(239,68,68,.4);color:#fecaca}
     .empty{border:1px dashed var(--border);padding:30px;border-radius:var(--radius);text-align:center;color:var(--muted)}
@@ -52,8 +55,8 @@
     }
   </style>
 </head>
-<body class="overlay-active">
-  <div id="registrationOverlay" role="dialog" aria-modal="true" aria-labelledby="registrationTitle">
+<body>
+  <div id="registrationOverlay" class="hidden" role="dialog" aria-modal="true" aria-labelledby="registrationTitle">
     <div class="registration-card">
       <h2 id="registrationTitle">Accès réservé aux membres</h2>
       <p class="muted" style="margin:0">Rejoignez <strong><span data-client-count>0</span></strong> chasseurs de rabais et accédez au classement des meilleures offres.</p>
@@ -68,9 +71,12 @@
         </div>
         <div class="checkbox-row">
           <input id="regulationCheckbox" name="regulation" type="checkbox" required />
-          <label for="regulationCheckbox" style="margin:0">Je confirme avoir lu et accepté les réglementations d'utilisation du site.</label>
+          <label for="regulationCheckbox" style="margin:0">Je confirme avoir lu et accepté les <a href="conditions-utilisation.html" data-public-link>Conditions d'utilisation</a> et la <a href="politique-confidentialite.html" data-public-link>Politique de confidentialité</a>.</label>
         </div>
-        <button id="registrationSubmit" type="submit" disabled>S'inscrire et accéder</button>
+        <div class="action-stack">
+          <button id="registrationSubmit" type="submit" disabled>S'inscrire et accéder</button>
+          <button type="button" class="nav-button" data-public-action="close-overlay">Continuer la visite</button>
+        </div>
       </form>
     </div>
   </div>
@@ -123,7 +129,12 @@
   </main>
 
   <div class="container footer">
-    © <span id="yearFooter"></span> EconoDeal · Tous droits réservés
+    <div>© <span id="yearFooter"></span> EconoDeal · Tous droits réservés</div>
+    <div class="footer-links">
+      <a href="conditions-utilisation.html" data-public-link>Conditions d'utilisation</a>
+      <a href="politique-confidentialite.html" data-public-link>Politique de confidentialité</a>
+      <a href="contact.html" data-public-link>Nous joindre</a>
+    </div>
   </div>
 
   <style>
@@ -230,12 +241,26 @@
         const count = getClientCount();
         clientCountDisplays.forEach(el => { el.textContent = formatter.format(count); });
       }
-      function hideOverlay(){ if(!overlay) return; overlay.classList.add('hidden'); overlay.setAttribute('aria-hidden','true'); document.body.classList.remove('overlay-active'); }
-      function showOverlay(){ if(!overlay) return; overlay.classList.remove('hidden'); overlay.removeAttribute('aria-hidden'); document.body.classList.add('overlay-active'); updateClientCountDisplays(); }
+      function hideOverlay(){
+        if(!overlay) return;
+        overlay.classList.add('hidden');
+        overlay.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('overlay-active');
+      }
+
+      function showOverlay(){
+        if(!overlay) return;
+        overlay.classList.remove('hidden');
+        overlay.removeAttribute('aria-hidden');
+        document.body.classList.add('overlay-active');
+        updateClientCountDisplays();
+      }
+
       updateClientCountDisplays();
-      const alreadyRegistered = safeGet('econodealClientRegistered') === 'true';
-      if(alreadyRegistered){ hideOverlay(); }
-      else{ showOverlay(); }
+      hideOverlay();
+      if(safeGet('econodealClientRegistered') === 'true'){
+        safeSet('econodealClientRegistered', 'true');
+      }
       if(submitBtn && regulationCheckbox){
         submitBtn.disabled = !regulationCheckbox.checked;
         regulationCheckbox.addEventListener('change', () => { submitBtn.disabled = !regulationCheckbox.checked; });
@@ -262,6 +287,44 @@
           hideOverlay();
         });
       }
+
+      const closeOverlayBtn = document.querySelector('[data-public-action="close-overlay"]');
+      if(closeOverlayBtn){
+        closeOverlayBtn.addEventListener('click', () => {
+          hideOverlay();
+        });
+      }
+
+      const GATE_SELECTORS = [
+        'a[href]:not([data-public-link])',
+        'button:not([data-public-action])',
+        '[role="button"]:not([data-public-action])',
+        '.card'
+      ];
+
+      function shouldGate(event){
+        if(safeGet('econodealClientRegistered') === 'true') return false;
+        if(document.body.classList.contains('overlay-active')) return false;
+        if(event.defaultPrevented) return false;
+        if(event.target.closest('#registrationOverlay')) return false;
+        if(event.target.closest('[data-public-link]')) return false;
+        if(event.target.closest('[data-public-action]')) return false;
+        for(const selector of GATE_SELECTORS){
+          if(event.target.closest(selector)){
+            return true;
+          }
+        }
+        return false;
+      }
+
+      document.addEventListener('click', (event) => {
+        if(event.button !== 0) return;
+        if(shouldGate(event)){
+          event.preventDefault();
+          event.stopPropagation();
+          showOverlay();
+        }
+      }, true);
 
       function baseBranches(){
         return [

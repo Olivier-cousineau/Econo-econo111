@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Politique de confidentialité — EconoDeal</title>
+  <style>
+    :root{
+      --bg:#0f172a; --panel:#111827; --panel-2:#1f2937; --text:#e5e7eb;
+      --muted:#9ca3af; --accent:#22c55e; --border:#2b3446; --radius:14px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),#0b1020 50%,#0a0f1a);color:var(--text);min-height:100vh;display:flex;flex-direction:column}
+    header{background:rgba(15,23,42,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+    .container{max-width:900px;margin:0 auto;padding:24px 18px}
+    .brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:var(--text)}
+    .brand img{width:42px;height:42px}
+    .brand span{font-weight:600;font-size:18px}
+    main{flex:1}
+    h1{margin:0 0 16px;font-size:32px}
+    h2{margin:28px 0 12px;font-size:22px}
+    p{margin:0 0 14px;line-height:1.6;color:var(--muted)}
+    ul{margin:0 0 16px;padding-left:20px;color:var(--muted);line-height:1.6}
+    .panel{background:linear-gradient(180deg,var(--panel),#101a2a);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin-top:24px;box-shadow:0 24px 60px rgba(15,23,42,.45)}
+    .footer{border-top:1px solid var(--border);padding:20px 0;color:var(--muted);text-align:center}
+    .footer-links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:10px;font-size:13px}
+    .footer-links a{color:var(--muted);text-decoration:none;transition:color .2s ease}
+    .footer-links a:hover{color:#fff}
+    a{color:#86efac}
+    a:hover{color:#bbf7d0}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.svg" alt="EconoDeal" />
+        <span>EconoDeal</span>
+      </a>
+      <nav style="display:flex;gap:14px;flex-wrap:wrap">
+        <a href="conditions-utilisation.html">Conditions d'utilisation</a>
+        <a href="contact.html">Nous joindre</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="panel">
+        <h1>Politique de confidentialité</h1>
+        <p>Nous prenons la protection de vos données au sérieux. Cette politique explique quelles informations nous collectons, comment nous les utilisons et les choix dont vous disposez.</p>
+        <h2>1. Données collectées</h2>
+        <ul>
+          <li><strong>Données d'inscription :</strong> nom, adresse courriel, organisation.</li>
+          <li><strong>Données d'utilisation :</strong> pages consultées, filtres appliqués, recherches effectuées.</li>
+          <li><strong>Sources tierces :</strong> données d'inventaire partagées par les détaillants partenaires.</li>
+        </ul>
+        <h2>2. Finalités</h2>
+        <p>Nous utilisons vos données pour fournir les fonctionnalités de veille de prix, personnaliser les alertes, améliorer les performances de nos scrapers et communiquer les mises à jour produit.</p>
+        <h2>3. Conservation</h2>
+        <p>Les données de compte sont conservées tant que votre abonnement est actif. Vous pouvez demander leur suppression via la page « Nous joindre ».</p>
+        <h2>4. Partage</h2>
+        <p>Nous ne vendons pas vos données. Elles peuvent être partagées avec des sous-traitants qui nous aident à l'hébergement, au traitement des paiements et à l'envoi d'alertes, sous réserve d'ententes de confidentialité.</p>
+        <h2>5. Cookies et stockage local</h2>
+        <p>Nous utilisons des cookies techniques et le stockage local pour mémoriser vos préférences et maintenir la session de connexion.</p>
+        <h2>6. Vos droits</h2>
+        <p>Vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour exercer ces droits, écrivez-nous à <a href="mailto:confidentialite@econodeal.ca">confidentialite@econodeal.ca</a>.</p>
+        <h2>7. Sécurité</h2>
+        <p>Nous appliquons des mesures de sécurité techniques (chiffrement en transit, journalisation) et organisationnelles (contrôle d'accès, formation interne) pour protéger vos informations.</p>
+        <p>Dernière mise à jour : 12 septembre 2023.</p>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div>© <span id="yearFooter"></span> EconoDeal · Tous droits réservés</div>
+    <div class="footer-links">
+      <a href="conditions-utilisation.html">Conditions d'utilisation</a>
+      <a href="politique-confidentialite.html">Politique de confidentialité</a>
+      <a href="contact.html">Nous joindre</a>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('yearFooter').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
