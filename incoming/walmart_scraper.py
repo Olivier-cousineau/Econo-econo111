@@ -20,17 +20,33 @@ import asyncio
 import json
 import os
 import random
-import re
 import time
-import unicodedata
-from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Sequence, Set
 from urllib.parse import urljoin
 
 from playwright.async_api import Browser, BrowserContext, Page, TimeoutError, async_playwright
 
-BASE_URL = "https://www.walmart.ca/fr/store/{store_id}/liquidation"
+try:  # Support exécution directe et import en tant que module
+    from incoming.walmart_common import (
+        Deal,
+        Store,
+        build_deal_from_dict,
+        deduplicate_deals,
+        extract_from_state,
+        parse_price,
+        slugify,
+    )
+except ImportError:  # pragma: no cover - fallback pour exécution directe
+    from walmart_common import (
+        Deal,
+        Store,
+        build_deal_from_dict,
+        deduplicate_deals,
+        extract_from_state,
+        parse_price,
+        slugify,
+    )
 DEFAULT_HEADLESS = True
 MAX_CONCURRENT_BROWSERS = 3
 DEFAULT_AGGREGATED_FILENAME = "liquidations_walmart_qc.json"
@@ -52,46 +68,6 @@ DEFAULT_USER_AGENTS = [
 ]
 
 
-@dataclass(slots=True)
-class Store:
-    """Metadata describing a Walmart store."""
-
-    id_store: str
-    ville: str
-    adresse: str = ""
-    slug: Optional[str] = None
-
-    def __post_init__(self) -> None:
-        if not self.slug:
-            self.slug = slugify(self.ville)
-
-    @property
-    def url(self) -> str:
-        return BASE_URL.format(store_id=self.id_store)
-
-
-@dataclass(slots=True)
-class Deal:
-    """Normalized representation of a liquidation product."""
-
-    title: str
-    price: float
-    sale_price: float
-    url: str
-    image: Optional[str] = None
-
-    def to_payload(self, store: Store) -> Dict[str, Any]:
-        return {
-            "title": self.title,
-            "image": self.image or "",
-            "price": round(self.price, 2),
-            "salePrice": round(self.sale_price, 2),
-            "store": "Walmart",
-            "city": store.ville,
-            "url": self.url,
-        }
-
-
 # Liste des 73 magasins Walmart au Québec (ID, nom, ville, etc.)
 # Complétez cette liste avec les identifiants officiels. Vous pouvez aussi créer
 # un fichier JSON ``incoming/walmart_stores.json`` avec le même format pour
@@ -106,16 +82,6 @@ magasins: List[Dict[str, str]] = [
 # aussi fournir une variable ``WALMART_PROXIES`` contenant un JSON (liste de
 # chaînes) pour surcharger cette configuration.
 PROXIES: List[str] = []
-
-
-def slugify(value: str) -> str:
-    """Return an ASCII slug from a city name (e.g. "Saint-Jérôme" -> "saint-jerome")."""
-
-    normalized = unicodedata.normalize("NFKD", value)
-    ascii_only = "".join(ch for ch in normalized if not unicodedata.combining(ch))
-    ascii_only = ascii_only.lower()
-    ascii_only = re.sub(r"[^a-z0-9]+", "-", ascii_only).strip("-")
-    return ascii_only or "store"
 
 
 def load_proxies() -> List[str]:
@@ -212,39 +178,6 @@ async def load_store_page(page: Page, url: str) -> None:
         pass
 
 
-def parse_price(text: Optional[str]) -> Optional[float]:
-    if not text:
-        return None
-    clean = (
-        text.replace("\u00a0", " ")
-        .replace("$", "")
-        .replace("CAD", "")
-        .replace("cda", "")
-        .strip()
-    )
-    clean = clean.replace(" ", "")
-    match = re.search(r"[0-9]+(?:[.,][0-9]{1,2})?", clean)
-    if not match:
-        return None
-    value = match.group(0).replace(",", ".")
-    try:
-        return float(value)
-    except ValueError:
-        return None
-
-
-def deduplicate_deals(deals: Iterable[Deal]) -> List[Deal]:
-    seen: set[str] = set()
-    unique: List[Deal] = []
-    for deal in deals:
-        key = deal.url
-        if key in seen:
-            continue
-        seen.add(key)
-        unique.append(deal)
-    return unique
-
-
 async def query_text(handle, selectors: Iterable[str]) -> Optional[str]:
     for selector in selectors:
         element = await handle.query_selector(selector)
@@ -265,71 +198,6 @@ async def query_attribute(handle, selectors: Iterable[str], attribute: str) -> O
         if value:
             return value
     return None
-
-
-def extract_from_state(raw_state: Dict[str, Any]) -> List[Dict[str, Any]]:
-    """Try to discover product dictionaries within ``raw_state`` recursively."""
-
-    candidates: List[Dict[str, Any]] = []
-
-    def walk(obj: Any) -> None:
-        if isinstance(obj, dict):
-            if {"name", "price", "productId"}.issubset(obj.keys()):
-                candidates.append(obj)
-            for value in obj.values():
-                walk(value)
-        elif isinstance(obj, list):
-            for item in obj:
-                walk(item)
-
-    walk(raw_state)
-    return candidates
-
-
-def build_deal_from_dict(data: Dict[str, Any]) -> Optional[Deal]:
-    title = data.get("name") or data.get("title")
-    if not title:
-        return None
-    url = data.get("productUrl") or data.get("url") or data.get("canonicalUrl")
-    if not url:
-        return None
-
-    regular_price = data.get("price") or data.get("listPrice") or data.get("regularPrice")
-    current_price = data.get("salePrice") or data.get("price") or data.get("offerPrice")
-
-    if isinstance(regular_price, dict):
-        regular_price = (
-            regular_price.get("price")
-            or regular_price.get("amount")
-            or regular_price.get("value")
-        )
-    if isinstance(current_price, dict):
-        current_price = (
-            current_price.get("price")
-            or current_price.get("amount")
-            or current_price.get("value")
-        )
-
-    price = parse_price(str(regular_price)) if regular_price is not None else None
-    sale_price = parse_price(str(current_price)) if current_price is not None else None
-
-    if price is None and sale_price is None:
-        return None
-    if price is None:
-        price = sale_price
-    if sale_price is None:
-        sale_price = price
-
-    image = None
-    images = data.get("image") or data.get("images") or []
-    if isinstance(images, list) and images:
-        image = images[0]
-    elif isinstance(images, dict):
-        image = images.get("main") or images.get("large") or images.get("thumbnail")
-    elif isinstance(images, str):
-        image = images
-
-    return Deal(title=title.strip(), price=price, sale_price=sale_price, url=url, image=image)
 
 
 async def extract_products_from_dom(page: Page) -> List[Deal]:

@@ -33,6 +33,16 @@ Quelques options pratiques :
 
 Le script crée un fichier `liquidations_walmart_qc.json` (agrégat global) et un fichier JSON par magasin dans `data/walmart/` (ou dans le dossier fourni via `--output-dir`).
 
+### Variante HTTP (sans navigateur)
+
+Pour un environnement plus contraint (ex.: exécution locale rapide ou proxy HTTP dédié), le script `incoming/walmart_requests_scraper.py` effectue la même extraction à l'aide de requêtes `requests`/`BeautifulSoup`.
+
+```bash
+python incoming/walmart_requests_scraper.py --store saint-jerome
+```
+
+Les options (`--store`, `--output-dir`, `--aggregated-path`, etc.) sont identiques à la version Playwright. Ce scraper repose sur la disponibilité du JSON `__NEXT_DATA__` dans la page et peut échouer si Walmart modifie la structure. En contrepartie, il démarre en quelques secondes et nécessite moins de ressources.
+
 ## Automatisation
 
 Une action GitHub (`.github/workflows/walmart-scraper.yml`) planifie l'exécution chaque jour à 21h UTC. Pour l'activer :
