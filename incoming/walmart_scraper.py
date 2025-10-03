@@ -1,8 +1,8 @@
 """Scraper Walmart liquidation pages and export JSON feeds for the static site.
 
 Le script ouvre la page liquidation de chaque magasin Walmart défini dans
-``magasins`` (ou ``walmart_stores.json``) et extrait les produits en solde.
-Chaque exécution génère:
+``walmart_stores.json`` et extrait les produits en solde. Chaque exécution
+génère:
 
 * ``data/walmart/<ville>.json`` – utilisable directement par le site statique
 * ``liquidations_walmart_qc.json`` – agrégat de toutes les liquidations
@@ -21,6 +21,8 @@ import json
 import os
 import random
 import time
+from collections import Counter
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Sequence, Set
 from urllib.parse import urljoin
@@ -68,15 +70,11 @@ DEFAULT_USER_AGENTS = [
 ]
 
 
-# Liste des 73 magasins Walmart au Québec (ID, nom, ville, etc.)
-# Complétez cette liste avec les identifiants officiels. Vous pouvez aussi créer
-# un fichier JSON ``incoming/walmart_stores.json`` avec le même format pour
-# personnaliser la configuration sans modifier le code source.
-magasins: List[Dict[str, str]] = [
-    {"id_store": "1001", "ville": "Montréal", "adresse": "Adresse..."},
-    {"id_store": "1002", "ville": "Laval", "adresse": "Adresse..."},
-    {"id_store": "1003", "ville": "Saint-Jérôme", "adresse": "Adresse..."},
-]
+# Chemin du fichier contenant la liste exhaustive des magasins Walmart. Le
+# fichier ``incoming/walmart_stores.json`` est généré à partir de la source
+# ``incoming/walmart_stores_raw.tsv`` et doit être gardé à jour lorsque de
+# nouveaux magasins sont ajoutés.
+STORES_JSON = Path(__file__).with_name("walmart_stores.json")
 
 # Liste de proxies résidentiels à utiliser par défaut. L'environnement peut
 # aussi fournir une variable ``WALMART_PROXIES`` contenant un JSON (liste de
@@ -102,18 +100,53 @@ def load_proxies() -> List[str]:
     return PROXIES
 
 
+def _normalise_store_payload(item: Dict[str, Any]) -> Dict[str, Any]:
+    if not isinstance(item, dict):
+        raise ValueError("Chaque magasin doit être un objet JSON.")
+
+    if "id_store" not in item:
+        raise ValueError("Un magasin du fichier JSON est dépourvu de 'id_store'.")
+    if "ville" not in item:
+        raise ValueError("Un magasin du fichier JSON est dépourvu de 'ville'.")
+
+    normalised = dict(item)
+    normalised["id_store"] = str(normalised["id_store"])
+    normalised["ville"] = str(normalised["ville"])
+    if "slug" in normalised and normalised["slug"] is not None:
+        normalised["slug"] = str(normalised["slug"])
+    if "adresse" in normalised and normalised["adresse"] is not None:
+        normalised["adresse"] = str(normalised["adresse"])
+
+    return normalised
+
+
+def _validate_unique_slugs(stores: Sequence[Store]) -> None:
+    slugs = [store.slug for store in stores if store.slug]
+    duplicates = [slug for slug, count in Counter(slugs).items() if count > 1]
+    if duplicates:
+        raise ValueError(
+            "Plusieurs magasins partagent le même slug: " + ", ".join(sorted(duplicates))
+        )
+
+
 def load_stores() -> List[Store]:
-    """Return the list of stores declared in the code or in ``walmart_stores.json``."""
+    """Charge la liste des magasins Walmart à partir de ``walmart_stores.json``."""
 
-    config_path = Path(__file__).with_name("walmart_stores.json")
-    if config_path.exists():
-        with config_path.open("r", encoding="utf-8") as fh:
-            payload = json.load(fh)
-        if not isinstance(payload, list):
-            raise ValueError("walmart_stores.json doit contenir une liste d'objets magasin.")
-        return [Store(**item) for item in payload]
+    if not STORES_JSON.exists():
+        raise FileNotFoundError(
+            "Le fichier walmart_stores.json est introuvable. Générer le fichier via "
+            "incoming/walmart_stores_raw.tsv avant d'exécuter le scraper."
+        )
 
-    return [Store(**item) for item in magasins]
+    with STORES_JSON.open("r", encoding="utf-8") as fh:
+        payload = json.load(fh)
+
+    if not isinstance(payload, list):
+        raise ValueError("walmart_stores.json doit contenir une liste d'objets magasin.")
+
+    stores = [Store(**_normalise_store_payload(item)) for item in payload]
+    _validate_unique_slugs(stores)
+    return stores
 
 
 def ensure_output_paths(base_dir: Optional[Path] = None) -> Path:

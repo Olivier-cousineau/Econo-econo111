@@ -48,7 +48,7 @@ Les options (`--store`, `--output-dir`, `--aggregated-path`, etc.) sont identiqu
 Une action GitHub (`.github/workflows/walmart-scraper.yml`) planifie l'exécution chaque jour à 21h UTC. Pour l'activer :
 
 1. Ajoutez un secret `WALMART_PROXIES` contenant une liste JSON de proxies résidentiels.
-2. Personnalisez `incoming/walmart_stores.json` ou la constante `magasins` dans le script.
+2. Mettez à jour `incoming/walmart_stores.json` (via `incoming/walmart_stores_raw.tsv`).
 3. Déclenchez manuellement le workflow via l'onglet **Actions** si nécessaire (`Run workflow`).
 
 Chaque exécution met à jour les JSON par magasin dans `data/walmart/` et attache un artefact `liquidations_walmart_qc.json` téléchargeable depuis GitHub Actions.
