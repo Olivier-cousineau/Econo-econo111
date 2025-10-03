@@ -492,9 +492,22 @@
       return Number.isFinite(parsed) && parsed >= 0 ? parsed : 0;
     }
 
+    const CLIENT_COUNT_BASELINE_KEY = 'econodealClientCountBaseline';
+    const CLIENT_COUNT_REMOTE_URL = 'data/metrics.json';
+
     function setClientCount(value){
       const normalized = Math.max(0, value);
       safeSet('econodealClientCount', String(normalized));
+      return normalized;
+    }
+
+    function getClientCountBaseline(){
+      return parseCount(safeGet(CLIENT_COUNT_BASELINE_KEY));
+    }
+
+    function setClientCountBaseline(value){
+      const normalized = Math.max(0, value);
+      safeSet(CLIENT_COUNT_BASELINE_KEY, String(normalized));
       return normalized;
     }
 
@@ -511,7 +524,8 @@
     function resolveClientCount(){
       const stored = parseCount(safeGet('econodealClientCount'));
       const derived = deriveClientCountFromRegistrations();
-      const resolved = Math.max(stored, derived);
+      const baseline = getClientCountBaseline();
+      const resolved = Math.max(stored, derived, baseline);
       if(resolved !== stored){
         setClientCount(resolved);
       }
@@ -541,8 +555,29 @@
       updateClientCountDisplays();
     }
 
+    async function fetchRemoteClientCount(){
+      try{
+        const response = await fetch(CLIENT_COUNT_REMOTE_URL, {cache:'no-store'});
+        if(!response?.ok) return null;
+        const payload = await response.json();
+        const remote = parseCount(payload?.clientCount ?? payload?.client_count ?? payload?.count);
+        if(remote > 0){
+          const previousBaseline = getClientCountBaseline();
+          if(remote !== previousBaseline){
+            setClientCountBaseline(remote);
+          }
+          updateClientCountDisplays();
+        }
+        return remote;
+      }catch(error){
+        console.warn('Impossible de charger le nombre total de membres', error);
+        return null;
+      }
+    }
+
     resolveClientCount();
     updateClientCountDisplays();
+    fetchRemoteClientCount();
 
     const alreadyRegistered = safeGet('econodealClientRegistered') === 'true';
     if(alreadyRegistered){
@@ -581,7 +616,7 @@
 
     window.addEventListener('storage', (event) => {
       if(!event) return;
-      if(event.key === 'econodealRegistrations' || event.key === 'econodealClientCount'){
+      if(event.key === 'econodealRegistrations' || event.key === 'econodealClientCount' || event.key === CLIENT_COUNT_BASELINE_KEY){
         updateClientCountDisplays();
       }
     });
