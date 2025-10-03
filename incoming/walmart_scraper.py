@@ -15,6 +15,7 @@ en erreur n'empêche pas les autres d'être traités).
 
 from __future__ import annotations
 
+import argparse
 import asyncio
 import json
 import os
@@ -24,7 +25,7 @@ import time
 import unicodedata
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, Optional
+from typing import Any, Dict, Iterable, List, Optional, Sequence, Set
 from urllib.parse import urljoin
 
 from playwright.async_api import Browser, BrowserContext, Page, TimeoutError, async_playwright
@@ -32,6 +33,7 @@ from playwright.async_api import Browser, BrowserContext, Page, TimeoutError, as
 BASE_URL = "https://www.walmart.ca/fr/store/{store_id}/liquidation"
 DEFAULT_HEADLESS = True
 MAX_CONCURRENT_BROWSERS = 3
+DEFAULT_AGGREGATED_FILENAME = "liquidations_walmart_qc.json"
 THROTTLE_SECONDS = (2.0, 5.0)
 DEFAULT_USER_AGENTS = [
     # Desktop Chrome-like UA strings (rotated pour limiter la détection bot)
@@ -148,10 +150,13 @@ def load_stores() -> List[Store]:
     return [Store(**item) for item in magasins]
 
 
-def ensure_output_paths() -> Path:
-    """Ensure ``data/walmart`` exists and return its path."""
+def ensure_output_paths(base_dir: Optional[Path] = None) -> Path:
+    """Ensure the per-store output directory exists and return its path."""
 
-    data_dir = Path(__file__).resolve().parents[1] / "data" / "walmart"
+    if base_dir is None:
+        data_dir = Path(__file__).resolve().parents[1] / "data" / "walmart"
+    else:
+        data_dir = base_dir
     data_dir.mkdir(parents=True, exist_ok=True)
     return data_dir
 
@@ -172,9 +177,9 @@ def pick_user_agent() -> str:
     return random.choice(DEFAULT_USER_AGENTS)
 
 
-async def create_browser(playwright, proxy: Optional[str]) -> Browser:
+async def create_browser(playwright, proxy: Optional[str], *, headless: bool) -> Browser:
     launch_kwargs: Dict[str, Any] = {
-        "headless": DEFAULT_HEADLESS,
+        "headless": headless,
         "args": [
             "--disable-blink-features=AutomationControlled",
             "--disable-web-security",
@@ -410,7 +415,14 @@ class ScrapeResult:
     error: Optional[str] = None
 
 
-async def scrape_store(playwright, store: Store, proxy_pool: List[str], semaphore: asyncio.Semaphore) -> ScrapeResult:
+async def scrape_store(
+    playwright,
+    store: Store,
+    proxy_pool: List[str],
+    semaphore: asyncio.Semaphore,
+    *,
+    headless: bool,
+) -> ScrapeResult:
     proxy = pick_proxy(proxy_pool)
     start_time = time.monotonic()
     browser: Optional[Browser] = None
@@ -419,7 +431,7 @@ async def scrape_store(playwright, store: Store, proxy_pool: List[str], semaphor
 
     try:
         async with semaphore:
-            browser = await create_browser(playwright, proxy)
+            browser = await create_browser(playwright, proxy, headless=headless)
             context = await prepare_context(browser)
             page = await context.new_page()
             await load_store_page(page, store.url)
@@ -453,18 +465,68 @@ def write_json(path: Path, data: Any) -> None:
         json.dump(data, fh, ensure_ascii=False, indent=2)
 
 
-async def run() -> None:
+def normalize_store_token(value: str) -> Set[str]:
+    """Return potential identifiers for a store token (slug, lowercase, id)."""
+
+    cleaned = value.strip().lower()
+    if not cleaned:
+        return set()
+    return {cleaned, slugify(cleaned)}
+
+
+def store_matches_filters(store: Store, filters: Set[str]) -> bool:
+    """Check if a ``Store`` matches any of the provided filters."""
+
+    if not filters:
+        return True
+
+    candidates: Set[str] = set()
+    candidates.add(store.id_store.lower())
+    if store.slug:
+        candidates.add(store.slug.lower())
+    candidates.add(slugify(store.ville))
+    candidates.add(store.ville.lower())
+
+    return bool(candidates & filters)
+
+
+async def run(
+    *,
+    headless: bool = DEFAULT_HEADLESS,
+    store_filters: Optional[Set[str]] = None,
+    output_dir: Optional[Path] = None,
+    aggregated_path: Optional[Path] = None,
+    max_concurrent_browsers: int = MAX_CONCURRENT_BROWSERS,
+) -> None:
     proxy_pool = load_proxies()
     stores = load_stores()
     if not stores:
         raise ValueError("Aucun magasin Walmart n'a été configuré.")
 
-    ensure_output_paths()
+    normalized_filters: Set[str] = set()
+    if store_filters:
+        for item in store_filters:
+            normalized_filters.update(normalize_store_token(item))
+
+    if normalized_filters:
+        stores = [store for store in stores if store_matches_filters(store, normalized_filters)]
+        if not stores:
+            raise ValueError("Aucun magasin ne correspond aux filtres fournis.")
+
+    per_store_dir = ensure_output_paths(output_dir)
+    aggregated_target = aggregated_path or Path(DEFAULT_AGGREGATED_FILENAME)
 
     async with async_playwright() as playwright:
-        semaphore = asyncio.Semaphore(MAX_CONCURRENT_BROWSERS)
+        semaphore = asyncio.Semaphore(max_concurrent_browsers)
         tasks = [
-            scrape_store(playwright, store, proxy_pool, semaphore) for store in stores
+            scrape_store(
+                playwright,
+                store,
+                proxy_pool,
+                semaphore,
+                headless=headless,
+            )
+            for store in stores
         ]
         results = await asyncio.gather(*tasks)
 
@@ -475,17 +537,70 @@ async def run() -> None:
         if result.error:
             print(f"⚠️  {result.store.ville}: {result.error}")
             continue
-        store_path = Path(__file__).resolve().parents[1] / "data" / "walmart" / f"{result.store.slug}.json"
+        store_path = per_store_dir / f"{result.store.slug}.json"
         store_payload = per_store_data.get(result.store.slug, [])
         write_json(store_path, store_payload)
         aggregated.extend(store_payload)
 
-    write_json(Path("liquidations_walmart_qc.json"), aggregated)
-    print(f"🗂️  Export terminé: {len(aggregated)} produits sur {len(results)} magasins configurés.")
+    write_json(aggregated_target, aggregated)
+    processed_stores = len([result for result in results if not result.error])
+    print(
+        "🗂️  Export terminé: "
+        f"{len(aggregated)} produits sur {processed_stores}/{len(results)} magasins traités."
+    )
+
+
+def parse_arguments(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
+    """Parse CLI arguments for the scraper."""
+
+    parser = argparse.ArgumentParser(description="Scraper les liquidations Walmart au Québec.")
+    parser.add_argument(
+        "--store",
+        "-s",
+        action="append",
+        dest="stores",
+        help="Filtrer les magasins par ID, ville ou slug (utilisable plusieurs fois).",
+    )
+    parser.add_argument(
+        "--output-dir",
+        type=Path,
+        default=None,
+        help="Dossier de sortie pour les fichiers JSON par magasin (défaut: data/walmart).",
+    )
+    parser.add_argument(
+        "--aggregated-path",
+        type=Path,
+        default=None,
+        help="Chemin du fichier JSON agrégé (défaut: liquidations_walmart_qc.json).",
+    )
+    parser.add_argument(
+        "--max-concurrent-browsers",
+        type=int,
+        default=MAX_CONCURRENT_BROWSERS,
+        help="Nombre maximum de navigateurs Playwright exécutés en parallèle.",
+    )
+    parser.add_argument(
+        "--no-headless",
+        dest="headless",
+        action="store_false",
+        help="Désactive le mode headless pour déboguer le navigateur.",
+    )
+    parser.set_defaults(headless=DEFAULT_HEADLESS)
+    return parser.parse_args(argv)
 
 
 def main() -> None:
-    asyncio.run(run())
+    args = parse_arguments()
+    store_filters = set(args.stores) if args.stores else None
+    asyncio.run(
+        run(
+            headless=args.headless,
+            store_filters=store_filters,
+            output_dir=args.output_dir,
+            aggregated_path=args.aggregated_path,
+            max_concurrent_browsers=args.max_concurrent_browsers,
+        )
+    )
 
 
 if __name__ == "__main__":
