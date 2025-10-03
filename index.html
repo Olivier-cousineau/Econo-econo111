@@ -837,9 +837,18 @@
       {label: 'Online — Walmart #7274', slug: 'online-7274', city: 'Online', address: '', distanceKm: 8774.6, hasData: false}
     ];
 
+    const HOME_DEPOT_CANADA_BRANCHES = WALMART_QUEBEC_BRANCHES.filter(branch => branch.slug !== 'online-7274').map(branch => {
+      const hasData = ['saint-jerome', 'laval', 'montreal'].includes(branch.slug);
+      return {
+        ...branch,
+        label: branch.label.replace('Walmart', 'Home Depot'),
+        hasData
+      };
+    });
+
     const STORES = [
       {label:'Best Buy', slug:'best-buy', branches: fullBestBuyBranches()},
-      {label:'Home Depot', slug:'home-depot', branches: baseBranches()},
+      {label:'Home Depot', slug:'home-depot', branches: HOME_DEPOT_CANADA_BRANCHES},
       {label:'Walmart', slug:'walmart', branches: WALMART_QUEBEC_BRANCHES},
       {label:'Canadian Tire', slug:'canadian-tire', branches: baseBranches()},
       {label:'Rona', slug:'rona', branches: baseBranches()},

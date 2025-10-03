@@ -505,11 +505,20 @@
       {label: 'COURTENAY — Walmart #7177', slug: 'courtenay-7177', city: 'Courtenay', address: '388 Lerwick Rd., Courtenay, BC, V9N 9E5', distanceKm: 3762.3, hasData: false},
       {label: 'CAMPBELL RIVER — Walmart #7221', slug: 'campbell-river-7221', city: 'Campbell River', address: '1482 Island Highway, Campbell River, BC, V9W 8C9', distanceKm: 3774.7, hasData: false},
       {label: 'Online — Walmart #7274', slug: 'online-7274', city: 'Online', address: '', distanceKm: 8774.6, hasData: false}
-    ];
+      ];
+
+      const HOME_DEPOT_CANADA_BRANCHES = WALMART_QUEBEC_BRANCHES.filter(branch => branch.slug !== 'online-7274').map(branch => {
+        const hasData = ['saint-jerome', 'laval', 'montreal'].includes(branch.slug);
+        return {
+          ...branch,
+          label: branch.label.replace('Walmart', 'Home Depot'),
+          hasData
+        };
+      });
 
       const STORES = [
         {label:'Best Buy', slug:'best-buy', branches: fullBestBuyBranches()},
-        {label:'Home Depot', slug:'home-depot', branches: baseBranches()},
+        {label:'Home Depot', slug:'home-depot', branches: HOME_DEPOT_CANADA_BRANCHES},
         {label:'Walmart', slug:'walmart', branches: WALMART_QUEBEC_BRANCHES},
         {label:'Canadian Tire', slug:'canadian-tire', branches: baseBranches()},
         {label:'Rona', slug:'rona', branches: baseBranches()},
