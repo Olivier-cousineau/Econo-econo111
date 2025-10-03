@@ -143,25 +143,31 @@
     .store-menu-item:hover{background:linear-gradient(160deg,rgba(59,130,246,.2),rgba(34,197,94,.18));box-shadow:0 16px 32px rgba(59,130,246,.28);transform:translateY(-4px)}
     .store-menu-label{font-size:15px;letter-spacing:-.01em}
     .store-menu-note{font-size:13px;color:var(--muted);font-weight:500}
-    header .container{display:grid;gap:12px}
+    .header-layout{display:grid;grid-template-columns:1fr auto;align-items:start;gap:16px}
+    @media (max-width:960px){.header-layout{grid-template-columns:1fr}}
     .header-top{justify-content:space-between;align-items:center;gap:16px}
     .store-ads{border:1px solid rgba(59,130,246,.28);background:linear-gradient(200deg,rgba(6,12,24,.94),rgba(12,24,44,.9));box-shadow:0 16px 32px rgba(2,6,23,.55);border-radius:18px;padding:16px 18px;display:flex;flex-direction:column;gap:12px;overflow:hidden;margin-top:6px}
     .store-ads[aria-hidden="true"]{display:none}
+    .store-ads{width:280px;position:relative}
     .store-ads-header{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:rgba(148,163,184,.9);font-weight:700}
-    .store-ads-window{width:100%;overflow:hidden;mask-image:linear-gradient(90deg,transparent 0%,rgba(255,255,255,.9) 10%,rgba(255,255,255,.9) 90%,transparent 100%)}
-    .store-ads-track{display:flex;align-items:stretch;gap:12px;animation:storeAdsScroll 28s linear infinite;will-change:transform;width:max-content}
-    .store-ads:hover .store-ads-track{animation-play-state:paused}
-    .store-ads-item{flex:0 0 auto;min-width:200px;padding:14px 16px;border-radius:12px;border:1px solid rgba(59,130,246,.24);background:linear-gradient(160deg,rgba(34,197,94,.18),rgba(59,130,246,.16));box-shadow:0 12px 30px rgba(15,23,42,.45);display:flex;flex-direction:column;gap:4px;color:var(--text)}
+    .store-ads-spotlight{position:relative;min-height:90px}
+    .store-ads-item{position:absolute;inset:0;border-radius:12px;border:1px solid rgba(59,130,246,.24);background:linear-gradient(160deg,rgba(34,197,94,.18),rgba(59,130,246,.16));box-shadow:0 12px 30px rgba(15,23,42,.45);display:flex;flex-direction:column;gap:4px;color:var(--text);padding:14px 16px;opacity:0;transform:translateY(8px);transition:opacity .45s ease,transform .45s ease}
+    .store-ads-item.is-active{opacity:1;transform:translateY(0)}
+    .store-ads--static .store-ads-spotlight{display:grid;gap:10px;min-height:auto}
+    .store-ads--static .store-ads-item{position:static;opacity:1;transform:none}
+    .store-ads--static .store-ads-dots{display:none}
     .store-ads-name{font-weight:700;letter-spacing:-.01em}
     .store-ads-coverage{font-size:12px;color:var(--muted)}
-    @keyframes storeAdsScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+    .store-ads-dots{display:flex;gap:6px;margin-top:8px}
+    .store-ads-dot{width:6px;height:6px;border-radius:50%;background:rgba(148,163,184,.35);transition:background .3s ease,transform .3s ease}
+    .store-ads-dot.is-active{background:rgba(34,197,94,.65);transform:scale(1.3)}
+    @media (max-width:1100px){.store-ads{display:none !important}}
+    @media (max-width:960px){.store-ads{width:100%;margin-top:0}}
     @media (max-width:720px){
       .store-ads{padding:14px}
-      .store-ads-item{min-width:160px}
     }
     @media (prefers-reduced-motion:reduce){
-      .store-ads-track{animation:none}
-      .store-ads-window{overflow-x:auto;mask-image:none}
+      .store-ads-item{transition:none}
     }
   </style>
 </head>
@@ -194,7 +200,7 @@
     </div>
   </div>
   <header>
-    <div class="container">
+    <div class="container header-layout">
       <div class="row header-top">
         <div class="row" style="gap:16px;align-items:center;flex-wrap:wrap">
           <a class="brand" href="index.html">
@@ -219,7 +225,7 @@
           <div class="muted">© <span id="year"></span></div>
         </div>
       </div>
-      <aside id="storeAds" class="store-ads" aria-label="Publicités des magasins" aria-hidden="true"></aside>
+      <aside id="storeAds" class="store-ads" aria-live="polite" aria-label="Magasins en vedette" aria-hidden="true"></aside>
     </div>
   </header>
 
@@ -732,8 +738,23 @@
       {label:"BJ's Wholesale Club", description:'Inventaire régional à forte rotation'}
     ];
 
+    let storeAdsRotationTimer = null;
+
+    function stopStoreAdsRotation(){
+      if(storeAdsRotationTimer){
+        clearInterval(storeAdsRotationTimer);
+        storeAdsRotationTimer = null;
+      }
+    }
+
+    function startStoreAdsRotation(callback){
+      stopStoreAdsRotation();
+      storeAdsRotationTimer = window.setInterval(callback, 4500);
+    }
+
     function renderStoreAds(){
       if(!storeAdsContainer) return;
+      stopStoreAdsRotation();
       const items = STORES
         .map(store => {
           const label = store?.label;
@@ -747,21 +768,82 @@
       if(items.length === 0){
         storeAdsContainer.setAttribute('aria-hidden', 'true');
         storeAdsContainer.innerHTML = '';
+        storeAdsContainer.classList.remove('store-ads--static');
+        storeAdsContainer.onmouseenter = null;
+        storeAdsContainer.onmouseleave = null;
+        storeAdsContainer.onfocusin = null;
+        storeAdsContainer.onfocusout = null;
         return;
       }
-      const duplicates = items.concat(items);
-      const duration = Math.max(items.length * 4, 24);
-      const list = duplicates.map(item => {
+      const list = items.map((item, index) => {
         const coverage = item.coverage ? `<span class="store-ads-coverage">${item.coverage}</span>` : '';
-        return `<div class="store-ads-item" role="text"><span class="store-ads-name">${item.label}</span>${coverage}</div>`;
+        const isActive = index === 0;
+        return `<div class="store-ads-item${isActive ? ' is-active' : ''}" role="group" aria-hidden="${isActive ? 'false' : 'true'}"><span class="store-ads-name">${item.label}</span>${coverage}</div>`;
       }).join('');
+      const dots = items.length > 1
+        ? `<div class="store-ads-dots" role="presentation">${items.map((_, index) => `<span class="store-ads-dot${index === 0 ? ' is-active' : ''}" aria-hidden="true"></span>`).join('')}</div>`
+        : '';
       storeAdsContainer.innerHTML = `
         <div class="store-ads-header">Magasins en vedette</div>
-        <div class="store-ads-window">
-          <div class="store-ads-track" style="animation-duration:${duration}s">${list}</div>
-        </div>
+        <div class="store-ads-spotlight">${list}</div>
+        ${dots}
       `;
       storeAdsContainer.removeAttribute('aria-hidden');
+
+      const slides = Array.from(storeAdsContainer.querySelectorAll('.store-ads-item'));
+      const dotEls = Array.from(storeAdsContainer.querySelectorAll('.store-ads-dot'));
+      if(slides.length === 0) return;
+
+      const shouldReduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if(shouldReduceMotion){
+        storeAdsContainer.classList.add('store-ads--static');
+        slides.forEach(slide => {
+          slide.classList.add('is-active');
+          slide.setAttribute('aria-hidden', 'false');
+        });
+        stopStoreAdsRotation();
+        storeAdsContainer.onmouseenter = null;
+        storeAdsContainer.onmouseleave = null;
+        storeAdsContainer.onfocusin = null;
+        storeAdsContainer.onfocusout = null;
+        return;
+      }
+
+      storeAdsContainer.classList.remove('store-ads--static');
+
+      let activeIndex = 0;
+
+      function showSlide(nextIndex){
+        activeIndex = nextIndex % slides.length;
+        slides.forEach((slide, idx) => {
+          const isActive = idx === activeIndex;
+          slide.classList.toggle('is-active', isActive);
+          slide.setAttribute('aria-hidden', isActive ? 'false' : 'true');
+        });
+        dotEls.forEach((dot, idx) => {
+          dot.classList.toggle('is-active', idx === activeIndex);
+        });
+      }
+
+      showSlide(0);
+
+      if(slides.length > 1){
+        const advance = () => showSlide(activeIndex + 1);
+        startStoreAdsRotation(advance);
+
+        const resume = () => startStoreAdsRotation(advance);
+
+        storeAdsContainer.onmouseenter = stopStoreAdsRotation;
+        storeAdsContainer.onfocusin = stopStoreAdsRotation;
+        storeAdsContainer.onmouseleave = resume;
+        storeAdsContainer.onfocusout = resume;
+      }else{
+        storeAdsContainer.onmouseenter = null;
+        storeAdsContainer.onfocusin = null;
+        storeAdsContainer.onmouseleave = null;
+        storeAdsContainer.onfocusout = null;
+      }
     }
 
     renderStoreAds();
