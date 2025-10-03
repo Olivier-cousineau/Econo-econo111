@@ -1840,6 +1840,49 @@
       }
     }
 
+    async function loadRonaDirectory(){
+      const store = STORES.find(entry => entry.slug === 'rona');
+      if(!store) return;
+      try{
+        const res = await fetch('data/rona/stores.json', {cache:'no-store'});
+        if(!res.ok) return;
+        const json = await res.json();
+        if(!Array.isArray(json)) return;
+        const seen = new Map();
+        for(const branch of store.branches ?? []){
+          if(!branch?.slug) continue;
+          seen.set(branch.slug, {...branch, hasData: branch.hasData !== false});
+        }
+        for(const entry of json){
+          if(!entry || typeof entry !== 'object') continue;
+          const rawSlug = typeof entry.slug === 'string' && entry.slug ? entry.slug : slugify(entry.label || entry.city || entry.storeNumber);
+          if(!rawSlug) continue;
+          const label = (entry.label || entry.city || rawSlug).trim();
+          const city = (entry.city || label).trim();
+          const province = entry.province || '';
+          const storeNumber = entry.storeNumber || '';
+          const hasData = entry.hasData === true;
+          const previous = seen.get(rawSlug) || {};
+          seen.set(rawSlug, {
+            ...previous,
+            label,
+            slug: rawSlug,
+            city,
+            province,
+            storeNumber,
+            hasData: previous.hasData === true || hasData
+          });
+        }
+        store.branches = Array.from(seen.values()).sort((a,b)=>a.label.localeCompare(b.label,'fr'));
+        renderStoreAds();
+        if(storeSelect && storeSelect.value === 'rona'){
+          setCityOptions('rona', true);
+        }
+      }catch(err){
+        console.warn('Impossible de charger les succursales Rona', err);
+      }
+    }
+
     async function loadCanadianTireDirectory(){
       const store = STORES.find(entry => entry.slug === 'canadian-tire');
       if(!store) return;
@@ -2003,6 +2046,7 @@
     });
 
     // Démarrage
+    await loadRonaDirectory();
     await loadCanadianTireDirectory();
     const defaultStore = getStoreByIdentifier(DEFAULT_FILTERS.store);
     const defaultStoreValue = defaultStore?.slug || '';
