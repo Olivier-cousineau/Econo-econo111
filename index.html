@@ -46,6 +46,31 @@
     .country-toggle .country-button.active,.country-toggle .country-button[aria-pressed="true"]{background:linear-gradient(120deg,rgba(34,197,94,.3),rgba(59,130,246,.28));color:#fff;box-shadow:0 6px 18px rgba(59,130,246,.25)}
     .country-toggle .country-button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
     select:focus,input[type="range"]:focus,button:focus,.nav-button:focus{outline:2px solid var(--accent);outline-offset:1px}
+    .hero{position:relative;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:36px;align-items:center;padding:48px 0 28px}
+    .hero::before{content:"";position:absolute;inset:-18% -40% -20% -30%;background:radial-gradient(circle at 20% 20%,rgba(34,197,94,.14),transparent 60%),radial-gradient(circle at 80% 40%,rgba(59,130,246,.18),transparent 65%);filter:blur(50px);opacity:.9;z-index:0}
+    .hero-content{position:relative;z-index:1;display:grid;gap:18px}
+    .hero-kicker{display:inline-flex;align-items:center;gap:8px;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.35);color:#bbf7d0;padding:6px 12px;border-radius:999px;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+    .hero h1{margin:0;font-size:44px;line-height:1.08;letter-spacing:-.01em}
+    .hero p{margin:0;font-size:16px;line-height:1.75;color:rgba(226,232,240,.82)}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+    .hero-actions .btn-primary{width:auto;padding:12px 20px;font-size:15px}
+    .hero-actions .btn-secondary{width:auto;padding:12px 20px;font-size:15px}
+    .hero-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:10px 0 0;padding:0;list-style:none}
+    .hero-stat{position:relative;background:linear-gradient(140deg,rgba(34,197,94,.12),rgba(59,130,246,.12));border:1px solid rgba(59,130,246,.3);border-radius:14px;padding:14px 16px;display:grid;gap:2px;box-shadow:0 16px 34px rgba(15,23,42,.45)}
+    .hero-stat strong{font-size:22px;color:#bbf7d0;letter-spacing:-.01em}
+    .hero-stat span{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(148,163,184,.9);font-weight:600}
+    .hero-preview{position:relative;z-index:1;display:grid;gap:16px}
+    .hero-preview-card{background:linear-gradient(220deg,rgba(8,17,34,.92),rgba(12,23,46,.88));border:1px solid rgba(59,130,246,.28);border-radius:20px;padding:24px;box-shadow:0 24px 58px rgba(2,6,23,.7);display:grid;gap:18px;overflow:hidden}
+    .hero-preview-card::before{content:"";position:absolute;inset:auto -40% -40% auto;width:280px;height:280px;background:radial-gradient(circle,rgba(59,130,246,.28),transparent 65%);filter:blur(32px);opacity:.55}
+    .hero-preview-card header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .hero-preview-card header span{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:rgba(148,163,184,.88);font-weight:700}
+    .hero-preview-card h2{margin:0;font-size:26px;letter-spacing:-.01em}
+    .hero-preview-card p{margin:0;font-size:14px;color:rgba(203,213,225,.82);line-height:1.6}
+    .hero-preview-list{list-style:none;margin:0;display:grid;gap:10px;padding:0}
+    .hero-preview-item{display:flex;align-items:center;gap:12px;background:rgba(59,130,246,.12);border:1px solid rgba(59,130,246,.28);border-radius:12px;padding:12px 14px;font-size:13px;color:rgba(226,232,240,.86);box-shadow:0 12px 28px rgba(15,23,42,.45)}
+    .hero-preview-item span{display:inline-flex;width:28px;height:28px;border-radius:8px;align-items:center;justify-content:center;background:linear-gradient(140deg,rgba(34,197,94,.42),rgba(59,130,246,.38));color:#fff;font-weight:700}
+    @media (max-width:980px){.hero{grid-template-columns:1fr;gap:32px;text-align:center}.hero-actions{justify-content:center}.hero-stats{grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}.hero-preview-card header{justify-content:center}.hero-preview-card h2{font-size:24px}}
+    @media (max-width:560px){.hero h1{font-size:34px}.hero-actions .btn-primary,.hero-actions .btn-secondary{width:100%;justify-content:center}}
     .filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;background:linear-gradient(160deg,rgba(11,19,36,.8),rgba(22,35,58,.72));border:1px solid rgba(59,130,246,.18);padding:16px;border-radius:16px;box-shadow:0 12px 32px rgba(2,6,23,.45)}
     .field-helper{font-size:12px;color:var(--muted);margin:6px 0 0}
     .field-helper.error{color:#fca5a5}
@@ -230,6 +255,37 @@
   </header>
 
   <main class="container">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-content">
+        <span class="hero-kicker">Plateforme d'arbitrage Amazon</span>
+        <h1 id="heroTitle">Débloquez les meilleures liquidations pour propulser vos listings</h1>
+        <p>Centralisez vos recherches produits, connectez vos fournisseurs clés et laissez nos signaux IA repérer les rabais les plus rentables pour Amazon.ca, Amazon.com et l'Europe.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#search">Explorer les inventaires</a>
+          <a class="btn btn-secondary" href="#amazon-sellers">Voir les avantages</a>
+        </div>
+        <ul class="hero-stats">
+          <li class="hero-stat"><strong>+4 500</strong><span>Rabais actifs</span></li>
+          <li class="hero-stat"><strong>97 %</strong><span>Fiches Amazon validées</span></li>
+          <li class="hero-stat"><strong>12 h</strong><span>Gain moyen / semaine</span></li>
+        </ul>
+      </div>
+      <div class="hero-preview" aria-hidden="true">
+        <article class="hero-preview-card">
+          <header>
+            <span>Instantané</span>
+            <div class="badge" style="margin:0">Flux Canada</div>
+          </header>
+          <h2>Opportunités en lumière</h2>
+          <p>Surveillez en temps réel les écarts de prix exploitables entre vos marchands favoris et la Buy Box Amazon.</p>
+          <ul class="hero-preview-list">
+            <li class="hero-preview-item"><span>1</span> Alertes prioritaires quand la marge dépasse 28&nbsp;%.</li>
+            <li class="hero-preview-item"><span>2</span> Statuts de stocks consolidés Best Buy, Walmart, Canadian Tire.</li>
+            <li class="hero-preview-item"><span>3</span> Export instantané vers vos modèles FBA et FBM.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
     <section class="section" id="search">
       <h2 style="margin:0 0 10px">Trouver des liquidations pour vos listings Amazon</h2>
       <p class="muted">Les fichiers sont chargés depuis <span class="kbd">data/&lt;magasin&gt;/&lt;ville&gt;.json</span> afin de repérer rapidement les opportunités d'arbitrage.</p>
