@@ -2138,21 +2138,6 @@
       return `data/${s}/${c}.json`;
     }
 
-    async function canadianTireHasData(slug){
-      if(DEFAULT_BRANCH_SLUGS.has(slug)) return true;
-      const path = `data/canadian-tire/${slug}.json`;
-      try{
-        const head = await fetch(path, {method:'HEAD'});
-        if(head.ok) return true;
-      }catch(_err){ /* noop */ }
-      try{
-        const res = await fetch(path, {cache:'no-store'});
-        return res.ok;
-      }catch(_err){
-        return false;
-      }
-    }
-
     async function loadRonaDirectory(){
       const store = STORES.find(entry => entry.slug === 'rona');
       if(!store) return;
@@ -2204,31 +2189,40 @@
         if(!res.ok) return;
         const json = await res.json();
         if(!Array.isArray(json)) return;
-        const availabilityCache = new Map();
-        async function branchHasData(slug){
-          if(availabilityCache.has(slug)) return availabilityCache.get(slug);
-          const hasData = await canadianTireHasData(slug);
-          availabilityCache.set(slug, hasData);
-          return hasData;
-        }
         const seen = new Map();
+        const availableData = new Set(
+          (store.branches || [])
+            .map(branch => branch?.slug)
+            .filter(Boolean)
+        );
         for(const branch of store.branches){
           const slug = branch?.slug;
           if(!slug) continue;
-          const hasData = await branchHasData(slug);
-          seen.set(slug, {...branch, hasData});
+          seen.set(slug, {
+            ...branch,
+            hasData: branch.hasData === false ? false : true
+          });
         }
         for(const entry of json){
           const rawSlug = typeof entry.slug === 'string' && entry.slug ? entry.slug : slugify(entry.nickname || entry.city || entry.label);
           if(!rawSlug) continue;
           const label = (entry.nickname || (entry.label || '').replace(/^Canadian Tire\s*/i, '') || entry.city || rawSlug).trim();
           const city = entry.city || label;
-          const hasData = await branchHasData(rawSlug);
           const previous = seen.get(rawSlug) || {};
-          seen.set(rawSlug, {...previous, label, slug: rawSlug, city, hasData});
+          const hasData = previous.hasData === true || availableData.has(rawSlug) || entry.hasData === true;
+          seen.set(rawSlug, {
+            ...previous,
+            label,
+            slug: rawSlug,
+            city,
+            hasData
+          });
         }
         store.branches = Array.from(seen.values()).sort((a,b)=>a.label.localeCompare(b.label,'fr'));
         renderStoreAds();
+        if(storeSelect && storeSelect.value === 'canadian-tire'){
+          setCityOptions('canadian-tire', true);
+        }
       }catch(err){
         console.warn('Impossible de charger les succursales Canadian Tire', err);
       }
@@ -2307,11 +2301,17 @@
         }
       }
       const seen = new Set();
+      const uniqueTasks = [];
       for(const task of tasks){
         if(seen.has(task.path)) continue;
         seen.add(task.path);
-        const arr = await fetchOne(task.path, task.store.label, task.branch);
-        for(const d of arr){ deals.push(d); }
+        uniqueTasks.push(task);
+      }
+      const results = await Promise.all(uniqueTasks.map(task => fetchOne(task.path, task.store.label, task.branch)));
+      for(const arr of results){
+        for(const d of arr){
+          deals.push(d);
+        }
       }
       render();
     }
