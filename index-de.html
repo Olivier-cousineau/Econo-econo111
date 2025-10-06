@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="de">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>EconoDeal — Canadá</title>
+  <title>EconoDeal — Deutschland</title>
   <style>
     :root{
       --bg:#020617; --panel:#0b1120; --panel-2:#111c33; --text:#e5e7eb;
@@ -225,22 +225,22 @@
   </div>
   <div id="registrationOverlay" role="dialog" aria-modal="true" aria-labelledby="registrationTitle">
     <div class="registration-card">
-      <h2 id="registrationTitle">Acceso exclusivo para miembros</h2>
-      <p class="muted" style="margin:0">Únete a <strong><span data-client-count>0</span></strong> revendedores de Amazon y cazadores de ofertas para desbloquear todo el catálogo.</p>
+      <h2 id="registrationTitle">Members-only access</h2>
+      <p class="muted" style="margin:0">Join <strong><span data-client-count>0</span></strong> Amazon resellers and deal hunters, then unlock the full catalogue.</p>
       <form id="registrationForm">
         <div>
-          <label for="fullName">Nombre completo</label>
-          <input id="fullName" name="fullName" type="text" placeholder="Ingresa tu nombre" autocomplete="name" required />
+          <label for="fullName">Full name</label>
+          <input id="fullName" name="fullName" type="text" placeholder="Enter your name" autocomplete="name" required />
         </div>
         <div>
-          <label for="email">Correo electrónico</label>
-          <input id="email" name="email" type="email" placeholder="nombre@ejemplo.com" autocomplete="email" required />
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="name@example.com" autocomplete="email" required />
         </div>
         <div class="checkbox-row">
           <input id="regulationCheckbox" name="regulation" type="checkbox" required />
-          <label for="regulationCheckbox" style="margin:0">Confirmo que he leído y aceptado las directrices de uso del sitio.</label>
+          <label for="regulationCheckbox" style="margin:0">I confirm I have read and accepted the site usage guidelines.</label>
         </div>
-        <button id="registrationSubmit" type="submit" disabled>Regístrate y desbloquea el acceso</button>
+        <button id="registrationSubmit" type="submit" disabled>Sign up and unlock access</button>
       </form>
     </div>
   </div>
@@ -248,143 +248,143 @@
     <div class="container header-layout">
       <div class="row header-top">
         <div class="row" style="gap:16px;align-items:center;flex-wrap:wrap">
-          <a class="brand" href="index-es.html">
-            <img src="assets/logo.svg" alt="EconoDeal – acelerador para vendedores de Amazon" />
+          <a class="brand" href="index-de.html">
+            <img src="assets/logo.svg" alt="EconoDeal – Amazon sellers accelerator" />
             <span class="brand-text">
               <span class="brand-title">EconoDeal</span>
-              <span class="brand-tagline">Tu hub de Amazon</span>
+              <span class="brand-tagline">Your Amazon hub</span>
             </span>
           </a>
-          <div class="country-toggle country-toggle--header" role="group" aria-label="Seleccionar país">
-            <button type="button" class="country-button active" data-country="canada" aria-pressed="true">Canadá</button>
-            <button type="button" class="country-button" data-country="usa" aria-pressed="false">Estados Unidos</button>
-            <button type="button" class="country-button" data-country="europe" aria-pressed="false">Europa</button>
+          <div class="country-toggle country-toggle--header" role="group" aria-label="Select country">
+            <button type="button" class="country-button active" data-country="canada" aria-pressed="true">Canada</button>
+            <button type="button" class="country-button" data-country="usa" aria-pressed="false">United States</button>
+            <button type="button" class="country-button" data-country="europe" aria-pressed="false">Europe</button>
           </div>
         </div>
         <div class="row" style="gap:12px;align-items:center">
-          <a class="nav-button" href="best-deals-es.html" style="white-space:nowrap">Mejores ofertas</a>
-          <a class="nav-button" href="pricing-es.html" style="white-space:nowrap">Planes / precios</a>
-          <a class="nav-button" href="roadmap-es.html" style="white-space:nowrap">Hoja de ruta / visión</a>
-          <div class="lang-switch" aria-label="Selector de idioma">
+          <a class="nav-button" href="best-deals-de.html" style="white-space:nowrap">Top deals</a>
+          <a class="nav-button" href="pricing-de.html" style="white-space:nowrap">Plans / pricing</a>
+          <a class="nav-button" href="roadmap-de.html" style="white-space:nowrap">Roadmap / vision</a>
+          <div class="lang-switch" aria-label="Language selector">
             <a href="index.html">FR</a>
             <a href="index-en.html">EN</a>
-            <span class="active" aria-current="true">ES</span>
-            <a href="index-de.html">DE</a>
+            <a href="index-es.html">ES</a>
+            <span class="active" aria-current="true">DE</span>
             <a href="index-it.html">IT</a>
           </div>
-          <span class="header-region" data-exchange-indicator aria-live="polite" aria-label="Tipo de cambio 1 CAD por 1 CAD">1 CAD = 1 CAD</span>
-          <div class="muted" style="white-space:nowrap">Clientes registrados:&nbsp; <span data-client-count>0</span></div>
+          <span class="header-region" data-exchange-indicator aria-live="polite" aria-label="Exchange rate 1 CAD to 1 CAD">1 CAD = 1 CAD</span>
+          <div class="muted" style="white-space:nowrap">Registered clients:&nbsp; <span data-client-count>0</span></div>
           <div class="muted">© <span id="year"></span></div>
         </div>
       </div>
-      <aside id="storeAds" class="store-ads" aria-live="polite" aria-label="Tiendas destacadas" aria-hidden="true"></aside>
+      <aside id="storeAds" class="store-ads" aria-live="polite" aria-label="Featured stores" aria-hidden="true"></aside>
     </div>
   </header>
 
   <main class="container">
     <section class="hero" aria-labelledby="heroTitle">
       <div class="hero-content">
-        <span class="hero-kicker">Plataforma de arbitraje de Amazon</span>
-        <h1 id="heroTitle">Desbloquea las mejores liquidaciones para hacer crecer tus listings</h1>
-        <p>Centraliza tu abastecimiento, conecta a tus proveedores clave y deja que nuestras señales de IA destaquen los descuentos más rentables para Amazon.ca, Amazon.com y Europa.</p>
+        <span class="hero-kicker">Amazon arbitrage platform</span>
+        <h1 id="heroTitle">Unlock the best clearance deals to grow your listings</h1>
+        <p>Centralise your product sourcing, plug in key suppliers and let our AI signals surface the most profitable discounts for Amazon.ca, Amazon.com and Europe.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#search">Explorar inventarios</a>
-          <a class="btn btn-secondary" href="#amazon-sellers">Ver beneficios</a>
+          <a class="btn btn-primary" href="#search">Explore inventories</a>
+          <a class="btn btn-secondary" href="#amazon-sellers">See the benefits</a>
         </div>
         <ul class="hero-stats">
-          <li class="hero-stat"><strong>+4 500</strong><span>Ofertas activas</span></li>
-          <li class="hero-stat"><strong>97 %</strong><span>Listings de Amazon validados</span></li>
-          <li class="hero-stat"><strong>12 h</strong><span>Horas ahorradas cada semana</span></li>
+          <li class="hero-stat"><strong>+4 500</strong><span>Active deals</span></li>
+          <li class="hero-stat"><strong>97 %</strong><span>Validated Amazon listings</span></li>
+          <li class="hero-stat"><strong>12 h</strong><span>Hours saved each week</span></li>
         </ul>
       </div>
       <div class="hero-preview" aria-hidden="true">
         <article class="hero-preview-card">
           <header>
-            <span>Instantánea</span>
-            <div class="badge" style="margin:0">Feed de Canadá</div>
+            <span>Snapshot</span>
+            <div class="badge" style="margin:0">Canada feed</div>
           </header>
-          <h2>Oportunidades destacadas</h2>
-          <p>Sigue en tiempo real las brechas de precio accionables entre tus comercios favoritos y la Buy Box de Amazon.</p>
+          <h2>Opportunities in focus</h2>
+          <p>Track actionable price gaps between your favourite retailers and the Amazon Buy Box in real time.</p>
           <ul class="hero-preview-list">
-            <li class="hero-preview-item"><span>1</span> Alertas prioritarias cuando el margen supera el 28&nbsp;%.</li>
-            <li class="hero-preview-item"><span>2</span> Estados de inventario consolidados de Best Buy, Walmart y Canadian Tire.</li>
-            <li class="hero-preview-item"><span>3</span> Exportación instantánea a tus plantillas FBA y FBM.</li>
+            <li class="hero-preview-item"><span>1</span> Priority alerts when margin exceeds 28%.</li>
+            <li class="hero-preview-item"><span>2</span> Consolidated stock statuses for Best Buy, Walmart and Canadian Tire.</li>
+            <li class="hero-preview-item"><span>3</span> Instant export to your FBA and FBM templates.</li>
           </ul>
         </article>
       </div>
     </section>
     <section class="section value-section" id="investors">
       <div class="value-header">
-        <h2>Señales que tranquilizan a los inversores</h2>
-        <p class="muted">EconoDeal combina indicadores de uso tangibles con una ambiciosa hoja de ruta de IA que demuestra su capacidad para crear valor recurrente en múltiples mercados.</p>
+        <h2>Signals that reassure investors</h2>
+        <p class="muted">EconoDeal blends tangible usage indicators with an ambitious AI roadmap that proves its ability to create recurring value across markets.</p>
       </div>
       <div class="value-grid">
         <article class="value-card">
           <span class="value-icon" aria-hidden="true">📊</span>
-          <h3>Posicionamiento sólido basado en datos</h3>
+          <h3>Robust data-driven positioning</h3>
           <ul>
-            <li><span class="value-metric">Más de 4&nbsp;500 ofertas activas</span> consolidadas en un único catálogo listo para el arbitraje.</li>
-            <li><span class="value-metric">97&nbsp;% de los listings validados</span>, demostrando la calidad de los datos y exportaciones fiables a Amazon.</li>
-            <li><span class="value-metric">12 horas ahorradas</span> por semana en promedio gracias a la automatización del abastecimiento.</li>
+            <li><span class="value-metric">4,500+ active deals</span> consolidated in a single arbitrage-ready catalogue.</li>
+            <li><span class="value-metric">97% of listings validated</span>, proving data quality and reliable Amazon exports.</li>
+            <li><span class="value-metric">12 hours saved</span> per week on average thanks to sourcing automation.</li>
           </ul>
         </article>
         <article class="value-card">
           <span class="value-icon" aria-hidden="true">🌐</span>
-          <h3>Tecnología escalable</h3>
+          <h3>Scalable technology</h3>
           <ul>
-            <li><span class="value-metric">2,4&nbsp;M de ASIN monitorizados</span> en Amazon.ca, Amazon.com y Amazon EU.</li>
-            <li>Detección promedio de <span class="value-metric">18 segundos</span> entre un nuevo descuento y su alerta prioritaria.</li>
-            <li>Automatizaciones de IA que recuperan una <span class="value-metric">margen mediana de +32&nbsp;%</span> en los escenarios monitorizados.</li>
+            <li><span class="value-metric">2.4M ASINs tracked</span> across Amazon.ca, Amazon.com and Amazon EU.</li>
+            <li>Average detection of <span class="value-metric">18 seconds</span> between a new discount and its priority alert.</li>
+            <li>AI automations recovering a <span class="value-metric">median +32% margin</span> on monitored scenarios.</li>
           </ul>
         </article>
         <article class="value-card">
           <span class="value-icon" aria-hidden="true">🗺️</span>
-          <h3>Visión de crecimiento a tres años</h3>
+          <h3>Three-year growth vision</h3>
           <ul>
-            <li>Expansión secuenciada: Canadá → Estados Unidos → Europa con localización completa.</li>
-            <li>Despliegue de alertas en tiempo real, analítica predictiva y un motor de recomendaciones IA multilingüe.</li>
-            <li>Monetización progresiva que añade exportaciones a Seller Central, escenarios de IA e insights de mercado avanzados.</li>
+            <li>Sequenced expansion: Canada → United States → Europe with full localisation.</li>
+            <li>Rollout of real-time alerts, predictive analytics and a multilingual AI recommendation engine.</li>
+            <li>Progressive monetisation that adds Seller Central exports, AI scenarios and advanced market insights.</li>
           </ul>
         </article>
       </div>
     </section>
     <section class="section" id="search">
-      <h2 style="margin:0 0 10px">Encuentra inventario en liquidación para tus listings de Amazon</h2>
-      <p class="muted">Los archivos se cargan desde <span class="kbd">data/&lt;store&gt;/&lt;city&gt;.json</span> para mostrar rápidamente oportunidades de arbitraje.</p>
+      <h2 style="margin:0 0 10px">Find clearance inventory for your Amazon listings</h2>
+      <p class="muted">Files are loaded from <span class="kbd">data/&lt;store&gt;/&lt;city&gt;.json</span> to rapidly surface arbitrage opportunities.</p>
 
       <!-- ✅ Les éléments requis existent et leurs IDs correspondent au script -->
       <div class="row" style="gap:12px;align-items:center;flex-wrap:wrap;margin-top:12px">
-        <span class="muted" data-country-label>País cubierto: Canadá · Moneda: CAD</span>
+        <span class="muted" data-country-label>Covered country: Canada · Currency: CAD</span>
       </div>
 
       <div class="filters" style="margin-top:12px">
         <div>
-          <label for="searchInput">Búsqueda rápida</label>
-          <input id="searchInput" name="search" type="text" inputmode="search" placeholder="Ej. Nintendo Switch, Lego..." autocomplete="off" />
+          <label for="searchInput">Quick search</label>
+          <input id="searchInput" name="search" type="text" inputmode="search" placeholder="Ex. Nintendo Switch, Lego..." autocomplete="off" />
         </div>
         <div>
-          <label for="storeSelect">Tienda</label>
+          <label for="storeSelect">Store</label>
           <select id="storeSelect">
-            <option value="">(Todas)</option>
+            <option value="">(All)</option>
           </select>
         </div>
         <div>
-          <label for="citySelect">Ciudad</label>
+          <label for="citySelect">City</label>
           <select id="citySelect">
-            <option value="">(Todas)</option>
+            <option value="">(All)</option>
           </select>
         </div>
         <div>
-          <label for="postalInput">Código postal</label>
-          <input id="postalInput" name="postal" type="text" inputmode="text" placeholder="Ej. H2X 1Y4" autocomplete="postal-code" />
-          <p id="postalHelper" class="field-helper">Introduce los tres primeros caracteres del código postal para encontrar sucursales a 50 km (p. ej., H2X).</p>
+          <label for="postalInput">Postal code</label>
+          <input id="postalInput" name="postal" type="text" inputmode="text" placeholder="Ex. H2X 1Y4" autocomplete="postal-code" />
+          <p id="postalHelper" class="field-helper">Enter the first three characters of the postal code to find branches within 50 km (e.g. H2X).</p>
         </div>
         <div>
-          <label for="discountRange">Descuento mínimo: <span id="discountValue" class="kbd">0%</span></label>
+          <label for="discountRange">Minimum discount: <span id="discountValue" class="kbd">0%</span></label>
           <input id="discountRange" type="range" min="0" max="90" step="5" value="0" />
         </div>
         <div style="align-self:end">
-          <button id="btnClear">Restablecer filtros</button>
+          <button id="btnClear">Reset filters</button>
         </div>
       </div>
 
@@ -392,43 +392,43 @@
 
       <div class="section">
         <div class="row" style="justify-content:space-between;align-items:center">
-          <h3 style="margin:0">Resultados</h3>
-          <div class="muted"><span id="resultCount">0</span> resultados</div>
+          <h3 style="margin:0">Results</h3>
+          <div class="muted"><span id="resultCount">0</span> items</div>
         </div>
         <div id="cards" class="grid" style="margin-top:12px"></div>
       </div>
     </section>
     <section class="section value-section" id="client-value">
       <div class="value-header">
-        <h2>Por qué nuestros clientes de pago se quedan</h2>
-        <p class="muted">La plataforma reduce el esfuerzo de abastecimiento, se alinea con las necesidades críticas de los revendedores de Amazon y escala de forma coherente a medida que las operaciones se vuelven más complejas.</p>
+        <h2>Why paying clients stick with us</h2>
+        <p class="muted">The platform reduces sourcing effort, aligns with Amazon resellers’ critical needs and scales coherently as operations become more complex.</p>
       </div>
       <div class="value-grid">
         <article class="value-card">
           <span class="value-icon" aria-hidden="true">⚡</span>
-          <h3>Eficiencia operativa inmediata</h3>
+          <h3>Immediate operational efficiency</h3>
           <ul>
-            <li>Filtros multicriterio (tienda, ciudad, código postal, umbral de descuento) para centralizar las búsquedas de productos.</li>
-            <li>Vista de inventario consolidada y brechas de precio accionables sin hojas de cálculo.</li>
-            <li>Flujos de trabajo listos para exportar a Seller Central en solo unos clics.</li>
+            <li>Multi-criteria filters (store, city, postal code, discount threshold) to centralise product searches.</li>
+            <li>Consolidated stock view and actionable price gaps without spreadsheets.</li>
+            <li>Export-ready workflows for Seller Central in just a few clicks.</li>
           </ul>
         </article>
         <article class="value-card">
           <span class="value-icon" aria-hidden="true">🛒</span>
-          <h3>Diseñado para revendedores de Amazon</h3>
+          <h3>Tailored to Amazon resellers</h3>
           <ul>
-            <li>Onboarding guiado a FBA, cálculo automático de tarifas y escenarios FBM integrados.</li>
-            <li>Supervisión multiproveedor (Best Buy, Walmart, Canadian Tire, etc.) para asegurar la Buy Box.</li>
-            <li>Comunidad privada y automatizaciones listas para lanzar que mantienen la ventaja competitiva.</li>
+            <li>Guided FBA onboarding, automatic fee calculation and FBM scenarios built in.</li>
+            <li>Multi-supplier monitoring (Best Buy, Walmart, Canadian Tire, etc.) to secure the Buy Box.</li>
+            <li>Private community and ready-to-launch automations to stay ahead.</li>
           </ul>
         </article>
         <article class="value-card">
           <span class="value-icon" aria-hidden="true">💡</span>
-          <h3>Monetización clara y gradual</h3>
+          <h3>Clear, gradual monetisation</h3>
           <ul>
-            <li>Plan Essential: acceso rápido a las mejores liquidaciones y alertas semanales.</li>
-            <li>Plan Advanced: alertas en tiempo real, exportaciones a Seller Central y colaboración entre equipos.</li>
-            <li>Oferta Premium: análisis con IA, pronósticos de tendencias y automatizaciones multicanal ilimitadas.</li>
+            <li>Essential plan: fast access to top clearance deals and weekly alerts.</li>
+            <li>Advanced plan: real-time alerts, Seller Central exports and team collaboration.</li>
+            <li>Premium offer: AI analysis, trend forecasts and unlimited multichannel automations.</li>
           </ul>
         </article>
       </div>
@@ -436,118 +436,118 @@
 
     <section class="amazon-section" id="amazon-sellers">
       <div>
-        <h2>Una experiencia diseñada para revendedores de Amazon</h2>
-        <p class="amazon-intro">Aprovecha un hub de abastecimiento creado para operaciones FBA y FBM: detecta liquidaciones rentables en segundos, protege tus márgenes y automatiza las rutinas de sourcing para Amazon.ca y Amazon.com.</p>
+        <h2>An experience designed for Amazon resellers</h2>
+        <p class="amazon-intro">Leverage a sourcing hub built for FBA and FBM operations: detect profitable clearance deals in seconds, protect your margins and automate sourcing routines for Amazon.ca and Amazon.com.</p>
       </div>
       <div class="seller-metrics">
         <div class="seller-metric">
           <strong>2,4&nbsp;M</strong>
-          <span>ASIN monitorizados</span>
-          <p>Mapeo dinámico de los catálogos de Amazon.ca, Amazon.com y Amazon EU.</p>
+          <span>ASINs tracked</span>
+          <p>Dynamic mapping of Amazon.ca, Amazon.com and Amazon EU catalogues.</p>
         </div>
         <div class="seller-metric">
           <strong>18&nbsp;s</strong>
-          <span>Tiempo medio de detección</span>
-          <p>Latencia entre importar un descuento y alertar a tu equipo.</p>
+          <span>Average detection time</span>
+          <p>Latency between importing a discount and alerting your team.</p>
         </div>
         <div class="seller-metric">
           <strong>+32&nbsp;%</strong>
-          <span>Margen recuperado</span>
-          <p>Ganancia mediana observada entre los vendedores que usan nuestros escenarios de IA.</p>
+          <span>Margin recovered</span>
+          <p>Median gain observed among sellers using our AI scenarios.</p>
         </div>
       </div>
       <div class="seller-grid">
         <article class="seller-card">
           <div class="seller-icon" aria-hidden="true">🚀</div>
-          <h3>Onboarding FBA simplificado</h3>
-          <p>Plantillas listas para usar que calculan tarifas FBA, estiman la rotación y sincronizan tus listings de Amazon sin hojas de cálculo complejas.</p>
+          <h3>Simplified FBA onboarding</h3>
+          <p>Ready-to-use templates to calculate FBA fees, estimate rotation and sync your Amazon listings without complex spreadsheets.</p>
         </article>
         <article class="seller-card">
           <div class="seller-icon" aria-hidden="true">📦</div>
-          <h3>Supervisión de inventario multiproveedor</h3>
-          <p>Combina inventarios de Best Buy, Walmart, Canadian Tire y más para detectar brechas de precio aprovechables antes que otros vendedores de Amazon.</p>
+          <h3>Multi-supplier stock monitoring</h3>
+          <p>Combine inventories from Best Buy, Walmart, Canadian Tire and more to spot exploitable price gaps before other Amazon sellers.</p>
         </article>
         <article class="seller-card">
           <div class="seller-icon" aria-hidden="true">🤝</div>
-          <h3>Comunidad dedicada</h3>
-          <p>Accede a un lounge privado para revendedores de Amazon, comparte estrategias de repricing y aprovecha comparativas validadas por la comunidad.</p>
+          <h3>Dedicated community</h3>
+          <p>Access a private Amazon reseller lounge, share repricing strategies and benefit from community-validated product comparisons.</p>
         </article>
         <article class="seller-card">
           <div class="seller-icon" aria-hidden="true">⚙️</div>
-          <h3>Automatizaciones listas para lanzar</h3>
+          <h3>Ready-to-launch automations</h3>
           <ul class="seller-list">
-            <li><span aria-hidden="true">✔</span>Alertas cuando la Buy Box cae por debajo de tu objetivo.</li>
-            <li><span aria-hidden="true">✔</span>Exportaciones compatibles con Seller Central y herramientas de análisis FBA.</li>
-            <li><span aria-hidden="true">✔</span>Sugerencias de IA para reempaquetar o arbitrar según la temporada.</li>
+            <li><span aria-hidden="true">✔</span>Alerts when the Buy Box drops below your target.</li>
+            <li><span aria-hidden="true">✔</span>Seller Central-friendly exports and FBA analysis tools.</li>
+            <li><span aria-hidden="true">✔</span>AI suggestions to repackage or arbitrage based on the season.</li>
           </ul>
         </article>
       </div>
     </section>
 
     <section class="section" id="pricing" style="padding-top:10px">
-      <h2 style="margin:0 0 10px">Planes adaptados a tus necesidades</h2>
-      <p class="muted" style="max-width:620px">Elige la opción que mejor se adapte a cómo monitorizas descuentos, alimentas tus listings de Amazon y proteges tus márgenes. Todos los planes incluyen una prueba de 7 días.</p>
+      <h2 style="margin:0 0 10px">Plans tailored to your needs</h2>
+      <p class="muted" style="max-width:620px">Choose the option that best fits how you monitor discounts, feed your Amazon listings and protect your margins. Every plan includes a 7-day trial.</p>
       <div class="pricing-grid">
         <article class="pricing-card">
           <div class="pricing-tag">Essential</div>
-          <h4>Acceso esencial</h4>
+          <h4>Core access</h4>
           <div class="pricing-price">9,99&nbsp;$</div>
           <ul class="pricing-features">
-            <li>Acceso a las liquidaciones populares listas para Amazon</li>
-            <li>3 alertas por correo a la semana</li>
-            <li>Historial de precios de 30 días</li>
+            <li>Access to popular Amazon-ready clearance deals</li>
+            <li>3 email alerts per week</li>
+            <li>30-day price history</li>
           </ul>
         </article>
         <article class="pricing-card pricing-highlight">
-          <div class="pricing-tag">Más popular</div>
-          <h4>Plan Advanced</h4>
+          <div class="pricing-tag">Most popular</div>
+          <h4>Advanced plan</h4>
           <div class="pricing-price">19,99&nbsp;$</div>
           <ul class="pricing-features">
-            <li>Acceso ilimitado al catálogo optimizado para Amazon</li>
-            <li>Alertas personalizadas en tiempo real</li>
-            <li>Exportaciones a Seller Central y listas compartidas con el equipo</li>
+            <li>Unlimited access to the Amazon-optimised catalogue</li>
+            <li>Real-time personalised alerts</li>
+            <li>Seller Central exports and shared team lists</li>
           </ul>
         </article>
         <article class="pricing-card">
           <div class="pricing-tag">Premium</div>
-          <h4>Análisis completo con IA</h4>
+          <h4>Full AI analysis</h4>
           <div class="pricing-price">29,99&nbsp;$</div>
           <ul class="pricing-features">
-            <li>Alertas multicanal ilimitadas</li>
-            <li>Análisis de precios asistido por IA para Amazon</li>
-            <li>Pronósticos de tendencias del mercado y simulación FBA</li>
+            <li>Unlimited multichannel alerts</li>
+            <li>AI-assisted pricing analysis for Amazon</li>
+            <li>Market trend forecasts and FBA simulation</li>
           </ul>
         </article>
       </div>
     </section>
 
     <section class="section" id="roadmap" style="padding-top:0">
-      <h2 style="margin:0 0 10px">Nuestra hoja de ruta</h2>
-      <p class="muted" style="max-width:640px">Una visión de tres años para impulsar a EconoDeal internacionalmente, integrando de forma progresiva la inteligencia artificial en el corazón de nuestros servicios.</p>
+      <h2 style="margin:0 0 10px">Our roadmap</h2>
+      <p class="muted" style="max-width:640px">A three-year vision to propel EconoDeal internationally, progressively integrating artificial intelligence at the heart of our services.</p>
       <div class="roadmap">
         <div class="roadmap-grid">
           <article class="roadmap-card">
-            <div class="roadmap-year"><strong>Año 1</strong> Canadá</div>
+            <div class="roadmap-year"><strong>Year 1</strong> Canada</div>
             <ul>
-              <li>Reforzar la cobertura de los minoristas nacionales.</li>
-              <li>Optimizar las alertas de descuentos en tiempo real.</li>
-              <li>Lanzar paneles regionales bilingües.</li>
+              <li>Strengthen coverage of national retailers.</li>
+              <li>Optimise real-time discount alerts.</li>
+              <li>Launch bilingual regional dashboards.</li>
             </ul>
           </article>
           <article class="roadmap-card">
-            <div class="roadmap-year"><strong>Año 2</strong> Estados Unidos</div>
+            <div class="roadmap-year"><strong>Year 2</strong> United States</div>
             <ul>
-              <li>Ampliar el catálogo a las principales cadenas de EE. UU.</li>
-              <li>Desplegar la supervisión de inventario en múltiples estados.</li>
-              <li>Introducir análisis predictivo de tendencias de compra.</li>
+              <li>Expand the catalogue to major US banners.</li>
+              <li>Deploy multi-state stock monitoring.</li>
+              <li>Introduce predictive analysis of purchase trends.</li>
             </ul>
           </article>
           <article class="roadmap-card roadmap-ai">
-            <div class="roadmap-year"><strong>Año 3</strong> Europa</div>
+            <div class="roadmap-year"><strong>Year 3</strong> Europe</div>
             <ul>
-              <li>Localizar la experiencia para los principales mercados europeos.</li>
-              <li>Activar un motor de recomendaciones de IA multilingüe.</li>
-              <li>Automatizar las estrategias de precios con aprendizaje continuo.</li>
+              <li>Localise the experience for key European markets.</li>
+              <li>Activate a multilingual AI recommendation engine.</li>
+              <li>Automate pricing strategies with continuous learning.</li>
             </ul>
           </article>
         </div>
@@ -556,8 +556,8 @@
   </main>
 
   <div class="container footer">
-    <p style="margin:0 0 8px">EconoDeal no se hace responsable de la disponibilidad del inventario mostrado y no almacena ninguna información personal de los visitantes.</p>
-    <div>© <span id="yearFooter"></span> EconoDeal · Todos los derechos reservados</div>
+    <p style="margin:0 0 8px">EconoDeal is not responsible for the availability of displayed stock and does not store any personal information about visitors.</p>
+    <div>© <span id="yearFooter"></span> EconoDeal · All rights reserved</div>
   </div>
 
   <script>
@@ -673,7 +673,7 @@
     }
 
     function updateClientCountDisplays(){
-      const formatter = new Intl.NumberFormat('es-CA');
+      const formatter = new Intl.NumberFormat('en-CA');
       const count = resolveClientCount();
       clientCountDisplays.forEach(el => {
         el.textContent = formatter.format(count);
@@ -1174,22 +1174,21 @@
     function formatBranchCoverage(branches){
       const count = Array.isArray(branches) ? branches.length : 0;
       if(count <= 0) return '';
-      const suffix = count === 1 ? '' : 'es';
-      const adjective = count === 1 ? 'monitorizada' : 'monitorizadas';
-      return `${count} sucursal${suffix} ${adjective}`;
+      const suffix = count > 1 ? 's' : '';
+      return `${count} succursale${suffix} suivie${suffix}`;
     }
 
     const USA_STORE_MENU = [
-      {label:'Amazon Warehouse', description:'Muchos retornos e inventario reacondicionado'},
-      {label:'Best Buy USA', description:'Electrónica, electrodomésticos y gaming'},
-      {label:'Home Depot US', description:'Mejoras del hogar y herramientas'},
-      {label:'Walmart US', description:'Retail de gran formato y abarrotes secos'},
-      {label:'Target', description:'Estilo de vida, hogar y exclusivas de marca propia'},
-      {label:'Lowe’s', description:'Suministros de renovación y jardinería'},
-      {label:'Costco Wholesale', description:'Lotes al por mayor ideales para FBA'},
-      {label:'Sam’s Club', description:'Oportunidades al mayoreo para reventa'},
-      {label:'Kohl’s', description:'Moda, hogar y artículos de temporada'},
-      {label:"BJ's Wholesale Club", description:'Inventario regional de rotación rápida'}
+      {label:'Amazon Warehouse', description:'Lots of returns and refurbished inventory'},
+      {label:'Best Buy USA', description:'Electronics, appliances and gaming'},
+      {label:'Home Depot US', description:'Home improvement and tools'},
+      {label:'Walmart US', description:'Big-box retail and dry grocery'},
+      {label:'Target', description:'Lifestyle, home and private-label exclusives'},
+      {label:'Lowe’s', description:'Renovation supplies and gardening'},
+      {label:'Costco Wholesale', description:'Lots en gros propices au FBA'},
+      {label:'Sam’s Club', description:'Bulk opportunities for resale'},
+      {label:'Kohl’s', description:'Mode, maison et items saisonniers'},
+      {label:"BJ's Wholesale Club", description:'Fast-moving regional inventory'}
     ];
 
     let storeAdsRotationTimer = null;
@@ -1238,7 +1237,7 @@
         ? `<div class="store-ads-dots" role="presentation">${items.map((_, index) => `<span class="store-ads-dot${index === 0 ? ' is-active' : ''}" aria-hidden="true"></span>`).join('')}</div>`
         : '';
       storeAdsContainer.innerHTML = `
-        <div class="store-ads-header">Tiendas destacadas</div>
+        <div class="store-ads-header">Stores en vedette</div>
         <div class="store-ads-spotlight">${list}</div>
         ${dots}
       `;
@@ -1345,43 +1344,43 @@
     const countryLabel = document.querySelector('[data-country-label]');
     const exchangeIndicator = document.querySelector('[data-exchange-indicator]');
 
-    const DEFAULT_POSTAL_MESSAGE = 'Introduce los tres primeros caracteres del código postal para encontrar sucursales en un radio de 50 km (p. ej., H2X).';
-    const BASE_CURRENCY = { code:'CAD', locale:'es-CA' };
+    const DEFAULT_POSTAL_MESSAGE = 'Enter the first three characters of the postal code to find branches within a 50 km radius (e.g. H2X).';
+    const BASE_CURRENCY = { code:'CAD', locale:'en-CA' };
     // currency.cadToLocalRate indique la conversion d'un dollar canadien vers la devise locale.
     const COUNTRY_CONFIG = {
       canada: {
-        titleSuffix: 'Canadá',
+        titleSuffix: 'Canada',
         postalMessage: DEFAULT_POSTAL_MESSAGE,
-        emptyNotice: 'Selecciona una tienda para ver las liquidaciones disponibles ahora mismo en Canadá.',
+        emptyNotice: 'Select a store to view the Canadian clearance deals available right now.',
         hideStoreMenu: true,
         currency: {
           code: 'CAD',
-          locale: 'es-CA',
+          locale: 'en-CA',
           cadToLocalRate: 1
         },
         amazonDomain: 'www.amazon.ca'
       },
       usa: {
-        titleSuffix: 'Estados Unidos',
-        postalMessage: 'Los filtros se activarán en cuanto lancemos la plataforma estadounidense.',
-        emptyNotice: 'Estamos finalizando nuestro catálogo para EE. UU. Vuelve pronto para descubrir las mejores ofertas americanas.',
-        storeMenuTitle: 'Tiendas previstas para el lanzamiento en EE. UU.',
-        storeMenuDescription: 'Estas cadenas se añadirán a nuestro radar de liquidaciones en cuanto activemos el lanzamiento oficial.',
+        titleSuffix: 'United States',
+        postalMessage: 'Filters will activate as soon as the US platform launches.',
+        emptyNotice: 'We are finalising our US catalogue. Check back soon to discover the best American deals.',
+        storeMenuTitle: 'Stores covered at the US launch',
+        storeMenuDescription: 'These banners will join our US clearance radar as soon as we officially launch.',
         storeMenu: USA_STORE_MENU,
         currency: {
           code: 'USD',
-          locale: 'es-US',
+          locale: 'en-US',
           cadToLocalRate: 0.74
         },
         amazonDomain: 'www.amazon.com'
       },
       europe: {
-        titleSuffix: 'Europa',
-        postalMessage: 'Las funciones de búsqueda estarán disponibles cuando comience el despliegue europeo.',
-        emptyNotice: 'La cobertura europea está en preparación. Suscríbete para recibir el aviso del lanzamiento oficial.',
+        titleSuffix: 'Europe',
+        postalMessage: 'Search features will be available once the European rollout begins.',
+        emptyNotice: 'European coverage is in preparation. Subscribe to be notified of the official launch.',
         currency: {
           code: 'EUR',
-          locale: 'es-ES',
+          locale: 'fr-FR',
           cadToLocalRate: 0.68
         },
         amazonDomain: 'www.amazon.fr'
@@ -1396,7 +1395,7 @@
       discount: '0'
     });
 
-    const EXCHANGE_FORMATTER = new Intl.NumberFormat('es-CA',{minimumFractionDigits:2,maximumFractionDigits:2});
+    const EXCHANGE_FORMATTER = new Intl.NumberFormat('en-CA',{minimumFractionDigits:2,maximumFractionDigits:2});
 
     function getCountryConfig(country){
       return COUNTRY_CONFIG[country] ?? COUNTRY_CONFIG.canada;
@@ -1439,28 +1438,28 @@
           if(inverseText){
             segments.push(inverseText);
           }
-          ariaSegments.push(`1 ${baseCode} por aproximadamente ${directValue} ${usdCode}`);
+          ariaSegments.push(`1 ${baseCode} pour environ ${directValue} ${usdCode}`);
           if(inverseText && inverseValue){
-            ariaSegments.push(`1 ${usdCode} por aproximadamente ${inverseValue} ${baseCode}`);
+            ariaSegments.push(`1 ${usdCode} pour environ ${inverseValue} ${baseCode}`);
           }
         }
         if(segments.length === 0){
           segments.push(`1 ${baseCode} = 1 ${baseCode}`);
-          ariaSegments.push(`1 ${baseCode} por 1 ${baseCode}`);
+          ariaSegments.push(`1 ${baseCode} pour 1 ${baseCode}`);
         }
         exchangeIndicator.textContent = segments.join(' · ');
-        exchangeIndicator.setAttribute('aria-label', `Tasa de cambio ${ariaSegments.join(' y ')}`);
+        exchangeIndicator.setAttribute('aria-label', `Taux de change ${ariaSegments.join(' et ')}`);
         return;
       }
       if(Math.abs(normalizedRate - 1) < 1e-6){
         exchangeIndicator.textContent = `1 ${baseCode} = 1 ${baseCode}`;
-        exchangeIndicator.setAttribute('aria-label', `Tasa de cambio 1 ${baseCode} por 1 ${baseCode}`);
+        exchangeIndicator.setAttribute('aria-label', `Taux de change 1 ${baseCode} pour 1 ${baseCode}`);
         return;
       }
       const { baseText, inverseText } = formatExchange(baseCode, targetCode, normalizedRate);
       const combined = inverseText ? `${baseText} · ${inverseText}` : baseText;
       exchangeIndicator.textContent = combined;
-      const ariaText = inverseText ? `${baseText} y ${inverseText}` : baseText;
+      const ariaText = inverseText ? `${baseText} et ${inverseText}` : baseText;
       exchangeIndicator.setAttribute('aria-label', `Taux de change ${ariaText}`);
     }
 
@@ -1511,7 +1510,7 @@
 
     function populateStoreSelect(country){
       if(!storeSelect) return;
-      const options = ['<option value="">(Todas)</option>'];
+      const options = ['<option value="">(All)</option>'];
       if(country === 'canada'){
         for(const store of STORES){
           const label = store?.label;
@@ -2250,7 +2249,7 @@
       const previous = preserveSelection ? citySelect.value : '';
       const store = getStoreByIdentifier(storeSlug);
       const branches = store?.branches ?? baseBranches();
-      const options = ['<option value="">(Todas)</option>'];
+      const options = ['<option value="">(All)</option>'];
       const postalFilter = postalBranchSlugs && postalBranchSlugs.size ? postalBranchSlugs : null;
       for(const branch of branches){
         const baseLabel = branch.hasData === false ? `${branch.label} (coming soon)` : branch.label;
