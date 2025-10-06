@@ -145,6 +145,22 @@
     .seller-list{list-style:none;padding:0;margin:0;display:grid;gap:8px;font-size:14px;color:var(--muted)}
     .seller-list li{display:flex;gap:8px;align-items:flex-start}
     .seller-list li span{font-size:16px;color:#86efac;line-height:1.4}
+    .value-section{background:linear-gradient(200deg,rgba(7,16,32,.92),rgba(12,23,45,.9));border:1px solid rgba(59,130,246,.24);border-radius:var(--radius);padding:28px;display:grid;gap:22px;margin-top:32px;box-shadow:0 22px 48px rgba(2,6,23,.55);position:relative;overflow:hidden}
+    .value-section::after{content:"";position:absolute;inset:auto -40% -40% auto;width:260px;height:260px;background:radial-gradient(circle,rgba(59,130,246,.18),transparent 60%);filter:blur(30px);opacity:.45}
+    .value-header{display:grid;gap:8px;max-width:760px;position:relative;z-index:1}
+    .value-header h2{margin:0}
+    .value-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;position:relative;z-index:1}
+    .value-card{background:linear-gradient(200deg,rgba(14,23,42,.92),rgba(17,30,56,.9));border:1px solid rgba(59,130,246,.28);border-radius:16px;padding:20px;display:grid;gap:12px;box-shadow:0 18px 42px rgba(2,6,23,.55);position:relative;overflow:hidden;transition:transform .3s ease,box-shadow .3s ease}
+    .value-card::after{content:"";position:absolute;inset:auto -50% -50% auto;width:220px;height:220px;background:radial-gradient(circle,rgba(34,197,94,.22),transparent 60%);filter:blur(28px);opacity:.35;transition:opacity .3s ease}
+    .value-card:hover{transform:translateY(-4px);box-shadow:0 26px 54px rgba(15,23,42,.62)}
+    .value-card:hover::after{opacity:.55}
+    .value-icon{font-size:26px;width:44px;height:44px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(140deg,rgba(34,197,94,.32),rgba(59,130,246,.3));color:#fff;filter:drop-shadow(0 0 12px rgba(59,130,246,.35))}
+    .value-card h3{margin:0;font-size:18px;letter-spacing:-.01em;color:#fff}
+    .value-card p{margin:0;font-size:14px;color:rgba(203,213,225,.8);line-height:1.6}
+    .value-card ul{margin:0;padding-left:18px;display:grid;gap:6px;font-size:14px;color:rgba(226,232,240,.78)}
+    .value-card li{line-height:1.5}
+    .value-metric{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:#86efac;background:rgba(34,197,94,.14);border:1px solid rgba(34,197,94,.28);padding:4px 10px;border-radius:999px;font-weight:600}
+    @media (max-width:720px){.value-section{padding:24px}.value-grid{grid-template-columns:1fr}.value-card{gap:10px}}
     #registrationOverlay{position:fixed;inset:0;background:radial-gradient(circle at 20% 20%,rgba(34,197,94,.12),transparent 55%),radial-gradient(circle at 80% 30%,rgba(59,130,246,.18),transparent 50%),rgba(4,7,16,.94);display:flex;align-items:center;justify-content:center;padding:20px;z-index:2000;backdrop-filter:blur(6px)}
     #registrationOverlay.hidden{display:none}
     .registration-card{background:linear-gradient(200deg,rgba(9,16,32,.96),rgba(14,28,52,.9));border:1px solid rgba(59,130,246,.3);border-radius:var(--radius);max-width:440px;width:100%;padding:28px;display:grid;gap:16px;box-shadow:0 30px 70px rgba(2,6,23,.75);position:relative;overflow:hidden}
@@ -286,6 +302,41 @@
         </article>
       </div>
     </section>
+    <section class="section value-section" id="investors">
+      <div class="value-header">
+        <h2>Des signaux qui rassurent les investisseurs</h2>
+        <p class="muted">EconoDeal combine des indicateurs d'usage tangibles et une feuille de route IA ambitieuse pour démontrer sa capacité à générer de la valeur récurrente sur plusieurs marchés.</p>
+      </div>
+      <div class="value-grid">
+        <article class="value-card">
+          <span class="value-icon" aria-hidden="true">📊</span>
+          <h3>Positionnement data-driven solide</h3>
+          <ul>
+            <li><span class="value-metric">+4&nbsp;500 rabais actifs</span> consolidés dans un catalogue unique prêt pour l'arbitrage.</li>
+            <li><span class="value-metric">97&nbsp;% de fiches validées</span> prouvant la qualité des données et la fiabilité des exports Amazon.</li>
+            <li><span class="value-metric">12&nbsp;h économisées</span> par semaine en moyenne grâce à l'automatisation du sourcing.</li>
+          </ul>
+        </article>
+        <article class="value-card">
+          <span class="value-icon" aria-hidden="true">🌐</span>
+          <h3>Scalabilité technologique</h3>
+          <ul>
+            <li><span class="value-metric">2,4&nbsp;M d'ASIN</span> suivis pour Amazon.ca, Amazon.com et l'Europe.</li>
+            <li>Détection moyenne de <span class="value-metric">18&nbsp;secondes</span> entre un rabais et son alerte prioritaire.</li>
+            <li>Automations IA qui récupèrent une <span class="value-metric">marge médiane de +32&nbsp;%</span> sur les scénarios surveillés.</li>
+          </ul>
+        </article>
+        <article class="value-card">
+          <span class="value-icon" aria-hidden="true">🗺️</span>
+          <h3>Vision de croissance triennale</h3>
+          <ul>
+            <li>Expansion séquencée : Canada → États-Unis → Europe avec localisation complète.</li>
+            <li>Déploiement d'alertes en temps réel, d'analyse prédictive et d'un moteur de recommandations IA multilingue.</li>
+            <li>Monétisation progressive intégrant exports Seller Central, scénarios IA et insights marché avancés.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
     <section class="section" id="search">
       <h2 style="margin:0 0 10px">Trouver des liquidations pour vos listings Amazon</h2>
       <p class="muted">Les fichiers sont chargés depuis <span class="kbd">data/&lt;magasin&gt;/&lt;ville&gt;.json</span> afin de repérer rapidement les opportunités d'arbitrage.</p>
@@ -334,6 +385,41 @@
           <div class="muted"><span id="resultCount">0</span> articles</div>
         </div>
         <div id="cards" class="grid" style="margin-top:12px"></div>
+      </div>
+    </section>
+    <section class="section value-section" id="client-value">
+      <div class="value-header">
+        <h2>Pourquoi les clients payants ne peuvent plus s'en passer</h2>
+        <p class="muted">La plateforme réduit l'effort de sourcing, s'aligne sur les besoins critiques des revendeurs Amazon et propose une montée en gamme cohérente à mesure que les opérations se complexifient.</p>
+      </div>
+      <div class="value-grid">
+        <article class="value-card">
+          <span class="value-icon" aria-hidden="true">⚡</span>
+          <h3>Efficacité opérationnelle immédiate</h3>
+          <ul>
+            <li>Filtres multi-critères (magasin, ville, code postal, seuil de rabais) pour centraliser les recherches produits.</li>
+            <li>Vue consolidée des stocks et des écarts de prix exploitables sans feuille de calcul.</li>
+            <li>Workflows prêts à exporter vers Seller Central en quelques clics.</li>
+          </ul>
+        </article>
+        <article class="value-card">
+          <span class="value-icon" aria-hidden="true">🛒</span>
+          <h3>Offre adaptée aux revendeurs Amazon</h3>
+          <ul>
+            <li>Onboarding FBA guidé, calcul automatique des frais et scénarios FBM intégrés.</li>
+            <li>Veille multi-fournisseurs (Best Buy, Walmart, Canadian Tire, etc.) pour sécuriser la Buy Box.</li>
+            <li>Communauté privée et automations prêtes à lancer pour garder une longueur d'avance.</li>
+          </ul>
+        </article>
+        <article class="value-card">
+          <span class="value-icon" aria-hidden="true">💡</span>
+          <h3>Monétisation graduée et claire</h3>
+          <ul>
+            <li>Forfait Essentiel : accès rapide aux meilleures liquidations et alertes hebdomadaires.</li>
+            <li>Forfait Avancé : alertes en temps réel, exports Seller Central et travail d'équipe.</li>
+            <li>Offre Premium : analyse IA, prévisions de tendances et automatisations multicanal illimitées.</li>
+          </ul>
+        </article>
       </div>
     </section>
 
