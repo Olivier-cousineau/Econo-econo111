@@ -59,22 +59,22 @@
 <body class="overlay-active">
   <div id="registrationOverlay" role="dialog" aria-modal="true" aria-labelledby="registrationTitle">
     <div class="registration-card">
-      <h2 id="registrationTitle">Members-only access</h2>
-      <p class="muted" style="margin:0">Join <strong><span data-client-count>0</span></strong> deal hunters and unlock the top offers leaderboard.</p>
+      <h2 id="registrationTitle">Accesso riservato ai membri</h2>
+      <p class="muted" style="margin:0">Unisciti a <strong><span data-client-count>0</span></strong> cacciatori di offerte e sblocca la classifica delle migliori promozioni.</p>
       <form id="registrationForm">
         <div>
-          <label for="fullName">Full name</label>
-          <input id="fullName" name="fullName" type="text" placeholder="Enter your name" autocomplete="name" required />
+          <label for="fullName">Nome completo</label>
+          <input id="fullName" name="fullName" type="text" placeholder="Inserisci il tuo nome" autocomplete="name" required />
         </div>
         <div>
           <label for="email">Email</label>
-          <input id="email" name="email" type="email" placeholder="name@example.com" autocomplete="email" required />
+          <input id="email" name="email" type="email" placeholder="nome@esempio.com" autocomplete="email" required />
         </div>
         <div class="checkbox-row">
           <input id="regulationCheckbox" name="regulation" type="checkbox" required />
-          <label for="regulationCheckbox" style="margin:0">I confirm I have read and accepted the site usage guidelines.</label>
+          <label for="regulationCheckbox" style="margin:0">Confermo di aver letto e accettato le linee guida di utilizzo del sito.</label>
         </div>
-        <button id="registrationSubmit" type="submit" disabled>Sign up and unlock access</button>
+        <button id="registrationSubmit" type="submit" disabled>Registrati e sblocca l'accesso</button>
       </form>
     </div>
   </div>
@@ -82,25 +82,25 @@
     <div class="container row" style="justify-content:space-between">
       <div class="row" style="gap:10px;align-items:center">
         <a class="brand" href="index-it.html">
-          <img src="assets/logo.svg" alt="EconoDeal – reseller accelerator" />
+          <img src="assets/logo.svg" alt="EconoDeal – acceleratore per rivenditori" />
           <span class="brand-text">
             <span class="brand-title">EconoDeal</span>
-            <span class="brand-tagline">Winning reseller</span>
+            <span class="brand-tagline">Rivenditore vincente</span>
           </span>
         </a>
       </div>
       <div class="row" style="gap:12px;align-items:center">
-        <a class="nav-button current" href="best-deals-it.html" style="white-space:nowrap">Top deals</a>
-        <a class="nav-button" href="pricing-it.html" style="white-space:nowrap">Plans / pricing</a>
-        <a class="nav-button" href="roadmap-it.html" style="white-space:nowrap">Roadmap / vision</a>
-        <div class="lang-switch" aria-label="Language selector">
+        <a class="nav-button current" href="best-deals-it.html" style="white-space:nowrap">Migliori offerte</a>
+        <a class="nav-button" href="pricing-it.html" style="white-space:nowrap">Piani / prezzi</a>
+        <a class="nav-button" href="roadmap-it.html" style="white-space:nowrap">Roadmap / visione</a>
+        <div class="lang-switch" aria-label="Selettore lingua">
           <a href="best-deals.html">FR</a>
           <a href="best-deals-en.html">EN</a>
           <a href="best-deals-es.html">ES</a>
           <a href="best-deals-de.html">DE</a>
           <span class="active" aria-current="true">IT</span>
         </div>
-        <div class="muted" style="white-space:nowrap">Registered clients:&nbsp; <span data-client-count>0</span></div>
+        <div class="muted" style="white-space:nowrap">Clienti registrati:&nbsp; <span data-client-count>0</span></div>
         <div class="muted">© <span id="year"></span></div>
       </div>
     </div>
@@ -109,32 +109,32 @@
   <main class="container">
     <section class="section" style="padding-bottom:10px">
       <div class="hero">
-        <div class="badge">Updated after each crawl</div>
-        <h2>Top clearance leaderboard</h2>
-        <p class="muted" style="max-width:720px">Discover the most aggressive discounts detected by our bots across every monitored retailer. The leaderboard refreshes automatically once each crawl ends. Reload the page to see the latest offers and review the top 100 clearance deals ranked by discount rate.</p>
+        <div class="badge">Aggiornato dopo ogni crawl</div>
+        <h2>Classifica delle migliori liquidazioni</h2>
+        <p class="muted" style="max-width:720px">Scopri gli sconti più aggressivi individuati dai nostri bot in tutti i rivenditori monitorati. La classifica si aggiorna automaticamente al termine di ogni crawl. Ricarica la pagina per vedere le offerte più recenti e rivedere le prime 100 liquidazioni ordinate per tasso di sconto.</p>
         <div class="status-banner" id="statusBanner" role="status">
-          <span id="statusText">Analysing the latest crawls...</span>
+          <span id="statusText">Analisi degli ultimi crawl in corso...</span>
         </div>
         <div class="filters">
           <div>
-            <label for="storeFilter" class="muted" style="font-size:12px;display:block;margin-bottom:4px">Filter by retailer</label>
+            <label for="storeFilter" class="muted" style="font-size:12px;display:block;margin-bottom:4px">Filtra per rivenditore</label>
             <select id="storeFilter">
-              <option value="">All retailers</option>
+              <option value="">Tutti i rivenditori</option>
             </select>
           </div>
-          <div style="margin-left:auto" class="muted">Total:&nbsp;<span id="dealCount">0</span> deals</div>
+          <div style="margin-left:auto" class="muted">Totale:&nbsp;<span id="dealCount">0</span> offerte</div>
         </div>
       </div>
     </section>
 
     <section class="section" style="padding-top:12px">
       <div id="cards" class="grid" aria-live="polite"></div>
-      <div id="emptyState" class="empty" style="display:none">No clearance deals found right now. Please try again later!</div>
+      <div id="emptyState" class="empty" style="display:none">Nessuna offerta in liquidazione trovata al momento. Riprova più tardi!</div>
     </section>
   </main>
 
   <div class="container footer">
-    © <span id="yearFooter"></span> EconoDeal · All rights reserved
+    © <span id="yearFooter"></span> EconoDeal · Tutti i diritti riservati
   </div>
 
   <style>
