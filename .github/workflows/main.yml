@@ -1,0 +1,48 @@
+name: canadiantire-scrape
+
+on:
+  schedule:
+    # Chaque nuit à 21h heure du Québec (01:00 UTC)
+    - cron: "0 1 * * *"
+  workflow_dispatch: {}  # Permet de le lancer manuellement
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install playwright aiofiles pandas tqdm
+          python -m playwright install-deps
+          python -m playwright install
+
+      - name: Run scraper for Canadian Tire
+        run: |
+          python scrape_canadiantire_liquidations.py --stores-file data/canadiantire/stores_ids.txt
+
+      - name: Upload scraped results as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: canadiantire-results
+          path: output_canadiantire/**
+
+      - name: Commit results back to repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "actions@github.com"
+          git add output_canadiantire || true
+          git commit -m "Canadian Tire scrape $(date -u +'%Y-%m-%d %H:%M:%S UTC')" || echo "No changes to commit"
+          git push
