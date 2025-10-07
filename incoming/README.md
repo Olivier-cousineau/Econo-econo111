@@ -52,3 +52,37 @@ Une action GitHub (`.github/workflows/walmart-scraper.yml`) planifie l'exécutio
 3. Déclenchez manuellement le workflow via l'onglet **Actions** si nécessaire (`Run workflow`).
 
 Chaque exécution met à jour les JSON par magasin dans `data/walmart/` et attache un artefact `liquidations_walmart_qc.json` téléchargeable depuis GitHub Actions.
+
+# Canadian Tire Clearance Scraper
+
+Le script `incoming/canadian_tire_scraper.py` automatise la récupération des produits en liquidation publiés par Canadian Tire. Il lit la liste des magasins depuis `data/canadian-tire/stores.json`, génère un fichier JSON par magasin dans `data/canadian-tire/` puis consolide l'ensemble dans un agrégat global.
+
+```bash
+python incoming/canadian_tire_scraper.py --store laval --store saint-jerome
+```
+
+Options principales :
+
+| Option | Description |
+| --- | --- |
+| `--store` | Peut être répété pour sélectionner des magasins précis (ID, slug, ville). |
+| `--language` | Force la langue des pages magasin ciblées (`fr` ou `en`). |
+| `--output-dir` | Change le dossier de sortie pour les fichiers par magasin. |
+| `--aggregated-path` | Déplace le fichier d'agrégation (défaut : `liquidations_canadian_tire_qc.json`). |
+| `--max-retries`, `--timeout`, `--delay` | Ajustent la tolérance réseau. |
+
+Chaque exécution sauvegarde les aubaines dans `data/canadian-tire/<ville>.json` et regroupe l'ensemble dans `liquidations_canadian_tire_qc.json`.
+
+### Tester rapidement le scraper
+
+1. Installez les dépendances requises (voir la section « Installation locale rapide » ci-dessus).
+2. Lancez une extraction ciblée sur un seul magasin pour limiter la charge :
+
+   ```bash
+   python incoming/canadian_tire_scraper.py --store laval --output-dir /tmp/canadian-tire-test --aggregated-path /tmp/canadian-tire-test.json
+   ```
+
+   Le terminal doit afficher une ligne `✔ Laval: X produits` (ou `0 produits` si aucune liquidation n'est disponible).
+3. Inspectez le fichier `/tmp/canadian-tire-test.json` ou l'un des JSON par magasin pour confirmer que des objets produit ont bien été écrits.
+
+> 💡 Pour un test encore plus rapide, ajoutez l'option `--store <id>` correspondant à un magasin que vous savez actif (voir `data/canadian-tire/stores.json`).
