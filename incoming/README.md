@@ -53,6 +53,14 @@ Une action GitHub (`.github/workflows/walmart-scraper.yml`) planifie l'exécutio
 
 Chaque exécution met à jour les JSON par magasin dans `data/walmart/` et attache un artefact `liquidations_walmart_qc.json` téléchargeable depuis GitHub Actions.
 
+### Canadian Tire
+
+Un workflow dédié (`.github/workflows/canadian-tire-scraper.yml`) exécute le scraper Canadian Tire chaque lundi à 04:00 (heure de Toronto, soit 09:00 UTC en hiver et 08:00 UTC en été). Il peut aussi être déclenché manuellement via **Run workflow**.
+
+1. Vérifiez que `data/canadian-tire/stores.json` contient la liste à jour des magasins.
+2. Lancez `Run workflow` dans l'onglet **Actions** pour forcer une collecte si nécessaire.
+3. Récupérez l'artefact `canadian-tire-liquidations-<run_id>` qui contient l'agrégat `liquidations_canadian_tire_qc.json` ainsi que tous les fichiers par magasin dans `data/canadian-tire/`.
+
 # Canadian Tire Clearance Scraper
 
 Le script `incoming/canadian_tire_scraper.py` automatise la récupération des produits en liquidation publiés par Canadian Tire. Il lit la liste des magasins depuis `data/canadian-tire/stores.json`, génère un fichier JSON par magasin dans `data/canadian-tire/` puis consolide l'ensemble dans un agrégat global.
