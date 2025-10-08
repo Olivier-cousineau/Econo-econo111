@@ -66,3 +66,29 @@ Options principales :
 | `--max-retries`, `--timeout`, `--delay` | Ajustent la tolérance réseau. |
 
 Chaque exécution sauvegarde les aubaines dans `data/canadian-tire/<ville>.json` et regroupe l'ensemble dans `liquidations_canadian_tire_qc.json`.
+
+# Best Buy Clearance Scraper
+
+Le script `incoming/bestbuy_clearance_scraper.py` récupère les produits listés sur la
+collection « Clearance » de Best Buy Canada (ou toute autre collection publique
+dont vous fournissez l'URL).
+
+```bash
+python incoming/bestbuy_clearance_scraper.py --dry-run
+```
+
+Principales options :
+
+| Option | Description |
+| --- | --- |
+| `--url` | Permet de cibler une autre collection Best Buy (défaut : clearance nationale). |
+| `--output` | Chemin du fichier JSON de sortie (défaut : `data/best-buy/liquidations.json`). |
+| `--store` | Nom du magasin inscrit dans le JSON généré. |
+| `--city` | Ville (ou mention « En ligne ») associée aux produits. |
+| `--dry-run` | Affiche les produits trouvés sans écrire de fichier. |
+| `--verbose` | Active des journaux détaillés pour diagnostiquer un échec d'extraction. |
+
+Le script analyse le payload `__NEXT_DATA__` de la page et isole les produits
+contenant un prix régulier et un prix en solde. Les résultats sont triés selon
+le rabais le plus élevé avant d'être exportés au format attendu par le site
+statique.
