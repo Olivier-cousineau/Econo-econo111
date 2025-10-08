@@ -1,35 +1,231 @@
-name: Mise à jour des liquidations Best Buy
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Best Buy (Canada) – Clearance scraper robuste.
+- Charge la page avec Playwright (Chromium) et headers réalistes
+- Essaie d'extraire les données via:
+  A) __NEXT_DATA__ (Next.js)
+  B) window.__BB_STATE__ ou window.__INITIAL_STATE__
+  C) Interception XHR (API interne)
+  D) Fallback DOM parsing
+Sortie: JSON [{name,image,price,clearance_price,sku,url,availability}]
+"""
 
-on:
-  schedule:
-    - cron: '0 3 * * *'
-  workflow_dispatch:
+import asyncio, json, sys, re, os, math
+from pathlib import Path
+from datetime import datetime
+from typing import List, Dict, Any
 
-jobs:
-  scrape:
-    name: Télécharger les liquidations
-    runs-on: ubuntu-latest
+from playwright.async_api import async_playwright
 
-    steps:
-      - name: Récupérer le dépôt
-        uses: actions/checkout@v4
+TARGET_URL = os.environ.get(
+    "BESTBUY_CLEARANCE_URL",
+    "https://www.bestbuy.ca/en-ca/collection/clearance-products/113065",
+)
 
-      - name: Configurer Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
+OUTFILE = None
+# --output data/best-buy/liquidations.json
+if "--output" in sys.argv:
+    try:
+        OUTFILE = sys.argv[sys.argv.index("--output")+1]
+    except Exception:
+        pass
+if not OUTFILE:
+    OUTFILE = "data/best-buy/liquidations.json"
 
-      - name: Installer les dépendances
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+Path(OUTFILE).parent.mkdir(parents=True, exist_ok=True)
 
-      - name: Lancer le scraper Best Buy
-        run: python incoming/bestbuy_clearance_scraper.py --output data/best-buy/liquidations.json
+def normalize_product(p: Dict[str, Any]) -> Dict[str, Any]:
+    name = p.get("name") or p.get("title") or p.get("skuName") or ""
+    url  = p.get("url") or p.get("productUrl") or p.get("link") or ""
+    if url and url.startswith("/"):
+        url = "https://www.bestbuy.ca" + url
+    image = (
+        p.get("image") or p.get("thumbnail") or p.get("thumbnailUrl") or
+        (p.get("images") or [{}])[0].get("href") if isinstance(p.get("images"), list) else None
+    )
+    sku = str(p.get("sku") or p.get("skuId") or p.get("productSku") or p.get("id") or "").strip()
 
-      - name: Publier le jeu de données
-        uses: actions/upload-artifact@v4
-        with:
-          name: liquidations-best-buy
-          path: data/best-buy/liquidations.json
-          if-no-files-found: error
+    # prix
+    reg = None; clear = None
+    price_obj = p.get("price") or p.get("pricing") or {}
+    for k in ("regular", "regularPrice", "regularPriceTotal", "regularPriceMin"):
+        if k in price_obj and isinstance(price_obj[k], (int, float, str)):
+            try: reg = float(str(price_obj[k]).replace("$","").replace(",",""))
+            except: pass
+    for k in ("current", "salePrice", "price", "offerPrice", "priceTotal"):
+        if k in price_obj and isinstance(price_obj[k], (int, float, str)):
+            try: clear = float(str(price_obj[k]).replace("$","").replace(",",""))
+            except: pass
+
+    # parfois le flag clearance
+    if clear is None and isinstance(p.get("salePrice"), (int,float,str)):
+        try: clear = float(str(p["salePrice"]).replace("$","").replace(",",""))
+        except: pass
+    if reg is None and isinstance(p.get("regularPrice"), (int,float,str)):
+        try: reg = float(str(p["regularPrice"]).replace("$","").replace(",",""))
+        except: pass
+
+    availability = (
+        p.get("availability") or p.get("availabilityStatus") or
+        p.get("shipping") or p.get("pickup")
+    )
+    return {
+        "name": name,
+        "image": image,
+        "price_original": reg,
+        "price_clearance": clear,
+        "sku": sku,
+        "url": url,
+        "availability": availability,
+        "source": "bestbuy.ca",
+        "scraped_at": datetime.utcnow().isoformat()+"Z",
+    }
+
+async def run():
+    products: List[Dict[str,Any]] = []
+    intercepted_jsons: List[Dict[str,Any]] = []
+
+    async with async_playwright() as pw:
+        browser = await pw.chromium.launch(headless=True, args=[
+            "--disable-blink-features=AutomationControlled",
+            "--no-sandbox",
+        ])
+        context = await browser.new_context(
+            locale="en-CA",
+            user_agent=("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                        "AppleWebKit/537.36 (KHTML, like Gecko) "
+                        "Chrome/121.0.0.0 Safari/537.36"),
+            extra_http_headers={
+                "Accept-Language": "en-CA,en;q=0.9,fr-CA;q=0.8",
+                "Sec-CH-UA-Platform": "\"Windows\"",
+            },
+        )
+        page = await context.new_page()
+
+        # Intercepter les XHR qui ressemblent à des “search/category/products”
+        page.on("response", lambda resp: None)  # placeholder
+
+        async def on_response(resp):
+            try:
+                url = resp.url
+                if ("api" in url and "product" in url) or ("search" in url and "api" in url):
+                    if resp.request.resource_type == "xhr":
+                        ct = (await resp.body()).decode("utf-8","ignore")
+                        if ct and ct.strip().startswith("{"):
+                            data = json.loads(ct)
+                            intercepted_jsons.append(data)
+            except Exception:
+                pass
+        page.on("response", on_response)
+
+        await page.route("**/*", lambda route: asyncio.create_task(route.continue_()))
+        await page.goto(TARGET_URL, wait_until="domcontentloaded", timeout=90000)
+        # Laisse le temps aux XHR
+        await page.wait_for_load_state("networkidle", timeout=90000)
+
+        # A) __NEXT_DATA__
+        next_data = await page.evaluate("() => { const s = document.querySelector('script#__NEXT_DATA__'); return s ? s.innerText : null }")
+        if next_data:
+            try:
+                jd = json.loads(next_data)
+                # Heuristiques parcours
+                candidates = []
+                def walk(x):
+                    if isinstance(x, dict):
+                        if "products" in x and isinstance(x["products"], list):
+                            candidates.append(x["products"])
+                        for v in x.values(): walk(v)
+                    elif isinstance(x, list):
+                        for v in x: walk(v)
+                walk(jd)
+                for lst in candidates:
+                    for p in lst: products.append(normalize_product(p))
+            except Exception:
+                pass
+
+        # B) Stores globaux
+        if not products:
+            for var in ("__BB_STATE__", "__INITIAL_STATE__", "__NEXT_DATA__"):
+                try:
+                    obj = await page.evaluate(f"() => window.{var} || null")
+                    if obj and isinstance(obj, dict):
+                        # Cherche “products” deeply
+                        def walk2(x):
+                            if isinstance(x, dict):
+                                if "products" in x and isinstance(x["products"], list):
+                                    for p in x["products"]:
+                                        products.append(normalize_product(p))
+                                for v in x.values(): walk2(v)
+                            elif isinstance(x, list):
+                                for v in x: walk2(v)
+                        walk2(obj)
+                except Exception:
+                    pass
+                if products: break
+
+        # C) XHR interceptés
+        if not products and intercepted_jsons:
+            for data in intercepted_jsons:
+                def walk3(x):
+                    if isinstance(x, dict):
+                        if "products" in x and isinstance(x["products"], list):
+                            for p in x["products"]:
+                                products.append(normalize_product(p))
+                        for v in x.values(): walk3(v)
+                    elif isinstance(x, list):
+                        for v in x: walk3(v)
+                walk3(data)
+
+        # D) Fallback DOM (cartes produits)
+        if not products:
+            cards = await page.query_selector_all("[data-automation='product-Large'] , [data-automation='product'] , article")
+            for c in cards:
+                try:
+                    name = (await c.query_selector("h3, h4, [data-automation='product-title']")).inner_text()
+                except: name = ""
+                try:
+                    href = await c.eval_on_selector("a", "a => a.getAttribute('href')")
+                    url = "https://www.bestbuy.ca" + href if href and href.startswith("/") else href
+                except: url = ""
+                try:
+                    img = await c.eval_on_selector("img", "i => i.getAttribute('src') || i.getAttribute('data-src')")
+                except: img = None
+                # prix
+                def numify(t): 
+                    try: return float(re.sub(r"[^0-9.,]", "", t).replace(",", "")) if t else None
+                    except: return None
+                reg = clear = None
+                try:
+                    ptxt = await c.inner_text()
+                    m_sale = re.search(r"\$?\s?(\d[\d,]*\.\d{2})", ptxt)
+                    if m_sale: clear = numify(m_sale.group(1))
+                except: pass
+
+                products.append({
+                    "name": name, "image": img,
+                    "price_original": reg, "price_clearance": clear,
+                    "sku": "", "url": url, "availability": None,
+                    "source": "bestbuy.ca", "scraped_at": datetime.utcnow().isoformat()+"Z",
+                })
+
+        await context.close()
+        await browser.close()
+
+    # Nettoyage: garde seulement ceux avec un prix promo
+    dedup = {}
+    for p in products:
+        key = (p.get("sku") or p.get("url") or p.get("name")).strip().lower()
+        if not key: continue
+        # Filtre: exiger un prix_clearance
+        if p.get("price_clearance") is None:
+            continue
+        dedup[key] = p
+
+    final = list(dedup.values())
+    with open(OUTFILE, "w", encoding="utf-8") as f:
+        json.dump(final, f, ensure_ascii=False, indent=2)
+    print(f"[OK] Saved {len(final)} items -> {OUTFILE}")
+
+if __name__ == "__main__":
+    asyncio.run(run())
