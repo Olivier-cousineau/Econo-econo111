@@ -64,15 +64,90 @@ def fetch_html(url: str) -> str:
     return response.text
 
 
+def _extract_json_object(text: str) -> Optional[str]:
+    """Return the first JSON object embedded in ``text`` if present."""
+
+    start = text.find("{")
+    if start == -1:
+        return None
+
+    depth = 0
+    in_string = False
+    escape = False
+
+    for index in range(start, len(text)):
+        char = text[index]
+        if escape:
+            escape = False
+            continue
+
+        if char == "\\":
+            escape = True
+            continue
+
+        if char == '"':
+            in_string = not in_string
+            continue
+
+        if in_string:
+            continue
+
+        if char == "{":
+            depth += 1
+        elif char == "}":
+            depth -= 1
+            if depth == 0:
+                return text[start : index + 1]
+
+    return None
+
+
+def _script_text(script_tag: Optional[bs4.Tag]) -> Optional[str]:
+    if script_tag is None:
+        return None
+    # ``script.string`` returns ``None`` when the script content is more complex
+    # than a plain string (e.g. when surrounded by whitespace or comments).
+    text = script_tag.string
+    if text:
+        return text
+    return script_tag.get_text()
+
+
 def load_next_data(html: str) -> dict:
     soup = bs4.BeautifulSoup(html, "html.parser")
+    candidates = []
+
     script_tag = soup.find("script", id="__NEXT_DATA__", type="application/json")
-    if script_tag is None or not script_tag.string:
-        raise ExtractionError("Impossible de localiser __NEXT_DATA__ dans la page.")
-    try:
-        return json.loads(script_tag.string)
-    except json.JSONDecodeError as exc:  # pragma: no cover - defensive
-        raise ExtractionError("JSON __NEXT_DATA__ invalide") from exc
+    text = _script_text(script_tag)
+    if text:
+        candidates.append(text)
+
+    if not candidates:
+        for script in soup.find_all("script"):
+            script_text = _script_text(script)
+            if not script_text or "__NEXT_DATA__" not in script_text:
+                continue
+            candidates.append(script_text)
+
+    for candidate in candidates:
+        candidate = candidate.strip()
+        if not candidate:
+            continue
+
+        json_text: Optional[str]
+        if candidate.startswith("{"):
+            json_text = candidate
+        else:
+            json_text = _extract_json_object(candidate)
+        if not json_text:
+            continue
+
+        try:
+            return json.loads(json_text)
+        except json.JSONDecodeError:
+            continue
+
+    raise ExtractionError("Impossible de localiser __NEXT_DATA__ dans la page.")
 
 
 def walk_dicts(payload: object) -> Iterable[dict]:
