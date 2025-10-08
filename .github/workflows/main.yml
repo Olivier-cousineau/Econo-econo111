@@ -1,10 +1,8 @@
 name: 🧩 EconoDeal – Canadian Tire Scraper (503 stores)
 
 on:
-  # ⏰ Exécution automatique chaque soir à 21h (heure du Québec)
   schedule:
-    - cron: "0 1 * * *"
-  # ▶️ Permet de le lancer manuellement depuis l’onglet “Actions”
+    - cron: "0 1 * * *"   # 01:00 UTC ≈ 21:00 QC
   workflow_dispatch: {}
 
 permissions:
@@ -15,33 +13,81 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Récupère ton dépôt
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2️⃣ Vérifie la structure du dépôt
       - name: Show repository structure (debug)
         run: |
-          echo "📂 Current repository structure:"
+          echo "📂 Repo tree (top 200 lines):"
           pwd
           ls -R | head -n 200
 
-      # 3️⃣ Vérifie que le fichier des magasins existe
-      - name: Ensure store list file exists
+      # 🔧 Génère data/canadiantire/stores_ids.txt s'il n'existe pas,
+      # à partir de data/canadiantire/stores.json OU data/canadian-tire/stores.json
+      - name: Generate stores_ids.txt if missing
         run: |
-          if [ ! -f "data/canadiantire/stores_ids.txt" ]; then
-            echo "[ERROR] ❌ data/canadiantire/stores_ids.txt not found!"
-            exit 1
-          fi
-          echo "[OK] ✅ Store list detected with $(wc -l < data/canadiantire/stores_ids.txt) stores."
+          set -e
+          python - <<'PY'
+          import json, re, pathlib, sys
+          out = pathlib.Path('data/canadiantire/stores_ids.txt')
+          if out.exists():
+              print(f"[OK] stores_ids.txt already exists ({out})")
+              sys.exit(0)
 
-      # 4️⃣ Configure Python 3.11
+          # Cherche une source de magasins (avec ou sans tiret)
+          sources = [
+              pathlib.Path('data/canadiantire/stores.json'),
+              pathlib.Path('data/canadian-tire/stores.json'),
+              pathlib.Path('data/canadiantire/magasin.json'),
+              pathlib.Path('data/canadian-tire/magasin.json'),
+          ]
+          src = next((p for p in sources if p.exists()), None)
+          if not src:
+              print("[ERROR] Aucune source (stores.json / magasin.json) trouvée.", file=sys.stderr)
+              sys.exit(1)
+
+          raw = src.read_text(encoding='utf-8', errors='ignore')
+          ids = set()
+
+          # Essaye JSON structuré
+          try:
+              obj = json.loads(raw)
+          except Exception:
+              obj = None
+
+          def collect(o):
+              if isinstance(o, dict):
+                  for k,v in o.items():
+                      if k.lower() in {'store_id','id','storeid','number','code','store','storenumber','magasin'} and isinstance(v,(str,int)):
+                          s = str(v).strip()
+                          if s.isdigit():
+                              ids.add(s.zfill(4))
+                      else:
+                          collect(v)
+              elif isinstance(o, list):
+                  for it in o:
+                      collect(it)
+
+          if obj is not None:
+              collect(obj)
+
+          # Sinon, regex brute (extrait nombres 3–5 chiffres, exclut années)
+          if not ids:
+              for m in re.findall(r'\b\d{3,5}\b', raw):
+                  if not (1900 <= int(m) <= 2099):
+                      ids.add(m.zfill(4))
+
+          ids = sorted(ids, key=lambda x: int(x))
+          out.parent.mkdir(parents=True, exist_ok=True)
+          out.write_text('\n'.join(ids), encoding='utf-8')
+          print(f"[OK] Wrote {len(ids)} store IDs to {out}")
+          PY
+
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      # 5️⃣ Installe les dépendances
       - name: Install dependencies (Playwright, Requests, etc.)
         run: |
           python -m pip install --upgrade pip
@@ -49,8 +95,8 @@ jobs:
           python -m playwright install-deps
           python -m playwright install
 
-      # 6️⃣ Boucle sur les 503 magasins
-      - name: Run EconoDeal – Canadian Tire scraper (503 stores)
+      # 🚀 Boucle sur TOUS les IDs (503) avec l’interface de ton script (--store)
+      - name: Run EconoDeal – Canadian Tire scraper (all stores)
         env:
           CT_CONCURRENCY: "3"
         run: |
@@ -58,10 +104,14 @@ jobs:
           mkdir -p output_canadiantire
           rm -f output_canadiantire/canadiantire_liquidations_all_stores.csv || true
 
-          echo "🚀 Starting full scrape of all 503 Canadian Tire stores..."
+          echo "🚀 Starting full scrape…"
+          TOTAL=$(wc -l < data/canadiantire/stores_ids.txt || echo 0)
+          echo "Found $TOTAL store IDs."
+          i=0
           while IFS= read -r STORE_ID; do
             [ -z "$STORE_ID" ] && continue
-            echo "▶️ Scraping store $STORE_ID"
+            i=$((i+1))
+            echo "▶️ ($i/$TOTAL) store $STORE_ID"
             python scrape_canadiantire_liquidations.py \
               --store "$STORE_ID" \
               --language fr \
@@ -74,14 +124,12 @@ jobs:
 
           echo "✅ Finished scraping all stores."
 
-      # 7️⃣ Sauvegarde des résultats
       - name: Upload scraping results
         uses: actions/upload-artifact@v4
         with:
           name: canadiantire-results
           path: output_canadiantire/**
 
-      # 8️⃣ Commit automatique dans le dépôt
       - name: Commit and push results to repository
         run: |
           git config user.name "github-actions[bot]"
