@@ -43,19 +43,13 @@ python incoming/walmart_requests_scraper.py --store saint-jerome
 
 Les options (`--store`, `--output-dir`, `--aggregated-path`, etc.) sont identiques à la version Playwright. Ce scraper repose sur la disponibilité du JSON `__NEXT_DATA__` dans la page et peut échouer si Walmart modifie la structure. En contrepartie, il démarre en quelques secondes et nécessite moins de ressources.
 
-## Automatisation
+## Planification manuelle
 
-Une action GitHub (`.github/workflows/walmart-scraper.yml`) planifie l'exécution chaque jour à 21h UTC. Pour l'activer :
-
-1. Ajoutez un secret `WALMART_PROXIES` contenant une liste JSON de proxies résidentiels.
-2. Mettez à jour `incoming/walmart_stores.json` (via `incoming/walmart_stores_raw.tsv`).
-3. Déclenchez manuellement le workflow via l'onglet **Actions** si nécessaire (`Run workflow`).
-
-Chaque exécution met à jour les JSON par magasin dans `data/walmart/` et attache un artefact `liquidations_walmart_qc.json` téléchargeable depuis GitHub Actions.
+Pour exécuter le scraper à intervalles réguliers, créez votre propre planificateur (ex.: cron, tâche planifiée) qui appelle la commande `python incoming/walmart_scraper.py`. Assurez-vous que la variable `WALMART_PROXIES` est définie dans l'environnement d'exécution et que les fichiers de sortie sont synchronisés avec votre environnement de production.
 
 # Canadian Tire Clearance Scraper
 
-Le script `incoming/canadian_tire_scraper.py` automatise la récupération des produits en liquidation publiés par Canadian Tire. Il lit la liste des magasins depuis `data/canadian-tire/stores.json`, génère un fichier JSON par magasin dans `data/canadian-tire/` puis consolide l'ensemble dans un agrégat global.
+Le script `incoming/canadian_tire_scraper.py` gère la récupération des produits en liquidation publiés par Canadian Tire. Il lit la liste des magasins depuis `data/canadian-tire/stores.json`, génère un fichier JSON par magasin dans `data/canadian-tire/` puis consolide l'ensemble dans un agrégat global.
 
 ```bash
 python incoming/canadian_tire_scraper.py --store laval --store saint-jerome
