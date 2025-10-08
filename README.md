@@ -27,21 +27,7 @@ Site statique bilingue (FR/EN) avec filtres Magasin/Ville et barre de % de rabai
   `previews/sporting-life/saint-jerome.html` permettent de feuilleter les aubaines Sporting Life
   directement depuis GitHub sans devoir lancer le site.
 
+> ℹ️ Toutes les automatisations ont été retirées. La mise à jour des données et des aperçus se fait
+manuellement en ajoutant ou en remplaçant les fichiers JSON dans `data/`.
+
 © 2025 EconoDeal
-
-## Exécution du scraper Walmart
-
-Le script asynchrone `incoming/walmart_scraper.py` peut être exécuté à la demande
-depuis ton poste de travail :
-
-1. Crée un fichier `incoming/walmart_stores.json` ou complète la liste `magasins`
-   avec l'identifiant, la ville et l'adresse de chaque magasin.
-2. Lance le script avec `python incoming/walmart_scraper.py` après avoir défini la
-   variable d'environnement `WALMART_PROXIES` contenant ta liste JSON de proxies :
-   `[
-   "http://user:pass@proxy1:port", "http://user:pass@proxy2:port"
-   ]`.
-3. Récupère les résultats dans `liquidations_walmart_qc.json` ainsi que dans les
-   fichiers par magasin présents dans `data/walmart/` (`data/walmart/laval.json`,
-   `data/walmart/moncton.json`, etc.). Ces jeux de données peuvent ensuite être
-   consommés directement par le site statique.
