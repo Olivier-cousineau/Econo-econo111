@@ -1,10 +1,10 @@
 name: 🧩 EconoDeal – Canadian Tire Scraper
 
 on:
-  # 📅 Exécution automatique chaque soir à 21h (Québec) = 01:00 UTC
+  # ⏰ Exécution automatique chaque soir à 21h (heure du Québec)
   schedule:
     - cron: "0 1 * * *"
-  # ▶️ Permet aussi de le lancer manuellement depuis l’onglet “Actions”
+  # ▶️ Permet de le lancer manuellement depuis l’onglet “Actions”
   workflow_dispatch: {}
 
 permissions:
@@ -15,18 +15,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Récupère ton dépôt GitHub
+      # 1️⃣ Récupère le dépôt GitHub
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2️⃣ Debug : affiche la structure du dépôt (utile si le chemin est faux)
+      # 2️⃣ Debug : affiche la structure du dépôt (utile si erreur de chemin)
       - name: Show repository structure (debug)
         run: |
           echo "📂 Current repository structure:"
           pwd
           ls -R | head -n 100
 
-      # 3️⃣ S’assure que le dossier existe et ajoute 3 magasins de test si besoin
+      # 3️⃣ Crée le dossier si manquant + ajoute 3 magasins de test
       - name: Ensure required folders and sample IDs
         run: |
           mkdir -p data/canadiantire
@@ -38,36 +38,37 @@ jobs:
           fi
           test -f scrape_canadiantire_liquidations.py || (echo "[ERROR] Missing scrape_canadiantire_liquidations.py at repo root ❌" && exit 1)
 
-      # 4️⃣ Installe Python et les dépendances nécessaires
+      # 4️⃣ Configure Python 3.11
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Install dependencies (Playwright, Pandas, etc.)
+      # 5️⃣ Installe toutes les dépendances nécessaires
+      - name: Install dependencies (Playwright, Requests, etc.)
         run: |
           python -m pip install --upgrade pip
-          pip install playwright aiofiles pandas tqdm
+          pip install playwright aiofiles pandas tqdm requests beautifulsoup4 lxml
           python -m playwright install-deps
           python -m playwright install
 
-      # 5️⃣ Exécute le scraper principal
+      # 6️⃣ Lance le scraper principal
       - name: Run EconoDeal – Canadian Tire scraper
         env:
-          CT_CONCURRENCY: "3"        # Nombre de magasins simultanés
-          CT_DELAY_BASE: "1.6"       # Délai minimum entre chargements
-          CT_DELAY_JITTER: "1.4"     # Variabilité aléatoire
+          CT_CONCURRENCY: "3"
+          CT_DELAY_BASE: "1.6"
+          CT_DELAY_JITTER: "1.4"
         run: |
           python scrape_canadiantire_liquidations.py --stores-file data/canadiantire/stores_ids.txt
 
-      # 6️⃣ Sauvegarde les résultats de scraping dans un “artifact” téléchargeable
+      # 7️⃣ Sauvegarde les résultats de scraping comme artefact téléchargeable
       - name: Upload scraping results
         uses: actions/upload-artifact@v4
         with:
           name: canadiantire-results
           path: output_canadiantire/**
 
-      # 7️⃣ Commit automatique des fichiers extraits dans ton dépôt
+      # 8️⃣ Commit automatique des données extraites dans le dépôt
       - name: Commit and push results to repository
         run: |
           git config user.name "github-actions[bot]"
