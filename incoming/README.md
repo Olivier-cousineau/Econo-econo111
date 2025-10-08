@@ -66,3 +66,24 @@ Options principales :
 | `--max-retries`, `--timeout`, `--delay` | Ajustent la tolérance réseau. |
 
 Chaque exécution sauvegarde les aubaines dans `data/canadian-tire/<ville>.json` et regroupe l'ensemble dans `liquidations_canadian_tire_qc.json`.
+
+# Best Buy Clearance Scraper
+
+Le script `incoming/best_buy_scraper.py` automatise la récupération des offres en liquidation affichées dans les magasins Best Buy du Québec. Il produit un fichier JSON par magasin (dossier `data/best-buy/`) et un agrégat global (`liquidations.json`).
+
+```bash
+python incoming/best_buy_scraper.py --language fr
+```
+
+Options principales :
+
+| Option | Description |
+| --- | --- |
+| `--store laval` | Limite l'extraction à un magasin (ville, label, slug ou numéro). |
+| `--language en` | Retourne les données en anglais (`fr` par défaut). |
+| `--output-dir ./sorties` | Change le dossier cible pour les JSON individuels. |
+| `--aggregated-path ./sorties/liquidations.json` | Positionne l'agrégat global. |
+| `--page-size 200` | Ajuste le nombre de produits chargés par requête. |
+| `--max-retries`, `--timeout`, `--delay` | Affinent la résilience réseau. |
+
+⚠️ L'API Best Buy applique des mécanismes anti-robot. En cas d'erreur 403, augmentez les délais (`--delay 2 5`) et réduisez la fréquence d'exécution.

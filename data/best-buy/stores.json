@@ -1,0 +1,178 @@
+[
+  {
+    "label": "St. Jerome",
+    "slug": "st-jerome-658",
+    "city": "Saint-Jerome",
+    "address": "1040 Boul. du Grand-Heron, Saint-Jerome, QC",
+    "storeNumber": "658",
+    "hasData": false
+  },
+  {
+    "label": "Rosemere",
+    "slug": "rosemere-978",
+    "city": "Rosemere",
+    "address": "401 Boul. Labelle, Unit M-20, Rosemere, QC",
+    "storeNumber": "978",
+    "hasData": false
+  },
+  {
+    "label": "Mascouche",
+    "slug": "mascouche-663",
+    "city": "Mascouche",
+    "address": "113 Monte Masson, Bldg. C Unit 2, Mascouche, QC",
+    "storeNumber": "663",
+    "hasData": false
+  },
+  {
+    "label": "Laval",
+    "slug": "laval-968",
+    "city": "Laval",
+    "address": "1560 Boul. Le Corbusier, Laval, QC",
+    "storeNumber": "968",
+    "hasData": false
+  },
+  {
+    "label": "Pointe Claire",
+    "slug": "pointe-claire-970",
+    "city": "Pointe-Claire",
+    "address": "6815 Autoroute Transcanadienne, Local #Y009, Pointe-Claire, QC",
+    "storeNumber": "970",
+    "hasData": false
+  },
+  {
+    "label": "Marche Central",
+    "slug": "marche-central-962",
+    "city": "Montreal",
+    "address": "8871 Boul de L'acadie, Montreal, QC",
+    "storeNumber": "962",
+    "hasData": false
+  },
+  {
+    "label": "Anjou",
+    "slug": "anjou-84",
+    "city": "Anjou",
+    "address": "7400 Boul. des Roseraies, Anjou, QC",
+    "storeNumber": "84",
+    "hasData": false
+  },
+  {
+    "label": "Vaudreuil",
+    "slug": "vaudreuil-674",
+    "city": "Vaudreuil-Dorion",
+    "address": "3090 Boul. de la Gare, Vaudreuil-Dorion, QC",
+    "storeNumber": "674",
+    "hasData": false
+  },
+  {
+    "label": "Centreville",
+    "slug": "centreville-651",
+    "city": "Montreal",
+    "address": "470 Rue Ste. Catherine O, Montreal, QC",
+    "storeNumber": "651",
+    "hasData": false
+  },
+  {
+    "label": "LaSalle",
+    "slug": "lasalle-967",
+    "city": "LaSalle",
+    "address": "7077 Boul. Newman, LaSalle, QC",
+    "storeNumber": "967",
+    "hasData": false
+  },
+  {
+    "label": "Taschereau",
+    "slug": "taschereau-82",
+    "city": "Greenfield Park",
+    "address": "1800 Rue Auguste, Greenfield Park, QC",
+    "storeNumber": "82",
+    "hasData": false
+  },
+  {
+    "label": "Brossard",
+    "slug": "brossard-969",
+    "city": "Brossard",
+    "address": "8480 Boul. Leduc, Unit 100, Brossard, QC",
+    "storeNumber": "969",
+    "hasData": false
+  },
+  {
+    "label": "St. Bruno",
+    "slug": "st-bruno-971",
+    "city": "Saint-Bruno",
+    "address": "1235 Boul. des Promenades, Saint-Bruno, QC",
+    "storeNumber": "971",
+    "hasData": false
+  },
+  {
+    "label": "Saint Jean",
+    "slug": "saint-jean-681",
+    "city": "Saint-Jean-sur-Richelieu",
+    "address": "600 Rue Pierre-Caisse, Unit 4000, Saint-Jean-sur-Richelieu, QC",
+    "storeNumber": "681",
+    "hasData": false
+  },
+  {
+    "label": "Granby",
+    "slug": "granby-673",
+    "city": "Granby",
+    "address": "90 Rue Simonds N, Granby, QC",
+    "storeNumber": "673",
+    "hasData": false
+  },
+  {
+    "label": "Drummondville",
+    "slug": "drummondville-680",
+    "city": "Drummondville",
+    "address": "850 Rue Hains, Drummondville, QC",
+    "storeNumber": "680",
+    "hasData": false
+  },
+  {
+    "label": "Trois-Rivieres",
+    "slug": "trois-rivieres-668",
+    "city": "Trois-Rivieres",
+    "address": "4520 Boul. des Recollets, Unit 900A, Trois-Rivieres, QC",
+    "storeNumber": "668",
+    "hasData": false
+  },
+  {
+    "label": "Gatineau",
+    "slug": "gatineau-972",
+    "city": "Gatineau",
+    "address": "920 Maloney Blvd. W, Gatineau, QC",
+    "storeNumber": "972",
+    "hasData": false
+  },
+  {
+    "label": "Sherbrooke",
+    "slug": "sherbrooke-659",
+    "city": "Sherbrooke",
+    "address": "3450 Boul. de Portland, Sherbrooke, QC",
+    "storeNumber": "659",
+    "hasData": false
+  },
+  {
+    "label": "Place Laurier",
+    "slug": "place-laurier-906",
+    "city": "Quebec",
+    "address": "2700 Boul. Laurier, Unit 2290, Quebec, QC",
+    "storeNumber": "906",
+    "hasData": false
+  },
+  {
+    "label": "La Capitale",
+    "slug": "la-capitale-907",
+    "city": "Quebec",
+    "address": "5401 Boul. des Galeries, Quebec, QC",
+    "storeNumber": "907",
+    "hasData": false
+  },
+  {
+    "label": "Chicoutimi",
+    "slug": "chicoutimi-653",
+    "city": "Chicoutimi",
+    "address": "1401 Boul. Talbot, Chicoutimi, QC",
+    "storeNumber": "653",
+    "hasData": false
+  }
+]
