@@ -1,4 +1,4 @@
-name: 🧩 EconoDeal – Canadian Tire Scraper
+name: 🧩 EconoDeal – Canadian Tire Scraper (503 stores)
 
 on:
   # ⏰ Exécution automatique chaque soir à 21h (heure du Québec)
@@ -15,28 +15,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Récupère le dépôt GitHub
+      # 1️⃣ Récupère ton dépôt
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2️⃣ Debug : affiche la structure du dépôt (utile si erreur de chemin)
+      # 2️⃣ Vérifie la structure du dépôt
       - name: Show repository structure (debug)
         run: |
           echo "📂 Current repository structure:"
           pwd
-          ls -R | head -n 100
+          ls -R | head -n 200
 
-      # 3️⃣ Crée le dossier si manquant + ajoute 3 magasins de test
-      - name: Ensure required folders and sample IDs
+      # 3️⃣ Vérifie que le fichier des magasins existe
+      - name: Ensure store list file exists
         run: |
-          mkdir -p data/canadiantire
           if [ ! -f "data/canadiantire/stores_ids.txt" ]; then
-            echo "0271" > data/canadiantire/stores_ids.txt
-            echo "0649" >> data/canadiantire/stores_ids.txt
-            echo "0418" >> data/canadiantire/stores_ids.txt
-            echo "[INFO] Created sample stores_ids.txt ✅"
+            echo "[ERROR] ❌ data/canadiantire/stores_ids.txt not found!"
+            exit 1
           fi
-          test -f scrape_canadiantire_liquidations.py || (echo "[ERROR] Missing scrape_canadiantire_liquidations.py at repo root ❌" && exit 1)
+          echo "[OK] ✅ Store list detected with $(wc -l < data/canadiantire/stores_ids.txt) stores."
 
       # 4️⃣ Configure Python 3.11
       - name: Set up Python 3.11
@@ -44,7 +41,7 @@ jobs:
         with:
           python-version: "3.11"
 
-      # 5️⃣ Installe toutes les dépendances nécessaires
+      # 5️⃣ Installe les dépendances
       - name: Install dependencies (Playwright, Requests, etc.)
         run: |
           python -m pip install --upgrade pip
@@ -52,27 +49,43 @@ jobs:
           python -m playwright install-deps
           python -m playwright install
 
-      # 6️⃣ Lance le scraper principal
-      - name: Run EconoDeal – Canadian Tire scraper
+      # 6️⃣ Boucle sur les 503 magasins
+      - name: Run EconoDeal – Canadian Tire scraper (503 stores)
         env:
           CT_CONCURRENCY: "3"
-          CT_DELAY_BASE: "1.6"
-          CT_DELAY_JITTER: "1.4"
         run: |
-          python scrape_canadiantire_liquidations.py --stores-file data/canadiantire/stores_ids.txt
+          set -e
+          mkdir -p output_canadiantire
+          rm -f output_canadiantire/canadiantire_liquidations_all_stores.csv || true
 
-      # 7️⃣ Sauvegarde les résultats de scraping comme artefact téléchargeable
+          echo "🚀 Starting full scrape of all 503 Canadian Tire stores..."
+          while IFS= read -r STORE_ID; do
+            [ -z "$STORE_ID" ] && continue
+            echo "▶️ Scraping store $STORE_ID"
+            python scrape_canadiantire_liquidations.py \
+              --store "$STORE_ID" \
+              --language fr \
+              --output-dir output_canadiantire \
+              --aggregated-path output_canadiantire/canadiantire_liquidations_all_stores.csv \
+              --max-retries 3 \
+              --timeout 30000 \
+              --delay 1.6 3.0
+          done < data/canadiantire/stores_ids.txt
+
+          echo "✅ Finished scraping all stores."
+
+      # 7️⃣ Sauvegarde des résultats
       - name: Upload scraping results
         uses: actions/upload-artifact@v4
         with:
           name: canadiantire-results
           path: output_canadiantire/**
 
-      # 8️⃣ Commit automatique des données extraites dans le dépôt
+      # 8️⃣ Commit automatique dans le dépôt
       - name: Commit and push results to repository
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "actions@github.com"
           git add output_canadiantire || true
-          git commit -m "🧩 Canadian Tire scrape $(date -u +'%Y-%m-%d %H:%M:%S UTC')" || echo "No new data to commit"
+          git commit -m "🧩 Canadian Tire 503-store scrape $(date -u +'%Y-%m-%d %H:%M:%S UTC')" || echo "No new data to commit"
           git push
