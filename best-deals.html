@@ -753,7 +753,13 @@
       function filePathFor(store, branch){
         const s = store?.slug;
         const c = typeof branch === 'object' ? branch?.slug : branch;
-        if(!s || !c) return null;
+        if(!s) return null;
+        if(s === 'amazon'){
+          if(c === 'canada') return 'data/amazon_ca_daily.json';
+          if(!c) return null;
+          return `data/${s}/${c}.json`;
+        }
+        if(!c) return null;
         return `data/${s}/${c}.json`;
       }
 

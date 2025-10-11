@@ -2148,6 +2148,11 @@
         if(c === 'en-ligne') return BEST_BUY_AGGREGATE_PATH;
         if(!c) return BEST_BUY_AGGREGATE_PATH;
       }
+      if(s === 'amazon'){
+        if(c === 'canada') return 'data/amazon_ca_daily.json';
+        if(!c) return null;
+        return `data/${s}/${c}.json`;
+      }
       if(!c) return null;
       return `data/${s}/${c}.json`;
     }
