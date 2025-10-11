@@ -43,6 +43,21 @@ et alimenter `/data`.
 5. Pour une mise à jour automatique, planifie la commande via `cron`, GitHub Actions,
    ou un autre ordonnanceur quotidien.
 
+### Via GitHub Actions (Daily Amazon Deals)
+
+Le dépôt inclut déjà un workflow (`.github/workflows/amazon-deals.yml`) qui exécute
+le script tous les jours à 09:30 UTC et pousse `data/amazon_ca_daily.json` avec le
+message `chore: update Amazon deals feed`.
+
+1. Dans **Settings → Secrets and variables → Actions**, ajoute les secrets
+   `PAAPI_CLIENT_ID`, `PAAPI_CLIENT_SECRET` et `PAAPI_ASSOCIATE_TAG`.
+2. Vérifie l'horaire ou adapte la clé `cron` si nécessaire.
+3. Pour lancer une mise à jour manuelle, ouvre l'onglet **Actions**, choisis
+   **Daily Amazon Deals** puis clique sur **Run workflow** (option disponible via
+   l'événement `workflow_dispatch`).
+4. Consulte les journaux du job `fetch-deals` pour confirmer si l'API a répondu ou
+   si des données fictives ont été générées.
+
 ## Aperçus HTML rapides
 - Les jeux de données organisés génèrent un aperçu statique dans `previews/<magasin>/<ville>.html`.
 - Par exemple : `previews/sporting-life/montreal.html`, `previews/sporting-life/laval.html` et
