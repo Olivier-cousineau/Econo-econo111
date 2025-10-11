@@ -45,6 +45,20 @@ et alimenter `/data`.
 5. Pour une mise à jour automatique, planifie la commande via `cron`, GitHub Actions,
    ou un autre ordonnanceur quotidien.
 
+### GitHub Actions prêt à l'emploi
+Un workflow `Refresh Amazon Canada deals` est fourni dans `.github/workflows/amazon-daily.yml`.
+
+1. Dans GitHub, va dans **Settings ▸ Secrets and variables ▸ Actions** et ajoute les
+   secrets `PAAPI_CLIENT_ID`, `PAAPI_CLIENT_SECRET` et `PAAPI_ASSOCIATE_TAG` avec tes
+   identifiants Amazon Associates.
+2. Active l'onglet **Actions** et lance `Refresh Amazon Canada deals` en cliquant sur
+   **Run workflow** pour un test manuel. Chaque exécution génère `data/amazon_ca_daily.json`
+   (avec un fallback fictif si les secrets sont absents ou invalides) et exécute le test
+   unitaire `tests.test_amazon_paapi_daily`.
+3. Le workflow tourne ensuite tous les jours à 09:00 UTC et commit automatiquement le
+   fichier `data/amazon_ca_daily.json` lorsqu'il change. Ajuste la valeur `cron` ou les
+   paramètres (ex. `--limit`) dans `amazon-daily.yml` selon tes besoins.
+
 ## Aperçus HTML rapides
 - Les jeux de données organisés génèrent un aperçu statique dans `previews/<magasin>/<ville>.html`.
 - Par exemple : `previews/sporting-life/montreal.html`, `previews/sporting-life/laval.html` et
