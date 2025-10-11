@@ -21,6 +21,28 @@ Site statique bilingue (FR/EN) avec filtres Magasin/Ville et barre de % de rabai
 - Dans `index.html`, remplace `render()` pour faire des `fetch('/data/ton_fichier.json')`,
   merger les tableaux, appliquer les filtres et générer les cartes.
 
+## Automatiser Amazon Canada (PA API)
+Un utilitaire est fourni pour rapatrier quotidiennement des produits Amazon Canada
+et alimenter `/data`.
+
+1. Installe la dépendance : `pip install requests`.
+2. Exporte tes identifiants Amazon Associates :
+   ```bash
+   export PAAPI_CLIENT_ID="amzn1.application-oa2-client..."
+   export PAAPI_CLIENT_SECRET="<ta_clé_secrète>"
+   export PAAPI_ASSOCIATE_TAG="ton-tag-20"
+   ```
+3. Ajuste la liste de mots-clés dans `admin/amazon_keywords.json` (ou passe `--keywords`).
+4. Lance le script :
+   ```bash
+   python admin/amazon_paapi_daily.py --limit 8
+   ```
+   - Le JSON généré est sauvegardé dans `data/amazon_ca_daily.json`.
+   - En cas d'erreur API, des aubaines fictives cohérentes seront générées pour garder
+     la page active.
+5. Pour une mise à jour automatique, planifie la commande via `cron`, GitHub Actions,
+   ou un autre ordonnanceur quotidien.
+
 ## Aperçus HTML rapides
 - Les jeux de données organisés génèrent un aperçu statique dans `previews/<magasin>/<ville>.html`.
 - Par exemple : `previews/sporting-life/montreal.html`, `previews/sporting-life/laval.html` et
