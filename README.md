@@ -57,6 +57,11 @@ message `chore: update Amazon deals feed`.
    l'événement `workflow_dispatch`).
 4. Consulte les journaux du job `fetch-deals` pour confirmer si l'API a répondu ou
    si des données fictives ont été générées.
+   - Le workflow réussit lorsqu'il affiche une succession d'étapes similaires à :
+     `Set up job`, `Check out repository`, `Set up Python`, `Install dependencies`,
+     `Generate Amazon deals dataset`, `Commit updated dataset` et `Complete job`.
+     Si l'une de ces étapes échoue ou n'apparaît pas, inspecte ses logs détaillés
+     pour diagnostiquer le problème (ex. identifiants manquants ou erreurs réseau).
 
 ## Aperçus HTML rapides
 - Les jeux de données organisés génèrent un aperçu statique dans `previews/<magasin>/<ville>.html`.
