@@ -4,6 +4,14 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '0 9 * * *'
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/amazon-daily.yml'
+      - 'admin/amazon_paapi_daily.py'
+      - 'admin/amazon_keywords.json'
+      - 'tests/test_amazon_paapi_daily.py'
 
 permissions:
   contents: write

@@ -55,7 +55,10 @@ Un workflow `Refresh Amazon Canada deals` est fourni dans `.github/workflows/ama
    **Run workflow** pour un test manuel. Chaque exécution génère `data/amazon_ca_daily.json`
    (avec un fallback fictif si les secrets sont absents ou invalides) et exécute le test
    unitaire `tests.test_amazon_paapi_daily`.
-3. Le workflow tourne ensuite tous les jours à 09:00 UTC et commit automatiquement le
+3. Dès que le fichier est présent sur la branche `main`, le workflow s'exécute aussi
+   automatiquement à chaque push affectant les fichiers Amazon, ce qui le rend visible
+   dans l'onglet **Actions** sans attendre la première planification.
+4. Le workflow tourne ensuite tous les jours à 09:00 UTC et commit automatiquement le
    fichier `data/amazon_ca_daily.json` lorsqu'il change. Ajuste la valeur `cron` ou les
    paramètres (ex. `--limit`) dans `amazon-daily.yml` selon tes besoins.
 
@@ -65,8 +68,8 @@ Un workflow `Refresh Amazon Canada deals` est fourni dans `.github/workflows/ama
   `previews/sporting-life/saint-jerome.html` permettent de feuilleter les aubaines Sporting Life
   directement depuis GitHub sans devoir lancer le site.
 
-> ℹ️ Toutes les automatisations ont été retirées. La mise à jour des données et des aperçus se fait
-manuellement en ajoutant ou en remplaçant les fichiers JSON dans `data/`.
+> ℹ️ Les jeux de données historiques hors Amazon restent à mettre à jour manuellement en
+ajoutant ou remplaçant les fichiers JSON dans `data/`.
 
 ## Tests rapides
 - Vérifie que le script Amazon reste fonctionnel avec :
