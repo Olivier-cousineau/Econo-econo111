@@ -1,18 +1,45 @@
 [
   {
-    "title": "Essentiel Electronics Deals",
-    "image": "https://images-na.ssl-images-amazon.com/images/I/61CCCCCCcL._AC_SL1500_.jpg",
-    "price": 48.84,
-    "salePrice": 42.03,
+    "title": "Rabais Electronics Deals",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/71BBBBBBbL._AC_SL1500_.jpg",
+    "price": 194.34,
+    "salePrice": 142.02,
+    "store": "Amazon Canada",
+    "city": "En ligne",
+    "url": "https://www.amazon.ca/deal/fictif"
+  },
+  {
+    "title": "Rabais Electronics Deals",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/71BBBBBBbL._AC_SL1500_.jpg",
+    "price": 88.33,
+    "salePrice": 49.51,
+    "store": "Amazon Canada",
+    "city": "En ligne",
+    "url": "https://www.amazon.ca/deal/fictif"
+  },
+  {
+    "title": "Top vente Electronics Deals",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/71BBBBBBbL._AC_SL1500_.jpg",
+    "price": 115.07,
+    "salePrice": 100.19,
+    "store": "Amazon Canada",
+    "city": "En ligne",
+    "url": "https://www.amazon.ca/deal/fictif"
+  },
+  {
+    "title": "Top vente Electronics Deals",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/81w%2BAAAAAaL._AC_SL1500_.jpg",
+    "price": 47.56,
+    "salePrice": 38.98,
     "store": "Amazon Canada",
     "city": "En ligne",
     "url": "https://www.amazon.ca/deal/fictif"
   },
   {
     "title": "Essentiel Electronics Deals",
-    "image": "https://images-na.ssl-images-amazon.com/images/I/71BBBBBBbL._AC_SL1500_.jpg",
-    "price": 55.58,
-    "salePrice": 41.61,
+    "image": "https://images-na.ssl-images-amazon.com/images/I/81w%2BAAAAAaL._AC_SL1500_.jpg",
+    "price": 197.48,
+    "salePrice": 136.89,
     "store": "Amazon Canada",
     "city": "En ligne",
     "url": "https://www.amazon.ca/deal/fictif"
@@ -20,80 +47,26 @@
   {
     "title": "Promo exclusive Electronics Deals",
     "image": "https://images-na.ssl-images-amazon.com/images/I/71BBBBBBbL._AC_SL1500_.jpg",
-    "price": 224.46,
-    "salePrice": 194.14,
-    "store": "Amazon Canada",
-    "city": "En ligne",
-    "url": "https://www.amazon.ca/deal/fictif"
-  },
-  {
-    "title": "Rabais Electronics Deals",
-    "image": "https://images-na.ssl-images-amazon.com/images/I/61CCCCCCcL._AC_SL1500_.jpg",
-    "price": 165.73,
-    "salePrice": 146.8,
-    "store": "Amazon Canada",
-    "city": "En ligne",
-    "url": "https://www.amazon.ca/deal/fictif"
-  },
-  {
-    "title": "Rabais Electronics Deals",
-    "image": "https://images-na.ssl-images-amazon.com/images/I/81w%2BAAAAAaL._AC_SL1500_.jpg",
-    "price": 111.55,
-    "salePrice": 65.26,
-    "store": "Amazon Canada",
-    "city": "En ligne",
-    "url": "https://www.amazon.ca/deal/fictif"
-  },
-  {
-    "title": "Offre éclair Electronics Deals",
-    "image": "https://images-na.ssl-images-amazon.com/images/I/81w%2BAAAAAaL._AC_SL1500_.jpg",
-    "price": 168.14,
-    "salePrice": 105.36,
+    "price": 115.04,
+    "salePrice": 80.99,
     "store": "Amazon Canada",
     "city": "En ligne",
     "url": "https://www.amazon.ca/deal/fictif"
   },
   {
     "title": "Essentiel Electronics Deals",
-    "image": "https://images-na.ssl-images-amazon.com/images/I/61CCCCCCcL._AC_SL1500_.jpg",
-    "price": 91.52,
-    "salePrice": 73.18,
-    "store": "Amazon Canada",
-    "city": "En ligne",
-    "url": "https://www.amazon.ca/deal/fictif"
-  },
-  {
-    "title": "Rabais Electronics Deals",
-    "image": "https://images-na.ssl-images-amazon.com/images/I/61CCCCCCcL._AC_SL1500_.jpg",
-    "price": 71.2,
-    "salePrice": 51.14,
-    "store": "Amazon Canada",
-    "city": "En ligne",
-    "url": "https://www.amazon.ca/deal/fictif"
-  },
-  {
-    "title": "Essentiel Kitchen Appliances",
-    "image": "https://images-na.ssl-images-amazon.com/images/I/71BBBBBBbL._AC_SL1500_.jpg",
-    "price": 126.59,
-    "salePrice": 78.49,
-    "store": "Amazon Canada",
-    "city": "En ligne",
-    "url": "https://www.amazon.ca/deal/fictif"
-  },
-  {
-    "title": "Promo exclusive Kitchen Appliances",
     "image": "https://images-na.ssl-images-amazon.com/images/I/81w%2BAAAAAaL._AC_SL1500_.jpg",
-    "price": 146.75,
-    "salePrice": 126.48,
+    "price": 186.19,
+    "salePrice": 122.73,
     "store": "Amazon Canada",
     "city": "En ligne",
     "url": "https://www.amazon.ca/deal/fictif"
   },
   {
-    "title": "Promo exclusive Kitchen Appliances",
-    "image": "https://images-na.ssl-images-amazon.com/images/I/71BBBBBBbL._AC_SL1500_.jpg",
-    "price": 114.54,
-    "salePrice": 93.8,
+    "title": "Essentiel Electronics Deals",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/81w%2BAAAAAaL._AC_SL1500_.jpg",
+    "price": 40.29,
+    "salePrice": 27.05,
     "store": "Amazon Canada",
     "city": "En ligne",
     "url": "https://www.amazon.ca/deal/fictif"
@@ -101,26 +74,8 @@
   {
     "title": "Essentiel Kitchen Appliances",
     "image": "https://images-na.ssl-images-amazon.com/images/I/61CCCCCCcL._AC_SL1500_.jpg",
-    "price": 215.57,
-    "salePrice": 119.93,
-    "store": "Amazon Canada",
-    "city": "En ligne",
-    "url": "https://www.amazon.ca/deal/fictif"
-  },
-  {
-    "title": "Essentiel Kitchen Appliances",
-    "image": "https://images-na.ssl-images-amazon.com/images/I/81w%2BAAAAAaL._AC_SL1500_.jpg",
-    "price": 44.43,
-    "salePrice": 37.83,
-    "store": "Amazon Canada",
-    "city": "En ligne",
-    "url": "https://www.amazon.ca/deal/fictif"
-  },
-  {
-    "title": "Offre éclair Kitchen Appliances",
-    "image": "https://images-na.ssl-images-amazon.com/images/I/71BBBBBBbL._AC_SL1500_.jpg",
-    "price": 196.07,
-    "salePrice": 115.77,
+    "price": 238.44,
+    "salePrice": 167.19,
     "store": "Amazon Canada",
     "city": "En ligne",
     "url": "https://www.amazon.ca/deal/fictif"
@@ -128,8 +83,26 @@
   {
     "title": "Promo exclusive Kitchen Appliances",
     "image": "https://images-na.ssl-images-amazon.com/images/I/71BBBBBBbL._AC_SL1500_.jpg",
-    "price": 74.2,
-    "salePrice": 44.24,
+    "price": 47.35,
+    "salePrice": 41.0,
+    "store": "Amazon Canada",
+    "city": "En ligne",
+    "url": "https://www.amazon.ca/deal/fictif"
+  },
+  {
+    "title": "Promo exclusive Kitchen Appliances",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/71BBBBBBbL._AC_SL1500_.jpg",
+    "price": 249.84,
+    "salePrice": 167.7,
+    "store": "Amazon Canada",
+    "city": "En ligne",
+    "url": "https://www.amazon.ca/deal/fictif"
+  },
+  {
+    "title": "Rabais Kitchen Appliances",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/61CCCCCCcL._AC_SL1500_.jpg",
+    "price": 74.54,
+    "salePrice": 53.54,
     "store": "Amazon Canada",
     "city": "En ligne",
     "url": "https://www.amazon.ca/deal/fictif"
@@ -137,53 +110,44 @@
   {
     "title": "Top vente Kitchen Appliances",
     "image": "https://images-na.ssl-images-amazon.com/images/I/81w%2BAAAAAaL._AC_SL1500_.jpg",
-    "price": 137.66,
-    "salePrice": 93.64,
+    "price": 236.33,
+    "salePrice": 175.57,
     "store": "Amazon Canada",
     "city": "En ligne",
     "url": "https://www.amazon.ca/deal/fictif"
   },
   {
-    "title": "Rabais Home Office",
+    "title": "Rabais Kitchen Appliances",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/81w%2BAAAAAaL._AC_SL1500_.jpg",
+    "price": 214.91,
+    "salePrice": 160.91,
+    "store": "Amazon Canada",
+    "city": "En ligne",
+    "url": "https://www.amazon.ca/deal/fictif"
+  },
+  {
+    "title": "Promo exclusive Kitchen Appliances",
     "image": "https://images-na.ssl-images-amazon.com/images/I/71BBBBBBbL._AC_SL1500_.jpg",
-    "price": 226.7,
-    "salePrice": 148.82,
+    "price": 70.11,
+    "salePrice": 52.36,
     "store": "Amazon Canada",
     "city": "En ligne",
     "url": "https://www.amazon.ca/deal/fictif"
   },
   {
-    "title": "Essentiel Home Office",
+    "title": "Promo exclusive Kitchen Appliances",
     "image": "https://images-na.ssl-images-amazon.com/images/I/61CCCCCCcL._AC_SL1500_.jpg",
-    "price": 85.26,
-    "salePrice": 64.97,
-    "store": "Amazon Canada",
-    "city": "En ligne",
-    "url": "https://www.amazon.ca/deal/fictif"
-  },
-  {
-    "title": "Promo exclusive Home Office",
-    "image": "https://images-na.ssl-images-amazon.com/images/I/71BBBBBBbL._AC_SL1500_.jpg",
-    "price": 229.12,
-    "salePrice": 159.93,
+    "price": 184.09,
+    "salePrice": 147.73,
     "store": "Amazon Canada",
     "city": "En ligne",
     "url": "https://www.amazon.ca/deal/fictif"
   },
   {
     "title": "Top vente Home Office",
-    "image": "https://images-na.ssl-images-amazon.com/images/I/61CCCCCCcL._AC_SL1500_.jpg",
-    "price": 220.89,
-    "salePrice": 134.97,
-    "store": "Amazon Canada",
-    "city": "En ligne",
-    "url": "https://www.amazon.ca/deal/fictif"
-  },
-  {
-    "title": "Rabais Home Office",
     "image": "https://images-na.ssl-images-amazon.com/images/I/71BBBBBBbL._AC_SL1500_.jpg",
-    "price": 104.41,
-    "salePrice": 78.46,
+    "price": 41.83,
+    "salePrice": 27.31,
     "store": "Amazon Canada",
     "city": "En ligne",
     "url": "https://www.amazon.ca/deal/fictif"
@@ -191,8 +155,26 @@
   {
     "title": "Offre éclair Home Office",
     "image": "https://images-na.ssl-images-amazon.com/images/I/71BBBBBBbL._AC_SL1500_.jpg",
-    "price": 130.35,
-    "salePrice": 112.71,
+    "price": 94.05,
+    "salePrice": 72.2,
+    "store": "Amazon Canada",
+    "city": "En ligne",
+    "url": "https://www.amazon.ca/deal/fictif"
+  },
+  {
+    "title": "Offre éclair Home Office",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/81w%2BAAAAAaL._AC_SL1500_.jpg",
+    "price": 224.49,
+    "salePrice": 189.3,
+    "store": "Amazon Canada",
+    "city": "En ligne",
+    "url": "https://www.amazon.ca/deal/fictif"
+  },
+  {
+    "title": "Offre éclair Home Office",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/71BBBBBBbL._AC_SL1500_.jpg",
+    "price": 194.72,
+    "salePrice": 163.96,
     "store": "Amazon Canada",
     "city": "En ligne",
     "url": "https://www.amazon.ca/deal/fictif"
@@ -200,8 +182,17 @@
   {
     "title": "Essentiel Home Office",
     "image": "https://images-na.ssl-images-amazon.com/images/I/61CCCCCCcL._AC_SL1500_.jpg",
-    "price": 108.77,
-    "salePrice": 95.65,
+    "price": 65.23,
+    "salePrice": 37.22,
+    "store": "Amazon Canada",
+    "city": "En ligne",
+    "url": "https://www.amazon.ca/deal/fictif"
+  },
+  {
+    "title": "Top vente Home Office",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/61CCCCCCcL._AC_SL1500_.jpg",
+    "price": 48.27,
+    "salePrice": 29.58,
     "store": "Amazon Canada",
     "city": "En ligne",
     "url": "https://www.amazon.ca/deal/fictif"
@@ -209,35 +200,80 @@
   {
     "title": "Promo exclusive Home Office",
     "image": "https://images-na.ssl-images-amazon.com/images/I/71BBBBBBbL._AC_SL1500_.jpg",
-    "price": 245.86,
-    "salePrice": 199.11,
+    "price": 191.99,
+    "salePrice": 168.21,
+    "store": "Amazon Canada",
+    "city": "En ligne",
+    "url": "https://www.amazon.ca/deal/fictif"
+  },
+  {
+    "title": "Offre éclair Home Office",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/61CCCCCCcL._AC_SL1500_.jpg",
+    "price": 114.23,
+    "salePrice": 84.67,
     "store": "Amazon Canada",
     "city": "En ligne",
     "url": "https://www.amazon.ca/deal/fictif"
   },
   {
     "title": "Top vente Fitness Equipment",
-    "image": "https://images-na.ssl-images-amazon.com/images/I/81w%2BAAAAAaL._AC_SL1500_.jpg",
-    "price": 228.04,
-    "salePrice": 130.9,
+    "image": "https://images-na.ssl-images-amazon.com/images/I/61CCCCCCcL._AC_SL1500_.jpg",
+    "price": 150.86,
+    "salePrice": 109.2,
+    "store": "Amazon Canada",
+    "city": "En ligne",
+    "url": "https://www.amazon.ca/deal/fictif"
+  },
+  {
+    "title": "Promo exclusive Fitness Equipment",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/71BBBBBBbL._AC_SL1500_.jpg",
+    "price": 82.8,
+    "salePrice": 71.16,
+    "store": "Amazon Canada",
+    "city": "En ligne",
+    "url": "https://www.amazon.ca/deal/fictif"
+  },
+  {
+    "title": "Top vente Fitness Equipment",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/61CCCCCCcL._AC_SL1500_.jpg",
+    "price": 248.14,
+    "salePrice": 142.36,
+    "store": "Amazon Canada",
+    "city": "En ligne",
+    "url": "https://www.amazon.ca/deal/fictif"
+  },
+  {
+    "title": "Top vente Fitness Equipment",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/61CCCCCCcL._AC_SL1500_.jpg",
+    "price": 141.18,
+    "salePrice": 109.32,
+    "store": "Amazon Canada",
+    "city": "En ligne",
+    "url": "https://www.amazon.ca/deal/fictif"
+  },
+  {
+    "title": "Rabais Fitness Equipment",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/61CCCCCCcL._AC_SL1500_.jpg",
+    "price": 71.9,
+    "salePrice": 54.73,
     "store": "Amazon Canada",
     "city": "En ligne",
     "url": "https://www.amazon.ca/deal/fictif"
   },
   {
     "title": "Offre éclair Fitness Equipment",
-    "image": "https://images-na.ssl-images-amazon.com/images/I/71BBBBBBbL._AC_SL1500_.jpg",
-    "price": 221.77,
-    "salePrice": 172.29,
+    "image": "https://images-na.ssl-images-amazon.com/images/I/81w%2BAAAAAaL._AC_SL1500_.jpg",
+    "price": 229.49,
+    "salePrice": 149.26,
     "store": "Amazon Canada",
     "city": "En ligne",
     "url": "https://www.amazon.ca/deal/fictif"
   },
   {
-    "title": "Essentiel Fitness Equipment",
-    "image": "https://images-na.ssl-images-amazon.com/images/I/61CCCCCCcL._AC_SL1500_.jpg",
-    "price": 135.49,
-    "salePrice": 93.07,
+    "title": "Rabais Fitness Equipment",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/71BBBBBBbL._AC_SL1500_.jpg",
+    "price": 63.8,
+    "salePrice": 53.54,
     "store": "Amazon Canada",
     "city": "En ligne",
     "url": "https://www.amazon.ca/deal/fictif"
@@ -245,44 +281,17 @@
   {
     "title": "Promo exclusive Fitness Equipment",
     "image": "https://images-na.ssl-images-amazon.com/images/I/61CCCCCCcL._AC_SL1500_.jpg",
-    "price": 46.62,
-    "salePrice": 28.73,
+    "price": 101.66,
+    "salePrice": 67.39,
     "store": "Amazon Canada",
     "city": "En ligne",
     "url": "https://www.amazon.ca/deal/fictif"
   },
   {
-    "title": "Essentiel Fitness Equipment",
+    "title": "Essentiel Board Games",
     "image": "https://images-na.ssl-images-amazon.com/images/I/81w%2BAAAAAaL._AC_SL1500_.jpg",
-    "price": 77.54,
-    "salePrice": 49.1,
-    "store": "Amazon Canada",
-    "city": "En ligne",
-    "url": "https://www.amazon.ca/deal/fictif"
-  },
-  {
-    "title": "Rabais Fitness Equipment",
-    "image": "https://images-na.ssl-images-amazon.com/images/I/71BBBBBBbL._AC_SL1500_.jpg",
-    "price": 88.28,
-    "salePrice": 71.37,
-    "store": "Amazon Canada",
-    "city": "En ligne",
-    "url": "https://www.amazon.ca/deal/fictif"
-  },
-  {
-    "title": "Rabais Fitness Equipment",
-    "image": "https://images-na.ssl-images-amazon.com/images/I/71BBBBBBbL._AC_SL1500_.jpg",
-    "price": 62.3,
-    "salePrice": 48.8,
-    "store": "Amazon Canada",
-    "city": "En ligne",
-    "url": "https://www.amazon.ca/deal/fictif"
-  },
-  {
-    "title": "Essentiel Fitness Equipment",
-    "image": "https://images-na.ssl-images-amazon.com/images/I/71BBBBBBbL._AC_SL1500_.jpg",
-    "price": 117.31,
-    "salePrice": 70.67,
+    "price": 169.31,
+    "salePrice": 123.31,
     "store": "Amazon Canada",
     "city": "En ligne",
     "url": "https://www.amazon.ca/deal/fictif"
@@ -290,17 +299,53 @@
   {
     "title": "Essentiel Board Games",
     "image": "https://images-na.ssl-images-amazon.com/images/I/71BBBBBBbL._AC_SL1500_.jpg",
-    "price": 47.98,
-    "salePrice": 26.64,
+    "price": 155.04,
+    "salePrice": 109.8,
     "store": "Amazon Canada",
     "city": "En ligne",
     "url": "https://www.amazon.ca/deal/fictif"
   },
   {
     "title": "Rabais Board Games",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/81w%2BAAAAAaL._AC_SL1500_.jpg",
+    "price": 112.39,
+    "salePrice": 79.62,
+    "store": "Amazon Canada",
+    "city": "En ligne",
+    "url": "https://www.amazon.ca/deal/fictif"
+  },
+  {
+    "title": "Top vente Board Games",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/81w%2BAAAAAaL._AC_SL1500_.jpg",
+    "price": 158.45,
+    "salePrice": 127.43,
+    "store": "Amazon Canada",
+    "city": "En ligne",
+    "url": "https://www.amazon.ca/deal/fictif"
+  },
+  {
+    "title": "Offre éclair Board Games",
     "image": "https://images-na.ssl-images-amazon.com/images/I/71BBBBBBbL._AC_SL1500_.jpg",
-    "price": 183.01,
-    "salePrice": 117.88,
+    "price": 149.16,
+    "salePrice": 126.89,
+    "store": "Amazon Canada",
+    "city": "En ligne",
+    "url": "https://www.amazon.ca/deal/fictif"
+  },
+  {
+    "title": "Promo exclusive Board Games",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/61CCCCCCcL._AC_SL1500_.jpg",
+    "price": 85.52,
+    "salePrice": 56.84,
+    "store": "Amazon Canada",
+    "city": "En ligne",
+    "url": "https://www.amazon.ca/deal/fictif"
+  },
+  {
+    "title": "Essentiel Board Games",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/61CCCCCCcL._AC_SL1500_.jpg",
+    "price": 193.08,
+    "salePrice": 171.92,
     "store": "Amazon Canada",
     "city": "En ligne",
     "url": "https://www.amazon.ca/deal/fictif"
@@ -308,53 +353,8 @@
   {
     "title": "Promo exclusive Board Games",
     "image": "https://images-na.ssl-images-amazon.com/images/I/71BBBBBBbL._AC_SL1500_.jpg",
-    "price": 165.02,
-    "salePrice": 145.66,
-    "store": "Amazon Canada",
-    "city": "En ligne",
-    "url": "https://www.amazon.ca/deal/fictif"
-  },
-  {
-    "title": "Offre éclair Board Games",
-    "image": "https://images-na.ssl-images-amazon.com/images/I/61CCCCCCcL._AC_SL1500_.jpg",
-    "price": 99.7,
-    "salePrice": 62.93,
-    "store": "Amazon Canada",
-    "city": "En ligne",
-    "url": "https://www.amazon.ca/deal/fictif"
-  },
-  {
-    "title": "Essentiel Board Games",
-    "image": "https://images-na.ssl-images-amazon.com/images/I/71BBBBBBbL._AC_SL1500_.jpg",
-    "price": 146.16,
-    "salePrice": 87.43,
-    "store": "Amazon Canada",
-    "city": "En ligne",
-    "url": "https://www.amazon.ca/deal/fictif"
-  },
-  {
-    "title": "Offre éclair Board Games",
-    "image": "https://images-na.ssl-images-amazon.com/images/I/71BBBBBBbL._AC_SL1500_.jpg",
-    "price": 44.47,
-    "salePrice": 35.69,
-    "store": "Amazon Canada",
-    "city": "En ligne",
-    "url": "https://www.amazon.ca/deal/fictif"
-  },
-  {
-    "title": "Offre éclair Board Games",
-    "image": "https://images-na.ssl-images-amazon.com/images/I/81w%2BAAAAAaL._AC_SL1500_.jpg",
-    "price": 143.06,
-    "salePrice": 108.37,
-    "store": "Amazon Canada",
-    "city": "En ligne",
-    "url": "https://www.amazon.ca/deal/fictif"
-  },
-  {
-    "title": "Essentiel Board Games",
-    "image": "https://images-na.ssl-images-amazon.com/images/I/81w%2BAAAAAaL._AC_SL1500_.jpg",
-    "price": 158.55,
-    "salePrice": 138.19,
+    "price": 107.04,
+    "salePrice": 59.86,
     "store": "Amazon Canada",
     "city": "En ligne",
     "url": "https://www.amazon.ca/deal/fictif"
