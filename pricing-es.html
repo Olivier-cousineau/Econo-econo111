@@ -37,6 +37,16 @@
     .pricing-price{font-size:26px;font-weight:700;color:#86efac}
     .pricing-features{list-style:none;padding:0;margin:0;display:grid;gap:8px;font-size:14px;color:var(--muted)}
     .pricing-tag{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+    .pricing-actions{margin-top:auto;display:grid;gap:10px;position:relative;z-index:1}
+    .stripe-button{appearance:none;border:none;background:linear-gradient(120deg,rgba(34,197,94,.85),rgba(59,130,246,.85));color:#fff;border-radius:12px;padding:12px 16px;font-size:15px;font-weight:600;display:grid;gap:4px;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease,filter .2s ease;text-align:left}
+    .stripe-button:hover{transform:translateY(-1px);box-shadow:0 16px 30px rgba(34,197,94,.25);filter:brightness(1.03)}
+    .stripe-button:focus{outline:2px solid rgba(59,130,246,.5);outline-offset:2px}
+    .stripe-button--disabled{cursor:not-allowed;filter:grayscale(.4);opacity:.7}
+    .stripe-button--disabled:hover{transform:none;box-shadow:none}
+    .stripe-button-title{display:block;font-size:15px}
+    .stripe-button-subtitle{display:block;font-size:12px;font-weight:500;color:rgba(15,23,42,.85)}
+    .secure-note{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)}
+    .secure-note svg{width:14px;height:14px;fill:currentColor}
     .pricing-highlight{outline:2px solid rgba(34,197,94,.4);outline-offset:4px;transition:outline-color .3s ease}
     .value-section{background:linear-gradient(200deg,rgba(10,18,33,.92),rgba(12,23,42,.9));border:1px solid rgba(59,130,246,.22);border-radius:var(--radius);padding:26px;display:grid;gap:18px;margin-top:28px;box-shadow:0 18px 42px rgba(8,13,26,.55);position:relative;overflow:hidden}
     .value-section::after{content:"";position:absolute;inset:auto -40% -40% auto;width:220px;height:220px;background:radial-gradient(circle,rgba(34,197,94,.22),transparent 60%);filter:blur(24px);opacity:.4}
@@ -91,6 +101,16 @@
             <li>3 alertas por correo a la semana</li>
             <li>Historial de precios de 30 días</li>
           </ul>
+          <div class="pricing-actions">
+            <button type="button" class="stripe-button" data-stripe-plan="essential" data-stripe-missing="Agrega tus enlaces de Stripe en window.STRIPE_PAYMENT_LINKS antes de publicar.">
+              <span class="stripe-button-title">Pagar con Stripe</span>
+              <span class="stripe-button-subtitle">Prueba gratuita de 7 días</span>
+            </button>
+            <span class="secure-note">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1a6 6 0 0 0-6 6v3H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V11a1 1 0 0 0-1-1h-1V7a6 6 0 0 0-6-6Zm0 2a4 4 0 0 1 4 4v3H8V7a4 4 0 0 1 4-4Zm0 9a2.5 2.5 0 0 1 1.25 4.66V18a1.25 1.25 0 0 1-2.5 0v-1.34A2.5 2.5 0 0 1 12 12Z"/></svg>
+              Pago seguro con Stripe
+            </span>
+          </div>
         </article>
         <article class="pricing-card pricing-highlight">
           <div class="pricing-tag">Más popular</div>
@@ -101,6 +121,16 @@
             <li>Alertas personalizadas en tiempo real</li>
             <li>Listas compartidas para tu equipo</li>
           </ul>
+          <div class="pricing-actions">
+            <button type="button" class="stripe-button" data-stripe-plan="advanced" data-stripe-missing="Agrega tus enlaces de Stripe en window.STRIPE_PAYMENT_LINKS antes de publicar.">
+              <span class="stripe-button-title">Pagar con Stripe</span>
+              <span class="stripe-button-subtitle">Prueba gratuita de 7 días</span>
+            </button>
+            <span class="secure-note">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1a6 6 0 0 0-6 6v3H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V11a1 1 0 0 0-1-1h-1V7a6 6 0 0 0-6-6Zm0 2a4 4 0 0 1 4 4v3H8V7a4 4 0 0 1 4-4Zm0 9a2.5 2.5 0 0 1 1.25 4.66V18a1.25 1.25 0 0 1-2.5 0v-1.34A2.5 2.5 0 0 1 12 12Z"/></svg>
+              Pago seguro con Stripe
+            </span>
+          </div>
         </article>
         <article class="pricing-card">
           <div class="pricing-tag">Premium</div>
@@ -111,6 +141,16 @@
             <li>Análisis de precios asistido por IA</li>
             <li>Pronósticos de tendencias del mercado</li>
           </ul>
+          <div class="pricing-actions">
+            <button type="button" class="stripe-button" data-stripe-plan="premium" data-stripe-missing="Agrega tus enlaces de Stripe en window.STRIPE_PAYMENT_LINKS antes de publicar.">
+              <span class="stripe-button-title">Pagar con Stripe</span>
+              <span class="stripe-button-subtitle">Prueba gratuita de 7 días</span>
+            </button>
+            <span class="secure-note">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1a6 6 0 0 0-6 6v3H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V11a1 1 0 0 0-1-1h-1V7a6 6 0 0 0-6-6Zm0 2a4 4 0 0 1 4 4v3H8V7a4 4 0 0 1 4-4Zm0 9a2.5 2.5 0 0 1 1.25 4.66V18a1.25 1.25 0 0 1-2.5 0v-1.34A2.5 2.5 0 0 1 12 12Z"/></svg>
+              Pago seguro con Stripe
+            </span>
+          </div>
         </article>
       </div>
     </section>
@@ -150,6 +190,14 @@
     © <span id="yearFooter"></span> EconoDeal · Todos los derechos reservados
   </div>
 
+  <script>
+    window.STRIPE_PAYMENT_LINKS = {
+      essential: 'https://buy.stripe.com/test_replace_with_essential_plan',
+      advanced: 'https://buy.stripe.com/test_replace_with_advanced_plan',
+      premium: 'https://buy.stripe.com/test_replace_with_premium_plan'
+    };
+  </script>
+  <script src="assets/stripe-checkout.js" defer></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const y = new Date().getFullYear();
