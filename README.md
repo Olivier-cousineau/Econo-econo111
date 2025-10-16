@@ -72,4 +72,29 @@ message `chore: update Amazon deals feed`.
 > ℹ️ Toutes les automatisations ont été retirées. La mise à jour des données et des aperçus se fait
 manuellement en ajoutant ou en remplaçant les fichiers JSON dans `data/`.
 
+## Activer la billetterie Stripe (checkout)
+
+Une intégration Stripe Checkout est disponible sur les pages `pricing*.html` pour encaisser les
+abonnements.
+
+1. Dupliquez le fichier `.env.example` en `.env` et remplacez les clés par vos identifiants Stripe
+   (utilisez les clés test pour vos essais locaux).
+2. Installez les dépendances Python supplémentaires :
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Exportez les variables d'environnement Stripe avant de démarrer le serveur :
+   ```bash
+   export $(grep -v '^#' .env | xargs)
+   ```
+4. Lancez le serveur Flask fourni pour exposer les endpoints `/config` et
+   `/create-checkout-session` :
+   ```bash
+   python server.py
+   ```
+5. Ouvrez `http://localhost:5000/pricing.html` (ou toute autre variante de langue) et cliquez sur
+   un bouton d'essai pour rediriger vers Stripe Checkout.
+
+> ⚠️ Les clés secrètes Stripe doivent rester côté serveur. Ne les commitez jamais dans le dépôt.
+
 © 2025 EconoDeal
