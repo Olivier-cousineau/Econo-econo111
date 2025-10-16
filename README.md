@@ -11,10 +11,19 @@ Site statique bilingue (FR/EN) avec filtres Magasin/Ville et barre de % de rabai
 4. L'URL sera disponible après quelques minutes.
 
 ### Vercel
-1. Import le repo sur Vercel.
-2. Build command: *(aucune)* — Framework: **Other** (site statique).
-3. Déploie — l'URL est prête.
-4. Tu peux remplacer le contenu de `render()` pour charger tes JSON.
+1. Déploie la page HTML directement. Si ton projet est en Next.js, tu peux garder ce fichier pour forcer les runtimes personnalisés.
+2. Si tu veux utiliser Python
+   - Utilise le runtime officiel, par exemple :
+     ```json
+     {
+       "functions": {
+         "api/**/*.py": { "runtime": "python3.11" }
+       }
+     }
+     ```
+   - Les runtimes valides sont : `nodejs18.x`, `python3.11`, etc.
+3. Si ton projet est 100 % Next.js (React)
+   - Tu peux simplement supprimer le fichier `vercel.json` (ou enlever la partie `functions`).
 
 ## Brancher tes données
 - Dépose tes JSON dans `/data` (voir `/data/README.md`).
