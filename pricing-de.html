@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="de">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>EconoDeal — Forfaits</title>
+  <title>EconoDeal — Pakete & Preise</title>
   <style>
     :root{
       --bg:#0f172a; --panel:#111827; --panel-2:#1f2937; --text:#e5e7eb;
@@ -62,23 +62,23 @@
   <header>
     <div class="container row" style="justify-content:space-between">
       <div class="row" style="gap:10px;align-items:center">
-        <a class="brand" href="index.html">
-          <img src="assets/logo.svg" alt="EconoDeal – accélérateur de revendeurs" />
+        <a class="brand" href="index-de.html">
+          <img src="assets/logo.svg" alt="EconoDeal – Beschleuniger für Amazon-Verkäufer:innen" />
           <span class="brand-text">
             <span class="brand-title">EconoDeal</span>
-            <span class="brand-tagline">Revendeur gagnant</span>
+            <span class="brand-tagline">Dein Amazon-Hub</span>
           </span>
         </a>
       </div>
       <div class="row" style="gap:12px;align-items:center">
-        <a class="nav-button" href="best-deals.html" style="white-space:nowrap">Meilleurs rabais</a>
-        <a class="nav-button current" href="pricing.html" style="white-space:nowrap">Forfaits / prix</a>
-        <a class="nav-button" href="roadmap.html" style="white-space:nowrap">Roadmap / vision</a>
-        <div class="lang-switch" aria-label="Sélecteur de langue">
-          <span class="active" aria-current="true">FR</span>
+        <a class="nav-button" href="best-deals-de.html" style="white-space:nowrap">Top-Angebote</a>
+        <a class="nav-button current" href="pricing-de.html" style="white-space:nowrap">Pakete / Preise</a>
+        <a class="nav-button" href="roadmap-de.html" style="white-space:nowrap">Roadmap / Vision</a>
+        <div class="lang-switch" aria-label="Sprachauswahl">
+          <a href="pricing.html">FR</a>
           <a href="pricing-en.html">EN</a>
           <a href="pricing-es.html">ES</a>
-          <a href="pricing-de.html">DE</a>
+          <span class="active" aria-current="true">DE</span>
           <a href="pricing-it.html">IT</a>
         </div>
         <div class="muted">© <span id="year"></span></div>
@@ -88,77 +88,77 @@
 
   <main class="container">
     <section class="section">
-      <h2 style="margin:0 0 10px">Forfaits adaptés à vos besoins</h2>
-      <p class="muted" style="max-width:620px">Choisissez l'option qui correspond le mieux à votre façon de surveiller les rabais et liquidations au Canada. Chaque forfait inclut une période d'essai de 7 jours.</p>
+      <h2 style="margin:0 0 10px">Pakete passend zu deinem Bedarf</h2>
+      <p class="muted" style="max-width:620px">Wähle die Option, die am besten dazu passt, wie du Rabatte und Restposten in Kanada verfolgst. Jedes Paket beinhaltet eine 7-tägige Testphase.</p>
       <div class="pricing-grid">
         <article class="pricing-card">
-          <div class="pricing-tag">Essentiel</div>
-          <h4>Accès de base</h4>
-          <div class="pricing-price">9,99&nbsp;$</div>
+          <div class="pricing-tag">Essential</div>
+          <h4>Basiszugang</h4>
+          <div class="pricing-price">$9.99</div>
           <ul class="pricing-features">
-            <li>Accès aux liquidations populaires</li>
-            <li>3 alertes courriel par semaine</li>
-            <li>Historique de prix sur 30 jours</li>
+            <li>Zugriff auf gefragte Restposten</li>
+            <li>3 E-Mail-Alerts pro Woche</li>
+            <li>30 Tage Preishistorie</li>
           </ul>
           <div class="action-stack">
-            <button class="btn btn-primary" type="button" data-stripe-plan="essential" data-plan-name="Forfait Essentiel" data-plan-description="Accès de base aux liquidations populaires">Démarrer l'essai</button>
+            <button class="btn btn-primary" type="button" data-stripe-plan="essential" data-plan-name="Essential-Paket" data-plan-description="Basiszugang zum Restposten-Feed">Testphase starten</button>
           </div>
         </article>
         <article class="pricing-card pricing-highlight">
-          <div class="pricing-tag">Le plus populaire</div>
-          <h4>Forfait Avancé</h4>
-          <div class="pricing-price">19,99&nbsp;$</div>
+          <div class="pricing-tag">Beliebtestes Paket</div>
+          <h4>Advanced-Paket</h4>
+          <div class="pricing-price">$19.99</div>
           <ul class="pricing-features">
-            <li>Accès illimité au catalogue</li>
-            <li>Alertes personnalisées en temps réel</li>
-            <li>Listes partagées avec votre équipe</li>
+            <li>Unbegrenzter Katalogzugriff</li>
+            <li>Personalisierte Echtzeitwarnungen</li>
+            <li>Geteilte Listen für dein Team</li>
           </ul>
           <div class="action-stack">
-            <button class="btn btn-primary" type="button" data-stripe-plan="advanced" data-plan-name="Forfait Avancé" data-plan-description="Accès illimité avec alertes temps réel">Lancer mon essai</button>
+            <button class="btn btn-primary" type="button" data-stripe-plan="advanced" data-plan-name="Advanced-Paket" data-plan-description="Unbegrenzter Zugriff mit Echtzeitwarnungen">Jetzt testen</button>
           </div>
         </article>
         <article class="pricing-card">
           <div class="pricing-tag">Premium</div>
-          <h4>Analyse IA complète</h4>
-          <div class="pricing-price">29,99&nbsp;$</div>
+          <h4>Umfassende KI-Analyse</h4>
+          <div class="pricing-price">$29.99</div>
           <ul class="pricing-features">
-            <li>Alertes illimitées multicanal</li>
-            <li>Analyse des prix assistée par IA</li>
-            <li>Prévisions de tendances du marché</li>
+            <li>Unbegrenzte Multichannel-Alerts</li>
+            <li>KI-unterstützte Preisanalysen</li>
+            <li>Markttrend-Prognosen</li>
           </ul>
           <div class="action-stack">
-            <button class="btn btn-primary" type="button" data-stripe-plan="premium" data-plan-name="Forfait Premium" data-plan-description="Analyse IA complète pour les revendeurs">Activer le plan Premium</button>
+            <button class="btn btn-primary" type="button" data-stripe-plan="premium" data-plan-name="Premium-Paket" data-plan-description="Komplette KI-Optimierung für Händler:innen">Premium aktivieren</button>
           </div>
         </article>
       </div>
       <div class="checkout-message" id="checkout-message" role="status" aria-live="polite" hidden></div>
     </section>
     <section class="section value-section">
-      <h3 style="margin:0">Une montée en valeur planifiée</h3>
-      <p class="muted" style="margin:0;max-width:680px">Chaque palier tarifaire débloque des capacités concrètes supplémentaires pour soutenir la croissance des opérations Amazon, de la prospection manuelle à une orchestration complète pilotée par l'IA.</p>
+      <h3 style="margin:0">Eine geplante Werteskala</h3>
+      <p class="muted" style="margin:0;max-width:680px">Jede Preisstufe schaltet konkrete Funktionen frei, die das Wachstum deiner Amazon-Aktivitäten unterstützen – vom manuellen Sourcing bis zur vollständig KI-gestützten Orchestrierung.</p>
       <div class="value-grid">
         <article class="value-card">
           <span class="value-icon" aria-hidden="true">🧭</span>
-          <h4>Démarrage éclair</h4>
+          <h4>Schneller Einstieg</h4>
           <ul>
-            <li>Essentiel condense les meilleures liquidations, idéal pour valider rapidement la valeur du flux.</li>
-            <li>Alertes courriel guidées qui permettent de tester les routines de sourcing sans complexité.</li>
+            <li>Das Essential-Paket bündelt Top-Restposten – ideal, um den Wert des Feeds schnell zu validieren.</li>
+            <li>Geführte E-Mail-Alerts helfen dir, Sourcing-Routinen ohne zusätzliche Komplexität zu testen.</li>
           </ul>
         </article>
         <article class="value-card">
           <span class="value-icon" aria-hidden="true">🤝</span>
-          <h4>Collaboration avancée</h4>
+          <h4>Erweiterte Zusammenarbeit</h4>
           <ul>
-            <li>Le forfait Avancé ajoute les exports Seller Central et les listes partagées pour structurer l'équipe.</li>
-            <li>Notifications temps réel pour capter la Buy Box avant les concurrents.</li>
+            <li>Das Advanced-Paket ergänzt Seller-Central-Exporte und geteilte Listen, um dein Team zu strukturieren.</li>
+            <li>Echtzeitbenachrichtigungen, um die Buy Box vor der Konkurrenz zu sichern.</li>
           </ul>
         </article>
         <article class="value-card">
           <span class="value-icon" aria-hidden="true">🤖</span>
-          <h4>Optimisation IA avancée</h4>
+          <h4>Fortgeschrittene KI-Optimierung</h4>
           <ul>
-            <li>Le plan Premium active les scénarios IA, les prévisions de tendances et les alertes multicanal illimitées.</li>
-            <li>Simulation FBA avancée pour sécuriser la marge et planifier les réapprovisionnements.</li>
+            <li>Das Premium-Paket aktiviert KI-Szenarien, Trendprognosen und unbegrenzte Multichannel-Alerts.</li>
+            <li>Fortgeschrittene FBA-Simulation, um Margen zu sichern und Nachschub zu planen.</li>
           </ul>
         </article>
       </div>
@@ -166,7 +166,7 @@
   </main>
 
   <div class="container footer">
-    © <span id="yearFooter"></span> EconoDeal · Tous droits réservés
+    © <span id="yearFooter"></span> EconoDeal · Alle Rechte vorbehalten
   </div>
 
   <script>

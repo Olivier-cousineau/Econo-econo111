@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>EconoDeal — Meilleurs rabais</title>
+  <title>EconoDeal — Mejores ofertas</title>
   <style>
     :root{
       --bg:#0f172a; --panel:#111827; --panel-2:#1f2937; --text:#e5e7eb;
@@ -59,48 +59,48 @@
 <body class="overlay-active">
   <div id="registrationOverlay" role="dialog" aria-modal="true" aria-labelledby="registrationTitle">
     <div class="registration-card">
-      <h2 id="registrationTitle">Accès réservé aux membres</h2>
-      <p class="muted" style="margin:0">Rejoignez <strong><span data-client-count>0</span></strong> chasseurs de rabais et accédez au classement des meilleures offres.</p>
+      <h2 id="registrationTitle">Acceso exclusivo para miembros</h2>
+      <p class="muted" style="margin:0">Únete a <strong><span data-client-count>0</span></strong> cazadores de ofertas y desbloquea el ranking de mejores descuentos.</p>
       <form id="registrationForm">
         <div>
-          <label for="fullName">Nom complet</label>
-          <input id="fullName" name="fullName" type="text" placeholder="Entrez votre nom" autocomplete="name" required />
+          <label for="fullName">Nombre completo</label>
+          <input id="fullName" name="fullName" type="text" placeholder="Ingresa tu nombre" autocomplete="name" required />
         </div>
         <div>
-          <label for="email">Courriel</label>
-          <input id="email" name="email" type="email" placeholder="nom@exemple.com" autocomplete="email" required />
+          <label for="email">Correo electrónico</label>
+          <input id="email" name="email" type="email" placeholder="nombre@ejemplo.com" autocomplete="email" required />
         </div>
         <div class="checkbox-row">
           <input id="regulationCheckbox" name="regulation" type="checkbox" required />
-          <label for="regulationCheckbox" style="margin:0">Je confirme avoir lu et accepté les réglementations d'utilisation du site.</label>
+          <label for="regulationCheckbox" style="margin:0">Confirmo que he leído y aceptado las directrices de uso del sitio.</label>
         </div>
-        <button id="registrationSubmit" type="submit" disabled>S'inscrire et accéder</button>
+        <button id="registrationSubmit" type="submit" disabled>Regístrate y desbloquea el acceso</button>
       </form>
     </div>
   </div>
   <header>
     <div class="container row" style="justify-content:space-between">
       <div class="row" style="gap:10px;align-items:center">
-        <a class="brand" href="index.html">
-          <img src="assets/logo.svg" alt="EconoDeal – accélérateur de revendeurs" />
+        <a class="brand" href="index-es.html">
+          <img src="assets/logo.svg" alt="EconoDeal – acelerador para revendedores" />
           <span class="brand-text">
             <span class="brand-title">EconoDeal</span>
-            <span class="brand-tagline">Revendeur gagnant</span>
+            <span class="brand-tagline">Tu hub de Amazon</span>
           </span>
         </a>
       </div>
       <div class="row" style="gap:12px;align-items:center">
-        <a class="nav-button current" href="best-deals.html" style="white-space:nowrap">Meilleurs rabais</a>
-        <a class="nav-button" href="pricing.html" style="white-space:nowrap">Forfaits / prix</a>
-        <a class="nav-button" href="roadmap.html" style="white-space:nowrap">Roadmap / vision</a>
-        <div class="lang-switch" aria-label="Sélecteur de langue">
-          <span class="active" aria-current="true">FR</span>
+        <a class="nav-button current" href="best-deals-es.html" style="white-space:nowrap">Mejores ofertas</a>
+        <a class="nav-button" href="pricing-es.html" style="white-space:nowrap">Planes / precios</a>
+        <a class="nav-button" href="roadmap-es.html" style="white-space:nowrap">Hoja de ruta / visión</a>
+        <div class="lang-switch" aria-label="Selector de idioma">
+          <a href="best-deals.html">FR</a>
           <a href="best-deals-en.html">EN</a>
-          <a href="best-deals-es.html">ES</a>
+          <span class="active" aria-current="true">ES</span>
           <a href="best-deals-de.html">DE</a>
           <a href="best-deals-it.html">IT</a>
         </div>
-        <div class="muted" style="white-space:nowrap">Clients inscrits&nbsp;: <span data-client-count>0</span></div>
+        <div class="muted" style="white-space:nowrap">Clientes registrados:&nbsp; <span data-client-count>0</span></div>
         <div class="muted">© <span id="year"></span></div>
       </div>
     </div>
@@ -109,36 +109,36 @@
   <main class="container">
     <section class="section" style="padding-bottom:10px">
       <div class="hero">
-        <div class="badge">Mise à jour après chaque collecte</div>
-        <h2>Classement des meilleures liquidations</h2>
-        <p class="muted" style="max-width:720px">Découvrez les rabais les plus agressifs détectés par nos robots sur l'ensemble des détaillants surveillés. Le classement se rafraîchit dès que les scrapers terminent leur collecte. Rechargez la page pour voir les dernières offres et consultez le top 100 des meilleures liquidations triées par pourcentage de rabais.</p>
+        <div class="badge">Actualizado después de cada rastreo</div>
+        <h2>Ranking de liquidaciones</h2>
+        <p class="muted" style="max-width:720px">Descubre los descuentos más agresivos detectados por nuestros bots en cada minorista monitorizado. El ranking se actualiza automáticamente al finalizar cada rastreo. Recarga la página para ver las ofertas más recientes y repasar las 100 mejores liquidaciones ordenadas por porcentaje de descuento.</p>
         <div class="status-banner" id="statusBanner" role="status">
-          <span id="statusText">Analyse des dernières collectes en cours...</span>
+          <span id="statusText">Analizando los rastreos más recientes...</span>
         </div>
         <div class="filters">
           <div>
-            <label for="storeFilter" class="muted" style="font-size:12px;display:block;margin-bottom:4px">Filtrer par détaillant</label>
+            <label for="storeFilter" class="muted" style="font-size:12px;display:block;margin-bottom:4px">Filtrar por minorista</label>
             <select id="storeFilter">
-              <option value="">Tous les détaillants</option>
+              <option value="">Todos los minoristas</option>
             </select>
           </div>
-          <div style="margin-left:auto" class="muted">Total&nbsp;: <span id="dealCount">0</span> offres</div>
+          <div style="margin-left:auto" class="muted">Total:&nbsp;<span id="dealCount">0</span> ofertas</div>
         </div>
       </div>
     </section>
 
     <section class="section" style="padding-top:12px">
       <div id="cards" class="grid" aria-live="polite"></div>
-      <div id="emptyState" class="empty" style="display:none">Aucune liquidation trouvée pour le moment. Réessayez plus tard!</div>
+      <div id="emptyState" class="empty" style="display:none">No se encontraron liquidaciones por ahora. ¡Vuelve a intentarlo más tarde!</div>
     </section>
   </main>
 
   <div class="container footer">
-    © <span id="yearFooter"></span> EconoDeal · Tous droits réservés
+    © <span id="yearFooter"></span> EconoDeal · Todos los derechos reservados
   </div>
 
   <style>
-    /* Compléments stylistiques partagés avec l'accueil */
+    /* Additional styles shared with the homepage */
     #registrationOverlay{position:fixed;inset:0;background:rgba(15,23,42,.95);display:flex;align-items:center;justify-content:center;padding:20px;z-index:2000}
     #registrationOverlay.hidden{display:none}
     .registration-card{background:linear-gradient(180deg,var(--panel),#0e1626);border:1px solid var(--border);border-radius:var(--radius);max-width:420px;width:100%;padding:26px;display:grid;gap:16px;box-shadow:0 24px 60px rgba(15,23,42,.5)}
@@ -173,7 +173,7 @@
       function parseJson(value){
         if(!value) return null;
         try{ return JSON.parse(value); }
-        catch(err){ console.warn('Impossible de lire les données existantes', err); return null; }
+        catch(err){ console.warn('Unable to read existing data', err); return null; }
       }
       function safeGet(key){
         try{ return localStorage.getItem(key); }
@@ -181,7 +181,7 @@
       }
       function safeSet(key, value){
         try{ localStorage.setItem(key, value); }
-        catch(err){ console.warn('Impossible d\'enregistrer les données', err); }
+        catch(err){ console.warn('Unable to save data', err); }
       }
       function cleanText(value){ return typeof value === 'string' ? value.trim() : ''; }
       function getRegistrations(){
@@ -237,7 +237,7 @@
         return resolved;
       }
       function updateClientCountDisplays(){
-        const formatter = new Intl.NumberFormat('fr-CA');
+        const formatter = new Intl.NumberFormat('es-CA');
         const count = resolveClientCount();
         clientCountDisplays.forEach(el => { el.textContent = formatter.format(count); });
       }
@@ -691,7 +691,7 @@
       });
 
       const STORES = [
-        {label:'Amazon.ca', slug:'amazon', branches:[{label:'En ligne', slug:'canada', city:'En ligne', hasData:true}]},
+        {label:'Amazon.ca', slug:'amazon', branches:[{label:'En línea', slug:'canada', city:'En línea', hasData:true}]},
         {label:'Best Buy', slug:'best-buy', branches: fullBestBuyBranches()},
         {label:'Home Depot', slug:'home-depot', branches: HOME_DEPOT_CANADA_BRANCHES},
         {label:'Walmart', slug:'walmart', branches: WALMART_QUEBEC_BRANCHES},
@@ -749,7 +749,7 @@
         const pct = Math.round((1 - (clampedSale / price)) * 100);
         return Number.isFinite(pct) ? Math.max(pct, 0) : 0;
       }
-      function currency(n){ return Number.isFinite(n) ? n.toLocaleString('fr-CA',{style:'currency',currency:'CAD'}) : '—'; }
+      function currency(n){ return Number.isFinite(n) ? n.toLocaleString('es-CA',{style:'currency',currency:'CAD'}) : '—'; }
       function filePathFor(store, branch){
         const s = store?.slug;
         const c = typeof branch === 'object' ? branch?.slug : branch;
@@ -873,18 +873,18 @@
           <article class="card">
             <img src="${deal.image}" alt="${deal.title}" loading="lazy" />
             <div class="body">
-              <div class="badge">-${deal.discountPct}% Rabais</div>
+              <div class="badge">-${deal.discountPct}% Descuento</div>
               <h3>${deal.title}</h3>
               <div class="muted">${deal.store} · ${deal.branch ?? deal.city ?? ''}</div>
               <div class="price"><div class="old">${currency(deal.price)}</div><div>${currency(deal.salePrice)}</div></div>
-              <a class="nav-button" href="${deal.url || '#'}" target="_blank" rel="noopener" style="justify-content:center;width:100%">Voir l'offre</a>
+              <a class="nav-button" href="${deal.url || '#'}" target="_blank" rel="noopener" style="justify-content:center;width:100%">Ver la oferta</a>
             </div>
           </article>`).join('');
       }
 
       async function fetchAllDeals(){
         statusBanner.classList.remove('error');
-        statusText.textContent = 'Analyse des dernières collectes en cours...';
+        statusText.textContent = 'Analizando los rastreos más recientes...';
         const tasks = [];
         for(const store of STORES){
           const branches = store.branches ?? [];
@@ -908,7 +908,7 @@
       }
 
       function populateStoreFilter(){
-        const options = ['<option value="">Tous les détaillants</option>'];
+        const options = ['<option value="">Todos los minoristas</option>'];
         for(const store of STORES){
           options.push(`<option value="${store.label}">${store.label}</option>`);
         }
@@ -929,10 +929,10 @@
         }else{
           displayDate = new Date();
         }
-        statusText.textContent = `Dernière collecte analysée le ${displayDate.toLocaleString('fr-CA', {dateStyle:'medium', timeStyle:'short'})}`;
+        statusText.textContent = `Último rastreo analizado el ${displayDate.toLocaleString('es-CA', {dateStyle:'medium', timeStyle:'short'})}`;
       }catch(err){
-        console.error('Impossible de récupérer les liquidations', err);
-        statusText.textContent = "Erreur lors du chargement des liquidations.";
+        console.error('Unable to fetch deals', err);
+        statusText.textContent = 'Error al cargar las liquidaciones.';
         statusBanner.classList.add('error');
       }
       render();
