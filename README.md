@@ -21,6 +21,21 @@ Site statique bilingue (FR/EN) avec filtres Magasin/Ville et barre de % de rabai
 - Dans `index.html`, remplace `render()` pour faire des `fetch('/data/ton_fichier.json')`,
   merger les tableaux, appliquer les filtres et générer les cartes.
 
+## Activer le paiement Stripe
+1. Crée trois [Payment Links Stripe](https://dashboard.stripe.com/test/payment-links) (Essentiel, Avancé, Premium) ou réutilise des liens existants.
+2. Dans chaque page `pricing*.html`, remplace les URL d'exemple `https://buy.stripe.com/test_replace_with_*` dans le bloc
+   ```html
+   <script>
+     window.STRIPE_PAYMENT_LINKS = {
+       essential: 'https://buy.stripe.com/...',
+       advanced: 'https://buy.stripe.com/...',
+       premium: 'https://buy.stripe.com/...'
+     };
+   </script>
+   ```
+   par tes propres liens Stripe.
+3. Publie — les boutons "Payer avec Stripe" ouvriront la caisse Stripe dans un nouvel onglet et affichent une alerte si les liens ne sont pas configurés.
+
 ## Automatiser Amazon Canada (PA API)
 Un utilitaire est fourni pour rapatrier quotidiennement des produits Amazon Canada
 et alimenter `/data`.
