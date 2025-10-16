@@ -95,6 +95,18 @@ abonnements.
 5. Ouvrez `http://localhost:5000/pricing.html` (ou toute autre variante de langue) et cliquez sur
    un bouton d'essai pour rediriger vers Stripe Checkout.
 
+### Utilisation sur Vercel / hébergement statique
+
+- Les pages `pricing*.html` tentent d'abord d'appeler les routes locales (`/config` et
+  `/create-checkout-session`). En cas d'absence (404), elles basculent automatiquement sur
+  `/api/config` et `/api/create-checkout-session`, compatibles avec les fonctions serverless
+  Vercel présentes dans `api/`.
+- Définissez les variables d'environnement Stripe dans votre projet Vercel (`Settings → Environment
+  Variables`) pour que les fonctions disposent des clés.
+- Si votre backend Stripe est hébergé sur un autre domaine, exposez son URL via
+  `window.__STRIPE_BACKEND__ = 'https://example.com';` ou ajoutez l'attribut
+  `data-backend="https://example.com"` au script `assets/js/stripe-checkout.js`.
+
 > ⚠️ Les clés secrètes Stripe doivent rester côté serveur. Ne les commitez jamais dans le dépôt.
 
 © 2025 EconoDeal
