@@ -12,8 +12,9 @@ Site statique bilingue (FR/EN) avec filtres Magasin/Ville et barre de % de rabai
 
 ### Vercel
 1. Import le repo sur Vercel.
-2. Ajoute le fichier `vercel.json` pour forcer l'exécution Python 3.11 (nécéssaire car Vercel
-   tente sinon d'installer `uvicorn==0.22.0`, incompatible avec Python 3.12).
+2. Ajoute le fichier `vercel.json` (avec `"version": 2`) pour forcer l'exécution Python 3.11
+   (nécéssaire car Vercel tente sinon d'installer `uvicorn==0.22.0`, incompatible avec
+   Python 3.12).
 3. Build command: *(aucune)* — Framework: **Other** (site statique).
 4. Déploie — l'URL est prête.
 5. Tu peux remplacer le contenu de `render()` pour charger tes JSON.
