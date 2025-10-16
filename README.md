@@ -43,6 +43,12 @@ et alimenter `/data`.
 5. Pour une mise à jour automatique, planifie la commande via `cron`, GitHub Actions,
    ou un autre ordonnanceur quotidien.
 
+> ℹ️ Le script `sandbox_deals.py` qui génère des réponses fictives à partir du
+> bac à sable Amazon dépend de la bibliothèque optionnelle `paapi5-python-sdk`.
+> Cette dernière n'est pas compatible avec Python 3.12 (la version utilisée par
+> Vercel). Exécute ce script uniquement dans un environnement Python 3.11 (ou
+> antérieur) où tu peux installer manuellement `pip install paapi5-python-sdk`.
+
 ### Via GitHub Actions (Daily Amazon Deals)
 
 Le dépôt inclut déjà un workflow (`.github/workflows/amazon-deals.yml`) qui exécute

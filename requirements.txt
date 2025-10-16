@@ -1,4 +1,3 @@
-paapi5-python-sdk
 Flask
 flask-cors
 stripe
