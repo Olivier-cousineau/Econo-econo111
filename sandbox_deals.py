@@ -1,12 +1,21 @@
 """Fetch fake Amazon deals using the Product Advertising API v5 sandbox."""
+from __future__ import annotations
+
 import json
 from pathlib import Path
 
-import paapi5_python_sdk
-from paapi5_python_sdk.api.default_api import DefaultApi
-from paapi5_python_sdk.models.search_items_request import SearchItemsRequest
-from paapi5_python_sdk.models.search_items_resource import SearchItemsResource
-from paapi5_python_sdk.rest import ApiException
+try:  # pragma: no cover - optional dependency
+    import paapi5_python_sdk
+    from paapi5_python_sdk.api.default_api import DefaultApi
+    from paapi5_python_sdk.models.search_items_request import SearchItemsRequest
+    from paapi5_python_sdk.models.search_items_resource import SearchItemsResource
+    from paapi5_python_sdk.rest import ApiException
+except ModuleNotFoundError as exc:  # pragma: no cover - executed only when missing
+    raise RuntimeError(
+        "The optional dependency 'paapi5-python-sdk' is required to run this script. "
+        "Install it in a Python 3.11 (or earlier) environment with 'pip install "
+        "paapi5-python-sdk' before executing sandbox_deals.py."
+    ) from exc
 
 
 def fetch_fake_deals(
