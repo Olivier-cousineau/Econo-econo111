@@ -1,4 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/config", "destination": "/api/config" },
+    { "source": "/create-checkout-session", "destination": "/api/create-checkout-session" }
+  ]
 }
