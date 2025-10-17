@@ -1,62 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-page="pricing">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>EconoDeal — Planes</title>
-  <style>
-    :root{
-      --bg:#0f172a; --panel:#111827; --panel-2:#1f2937; --text:#e5e7eb;
-      --muted:#9ca3af; --accent:#22c55e; --border:#2b3446; --radius:14px;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),#0b1020 50%,#0a0f1a);color:var(--text)}
-    header{position:sticky;top:0;z-index:20;background:rgba(15,23,42,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
-    .container{max-width:1100px;margin:0 auto;padding:18px}
-    .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
-    .brand{display:inline-flex;align-items:center;gap:12px;padding:6px 14px;border-radius:14px;text-decoration:none;color:var(--text);background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.35);transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
-    .brand:hover{transform:translateY(-1px);box-shadow:0 12px 28px rgba(34,197,94,.15);background:rgba(34,197,94,.12)}
-    .brand img{width:46px;height:46px;display:block}
-    .brand-text{display:flex;flex-direction:column;line-height:1.1}
-    .brand-title{margin:0;font-size:18px;font-weight:700;letter-spacing:-.01em}
-    .brand-tagline{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:#86efac;font-weight:600}
-    .lang-switch{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600}
-    .lang-switch a,.lang-switch span{color:var(--muted);text-decoration:none;padding:6px 10px;border-radius:8px;background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.16);transition:background .3s ease,color .3s ease}
-    .lang-switch a:hover{color:#fff;background:rgba(59,130,246,.2)}
-    .lang-switch .active{color:#fff;background:rgba(59,130,246,.3);border-color:rgba(59,130,246,.4)}
-    .nav-button{display:inline-flex;align-items:center;justify-content:center;background:var(--panel-2);color:var(--text);border:1px solid var(--border);border-radius:10px;padding:10px 12px;text-decoration:none;transition:background .2s ease,color .2s ease}
-    .nav-button:hover{background:var(--panel);color:#fff}
-    .nav-button:focus{outline:2px solid var(--accent);outline-offset:1px}
-    .nav-button.current{background:linear-gradient(120deg,rgba(34,197,94,.25),rgba(59,130,246,.25));border-color:rgba(34,197,94,.6)}
-    .section{padding:36px 0}
-    .muted{color:var(--muted)}
-    .pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
-    .pricing-card{background:linear-gradient(180deg,var(--panel),#111a2a);border:1px solid var(--border);border-radius:var(--radius);padding:18px;display:flex;flex-direction:column;gap:14px;position:relative;overflow:hidden}
-    .pricing-card::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,rgba(34,197,94,.6),rgba(59,130,246,.6));opacity:.6}
-    .pricing-card h4{margin:0;font-size:18px}
-    .pricing-price{font-size:26px;font-weight:700;color:#86efac}
-    .pricing-features{list-style:none;padding:0;margin:0;display:grid;gap:8px;font-size:14px;color:var(--muted)}
-    .pricing-tag{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
-    .pricing-highlight{outline:2px solid rgba(34,197,94,.4);outline-offset:4px;transition:outline-color .3s ease}
-    .action-stack{margin-top:auto;display:grid;gap:10px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 12px;border-radius:10px;font-weight:600;text-decoration:none;font-size:14px;transition:background .2s ease,color .2s ease,border-color .2s ease;cursor:pointer;border:1px solid transparent}
-    .btn-primary{background:linear-gradient(120deg,rgba(34,197,94,.88),rgba(59,130,246,.82));color:#fff;border:none;box-shadow:0 12px 24px rgba(34,197,94,.25)}
-    .btn-primary:hover{background:linear-gradient(120deg,rgba(34,197,94,.95),rgba(59,130,246,.9));box-shadow:0 16px 30px rgba(34,197,94,.28)}
-    .btn[disabled]{opacity:.65;cursor:not-allowed}
-    .btn.is-loading{opacity:.65;cursor:progress}
-    .checkout-message{margin-top:18px;padding:14px;border-radius:12px;background:rgba(59,130,246,.12);border:1px solid rgba(59,130,246,.25);color:var(--text);font-size:14px;line-height:1.5}
-    .checkout-message[data-state="error"]{background:rgba(239,68,68,.12);border-color:rgba(239,68,68,.35);color:#fecaca}
-    .checkout-message[data-state="info"]{color:#bfdbfe}
-    .value-section{background:linear-gradient(200deg,rgba(10,18,33,.92),rgba(12,23,42,.9));border:1px solid rgba(59,130,246,.22);border-radius:var(--radius);padding:26px;display:grid;gap:18px;margin-top:28px;box-shadow:0 18px 42px rgba(8,13,26,.55);position:relative;overflow:hidden}
-    .value-section::after{content:"";position:absolute;inset:auto -40% -40% auto;width:220px;height:220px;background:radial-gradient(circle,rgba(34,197,94,.22),transparent 60%);filter:blur(24px);opacity:.4}
-    .value-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;position:relative;z-index:1}
-    .value-card{background:linear-gradient(200deg,rgba(14,23,42,.92),rgba(17,31,54,.9));border:1px solid rgba(59,130,246,.26);border-radius:16px;padding:18px;display:grid;gap:10px;box-shadow:0 16px 36px rgba(8,13,26,.52)}
-    .value-icon{font-size:24px;width:40px;height:40px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(140deg,rgba(34,197,94,.32),rgba(59,130,246,.3));color:#fff}
-    .value-card h4{margin:0;font-size:17px;color:#fff;letter-spacing:-.01em}
-    .value-card ul{margin:0;padding-left:18px;display:grid;gap:6px;font-size:14px;color:rgba(226,232,240,.78)}
-    @media (max-width:720px){.value-section{padding:22px}.value-grid{grid-template-columns:1fr}}
-    .footer{border-top:1px solid var(--border);padding:20px 0;color:var(--muted);text-align:center}
-  </style>
+  <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 <body>
   <header>
