@@ -53,6 +53,90 @@
     const locale = (document.documentElement.getAttribute('lang') || 'en').split('-')[0].toLowerCase();
     const strings = dictionary[locale] || dictionary.en;
 
+    const scriptEl = document.currentScript || document.querySelector('script[src*="stripe-checkout.js"]');
+    const metaBackend = document.querySelector('meta[name="stripe-backend"]');
+    let backendBase = '';
+    if (typeof window !== 'undefined' && window.__STRIPE_BACKEND__) {
+      backendBase = window.__STRIPE_BACKEND__;
+    } else if (scriptEl && scriptEl.dataset && scriptEl.dataset.backend) {
+      backendBase = scriptEl.dataset.backend;
+    } else if (metaBackend && metaBackend.content) {
+      backendBase = metaBackend.content;
+    }
+    backendBase = (backendBase || '').trim();
+
+    function buildEndpointPaths(resource) {
+      const normalised = resource.startsWith('/') ? resource : `/${resource}`;
+      if (backendBase) {
+        const cleanedBase = backendBase.endsWith('/') ? backendBase.slice(0, -1) : backendBase;
+        return [`${cleanedBase}${normalised}`];
+      }
+      return [normalised, `/api${normalised}`];
+    }
+
+    async function requestJson(resource, options, fallbackMessage) {
+      const endpoints = buildEndpointPaths(resource);
+      let lastError = new Error(fallbackMessage);
+
+      for (let index = 0; index < endpoints.length; index += 1) {
+        const url = endpoints[index];
+        const isLastAttempt = index === endpoints.length - 1;
+
+        let response;
+        try {
+          response = await fetch(url, options);
+        } catch (networkError) {
+          lastError = new Error(fallbackMessage);
+          if (!isLastAttempt) {
+            continue;
+          }
+          throw lastError;
+        }
+
+        if (!response.ok) {
+          if (!isLastAttempt && (response.status === 404 || response.status === 405)) {
+            continue;
+          }
+
+          const responseClone = response.clone();
+          let message = fallbackMessage;
+          try {
+            const errorPayload = await responseClone.json();
+            if (errorPayload && errorPayload.error) {
+              message = errorPayload.error;
+            }
+          } catch (parseError) {
+            try {
+              const text = await response.text();
+              if (text) {
+                message = text;
+              }
+            } catch (textError) {
+              // Ignore secondary parsing errors.
+            }
+          }
+
+          throw new Error(message || fallbackMessage);
+        }
+
+        try {
+          const data = await response.json();
+          if (!data || typeof data !== 'object') {
+            throw new Error(fallbackMessage);
+          }
+          return data;
+        } catch (parseError) {
+          lastError = new Error(fallbackMessage);
+          if (!isLastAttempt) {
+            continue;
+          }
+          throw lastError;
+        }
+      }
+
+      throw lastError;
+    }
+
     let stripe;
     let initPromise;
 
@@ -85,11 +169,11 @@
       initPromise = (async () => {
         setMessage(strings.initializing, 'info');
         try {
-          const response = await fetch('/config', { headers: { 'Accept': 'application/json' } });
-          if (!response.ok) {
-            throw new Error(strings.configError);
-          }
-          const data = await response.json();
+          const data = await requestJson(
+            'config',
+            { headers: { 'Accept': 'application/json' } },
+            strings.configError
+          );
           if (!data || !data.publishableKey) {
             throw new Error(strings.configError);
           }
@@ -106,22 +190,18 @@
     }
 
     async function createCheckoutSession(payload) {
-      const response = await fetch('/create-checkout-session', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
+      return requestJson(
+        'create-checkout-session',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payload)
         },
-        body: JSON.stringify(payload)
-      });
-
-      if (!response.ok) {
-        const errorPayload = await response.json().catch(() => ({}));
-        const message = errorPayload && errorPayload.error ? errorPayload.error : strings.sessionError;
-        throw new Error(message);
-      }
-
-      return response.json();
+        strings.sessionError
+      );
     }
 
     buttons.forEach((button) => {
