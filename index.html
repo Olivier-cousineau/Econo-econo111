@@ -6,15 +6,16 @@
   <title>EconoDeal — Canada</title>
   <link rel="stylesheet" href="assets/css/main.css" />
 </head>
-<body class="overlay-active">
+<body>
   <div class="bg-visuals" aria-hidden="true">
     <div class="bg-grid"></div>
     <div class="bg-orb bg-orb--one"></div>
     <div class="bg-orb bg-orb--two"></div>
     <div class="bg-orb bg-orb--three"></div>
   </div>
-  <div id="registrationOverlay" role="dialog" aria-modal="true" aria-labelledby="registrationTitle">
+  <div id="registrationOverlay" class="hidden" role="dialog" aria-modal="true" aria-labelledby="registrationTitle" aria-hidden="true">
     <div class="registration-card">
+      <button type="button" class="overlay-close" data-close-overlay aria-label="Fermer l'inscription">×</button>
       <h2 id="registrationTitle">Accès réservé aux membres</h2>
       <p class="muted" style="margin:0">Rejoignez <strong><span data-client-count>0</span></strong> revendeurs Amazon et eBay ainsi que chasseurs de rabais, puis accédez au catalogue complet.</p>
       <form id="registrationForm">
@@ -73,7 +74,7 @@
           <span class="header-region" data-exchange-indicator aria-live="polite" aria-label="Taux de change 1 CAD pour 1 CAD">1 CAD = 1 CAD</span>
         </div>
         <div class="header-menu-section header-menu-meta">
-          <div>Clients inscrits&nbsp;: <span data-client-count>0</span></div>
+          <div data-client-count-container data-hidden="true">Clients inscrits&nbsp;: <span data-client-count>0</span></div>
           <div>© <span id="year"></span></div>
         </div>
       </div>
@@ -88,8 +89,21 @@
         <h1 id="heroTitle">Débloquez les meilleures liquidations pour propulser vos boutiques Amazon et eBay</h1>
         <p>Centralisez vos achats, connectez vos fournisseurs clés et laissez nos signaux IA repérer les rabais les plus rentables pour vos catalogues Amazon.ca, Amazon.com, eBay.com et eBay.ca.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#search">Explorer les inventaires</a>
-          <a class="btn btn-secondary" href="#amazon-sellers">Voir les avantages</a>
+          <a class="btn btn-primary" href="#search">Explorer les inventaires<span class="btn-icon" aria-hidden="true">→</span></a>
+          <a class="btn btn-secondary" href="#amazon-sellers">Voir les avantages<span class="btn-icon" aria-hidden="true">→</span></a>
+        </div>
+        <div class="hero-proof" aria-label="Revendeurs qui réussissent avec EconoDeal">
+          <div class="hero-proof-logos" aria-hidden="true">
+            <span class="hero-proof-logo">Top Seller MTL</span>
+            <span class="hero-proof-logo">FBA Québec</span>
+            <span class="hero-proof-logo">eBay Hub Toronto</span>
+            <span class="hero-proof-logo">Retail Lab</span>
+          </div>
+          <p class="hero-proof-quote">«&nbsp;Nos signaux IA ont doublé nos marges sur Amazon.ca en moins d'un trimestre.&nbsp;» <span>Jade — Boutique FBA premium</span></p>
+        </div>
+        <div class="hero-registration">
+          <button type="button" class="hero-registration-button" data-open-overlay>Demander un accès</button>
+          <p class="muted" data-client-count-container data-hidden="true"><strong><span data-client-count>0</span></strong> revendeurs Amazon &amp; eBay nous font déjà confiance.</p>
         </div>
         <ul class="hero-stats">
           <li class="hero-stat"><strong>+4 500</strong><span>Rabais actifs multicanal</span></li>
@@ -103,13 +117,32 @@
             <span>Instantané</span>
             <div class="badge" style="margin:0">Flux Canada</div>
           </header>
-          <h2>Opportunités en lumière</h2>
-          <p>Surveillez en temps réel les écarts de prix exploitables entre vos marchands favoris et la Buy Box Amazon ou le Top Rated eBay.</p>
-          <ul class="hero-preview-list">
-            <li class="hero-preview-item"><span>1</span> Alertes prioritaires quand la marge dépasse 28&nbsp;% sur Amazon ou eBay.</li>
-            <li class="hero-preview-item"><span>2</span> Statuts de stocks consolidés Best Buy, Walmart, Canadian Tire et grossistes eBay.</li>
-            <li class="hero-preview-item"><span>3</span> Export instantané vers vos modèles FBA, FBM et Seller Hub.</li>
-          </ul>
+          <h2>Signals IA en action</h2>
+          <div class="hero-dashboard">
+            <div class="hero-dashboard-row hero-dashboard-row--highlight">
+              <div class="hero-dashboard-title">Nintendo Switch OLED</div>
+              <div class="hero-dashboard-metric">+32&nbsp;%</div>
+              <div class="hero-dashboard-badge">Buy Box Amazon.ca</div>
+            </div>
+            <div class="hero-dashboard-row">
+              <div class="hero-dashboard-title">Dyson V15 Detect</div>
+              <div class="hero-dashboard-metric">+24&nbsp;%</div>
+              <div class="hero-dashboard-badge">Top Rated eBay.ca</div>
+            </div>
+            <div class="hero-dashboard-row">
+              <div class="hero-dashboard-title">LEGO Millennium Falcon</div>
+              <div class="hero-dashboard-metric">+18&nbsp;%</div>
+              <div class="hero-dashboard-badge">FBA prêt en 2&nbsp;jours</div>
+            </div>
+            <div class="hero-dashboard-trend">
+              <span class="hero-dashboard-trend-label">Alertes critiques</span>
+              <div class="hero-dashboard-trend-bar">
+                <span style="width:80%"></span>
+              </div>
+              <span class="hero-dashboard-trend-value">3 prêtes à expédier</span>
+            </div>
+          </div>
+          <p class="hero-dashboard-foot">Synthèse générée il y a 4 minutes · Stocks consolidés Best Buy, Walmart &amp; grossistes.</p>
         </article>
       </div>
     </section>
@@ -193,7 +226,7 @@
       <div class="section">
         <div class="row" style="justify-content:space-between;align-items:center">
           <h3 style="margin:0">Résultats</h3>
-          <div class="muted"><span id="resultCount">0</span> articles</div>
+          <div class="muted" data-result-count-container data-hidden="true"><span id="resultCount">0</span> articles</div>
         </div>
         <div id="cards" class="grid" style="margin-top:12px"></div>
       </div>
@@ -368,8 +401,15 @@
     const submitBtn = document.getElementById('registrationSubmit');
     const regulationCheckbox = document.getElementById('regulationCheckbox');
     const clientCountDisplays = Array.from(document.querySelectorAll('[data-client-count]'));
+    const clientCountWrappers = clientCountDisplays
+      .map(el => el.closest('[data-client-count-container]'))
+      .filter((el, index, list) => el && list.indexOf(el) === index);
     const menuToggle = document.getElementById('menuToggle');
     const headerMenu = document.getElementById('headerMenu');
+    const overlayTriggers = Array.from(document.querySelectorAll('[data-open-overlay]'));
+    const overlayClosers = Array.from(document.querySelectorAll('[data-close-overlay]'));
+    const resultCountContainer = document.querySelector('[data-result-count-container]');
+    let overlayOrigin = null;
     function closeMenu(){
       if(!menuToggle || !headerMenu) return;
       headerMenu.hidden = true;
@@ -516,9 +556,32 @@
     function updateClientCountDisplays(){
       const formatter = new Intl.NumberFormat('fr-CA');
       const count = resolveClientCount();
+      const hasCount = count > 0;
       clientCountDisplays.forEach(el => {
         el.textContent = formatter.format(count);
       });
+      clientCountWrappers.forEach(wrapper => {
+        if(!wrapper) return;
+        if(hasCount){
+          wrapper.removeAttribute('data-hidden');
+        }else{
+          wrapper.setAttribute('data-hidden', 'true');
+        }
+      });
+      return count;
+    }
+
+    function updateResultCount(value){
+      if(countEl){
+        countEl.textContent = String(value);
+      }
+      if(resultCountContainer){
+        if(value > 0){
+          resultCountContainer.removeAttribute('data-hidden');
+        }else{
+          resultCountContainer.setAttribute('data-hidden', 'true');
+        }
+      }
     }
 
     function hideOverlay(){
@@ -526,6 +589,10 @@
       overlay.classList.add('hidden');
       overlay.setAttribute('aria-hidden', 'true');
       document.body.classList.remove('overlay-active');
+      if(overlayOrigin instanceof HTMLElement){
+        overlayOrigin.focus();
+      }
+      overlayOrigin = null;
     }
 
     function showOverlay(){
@@ -534,17 +601,44 @@
       overlay.removeAttribute('aria-hidden');
       document.body.classList.add('overlay-active');
       updateClientCountDisplays();
+      const focusTarget = overlay.querySelector('input, button, select, textarea');
+      if(focusTarget instanceof HTMLElement){
+        setTimeout(() => focusTarget.focus(), 0);
+      }
     }
 
     resolveClientCount();
     updateClientCountDisplays();
+    hideOverlay();
 
-    const alreadyRegistered = safeGet('econodealClientRegistered') === 'true';
-    if(alreadyRegistered){
-      hideOverlay();
-    }else{
-      showOverlay();
+    overlayTriggers.forEach(trigger => {
+      trigger.addEventListener('click', (event) => {
+        event.preventDefault();
+        overlayOrigin = event.currentTarget instanceof HTMLElement ? event.currentTarget : null;
+        showOverlay();
+      });
+    });
+
+    overlayClosers.forEach(btn => {
+      btn.addEventListener('click', (event) => {
+        event.preventDefault();
+        hideOverlay();
+      });
+    });
+
+    if(overlay){
+      overlay.addEventListener('click', (event) => {
+        if(event.target === overlay){
+          hideOverlay();
+        }
+      });
     }
+
+    document.addEventListener('keydown', (event) => {
+      if(event.key === 'Escape' && overlay && !overlay.classList.contains('hidden')){
+        hideOverlay();
+      }
+    });
 
     if(submitBtn && regulationCheckbox){
       submitBtn.disabled = !regulationCheckbox.checked;
@@ -1922,7 +2016,7 @@
       rangeLabel.textContent = range.value + '%';
       if(activeCountry !== 'canada'){
         const config = getCountryConfig(activeCountry);
-        countEl.textContent = '0';
+        updateResultCount(0);
         cardsEl.innerHTML = renderCountryPreview(config);
         return;
       }
@@ -1939,7 +2033,7 @@
         if(terms.length && !terms.every(term => searchIndex.includes(term))) return false;
         return pct >= min;
       });
-      countEl.textContent = filtered.length;
+      updateResultCount(filtered.length);
       if(filtered.length === 0){
         const config = getCountryConfig(activeCountry);
         cardsEl.innerHTML = renderCountryPreview(config) || '';
