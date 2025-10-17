@@ -5,39 +5,17 @@ from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
 import stripe
 
+from stripe_backend import (
+    ConfigurationError,
+    InvalidPlanError,
+    create_checkout_session as create_checkout_session_backend,
+    get_publishable_key_payload,
+)
+
 BASE_DIR = Path(__file__).resolve().parent
 
 app = Flask(__name__, static_folder=str(BASE_DIR), static_url_path="")
 CORS(app)
-
-PLAN_CONFIG = {
-    "essential": {
-        "amount": 999,
-        "default_name": "Essential plan",
-        "default_description": "Essential access to the clearance intelligence feed.",
-    },
-    "advanced": {
-        "amount": 1999,
-        "default_name": "Advanced plan",
-        "default_description": "Unlimited catalog access with real-time alerts.",
-    },
-    "premium": {
-        "amount": 2999,
-        "default_name": "Premium plan",
-        "default_description": "Full AI optimisation suite for scaling resellers.",
-    },
-}
-
-SUPPORTED_LOCALES = {"da", "de", "en", "es", "fi", "fr", "it", "ja", "nb", "nl", "pl", "pt", "sv"}
-
-
-def _ensure_stripe_secret() -> str:
-    secret_key = os.environ.get("STRIPE_SECRET_KEY")
-    if not secret_key:
-        raise RuntimeError(
-            "STRIPE_SECRET_KEY is not configured. Export it before starting the server."
-        )
-    return secret_key
 
 
 @app.route("/")
@@ -52,63 +30,22 @@ def serve_asset(asset: str) -> object:
 
 @app.route("/config", methods=["GET"])
 def get_publishable_key() -> object:
-    publishable_key = os.environ.get("STRIPE_PUBLISHABLE_KEY")
-    if not publishable_key:
-        return (
-            jsonify({"error": "Missing STRIPE_PUBLISHABLE_KEY environment variable."}),
-            500,
-        )
-    return jsonify({"publishableKey": publishable_key})
+    try:
+        payload = get_publishable_key_payload()
+    except ConfigurationError as exc:
+        return jsonify({"error": str(exc)}), 500
+    return jsonify(payload)
 
 
 @app.route("/create-checkout-session", methods=["POST"])
 def create_checkout_session() -> object:
-    try:
-        stripe.api_key = _ensure_stripe_secret()
-    except RuntimeError as exc:  # pragma: no cover - configuration error
-        return jsonify({"error": str(exc)}), 500
-
     payload = request.get_json(silent=True) or {}
-    plan_key = payload.get("plan")
-    config = PLAN_CONFIG.get(plan_key)
-    if not config:
-        return jsonify({"error": "Unknown pricing plan."}), 400
-
-    locale = (payload.get("locale") or "en").split("-")[0].lower()
-    stripe_locale = locale if locale in SUPPORTED_LOCALES else "en"
-
-    product_name = (payload.get("name") or config["default_name"]).strip()
-    description = (payload.get("description") or config["default_description"]).strip()
-
-    success_url = os.environ.get(
-        "STRIPE_SUCCESS_URL",
-        "http://localhost:5000/success?session_id={CHECKOUT_SESSION_ID}",
-    )
-    cancel_url = os.environ.get("STRIPE_CANCEL_URL", "http://localhost:5000/cancel")
-
     try:
-        session = stripe.checkout.Session.create(
-            mode="payment",
-            payment_method_types=["card"],
-            line_items=[
-                {
-                    "quantity": 1,
-                    "price_data": {
-                        "currency": "cad",
-                        "unit_amount": config["amount"],
-                        "product_data": {
-                            "name": product_name,
-                            "description": description,
-                        },
-                    },
-                }
-            ],
-            allow_promotion_codes=True,
-            locale=stripe_locale,
-            success_url=success_url,
-            cancel_url=cancel_url,
-            automatic_tax={"enabled": False},
-        )
+        session = create_checkout_session_backend(payload)
+    except InvalidPlanError as exc:
+        return jsonify({"error": str(exc)}), 400
+    except ConfigurationError as exc:
+        return jsonify({"error": str(exc)}), 500
     except stripe.error.StripeError as exc:  # pragma: no cover - network/API error
         return jsonify({"error": exc.user_message or str(exc)}), 400
     except Exception as exc:  # pragma: no cover - unexpected error
