@@ -188,9 +188,22 @@
     .store-menu-item:hover{background:linear-gradient(160deg,rgba(59,130,246,.2),rgba(34,197,94,.18));box-shadow:0 16px 32px rgba(59,130,246,.28);transform:translateY(-4px)}
     .store-menu-label{font-size:15px;letter-spacing:-.01em}
     .store-menu-note{font-size:13px;color:var(--muted);font-weight:500}
-    .header-layout{display:grid;grid-template-columns:1fr auto;align-items:start;gap:16px}
+    .header-layout{display:grid;grid-template-columns:1fr auto;align-items:start;gap:16px;position:relative}
     @media (max-width:960px){.header-layout{grid-template-columns:1fr}}
-    .header-top{justify-content:space-between;align-items:center;gap:16px}
+    .header-top{justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+    .menu-toggle{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:10px 16px;border-radius:12px;border:1px solid rgba(59,130,246,.35);background:linear-gradient(160deg,rgba(10,19,34,.92),rgba(20,33,54,.9));color:var(--text);cursor:pointer;transition:background .3s ease,box-shadow .3s ease,color .3s ease}
+    .menu-toggle:hover,.menu-toggle:focus-visible{background:linear-gradient(150deg,rgba(34,197,94,.22),rgba(59,130,246,.24));color:#fff;box-shadow:0 10px 28px rgba(59,130,246,.25)}
+    .menu-toggle[aria-expanded="true"]{background:linear-gradient(130deg,rgba(34,197,94,.32),rgba(59,130,246,.35));border-color:rgba(34,197,94,.6);box-shadow:0 16px 36px rgba(34,197,94,.25)}
+    .menu-toggle-icon{font-size:18px;line-height:1}
+    .menu-toggle-label{letter-spacing:.14em}
+    .header-menu{grid-column:1/-1;margin-top:14px;padding:18px;background:linear-gradient(200deg,rgba(9,17,32,.94),rgba(12,23,44,.92));border:1px solid rgba(59,130,246,.28);border-radius:18px;box-shadow:0 22px 50px rgba(2,6,23,.6);display:grid;gap:18px}
+    .header-menu[hidden]{display:none}
+    .header-menu-section{display:grid;gap:12px}
+    .header-menu-nav{display:grid;gap:10px}
+    .header-menu-nav .nav-button{width:100%;justify-content:flex-start}
+    .header-menu-locale{display:grid;gap:10px}
+    .header-menu-meta{display:grid;gap:8px;color:var(--muted)}
+    @media (min-width:720px){.header-menu{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}}
     .store-ads{border:1px solid rgba(59,130,246,.28);background:linear-gradient(200deg,rgba(6,12,24,.94),rgba(12,24,44,.9));box-shadow:0 16px 32px rgba(2,6,23,.55);border-radius:18px;padding:16px 18px;display:flex;flex-direction:column;gap:12px;overflow:hidden;margin-top:6px}
     .store-ads[aria-hidden="true"]{display:none}
     .store-ads{width:280px;position:relative}
@@ -261,10 +274,18 @@
             <button type="button" class="country-button" data-country="europe" aria-pressed="false">Europe</button>
           </div>
         </div>
-        <div class="row" style="gap:12px;align-items:center">
+        <button id="menuToggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="headerMenu">
+          <span class="menu-toggle-icon" aria-hidden="true">☰</span>
+          <span class="menu-toggle-label">Menu</span>
+        </button>
+      </div>
+      <div id="headerMenu" class="header-menu" hidden>
+        <nav class="header-menu-section header-menu-nav" aria-label="Navigation principale">
           <a class="nav-button" href="best-deals.html" style="white-space:nowrap">Meilleurs rabais</a>
           <a class="nav-button" href="pricing.html" style="white-space:nowrap">Forfaits / prix</a>
           <a class="nav-button" href="roadmap.html" style="white-space:nowrap">Roadmap / vision</a>
+        </nav>
+        <div class="header-menu-section header-menu-locale" role="group" aria-label="Langues et régions">
           <div class="lang-switch" aria-label="Sélecteur de langue">
             <span class="active" aria-current="true">FR</span>
             <a href="index-en.html">EN</a>
@@ -273,8 +294,10 @@
             <a href="index-it.html">IT</a>
           </div>
           <span class="header-region" data-exchange-indicator aria-live="polite" aria-label="Taux de change 1 CAD pour 1 CAD">1 CAD = 1 CAD</span>
-          <div class="muted" style="white-space:nowrap">Clients inscrits&nbsp;: <span data-client-count>0</span></div>
-          <div class="muted">© <span id="year"></span></div>
+        </div>
+        <div class="header-menu-section header-menu-meta">
+          <div>Clients inscrits&nbsp;: <span data-client-count>0</span></div>
+          <div>© <span id="year"></span></div>
         </div>
       </div>
       <aside id="storeAds" class="store-ads" aria-live="polite" aria-label="Magasins en vedette" aria-hidden="true"></aside>
@@ -568,6 +591,47 @@
     const submitBtn = document.getElementById('registrationSubmit');
     const regulationCheckbox = document.getElementById('regulationCheckbox');
     const clientCountDisplays = Array.from(document.querySelectorAll('[data-client-count]'));
+    const menuToggle = document.getElementById('menuToggle');
+    const headerMenu = document.getElementById('headerMenu');
+    function closeMenu(){
+      if(!menuToggle || !headerMenu) return;
+      headerMenu.hidden = true;
+      menuToggle.setAttribute('aria-expanded','false');
+    }
+
+    if(menuToggle && headerMenu){
+      menuToggle.addEventListener('click', () => {
+        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        if(expanded){
+          closeMenu();
+        }else{
+          headerMenu.hidden = false;
+          menuToggle.setAttribute('aria-expanded','true');
+        }
+      });
+
+      document.addEventListener('click', event => {
+        if(menuToggle.getAttribute('aria-expanded') !== 'true') return;
+        const target = event.target;
+        if(target instanceof Element && !headerMenu.contains(target) && !menuToggle.contains(target)){
+          closeMenu();
+        }
+      });
+
+      document.addEventListener('keydown', event => {
+        if(event.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true'){
+          closeMenu();
+          menuToggle.focus();
+        }
+      });
+
+      headerMenu.addEventListener('click', event => {
+        const target = event.target;
+        if(target instanceof Element && target.matches('.nav-button')){
+          closeMenu();
+        }
+      });
+    }
     const storeAdsContainer = document.getElementById('storeAds');
     function parseJson(value){
       if(!value) return null;
