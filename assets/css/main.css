@@ -27,8 +27,9 @@ html[data-page="landing"]{
     html[data-page="landing"] label{display:block;font-size:12px;color:var(--muted);margin-bottom:6px}
     html[data-page="landing"] select,html[data-page="landing"] input[type="range"],html[data-page="landing"] button{background:linear-gradient(160deg,rgba(15,23,42,.95),rgba(30,41,59,.9));background-color:#0f172a;color:var(--text);border:1px solid rgba(148,163,184,.3);border-radius:10px;padding:10px 12px;box-shadow:0 0 0 1px rgba(2,6,23,.45) inset;transition:border-color .3s ease,box-shadow .3s ease,transform .2s ease}
     html[data-page="landing"] select option{color:#0f172a;background:#f8fafc}
-    html[data-page="landing"] input[type="text"],html[data-page="landing"] input[type="email"]{width:100%;background:linear-gradient(170deg,rgba(17,24,39,.92),rgba(17,34,64,.9));color:var(--text);border:1px solid rgba(148,163,184,.3);border-radius:10px;padding:10px 12px;box-shadow:0 0 0 1px rgba(2,6,23,.35) inset;transition:border-color .3s ease,box-shadow .3s ease}
-    html[data-page="landing"] input[type="text"]:focus,html[data-page="landing"] input[type="email"]:focus{border-color:rgba(59,130,246,.65);box-shadow:0 0 18px rgba(59,130,246,.25)}
+    html[data-page="landing"] input[type="text"],html[data-page="landing"] input[type="email"],html[data-page="landing"] input[type="number"]{width:100%;background:linear-gradient(170deg,rgba(17,24,39,.92),rgba(17,34,64,.9));color:var(--text);border:1px solid rgba(148,163,184,.3);border-radius:10px;padding:10px 12px;box-shadow:0 0 0 1px rgba(2,6,23,.35) inset;transition:border-color .3s ease,box-shadow .3s ease;-moz-appearance:textfield}
+    html[data-page="landing"] input[type="text"]:focus,html[data-page="landing"] input[type="email"]:focus,html[data-page="landing"] input[type="number"]:focus{border-color:rgba(59,130,246,.65);box-shadow:0 0 18px rgba(59,130,246,.25)}
+    html[data-page="landing"] input[type="number"]::-webkit-outer-spin-button,html[data-page="landing"] input[type="number"]::-webkit-inner-spin-button{margin:0;-webkit-appearance:none}
     html[data-page="landing"] .nav-button{display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(160deg,rgba(15,23,42,.94),rgba(20,33,54,.9));color:var(--text);border:1px solid rgba(59,130,246,.25);border-radius:10px;padding:10px 12px;text-decoration:none;transition:background .3s ease,color .3s ease,box-shadow .3s ease}
     html[data-page="landing"] .nav-button:hover{background:linear-gradient(140deg,rgba(34,197,94,.22),rgba(59,130,246,.24));color:#fff;box-shadow:0 8px 20px rgba(59,130,246,.25)}
     html[data-page="landing"] .nav-button.current{background:linear-gradient(120deg,rgba(34,197,94,.32),rgba(59,130,246,.35));border-color:rgba(34,197,94,.6);box-shadow:0 12px 26px rgba(34,197,94,.2)}
@@ -143,6 +144,23 @@ html[data-page="landing"]{
     html[data-page="landing"] .seller-list{list-style:none;padding:0;margin:0;display:grid;gap:8px;font-size:14px;color:var(--muted)}
     html[data-page="landing"] .seller-list li{display:flex;gap:8px;align-items:flex-start}
     html[data-page="landing"] .seller-list li span{font-size:16px;color:#86efac;line-height:1.4}
+    html[data-page="landing"] .seller-calculator{background:linear-gradient(200deg,rgba(8,17,33,.92),rgba(9,20,38,.9));border:1px solid rgba(59,130,246,.32);border-radius:18px;padding:24px;display:grid;gap:18px;box-shadow:0 24px 52px rgba(2,6,23,.6);position:relative;overflow:hidden}
+    html[data-page="landing"] .seller-calculator::after{content:"";position:absolute;inset:auto -40% -40% auto;width:220px;height:220px;background:radial-gradient(circle,rgba(34,197,94,.25),transparent 60%);filter:blur(32px);opacity:.45}
+    html[data-page="landing"] .seller-calculator h3{margin:0;font-size:22px;display:flex;align-items:center;gap:8px;letter-spacing:-.01em}
+    html[data-page="landing"] .seller-calculator p{margin:0;font-size:14px;color:rgba(203,213,225,.78);line-height:1.6}
+    html[data-page="landing"] .calculator-form{position:relative;z-index:1;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+    html[data-page="landing"] .calculator-field{display:grid;gap:6px}
+    html[data-page="landing"] .calculator-actions{display:flex;align-items:flex-end}
+    html[data-page="landing"] .calculator-actions button{width:100%}
+    html[data-page="landing"] .calculator-results{position:relative;z-index:1;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+    html[data-page="landing"] .calculator-result{background:linear-gradient(160deg,rgba(34,197,94,.12),rgba(59,130,246,.12));border:1px solid rgba(59,130,246,.3);border-radius:14px;padding:16px;display:grid;gap:6px;box-shadow:0 16px 36px rgba(2,6,23,.55)}
+    html[data-page="landing"] .calculator-result .result-label{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(148,163,184,.9);font-weight:600}
+    html[data-page="landing"] .calculator-result .result-value{font-size:20px;font-weight:700;color:#fff}
+    html[data-page="landing"] .calculator-result .result-note{font-size:12px;color:var(--muted)}
+    html[data-page="landing"] .profit-output[data-negative="true"],html[data-page="landing"] .margin-output[data-negative="true"]{color:#fca5a5}
+    html[data-page="landing"] .profit-output[data-negative="false"],html[data-page="landing"] .margin-output[data-negative="false"]{color:#bbf7d0}
+    html[data-page="landing"] .calculator-footnote{position:relative;z-index:1;font-size:12px;color:rgba(148,163,184,.82)}
+    @media (max-width:720px){html[data-page="landing"] .calculator-form{grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}}
     html[data-page="landing"] .value-section{background:linear-gradient(200deg,rgba(7,16,32,.92),rgba(12,23,45,.9));border:1px solid rgba(59,130,246,.24);border-radius:var(--radius);padding:28px;display:grid;gap:22px;margin-top:32px;box-shadow:0 22px 48px rgba(2,6,23,.55);position:relative;overflow:hidden}
     html[data-page="landing"] .value-section::after{content:"";position:absolute;inset:auto -40% -40% auto;width:260px;height:260px;background:radial-gradient(circle,rgba(59,130,246,.18),transparent 60%);filter:blur(30px);opacity:.45}
     html[data-page="landing"] .value-header{display:grid;gap:8px;max-width:760px;position:relative;z-index:1}

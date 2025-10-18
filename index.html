@@ -256,6 +256,62 @@
           <p>Gain médian observé chez les revendeurs exploitant nos scénarios IA multi-marketplaces.</p>
         </div>
       </div>
+      <div class="seller-calculator" id="profitCalculator">
+        <div>
+          <h3>Calculatrice Seller Central</h3>
+          <p>Simulez votre profit net par article en tenant compte des frais Amazon, eBay et des coûts logistiques.</p>
+        </div>
+        <form id="profitCalculatorForm" class="calculator-form" autocomplete="off">
+          <div class="calculator-field">
+            <label for="purchaseCost">Prix d'achat (<span data-calculator-currency>CAD</span>)</label>
+            <input id="purchaseCost" data-field="purchase" type="number" min="0" step="0.01" inputmode="decimal" placeholder="Ex. 18,50" />
+          </div>
+          <div class="calculator-field">
+            <label for="salePrice">Prix de vente (<span data-calculator-currency>CAD</span>)</label>
+            <input id="salePrice" data-field="sale" type="number" min="0" step="0.01" inputmode="decimal" placeholder="Ex. 34,99" />
+          </div>
+          <div class="calculator-field">
+            <label for="shippingCost">Frais d'expédition (<span data-calculator-currency>CAD</span>)</label>
+            <input id="shippingCost" data-field="shipping" type="number" min="0" step="0.01" inputmode="decimal" placeholder="Ex. 5,00" />
+          </div>
+          <div class="calculator-field">
+            <label for="feePercent">Frais marketplace (%)</label>
+            <input id="feePercent" data-field="feePercent" type="number" min="0" max="75" step="0.1" inputmode="decimal" value="15" />
+          </div>
+          <div class="calculator-field">
+            <label for="otherCosts">Frais FBA / autres (<span data-calculator-currency>CAD</span>)</label>
+            <input id="otherCosts" data-field="extras" type="number" min="0" step="0.01" inputmode="decimal" placeholder="Ex. 3,25" />
+          </div>
+          <div class="calculator-actions">
+            <button type="reset">Réinitialiser</button>
+          </div>
+        </form>
+        <div class="calculator-results" aria-live="polite">
+          <div class="calculator-result">
+            <span class="result-label">Profit net estimé</span>
+            <strong class="result-value profit-output" data-profit-amount data-negative="false">0,00&nbsp;$</strong>
+          </div>
+          <div class="calculator-result">
+            <span class="result-label">Marge sur vente</span>
+            <strong class="result-value margin-output" data-profit-margin data-negative="false">0&nbsp;%</strong>
+            <span class="result-note">Basée sur le prix de vente saisi</span>
+          </div>
+          <div class="calculator-result">
+            <span class="result-label">Frais marketplace estimés</span>
+            <strong class="result-value" data-marketplace-fees>0,00&nbsp;$</strong>
+          </div>
+          <div class="calculator-result">
+            <span class="result-label">Coût total</span>
+            <strong class="result-value" data-total-cost>0,00&nbsp;$</strong>
+          </div>
+          <div class="calculator-result">
+            <span class="result-label">Prix de vente seuil</span>
+            <strong class="result-value" data-break-even>0,00&nbsp;$</strong>
+            <span class="result-note">Pour couvrir vos coûts et frais</span>
+          </div>
+        </div>
+        <p class="calculator-footnote">Les calculs sont fournis à titre indicatif. Ajustez les frais selon vos catégories et vos modalités d'expédition.</p>
+      </div>
       <div class="seller-grid">
         <article class="seller-card">
           <div class="seller-icon" aria-hidden="true">🚀</div>
@@ -410,6 +466,140 @@
       });
     }
     const storeAdsContainer = document.getElementById('storeAds');
+    const profitCalculator = document.getElementById('profitCalculator');
+    const profitCalculatorForm = document.getElementById('profitCalculatorForm');
+    const calculatorCurrencyNodes = Array.from(document.querySelectorAll('[data-calculator-currency]'));
+    const profitInputs = profitCalculator ? {
+      purchase: profitCalculator.querySelector('[data-field="purchase"]'),
+      sale: profitCalculator.querySelector('[data-field="sale"]'),
+      shipping: profitCalculator.querySelector('[data-field="shipping"]'),
+      feePercent: profitCalculator.querySelector('[data-field="feePercent"]'),
+      extras: profitCalculator.querySelector('[data-field="extras"]')
+    } : null;
+    const profitOutputs = profitCalculator ? {
+      profit: profitCalculator.querySelector('[data-profit-amount]'),
+      margin: profitCalculator.querySelector('[data-profit-margin]'),
+      fees: profitCalculator.querySelector('[data-marketplace-fees]'),
+      totalCost: profitCalculator.querySelector('[data-total-cost]'),
+      breakEven: profitCalculator.querySelector('[data-break-even]')
+    } : null;
+    let calculatorCurrencyFormatter = new Intl.NumberFormat('fr-CA',{style:'currency',currency:'CAD'});
+    let calculatorPercentFormatter = new Intl.NumberFormat('fr-CA',{maximumFractionDigits:1,minimumFractionDigits:0});
+
+    function parseDecimal(value){
+      if(typeof value === 'number'){
+        return Number.isFinite(value) ? value : 0;
+      }
+      if(typeof value !== 'string') return 0;
+      const normalized = value.replace(/[\s\u00A0]/g,'').replace(',', '.');
+      const parsed = Number.parseFloat(normalized);
+      return Number.isFinite(parsed) ? parsed : 0;
+    }
+
+    function clampNonNegative(value){
+      return value < 0 ? 0 : value;
+    }
+
+    function formatCurrencyValue(value){
+      try{
+        return calculatorCurrencyFormatter.format(value);
+      }catch(_err){
+        return Number.isFinite(value) ? value.toFixed(2) : '0.00';
+      }
+    }
+
+    function formatPercentValue(value){
+      const normalized = Number.isFinite(value) ? Math.abs(value) : 0;
+      try{
+        return calculatorPercentFormatter.format(normalized);
+      }catch(_err){
+        return normalized.toFixed(1);
+      }
+    }
+
+    function updateProfitCalculator(){
+      if(!profitCalculatorForm || !profitInputs || !profitOutputs) return;
+      const purchase = clampNonNegative(parseDecimal(profitInputs.purchase?.value));
+      const sale = clampNonNegative(parseDecimal(profitInputs.sale?.value));
+      const shipping = clampNonNegative(parseDecimal(profitInputs.shipping?.value));
+      const extras = clampNonNegative(parseDecimal(profitInputs.extras?.value));
+      let feePercent = parseDecimal(profitInputs.feePercent?.value);
+      if(!Number.isFinite(feePercent)) feePercent = 0;
+      if(feePercent < 0) feePercent = 0;
+      if(profitInputs.feePercent && typeof profitInputs.feePercent.max === 'string' && profitInputs.feePercent.max){
+        const maxAttr = Number.parseFloat(profitInputs.feePercent.max);
+        if(Number.isFinite(maxAttr) && feePercent > maxAttr){
+          feePercent = maxAttr;
+        }
+      }
+      const marketplaceFees = sale * (feePercent / 100);
+      const totalCost = purchase + shipping + extras + marketplaceFees;
+      const profit = sale - totalCost;
+      const margin = sale > 0 ? (profit / sale) * 100 : 0;
+      const breakEven = feePercent >= 100 ? null : (purchase + shipping + extras) / Math.max(1e-6, (1 - (feePercent / 100)));
+
+      if(profitOutputs.profit){
+        profitOutputs.profit.textContent = formatCurrencyValue(profit);
+        profitOutputs.profit.dataset.negative = profit < 0 ? 'true' : 'false';
+      }
+      if(profitOutputs.margin){
+        const displayMargin = sale > 0 ? margin : 0;
+        const formattedMargin = formatPercentValue(displayMargin);
+        const sign = sale > 0 ? (displayMargin > 0 ? '+' : displayMargin < 0 ? '−' : '') : '';
+        profitOutputs.margin.textContent = sale > 0 ? `${sign}${formattedMargin}%` : '0%';
+        profitOutputs.margin.dataset.negative = displayMargin < 0 ? 'true' : 'false';
+      }
+      if(profitOutputs.fees){
+        profitOutputs.fees.textContent = formatCurrencyValue(marketplaceFees);
+      }
+      if(profitOutputs.totalCost){
+        profitOutputs.totalCost.textContent = formatCurrencyValue(totalCost);
+      }
+      if(profitOutputs.breakEven){
+        if(Number.isFinite(breakEven) && breakEven >= 0){
+          profitOutputs.breakEven.textContent = formatCurrencyValue(breakEven);
+          profitOutputs.breakEven.dataset.invalid = 'false';
+        }else{
+          profitOutputs.breakEven.textContent = '—';
+          profitOutputs.breakEven.dataset.invalid = 'true';
+        }
+      }
+    }
+
+    function updateCalculatorLocale(){
+      if(!profitCalculator) return;
+      const settings = getCurrencySettings(activeCountry);
+      const locale = settings?.locale || BASE_CURRENCY.locale;
+      const code = settings?.code || BASE_CURRENCY.code;
+      try{
+        calculatorCurrencyFormatter = new Intl.NumberFormat(locale,{style:'currency',currency:code});
+      }catch(_err){
+        calculatorCurrencyFormatter = new Intl.NumberFormat(BASE_CURRENCY.locale,{style:'currency',currency:BASE_CURRENCY.code});
+      }
+      try{
+        calculatorPercentFormatter = new Intl.NumberFormat(locale,{maximumFractionDigits:1,minimumFractionDigits:0});
+      }catch(_err){
+        calculatorPercentFormatter = new Intl.NumberFormat(BASE_CURRENCY.locale,{maximumFractionDigits:1,minimumFractionDigits:0});
+      }
+      for(const node of calculatorCurrencyNodes){
+        node.textContent = code;
+      }
+      updateProfitCalculator();
+    }
+
+    if(profitCalculatorForm){
+      profitCalculatorForm.addEventListener('input', () => {
+        updateProfitCalculator();
+      });
+      profitCalculatorForm.addEventListener('reset', () => {
+        const refresh = () => updateProfitCalculator();
+        if(typeof requestAnimationFrame === 'function'){
+          requestAnimationFrame(refresh);
+        }else{
+          setTimeout(refresh, 0);
+        }
+      });
+    }
     function parseJson(value){
       if(!value) return null;
       try{
@@ -1314,6 +1504,7 @@
         countryLabel.textContent = `Pays couvert : ${config.titleSuffix}${currencyPart}`;
       }
       updateExchangeIndicator();
+      updateCalculatorLocale();
     }
 
     function updateCountryButtons(){
