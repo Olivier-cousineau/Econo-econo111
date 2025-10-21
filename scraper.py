@@ -147,13 +147,95 @@ def fetch_html_with_playwright(url: str) -> str:
             browser = playwright.chromium.launch(headless=True)
             context = browser.new_context(user_agent=USER_AGENT)
             page = context.new_page()
-            page.goto(url, wait_until="domcontentloaded", timeout=PLAYWRIGHT_TIMEOUT)
+            page.goto(url, wait_until="networkidle", timeout=PLAYWRIGHT_TIMEOUT)
             try:
                 page.wait_for_load_state("networkidle", timeout=PLAYWRIGHT_TIMEOUT)
             except PlaywrightTimeoutError:
                 logging.debug("Network idle state timeout for %s", url)
+
             try:
-                page.wait_for_selector("div.product-tile", timeout=PLAYWRIGHT_TIMEOUT)
+                cookie_btn = page.locator(
+                    "button:has-text('Accepter'), button:has-text('Accept')"
+                )
+                if cookie_btn.count() > 0:
+                    cookie_btn.first.click(timeout=3000)
+            except Exception:
+                logging.debug("Unable to dismiss cookie banner", exc_info=True)
+
+            product_tile_selector = (
+                "div.plp-product-tile, div.product-tile, li.product-grid__item"
+            )
+            selector_js = json.dumps(product_tile_selector)
+
+            def tiles_count() -> int:
+                return page.evaluate(
+                    f"() => document.querySelectorAll({selector_js}).length"
+                )
+
+            max_clicks = 400
+            last_count = tiles_count()
+            logging.debug("Initial product tile count: %s", last_count)
+
+            for i in range(max_clicks):
+                show_more_btn = page.locator(
+                    "button:has-text('SHOW MORE'), button:has-text('Show More'), "
+                    "button.load-more, [role='button']:has-text('Show More')"
+                )
+
+                try:
+                    has_button = show_more_btn.count() > 0 and show_more_btn.first.is_enabled()
+                except Exception:
+                    logging.debug("Error while checking 'Show More' button state", exc_info=True)
+                    has_button = False
+
+                if not has_button:
+                    logging.debug("No additional 'Show More' button available. Stopping pagination.")
+                    break
+
+                try:
+                    show_more_btn.first.scroll_into_view_if_needed()
+                    show_more_btn.first.click()
+                except Exception:
+                    logging.debug("Unable to click 'Show More' button", exc_info=True)
+                    break
+
+                try:
+                    page.wait_for_function(
+                        f"""(prev) => {{
+                            const sel = {selector_js};
+                            return document.querySelectorAll(sel).length > prev;
+                        }}""",
+                        arg=last_count,
+                        timeout=15000,
+                    )
+                except Exception:
+                    logging.debug(
+                        "Timed out waiting for new tiles after click %s. Waiting for network idle.",
+                        i + 1,
+                        exc_info=True,
+                    )
+                    try:
+                        page.wait_for_load_state("networkidle", timeout=15000)
+                    except PlaywrightTimeoutError:
+                        logging.debug(
+                            "Network idle wait also timed out after click %s.",
+                            i + 1,
+                        )
+
+                new_count = tiles_count()
+                logging.debug("Click %s produced %s product tiles", i + 1, new_count)
+
+                if new_count <= last_count:
+                    logging.debug(
+                        "Product tile count did not increase after click %s. Stopping pagination.",
+                        i + 1,
+                    )
+                    break
+
+                last_count = new_count
+
+            try:
+                page.wait_for_selector(product_tile_selector, timeout=PLAYWRIGHT_TIMEOUT)
             except PlaywrightTimeoutError:
                 logging.warning("Timed out waiting for product tiles on %s", url)
             content = page.content()
