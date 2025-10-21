@@ -172,7 +172,7 @@ def fetch_html_with_playwright(url: str) -> str:
                     f"() => document.querySelectorAll({selector_js}).length"
                 )
 
-            max_clicks = 400
+            max_clicks = 500
             last_count = tiles_count()
             logging.debug("Initial product tile count: %s", last_count)
 
@@ -195,36 +195,65 @@ def fetch_html_with_playwright(url: str) -> str:
                 'a:has-text("Voir plus")',
             ]
 
+            def locate_load_more():
+                candidates = [
+                    page.locator(", ".join(load_more_selectors)),
+                    page.locator("button, a, [role='button']").filter(
+                        has_text=re.compile(r"\\b(show|load|charger|voir)\\b", re.IGNORECASE)
+                    ),
+                ]
+                for locator in candidates:
+                    try:
+                        if locator.count() > 0:
+                            return locator.first
+                    except Exception:
+                        logging.debug("Error while locating 'Show More' button", exc_info=True)
+                return None
+
             for i in range(max_clicks):
-                show_more_btn = page.locator(
-                    ", ".join(load_more_selectors)
-                )
-
                 try:
-                    has_button = show_more_btn.count() > 0 and show_more_btn.first.is_enabled()
+                    page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
                 except Exception:
-                    logging.debug("Error while checking 'Show More' button state", exc_info=True)
-                    has_button = False
+                    logging.debug("Failed to scroll to page bottom", exc_info=True)
+                page.wait_for_timeout(500)
 
-                if not has_button:
-                    logging.debug("No additional 'Show More' button available. Stopping pagination.")
+                current_count = tiles_count()
+                if current_count > last_count:
+                    logging.debug(
+                        "Scroll iteration %s loaded additional tiles (%s)",
+                        i + 1,
+                        current_count,
+                    )
+                    last_count = current_count
+                    continue
+
+                load_more_btn = locate_load_more()
+                if load_more_btn is None:
+                    logging.debug(
+                        "No additional 'Show More' button available after %s iterations. Stopping pagination.",
+                        i + 1,
+                    )
                     break
 
                 try:
-                    show_more_btn.first.scroll_into_view_if_needed()
-                    show_more_btn.first.click()
+                    load_more_btn.scroll_into_view_if_needed()
+                except Exception:
+                    logging.debug("Unable to scroll 'Show More' button into view", exc_info=True)
+
+                try:
+                    load_more_btn.click()
                 except Exception:
                     logging.debug("Unable to click 'Show More' button", exc_info=True)
                     break
 
                 try:
                     page.wait_for_function(
-                        f"""(prev) => {{
-                            const sel = {selector_js};
-                            return document.querySelectorAll(sel).length > prev;
+                        f"""(prev, selector) => {{
+                            const tiles = document.querySelectorAll(selector);
+                            return tiles.length > prev;
                         }}""",
-                        arg=last_count,
-                        timeout=15000,
+                        arg=(last_count, product_tile_selector),
+                        timeout=20000,
                     )
                 except Exception:
                     logging.debug(
@@ -251,11 +280,13 @@ def fetch_html_with_playwright(url: str) -> str:
                     break
 
                 last_count = new_count
+                page.wait_for_timeout(250)
 
             try:
                 page.wait_for_selector(product_tile_selector, timeout=PLAYWRIGHT_TIMEOUT)
             except PlaywrightTimeoutError:
                 logging.warning("Timed out waiting for product tiles on %s", url)
+            logging.info("Playwright collected %s product tiles", last_count)
             content = page.content()
     except PlaywrightTimeoutError as exc:
         logging.error("Playwright timed out fetching %s: %s", url, exc)
@@ -338,26 +369,42 @@ def parse_products(html):
     for tile in tiles:
         name_tag = tile.select_one("a.pdp-link, a.name-link, a.product-name")
         price_tag = tile.select_one(".price-sales, .product-sales-price, .price__sale")
-        img_tag = tile.select_one("img, img.tile-image, img.product-image")
 
         name = name_tag.get_text(strip=True) if name_tag else None
         price = price_tag.get_text(strip=True) if price_tag else None
         link = name_tag.get("href") if name_tag else None
-        image = img_tag.get("src") if img_tag else None
+        image = extract_image_url(tile)
 
-        if link and link.startswith("/"):
-            link = "https://www.sportinglife.ca" + link
+        if link:
+            link = urljoin(SPORTING_LIFE_URL, link)
 
         if name:
-            products.append({
-                "nom": name,
-                "prix": price,
-                "image": image,
-                "lien": link
-            })
+            products.append(
+                {
+                    "nom": name,
+                    "prix": price,
+                    "image": image,
+                    "lien": link,
+                }
+            )
 
     print(f"DEBUG: {len(products)} products extracted")
     return products
+
+
+def deduplicate_products(items: Iterable[dict]) -> List[dict]:
+    seen: set[str] = set()
+    deduped: List[dict] = []
+    for item in items:
+        link = item.get("lien") or ""
+        key = link or item.get("nom") or ""
+        if not key:
+            continue
+        if key in seen:
+            continue
+        seen.add(key)
+        deduped.append(item)
+    return deduped
 
 
 def write_json(items: Iterable[dict], path: Path) -> None:
@@ -391,6 +438,7 @@ def main() -> None:
     configure_logging()
     html = fetch_html(SPORTING_LIFE_URL)
     products = parse_products(html)
+    products = deduplicate_products(products)
     if not products:
         with open("debug_sportinglife.html", "w", encoding="utf-8") as f:
             f.write(html)
