@@ -3,10 +3,42 @@ name: Manual Sporting Life Scraper
 on:
   workflow_dispatch:
     inputs:
+      url:
+        description: "URL de la page liquidation à scruter"
+        type: string
+        default: "https://www.sportinglife.ca/fr-CA/liquidation/"
+      max_retries:
+        description: "Nombre maximal de tentatives Playwright"
+        type: number
+        default: 3
+      retry_delay:
+        description: "Délai de base entre les tentatives (en secondes)"
+        type: number
+        default: 5
+      page_timeout:
+        description: "Timeout de chargement de page en millisecondes"
+        type: number
+        default: 60000
+      wait_timeout:
+        description: "Timeout d'attente des éléments en millisecondes"
+        type: number
+        default: 30000
+      headless:
+        description: "Exécuter Playwright en mode headless"
+        type: boolean
+        default: true
+      log_level:
+        description: "Niveau de log du scraper"
+        type: string
+        default: "INFO"
       skip_upload:
         description: "Ne pas envoyer les résultats vers l'API EconoDeal"
         type: boolean
         default: true
+      api_url:
+        description: "URL de l'API EconoDeal pour l'import des liquidations"
+        type: string
+        default: "https://www.econodeal.ca/api/import_liquidations"
       output_path:
         description: "Chemin de sortie pour le fichier JSON (relatif au workspace)"
         type: string
@@ -48,14 +80,25 @@ jobs:
           set -euo pipefail
           mkdir -p "$(dirname "${{ inputs.output_path }}")"
           mkdir -p "$(dirname "${{ inputs.log_path }}")"
-          EXTRA_ARGS=""
+          EXTRA_ARGS=(
+            --url "${{ inputs.url }}"
+            --max-retries "${{ inputs.max_retries }}"
+            --retry-delay "${{ inputs.retry_delay }}"
+            --page-timeout "${{ inputs.page_timeout }}"
+            --wait-timeout "${{ inputs.wait_timeout }}"
+            --log-level "${{ inputs.log_level }}"
+            --api-url "${{ inputs.api_url }}"
+          )
+          if [ "${{ inputs.headless }}" != "true" ]; then
+            EXTRA_ARGS+=(--no-headless)
+          fi
           if [ "${{ inputs.skip_upload }}" = "true" ]; then
-            EXTRA_ARGS="--skip-upload"
+            EXTRA_ARGS+=(--skip-upload)
           fi
           python admin/sportinglife_liquidations.py \
             --output "${{ inputs.output_path }}" \
             --log-file "${{ inputs.log_path }}" \
-            $EXTRA_ARGS
+            "${EXTRA_ARGS[@]}"
 
       - name: Upload scraper artifacts
         uses: actions/upload-artifact@v4
