@@ -93,7 +93,9 @@ Une intégration Stripe Checkout est disponible sur les pages `pricing*.html` po
 abonnements.
 
 1. Dupliquez le fichier `.env.example` en `.env` et remplacez les clés par vos identifiants Stripe
-   (utilisez les clés test pour vos essais locaux).
+   (utilisez les clés test pour vos essais locaux). Le serveur lit la variable
+   `STRIPE_PUBLISHABLE_KEY`, mais acceptera aussi `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY` si votre
+   frontend utilise déjà cette convention.
 2. Installez les dépendances Python supplémentaires :
    ```bash
    pip install -r requirements.txt

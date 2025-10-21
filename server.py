@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+from typing import Optional
 
 from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
@@ -50,12 +51,27 @@ def serve_asset(asset: str) -> object:
     return send_from_directory(str(BASE_DIR), asset)
 
 
+def _get_publishable_key() -> Optional[str]:
+    """Return the publishable key used by the client side."""
+
+    for env_var in ("STRIPE_PUBLISHABLE_KEY", "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY"):
+        value = os.environ.get(env_var)
+        if value:
+            return value
+    return None
+
+
 @app.route("/config", methods=["GET"])
 def get_publishable_key() -> object:
-    publishable_key = os.environ.get("STRIPE_PUBLISHABLE_KEY")
+    publishable_key = _get_publishable_key()
     if not publishable_key:
         return (
-            jsonify({"error": "Missing STRIPE_PUBLISHABLE_KEY environment variable."}),
+            jsonify({
+                "error": (
+                    "Missing STRIPE_PUBLISHABLE_KEY or NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY "
+                    "environment variable."
+                )
+            }),
             500,
         )
     return jsonify({"publishableKey": publishable_key})
