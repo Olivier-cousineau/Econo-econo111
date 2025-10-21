@@ -10,7 +10,7 @@ export default function handler(req, res) {
   if (!publishableKey) {
     return sendJson(res, 500, {
       error:
-        'Missing STRIPE_PUBLISHABLE_KEY or NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY environment variable.',
+        'Missing STRIPE_PUBLISHABLE_KEY, NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY or STRIPE_PUBLIC_KEY environment variable.',
     });
   }
 
