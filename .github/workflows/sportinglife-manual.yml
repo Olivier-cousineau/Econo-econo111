@@ -1,0 +1,67 @@
+name: Manual Sporting Life Scraper
+
+on:
+  workflow_dispatch:
+    inputs:
+      skip_upload:
+        description: "Ne pas envoyer les résultats vers l'API EconoDeal"
+        type: boolean
+        default: true
+      output_path:
+        description: "Chemin de sortie pour le fichier JSON (relatif au workspace)"
+        type: string
+        default: "output/liquidations_sportinglife.json"
+      log_path:
+        description: "Chemin du fichier de log (relatif au workspace)"
+        type: string
+        default: "output/sportinglife_scraper.log"
+
+permissions:
+  contents: read
+
+jobs:
+  run-scraper:
+    name: Exécuter le scraper Sporting Life
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Install Playwright browsers
+        run: python -m playwright install chromium
+
+      - name: Run Sporting Life scraper
+        env:
+          SPORTINGLIFE_API_TOKEN: ${{ secrets.SPORTINGLIFE_API_TOKEN }}
+        run: |
+          set -euo pipefail
+          mkdir -p "$(dirname "${{ inputs.output_path }}")"
+          mkdir -p "$(dirname "${{ inputs.log_path }}")"
+          EXTRA_ARGS=""
+          if [ "${{ inputs.skip_upload }}" = "true" ]; then
+            EXTRA_ARGS="--skip-upload"
+          fi
+          python admin/sportinglife_liquidations.py \
+            --output "${{ inputs.output_path }}" \
+            --log-file "${{ inputs.log_path }}" \
+            $EXTRA_ARGS
+
+      - name: Upload scraper artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: sportinglife-scraper-output
+          path: |
+            ${{ inputs.output_path }}
+            ${{ inputs.log_path }}
+          if-no-files-found: error
