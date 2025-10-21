@@ -1,0 +1,32 @@
+name: Scraper Automatique SportingLife
+
+on:
+  schedule:
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Installer les dépendances
+        run: pip install -r requirements.txt
+
+      - name: Lancer le scraper
+        env:
+          ECONODEAL_API_URL: ${{ secrets.ECONODEAL_API_URL }}
+          ECONODEAL_API_TOKEN: ${{ secrets.ECONODEAL_API_TOKEN }}
+        run: python scraper.py
+
+      - name: Publier les résultats
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update sporting life data"
+          file_pattern: data/sporting-life/liquidation.json
