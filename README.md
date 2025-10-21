@@ -30,115 +30,15 @@ Site statique bilingue (FR/EN) avec filtres Magasin/Ville et barre de % de rabai
 - Dans `index.html`, remplace `render()` pour faire des `fetch('/data/ton_fichier.json')`,
   merger les tableaux, appliquer les filtres et générer les cartes.
 
-## Automatiser Amazon Canada (PA API)
-Un utilitaire est fourni pour rapatrier quotidiennement des produits Amazon Canada
-et alimenter `/data`.
+## Automatisations supprimées
 
-1. Installe la dépendance : `pip install requests`.
-2. Exporte tes identifiants Amazon Associates :
-   ```bash
-   export PAAPI_CLIENT_ID="amzn1.application-oa2-client..."
-   export PAAPI_CLIENT_SECRET="<ta_clé_secrète>"
-   export PAAPI_ASSOCIATE_TAG="ton-tag-20"
-   ```
-3. Ajuste la liste de mots-clés dans `admin/amazon_keywords.json` (ou passe `--keywords`).
-4. Lance le script :
-   ```bash
-   python admin/amazon_paapi_daily.py --limit 8
-   ```
-   - Le JSON généré est sauvegardé dans `data/amazon_ca_daily.json`.
-   - En cas d'erreur API, des aubaines fictives cohérentes seront générées pour garder
-     la page active.
-5. Pour une mise à jour automatique, planifie la commande via `cron`, GitHub Actions,
-   ou un autre ordonnanceur quotidien.
-
-> ℹ️ Le script `sandbox_deals.py` qui génère des réponses fictives à partir du
-> bac à sable Amazon dépend de la bibliothèque optionnelle `paapi5-python-sdk`.
-> Cette dernière n'est pas compatible avec Python 3.12 (la version utilisée par
-> Vercel). Exécute ce script uniquement dans un environnement Python 3.11 (ou
-> antérieur) où tu peux installer manuellement `pip install paapi5-python-sdk`.
-
-## Scraper Sporting Life (liquidations)
-
-Un scraper résilient est disponible dans `admin/sportinglife_liquidations.py` pour
-collecter automatiquement les aubaines de la page liquidation de Sporting Life et
-les pousser vers l'API EconoDeal.
-
-### Installation
-
-1. Installe les dépendances Python communes :
-   ```bash
-   pip install -r requirements.txt
-   ```
-2. Installe les moteurs Playwright (une seule fois) :
-   ```bash
-   playwright install chromium
-   ```
-
-### Exécution manuelle
-
-1. Exporte ton token API (Bearer) :
-   ```bash
-   export SPORTINGLIFE_API_TOKEN="<ton_token_api>"
-   ```
-2. Lance le script :
-   ```bash
-   python admin/sportinglife_liquidations.py \
-     --output /home/econodeal/data/liquidations_sportinglife.json \
-     --log-file /home/econodeal/logs/sportinglife_scraper.log
-   ```
-   - Le fichier JSON n'est remplacé que lorsque la collecte aboutit.
-   - Le journal détaillé est conservé dans `logs/` (et sur STDOUT).
-   - Utilise `--skip-upload` pour n'écrire que le fichier local.
-
-Variables d'environnement disponibles :
-
-- `SPORTINGLIFE_LIQUIDATION_URL` : URL de la page à surveiller.
-- `SPORTINGLIFE_OUTPUT_FILE` : chemin par défaut du fichier JSON.
-- `SPORTINGLIFE_API_URL` : endpoint d'import EconoDeal.
-- `SPORTINGLIFE_API_TOKEN` : jeton Bearer pour l'import.
-- `SPORTINGLIFE_LOG_FILE`, `SPORTINGLIFE_MAX_RETRIES`, etc., pour ajuster les
-  paramètres de temps et de log.
-
-### Planification quotidienne (cron)
-
-Pour mettre à jour les liquidations tous les jours à 4 h (heure du Pacifique) :
-
-```bash
-sudo timedatectl set-timezone America/Vancouver
-crontab -e
-```
-
-Ajoute la ligne suivante (adapter les chemins si besoin) :
-
-```bash
-0 4 * * * /usr/bin/python3 /home/econodeal/admin/sportinglife_liquidations.py \
-  --output /home/econodeal/data/liquidations_sportinglife.json \
-  --log-file /home/econodeal/logs/sportinglife_scraper.log >> /home/econodeal/logs/cron.log 2>&1
-```
-
-Le script journalise automatiquement les tentatives, change d'agent utilisateur à
-chaque exécution et réessaie en cas d'échec réseau ou de chargement dynamique.
-
-### Via GitHub Actions (Daily Amazon Deals)
-
-Le dépôt inclut déjà un workflow (`.github/workflows/amazon-deals.yml`) qui exécute
-le script tous les jours à 09:30 UTC et pousse `data/amazon_ca_daily.json` avec le
-message `chore: update Amazon deals feed`.
-
-1. Dans **Settings → Secrets and variables → Actions**, ajoute les secrets
-   `PAAPI_CLIENT_ID`, `PAAPI_CLIENT_SECRET` et `PAAPI_ASSOCIATE_TAG`.
-2. Vérifie l'horaire ou adapte la clé `cron` si nécessaire.
-3. Pour lancer une mise à jour manuelle, ouvre l'onglet **Actions**, choisis
-   **Daily Amazon Deals** puis clique sur **Run workflow** (option disponible via
-   l'événement `workflow_dispatch`).
-4. Consulte les journaux du job `fetch-deals` pour confirmer si l'API a répondu ou
-   si des données fictives ont été générées.
-   - Le workflow réussit lorsqu'il affiche une succession d'étapes similaires à :
-     `Set up job`, `Check out repository`, `Set up Python`, `Install dependencies`,
-     `Generate Amazon deals dataset`, `Commit updated dataset` et `Complete job`.
-     Si l'une de ces étapes échoue ou n'apparaît pas, inspecte ses logs détaillés
-     pour diagnostiquer le problème (ex. identifiants manquants ou erreurs réseau).
+Les scripts Python et workflows GitHub Actions qui s'occupaient de récupérer
+automatiquement des aubaines Amazon ou Sporting Life ont été retirés. Toutes les
+collectes de données devront être reconstruites manuellement à partir de zéro.
+Les sections historiques du README ont été effacées afin d'éviter toute
+confusion. Si tu dois remettre en place une automatisation, crée un nouveau
+script dans `admin/` et ajoute un workflow dans `.github/workflows/` selon tes
+besoins.
 
 ## Aperçus HTML rapides
 - Les jeux de données organisés génèrent un aperçu statique dans `previews/<magasin>/<ville>.html`.
