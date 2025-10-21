@@ -176,15 +176,32 @@ def load_all_products(page, max_clicks=500):
     for i in range(max_clicks):
         btn = page.locator(
             "button:has-text('SHOW MORE'), button:has-text('Show More'), "
-            "button.load-more, [role='button']:has-text('Show More')"
+            "button:has-text('VOIR PLUS'), button:has-text('Voir plus'), "
+            "button.load-more, [role='button']:has-text('Show More'), "
+            "[role='button']:has-text('Voir plus')"
         )
-        if btn.count() == 0 or (btn.first.is_enabled() is False) or (btn.first.is_visible() is False):
+        btn_count = btn.count()
+        if btn_count == 0:
+            print("DEBUG: no more button or disabled -> stop.")
+            break
+
+        candidate = None
+        for index in range(btn_count):
+            current = btn.nth(index)
+            try:
+                if current.is_visible() and current.is_enabled():
+                    candidate = current
+                    break
+            except Exception:
+                continue
+
+        if candidate is None:
             print("DEBUG: no more button or disabled -> stop.")
             break
 
         # amener le bouton en vue et cliquer
-        btn.first.scroll_into_view_if_needed()
-        btn.first.click()
+        candidate.scroll_into_view_if_needed()
+        candidate.click()
         try:
             page.wait_for_timeout(500)
         except Exception:
