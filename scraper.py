@@ -228,50 +228,35 @@ def extract_image_url(product) -> Optional[str]:
     return None
 
 
-def parse_products(html: str) -> List[dict]:
-    """Parse Sporting Life product tiles from *html*."""
+def parse_products(html):
     soup = BeautifulSoup(html, "html.parser")
+    tiles = soup.select("div.product-tile, div.plp-product-tile, li.product-grid__item")
+
+    print(f"DEBUG: {len(tiles)} raw tiles found")  # pour diagnostic
     products = []
-    tiles = soup.select("div.product-tile")
-    logging.info("Found %s product tiles", len(tiles))
-    timestamp = _dt.datetime.now(tz=_dt.timezone.utc).isoformat()
 
     for tile in tiles:
-        link = tile.select_one("a.link")
-        title = extract_text(link)
-        if not title:
-            logging.debug("Skipping product without title: %s", tile)
-            continue
+        name_tag = tile.select_one("a.pdp-link, a.name-link, a.product-name")
+        price_tag = tile.select_one(".price-sales, .product-sales-price, .price__sale")
+        img_tag = tile.select_one("img, img.tile-image, img.product-image")
 
-        href = link.get("href") if link else None
-        product_url = urljoin(SPORTING_LIFE_URL, href) if href else None
+        name = name_tag.get_text(strip=True) if name_tag else None
+        price = price_tag.get_text(strip=True) if price_tag else None
+        link = name_tag.get("href") if name_tag else None
+        image = img_tag.get("src") if img_tag else None
 
-        brand = extract_text(tile.select_one("div.product-tile__brand")) or extract_text(
-            tile.select_one("div.tile-body .brand")
-        )
-        sale_price = parse_price(extract_text(tile.select_one("span.price-sales")))
-        original_price = parse_price(extract_text(tile.select_one("span.price-standard")))
-        if original_price is None:
-            original_price = sale_price
+        if link and link.startswith("/"):
+            link = "https://www.sportinglife.ca" + link
 
-        image_url = extract_image_url(tile)
+        if name:
+            products.append({
+                "nom": name,
+                "prix": price,
+                "image": image,
+                "lien": link
+            })
 
-        product = {
-            "title": title,
-            "brand": brand,
-            "url": product_url,
-            "image": image_url,
-            "price": original_price,
-            "salePrice": sale_price,
-            "store": STORE_NAME,
-            "city": DEFAULT_CITY,
-            "scrapedAt": timestamp,
-        }
-
-        # Remove keys that ended up as ``None`` to keep the JSON light.
-        product = {key: value for key, value in product.items() if value is not None}
-        products.append(product)
-
+    print(f"DEBUG: {len(products)} products extracted")
     return products
 
 
@@ -307,6 +292,11 @@ def main() -> None:
     html = fetch_html(SPORTING_LIFE_URL)
     products = parse_products(html)
     if not products:
+        with open("debug_sportinglife.html", "w", encoding="utf-8") as f:
+            f.write(html)
+        print(
+            "⚠️ Aucun produit trouvé. Le code HTML a été sauvegardé dans debug_sportinglife.html pour inspection."
+        )
         logging.warning("No products were found on %s", SPORTING_LIFE_URL)
     write_json(products, OUTPUT_PATH)
     post_to_api(products)
