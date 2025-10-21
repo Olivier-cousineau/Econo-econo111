@@ -16,6 +16,8 @@ import json
 import logging
 import os
 import re
+import subprocess
+import sys
 from pathlib import Path
 from typing import Iterable, List, Optional
 from urllib.parse import urljoin
@@ -56,6 +58,66 @@ USE_PLAYWRIGHT = os.getenv("SPORTING_LIFE_USE_PLAYWRIGHT", "1").lower() not in {
     "no",
 }
 
+_PLAYWRIGHT_BROWSERS_READY = False
+
+
+def ensure_playwright_browsers_installed() -> None:
+    """Ensure Playwright browsers are available locally.
+
+    The command ``python -m playwright install --with-deps`` installs both the
+    browser binaries and the system dependencies required on Linux runners.
+    When run outside CI this flag may fail (for example without ``sudo``
+    privileges), so we fall back to ``python -m playwright install`` which only
+    downloads the browser binaries. Both commands are idempotent and cheap to
+    re-run, so this helper keeps a module-level flag to avoid redundant calls in
+    a single process.
+    """
+
+    global _PLAYWRIGHT_BROWSERS_READY
+
+    if _PLAYWRIGHT_BROWSERS_READY:
+        return
+
+    if sync_playwright is None:  # pragma: no cover - optional dependency path
+        raise RuntimeError("Playwright is not installed")
+
+    commands = [
+        [sys.executable, "-m", "playwright", "install", "--with-deps"],
+        [sys.executable, "-m", "playwright", "install"],
+    ]
+
+    last_error: Optional[subprocess.CalledProcessError] = None
+    for command in commands:
+        try:
+            logging.info("Ensuring Playwright browsers are installed: %s", " ".join(command))
+            result = subprocess.run(
+                command,
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+            if result.stdout:
+                logging.debug(result.stdout)
+            if result.stderr:
+                logging.debug(result.stderr)
+            _PLAYWRIGHT_BROWSERS_READY = True
+            return
+        except FileNotFoundError as exc:  # pragma: no cover - dependency path
+            raise RuntimeError(
+                "Unable to find the Playwright executable. Did you install the package?"
+            ) from exc
+        except subprocess.CalledProcessError as exc:
+            last_error = exc
+            logging.warning(
+                "Playwright installation command failed (%s).", " ".join(command)
+            )
+            if exc.stdout:
+                logging.debug(exc.stdout)
+            if exc.stderr:
+                logging.debug(exc.stderr)
+
+    raise RuntimeError("Playwright browsers could not be installed") from last_error
+
 API_URL = os.getenv("ECONODEAL_API_URL")
 API_TOKEN = os.getenv("ECONODEAL_API_TOKEN")
 
@@ -73,6 +135,8 @@ def fetch_html_with_playwright(url: str) -> str:
 
     if sync_playwright is None:  # pragma: no cover - optional dependency path
         raise RuntimeError("Playwright is not installed")
+
+    ensure_playwright_browsers_installed()
 
     logging.info("Fetching Sporting Life clearance page via Playwright: %s", url)
     browser = None
