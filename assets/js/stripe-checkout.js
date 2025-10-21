@@ -73,6 +73,39 @@
       messageEl.removeAttribute('hidden');
     }
 
+    async function fetchJsonWithFallback(endpoints, options, defaultErrorMessage) {
+      const urls = Array.isArray(endpoints) ? endpoints : [endpoints];
+      let lastError;
+
+      for (const url of urls) {
+        try {
+          const response = await fetch(url, options);
+          if (!response.ok) {
+            if (response.status === 404) {
+              lastError = new Error(defaultErrorMessage || 'Not found');
+              lastError.status = 404;
+              continue;
+            }
+
+            const errorPayload = await response.json().catch(() => ({}));
+            const message =
+              errorPayload && errorPayload.error
+                ? errorPayload.error
+                : defaultErrorMessage || 'Request failed';
+            const error = new Error(message);
+            error.status = response.status;
+            throw error;
+          }
+
+          return response;
+        } catch (error) {
+          lastError = error instanceof Error ? error : new Error(defaultErrorMessage || 'Request failed');
+        }
+      }
+
+      throw lastError || new Error(defaultErrorMessage || 'Request failed');
+    }
+
     async function ensureStripe() {
       if (stripe) {
         return stripe;
@@ -85,10 +118,11 @@
       initPromise = (async () => {
         setMessage(strings.initializing, 'info');
         try {
-          const response = await fetch('/config', { headers: { 'Accept': 'application/json' } });
-          if (!response.ok) {
-            throw new Error(strings.configError);
-          }
+          const response = await fetchJsonWithFallback(
+            ['/config', '/api/config'],
+            { headers: { Accept: 'application/json' } },
+            strings.configError
+          );
           const data = await response.json();
           if (!data || !data.publishableKey) {
             throw new Error(strings.configError);
@@ -106,20 +140,18 @@
     }
 
     async function createCheckoutSession(payload) {
-      const response = await fetch('/create-checkout-session', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
+      const response = await fetchJsonWithFallback(
+        ['/create-checkout-session', '/api/create-checkout-session'],
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json'
+          },
+          body: JSON.stringify(payload)
         },
-        body: JSON.stringify(payload)
-      });
-
-      if (!response.ok) {
-        const errorPayload = await response.json().catch(() => ({}));
-        const message = errorPayload && errorPayload.error ? errorPayload.error : strings.sessionError;
-        throw new Error(message);
-      }
+        strings.sessionError
+      );
 
       return response.json();
     }
