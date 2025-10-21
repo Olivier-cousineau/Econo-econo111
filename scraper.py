@@ -23,6 +23,13 @@ from urllib.parse import urljoin
 import requests
 from bs4 import BeautifulSoup
 
+try:
+    from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
+    from playwright.sync_api import sync_playwright
+except ImportError:  # pragma: no cover - dependency is optional at runtime
+    PlaywrightTimeoutError = Exception  # type: ignore[assignment]
+    sync_playwright = None  # type: ignore[assignment]
+
 SPORTING_LIFE_URL = os.getenv(
     "SPORTING_LIFE_URL", "https://www.sportinglife.ca/fr-CA/liquidation/"
 )
@@ -40,17 +47,78 @@ USER_AGENT = os.getenv(
     ),
 )
 REQUEST_TIMEOUT = int(os.getenv("SPORTING_LIFE_TIMEOUT", "30"))
+PLAYWRIGHT_TIMEOUT = int(
+    os.getenv("SPORTING_LIFE_PLAYWRIGHT_TIMEOUT", str(REQUEST_TIMEOUT * 1000))
+)
+USE_PLAYWRIGHT = os.getenv("SPORTING_LIFE_USE_PLAYWRIGHT", "1").lower() not in {
+    "0",
+    "false",
+    "no",
+}
 
 API_URL = os.getenv("ECONODEAL_API_URL")
 API_TOKEN = os.getenv("ECONODEAL_API_TOKEN")
 
 
-def fetch_html(url: str) -> str:
-    """Return the HTML payload for *url*, raising an exception on failure."""
-    logging.info("Fetching Sporting Life clearance page: %s", url)
+def fetch_html_with_requests(url: str) -> str:
+    """Return the HTML payload for *url* using a direct HTTP request."""
+    logging.info("Fetching Sporting Life clearance page via requests: %s", url)
     response = requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=REQUEST_TIMEOUT)
     response.raise_for_status()
     return response.text
+
+
+def fetch_html_with_playwright(url: str) -> str:
+    """Return the rendered HTML payload for *url* using Playwright."""
+
+    if sync_playwright is None:  # pragma: no cover - optional dependency path
+        raise RuntimeError("Playwright is not installed")
+
+    logging.info("Fetching Sporting Life clearance page via Playwright: %s", url)
+    browser = None
+    context = None
+    content: Optional[str] = None
+    try:
+        with sync_playwright() as playwright:
+            browser = playwright.chromium.launch(headless=True)
+            context = browser.new_context(user_agent=USER_AGENT)
+            page = context.new_page()
+            page.goto(url, wait_until="domcontentloaded", timeout=PLAYWRIGHT_TIMEOUT)
+            try:
+                page.wait_for_load_state("networkidle", timeout=PLAYWRIGHT_TIMEOUT)
+            except PlaywrightTimeoutError:
+                logging.debug("Network idle state timeout for %s", url)
+            try:
+                page.wait_for_selector("div.product-tile", timeout=PLAYWRIGHT_TIMEOUT)
+            except PlaywrightTimeoutError:
+                logging.warning("Timed out waiting for product tiles on %s", url)
+            content = page.content()
+    except PlaywrightTimeoutError as exc:
+        logging.error("Playwright timed out fetching %s: %s", url, exc)
+        raise
+    finally:
+        try:
+            context.close()
+        except Exception:  # pragma: no cover - best effort cleanup
+            pass
+        try:
+            browser.close()
+        except Exception:  # pragma: no cover - best effort cleanup
+            pass
+    if content is None:
+        raise RuntimeError("Playwright did not return any page content")
+    return content
+
+
+def fetch_html(url: str) -> str:
+    """Return the HTML payload for *url*, attempting to use Playwright if available."""
+
+    if USE_PLAYWRIGHT:
+        try:
+            return fetch_html_with_playwright(url)
+        except Exception:
+            logging.exception("Playwright fetch failed, falling back to requests")
+    return fetch_html_with_requests(url)
 
 
 def parse_price(text: Optional[str]) -> Optional[float]:

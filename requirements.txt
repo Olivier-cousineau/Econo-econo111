@@ -1,5 +1,6 @@
 beautifulsoup4>=4.12.0
 Flask
 flask-cors
+playwright>=1.41.0
 requests>=2.31.0
 stripe
