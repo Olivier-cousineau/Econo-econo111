@@ -8,6 +8,53 @@ import stripe
 
 BASE_DIR = Path(__file__).resolve().parent
 
+
+def _parse_env_value(raw_value: str) -> str:
+    value = raw_value.strip()
+    if not value:
+        return ""
+
+    if (value.startswith("\"") and value.endswith("\"")) or (
+        value.startswith("'") and value.endswith("'")
+    ):
+        return value[1:-1]
+
+    if "#" in value:
+        hash_index = value.index("#")
+        if hash_index == 0 or value[hash_index - 1].isspace():
+            stripped = value[:hash_index].strip()
+            if stripped:
+                return stripped
+
+    return value
+
+
+def _load_env_files() -> None:
+    """Populate os.environ from local .env files when available."""
+
+    for filename in (".env.local", ".env"):
+        path = BASE_DIR / filename
+        if not path.exists() or not path.is_file():
+            continue
+
+        try:
+            for raw_line in path.read_text(encoding="utf-8").splitlines():
+                line = raw_line.strip()
+                if not line or line.startswith("#") or "=" not in line:
+                    continue
+
+                key, value = line.split("=", 1)
+                key = key.strip()
+                if not key or key in os.environ:
+                    continue
+
+                os.environ[key] = _parse_env_value(value)
+        except OSError:
+            continue
+
+
+_load_env_files()
+
 app = Flask(__name__, static_folder=str(BASE_DIR), static_url_path="")
 CORS(app)
 

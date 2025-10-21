@@ -100,10 +100,9 @@ abonnements.
    ```bash
    pip install -r requirements.txt
    ```
-3. Exportez les variables d'environnement Stripe avant de démarrer le serveur :
-   ```bash
-   export $(grep -v '^#' .env | xargs)
-   ```
+3. Les fonctions backend (`/config` et `/create-checkout-session`) chargent désormais automatiquement
+   les variables définies dans `.env` ou `.env.local`. Vous pouvez toujours exporter manuellement
+   vos variables d'environnement si vous préférez.
 4. Lancez le serveur Flask fourni pour exposer les endpoints `/config` et
    `/create-checkout-session` :
    ```bash
