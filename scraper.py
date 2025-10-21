@@ -26,8 +26,7 @@ import requests
 from bs4 import BeautifulSoup
 
 try:
-    from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
-    from playwright.sync_api import sync_playwright
+    from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
 except ImportError:  # pragma: no cover - dependency is optional at runtime
     PlaywrightTimeoutError = Exception  # type: ignore[assignment]
     sync_playwright = None  # type: ignore[assignment]
@@ -118,6 +117,74 @@ def ensure_playwright_browsers_installed() -> None:
 
     raise RuntimeError("Playwright browsers could not be installed") from last_error
 
+
+def load_all_products(page, max_clicks=500):
+    """
+    Clique 'SHOW MORE' en boucle jusqu'à disparition/disabled du bouton
+    ou jusqu'à ce que le nombre de tuiles n'augmente plus.
+    """
+    # ferme le bandeau cookies si présent (FR/EN)
+    try:
+        cookie_btn = page.locator("button:has-text('Accepter'), button:has-text('Accept')")
+        if cookie_btn.count() > 0:
+            cookie_btn.first.click(timeout=3000)
+    except Exception:
+        pass
+
+    # helper: compter les tuiles de produits
+    def tiles_count():
+        return page.evaluate(
+            "sel => document.querySelectorAll(sel).length",
+            "div.plp-product-tile, div.product-tile, li.product-grid__item"
+        )
+
+    last = tiles_count()
+    print(f"DEBUG: initial tiles = {last}")
+
+    for i in range(max_clicks):
+        btn = page.locator(
+            "button:has-text('SHOW MORE'), button:has-text('Show More'), "
+            "button.load-more, [role='button']:has-text('Show More')"
+        )
+        if btn.count() == 0 or (btn.first.is_enabled() is False):
+            print("DEBUG: no more button or disabled -> stop.")
+            break
+
+        # amener le bouton en vue et cliquer
+        btn.first.scroll_into_view_if_needed()
+        btn.first.click()
+
+        # attendre que le nombre d’items augmente
+        increased = False
+        try:
+            page.wait_for_function(
+                """(prev) => {
+                    const sel = "div.plp-product-tile, div.product-tile, li.product-grid__item";
+                    return document.querySelectorAll(sel).length > prev;
+                }""",
+                arg=last,
+                timeout=15000
+            )
+            increased = True
+        except PlaywrightTimeoutError:
+            # si c'est juste lent, on attend le calme réseau et on re-vérifie
+            try:
+                page.wait_for_load_state("networkidle", timeout=10000)
+            except PlaywrightTimeoutError:
+                pass
+
+        new_count = tiles_count()
+        print(f"DEBUG: click {i+1}: {new_count} tiles")
+
+        if new_count > last:
+            last = new_count
+            continue
+
+        if not increased or new_count <= last:
+            print("DEBUG: tiles did not increase -> stop.")
+            break
+
+
 API_URL = os.getenv("ECONODEAL_API_URL")
 API_TOKEN = os.getenv("ECONODEAL_API_TOKEN")
 
@@ -153,140 +220,30 @@ def fetch_html_with_playwright(url: str) -> str:
             except PlaywrightTimeoutError:
                 logging.debug("Network idle state timeout for %s", url)
 
-            try:
-                cookie_btn = page.locator(
-                    "button:has-text('Accepter'), button:has-text('Accept')"
-                )
-                if cookie_btn.count() > 0:
-                    cookie_btn.first.click(timeout=3000)
-            except Exception:
-                logging.debug("Unable to dismiss cookie banner", exc_info=True)
+            load_all_products(page)
 
             product_tile_selector = (
                 "div.plp-product-tile, div.product-tile, li.product-grid__item"
             )
-            selector_js = json.dumps(product_tile_selector)
-
-            def tiles_count() -> int:
-                return page.evaluate(
-                    f"() => document.querySelectorAll({selector_js}).length"
-                )
-
-            max_clicks = 500
-            last_count = tiles_count()
-            logging.debug("Initial product tile count: %s", last_count)
-
-            load_more_selectors = [
-                'button:has-text("SHOW MORE")',
-                'button:has-text("Show More")',
-                'button:has-text("LOAD MORE")',
-                'button:has-text("Load More")',
-                'button:has-text("Load more")',
-                'button:has-text("Charger plus")',
-                'button:has-text("Voir plus")',
-                "button.load-more",
-                '[role="button"]:has-text("Show More")',
-                '[role="button"]:has-text("Load More")',
-                '[role="button"]:has-text("Charger plus")',
-                '[role="button"]:has-text("Voir plus")',
-                'a:has-text("Load More")',
-                'a:has-text("Show More")',
-                'a:has-text("Charger plus")',
-                'a:has-text("Voir plus")',
-            ]
-
-            def locate_load_more():
-                candidates = [
-                    page.locator(", ".join(load_more_selectors)),
-                    page.locator("button, a, [role='button']").filter(
-                        has_text=re.compile(r"\\b(show|load|charger|voir)\\b", re.IGNORECASE)
-                    ),
-                ]
-                for locator in candidates:
-                    try:
-                        if locator.count() > 0:
-                            return locator.first
-                    except Exception:
-                        logging.debug("Error while locating 'Show More' button", exc_info=True)
-                return None
-
-            for i in range(max_clicks):
-                try:
-                    page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
-                except Exception:
-                    logging.debug("Failed to scroll to page bottom", exc_info=True)
-                page.wait_for_timeout(500)
-
-                current_count = tiles_count()
-                if current_count > last_count:
-                    logging.debug(
-                        "Scroll iteration %s loaded additional tiles (%s)",
-                        i + 1,
-                        current_count,
-                    )
-                    last_count = current_count
-                    continue
-
-                load_more_btn = locate_load_more()
-                if load_more_btn is None:
-                    logging.debug(
-                        "No additional 'Show More' button available after %s iterations. Stopping pagination.",
-                        i + 1,
-                    )
-                    break
-
-                try:
-                    load_more_btn.scroll_into_view_if_needed()
-                except Exception:
-                    logging.debug("Unable to scroll 'Show More' button into view", exc_info=True)
-
-                try:
-                    load_more_btn.click()
-                except Exception:
-                    logging.debug("Unable to click 'Show More' button", exc_info=True)
-                    break
-
-                try:
-                    page.wait_for_function(
-                        f"""(prev, selector) => {{
-                            const tiles = document.querySelectorAll(selector);
-                            return tiles.length > prev;
-                        }}""",
-                        arg=(last_count, product_tile_selector),
-                        timeout=20000,
-                    )
-                except Exception:
-                    logging.debug(
-                        "Timed out waiting for new tiles after click %s. Waiting for network idle.",
-                        i + 1,
-                        exc_info=True,
-                    )
-                    try:
-                        page.wait_for_load_state("networkidle", timeout=15000)
-                    except PlaywrightTimeoutError:
-                        logging.debug(
-                            "Network idle wait also timed out after click %s.",
-                            i + 1,
-                        )
-
-                new_count = tiles_count()
-                logging.debug("Click %s produced %s product tiles", i + 1, new_count)
-
-                if new_count <= last_count:
-                    logging.debug(
-                        "Product tile count did not increase after click %s. Stopping pagination.",
-                        i + 1,
-                    )
-                    break
-
-                last_count = new_count
-                page.wait_for_timeout(250)
 
             try:
                 page.wait_for_selector(product_tile_selector, timeout=PLAYWRIGHT_TIMEOUT)
             except PlaywrightTimeoutError:
                 logging.warning("Timed out waiting for product tiles on %s", url)
-            logging.info("Playwright collected %s product tiles", last_count)
+
+            try:
+                tile_count = page.evaluate(
+                    """(selector) => document.querySelectorAll(selector).length""",
+                    product_tile_selector,
+                )
+            except Exception:
+                tile_count = 0
+                logging.debug(
+                    "Unable to count product tiles after loading Sporting Life page",
+                    exc_info=True,
+                )
+
+            logging.info("Playwright collected %s product tiles", tile_count)
             content = page.content()
     except PlaywrightTimeoutError as exc:
         logging.error("Playwright timed out fetching %s: %s", url, exc)
