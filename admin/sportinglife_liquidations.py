@@ -36,6 +36,45 @@ DEFAULT_RETRY_DELAY = float(os.getenv("SPORTINGLIFE_RETRY_DELAY", "5.0"))
 DEFAULT_TIMEOUT = int(os.getenv("SPORTINGLIFE_PAGE_TIMEOUT", "60000"))
 DEFAULT_WAIT_TIMEOUT = int(os.getenv("SPORTINGLIFE_WAIT_TIMEOUT", "30000"))
 
+PRODUCT_CONTAINER_SELECTORS: tuple[str, ...] = (
+    ".product-item",
+    "li[data-component='ProductGridItem']",
+    "div[data-component='ProductCard']",
+    "article[data-testid='product-card']",
+    "div[data-testid='plp-product-card']",
+)
+
+NAME_SELECTORS: tuple[str, ...] = (
+    ".product-item-name",
+    ".product-name",
+    "[data-testid='product-name']",
+    "a[data-component='ProductTitle']",
+    "[data-testid='link-product-name']",
+)
+
+CURRENT_PRICE_SELECTORS: tuple[str, ...] = (
+    ".price",
+    ".product-sales-price",
+    "[data-testid='price-final']",
+    "[data-testid='price-sale']",
+    ".product-price__final",
+)
+
+ORIGINAL_PRICE_SELECTORS: tuple[str, ...] = (
+    ".old-price",
+    ".product-standard-price",
+    "[data-testid='price-regular']",
+    "[data-testid='price-list']",
+    ".product-price__regular",
+)
+
+SAVINGS_SELECTORS: tuple[str, ...] = (
+    ".savings",
+    ".product-promotions",
+    "[data-testid='price-savings']",
+    ".price__savings",
+)
+
 USER_AGENTS = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
     "(KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
@@ -80,6 +119,14 @@ def _extract_text(node, selector: str) -> str | None:
     return text.strip() if text else None
 
 
+def _extract_first_text(node, selectors: tuple[str, ...]) -> str | None:
+    for selector in selectors:
+        text = _extract_text(node, selector)
+        if text:
+            return text
+    return None
+
+
 def _resolve_href(node, base_url: str) -> str | None:
     element = node.query_selector("a[href]")
     if not element:
@@ -88,6 +135,37 @@ def _resolve_href(node, base_url: str) -> str | None:
     if not href:
         return None
     return urllib.parse.urljoin(base_url, href)
+
+
+def _wait_for_product_containers(page, wait_timeout: int) -> list[Any]:
+    """Wait for any known product container selector to appear."""
+
+    try:
+        page.wait_for_function(
+            "selectors => selectors.some(selector => document.querySelector(selector))",
+            arg=list(PRODUCT_CONTAINER_SELECTORS),
+            timeout=wait_timeout,
+        )
+    except PlaywrightTimeoutError as exc:
+        raise PlaywrightTimeoutError(
+            "Timed out waiting for Sporting Life product containers"
+        ) from exc
+
+    for selector in PRODUCT_CONTAINER_SELECTORS:
+        containers = page.query_selector_all(selector)
+        if containers:
+            logging.debug(
+                "Using selector %s for product extraction (%s éléments)",
+                selector,
+                len(containers),
+            )
+            return containers
+
+    logging.debug(
+        "Aucun élément trouvé malgré l'attente des sélecteurs connus: %s",
+        PRODUCT_CONTAINER_SELECTORS,
+    )
+    return []
 
 
 def scrape_liquidations(
@@ -119,23 +197,26 @@ def scrape_liquidations(
                     page.set_default_timeout(wait_timeout)
 
                     page.goto(url, wait_until="networkidle", timeout=page_timeout)
-                    page.wait_for_selector(".product-item", timeout=wait_timeout)
 
-                    products = page.query_selector_all(".product-item")
+                    products = _wait_for_product_containers(page, wait_timeout)
                     logging.info("Detected %s product containers", len(products))
 
                     dataset = []
                     for product in products:
-                        name = _extract_text(product, ".product-item-name")
+                        name = _extract_first_text(product, NAME_SELECTORS)
                         if not name:
                             logging.debug("Skipping product without a name")
                             continue
 
                         item = {
                             "nom": name,
-                            "prix_actuel": _extract_text(product, ".price"),
-                            "prix_original": _extract_text(product, ".old-price"),
-                            "rabais": _extract_text(product, ".savings"),
+                            "prix_actuel": _extract_first_text(
+                                product, CURRENT_PRICE_SELECTORS
+                            ),
+                            "prix_original": _extract_first_text(
+                                product, ORIGINAL_PRICE_SELECTORS
+                            ),
+                            "rabais": _extract_first_text(product, SAVINGS_SELECTORS),
                             "url": _resolve_href(product, url),
                         }
                         dataset.append(item)
