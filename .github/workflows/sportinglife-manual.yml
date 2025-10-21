@@ -83,32 +83,82 @@ jobs:
       - name: Install Playwright browsers
         run: python -m playwright install chromium
 
-      - name: Run Sporting Life scraper
+      - id: run-scraper
+        name: Run Sporting Life scraper
         env:
           SPORTINGLIFE_API_TOKEN: ${{ secrets.SPORTINGLIFE_API_TOKEN }}
         run: |
           set -euo pipefail
-          JSON_PATH="${{ inputs.json_path }}"
-          LOG_PATH="${{ inputs.log_path }}"
+          DEFAULT_JSON_PATH="output/liquidations_sportinglife.json"
+          JSON_PATH="${{ github.event.inputs.json_path }}"
+          if [ -z "$JSON_PATH" ]; then
+            JSON_PATH="$DEFAULT_JSON_PATH"
+          fi
+
+          DEFAULT_LOG_PATH="output/sportinglife_scraper.log"
+          LOG_PATH="${{ github.event.inputs.log_path }}"
+          if [ -z "$LOG_PATH" ]; then
+            LOG_PATH="$DEFAULT_LOG_PATH"
+          fi
           mkdir -p "$(dirname "$JSON_PATH")"
           mkdir -p "$(dirname "$LOG_PATH")"
-          MAX_RETRIES=$(( ${{ inputs.max_retries }} + 0 ))
-          RETRY_DELAY=$(( ${{ inputs.retry_delay }} + 0 ))
-          PAGE_TIMEOUT=$(( ${{ inputs.page_timeout }} + 0 ))
-          WAIT_TIMEOUT=$(( ${{ inputs.wait_timeout }} + 0 ))
+          echo "json_path=$JSON_PATH" >>"$GITHUB_OUTPUT"
+          echo "log_path=$LOG_PATH" >>"$GITHUB_OUTPUT"
+          MAX_RETRIES_INPUT="${{ github.event.inputs.max_retries }}"
+          if [ -z "$MAX_RETRIES_INPUT" ]; then
+            MAX_RETRIES_INPUT="3"
+          fi
+
+          RETRY_DELAY_INPUT="${{ github.event.inputs.retry_delay }}"
+          if [ -z "$RETRY_DELAY_INPUT" ]; then
+            RETRY_DELAY_INPUT="5"
+          fi
+
+          PAGE_TIMEOUT_INPUT="${{ github.event.inputs.page_timeout }}"
+          if [ -z "$PAGE_TIMEOUT_INPUT" ]; then
+            PAGE_TIMEOUT_INPUT="60000"
+          fi
+
+          WAIT_TIMEOUT_INPUT="${{ github.event.inputs.wait_timeout }}"
+          if [ -z "$WAIT_TIMEOUT_INPUT" ]; then
+            WAIT_TIMEOUT_INPUT="30000"
+          fi
+          URL_INPUT="${{ github.event.inputs.url }}"
+          if [ -z "$URL_INPUT" ]; then
+            URL_INPUT="https://www.sportinglife.ca/fr-CA/liquidation/"
+          fi
+
+          LOG_LEVEL_INPUT="${{ github.event.inputs.log_level }}"
+          if [ -z "$LOG_LEVEL_INPUT" ]; then
+            LOG_LEVEL_INPUT="INFO"
+          fi
+
+          API_URL_INPUT="${{ github.event.inputs.api_url }}"
+          if [ -z "$API_URL_INPUT" ]; then
+            API_URL_INPUT="https://www.econodeal.ca/api/import_liquidation"
+          fi
+
           EXTRA_ARGS=(
-            --url "${{ inputs.url }}"
-            --max-retries "$MAX_RETRIES"
-            --retry-delay "$RETRY_DELAY"
-            --page-timeout "$PAGE_TIMEOUT"
-            --wait-timeout "$WAIT_TIMEOUT"
-            --log-level "${{ inputs.log_level }}"
-            --api-url "${{ inputs.api_url }}"
+            --url "$URL_INPUT"
+            --max-retries "$MAX_RETRIES_INPUT"
+            --retry-delay "$RETRY_DELAY_INPUT"
+            --page-timeout "$PAGE_TIMEOUT_INPUT"
+            --wait-timeout "$WAIT_TIMEOUT_INPUT"
+            --log-level "$LOG_LEVEL_INPUT"
+            --api-url "$API_URL_INPUT"
           )
-          if [ "${{ inputs.headless }}" != "true" ]; then
+          HEADLESS_INPUT="${{ github.event.inputs.headless }}"
+          if [ -z "$HEADLESS_INPUT" ]; then
+            HEADLESS_INPUT="true"
+          fi
+          if [ "$HEADLESS_INPUT" != "true" ]; then
             EXTRA_ARGS+=(--no-headless)
           fi
-          if [ "${{ inputs.dry_run }}" = "true" ]; then
+          DRY_RUN_INPUT="${{ github.event.inputs.dry_run }}"
+          if [ -z "$DRY_RUN_INPUT" ]; then
+            DRY_RUN_INPUT="true"
+          fi
+          if [ "$DRY_RUN_INPUT" = "true" ]; then
             EXTRA_ARGS+=(--skip-upload)
           fi
           python admin/sportinglife_liquidations.py \
@@ -121,6 +171,6 @@ jobs:
         with:
           name: sportinglife-scraper-output
           path: |
-            ${{ inputs.json_path }}
-            ${{ inputs.log_path }}
+            ${{ steps.run-scraper.outputs.json_path }}
+            ${{ steps.run-scraper.outputs.log_path }}
           if-no-files-found: error
