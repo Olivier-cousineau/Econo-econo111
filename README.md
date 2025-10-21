@@ -142,6 +142,28 @@ chaque exécution et réessaie en cas d'échec réseau ou de chargement dynamiqu
   dans le HTML initial (les éléments injectés dynamiquement ne seront pas
   visibles).
 
+### Vérifier que le scraper fonctionne
+
+1. **Exécution CLI** : lance le script (avec `--skip-upload` si tu ne veux pas
+   contacter l'API) et vérifie que la commande se termine avec le code de
+   sortie `0` (`echo $?`). Une valeur différente de zéro indique qu'une étape du
+   pipeline a échoué.
+2. **Journaux détaillés** : consulte `logs/sportinglife_scraper.log` (ou le
+   chemin passé avec `--log-file`). Tu dois y voir la sélection de l'agent
+   utilisateur, le nombre de produits détectés et la confirmation d'écriture ou
+   d'upload. Toute exception y est consignée avec la pile complète.
+3. **Fichier JSON généré** : assure-toi que `data/liquidations_sportinglife.json`
+   (ou le chemin fourni à `--output`) a été mis à jour et contient des produits
+   réels. Le fichier n'est remplacé que lorsque la collecte est complète.
+4. **Import API** : lorsque tu fournis un jeton et omets `--skip-upload`, le
+   script affiche `Uploading dataset…` puis le statut HTTP. Un code `2xx`
+   confirme la réussite de l'import. En cas d'échec, le script renvoie `1` et
+   conserve le détail dans les logs.
+5. **Tâches planifiées** : pour les exécutions via `cron`, redirige la sortie
+   vers un fichier (ex. `logs/cron.log`) et surveille le journal rotatif
+   généré automatiquement afin de repérer rapidement toute anomalie réseau ou
+   un changement de structure HTML.
+
 ### Via GitHub Actions (Daily Amazon Deals)
 
 Le dépôt inclut déjà un workflow (`.github/workflows/amazon-deals.yml`) qui exécute
