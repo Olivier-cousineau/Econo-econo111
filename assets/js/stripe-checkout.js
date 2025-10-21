@@ -56,6 +56,112 @@
     let stripe;
     let initPromise;
 
+    function normalizeKey(value) {
+      if (!value) {
+        return '';
+      }
+      return String(value).trim();
+    }
+
+    function readPublishableKeyFromDom() {
+      const attrCandidates = ['data-stripe-publishable-key', 'data-stripe-pk'];
+      const elementsToCheck = [document.documentElement, document.body];
+
+      for (const el of elementsToCheck) {
+        if (!el) {
+          continue;
+        }
+        for (const attr of attrCandidates) {
+          const attrValue = normalizeKey(el.getAttribute(attr));
+          if (attrValue) {
+            return attrValue;
+          }
+        }
+      }
+
+      const metaTag = document.querySelector('meta[name="stripe-publishable-key"]');
+      if (metaTag) {
+        const metaValue = normalizeKey(metaTag.getAttribute('content'));
+        if (metaValue) {
+          return metaValue;
+        }
+      }
+
+      const scriptTag = document.querySelector('script[data-stripe-config]');
+      if (scriptTag) {
+        const inlineValue = normalizeKey(scriptTag.getAttribute('data-publishable-key'));
+        if (inlineValue) {
+          return inlineValue;
+        }
+
+        if (scriptTag.type === 'application/json' && scriptTag.textContent) {
+          try {
+            const payload = JSON.parse(scriptTag.textContent);
+            const jsonValue = normalizeKey(payload && payload.publishableKey);
+            if (jsonValue) {
+              return jsonValue;
+            }
+          } catch (error) {
+            // Ignore JSON parsing issues for inline config blocks.
+          }
+        }
+      }
+
+      return '';
+    }
+
+    function readPublishableKeyFromGlobals() {
+      const globalCandidates = [
+        'STRIPE_PUBLISHABLE_KEY',
+        'NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY',
+        'STRIPE_PUBLIC_KEY',
+        'stripePublishableKey',
+        'econodealStripePublishableKey'
+      ];
+
+      for (const key of globalCandidates) {
+        if (typeof window !== 'undefined' && key in window) {
+          const value = normalizeKey(window[key]);
+          if (value) {
+            return value;
+          }
+        }
+      }
+
+      if (typeof window !== 'undefined') {
+        const env = window.__ENV__ || window.__config || window.__stripeConfig;
+        if (env && typeof env === 'object') {
+          for (const candidate of [
+            'STRIPE_PUBLISHABLE_KEY',
+            'NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY',
+            'STRIPE_PUBLIC_KEY',
+            'publishableKey'
+          ]) {
+            const candidateValue = normalizeKey(env[candidate]);
+            if (candidateValue) {
+              return candidateValue;
+            }
+          }
+        }
+      }
+
+      return '';
+    }
+
+    function resolveClientPublishableKey() {
+      const domKey = readPublishableKeyFromDom();
+      if (domKey) {
+        return domKey;
+      }
+
+      const globalKey = readPublishableKeyFromGlobals();
+      if (globalKey) {
+        return globalKey;
+      }
+
+      return '';
+    }
+
     function setMessage(text, state) {
       if (!messageEl) {
         return;
@@ -117,6 +223,14 @@
 
       initPromise = (async () => {
         setMessage(strings.initializing, 'info');
+
+        const inlineKey = resolveClientPublishableKey();
+        if (inlineKey) {
+          stripe = Stripe(inlineKey);
+          setMessage('', 'info');
+          return stripe;
+        }
+
         try {
           const response = await fetchJsonWithFallback(
             ['/config', '/api/config'],
@@ -131,7 +245,8 @@
           setMessage('', 'info');
           return stripe;
         } catch (error) {
-          setMessage(error.message || strings.configError, 'error');
+          const message = error && error.message ? error.message : strings.configError;
+          setMessage(message, 'error');
           throw error;
         }
       })();
