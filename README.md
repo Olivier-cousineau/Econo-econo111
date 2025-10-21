@@ -113,4 +113,21 @@ abonnements.
 
 > ⚠️ Les clés secrètes Stripe doivent rester côté serveur. Ne les commitez jamais dans le dépôt.
 
+### Fournir la clé Stripe côté client (hébergement purement statique)
+
+Si vous hébergez uniquement les fichiers statiques sans serveur (ex.: S3, GitHub Pages) et ne
+disposez pas d'un endpoint `/config`, vous pouvez exposer la clé publique directement dans la page.
+Le script `assets/js/stripe-checkout.js` détecte automatiquement plusieurs emplacements :
+
+- un attribut `data-stripe-publishable-key` sur `<html>` ou `<body>` ;
+- une balise `<meta name="stripe-publishable-key" content="pk_live_xxx">` ;
+- un bloc `<script data-stripe-config data-publishable-key="pk_test_xxx"></script>` ;
+- un objet global `window.__ENV__`, `window.__config` ou `window.__stripeConfig` contenant
+  `publishableKey` ou `STRIPE_PUBLISHABLE_KEY` ;
+- une variable globale `window.STRIPE_PUBLISHABLE_KEY`, `window.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY`,
+  `window.STRIPE_PUBLIC_KEY`, `window.stripePublishableKey` ou `window.econodealStripePublishableKey`.
+
+Veillez à n'utiliser qu'une clé **publishable** (publique). Les clés secrètes doivent rester côté
+serveur.
+
 © 2025 EconoDeal
