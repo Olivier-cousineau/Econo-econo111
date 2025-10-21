@@ -5,54 +5,64 @@ on:
     inputs:
       url:
         description: "URL de la page liquidation à scruter"
-        type: string
+        required: true
         default: "https://www.sportinglife.ca/fr-CA/liquidation/"
       max_retries:
         description: "Nombre maximal de tentatives Playwright"
-        type: number
-        default: 3
+        required: false
+        default: "3"
       retry_delay:
-        description: "Délai de base entre les tentatives (en secondes)"
-        type: number
-        default: 5
+        description: "Délai entre les tentatives (secondes)"
+        required: false
+        default: "5"
       page_timeout:
-        description: "Timeout de chargement de page en millisecondes"
-        type: number
-        default: 60000
+        description: "Timeout de chargement de page (ms)"
+        required: false
+        default: "60000"
       wait_timeout:
-        description: "Timeout d'attente des éléments en millisecondes"
-        type: number
-        default: 30000
+        description: "Timeout des éléments (ms)"
+        required: false
+        default: "30000"
       headless:
-        description: "Exécuter Playwright en mode headless"
-        type: boolean
-        default: true
+        description: "Exécuter Playwright en mode headless (true/false)"
+        required: false
+        default: "true"
       log_level:
         description: "Niveau de log du scraper"
-        type: string
+        required: false
         default: "INFO"
-      skip_upload:
-        description: "Ne pas envoyer les résultats vers l'API EconoDeal"
-        type: boolean
-        default: true
+      dry_run:
+        description: "Ne pas envoyer vers l'API EconoDeal (true/false)"
+        required: false
+        default: "true"
       api_url:
-        description: "URL de l'API EconoDeal pour l'import des liquidations"
-        type: string
-        default: "https://www.econodeal.ca/api/import_liquidations"
-      output_path:
-        description: "Chemin de sortie pour le fichier JSON (relatif au workspace)"
-        type: string
+        description: "URL de l'API EconoDeal pour l'import"
+        required: false
+        default: "https://www.econodeal.ca/api/import_liquidation"
+      json_path:
+        description: "Chemin de sortie JSON"
+        required: false
         default: "output/liquidations_sportinglife.json"
       log_path:
-        description: "Chemin du fichier de log (relatif au workspace)"
-        type: string
+        description: "Chemin du fichier log"
+        required: false
         default: "output/sportinglife_scraper.log"
 
 permissions:
   contents: read
 
 jobs:
+  debug-inputs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show inputs
+        run: |
+          echo "url=${{ github.event.inputs.url }}"
+          echo "max_retries=${{ github.event.inputs.max_retries }}"
+          echo "headless=${{ github.event.inputs.headless }}"
+
   run-scraper:
+    needs: debug-inputs
     name: Exécuter le scraper Sporting Life
     runs-on: ubuntu-latest
 
@@ -78,26 +88,32 @@ jobs:
           SPORTINGLIFE_API_TOKEN: ${{ secrets.SPORTINGLIFE_API_TOKEN }}
         run: |
           set -euo pipefail
-          mkdir -p "$(dirname "${{ inputs.output_path }}")"
-          mkdir -p "$(dirname "${{ inputs.log_path }}")"
+          JSON_PATH="${{ inputs.json_path }}"
+          LOG_PATH="${{ inputs.log_path }}"
+          mkdir -p "$(dirname "$JSON_PATH")"
+          mkdir -p "$(dirname "$LOG_PATH")"
+          MAX_RETRIES=$(( ${{ inputs.max_retries }} + 0 ))
+          RETRY_DELAY=$(( ${{ inputs.retry_delay }} + 0 ))
+          PAGE_TIMEOUT=$(( ${{ inputs.page_timeout }} + 0 ))
+          WAIT_TIMEOUT=$(( ${{ inputs.wait_timeout }} + 0 ))
           EXTRA_ARGS=(
             --url "${{ inputs.url }}"
-            --max-retries "${{ inputs.max_retries }}"
-            --retry-delay "${{ inputs.retry_delay }}"
-            --page-timeout "${{ inputs.page_timeout }}"
-            --wait-timeout "${{ inputs.wait_timeout }}"
+            --max-retries "$MAX_RETRIES"
+            --retry-delay "$RETRY_DELAY"
+            --page-timeout "$PAGE_TIMEOUT"
+            --wait-timeout "$WAIT_TIMEOUT"
             --log-level "${{ inputs.log_level }}"
             --api-url "${{ inputs.api_url }}"
           )
           if [ "${{ inputs.headless }}" != "true" ]; then
             EXTRA_ARGS+=(--no-headless)
           fi
-          if [ "${{ inputs.skip_upload }}" = "true" ]; then
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
             EXTRA_ARGS+=(--skip-upload)
           fi
           python admin/sportinglife_liquidations.py \
-            --output "${{ inputs.output_path }}" \
-            --log-file "${{ inputs.log_path }}" \
+            --output "$JSON_PATH" \
+            --log-file "$LOG_PATH" \
             "${EXTRA_ARGS[@]}"
 
       - name: Upload scraper artifacts
@@ -105,6 +121,6 @@ jobs:
         with:
           name: sportinglife-scraper-output
           path: |
-            ${{ inputs.output_path }}
+            ${{ inputs.json_path }}
             ${{ inputs.log_path }}
           if-no-files-found: error
