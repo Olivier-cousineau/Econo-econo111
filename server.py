@@ -98,10 +98,17 @@ def serve_asset(asset: str) -> object:
     return send_from_directory(str(BASE_DIR), asset)
 
 
+PUBLISHABLE_KEY_CANDIDATES = (
+    "STRIPE_PUBLISHABLE_KEY",
+    "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY",
+    "STRIPE_PUBLIC_KEY",
+)
+
+
 def _get_publishable_key() -> Optional[str]:
     """Return the publishable key used by the client side."""
 
-    for env_var in ("STRIPE_PUBLISHABLE_KEY", "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY"):
+    for env_var in PUBLISHABLE_KEY_CANDIDATES:
         value = os.environ.get(env_var)
         if value:
             return value
@@ -115,8 +122,8 @@ def get_publishable_key() -> object:
         return (
             jsonify({
                 "error": (
-                    "Missing STRIPE_PUBLISHABLE_KEY or NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY "
-                    "environment variable."
+                    "Missing STRIPE_PUBLISHABLE_KEY, NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY or "
+                    "STRIPE_PUBLIC_KEY environment variable."
                 )
             }),
             500,
