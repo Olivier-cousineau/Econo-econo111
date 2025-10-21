@@ -58,6 +58,90 @@ et alimenter `/data`.
 > Vercel). Exécute ce script uniquement dans un environnement Python 3.11 (ou
 > antérieur) où tu peux installer manuellement `pip install paapi5-python-sdk`.
 
+## Scraper Sporting Life (liquidations)
+
+Un scraper résilient est disponible dans `admin/sportinglife_liquidations.py` pour
+collecter automatiquement les aubaines de la page liquidation de Sporting Life et
+les pousser vers l'API EconoDeal.
+
+### Installation
+
+1. Installe les dépendances Python communes :
+   ```bash
+   pip install -r requirements.txt
+   ```
+2. Installe les moteurs Playwright (une seule fois) :
+   ```bash
+   playwright install chromium
+   ```
+
+### Exécution manuelle
+
+1. Exporte ton token API (Bearer) :
+   ```bash
+   export SPORTINGLIFE_API_TOKEN="<ton_token_api>"
+   ```
+2. Lance le script :
+   ```bash
+   python admin/sportinglife_liquidations.py \
+     --output /home/econodeal/data/liquidations_sportinglife.json \
+     --log-file /home/econodeal/logs/sportinglife_scraper.log
+   ```
+   - Le fichier JSON n'est remplacé que lorsque la collecte aboutit.
+   - Le journal détaillé est conservé dans `logs/` (et sur STDOUT).
+   - Utilise `--skip-upload` pour n'écrire que le fichier local.
+   - Utilise `--use-requests` pour forcer un chargement classique (utile sur un
+     serveur sans Playwright mais qui sert déjà la page côté client).
+   - Utilise `--html-snapshot tests/fixtures/sportinglife_liquidation_sample.html`
+     pour valider le pipeline avec un extrait HTML local.
+
+Variables d'environnement disponibles :
+
+- `SPORTINGLIFE_LIQUIDATION_URL` : URL de la page à surveiller.
+- `SPORTINGLIFE_OUTPUT_FILE` : chemin par défaut du fichier JSON.
+- `SPORTINGLIFE_API_URL` : endpoint d'import EconoDeal.
+- `SPORTINGLIFE_API_TOKEN` : jeton Bearer pour l'import.
+- `SPORTINGLIFE_LOG_FILE`, `SPORTINGLIFE_MAX_RETRIES`, etc., pour ajuster les
+  paramètres de temps et de log.
+
+### Planification quotidienne (cron)
+
+Pour mettre à jour les liquidations tous les jours à 4 h (heure du Pacifique) :
+
+```bash
+sudo timedatectl set-timezone America/Vancouver
+crontab -e
+```
+
+Ajoute la ligne suivante (adapter les chemins si besoin) :
+
+```bash
+0 4 * * * /usr/bin/python3 /home/econodeal/admin/sportinglife_liquidations.py \
+  --output /home/econodeal/data/liquidations_sportinglife.json \
+  --log-file /home/econodeal/logs/sportinglife_scraper.log >> /home/econodeal/logs/cron.log 2>&1
+```
+
+Le script journalise automatiquement les tentatives, change d'agent utilisateur à
+chaque exécution et réessaie en cas d'échec réseau ou de chargement dynamique.
+
+### Tests hors ligne & dépannage
+
+- Si Playwright n'est pas installé, le script renvoie immédiatement une erreur
+  explicite vous invitant à lancer `pip install playwright` puis
+  `playwright install chromium`.
+- Pour vérifier rapidement la chaîne d'export JSON sans Playwright ni accès
+  réseau, utilisez l'extrait HTML fourni :
+  ```bash
+  python admin/sportinglife_liquidations.py \
+    --html-snapshot tests/fixtures/sportinglife_liquidation_sample.html \
+    --skip-upload --output data/liquidations_sportinglife.json
+  ```
+- Sur un serveur où Playwright n'est pas autorisé (hébergement mutualisé par
+  exemple), combinez `--use-requests` et un ordonnanceur (`cron`, systemd timer,
+  etc.). Le rendu des produits dépendra alors de ce que Sporting Life publie
+  dans le HTML initial (les éléments injectés dynamiquement ne seront pas
+  visibles).
+
 ### Via GitHub Actions (Daily Amazon Deals)
 
 Le dépôt inclut déjà un workflow (`.github/workflows/amazon-deals.yml`) qui exécute
