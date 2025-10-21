@@ -119,9 +119,14 @@ def ensure_playwright_browsers_installed() -> None:
 
 
 def load_all_products(page, max_clicks=500):
-    """
-    Clique 'SHOW MORE' en boucle jusqu'à disparition/disabled du bouton
-    ou jusqu'à ce que le nombre de tuiles n'augmente plus.
+    """Charge progressivement tous les produits via le bouton « SHOW MORE ».
+
+    Cette routine tente d'imiter un défilement manuel en cliquant
+    automatiquement sur le bouton d'expansion tant qu'il est visible. En plus
+    de vérifier l'augmentation du nombre de cartes, elle inspecte les messages
+    du type « Showing X out of Y items » ou « Affichage de X sur Y articles ».
+    Dès que le compteur indique que tout l'inventaire est affiché, on arrête la
+    boucle pour éviter des clics superflus.
     """
     # ferme le bandeau cookies si présent (FR/EN)
     try:
@@ -138,6 +143,33 @@ def load_all_products(page, max_clicks=500):
             "div.plp-product-tile, div.product-tile, li.product-grid__item"
         )
 
+    def parse_display_counters(text: str) -> tuple[Optional[int], Optional[int]]:
+        """Extraire les compteurs « affichés / total » d'un bloc de texte."""
+
+        numbers = re.findall(r"\d[\d\s\u00a0,\.]*", text)
+        if len(numbers) < 2:
+            return None, None
+
+        def _to_int(value: str) -> Optional[int]:
+            normalized = re.sub(r"[^0-9]", "", value)
+            if not normalized:
+                return None
+            try:
+                return int(normalized)
+            except ValueError:
+                return None
+
+        current = _to_int(numbers[0])
+        total = _to_int(numbers[1])
+        return current, total
+
+    count_selectors = [
+        "text=/Showing\\s+\\d+[\\s\\u00a0,\\.]*out of\\s+\\d+/i",
+        "text=/Affichage\\s+de\\s+\\d+[\\s\\u00a0,\\.]*sur\\s+\\d+/i",
+        ".count-info",
+        ".product-count",
+    ]
+
     last = tiles_count()
     print(f"DEBUG: initial tiles = {last}")
 
@@ -146,13 +178,17 @@ def load_all_products(page, max_clicks=500):
             "button:has-text('SHOW MORE'), button:has-text('Show More'), "
             "button.load-more, [role='button']:has-text('Show More')"
         )
-        if btn.count() == 0 or (btn.first.is_enabled() is False):
+        if btn.count() == 0 or (btn.first.is_enabled() is False) or (btn.first.is_visible() is False):
             print("DEBUG: no more button or disabled -> stop.")
             break
 
         # amener le bouton en vue et cliquer
         btn.first.scroll_into_view_if_needed()
         btn.first.click()
+        try:
+            page.wait_for_timeout(500)
+        except Exception:
+            pass
 
         # attendre que le nombre d’items augmente
         increased = False
@@ -172,9 +208,38 @@ def load_all_products(page, max_clicks=500):
                 page.wait_for_load_state("networkidle", timeout=10000)
             except PlaywrightTimeoutError:
                 pass
+            try:
+                page.wait_for_timeout(2000)
+            except Exception:
+                pass
 
         new_count = tiles_count()
         print(f"DEBUG: click {i+1}: {new_count} tiles")
+
+        counter_reached_total = False
+        for selector in count_selectors:
+            locator = page.locator(selector)
+            try:
+                if locator.count() == 0:
+                    continue
+                text_value = locator.first.inner_text().strip()
+            except Exception:
+                continue
+
+            current, total = parse_display_counters(text_value)
+            if current is None or total is None:
+                continue
+            if total > 0 and current >= total:
+                counter_reached_total = True
+                print(
+                    "DEBUG: count-info indicates all items loaded -> stop.",
+                    f"({current}/{total})",
+                )
+                last = max(last, current, new_count)
+                break
+
+        if counter_reached_total:
+            break
 
         if new_count > last:
             last = new_count
