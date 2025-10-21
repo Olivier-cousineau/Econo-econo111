@@ -176,10 +176,28 @@ def fetch_html_with_playwright(url: str) -> str:
             last_count = tiles_count()
             logging.debug("Initial product tile count: %s", last_count)
 
+            load_more_selectors = [
+                'button:has-text("SHOW MORE")',
+                'button:has-text("Show More")',
+                'button:has-text("LOAD MORE")',
+                'button:has-text("Load More")',
+                'button:has-text("Load more")',
+                'button:has-text("Charger plus")',
+                'button:has-text("Voir plus")',
+                "button.load-more",
+                '[role="button"]:has-text("Show More")',
+                '[role="button"]:has-text("Load More")',
+                '[role="button"]:has-text("Charger plus")',
+                '[role="button"]:has-text("Voir plus")',
+                'a:has-text("Load More")',
+                'a:has-text("Show More")',
+                'a:has-text("Charger plus")',
+                'a:has-text("Voir plus")',
+            ]
+
             for i in range(max_clicks):
                 show_more_btn = page.locator(
-                    "button:has-text('SHOW MORE'), button:has-text('Show More'), "
-                    "button.load-more, [role='button']:has-text('Show More')"
+                    ", ".join(load_more_selectors)
                 )
 
                 try:
