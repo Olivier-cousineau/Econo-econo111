@@ -35,9 +35,16 @@ async def scrape_rona_liquidation():
                     await element.click()
 
         product_selectors = [
+            "[data-testid='plp-product-card']",
+            "[data-testid='product-card']",
+            "article[data-testid='product-card']",
+            "article[data-automation-id='product-card']",
+            "article.plp-product-card",
+            "li[data-testid='plp-product-card']",
+            ".plp-product-card",
+            ".product-card",
             ".product__info",
             ".product",
-            ".product-card",
             "li.product-grid__item",
         ]
 
@@ -54,6 +61,19 @@ async def scrape_rona_liquidation():
                 break
 
         if products is None:
+            combined_selector = ", ".join(product_selectors)
+            try:
+                await page.wait_for_selector(
+                    combined_selector, state="attached", timeout=10000
+                )
+            except PlaywrightTimeoutError:
+                pass
+            else:
+                candidate = page.locator(combined_selector)
+                if await candidate.count() > 0:
+                    products = candidate
+
+        if products is None:
             raise RuntimeError(
                 "Aucun conteneur de produit n'a été trouvé. Vérifiez les sélecteurs CSS."
             )
@@ -68,7 +88,17 @@ async def scrape_rona_liquidation():
         async def safe_text(locator, *, timeout=2000):
             with suppress(PlaywrightTimeoutError):
                 text = await locator.text_content(timeout=timeout)
-                return text.strip() if text else None
+                if text:
+                    text = text.strip()
+                    if text:
+                        return text
+            return None
+
+        async def extract_first_text(base_locator, selectors, *, timeout=2000):
+            for selector in selectors:
+                text = await safe_text(base_locator.locator(selector), timeout=timeout)
+                if text:
+                    return text
             return None
 
         count = await products.count()
@@ -76,23 +106,52 @@ async def scrape_rona_liquidation():
         for index in range(count):
             product = products.nth(index)
 
-            title = await safe_text(
-                product.locator(
-                    ".product__description, .product__name, .product-card__title, "
-                    ".plp-product-card__name"
-                )
+            title = await extract_first_text(
+                product,
+                [
+                    ".product__description",
+                    ".product__name",
+                    ".product-card__title",
+                    ".plp-product-card__name",
+                    "[data-testid='plp-product-card__name']",
+                    "[data-testid='product-card-title']",
+                    "[data-testid='plp-product-card-title']",
+                    "[data-testid='product-name']",
+                    "a[title]",
+                ],
             )
-            price = await safe_text(
-                product.locator(
-                    ".price__value, .price__number, .product-card__price, .plp-product-card__price"
-                )
+            price = await extract_first_text(
+                product,
+                [
+                    ".price__value",
+                    ".price__number",
+                    ".product-card__price",
+                    ".plp-product-card__price",
+                    "[data-testid='price']",
+                    "[data-testid='product-card-price']",
+                    "[data-testid='plp-product-card-price']",
+                    "[data-testid='price-amount']",
+                ],
             )
-            discount = await safe_text(
-                product.locator(
-                    ".price__discount, .product-card__promotion, .plp-product-card__discount"
-                ),
+            discount = await extract_first_text(
+                product,
+                [
+                    ".price__discount",
+                    ".product-card__promotion",
+                    ".plp-product-card__discount",
+                    "[data-testid='badge-text']",
+                    "[data-testid='badge-label']",
+                    "[data-testid='savings']",
+                ],
                 timeout=1000,
             )
+
+            if not price:
+                price_attribute = await product.get_attribute("data-price")
+                if price_attribute:
+                    price_attribute = price_attribute.strip()
+                    if price_attribute:
+                        price = price_attribute
 
             if not any([title, price, discount]):
                 continue
