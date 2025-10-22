@@ -1883,7 +1883,7 @@
       const min = parseInt(range.value,10);
       const filtered = deals.filter(d => {
         const pct = discount(d.price,d.salePrice);
-        if(s && d.store !== s) return false;
+        if(s && slugify(d.store || '') !== s) return false;
         if(c && d.branchSlug !== c && d.citySlug !== c) return false;
         const searchIndex = ensureSearchIndex(d);
         if(terms.length && !terms.every(term => searchIndex.includes(term))) return false;
