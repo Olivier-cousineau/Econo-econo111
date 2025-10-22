@@ -3,6 +3,7 @@ name: Scraper Automatique SportingLife
 on:
   schedule:
     - cron: '0 8 * * *'
+    - cron: '0 9 * * *'
   workflow_dispatch:
 
 jobs:
@@ -11,28 +12,43 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Vérifier l'heure locale (America/Toronto)
+        id: timecheck
+        run: |
+          current_hour=$(TZ="America/Toronto" date +%H)
+          echo "Heure actuelle à Montréal: ${current_hour}h"
+          if [ "$current_hour" != "04" ]; then
+            echo "Ce n'est pas 4h du matin au Québec. Fin du workflow."
+            echo "should_run=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "should_run=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Set up Python
+        if: steps.timecheck.outputs.should_run == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
       - name: Installer les dépendances
-        run: pip install -r requirements.txt
-
-      - name: Install Playwright (browsers + deps)
+        if: steps.timecheck.outputs.should_run == 'true'
         run: |
           python -m pip install --upgrade pip
-          pip install playwright
+          pip install -r requirements.txt
           python -m playwright install --with-deps
 
       - name: Lancer le scraper
+        if: steps.timecheck.outputs.should_run == 'true'
         env:
           ECONODEAL_API_URL: ${{ secrets.ECONODEAL_API_URL }}
           ECONODEAL_API_TOKEN: ${{ secrets.ECONODEAL_API_TOKEN }}
         run: python scraper.py
 
       - name: Publier les résultats
+        if: steps.timecheck.outputs.should_run == 'true'
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: update sporting life data"
-          file_pattern: data/sporting-life/liquidation.json
+          file_pattern: |
+            data/sporting-life/liquidation.json
+            liquidation.json
