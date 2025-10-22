@@ -46,6 +46,7 @@ async def scrape_rona_liquidation():
             ".product__info",
             ".product",
             "li.product-grid__item",
+            ".product-tile",
         ]
 
         products = None
@@ -113,6 +114,7 @@ async def scrape_rona_liquidation():
                     ".product__name",
                     ".product-card__title",
                     ".plp-product-card__name",
+                    ".product-tile__title",
                     "[data-testid='plp-product-card__name']",
                     "[data-testid='product-card-title']",
                     "[data-testid='plp-product-card-title']",
@@ -127,6 +129,8 @@ async def scrape_rona_liquidation():
                     ".price__number",
                     ".product-card__price",
                     ".plp-product-card__price",
+                    ".product-tile__price",
+                    ".product-tile__price-value",
                     "[data-testid='price']",
                     "[data-testid='product-card-price']",
                     "[data-testid='plp-product-card-price']",
@@ -139,6 +143,8 @@ async def scrape_rona_liquidation():
                     ".price__discount",
                     ".product-card__promotion",
                     ".plp-product-card__discount",
+                    ".product-tile__badge",
+                    ".product-tile__tag",
                     "[data-testid='badge-text']",
                     "[data-testid='badge-label']",
                     "[data-testid='savings']",
