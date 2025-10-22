@@ -16,6 +16,7 @@ import json
 import logging
 import os
 import re
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -453,6 +454,32 @@ def write_json(items: Iterable[dict], path: Path) -> None:
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
+def copy_liquidation_snapshot(
+    source: Path, destination: Path = Path("liquidation.json")
+) -> None:
+    """Copy the generated Sporting Life JSON file to the project root.
+
+    A few legacy workflows expect ``liquidation.json`` to live at the
+    repository root. The scraper now writes to ``data/sporting-life`` by
+    default, so we opportunistically mirror the file when available.
+    """
+
+    if not source.exists():
+        logging.error("Fichier introuvable : %s", source)
+        return
+
+    try:
+        if source.resolve() == destination.resolve():
+            logging.debug("Source et destination identiques; copie ignorée.")
+            return
+
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy(source, destination)
+        logging.info("Copié %s → %s", source, destination)
+    except OSError as exc:
+        logging.error("Impossible de copier %s vers %s : %s", source, destination, exc)
+
+
 def post_to_api(items: Iterable[dict]) -> None:
     if not API_URL:
         logging.info("No API endpoint configured; skipping upload.")
@@ -486,16 +513,9 @@ def main() -> None:
         )
         logging.warning("No products were found on %s", SPORTING_LIFE_URL)
     write_json(products, OUTPUT_PATH)
+    copy_liquidation_snapshot(OUTPUT_PATH)
     post_to_api(products)
 
 
 if __name__ == "__main__":
     main()
-
-import shutil
-
-# Copie le fichier JSON depuis le dossier de travail vers la racine du projet
-shutil.copy(
-    "data/sporting-life/liquidation.json",  # Source (là où ton scraper écrit)
-    "liquidation.json"  # Destination (racine du projet)
-)
