@@ -97,7 +97,7 @@
           <p>Sigue en tiempo real las brechas de precio accionables entre tus comercios favoritos y la Buy Box de Amazon.</p>
           <ul class="hero-preview-list">
             <li class="hero-preview-item"><span>1</span> Alertas prioritarias cuando el margen supera el 28&nbsp;%.</li>
-            <li class="hero-preview-item"><span>2</span> Estados de inventario consolidados de Best Buy, Walmart y Canadian Tire.</li>
+            <li class="hero-preview-item"><span>2</span> Estados de inventario consolidados de Best Buy, Walmart y otros socios.</li>
             <li class="hero-preview-item"><span>3</span> Exportación instantánea a tus plantillas FBA y FBM.</li>
           </ul>
         </article>
@@ -208,7 +208,7 @@
           <h3>Diseñado para revendedores de Amazon</h3>
           <ul>
             <li>Onboarding guiado a FBA, cálculo de tarifas simplificado y escenarios FBM integrados.</li>
-            <li>Supervisión multiproveedor (Best Buy, Walmart, Canadian Tire, etc.) para asegurar la Buy Box.</li>
+            <li>Supervisión multiproveedor (Best Buy, Walmart, etc.) para asegurar la Buy Box.</li>
             <li>Comunidad privada, talleres tácticos y asistencia dedicada que mantienen la ventaja competitiva.</li>
           </ul>
         </article>
@@ -255,7 +255,7 @@
         <article class="seller-card">
           <div class="seller-icon" aria-hidden="true">📦</div>
           <h3>Supervisión de inventario multiproveedor</h3>
-          <p>Combina inventarios de Best Buy, Walmart, Canadian Tire y más para detectar brechas de precio aprovechables antes que otros vendedores de Amazon.</p>
+          <p>Combina inventarios de Best Buy, Walmart y otros socios para detectar brechas de precio aprovechables antes que otros vendedores de Amazon.</p>
         </article>
         <article class="seller-card">
           <div class="seller-icon" aria-hidden="true">🤝</div>
@@ -956,7 +956,6 @@
       {label:'Best Buy', slug:'best-buy', branches: fullBestBuyBranches()},
       {label:'Home Depot', slug:'home-depot', branches: HOME_DEPOT_CANADA_BRANCHES},
       {label:'Walmart', slug:'walmart', branches: WALMART_QUEBEC_BRANCHES},
-      {label:'Canadian Tire', slug:'canadian-tire', branches: baseBranches()},
       {label:'Rona', slug:'rona', branches: baseBranches()},
       {label:'Patrick Morin', slug:'patrick-morin', branches: baseBranches()},
       {label:'Sporting Life', slug:'sporting-life', branches: baseBranches()}
@@ -1946,21 +1945,6 @@
       return `data/${s}/${c}.json`;
     }
 
-    async function canadianTireHasData(slug){
-      if(DEFAULT_BRANCH_SLUGS.has(slug)) return true;
-      const path = `data/canadian-tire/${slug}.json`;
-      try{
-        const head = await fetch(path, {method:'HEAD'});
-        if(head.ok) return true;
-      }catch(_err){ /* noop */ }
-      try{
-        const res = await fetch(path, {cache:'no-store'});
-        return res.ok;
-      }catch(_err){
-        return false;
-      }
-    }
-
     async function loadRonaDirectory(){
       const store = STORES.find(entry => entry.slug === 'rona');
       if(!store) return;
@@ -2001,44 +1985,6 @@
         }
       }catch(err){
         console.warn('Unable to load Rona branches', err);
-      }
-    }
-
-    async function loadCanadianTireDirectory(){
-      const store = STORES.find(entry => entry.slug === 'canadian-tire');
-      if(!store) return;
-      try{
-        const res = await fetch('data/canadian-tire/stores.json', {cache:'no-store'});
-        if(!res.ok) return;
-        const json = await res.json();
-        if(!Array.isArray(json)) return;
-        const availabilityCache = new Map();
-        async function branchHasData(slug){
-          if(availabilityCache.has(slug)) return availabilityCache.get(slug);
-          const hasData = await canadianTireHasData(slug);
-          availabilityCache.set(slug, hasData);
-          return hasData;
-        }
-        const seen = new Map();
-        for(const branch of store.branches){
-          const slug = branch?.slug;
-          if(!slug) continue;
-          const hasData = await branchHasData(slug);
-          seen.set(slug, {...branch, hasData});
-        }
-        for(const entry of json){
-          const rawSlug = typeof entry.slug === 'string' && entry.slug ? entry.slug : slugify(entry.nickname || entry.city || entry.label);
-          if(!rawSlug) continue;
-          const label = (entry.nickname || (entry.label || '').replace(/^Canadian Tire\s*/i, '') || entry.city || rawSlug).trim();
-          const city = entry.city || label;
-          const hasData = await branchHasData(rawSlug);
-          const previous = seen.get(rawSlug) || {};
-          seen.set(rawSlug, {...previous, label, slug: rawSlug, city, hasData});
-        }
-        store.branches = Array.from(seen.values()).sort((a,b)=>a.label.localeCompare(b.label,'fr'));
-        renderStoreAds();
-      }catch(err){
-        console.warn('Unable to load Canadian Tire branches', err);
       }
     }
 
@@ -2168,7 +2114,6 @@
 
     // Startup
     await loadRonaDirectory();
-    await loadCanadianTireDirectory();
     const defaultStore = getStoreByIdentifier(DEFAULT_FILTERS.store);
     const defaultStoreValue = defaultStore?.slug || '';
     if(searchInput){

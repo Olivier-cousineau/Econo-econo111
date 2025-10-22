@@ -107,7 +107,7 @@
           <p>Surveillez en temps réel les écarts de prix exploitables entre vos marchands favoris et la Buy Box Amazon ou le Top Rated eBay.</p>
           <ul class="hero-preview-list">
             <li class="hero-preview-item"><span>1</span> Alertes prioritaires quand la marge dépasse 28&nbsp;% sur Amazon ou eBay.</li>
-            <li class="hero-preview-item"><span>2</span> Statuts de stocks consolidés Best Buy, Walmart, Canadian Tire et grossistes eBay.</li>
+            <li class="hero-preview-item"><span>2</span> Statuts de stocks consolidés Best Buy, Walmart et grossistes eBay.</li>
             <li class="hero-preview-item"><span>3</span> Export instantané vers vos modèles FBA, FBM et Seller Hub.</li>
           </ul>
         </article>
@@ -218,7 +218,7 @@
           <h3>Offre adaptée aux revendeurs Amazon &amp; eBay</h3>
           <ul>
             <li>Onboarding FBA guidé, calcul des frais simplifié, scénarios FBM et eBay fulfilment intégrés.</li>
-            <li>Veille multi-fournisseurs (Best Buy, Walmart, Canadian Tire, grossistes eBay, etc.) pour sécuriser Buy Box et Top Rated.</li>
+            <li>Veille multi-fournisseurs (Best Buy, Walmart, grossistes eBay, etc.) pour sécuriser Buy Box et Top Rated.</li>
             <li>Communauté privée, ateliers tactiques et assistance dédiée pour rester aligné sur les règles Amazon et eBay.</li>
           </ul>
         </article>
@@ -321,7 +321,7 @@
         <article class="seller-card">
           <div class="seller-icon" aria-hidden="true">📦</div>
           <h3>Veille des stocks multi-fournisseurs</h3>
-          <p>Combinez les inventaires de Best Buy, Walmart, Canadian Tire et grossistes eBay afin de détecter les écarts de prix exploitables avant vos concurrents.</p>
+          <p>Combinez les inventaires de Best Buy, Walmart et grossistes eBay afin de détecter les écarts de prix exploitables avant vos concurrents.</p>
         </article>
         <article class="seller-card">
           <div class="seller-icon" aria-hidden="true">🤝</div>
@@ -1197,7 +1197,6 @@
       {label:'Best Buy', slug:'best-buy', branches: fullBestBuyBranches()},
       {label:'Home Depot', slug:'home-depot', branches: HOME_DEPOT_CANADA_BRANCHES},
       {label:'Walmart', slug:'walmart', branches: WALMART_QUEBEC_BRANCHES},
-      {label:'Canadian Tire', slug:'canadian-tire', branches: baseBranches()},
       {label:'Rona', slug:'rona', branches: baseBranches()},
       {label:'Patrick Morin', slug:'patrick-morin', branches: baseBranches()},
       {label:'Sporting Life', slug:'sporting-life', branches: baseBranches()}
@@ -2230,53 +2229,6 @@
       }
     }
 
-    async function loadCanadianTireDirectory(){
-      const store = STORES.find(entry => entry.slug === 'canadian-tire');
-      if(!store) return;
-      try{
-        const res = await fetch('data/canadian-tire/stores.json', {cache:'no-store'});
-        if(!res.ok) return;
-        const json = await res.json();
-        if(!Array.isArray(json)) return;
-        const seen = new Map();
-        const availableData = new Set(
-          (store.branches || [])
-            .map(branch => branch?.slug)
-            .filter(Boolean)
-        );
-        for(const branch of store.branches){
-          const slug = branch?.slug;
-          if(!slug) continue;
-          seen.set(slug, {
-            ...branch,
-            hasData: branch.hasData === false ? false : true
-          });
-        }
-        for(const entry of json){
-          const rawSlug = typeof entry.slug === 'string' && entry.slug ? entry.slug : slugify(entry.nickname || entry.city || entry.label);
-          if(!rawSlug) continue;
-          const label = (entry.nickname || (entry.label || '').replace(/^Canadian Tire\s*/i, '') || entry.city || rawSlug).trim();
-          const city = entry.city || label;
-          const previous = seen.get(rawSlug) || {};
-          const hasData = previous.hasData === true || availableData.has(rawSlug) || entry.hasData === true;
-          seen.set(rawSlug, {
-            ...previous,
-            label,
-            slug: rawSlug,
-            city,
-            hasData
-          });
-        }
-        store.branches = Array.from(seen.values()).sort((a,b)=>a.label.localeCompare(b.label,'fr'));
-        renderStoreAds();
-        if(storeSelect && storeSelect.value === 'canadian-tire'){
-          setCityOptions('canadian-tire', true);
-        }
-      }catch(err){
-        console.warn('Impossible de charger les succursales Canadian Tire', err);
-      }
-    }
-
     function setCityOptions(storeSlug, preserveSelection){
       const previous = preserveSelection ? citySelect.value : '';
       const store = getStoreByIdentifier(storeSlug);
@@ -2409,7 +2361,6 @@
 
     // Démarrage
     await loadRonaDirectory();
-    await loadCanadianTireDirectory();
     const defaultStore = getStoreByIdentifier(DEFAULT_FILTERS.store);
     const defaultStoreValue = defaultStore?.slug || '';
     if(searchInput){
