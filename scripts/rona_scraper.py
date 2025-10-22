@@ -39,11 +39,12 @@ async def scrape_rona_liquidation():
             # Ensure that lazy loaded products are visible before collecting them.
             with suppress(PlaywrightTimeoutError):
                 await page.wait_for_load_state("networkidle")
-            await asyncio.sleep(2)
-            await page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
-            await asyncio.sleep(15)
 
-            products = await page.query_selector_all(".product-tile.js-product-tile")
+            for _ in range(5):
+                await page.evaluate("window.scrollBy(0, document.body.scrollHeight)")
+                await asyncio.sleep(2)
+
+            products = await page.query_selector_all("div.product-tile.js-product-tile")
 
             html = await page.content()
             with open("rona_debug.html", "w", encoding="utf-8") as debug_file:
@@ -55,10 +56,10 @@ async def scrape_rona_liquidation():
                 print("OK produits trouvés")
 
             for product in products:
-                title_el = await product.query_selector(".product-title__title")
+                title_el = await product.query_selector(".product-tile__title")
                 brand_el = await product.query_selector(".product-tile__brand")
                 price_el = await product.query_selector(".price-box, .price-box__rebate")
-                link_el = await product.query_selector("a[href].product-title__title")
+                link_el = await product.query_selector("a.product-tile__title[href]")
                 img_el = await product.query_selector("img.product-tile__image")
 
                 title = (await title_el.inner_text()) if title_el else None
