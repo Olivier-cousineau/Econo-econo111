@@ -630,7 +630,6 @@
         {label:'Best Buy', slug:'best-buy', branches: fullBestBuyBranches()},
         {label:'Home Depot', slug:'home-depot', branches: HOME_DEPOT_CANADA_BRANCHES},
         {label:'Walmart', slug:'walmart', branches: WALMART_QUEBEC_BRANCHES},
-        {label:'Canadian Tire', slug:'canadian-tire', branches: baseBranches()},
         {label:'Rona', slug:'rona', branches: baseBranches()},
         {label:'Patrick Morin', slug:'patrick-morin', branches: baseBranches()},
         {label:'Sporting Life', slug:'sporting-life', branches: baseBranches()}
@@ -737,32 +736,6 @@
         }
       }
 
-      async function loadCanadianTireDirectory(){
-        const store = STORES.find(entry => entry.slug === 'canadian-tire');
-        if(!store) return;
-        try{
-          const res = await fetch('data/canadian-tire/stores.json', {cache:'no-store'});
-          if(!res.ok) return;
-          const json = await res.json();
-          if(!Array.isArray(json)) return;
-          const seen = new Map();
-          for(const branch of store.branches ?? []){
-            seen.set(branch.slug, {...branch, hasData:true});
-          }
-          for(const entry of json){
-            if(!entry || typeof entry !== 'object') continue;
-            const rawSlug = typeof entry.slug === 'string' && entry.slug ? entry.slug : slugify(entry.nickname || entry.city || entry.label);
-            if(!rawSlug) continue;
-            const label = (entry.nickname || (entry.label || '').replace(/^Canadian Tire\s*/i, '') || entry.city || rawSlug).trim();
-            const city = entry.city || label;
-            seen.set(rawSlug, {label, slug: rawSlug, city});
-          }
-          store.branches = Array.from(seen.values()).sort((a,b)=>a.label.localeCompare(b.label,'fr'));
-        }catch(err){
-          console.warn('Impossible de charger les succursales Canadian Tire', err);
-        }
-      }
-
       async function fetchOne(path, storeLabel, branch){
         try{
           const res = await fetch(path, {cache:'no-store'});
@@ -854,7 +827,6 @@
       storeFilter.addEventListener('change', render);
 
       await loadRonaDirectory();
-      await loadCanadianTireDirectory();
       try{
         const result = await fetchAllDeals();
         allDeals = result.deals;
