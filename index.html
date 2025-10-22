@@ -51,12 +51,12 @@
             <button type="button" class="country-button" data-country="europe" aria-pressed="false">Europe</button>
           </div>
         </div>
-        <button id="menuToggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="headerMenu">
+        <button id="menuToggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="headerMenu" aria-haspopup="true">
           <span class="menu-toggle-icon" aria-hidden="true">☰</span>
           <span class="menu-toggle-label">Menu</span>
         </button>
       </div>
-      <div id="headerMenu" class="header-menu" hidden>
+      <div id="headerMenu" class="header-menu" hidden aria-labelledby="menuToggle">
         <nav class="header-menu-section header-menu-nav" aria-label="Navigation principale">
           <a class="nav-button" href="best-deals.html" style="white-space:nowrap">Meilleurs rabais</a>
           <a class="nav-button" href="pricing.html" style="white-space:nowrap">Forfaits / prix</a>
@@ -457,25 +457,57 @@
     const clientCountDisplays = Array.from(document.querySelectorAll('[data-client-count]'));
     const menuToggle = document.getElementById('menuToggle');
     const headerMenu = document.getElementById('headerMenu');
-    function closeMenu(){
+    const runNextFrame = typeof window.requestAnimationFrame === 'function'
+      ? window.requestAnimationFrame.bind(window)
+      : callback => window.setTimeout(callback, 0);
+    const MENU_TRANSITION_MS = 200;
+    let menuHideTimer = null;
+
+    function isMenuOpen(){
+      return menuToggle ? menuToggle.getAttribute('aria-expanded') === 'true' : false;
+    }
+
+    function openMenu(){
       if(!menuToggle || !headerMenu) return;
-      headerMenu.hidden = true;
+      if(menuHideTimer){
+        clearTimeout(menuHideTimer);
+        menuHideTimer = null;
+      }
+      headerMenu.hidden = false;
+      runNextFrame(() => {
+        headerMenu.classList.add('is-visible');
+      });
+      menuToggle.setAttribute('aria-expanded','true');
+    }
+
+    function closeMenu(options = {}){
+      if(!menuToggle || !headerMenu) return;
+      const {focusToggle = false} = options;
+      headerMenu.classList.remove('is-visible');
+      if(menuHideTimer){
+        clearTimeout(menuHideTimer);
+      }
+      menuHideTimer = window.setTimeout(() => {
+        headerMenu.hidden = true;
+        menuHideTimer = null;
+      }, MENU_TRANSITION_MS);
       menuToggle.setAttribute('aria-expanded','false');
+      if(focusToggle){
+        menuToggle.focus();
+      }
     }
 
     if(menuToggle && headerMenu){
       menuToggle.addEventListener('click', () => {
-        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
-        if(expanded){
+        if(isMenuOpen()){
           closeMenu();
         }else{
-          headerMenu.hidden = false;
-          menuToggle.setAttribute('aria-expanded','true');
+          openMenu();
         }
       });
 
       document.addEventListener('click', event => {
-        if(menuToggle.getAttribute('aria-expanded') !== 'true') return;
+        if(!isMenuOpen()) return;
         const target = event.target;
         if(target instanceof Element && !headerMenu.contains(target) && !menuToggle.contains(target)){
           closeMenu();
@@ -483,9 +515,8 @@
       });
 
       document.addEventListener('keydown', event => {
-        if(event.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true'){
-          closeMenu();
-          menuToggle.focus();
+        if(event.key === 'Escape' && isMenuOpen()){
+          closeMenu({focusToggle:true});
         }
       });
 
