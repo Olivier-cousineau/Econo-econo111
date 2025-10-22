@@ -14,7 +14,15 @@ jobs:
 
       - name: Vérifier l'heure locale (America/Toronto)
         id: timecheck
+        env:
+          EVENT_NAME: ${{ github.event_name }}
         run: |
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            echo "Déclenchement manuel détecté. Ignorer la vérification de l'heure."
+            echo "should_run=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
           current_hour=$(TZ="America/Toronto" date +%H)
           echo "Heure actuelle à Montréal: ${current_hour}h"
           if [ "$current_hour" != "04" ]; then
