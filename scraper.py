@@ -491,3 +491,11 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+import shutil
+
+# Copie le fichier JSON depuis le dossier de travail vers la racine du projet
+shutil.copy(
+    "data/sporting-life/liquidation.json",  # Source (là où ton scraper écrit)
+    "liquidation.json"  # Destination (racine du projet)
+)
