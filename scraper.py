@@ -15,16 +15,37 @@ import datetime as _dt
 import json
 import logging
 import os
+import random
 import re
 import shutil
 import subprocess
 import sys
+import time
 from pathlib import Path
-from typing import Iterable, List, Optional
+from typing import Iterable, List, Optional, Tuple
 from urllib.parse import urljoin
 
 import requests
 from bs4 import BeautifulSoup
+
+try:
+    from selenium import webdriver
+    from selenium.common.exceptions import TimeoutException as SeleniumTimeoutError
+    from selenium.webdriver.chrome.service import Service as ChromeService
+    from selenium.webdriver.common.by import By
+    from selenium.webdriver.common.keys import Keys
+    from selenium.webdriver.support import expected_conditions as EC
+    from selenium.webdriver.support.ui import WebDriverWait
+    from webdriver_manager.chrome import ChromeDriverManager
+except ImportError:  # pragma: no cover - dependency is optional at runtime
+    By = None  # type: ignore[assignment]
+    ChromeDriverManager = None  # type: ignore[assignment]
+    ChromeService = None  # type: ignore[assignment]
+    EC = None  # type: ignore[assignment]
+    Keys = None  # type: ignore[assignment]
+    SeleniumTimeoutError = Exception  # type: ignore[assignment]
+    WebDriverWait = None  # type: ignore[assignment]
+    webdriver = None  # type: ignore[assignment]
 
 try:
     from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
@@ -57,6 +78,95 @@ USE_PLAYWRIGHT = os.getenv("SPORTING_LIFE_USE_PLAYWRIGHT", "1").lower() not in {
     "false",
     "no",
 }
+USE_SELENIUM = os.getenv("SPORTING_LIFE_USE_SELENIUM", "0").lower() not in {
+    "0",
+    "false",
+    "no",
+}
+SELENIUM_HEADLESS = os.getenv(
+    "SPORTING_LIFE_SELENIUM_HEADLESS", "1"
+).lower() not in {"0", "false", "no"}
+SELENIUM_WAIT_TIMEOUT = int(os.getenv("SPORTING_LIFE_SELENIUM_WAIT", "30"))
+SELENIUM_DELAY_RANGE = (
+    float(os.getenv("SPORTING_LIFE_SELENIUM_DELAY_MIN", "0.35")),
+    float(os.getenv("SPORTING_LIFE_SELENIUM_DELAY_MAX", "1.1")),
+)
+SELENIUM_SCROLL_RANGE = (
+    int(os.getenv("SPORTING_LIFE_SELENIUM_SCROLL_MIN", "200")),
+    int(os.getenv("SPORTING_LIFE_SELENIUM_SCROLL_MAX", "600")),
+)
+
+PRODUCT_TILE_SELECTOR = "div.plp-product-tile, div.product-tile, li.product-grid__item"
+
+
+def _clamp_delay_bounds(bounds: Tuple[float, float]) -> Tuple[float, float]:
+    low, high = bounds
+    if high < low:
+        return (high, low)
+    if low == high:
+        # évite les valeurs nulles qui stopperaient la simulation humaine
+        adjusted = low or 0.2
+        return (adjusted, adjusted + 0.01)
+    return bounds
+
+
+SELENIUM_DELAY_RANGE = _clamp_delay_bounds(SELENIUM_DELAY_RANGE)
+
+
+def _clamp_scroll_bounds(bounds: Tuple[int, int]) -> Tuple[int, int]:
+    low, high = bounds
+    if high < low:
+        return (high, low)
+    if low == high:
+        adjusted = max(low, 50)
+        return (adjusted, adjusted + 10)
+    return bounds
+
+
+SELENIUM_SCROLL_RANGE = _clamp_scroll_bounds(SELENIUM_SCROLL_RANGE)
+
+
+def human_pause(min_delay: Optional[float] = None, max_delay: Optional[float] = None) -> None:
+    """Pause execution for a human-like delay."""
+
+    low, high = SELENIUM_DELAY_RANGE
+    min_delay = low if min_delay is None else min_delay
+    max_delay = high if max_delay is None else max_delay
+    if max_delay < min_delay:
+        min_delay, max_delay = max_delay, min_delay
+    time.sleep(random.uniform(min_delay, max_delay))
+
+
+def human_scroll(driver) -> None:
+    """Scroll doucement pour simuler un comportement humain."""
+
+    if not SELENIUM_SCROLL_RANGE:
+        return
+    low, high = SELENIUM_SCROLL_RANGE
+    distance = random.randint(low, high)
+    driver.execute_script("window.scrollBy(0, arguments[0]);", distance)
+    human_pause(0.15, 0.45)
+
+
+def parse_display_counters(text: str) -> Tuple[Optional[int], Optional[int]]:
+    """Extraire les compteurs « affichés / total » d'un bloc de texte."""
+
+    numbers = re.findall(r"\d[\d\s\u00a0,\.]*", text)
+    if len(numbers) < 2:
+        return None, None
+
+    def _to_int(value: str) -> Optional[int]:
+        normalized = re.sub(r"[^0-9]", "", value)
+        if not normalized:
+            return None
+        try:
+            return int(normalized)
+        except ValueError:
+            return None
+
+    current = _to_int(numbers[0])
+    total = _to_int(numbers[1])
+    return current, total
 
 _PLAYWRIGHT_BROWSERS_READY = False
 
@@ -119,7 +229,7 @@ def ensure_playwright_browsers_installed() -> None:
     raise RuntimeError("Playwright browsers could not be installed") from last_error
 
 
-def load_all_products(page, max_clicks=500):
+def load_all_products_playwright(page, max_clicks=500):
     """Charge progressivement tous les produits via le bouton « SHOW MORE ».
 
     Cette routine tente d'imiter un défilement manuel en cliquant
@@ -141,28 +251,8 @@ def load_all_products(page, max_clicks=500):
     def tiles_count():
         return page.evaluate(
             "sel => document.querySelectorAll(sel).length",
-            "div.plp-product-tile, div.product-tile, li.product-grid__item"
+            PRODUCT_TILE_SELECTOR,
         )
-
-    def parse_display_counters(text: str) -> tuple[Optional[int], Optional[int]]:
-        """Extraire les compteurs « affichés / total » d'un bloc de texte."""
-
-        numbers = re.findall(r"\d[\d\s\u00a0,\.]*", text)
-        if len(numbers) < 2:
-            return None, None
-
-        def _to_int(value: str) -> Optional[int]:
-            normalized = re.sub(r"[^0-9]", "", value)
-            if not normalized:
-                return None
-            try:
-                return int(normalized)
-            except ValueError:
-                return None
-
-        current = _to_int(numbers[0])
-        total = _to_int(numbers[1])
-        return current, total
 
     count_selectors = [
         "text=/Showing\\s+\\d+[\\s\\u00a0,\\.]*out of\\s+\\d+/i",
@@ -212,10 +302,10 @@ def load_all_products(page, max_clicks=500):
         increased = False
         try:
             page.wait_for_function(
-                """(prev) => {
-                    const sel = "div.plp-product-tile, div.product-tile, li.product-grid__item";
+                f"""(prev) => {{
+                    const sel = \"{PRODUCT_TILE_SELECTOR}\";
                     return document.querySelectorAll(sel).length > prev;
-                }""",
+                }}""",
                 arg=last,
                 timeout=15000
             )
@@ -268,6 +358,180 @@ def load_all_products(page, max_clicks=500):
             break
 
 
+def load_all_products_selenium(driver, max_clicks: int = 500) -> None:
+    """Utilise Selenium pour charger progressivement tous les produits."""
+
+    if WebDriverWait is None or By is None or EC is None:
+        raise RuntimeError("Selenium n'est pas disponible dans cet environnement")
+
+    wait = WebDriverWait(driver, SELENIUM_WAIT_TIMEOUT)
+
+    def tiles_count() -> int:
+        try:
+            return len(driver.find_elements(By.CSS_SELECTOR, PRODUCT_TILE_SELECTOR))
+        except Exception:
+            return 0
+
+    # fermer la bannière cookies si possible
+    cookie_locators = [
+        (
+            By.XPATH,
+            "//button[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'accepter')]",
+        ),
+        (
+            By.XPATH,
+            "//button[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'accept')]",
+        ),
+    ]
+    for locator in cookie_locators:
+        try:
+            button = WebDriverWait(driver, 5).until(EC.element_to_be_clickable(locator))
+        except SeleniumTimeoutError:
+            continue
+        except Exception:
+            break
+        try:
+            button.click()
+            human_pause()
+            break
+        except Exception:
+            continue
+
+    count_locators = [
+        (
+            By.XPATH,
+            "//*[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'showing') "
+            "and contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'out of')]",
+        ),
+        (
+            By.XPATH,
+            "//*[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'affichage') "
+            "and contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'sur')]",
+        ),
+        (By.CSS_SELECTOR, ".count-info"),
+        (By.CSS_SELECTOR, ".product-count"),
+    ]
+
+    last = tiles_count()
+    print(f"DEBUG: initial tiles (selenium) = {last}")
+
+    for index in range(max_clicks):
+        button_locators = [
+            (
+                By.XPATH,
+                "//button[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'show more')]",
+            ),
+            (
+                By.XPATH,
+                "//button[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'voir plus')]",
+            ),
+            (
+                By.XPATH,
+                "//*[@role='button' and contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'show more')]",
+            ),
+            (
+                By.XPATH,
+                "//*[@role='button' and contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'voir plus')]",
+            ),
+        ]
+
+        candidate = None
+        for locator in button_locators:
+            try:
+                candidate = wait.until(EC.element_to_be_clickable(locator))
+                if candidate:
+                    break
+            except SeleniumTimeoutError:
+                continue
+            except Exception:
+                continue
+
+        if candidate is None:
+            print("DEBUG: no more button or disabled -> stop (selenium).")
+            break
+
+        try:
+            driver.execute_script(
+                "arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});",
+                candidate,
+            )
+        except Exception:
+            pass
+
+        human_pause()
+
+        clicked = False
+        try:
+            candidate.click()
+            clicked = True
+        except Exception:
+            try:
+                driver.execute_script("arguments[0].click();", candidate)
+                clicked = True
+            except Exception:
+                pass
+
+        if not clicked:
+            print("DEBUG: unable to click show more button -> stop (selenium).")
+            break
+
+        human_pause()
+        try:
+            body = driver.find_element(By.TAG_NAME, "body")
+            if Keys is not None:
+                body.send_keys(Keys.PAGE_DOWN)
+        except Exception:
+            pass
+        human_scroll(driver)
+
+        increased = False
+        try:
+            wait.until(
+                lambda d: len(d.find_elements(By.CSS_SELECTOR, PRODUCT_TILE_SELECTOR)) > last
+            )
+            increased = True
+        except SeleniumTimeoutError:
+            try:
+                wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, PRODUCT_TILE_SELECTOR)))
+            except SeleniumTimeoutError:
+                pass
+            human_pause(0.8, 1.6)
+
+        new_count = tiles_count()
+        print(f"DEBUG: click {index + 1} (selenium): {new_count} tiles")
+
+        counter_reached_total = False
+        for locator in count_locators:
+            try:
+                elements = driver.find_elements(*locator)
+            except Exception:
+                continue
+            if not elements:
+                continue
+            text_value = elements[0].text.strip()
+            current, total = parse_display_counters(text_value)
+            if current is None or total is None:
+                continue
+            if total > 0 and current >= total:
+                counter_reached_total = True
+                print(
+                    "DEBUG: count-info indicates all items loaded -> stop (selenium).",
+                    f"({current}/{total})",
+                )
+                last = max(last, current, new_count)
+                break
+
+        if counter_reached_total:
+            break
+
+        if new_count > last:
+            last = new_count
+            continue
+
+        if not increased or new_count <= last:
+            print("DEBUG: tiles did not increase -> stop (selenium).")
+            break
+
 API_URL = os.getenv("ECONODEAL_API_URL")
 API_TOKEN = os.getenv("ECONODEAL_API_TOKEN")
 
@@ -303,21 +567,17 @@ def fetch_html_with_playwright(url: str) -> str:
             except PlaywrightTimeoutError:
                 logging.debug("Network idle state timeout for %s", url)
 
-            load_all_products(page)
-
-            product_tile_selector = (
-                "div.plp-product-tile, div.product-tile, li.product-grid__item"
-            )
+            load_all_products_playwright(page)
 
             try:
-                page.wait_for_selector(product_tile_selector, timeout=PLAYWRIGHT_TIMEOUT)
+                page.wait_for_selector(PRODUCT_TILE_SELECTOR, timeout=PLAYWRIGHT_TIMEOUT)
             except PlaywrightTimeoutError:
                 logging.warning("Timed out waiting for product tiles on %s", url)
 
             try:
                 tile_count = page.evaluate(
                     """(selector) => document.querySelectorAll(selector).length""",
-                    product_tile_selector,
+                    PRODUCT_TILE_SELECTOR,
                 )
             except Exception:
                 tile_count = 0
@@ -345,8 +605,88 @@ def fetch_html_with_playwright(url: str) -> str:
     return content
 
 
+def fetch_html_with_selenium(url: str) -> str:
+    """Return the rendered HTML payload for *url* using Selenium."""
+
+    if (
+        webdriver is None
+        or ChromeDriverManager is None
+        or ChromeService is None
+        or By is None
+        or EC is None
+    ):
+        raise RuntimeError("Selenium is not installed")
+    if WebDriverWait is None:
+        raise RuntimeError("Selenium wait helpers are not available")
+
+    logging.info("Fetching Sporting Life clearance page via Selenium: %s", url)
+    driver = None
+    try:
+        options = webdriver.ChromeOptions()
+        options.add_argument(f"--user-agent={USER_AGENT}")
+        options.add_argument("--disable-blink-features=AutomationControlled")
+        options.add_argument("--disable-dev-shm-usage")
+        options.add_argument("--no-sandbox")
+        options.add_argument("--lang=fr-FR")
+        options.add_argument("--window-size=1280,1080")
+        options.add_argument("--disable-gpu")
+        if SELENIUM_HEADLESS:
+            options.add_argument("--headless=new")
+        options.add_experimental_option("excludeSwitches", ["enable-automation"])
+        options.add_experimental_option("useAutomationExtension", False)
+
+        service = ChromeService(ChromeDriverManager().install())
+        driver = webdriver.Chrome(service=service, options=options)
+        try:
+            driver.execute_cdp_cmd(
+                "Page.addScriptToEvaluateOnNewDocument",
+                {
+                    "source": "Object.defineProperty(navigator, 'webdriver', {get: () => undefined});",
+                },
+            )
+        except Exception:
+            pass
+
+        driver.set_page_load_timeout(REQUEST_TIMEOUT)
+        driver.get(url)
+        human_pause(0.8, 1.6)
+        human_scroll(driver)
+
+        wait = WebDriverWait(driver, SELENIUM_WAIT_TIMEOUT)
+        try:
+            wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, PRODUCT_TILE_SELECTOR)))
+        except SeleniumTimeoutError:
+            logging.debug("Initial Selenium wait for product tiles timed out on %s", url)
+
+        load_all_products_selenium(driver)
+        human_pause(0.4, 1.0)
+
+        try:
+            tile_count = len(driver.find_elements(By.CSS_SELECTOR, PRODUCT_TILE_SELECTOR))
+        except Exception:
+            tile_count = 0
+        logging.info("Selenium collected %s product tiles", tile_count)
+
+        content = driver.page_source
+        if not content:
+            raise RuntimeError("Selenium did not return any page content")
+        return content
+    finally:
+        if driver is not None:
+            try:
+                driver.quit()
+            except Exception:  # pragma: no cover - best effort cleanup
+                pass
+
+
 def fetch_html(url: str) -> str:
-    """Return the HTML payload for *url*, attempting to use Playwright if available."""
+    """Return the HTML payload for *url* using Selenium, Playwright or requests."""
+
+    if USE_SELENIUM:
+        try:
+            return fetch_html_with_selenium(url)
+        except Exception:
+            logging.exception("Selenium fetch failed, falling back to alternate strategies")
 
     if USE_PLAYWRIGHT:
         try:
