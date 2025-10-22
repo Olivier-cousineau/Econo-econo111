@@ -216,12 +216,6 @@
     "lien": "https://www.sportinglife.ca/fr-CA/hommes/v%C3%AAtements/chandails-%C3%A0-capuchon-et-chandails-en-molleton/chandail-ponto-performance-pour-hommes/25408014.html?dwvar_25408014_color=NAVY&dwvar_25408014_size=Sml%20%20Small&cgid=last-run-clearance"
   },
   {
-    "nom": "VuoriPantalon de jogging Ponto Performance pour hommes",
-    "prix": null,
-    "image": "https://cdn.media.amplience.net/i/sportinglife/25644006_BLACK_0/Mens-Ponto-Performance-Jogger-Pant-BLACK?$medium$&fmt=auto&w=315&h=315",
-    "lien": "https://www.sportinglife.ca/fr-CA/hommes/v%C3%AAtements/pantalons/pantalons-de-jogging-et-en-molleton/pantalon-de-jogging-ponto-performance-pour-hommes/25644006.html?dwvar_25644006_color=BLACK&dwvar_25644006_size=Sml%20%20Small&cgid=last-run-clearance"
-  },
-  {
     "nom": "ColumbiaChemise de flanelle Cornell Woods pour hommes",
     "prix": null,
     "image": "https://cdn.media.amplience.net/i/sportinglife/25888017_GREEN_0/Mens-Cornell-Woodsx2122-Flannel-Shirt-GREEN?$medium$&fmt=auto&w=315&h=315",
@@ -232,6 +226,12 @@
     "prix": null,
     "image": "https://cdn.media.amplience.net/i/sportinglife/25550898_RED_0/Mens-Vibe-Ski-Jacket-RED?$medium$&fmt=auto&w=315&h=315",
     "lien": "https://www.sportinglife.ca/fr-CA/hommes/v%C3%AAtements/vestes-et-manteaux/manteaux-de-ski/veste-vibe-pour-hommes/25550898.html?dwvar_25550898_color=RED&dwvar_25550898_size=Sml%20%20Small&cgid=last-run-clearance"
+  },
+  {
+    "nom": "VuoriPantalon de jogging Ponto Performance pour hommes",
+    "prix": null,
+    "image": "https://cdn.media.amplience.net/i/sportinglife/25644006_BLACK_0/Mens-Ponto-Performance-Jogger-Pant-BLACK?$medium$&fmt=auto&w=315&h=315",
+    "lien": "https://www.sportinglife.ca/fr-CA/hommes/v%C3%AAtements/pantalons/pantalons-de-jogging-et-en-molleton/pantalon-de-jogging-ponto-performance-pour-hommes/25644006.html?dwvar_25644006_color=BLACK&dwvar_25644006_size=Sml%20%20Small&cgid=last-run-clearance"
   },
   {
     "nom": "NikePantalon de jogging en molleton Sportswear Club pour femmes",
@@ -1740,12 +1740,6 @@
     "lien": "https://www.sportinglife.ca/fr-CA/pantalon-side-zip-2.0-unisexe/25795600.html?dwvar_25795600_color=PINK&dwvar_25795600_size=Xs%20%20%20X-Sma&cgid=last-run-clearance"
   },
   {
-    "nom": "SalomonBotte de ski S/Pro Alpha 120 EL pour hommes [2024]",
-    "prix": "419,94 $",
-    "image": "https://cdn.media.amplience.net/i/sportinglife/25763939_0/Mens-S/Pro-Alpha-120-EL-Ski-Boot-2024?$medium$&fmt=auto&w=315&h=315",
-    "lien": "https://www.sportinglife.ca/fr-CA/liquidation/botte-de-ski-s-pro-alpha-120-el-pour-hommes-2024/25763939_000_255.html?cgid=last-run-clearance"
-  },
-  {
     "nom": "Miles The LabelPantalon en velours côtelé pour filles [2-10]",
     "prix": "32,97 $",
     "image": "https://cdn.media.amplience.net/i/sportinglife/25901018_BURGUNDY_0/Girls-2-10-Corduroy-Pant-BURGUNDY?$medium$&fmt=auto&w=315&h=315",
@@ -1768,6 +1762,12 @@
     "prix": "52,97 $",
     "image": "https://cdn.media.amplience.net/i/sportinglife/25905860_BLACK_0/Mens-Checked-Sherpa-Lined-Shirt-Jacket-BLACK?$medium$&fmt=auto&w=315&h=315",
     "lien": "https://www.sportinglife.ca/fr-CA/hommes/v%C3%AAtements/hauts/chemises-et-blouses/veste-chemise-%C3%A0-carreaux-doublee-en-sherpa-pour-hommes/25905860.html?dwvar_25905860_color=BLACK&dwvar_25905860_size=Sml%20%20Small&cgid=last-run-clearance"
+  },
+  {
+    "nom": "SalomonBotte de ski S/Pro Alpha 120 EL pour hommes [2024]",
+    "prix": "419,94 $",
+    "image": "https://cdn.media.amplience.net/i/sportinglife/25763939_0/Mens-S/Pro-Alpha-120-EL-Ski-Boot-2024?$medium$&fmt=auto&w=315&h=315",
+    "lien": "https://www.sportinglife.ca/fr-CA/liquidation/botte-de-ski-s-pro-alpha-120-el-pour-hommes-2024/25763939_000_255.html?cgid=last-run-clearance"
   },
   {
     "nom": "RAINSManteau isolé Lohja unisexe",
@@ -2244,6 +2244,12 @@
     "lien": "https://www.sportinglife.ca/fr-CA/femmes/v%C3%AAtements/vestes-et-manteaux/v%C3%AAtements-techniques/veste-de-ski-johanne-pour-femmes/25878950.html?dwvar_25878950_color=PINK&dwvar_25878950_size=Sml%20%20Small&cgid=last-run-clearance"
   },
   {
+    "nom": "Soia & KyoManteau Karelle pour femmes",
+    "prix": null,
+    "image": "https://cdn.media.amplience.net/i/sportinglife/25648585_BLACK_0/Womens-Karelle-Coat-BLACK?$medium$&fmt=auto&w=315&h=315",
+    "lien": "https://www.sportinglife.ca/fr-CA/femmes/v%C3%AAtements/vestes-et-manteaux/vestes-bouffantes/manteau-karelle-pour-femmes/25648585.html?dwvar_25648585_color=BLACK&dwvar_25648585_size=Xs%20%20%20X-Sma&cgid=last-run-clearance"
+  },
+  {
     "nom": "ColumbiaParka Landroamer II pour hommes",
     "prix": "223,97 $",
     "image": "https://cdn.media.amplience.net/i/sportinglife/25883851_BLACK_0/Mens-Landroamer153-II-Parka-BLACK?$medium$&fmt=auto&w=315&h=315",
@@ -2284,12 +2290,6 @@
     "prix": "104,97 $",
     "image": "https://cdn.media.amplience.net/i/sportinglife/25671397_0/Unisex-Whistler-Senior-Ice-Skate?$medium$&fmt=auto&w=315&h=315",
     "lien": "https://www.sportinglife.ca/fr-CA/liquidation/patins-%C3%A0-glace-whistler-senior-unisexes/25671397_000_070.html?cgid=last-run-clearance"
-  },
-  {
-    "nom": "Soia & KyoManteau Karelle pour femmes",
-    "prix": null,
-    "image": "https://cdn.media.amplience.net/i/sportinglife/25648585_BLACK_0/Womens-Karelle-Coat-BLACK?$medium$&fmt=auto&w=315&h=315",
-    "lien": "https://www.sportinglife.ca/fr-CA/femmes/v%C3%AAtements/vestes-et-manteaux/vestes-bouffantes/manteau-karelle-pour-femmes/25648585.html?dwvar_25648585_color=BLACK&dwvar_25648585_size=Xs%20%20%20X-Sma&cgid=last-run-clearance"
   },
   {
     "nom": "Save The DuckManteau Holden pour hommes",
@@ -3954,12 +3954,6 @@
     "lien": "https://www.sportinglife.ca/fr-CA/femmes/v%C3%AAtements/chandails/cardigan-sierra-springs-pour-femmes/25915954.html?dwvar_25915954_color=BLACK-HARDING-MULTI&dwvar_25915954_size=S&cgid=last-run-clearance"
   },
   {
-    "nom": "LazypantsPantalon de jogging cargo décontracté Nova Premium pour femmes",
-    "prix": "56,97 $",
-    "image": "https://cdn.media.amplience.net/i/sportinglife/25910019_CHARCOAL_0/Womens-Nova-Premium-Fleece-Relaxed-Cargo-Sweatpant-CHARCOAL?$medium$&fmt=auto&w=315&h=315",
-    "lien": "https://www.sportinglife.ca/fr-CA/femmes/v%C3%AAtements/pantalons/pantalons-de-jogging-et-en-molleton/pantalon-de-jogging-cargo-decontracte-nova-premium-pour-femmes/25910019.html?dwvar_25910019_color=CHARCOAL&dwvar_25910019_size=Xs%20%20%20X-Sma&cgid=last-run-clearance"
-  },
-  {
     "nom": "HUGOPantalon parachute Hafison pour femmes",
     "prix": "130,96 $",
     "image": "https://cdn.media.amplience.net/i/sportinglife/25901661_BLACK_0/Womens-Hafison-Parachute-Pant-BLACK?$medium$&fmt=auto&w=315&h=315",
@@ -3970,12 +3964,6 @@
     "prix": "51,96 $",
     "image": "https://cdn.media.amplience.net/i/sportinglife/25883109_BOLD-BERRY_0/Junior-Girls-7-16-Sportswear-Soft-Pullover-Hoodie-BOLD-BERRY?$medium$&fmt=auto&w=315&h=315",
     "lien": "https://www.sportinglife.ca/fr-CA/enfants/filles/chandails-%C3%A0-capuchon-et-en-molleton/chandail-%C3%A0-capuchon-doux-sportswear-pour-filles-7-16/25883109.html?dwvar_25883109_color=BOLD-BERRY&dwvar_25883109_size=Sml%20%20Small&cgid=last-run-clearance"
-  },
-  {
-    "nom": "Silver JeansChemise à manches longues en flanelle pour hommes",
-    "prix": "31,97 $",
-    "image": "https://cdn.media.amplience.net/i/sportinglife/25905837_BLUE_0/Mens-Long-Sleeve-Flannel-Shirt-BLUE?$medium$&fmt=auto&w=315&h=315",
-    "lien": "https://www.sportinglife.ca/fr-CA/hommes/v%C3%AAtements/hauts/chemises-et-blouses/chemise-%C3%A0-manches-longues-en-flanelle-pour-hommes/25905837.html?dwvar_25905837_color=BLUE&dwvar_25905837_size=Sml%20%20Small&cgid=last-run-clearance"
   },
   {
     "nom": "Polo Ralph LaurenPantalon de jogging en molleton pour hommes",
@@ -4024,6 +4012,12 @@
     "prix": "54,97 $",
     "image": "https://cdn.media.amplience.net/i/sportinglife/25915490_ASPHALT-BLACK_0/Mens-Skate-Vitals-Remy-Stratton-Crew-Sweatshirt-ASPHALT-BLACK?$medium$&fmt=auto&w=315&h=315",
     "lien": "https://www.sportinglife.ca/fr-CA/hommes/v%C3%AAtements/chandails-%C3%A0-capuchon-et-chandails-en-molleton/chandail-%C3%A0-col-ras-du-cou-skate-vitals-remy-stratton-pour-hommes/25915490.html?dwvar_25915490_color=ASPHALT-BLACK&dwvar_25915490_size=S&cgid=last-run-clearance"
+  },
+  {
+    "nom": "LazypantsPantalon de jogging cargo décontracté Nova Premium pour femmes",
+    "prix": "56,97 $",
+    "image": "https://cdn.media.amplience.net/i/sportinglife/25910019_NATURAL_0/Womens-Nova-Premium-Fleece-Relaxed-Cargo-Sweatpant-NATURAL?$medium$&fmt=auto&w=315&h=315",
+    "lien": "https://www.sportinglife.ca/fr-CA/femmes/v%C3%AAtements/pantalons/pantalons-de-jogging-et-en-molleton/pantalon-de-jogging-cargo-decontracte-nova-premium-pour-femmes/25910019.html?dwvar_25910019_color=NATURAL&dwvar_25910019_size=Sml%20%20Small&cgid=last-run-clearance"
   },
   {
     "nom": "adidas OriginalsT-shirt avec poche pour juniors [8-16]",
@@ -4084,6 +4078,12 @@
     "prix": "88,97 $",
     "image": "https://cdn.media.amplience.net/i/sportinglife/25908542_NAVY_0/Mens-Logo-Graphic-Hoodie-NAVY?$medium$&fmt=auto&w=315&h=315",
     "lien": "https://www.sportinglife.ca/fr-CA/hommes/v%C3%AAtements/chandails-%C3%A0-capuchon-et-chandails-en-molleton/chandail-%C3%A0-capuchon-logo-graphic-pour-hommes/25908542.html?dwvar_25908542_color=NAVY&dwvar_25908542_size=Sml%20%20Small&cgid=last-run-clearance"
+  },
+  {
+    "nom": "Silver JeansChemise à manches longues en flanelle pour hommes",
+    "prix": "31,97 $",
+    "image": "https://cdn.media.amplience.net/i/sportinglife/25905837_BLUE_0/Mens-Long-Sleeve-Flannel-Shirt-BLUE?$medium$&fmt=auto&w=315&h=315",
+    "lien": "https://www.sportinglife.ca/fr-CA/hommes/v%C3%AAtements/hauts/chemises-et-blouses/chemise-%C3%A0-manches-longues-en-flanelle-pour-hommes/25905837.html?dwvar_25905837_color=BLUE&dwvar_25905837_size=Sml%20%20Small&cgid=last-run-clearance"
   },
   {
     "nom": "HUGOPantalon en faux cuir Hileda pour femmes",
@@ -4534,12 +4534,6 @@
     "prix": "49,97 $",
     "image": "https://cdn.media.amplience.net/i/sportinglife/25915952_DUSTY-ROSE_0/Womens-Heritage-Rodeo-Cowgirl-Graphic-T-Shirt-DUSTY-ROSE?$medium$&fmt=auto&w=315&h=315",
     "lien": "https://www.sportinglife.ca/fr-CA/femmes/v%C3%AAtements/hauts/t-shirts/t-shirt-%C3%A0-imprime-heritage-rodeo-cowgirl-pour-femmes/25915952.html?dwvar_25915952_color=DUSTY-ROSE&dwvar_25915952_size=M&cgid=last-run-clearance"
-  },
-  {
-    "nom": "HookéChemise en flanelle Work With Nature pour hommes",
-    "prix": "83,97 $",
-    "image": "https://cdn.media.amplience.net/i/sportinglife/25886292_BROWN_0/Mens-Work-With-Nature-Flannel-Shirt-BROWN?$medium$&fmt=auto&w=315&h=315",
-    "lien": "https://www.sportinglife.ca/fr-CA/hommes/v%C3%AAtements/hauts/chemises-et-blouses/chemise-en-flanelle-work-with-nature-pour-hommes/25886292.html?dwvar_25886292_color=BROWN&dwvar_25886292_size=Sml%20%20Small&cgid=last-run-clearance"
   },
   {
     "nom": "AstridChandail Bowie pour femmes",
@@ -5400,18 +5394,6 @@
     "lien": "https://www.sportinglife.ca/fr-CA/hommes/v%C3%AAtements/chandails-%C3%A0-capuchon-et-chandails-en-molleton/chandail-%C3%A0-capuchon-monroe-patch-pour-hommes/25907338.html?dwvar_25907338_color=BLACK&dwvar_25907338_size=Sml%20%20Small&cgid=last-run-clearance"
   },
   {
-    "nom": "ColumbiaVeste isolée Bird Mountain III pour femmes (grande taille)",
-    "prix": "214,97 $",
-    "image": "https://cdn.media.amplience.net/i/sportinglife/25887910_BLUE_0/Womens-Bird-Mountain153-III-Insulated-Jacket-Plus-Size-BLUE?$medium$&fmt=auto&w=315&h=315",
-    "lien": "https://www.sportinglife.ca/fr-CA/femmes/v%C3%AAtements/vestes-et-manteaux/manteaux-de-ski/veste-isolee-bird-mountain-iii-pour-femmes-grande-taille/25887910.html?dwvar_25887910_color=BLUE&dwvar_25887910_size=2X&cgid=last-run-clearance"
-  },
-  {
-    "nom": "KuwallaChandail en fils jaspés pour hommes",
-    "prix": "41,97 $",
-    "image": "https://cdn.media.amplience.net/i/sportinglife/25907155_GREY_0/Mens-Marled-Thermal-Sweater-GREY?$medium$&fmt=auto&w=315&h=315",
-    "lien": "https://www.sportinglife.ca/fr-CA/hommes/v%C3%AAtements/chandails/chandail-en-fils-jaspes-pour-hommes/25907155.html?dwvar_25907155_color=GREY&dwvar_25907155_size=Sml%20%20Small&cgid=last-run-clearance"
-  },
-  {
     "nom": "RossignolPlanche à neige Ampage Mind Expander pour hommes [2025]",
     "prix": "289,97 $",
     "image": "https://cdn.media.amplience.net/i/sportinglife/25882614_0/Mens-Ampage-Mind-Expander-Snowboard-2025?$medium$&fmt=auto&w=315&h=315",
@@ -6046,12 +6028,6 @@
     "prix": "27,97 $",
     "image": "https://cdn.media.amplience.net/i/sportinglife/25904442_DARK-EARTH_0/Mens-Iguchi-Valley-T-Shirt-DARK-EARTH?$medium$&fmt=auto&w=315&h=315",
     "lien": "https://www.sportinglife.ca/fr-CA/hommes/v%C3%AAtements/hauts/t-shirts/t-shirt-iguchi-valley-pour-hommes/25904442.html?dwvar_25904442_color=DARK-EARTH&dwvar_25904442_size=Sml%20%20Small&cgid=last-run-clearance"
-  },
-  {
-    "nom": "VolcomPantalon en molleton Echo Chamber pour hommes",
-    "prix": "44,97 $",
-    "image": "https://cdn.media.amplience.net/i/sportinglife/25915484_HEATHER-GREY_0/Mens-Echo-Chamber-Fleece-Pant-HEATHER-GREY?$medium$&fmt=auto&w=315&h=315",
-    "lien": "https://www.sportinglife.ca/fr-CA/hommes/v%C3%AAtements/pantalons/pantalons-de-jogging-et-en-molleton/pantalon-en-molleton-echo-chamber-pour-hommes/25915484.html?dwvar_25915484_color=HEATHER-GREY&dwvar_25915484_size=L&cgid=last-run-clearance"
   },
   {
     "nom": "RAINSVeste doudoune longue Alta unisexe",
@@ -10368,12 +10344,6 @@
     "lien": "https://www.sportinglife.ca/fr-CA/hommes/v%C3%AAtements/hauts/chemises-et-blouses/chemise-%C3%A0-carreaux-men-at-work-pour-hommes/25815002.html?dwvar_25815002_color=BLUE&dwvar_25815002_size=Sml%20%20Small&cgid=last-run-clearance"
   },
   {
-    "nom": "Silver JeansChemise en flanelle à manches longues avec poche pour hommes",
-    "prix": "26,94 $",
-    "image": "https://cdn.media.amplience.net/i/sportinglife/25786252_GREY_0/Mens-Long-Sleeve-Pocket-Flannel-Shirt-GREY?$medium$&fmt=auto&w=315&h=315",
-    "lien": "https://www.sportinglife.ca/fr-CA/hommes/v%C3%AAtements/hauts/chemises-et-blouses/chemise-en-flanelle-%C3%A0-manches-longues-avec-poche-pour-hommes/25786252.html?dwvar_25786252_color=GREY&dwvar_25786252_size=Sml%20%20Small&cgid=last-run-clearance"
-  },
-  {
     "nom": "adidasSoutien-gorge sport à soutien élevé TLRD Move Training pour femmes",
     "prix": "41,97 $",
     "image": "https://cdn.media.amplience.net/i/sportinglife/25781568_VIOLET_0/Womens-TLRD-Move-Training-High-Support-Sports-Bra-VIOLET?$medium$&fmt=auto&w=315&h=315",
@@ -11878,12 +11848,6 @@
     "prix": null,
     "image": "https://cdn.media.amplience.net/i/sportinglife/25892167_MOSS-GREEN-HEATHER_0/Mens-Strato-Tech-Hooded-Top-MOSS-GREEN-HEATHER?$medium$&fmt=auto&w=315&h=315",
     "lien": "https://www.sportinglife.ca/fr-CA/hommes/v%C3%AAtements/chandails-%C3%A0-capuchon-et-chandails-en-molleton/haut-%C3%A0-capuchon-strato-tech-pour-hommes/25892167.html?dwvar_25892167_color=MOSS-GREEN-HEATHER&dwvar_25892167_size=Sml%20%20Small&cgid=last-run-clearance"
-  },
-  {
-    "nom": "The Laundry RoomChandail Burn Heart Jump pour femmes",
-    "prix": "87,97 $",
-    "image": "https://cdn.media.amplience.net/i/sportinglife/25915740_BLACK_0/Womens-Burn-Heart-Jump-Sweatshirt-BLACK?$medium$&fmt=auto&w=315&h=315",
-    "lien": "https://www.sportinglife.ca/fr-CA/femmes/v%C3%AAtements/chandails-%C3%A0-capuchon-et-chandails-en-molleton/chandail-burn-heart-jump-pour-femmes/25915740.html?dwvar_25915740_color=BLACK&dwvar_25915740_size=Xs&cgid=last-run-clearance"
   },
   {
     "nom": "ColumbiaChemise tissée à manches courtes avec motifs Tech Trail Utility pour hommes",
@@ -17712,12 +17676,6 @@
     "lien": "https://www.sportinglife.ca/fr-CA/hommes/v%C3%AAtements/chandails-%C3%A0-capuchon-et-chandails-en-molleton/chandail-%C3%A0-empi%C3%A8cements-de-couleurs-own-the-run-pour-hommes/25658006.html?dwvar_25658006_color=BLACK&dwvar_25658006_size=Xxl%20%20X-X-L&cgid=last-run-clearance"
   },
   {
-    "nom": "Soia & KyoGilet Deanna pour femmes",
-    "prix": "171,94 $",
-    "image": "https://cdn.media.amplience.net/i/sportinglife/25648601_BLACK_0/Womens-Deanna-Vest-BLACK?$medium$&fmt=auto&w=315&h=315",
-    "lien": "https://www.sportinglife.ca/fr-CA/femmes/v%C3%AAtements/vestes/gilet-deanna-pour-femmes/25648601.html?dwvar_25648601_color=BLACK&dwvar_25648601_size=Xlg%20%20X-%20La&cgid=last-run-clearance"
-  },
-  {
     "nom": "DickiesHaut épais à manches longues Logo pour hommes",
     "prix": "20,97 $",
     "image": "https://cdn.media.amplience.net/i/sportinglife/25906330_BROWN_0/Mens-Long-Sleeve-Heavyweight-Logo-T-Shirt-BROWN?$medium$&fmt=auto&w=315&h=315",
@@ -19104,12 +19062,6 @@
     "lien": "https://www.sportinglife.ca/fr-CA/femmes/accessoires/plus-daccessoires/bandeau-mince-graphite-jaru-coolnet-uv-unisexe/25735473.html?dwvar_25735473_color=GREY&cgid=last-run-clearance"
   },
   {
-    "nom": "New BalanceCollant Impact Run pour femmes",
-    "prix": "41,94 $",
-    "image": "https://cdn.media.amplience.net/i/sportinglife/25626763_BLACK_0/Womens-Impact-Run-Tight-BLACK?$medium$&fmt=auto&w=315&h=315",
-    "lien": "https://www.sportinglife.ca/fr-CA/femmes/v%C3%AAtements/collants-et-leggings/collant-impact-run-pour-femmes/25626763.html?dwvar_25626763_color=BLACK&dwvar_25626763_size=Xs%20%20%20X-Sma&cgid=last-run-clearance"
-  },
-  {
     "nom": "MaxxisPneu Ardent (29x2,25 po)",
     "prix": "54,94 $",
     "image": "https://cdn.media.amplience.net/i/sportinglife/25763251_0/Ardent-Tire-29x2.25?$medium$&fmt=auto&w=315&h=315",
@@ -19156,6 +19108,12 @@
     "prix": "60,96 $",
     "image": "https://cdn.media.amplience.net/i/sportinglife/25870528_KHAKI_0/Juniors-8-16-Multi-Pocket-Vest-KHAKI?$medium$&fmt=auto&w=315&h=315",
     "lien": "https://www.sportinglife.ca/fr-CA/enfants/gar%C3%A7ons/vestes/gilet-multi-pocket-pour-juniors-8-16/25870528.html?dwvar_25870528_color=KHAKI&dwvar_25870528_size=10%20%20%20Size&cgid=last-run-clearance"
+  },
+  {
+    "nom": "New BalanceCollant Impact Run pour femmes",
+    "prix": "41,94 $",
+    "image": "https://cdn.media.amplience.net/i/sportinglife/25626763_BLACK_0/Womens-Impact-Run-Tight-BLACK?$medium$&fmt=auto&w=315&h=315",
+    "lien": "https://www.sportinglife.ca/fr-CA/femmes/v%C3%AAtements/collants-et-leggings/collant-impact-run-pour-femmes/25626763.html?dwvar_25626763_color=BLACK&dwvar_25626763_size=Xs%20%20%20X-Sma&cgid=last-run-clearance"
   },
   {
     "nom": "Gear AidBoucle à double réglage (3/4 po)",
@@ -22822,12 +22780,6 @@
     "prix": "19,94 $",
     "image": "https://cdn.media.amplience.net/i/sportinglife/25829706_PINK_0/Classic-Hip-Pack-PINK?$medium$&fmt=auto&w=315&h=315",
     "lien": "https://www.sportinglife.ca/fr-CA/equipement/plus-d%E2%80%99equipement/tous-les-sacs/sacs-de-taille-et-sacs-ceinture/sac-banane-classique/25829706.html?dwvar_25829706_color=PINK&cgid=last-run-clearance"
-  },
-  {
-    "nom": "AsicsPantalon Race pour femmes",
-    "prix": "54,94 $",
-    "image": "https://cdn.media.amplience.net/i/sportinglife/25734286_BLACK_0/Womens-Race-Pant-BLACK?$medium$&fmt=auto&w=315&h=315",
-    "lien": "https://www.sportinglife.ca/fr-CA/femmes/v%C3%AAtements/pantalons/pantalon-race-pour-femmes/25734286.html?dwvar_25734286_color=BLACK&dwvar_25734286_size=Xs%20%20%20X-Sma&cgid=last-run-clearance"
   },
   {
     "nom": "TecnicaBottes de ski Cochise Team DYN GW pour juniors [2023]",
@@ -26752,12 +26704,6 @@
     "prix": "54,94 $",
     "image": "https://cdn.media.amplience.net/i/sportinglife/25753781_ROYAL_0/Mens-Classic-Fit-Polo-Prepster-Short-ROYAL?$medium$&fmt=auto&w=315&h=315",
     "lien": "https://www.sportinglife.ca/fr-CA/hommes/v%C3%AAtements/shorts/short-polo-prepster-%C3%A0-coupe-classique-pour-hommes/25753781.html?dwvar_25753781_color=ROYAL&dwvar_25753781_size=Xxl%20%20X-X-L&cgid=last-run-clearance"
-  },
-  {
-    "nom": "Oak & IvyRobe à motifs en viscose pour femmes",
-    "prix": "51,96 $",
-    "image": "https://cdn.media.amplience.net/i/sportinglife/25874389_BLACK_0/Womens-Patterned-Viscose-Dress-BLACK?$medium$&fmt=auto&w=315&h=315",
-    "lien": "https://www.sportinglife.ca/fr-CA/femmes/v%C3%AAtements/robes/robe-%C3%A0-motifs-en-viscose-pour-femmes/25874389.html?dwvar_25874389_color=BLACK&dwvar_25874389_size=Sml%20%20Small&cgid=last-run-clearance"
   },
   {
     "nom": "adidas OriginalsShort VRCT pour juniors [8-16]",
