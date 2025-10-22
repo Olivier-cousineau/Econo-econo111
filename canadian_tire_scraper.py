@@ -386,13 +386,27 @@ def fetch_html_with_requests(url: str) -> str:
     session.headers.update(
         {
             "User-Agent": USER_AGENT,
+            "Accept": (
+                "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8"
+            ),
             "Accept-Language": "fr-CA,fr;q=0.9,en;q=0.8",
-            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            "Accept-Encoding": "gzip, deflate, br",
+            "Cache-Control": "no-cache",
+            "Pragma": "no-cache",
             "Connection": "keep-alive",
+            "Referer": "https://www.canadiantire.ca/fr.html",
+            "Sec-Ch-Ua": '"Chromium";v="123", "Not:A-Brand";v="8"',
+            "Sec-Ch-Ua-Mobile": "?0",
+            "Sec-Ch-Ua-Platform": '"Linux"',
+            "Sec-Fetch-Dest": "document",
+            "Sec-Fetch-Mode": "navigate",
+            "Sec-Fetch-Site": "same-origin",
+            "Sec-Fetch-User": "?1",
+            "Upgrade-Insecure-Requests": "1",
         }
     )
     _add_store_cookies(session)
-    response = session.get(url, timeout=REQUEST_TIMEOUT)
+    response = session.get(url, timeout=REQUEST_TIMEOUT, allow_redirects=True)
     response.raise_for_status()
     return response.text
 
