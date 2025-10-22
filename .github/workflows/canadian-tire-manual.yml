@@ -24,6 +24,9 @@ on:
         required: false
         default: 'true'
 
+permissions:
+  contents: write
+
 jobs:
   scrape:
     name: Lancer le scraper Canadian Tire
