@@ -55,6 +55,10 @@ jobs:
       - name: Publier les résultats
         if: steps.timecheck.outputs.should_run == 'true'
         uses: stefanzweifel/git-auto-commit-action@v5
+        env:
+          INPUT_FILE_PATTERN: |
+            data/sporting-life/liquidation.json
+            liquidation.json
         with:
           commit_message: "chore: update sporting life data"
           file_pattern: |
