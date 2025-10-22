@@ -18,6 +18,7 @@ async def scrape_rona_liquidation():
 
         await page.goto(url, timeout=60000, wait_until="domcontentloaded")
         await page.wait_for_load_state("networkidle")
+        await asyncio.sleep(5)
 
         # Several overlays (cookie banner, store selector) can hide the content.
         # Try to dismiss the most common ones without failing when they are missing.
@@ -33,10 +34,34 @@ async def scrape_rona_liquidation():
                 if element:
                     await element.click()
 
-        # Wait until at least one product container is attached to the DOM.
-        await page.wait_for_selector(".product__info", state="attached", timeout=60000)
+        product_selectors = [
+            ".product__info",
+            ".product",
+            ".product-card",
+            "li.product-grid__item",
+        ]
+
+        products = None
+        for selector in product_selectors:
+            try:
+                await page.wait_for_selector(selector, state="attached", timeout=60000)
+            except PlaywrightTimeoutError:
+                continue
+
+            candidate = page.locator(selector)
+            if await candidate.count() > 0:
+                products = candidate
+                break
+
+        if products is None:
+            raise RuntimeError(
+                "Aucun conteneur de produit n'a été trouvé. Vérifiez les sélecteurs CSS."
+            )
 
         # Ensure that lazy loaded products are visible.
+        with suppress(PlaywrightTimeoutError):
+            await page.wait_for_load_state("networkidle")
+        await asyncio.sleep(2)
         await page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
         await page.wait_for_timeout(1000)
 
@@ -46,15 +71,28 @@ async def scrape_rona_liquidation():
                 return text.strip() if text else None
             return None
 
-        products = page.locator(".product__info")
         count = await products.count()
 
         for index in range(count):
             product = products.nth(index)
 
-            title = await safe_text(product.locator(".product__description"))
-            price = await safe_text(product.locator(".price__value"))
-            discount = await safe_text(product.locator(".price__discount"), timeout=1000)
+            title = await safe_text(
+                product.locator(
+                    ".product__description, .product__name, .product-card__title, "
+                    ".plp-product-card__name"
+                )
+            )
+            price = await safe_text(
+                product.locator(
+                    ".price__value, .price__number, .product-card__price, .plp-product-card__price"
+                )
+            )
+            discount = await safe_text(
+                product.locator(
+                    ".price__discount, .product-card__promotion, .plp-product-card__discount"
+                ),
+                timeout=1000,
+            )
 
             if not any([title, price, discount]):
                 continue
