@@ -41,17 +41,18 @@ async def scrape_rona_liquidation():
                 await page.wait_for_load_state("networkidle")
             await asyncio.sleep(2)
             await page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
-            await page.wait_for_timeout(1000)
+            await asyncio.sleep(15)
 
             products = await page.query_selector_all(".product-tile.js-product-tile")
 
+            html = await page.content()
+            with open("rona_debug.html", "w", encoding="utf-8") as debug_file:
+                debug_file.write(html)
+
             if not products:
-                html = await page.content()
-                with open("rona_debug.html", "w", encoding="utf-8") as f:
-                    f.write(html)
-                raise RuntimeError(
-                    "Aucun produit trouvé — vérifie le fichier rona_debug.html."
-                )
+                print("Aucun produit trouvé – vérifie le fichier rona_debug.html.")
+            else:
+                print("OK produits trouvés")
 
             for product in products:
                 title_el = await product.query_selector(".product-title__title")
@@ -87,11 +88,8 @@ async def scrape_rona_liquidation():
                 )
 
             if not results:
-                html = await page.content()
-                with open("rona_debug.html", "w", encoding="utf-8") as f:
-                    f.write(html)
                 raise RuntimeError(
-                    "Aucun produit trouvé — vérifie le fichier rona_debug.html."
+                    "Aucun produit trouvé – vérifie le fichier rona_debug.html."
                 )
         finally:
             await browser.close()
