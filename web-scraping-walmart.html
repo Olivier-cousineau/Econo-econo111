@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr" data-page="article">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Guide complet pour collecter des données Walmart avec Python, Selenium et l'IDE Web Scraper de Bright Data." />
+  <title>EconoDeal — Web scraping sur Walmart</title>
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+  <header>
+    <div class="container row" style="justify-content:space-between">
+      <div class="row" style="gap:10px;align-items:center">
+        <a class="brand" href="index.html">
+          <img src="assets/logo.svg" alt="EconoDeal – accélérateur de revendeurs" />
+          <span class="brand-text">
+            <span class="brand-title">EconoDeal</span>
+            <span class="brand-tagline">Revendeur gagnant</span>
+          </span>
+        </a>
+      </div>
+      <div class="row" style="gap:12px;align-items:center">
+        <a class="nav-button" href="best-deals.html" style="white-space:nowrap">Meilleurs rabais</a>
+        <a class="nav-button" href="pricing.html" style="white-space:nowrap">Forfaits / prix</a>
+        <a class="nav-button" href="roadmap.html" style="white-space:nowrap">Roadmap / vision</a>
+        <a class="nav-button current" href="web-scraping-walmart.html" style="white-space:nowrap">Web scraping Walmart</a>
+        <div class="lang-switch" aria-label="Sélecteur de langue">
+          <span class="active" aria-current="true">FR</span>
+        </div>
+        <div class="muted">© <span id="year"></span></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container article-layout">
+    <article>
+      <header class="article-hero">
+        <p class="article-kicker">Guide collecte de données</p>
+        <h1>Web scraping sur Walmart : deux méthodes pour nourrir vos analyses</h1>
+        <p class="article-lead">Walmart héberge des milliers de références qui changent de prix plusieurs fois par jour. Ce guide détaille une approche "maison" avec Python + Selenium ainsi qu'une alternative clé en main via le Web Scraper IDE de Bright Data afin d'automatiser votre veille tarifaire sans heurter les barrières anti-bot du détaillant.</p>
+        <div class="article-meta">
+          <span aria-label="Date de mise à jour">📅 <time datetime="2025-01-15">15&nbsp;janvier&nbsp;2025</time></span>
+          <span aria-label="Temps de lecture">⏱️ 9&nbsp;minutes</span>
+          <span aria-label="Public cible">🛒 Revendeurs &amp; analystes e-commerce</span>
+        </div>
+      </header>
+
+      <nav class="article-toc" aria-label="Sommaire">
+        <h2>Sommaire</h2>
+        <ol>
+          <li><a href="#pourquoi">Pourquoi surveiller Walmart ?</a></li>
+          <li><a href="#selenium">Configurer Python + Selenium</a></li>
+          <li><a href="#produit">Extraire les attributs d'un produit</a></li>
+          <li><a href="#limites">Comprendre les limites Walmart</a></li>
+          <li><a href="#bright-data">Alternative Bright Data</a></li>
+          <li><a href="#conformite">Conformité &amp; meilleures pratiques</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+        </ol>
+      </nav>
+
+      <div class="article-content">
+        <section id="pourquoi" class="article-section">
+          <h2>Pourquoi surveiller Walmart&nbsp;?</h2>
+          <p>Avec sa couverture nationale, Walmart est un terrain d'observation idéal pour les revendeurs Amazon/eBay, les équipes pricing et les analystes retail. Automatiser la collecte de ses fiches produits permet de&nbsp;:</p>
+          <ul>
+            <li>Repérer rapidement les chutes de prix exploitables pour l'arbitrage en ligne.</li>
+            <li>Comparer les tarifs régionaux et détecter les ruptures de stock.</li>
+            <li>Consolider descriptions, notations et volumes d'avis afin d'ajuster vos fiches marketplace.</li>
+          </ul>
+          <p>L'enjeu consiste à obtenir ces données sans alerter les défenses anti-scraping du commerçant. Deux familles d'outils permettent d'y parvenir : Selenium pour un contrôle total côté code, et le Web Scraper IDE de Bright Data pour une exécution gérée.</p>
+        </section>
+
+        <section id="selenium" class="article-section">
+          <h2>Configurer Python + Selenium</h2>
+          <p>Selenium pilote un navigateur réel à l'aide d'un WebDriver. Couplé à Python, il reproduit vos gestes (saisie clavier, clics, navigation) et expose le DOM pour extraire les informations souhaitées.</p>
+          <div class="article-subsection">
+            <h3>1. Préparer l'environnement</h3>
+            <p>Installez la bibliothèque Selenium et téléchargez le pilote correspondant à votre navigateur (ChromeDriver dans l'exemple ci-dessous). Référez-vous à la <a href="https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/" target="_blank" rel="noreferrer">documentation officielle</a> pour placer le binaire dans votre <code>PATH</code>.</p>
+<pre><code>pip install selenium</code></pre>
+<pre><code>from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service</code></pre>
+          </div>
+          <div class="article-subsection">
+            <h3>2. Démarrer le navigateur et ouvrir Walmart.com</h3>
+            <p>Initialisez un service ChromeDriver puis ouvrez la page d'accueil de Walmart. Ces instructions peuvent être exécutées dans un script Python ou un Notebook Jupyter.</p>
+<pre><code>s = Service('/path/to/chromedriver')
+driver = webdriver.Chrome(service=s)
+
+driver.get("https://www.walmart.com")</code></pre>
+            <div class="article-callout"><strong>Astuce :</strong> utilisez l'outil Inspect de votre navigateur pour localiser les sélecteurs CSS ou XPath des éléments à scraper. Un champ de recherche <code>&lt;input type="search" name="q"&gt;</code> sera par exemple accessible via <code>find_element("name", "q")</code>.</div>
+          </div>
+          <div class="article-subsection">
+            <h3>3. Simuler une recherche de produits</h3>
+            <p>Une fois le champ trouvé, renseignez votre requête et validez-la. Vous pouvez réutiliser le même objet <code>search</code> pour lancer d'autres requêtes.</p>
+<pre><code>search = driver.find_element("name", "q")
+search.send_keys("Gaming Laptops")
+search.send_keys(Keys.ENTER)</code></pre>
+            <p>Le navigateur retourne alors la grille de résultats pour l'expression choisie. L'ensemble du HTML est accessible via <code>driver.page_source</code> si vous souhaitez parser les cartes produits avec BeautifulSoup, Selectolax ou un parser maison.</p>
+          </div>
+        </section>
+
+        <section id="produit" class="article-section">
+          <h2>Extraire les attributs d'un produit</h2>
+          <p>Pour collecter les détails d'un article précis (titre, prix, notation, volume d'avis), pointez Selenium vers l'URL de la fiche concernée puis ciblez chaque champ grâce à ses attributs HTML.</p>
+          <div class="article-subsection">
+            <h3>1. Charger la fiche produit</h3>
+            <p>Remplacez l'URL ci-dessous par celle de l'article qui vous intéresse.</p>
+<pre><code>url = "https://www.walmart.com/ip/Acer-Nitro-5-15-6-Full-HD-IPS-144Hz-Display-11th-Gen-Intel-Core-i5-11400H-NVIDIA-GeForce-RTX-3050Ti-Laptop-GPU-16GB-DDR4-512GB-NVMe-SSD-Windows-11-Ho/607988022?athbdg=L1101"
+driver.get(url)</code></pre>
+          </div>
+          <div class="article-subsection">
+            <h3>2. Récupérer titre, prix, note et avis</h3>
+            <p>Les sélecteurs ci-dessous correspondent au balisage observé lors de la rédaction de ce guide. Ajustez-les si Walmart modifie sa structure.</p>
+<pre><code>title = driver.find_element(By.TAG_NAME, "h1")
+print(title.text)
+# Acer Nitro 5 , 15.6" Full HD IPS 144Hz Display, ...
+
+price = driver.find_element(By.CSS_SELECTOR, '[itemprop="price"]')
+print(price.text)
+# $899.00
+
+rating = driver.find_element(By.CLASS_NAME, "rating-number")
+print(rating.text)
+# (4.6)
+
+number_of_reviews = driver.find_element(By.CSS_SELECTOR, '[itemprop="ratingCount"]')
+print(number_of_reviews.text)
+# 108 reviews</code></pre>
+            <p>Combinez ces valeurs avec des fonctions de nettoyage (conversion en nombres, stripping des symboles <code>$</code>, etc.) avant de les stocker dans votre base ou feuille de calcul.</p>
+          </div>
+        </section>
+
+        <section id="limites" class="article-section">
+          <h2>Comprendre les limites Walmart</h2>
+          <p>Walmart déploie des mécanismes anti-bot agressifs (CAPTCHA invisibles, limitation IP, analyse du comportement). Même un script Selenium respectueux peut être bloqué après quelques dizaines de requêtes.</p>
+          <div class="article-callout article-callout--warning"><strong>Important :</strong> anticipez des blocages sporadiques. Introduisez des délais aléatoires, faites pivoter vos adresses IP et réduisez le parallélisme. Si vos sessions sont systématiquement interrompues, il ne s'agit probablement pas d'une erreur dans votre code mais bien d'un contrôle automatisé côté Walmart.</div>
+        </section>
+
+        <section id="bright-data" class="article-section">
+          <h2>Alternative Bright Data</h2>
+          <p>Le <strong>Web Scraper IDE</strong> de Bright Data fournit une pile gérée : proxy, résolution de CAPTCHA et exécution serverless. Il devient possible de lancer la collecte sans maintenir d'infrastructure.</p>
+          <div class="article-subsection">
+            <h3>Étapes principales</h3>
+            <ol>
+              <li>Créez un compte Bright Data, puis ouvrez l'onglet <em>Datasets &amp; Web Scraper IDE</em>.</li>
+              <li>Cliquez sur <em>Develop a web scraper (IDE)</em> puis choisissez <em>Start from scratch</em>.</li>
+              <li>Dans la fenêtre <strong>Interaction code</strong>, naviguez vers votre produit cible.</li>
+            </ol>
+<pre><code>navigate('https://www.walmart.com/ip/Acer-Nitro-5-15-6-Full-HD-IPS-144Hz-Display-11th-Gen-Intel-Core-i5-11400H-NVIDIA-GeForce-RTX-3050Ti-Laptop-GPU-16GB-DDR4-512GB-NVMe-SSD-Windows-11-Ho/607988022?athbdg=L1101');</code></pre>
+            <p>Vous pouvez également remplacer l'URL par un paramètre externe avec <code>navigate(input.url)</code> pour lancer plusieurs produits en une seule exécution.</p>
+          </div>
+          <div class="article-subsection">
+            <h3>Parser et collecter les données</h3>
+            <p>Récupérez le HTML puis structurez les informations attendues.</p>
+<pre><code>let data = parse();
+collect({
+    title: data.title,
+    price: data.price,
+    rating: data.rating,
+    number_of_reviews: data.number_of_reviews,
+});</code></pre>
+            <p>Dans la fenêtre <strong>Parser code</strong>, mappez les sélecteurs Walmart vers des champs structurés.</p>
+<pre><code>return {
+    title: $('h1').text().trim(),
+    price: $('span.inline-flex:nth-child(2) > span:nth-child(1)').text(),
+    rating: $('span.f7').text(),
+    number_of_reviews: $('a.f7').text(),
+};</code></pre>
+            <p>Exécutez le script (Ctrl&nbsp;+&nbsp;Entrée) pour afficher les résultats, les télécharger ou configurer une livraison automatisée. Bright Data propose également un dataset Walmart prêt à l'emploi si vous ne souhaitez pas développer votre propre scraper.</p>
+          </div>
+        </section>
+
+        <section id="conformite" class="article-section">
+          <h2>Conformité &amp; meilleures pratiques</h2>
+          <p>Avant toute collecte massive, relisez les conditions d'utilisation de Walmart ainsi que les lois applicables (vie privée, droits d'auteur, directives anti-circumvention). Quelques règles de base&nbsp;:</p>
+          <ul>
+            <li>Limitez le volume de requêtes par minute et identifiez clairement votre agent utilisateur.</li>
+            <li>Évitez de capturer des données personnelles non publiques.</li>
+            <li>Documentez les finalités de traitement et sécurisez les données stockées.</li>
+            <li>Lorsque vous utilisez une solution gérée comme Bright Data, vérifiez que le fournisseur garantit la conformité avec les normes locales.</li>
+          </ul>
+        </section>
+
+        <section id="conclusion" class="article-section">
+          <h2>Conclusion</h2>
+          <p>Selenium offre une grande souplesse pour prototyper un scraper Walmart adapté à vos besoins, mais il requiert une maintenance active face aux contre-mesures du détaillant. Le Web Scraper IDE de Bright Data fournit un raccourci fiable pour industrialiser la collecte tout en gérant l'anti-bot et la mise à l'échelle. Quelle que soit l'approche retenue, gardez la conformité juridique et la qualité des données au cœur de votre processus.</p>
+        </section>
+      </div>
+
+      <section class="article-footer" aria-label="Ressources complémentaires">
+        <h2 style="margin:0;font-size:18px;color:#e2e8f0">Ressources rapides</h2>
+        <ul style="margin:0;padding-left:20px;display:grid;gap:8px">
+          <li><a href="https://www.selenium.dev/documentation/" target="_blank" rel="noreferrer">Documentation Selenium WebDriver</a></li>
+          <li><a href="https://developer.chrome.com/docs/chromedriver/downloads" target="_blank" rel="noreferrer">Télécharger ChromeDriver</a></li>
+          <li><a href="https://brightdata.com/products/web-scraper-ide" target="_blank" rel="noreferrer">Bright Data — Web Scraper IDE</a></li>
+          <li><a href="https://brightdata.com/datasets/walmart" target="_blank" rel="noreferrer">Dataset produits Walmart (Bright Data)</a></li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <div class="container footer">
+    © <span id="yearFooter"></span> EconoDeal · Tous droits réservés
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const currentYear = new Date().getFullYear();
+      const year = document.getElementById('year');
+      const yearFooter = document.getElementById('yearFooter');
+      if (year) year.textContent = currentYear;
+      if (yearFooter) yearFooter.textContent = currentYear;
+    });
+  </script>
+</body>
+</html>
