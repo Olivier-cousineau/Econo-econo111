@@ -126,6 +126,13 @@ def _clamp_scroll_bounds(bounds: Tuple[int, int]) -> Tuple[int, int]:
 SELENIUM_SCROLL_RANGE = _clamp_scroll_bounds(SELENIUM_SCROLL_RANGE)
 
 
+def _normalize_purge_method(value: Optional[str]) -> str:
+    if not value:
+        return "DELETE"
+    normalized = value.strip().upper()
+    return normalized or "DELETE"
+
+
 def human_pause(min_delay: Optional[float] = None, max_delay: Optional[float] = None) -> None:
     """Pause execution for a human-like delay."""
 
@@ -534,6 +541,14 @@ def load_all_products_selenium(driver, max_clicks: int = 500) -> None:
 
 API_URL = os.getenv("ECONODEAL_API_URL")
 API_TOKEN = os.getenv("ECONODEAL_API_TOKEN")
+API_PURGE_URL = os.getenv("ECONODEAL_API_PURGE_URL") or API_URL
+API_PURGE_METHOD = _normalize_purge_method(os.getenv("ECONODEAL_API_PURGE_METHOD"))
+API_PURGE_ENABLED = os.getenv("ECONODEAL_API_PURGE", "1").lower() not in {
+    "0",
+    "false",
+    "no",
+}
+API_PURGE_SUCCESS_STATUSES = {200, 201, 202, 204, 205}
 
 
 def fetch_html_with_requests(url: str) -> str:
@@ -820,18 +835,81 @@ def copy_liquidation_snapshot(
         logging.error("Impossible de copier %s vers %s : %s", source, destination, exc)
 
 
+def purge_remote_dataset(auth_headers: dict[str, str]) -> None:
+    if not API_PURGE_ENABLED or not API_PURGE_URL:
+        logging.debug("No purge endpoint configured; skipping remote dataset purge.")
+        return
+
+    headers = dict(auth_headers)
+    method = API_PURGE_METHOD or "DELETE"
+    logging.info(
+        "Clearing remote Sporting Life dataset via %s %s", method, API_PURGE_URL
+    )
+
+    try:
+        response = requests.request(
+            method,
+            API_PURGE_URL,
+            headers=headers,
+            timeout=REQUEST_TIMEOUT,
+        )
+    except requests.RequestException as exc:
+        logging.warning("Unable to purge remote Sporting Life dataset: %s", exc)
+        return
+
+    if response.status_code == 404:
+        logging.info(
+            "Purge endpoint %s returned 404; assuming dataset already empty.",
+            API_PURGE_URL,
+        )
+        return
+
+    if response.status_code not in API_PURGE_SUCCESS_STATUSES:
+        try:
+            response.raise_for_status()
+        except requests.HTTPError as exc:
+            logging.warning(
+                "Unexpected response while purging Sporting Life dataset (%s %s): %s",
+                method,
+                API_PURGE_URL,
+                exc,
+            )
+        else:
+            logging.info(
+                "Purge request completed with status %s; continuing with upload.",
+                response.status_code,
+            )
+        return
+
+    logging.info("Remote Sporting Life dataset cleared (status %s)", response.status_code)
+
+
 def post_to_api(items: Iterable[dict]) -> None:
     if not API_URL:
         logging.info("No API endpoint configured; skipping upload.")
         return
 
-    headers = {"Content-Type": "application/json"}
-    if API_TOKEN:
-        headers["Authorization"] = f"Bearer {API_TOKEN}"
-
     payload = list(items)
-    logging.info("Posting %s products to %s", len(payload), API_URL)
-    response = requests.post(API_URL, json=payload, headers=headers, timeout=REQUEST_TIMEOUT)
+    auth_headers: dict[str, str] = {}
+    if API_TOKEN:
+        auth_headers["Authorization"] = f"Bearer {API_TOKEN}"
+
+    purge_remote_dataset(auth_headers)
+
+    headers = {"Content-Type": "application/json", **auth_headers}
+    if not payload:
+        logging.info(
+            "Uploading an empty Sporting Life dataset to %s after purge.", API_URL
+        )
+    else:
+        logging.info("Posting %s products to %s", len(payload), API_URL)
+
+    response = requests.post(
+        API_URL,
+        json=payload,
+        headers=headers,
+        timeout=REQUEST_TIMEOUT,
+    )
     response.raise_for_status()
     logging.info("Upload successful with status %s", response.status_code)
 
