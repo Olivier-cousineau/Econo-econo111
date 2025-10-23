@@ -805,8 +805,29 @@ def deduplicate_products(items: Iterable[dict]) -> List[dict]:
 def write_json(items: Iterable[dict], path: Path) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     data = list(items)
+    temp_path = path.with_suffix(path.suffix + ".tmp")
+
+    try:
+        if temp_path.exists():
+            temp_path.unlink()
+        temp_path.write_text(
+            json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
+    except OSError as exc:
+        logging.error("Unable to write temporary Sporting Life dataset: %s", exc)
+        raise
+
+    if path.exists():
+        try:
+            path.unlink()
+            logging.info("Removed previous Sporting Life dataset at %s", path)
+        except OSError as exc:
+            logging.warning(
+                "Unable to remove existing Sporting Life dataset at %s: %s", path, exc
+            )
+
     logging.info("Writing %s products to %s", len(data), path)
-    path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    temp_path.replace(path)
 
 
 def copy_liquidation_snapshot(
