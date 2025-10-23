@@ -635,6 +635,10 @@
         {label:'Sporting Life', slug:'sporting-life', branches: baseBranches()}
       ];
 
+      const PLACEHOLDER_IMAGE = 'https://via.placeholder.com/400x300?text=Liquidation';
+      const AMAZON_DAILY_PATH = 'data/amazon_ca_daily.json';
+      const AMAZON_FALLBACK_PATH = 'data/amazon/canada.json';
+
       function slugify(value){
         if(value === undefined || value === null) return '';
         const text = String(value).normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -663,7 +667,7 @@
         const finalSale = sale ?? regular ?? 0;
         return {
           title: firstDefined(item.title, item.name, 'Article en liquidation'),
-          image: firstDefined(item.image, item.image_url, item.imageUrl, item.img, 'https://via.placeholder.com/400x300?text=Liquidation'),
+          image: firstDefined(item.image, item.image_url, item.imageUrl, item.img, PLACEHOLDER_IMAGE),
           price: finalRegular,
           salePrice: finalSale,
           store: item.store ?? storeLabel,
@@ -673,6 +677,9 @@
           citySlug,
           url: firstDefined(item.url, item.link, '#')
         };
+      }
+      function hasRealImage(deal){
+        return Boolean(deal && deal.image && deal.image !== PLACEHOLDER_IMAGE);
       }
       function discount(p,s){
         const price = Number(p);
@@ -689,7 +696,7 @@
         const c = typeof branch === 'object' ? branch?.slug : branch;
         if(!s) return null;
         if(s === 'amazon'){
-          if(c === 'canada') return 'data/amazon_ca_daily.json';
+          if(c === 'canada') return AMAZON_DAILY_PATH;
           if(!c) return null;
           return `data/${s}/${c}.json`;
         }
@@ -736,6 +743,28 @@
         }
       }
 
+      async function fetchAmazonFallback(storeLabel, branch){
+        try{
+          const res = await fetch(AMAZON_FALLBACK_PATH, {cache:'no-store'});
+          if(!res.ok) return {entries:[], updatedAt:null};
+          let updatedAt = null;
+          const lastModified = res.headers?.get?.('Last-Modified');
+          if(lastModified){
+            const parsed = Date.parse(lastModified);
+            if(Number.isFinite(parsed)) updatedAt = parsed;
+          }
+          const json = await res.json();
+          if(!Array.isArray(json)) return {entries:[], updatedAt};
+          return {
+            entries: json.map(item => normalizeDeal(item, storeLabel, branch)),
+            updatedAt
+          };
+        }catch(error){
+          console.warn('Amazon fallback fetch fail', error);
+          return {entries:[], updatedAt:null};
+        }
+      }
+
       async function fetchOne(path, storeLabel, branch){
         try{
           const res = await fetch(path, {cache:'no-store'});
@@ -748,8 +777,20 @@
           }
           const json = await res.json();
           if(!Array.isArray(json)) return {entries:[], updatedAt};
+          const entries = json.map(item => normalizeDeal(item, storeLabel, branch));
+          const needsFallback =
+            (entries.length === 0 || entries.every(deal => !hasRealImage(deal))) && path === AMAZON_DAILY_PATH;
+          if(needsFallback){
+            const fallback = await fetchAmazonFallback(storeLabel, branch);
+            if(fallback.entries.length && fallback.entries.some(hasRealImage)){
+              const fallbackUpdated = fallback.updatedAt;
+              const mergedUpdated =
+                fallbackUpdated && updatedAt ? Math.max(updatedAt, fallbackUpdated) : (fallbackUpdated ?? updatedAt);
+              return {entries: fallback.entries, updatedAt: mergedUpdated ?? null};
+            }
+          }
           return {
-            entries: json.map(item => normalizeDeal(item, storeLabel, branch)),
+            entries,
             updatedAt
           };
         }catch(error){

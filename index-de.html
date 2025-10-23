@@ -1138,6 +1138,9 @@
 
     const DEFAULT_POSTAL_MESSAGE = 'Gib die ersten drei Zeichen der Postleitzahl ein, um Filialen im Umkreis von 50 km zu finden (z. B. H2X).';
     const BASE_CURRENCY = { code:'CAD', locale:'de-DE' };
+    const PLACEHOLDER_IMAGE = 'https://via.placeholder.com/400x300?text=Liquidation';
+    const AMAZON_DAILY_PATH = 'data/amazon_ca_daily.json';
+    const AMAZON_FALLBACK_PATH = 'data/amazon/canada.json';
     // currency.cadToLocalRate indique la conversion d'un dollar canadien vers la devise locale.
     const COUNTRY_CONFIG = {
       canada: {
@@ -1728,7 +1731,7 @@
 
       return {
         title,
-        image: firstDefined(item.image, item.image_url, item.imageUrl, item.img, 'https://via.placeholder.com/400x300?text=Liquidation'),
+        image: firstDefined(item.image, item.image_url, item.imageUrl, item.img, PLACEHOLDER_IMAGE),
         price: finalRegular,
         salePrice: finalSale,
         store: item.store ?? storeLabel,
@@ -1745,6 +1748,10 @@
         amazonUrl,
         searchIndex
       };
+    }
+
+    function hasRealImage(deal){
+      return Boolean(deal && deal.image && deal.image !== PLACEHOLDER_IMAGE);
     }
 
     function discount(p,s){
@@ -1938,7 +1945,7 @@
         if(!c) return BEST_BUY_AGGREGATE_PATH;
       }
       if(s === 'amazon'){
-        if(c === 'canada') return 'data/amazon_ca_daily.json';
+        if(c === 'canada') return AMAZON_DAILY_PATH;
         if(!c) return null;
         return `data/${s}/${c}.json`;
       }
@@ -2013,13 +2020,35 @@
       }
     }
 
+    async function fetchAmazonFallback(storeLabel, branch){
+      try{
+        const res = await fetch(AMAZON_FALLBACK_PATH, {cache:'no-store'});
+        if(!res.ok) return [];
+        const json = await res.json();
+        if(!Array.isArray(json)) return [];
+        return json.map(item => normalizeDeal(item, storeLabel, branch));
+      }catch(error){
+        console.warn('Amazon fallback fetch fail', error);
+        return [];
+      }
+    }
+
     async function fetchOne(path, storeLabel, branch){
       try{
         const res = await fetch(path, {cache:'no-store'});
         if(!res.ok) return [];
         const json = await res.json();
         if(!Array.isArray(json)) return [];
-        return json.map(item => normalizeDeal(item, storeLabel, branch));
+        const normalized = json.map(item => normalizeDeal(item, storeLabel, branch));
+        const needsFallback =
+          (normalized.length === 0 || normalized.every(deal => !hasRealImage(deal))) && path === AMAZON_DAILY_PATH;
+        if(needsFallback){
+          const fallback = await fetchAmazonFallback(storeLabel, branch);
+          if(fallback.length && fallback.some(hasRealImage)){
+            return fallback;
+          }
+        }
+        return normalized;
       }catch(e){ console.warn('fetch fail', path, e); return []; }
     }
 
