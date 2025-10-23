@@ -19,9 +19,9 @@ async def main() -> None:
             html = await page.content()
             with open("rona_debug.html", "w", encoding="utf-8") as debug_file:
                 debug_file.write(html)
-            print("Aucun produit trouvé — vérifie le fichier rona_debug.html.")
+            print("❌ Aucun produit trouvé – vérifie le fichier rona_debug.html.")
         else:
-            print("OK produits trouvés")
+            print("✅ OK produits trouvés")
 
         await browser.close()
 

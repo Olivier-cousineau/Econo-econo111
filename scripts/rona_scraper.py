@@ -51,9 +51,9 @@ async def scrape_rona_liquidation():
                 debug_file.write(html)
 
             if not products:
-                print("Aucun produit trouvé – vérifie le fichier rona_debug.html.")
+                print("❌ Aucun produit trouvé – vérifie le fichier rona_debug.html.")
             else:
-                print("OK produits trouvés")
+                print("✅ OK produits trouvés")
 
             for product in products:
                 title_el = await product.query_selector(".product-tile__title")
@@ -88,10 +88,6 @@ async def scrape_rona_liquidation():
                     }
                 )
 
-            if not results:
-                raise RuntimeError(
-                    "Aucun produit trouvé – vérifie le fichier rona_debug.html."
-                )
         finally:
             await browser.close()
 
