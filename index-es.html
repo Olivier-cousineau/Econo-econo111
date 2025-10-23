@@ -951,11 +951,17 @@
       };
     });
 
+    const CANADIAN_TIRE_BRANCHES = baseBranches().map(branch => ({
+      ...branch,
+      hasData: branch.slug === 'saint-jerome'
+    }));
+
     const STORES = [
       {label:'Amazon.ca', slug:'amazon', branches:[{label:'En línea', slug:'canada', city:'En línea', hasData:true}]},
       {label:'Best Buy', slug:'best-buy', branches: fullBestBuyBranches()},
       {label:'Home Depot', slug:'home-depot', branches: HOME_DEPOT_CANADA_BRANCHES},
       {label:'Walmart', slug:'walmart', branches: WALMART_QUEBEC_BRANCHES},
+      {label:'Canadian Tire', slug:'canadian-tire', branches: CANADIAN_TIRE_BRANCHES},
       {label:'Rona', slug:'rona', branches: baseBranches()},
       {label:'Patrick Morin', slug:'patrick-morin', branches: baseBranches()},
       {label:'Sporting Life', slug:'sporting-life', branches: baseBranches()}
