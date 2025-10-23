@@ -1,0 +1,92 @@
+name: Scraper Patrick Morin
+
+on:
+  workflow_dispatch:
+    inputs:
+      store_query:
+        description: "Rechercher ce texte dans la liste des magasins (ex.: Prevost)"
+        required: true
+        default: "Prevost"
+        type: string
+      store_label:
+        description: "Libellé du magasin à enregistrer dans le JSON"
+        required: true
+        default: "Patrick Morin"
+        type: string
+      city:
+        description: "Ville à écrire dans le JSON"
+        required: true
+        default: "Prevost"
+        type: string
+      output_path:
+        description: "Chemin du fichier de sortie"
+        required: true
+        default: "data/patrick-morin/prevost.json"
+        type: string
+      upload_to_api:
+        description: "Envoyer les résultats à l'API EconoDeal (si configurée)"
+        required: true
+        default: true
+        type: boolean
+      commit_changes:
+        description: "Commiter automatiquement le JSON mis à jour"
+        required: true
+        default: true
+        type: boolean
+      use_playwright:
+        description: "Utiliser Playwright pour charger la page dynamiquement"
+        required: true
+        default: true
+        type: boolean
+      headless:
+        description: "Exécuter Playwright en mode headless"
+        required: true
+        default: true
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          python -m playwright install --with-deps
+
+      - name: Run Patrick Morin scraper
+        env:
+          ECONODEAL_API_URL: ${{ secrets.ECONODEAL_API_URL }}
+          ECONODEAL_API_TOKEN: ${{ secrets.ECONODEAL_API_TOKEN }}
+          PATRICK_MORIN_AUTO_CONFIRM: "1"
+          PATRICK_MORIN_USE_PLAYWRIGHT: ${{ inputs.use_playwright }}
+          PATRICK_MORIN_HEADLESS: ${{ inputs.headless }}
+        run: |
+          set -euo pipefail
+          EXTRA_ARGS=(--yes)
+          EXTRA_ARGS+=(--store-query "${{ inputs.store_query }}")
+          EXTRA_ARGS+=(--store "${{ inputs.store_label }}")
+          EXTRA_ARGS+=(--city "${{ inputs.city }}")
+          EXTRA_ARGS+=(--output "${{ inputs.output_path }}")
+          if [ "${{ inputs.upload_to_api }}" != "true" ]; then
+            EXTRA_ARGS+=(--no-upload)
+          fi
+          python scripts/patrick_morin_scraper.py "${EXTRA_ARGS[@]}"
+
+      - name: Commit updated dataset
+        if: inputs.commit_changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update patrick morin data"
+          file_pattern: ${{ inputs.output_path }}
