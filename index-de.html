@@ -1619,10 +1619,20 @@
         .join(' ');
     }
 
+    function tokenizeSearchIndex(value){
+      if(typeof value !== 'string' || !value) return [];
+      return value.split(' ').filter(Boolean);
+    }
+
     function ensureSearchIndex(deal){
       if(!deal || typeof deal !== 'object') return '';
       const existing = typeof deal.searchIndex === 'string' ? deal.searchIndex : '';
-      if(existing) return existing;
+      if(existing){
+        if(!Array.isArray(deal.searchTokens)){
+          deal.searchTokens = tokenizeSearchIndex(existing);
+        }
+        return existing;
+      }
       const regenerated = buildSearchIndex(
         deal.title,
         deal.store,
@@ -1635,7 +1645,26 @@
         deal.searchKeywords
       );
       deal.searchIndex = regenerated;
+      deal.searchTokens = tokenizeSearchIndex(regenerated);
       return regenerated;
+    }
+
+    function ensureSearchTokens(deal){
+      if(!deal || typeof deal !== 'object') return [];
+      if(Array.isArray(deal.searchTokens)) return deal.searchTokens;
+      const index = ensureSearchIndex(deal);
+      const tokens = tokenizeSearchIndex(index);
+      deal.searchTokens = tokens;
+      return tokens;
+    }
+
+    function ensureTitleTokens(deal){
+      if(!deal || typeof deal !== 'object') return [];
+      if(Array.isArray(deal.titleTokens)) return deal.titleTokens;
+      const normalized = normalizeSearchText(deal.title);
+      const tokens = tokenizeSearchIndex(normalized);
+      deal.titleTokens = tokens;
+      return tokens;
     }
 
     function normalizeDeal(item, storeLabel, branch){
@@ -1729,6 +1758,9 @@
         searchKeywords
       );
 
+      const searchTokens = tokenizeSearchIndex(searchIndex);
+      const titleTokens = tokenizeSearchIndex(normalizeSearchText(title));
+
       return {
         title,
         image: firstDefined(item.image, item.image_url, item.imageUrl, item.img, PLACEHOLDER_IMAGE),
@@ -1746,7 +1778,9 @@
         asin,
         searchKeywords,
         amazonUrl,
-        searchIndex
+        searchIndex,
+        searchTokens,
+        titleTokens
       };
     }
 
@@ -1892,10 +1926,38 @@
         const pct = discount(d.price,d.salePrice);
         if(s && slugify(d.store || '') !== s) return false;
         if(c && d.branchSlug !== c && d.citySlug !== c) return false;
-        const searchIndex = ensureSearchIndex(d);
-        if(terms.length && !terms.every(term => searchIndex.includes(term))) return false;
+        const tokens = ensureSearchTokens(d);
+        if(terms.length && !terms.every(term => tokens.some(token => token.startsWith(term)))) return false;
+        if(terms.length){
+          const titleTokens = ensureTitleTokens(d);
+          let score = 0;
+          for(const term of terms){
+            if(titleTokens.some(token => token === term)){
+              score += 4;
+            }else if(titleTokens.some(token => token.startsWith(term))){
+              score += 3;
+            }else if(tokens.some(token => token === term)){
+              score += 2;
+            }else if(tokens.some(token => token.startsWith(term))){
+              score += 1;
+            }
+          }
+          d._matchScore = score;
+        }else{
+          d._matchScore = 0;
+        }
+        d._discountPct = pct;
         return pct >= min;
       });
+      if(terms.length){
+        filtered.sort((a,b) => {
+          const scoreDiff = (b._matchScore ?? 0) - (a._matchScore ?? 0);
+          if(scoreDiff) return scoreDiff;
+          const discountDiff = (b._discountPct ?? 0) - (a._discountPct ?? 0);
+          if(discountDiff) return discountDiff;
+          return (a.salePrice ?? Number.POSITIVE_INFINITY) - (b.salePrice ?? Number.POSITIVE_INFINITY);
+        });
+      }
       countEl.textContent = filtered.length;
       if(filtered.length === 0){
         const config = getCountryConfig(activeCountry);
