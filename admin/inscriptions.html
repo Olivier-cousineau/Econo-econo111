@@ -96,6 +96,7 @@
         <span class="badge"><strong id="entryCount">0</strong>&nbsp;inscriptions</span>
         <button id="btnRefresh" type="button">Actualiser</button>
         <button id="btnExport" type="button">Exporter en CSV</button>
+        <button id="btnManual" type="button">Partir manuellement</button>
       </div>
       <div class="metrics" role="list">
         <article class="metric-card" role="listitem">
@@ -127,6 +128,7 @@
     const countEl = document.getElementById('entryCount');
     const btnRefresh = document.getElementById('btnRefresh');
     const btnExport = document.getElementById('btnExport');
+    const btnManual = document.getElementById('btnManual');
     const metricTotalValue = document.getElementById('metricTotalValue');
     const activeClientEl = document.getElementById('activeClient');
 
@@ -324,6 +326,41 @@
       URL.revokeObjectURL(url);
     }
 
+    function promptManualRegistration(){
+      const nameInput = window.prompt('Nom complet du contact ?');
+      if(nameInput === null) return;
+      const emailInput = window.prompt('Courriel du contact ?');
+      if(emailInput === null) return;
+
+      const sanitized = sanitizeEntry({
+        name: nameInput,
+        email: emailInput,
+        registeredAt: new Date().toISOString()
+      });
+
+      if(!sanitized){
+        alert('Le courriel est requis pour créer une inscription.');
+        return;
+      }
+
+      const existingRaw = parseJson(safeRead('econodealRegistrations'));
+      const nextEntries = Array.isArray(existingRaw)
+        ? existingRaw.filter(entry => entry && typeof entry === 'object')
+        : [];
+      nextEntries.push(sanitized);
+
+      try{
+        localStorage.setItem('econodealRegistrations', JSON.stringify(nextEntries));
+      }catch(err){
+        console.error('Impossible d\'enregistrer l\'inscription manuelle', err);
+        alert('Impossible d\'enregistrer l\'inscription manuelle. Vérifiez l\'espace de stockage du navigateur.');
+        return;
+      }
+
+      renderTable();
+      alert('Inscription manuelle ajoutée.');
+    }
+
     async function hashValue(value){
       const encoder = new TextEncoder();
       const data = encoder.encode(value);
@@ -371,6 +408,9 @@
 
     btnRefresh.addEventListener('click', renderTable);
     btnExport.addEventListener('click', downloadCSV);
+    if(btnManual){
+      btnManual.addEventListener('click', promptManualRegistration);
+    }
   </script>
 </body>
 </html>
