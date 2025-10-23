@@ -96,6 +96,7 @@
         <span class="badge"><strong id="entryCount">0</strong>&nbsp;inscriptions</span>
         <button id="btnRefresh" type="button">Actualiser</button>
         <button id="btnExport" type="button">Exporter en CSV</button>
+        <button id="btnScraper" type="button">Lancer le scraper</button>
       </div>
       <div class="metrics" role="list">
         <article class="metric-card" role="listitem">
@@ -127,6 +128,7 @@
     const countEl = document.getElementById('entryCount');
     const btnRefresh = document.getElementById('btnRefresh');
     const btnExport = document.getElementById('btnExport');
+    const btnScraper = document.getElementById('btnScraper');
     const metricTotalValue = document.getElementById('metricTotalValue');
     const activeClientEl = document.getElementById('activeClient');
 
@@ -324,6 +326,133 @@
       URL.revokeObjectURL(url);
     }
 
+    const SCRAPER_BUTTON_LABEL = 'Lancer le scraper';
+    const SCRAPER_BUTTON_LOADING_LABEL = 'Démarrage…';
+    const GITHUB_TOKEN_KEY = 'econodealGithubToken';
+
+    function readSessionValue(key){
+      try{
+        return sessionStorage.getItem(key);
+      }catch(err){
+        console.warn('SessionStorage inaccessible', err);
+        return null;
+      }
+    }
+
+    function writeSessionValue(key, value){
+      try{
+        if(value){
+          sessionStorage.setItem(key, value);
+        }else{
+          sessionStorage.removeItem(key);
+        }
+      }catch(err){
+        console.warn('Impossible de stocker la valeur en session', err);
+      }
+    }
+
+    function deriveGithubConfig(){
+      const globalConfig = (window.__ECONODEAL__ && window.__ECONODEAL__.github) || {};
+      const ownerCandidate = globalConfig.owner || window.ECONODEAL_GITHUB_OWNER || window.GITHUB_OWNER || '';
+      const repoCandidate = globalConfig.repo || window.ECONODEAL_GITHUB_REPO || window.GITHUB_REPO || '';
+      const workflowCandidate = globalConfig.workflow || window.ECONODEAL_GITHUB_WORKFLOW || window.GITHUB_WORKFLOW || 'scrape.yml';
+      const refCandidate = globalConfig.ref || window.ECONODEAL_GITHUB_REF || window.GITHUB_REF || 'main';
+
+      let owner = ownerCandidate.trim();
+      let repo = repoCandidate.trim();
+
+      try{
+        const host = window.location.hostname.toLowerCase();
+        const pathSegments = window.location.pathname.split('/').filter(Boolean);
+        if(!owner && host.endsWith('github.io')){
+          owner = host.split('.')[0] || owner;
+        }
+        if(!repo){
+          if(host.endsWith('github.io') && pathSegments.length > 0){
+            repo = pathSegments[0];
+          }else if(owner){
+            repo = owner;
+          }
+        }
+      }catch(err){
+        console.warn('Impossible de déterminer automatiquement le dépôt GitHub', err);
+      }
+
+      return {
+        owner,
+        repo,
+        workflow: workflowCandidate.trim() || 'scrape.yml',
+        ref: refCandidate.trim() || 'main'
+      };
+    }
+
+    async function triggerScraperRun(){
+      if(!btnScraper) return;
+      const config = deriveGithubConfig();
+      if(!config.owner || !config.repo){
+        alert('Impossible de déterminer le dépôt GitHub cible. Configurez window.ECONODEAL_GITHUB_OWNER et window.ECONODEAL_GITHUB_REPO.');
+        return;
+      }
+
+      const endpoint = `https://api.github.com/repos/${encodeURIComponent(config.owner)}/${encodeURIComponent(config.repo)}/actions/workflows/${encodeURIComponent(config.workflow)}/dispatches`;
+      let token = readSessionValue(GITHUB_TOKEN_KEY) || '';
+      if(!token){
+        const promptValue = window.prompt('Token GitHub avec accès au dépôt (scope repo). Il sera conservé pour cette session seulement :');
+        if(!promptValue) return;
+        token = promptValue.trim();
+      }
+
+      if(!token){
+        alert('Un token GitHub est requis pour démarrer le scraper.');
+        return;
+      }
+
+      writeSessionValue(GITHUB_TOKEN_KEY, token);
+
+      btnScraper.disabled = true;
+      const originalLabel = btnScraper.textContent;
+      btnScraper.textContent = SCRAPER_BUTTON_LOADING_LABEL;
+
+      try{
+        const response = await fetch(endpoint, {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/vnd.github+json',
+            'Authorization': `Bearer ${token}`,
+            'X-GitHub-Api-Version': '2022-11-28',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ ref: config.ref || 'main' })
+        });
+
+        if(response.status === 204){
+          alert('Scraper démarré. Consultez GitHub Actions pour suivre son exécution.');
+          return;
+        }
+
+        if(response.status === 401 || response.status === 403){
+          writeSessionValue(GITHUB_TOKEN_KEY, '');
+        }
+
+        let message = 'Impossible de démarrer le scraper via GitHub Actions.';
+        try{
+          const payload = await response.json();
+          if(payload && payload.message){
+            message += `\n\n${payload.message}`;
+          }
+        }catch(err){
+          console.warn('Réponse inattendue du déclencheur GitHub', err);
+        }
+        alert(message);
+      }catch(err){
+        console.error('Erreur lors du déclenchement du scraper', err);
+        alert('Une erreur est survenue lors du déclenchement du scraper. Consultez la console pour plus de détails.');
+      }finally{
+        btnScraper.disabled = false;
+        btnScraper.textContent = originalLabel || SCRAPER_BUTTON_LABEL;
+      }
+    }
+
     async function hashValue(value){
       const encoder = new TextEncoder();
       const data = encoder.encode(value);
@@ -371,6 +500,9 @@
 
     btnRefresh.addEventListener('click', renderTable);
     btnExport.addEventListener('click', downloadCSV);
+    if(btnScraper){
+      btnScraper.addEventListener('click', triggerScraperRun);
+    }
   </script>
 </body>
 </html>
