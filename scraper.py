@@ -62,6 +62,11 @@ DEFAULT_OUTPUT_PATH = (
 OUTPUT_PATH = Path(os.getenv("SPORTING_LIFE_OUTPUT", str(DEFAULT_OUTPUT_PATH)))
 STORE_NAME = os.getenv("SPORTING_LIFE_STORE", "Sporting Life")
 DEFAULT_CITY = os.getenv("SPORTING_LIFE_CITY", "online")
+BRANCH_MIRRORS = (
+    ("montreal", "Montréal"),
+    ("laval", "Laval"),
+    ("saint-jerome", "Saint-Jérôme"),
+)
 USER_AGENT = os.getenv(
     "SPORTING_LIFE_USER_AGENT",
     (
@@ -763,10 +768,12 @@ def parse_products(html):
 
     for tile in tiles:
         name_tag = tile.select_one("a.pdp-link, a.name-link, a.product-name")
-        price_tag = tile.select_one(".price-sales, .product-sales-price, .price__sale")
+        sale_tag = tile.select_one(".price-sales, .product-sales-price, .price__sale")
+        regular_tag = tile.select_one(".price-standard, .product-standard-price, .price__regular")
 
-        name = name_tag.get_text(strip=True) if name_tag else None
-        price = price_tag.get_text(strip=True) if price_tag else None
+        name = extract_text(name_tag)
+        sale_text = extract_text(sale_tag)
+        regular_text = extract_text(regular_tag)
         link = name_tag.get("href") if name_tag else None
         image = extract_image_url(tile)
 
@@ -777,7 +784,8 @@ def parse_products(html):
             products.append(
                 {
                     "nom": name,
-                    "prix": price,
+                    "prix": sale_text,
+                    "prix_original": regular_text,
                     "image": image,
                     "lien": link,
                 }
@@ -800,6 +808,104 @@ def deduplicate_products(items: Iterable[dict]) -> List[dict]:
         seen.add(key)
         deduped.append(item)
     return deduped
+
+
+def normalize_price_value(value) -> Optional[float]:
+    """Return a ``float`` price when possible.
+
+    Handles strings formatted in the Canadian locale as well as numeric values.
+    """
+
+    if value is None:
+        return None
+    if isinstance(value, bool):
+        return None
+    if isinstance(value, (int, float)):
+        try:
+            return float(value)
+        except (TypeError, ValueError):
+            return None
+    if isinstance(value, str):
+        return parse_price(value)
+    return None
+
+
+def enrich_products(items: Iterable[dict]) -> List[dict]:
+    """Augment raw product dictionaries with Econodeal-friendly fields.
+
+    The scraper historically emitted keys such as ``nom`` and ``prix`` for
+    backwards compatibility. This helper keeps these original fields while
+    also providing the normalized structure expected by the front-end and
+    API clients (``title``, ``price``, ``salePrice``, etc.).
+    """
+
+    enriched: List[dict] = []
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+        name = item.get("nom") or item.get("title")
+        if not name:
+            continue
+        link = item.get("lien") or item.get("url")
+        image = item.get("image")
+        sale_text = item.get("prix") or item.get("sale_price") or item.get("salePrice")
+        regular_text = item.get("prix_original") or item.get("original_price_text") or item.get("original_price") or item.get("originalPrice")
+
+        sale_value = normalize_price_value(sale_text)
+        regular_value = normalize_price_value(item.get("price"))
+        parsed_regular_text = normalize_price_value(regular_text)
+        if parsed_regular_text is not None:
+            regular_value = parsed_regular_text
+        if sale_value is None:
+            sale_value = normalize_price_value(item.get("sale_price")) or normalize_price_value(item.get("salePrice"))
+        if regular_value is None and sale_value is not None:
+            regular_value = sale_value
+        if sale_value is None and regular_value is not None:
+            sale_value = regular_value
+
+        baseline_price = regular_value if regular_value is not None else sale_value
+
+        normalized = {
+            "nom": name,
+            "prix": sale_text,
+            "prix_original": regular_text,
+            "image": image,
+            "lien": link,
+            "title": name,
+            "url": link,
+            "store": item.get("store") or STORE_NAME,
+            "city": item.get("city") or DEFAULT_CITY,
+            "currency": item.get("currency") or "CAD",
+        }
+
+        if baseline_price is not None:
+            normalized["price"] = baseline_price
+            normalized.setdefault("original_price", baseline_price)
+            normalized.setdefault("originalPrice", baseline_price)
+        else:
+            normalized["price"] = None
+
+        if regular_value is not None:
+            normalized["original_price"] = regular_value
+            normalized["originalPrice"] = regular_value
+
+        final_sale = sale_value if sale_value is not None else baseline_price
+        normalized["salePrice"] = final_sale
+        normalized["sale_price"] = final_sale
+
+        if sale_text:
+            normalized.setdefault("priceDisplay", sale_text)
+            normalized.setdefault("salePriceDisplay", sale_text)
+        if regular_text:
+            normalized.setdefault("originalPriceDisplay", regular_text)
+
+        for optional_key in ("brand", "model", "sku", "asin", "branch", "branchSlug"):
+            if optional_key in item and item[optional_key] is not None:
+                normalized[optional_key] = item[optional_key]
+
+        enriched.append(normalized)
+
+    return enriched
 
 
 def write_json(items: Iterable[dict], path: Path) -> None:
@@ -828,6 +934,35 @@ def write_json(items: Iterable[dict], path: Path) -> None:
 
     logging.info("Writing %s products to %s", len(data), path)
     temp_path.replace(path)
+
+
+def mirror_branch_datasets(items: Iterable[dict], base_path: Path) -> None:
+    """Write mirrored JSON files for each tracked Sporting Life branch.
+
+    The front-end expects one JSON payload per branch (Montréal, Laval,
+    Saint-Jérôme). Sporting Life publishes a single clearance catalogue, so we
+    mirror the unified dataset into these branch-specific filenames while
+    adjusting the ``city`` and ``branch`` metadata for display purposes.
+    """
+
+    if not BRANCH_MIRRORS:
+        logging.debug("No Sporting Life branch mirrors configured; skipping export.")
+        return
+
+    for slug, label in BRANCH_MIRRORS:
+        branch_items: List[dict] = []
+        for item in items:
+            if not isinstance(item, dict):
+                continue
+            cloned = dict(item)
+            cloned.setdefault("store", STORE_NAME)
+            cloned["city"] = label
+            cloned.setdefault("branch", label)
+            cloned.setdefault("branchSlug", slug)
+            branch_items.append(cloned)
+
+        branch_path = base_path / f"{slug}.json"
+        write_json(branch_items, branch_path)
 
 
 def copy_liquidation_snapshot(
@@ -942,18 +1077,20 @@ def configure_logging() -> None:
 def main() -> None:
     configure_logging()
     html = fetch_html(SPORTING_LIFE_URL)
-    products = parse_products(html)
-    products = deduplicate_products(products)
-    if not products:
+    raw_products = parse_products(html)
+    deduped_products = deduplicate_products(raw_products)
+    if not deduped_products:
         with open("debug_sportinglife.html", "w", encoding="utf-8") as f:
             f.write(html)
         print(
             "⚠️ Aucun produit trouvé. Le code HTML a été sauvegardé dans debug_sportinglife.html pour inspection."
         )
         logging.warning("No products were found on %s", SPORTING_LIFE_URL)
-    write_json(products, OUTPUT_PATH)
+    enriched_products = enrich_products(deduped_products)
+    write_json(enriched_products, OUTPUT_PATH)
+    mirror_branch_datasets(enriched_products, OUTPUT_PATH.parent)
     copy_liquidation_snapshot(OUTPUT_PATH)
-    post_to_api(products)
+    post_to_api(enriched_products)
 
 
 if __name__ == "__main__":
