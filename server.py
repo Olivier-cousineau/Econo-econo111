@@ -1,6 +1,10 @@
 import os
+import shlex
+import subprocess
+import sys
+import time
 from pathlib import Path
-from typing import Optional
+from typing import List, Optional
 
 from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
@@ -77,6 +81,51 @@ PLAN_CONFIG = {
 }
 
 SUPPORTED_LOCALES = {"da", "de", "en", "es", "fi", "fr", "it", "ja", "nb", "nl", "pl", "pt", "sv"}
+
+
+def _resolve_python_binary() -> str:
+    return (
+        os.environ.get("ADMIN_SCRAPER_PYTHON")
+        or os.environ.get("PYTHON")
+        or os.environ.get("PYTHON_EXECUTABLE")
+        or sys.executable
+    )
+
+
+def _resolve_scraper_command() -> List[str]:
+    override = os.environ.get("ADMIN_SCRAPER_COMMAND")
+    if override:
+        try:
+            parts = shlex.split(override)
+        except ValueError:
+            parts = [override]
+        if parts:
+            return parts
+    script_path = BASE_DIR / "scraper.py"
+    return [_resolve_python_binary(), str(script_path)]
+
+
+def _resolve_scraper_timeout() -> Optional[float]:
+    raw_timeout = os.environ.get("ADMIN_SCRAPER_TIMEOUT")
+    if not raw_timeout:
+        return None
+    try:
+        value = float(raw_timeout)
+    except ValueError:
+        return None
+    return value if value > 0 else None
+
+
+def _tail_output(stdout: Optional[str], stderr: Optional[str], limit: int = 20) -> List[str]:
+    combined = "\n".join(
+        fragment for fragment in ((stdout or ""), (stderr or "")) if fragment
+    ).strip()
+    if not combined:
+        return []
+    lines = combined.splitlines()
+    if len(lines) <= limit:
+        return lines
+    return lines[-limit:]
 
 
 def _ensure_stripe_secret() -> str:
@@ -208,6 +257,88 @@ def checkout_cancelled() -> object:
         200,
         {"Content-Type": "text/html; charset=utf-8"},
     )
+
+
+@app.route("/admin/run-scraper", methods=["POST"])
+def trigger_scraper() -> object:
+    using_override = bool(os.environ.get("ADMIN_SCRAPER_COMMAND"))
+    if not using_override:
+        script_path = BASE_DIR / "scraper.py"
+        if not script_path.exists():
+            message = (
+                "Le fichier scraper.py est introuvable à la racine du projet. "
+                "Définissez ADMIN_SCRAPER_COMMAND pour utiliser une commande personnalisée."
+            )
+            app.logger.error(message)
+            return jsonify({"error": message}), 500
+
+    command = _resolve_scraper_command()
+    timeout = _resolve_scraper_timeout()
+    start = time.monotonic()
+    app.logger.info("Triggering scraper with command: %s", command)
+
+    run_kwargs = {
+        "check": True,
+        "capture_output": True,
+        "text": True,
+        "cwd": str(BASE_DIR),
+    }
+    if timeout:
+        run_kwargs["timeout"] = timeout
+
+    try:
+        completed = subprocess.run(command, **run_kwargs)
+    except FileNotFoundError as exc:
+        message = f"Commande introuvable: {exc.filename or command[0]}"
+        app.logger.error(message)
+        return jsonify({"error": message}), 500
+    except subprocess.TimeoutExpired as exc:  # pragma: no cover - long running task
+        duration = time.monotonic() - start
+        app.logger.error("Scraper timed out after %.2f seconds", duration)
+        return (
+            jsonify(
+                {
+                    "error": "Le scraper a dépassé le temps limite configuré.",
+                    "durationSeconds": duration,
+                    "output": _tail_output(exc.stdout, exc.stderr),
+                }
+            ),
+            504,
+        )
+    except subprocess.CalledProcessError as exc:  # pragma: no cover - runtime failure
+        duration = time.monotonic() - start
+        app.logger.error(
+            "Scraper failed with exit code %s after %.2f seconds",
+            exc.returncode,
+            duration,
+        )
+        return (
+            jsonify(
+                {
+                    "error": f"Le scraper s'est terminé avec le code {exc.returncode}.",
+                    "durationSeconds": duration,
+                    "output": _tail_output(exc.stdout, exc.stderr),
+                }
+            ),
+            500,
+        )
+    except OSError as exc:  # pragma: no cover - environment error
+        app.logger.exception("Unable to start scraper command")
+        return jsonify({"error": str(exc)}), 500
+
+    duration = time.monotonic() - start
+    output_lines = _tail_output(completed.stdout, completed.stderr)
+    if output_lines:
+        app.logger.info("Scraper output tail:\n%s", "\n".join(output_lines))
+
+    message = f"Scraper terminé en {duration:.1f} secondes."
+    payload = {
+        "status": "ok",
+        "message": message,
+        "durationSeconds": duration,
+        "output": output_lines,
+    }
+    return jsonify(payload)
 
 
 if __name__ == "__main__":
