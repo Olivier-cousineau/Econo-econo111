@@ -99,11 +99,10 @@
         <span class="badge"><strong id="entryCount">0</strong>&nbsp;inscriptions</span>
         <button id="btnRefresh" type="button">Actualiser</button>
         <button id="btnExport" type="button">Exporter en CSV</button>
-        <button id="btnRunScraper" data-action="run-scraper" type="button">Partir le scraper</button>
         <button id="btnDispatchWorkflow" data-action="dispatch-workflow" type="button">Lancer via GitHub Actions</button>
         <button id="btnManual" type="button">Partir manuellement</button>
       </div>
-      <div id="scraperStatus" class="status" role="status" aria-live="polite"></div>
+      <div id="actionStatus" class="status" role="status" aria-live="polite"></div>
       <div class="metrics" role="list">
         <article class="metric-card" role="listitem">
           <span class="metric-label">Clients inscrits</span>
@@ -134,18 +133,11 @@
     const countEl = document.getElementById('entryCount');
     const btnRefresh = document.getElementById('btnRefresh');
     const btnExport = document.getElementById('btnExport');
-    const scraperButtons = Array.from(
-      document.querySelectorAll('[data-action="run-scraper"]')
-    );
-    const legacyScraperButton = document.getElementById('btnTriggerScraper');
-    if(legacyScraperButton && !scraperButtons.includes(legacyScraperButton)){
-      scraperButtons.push(legacyScraperButton);
-    }
     const workflowButtons = Array.from(
       document.querySelectorAll('[data-action="dispatch-workflow"]')
     );
     const btnManual = document.getElementById('btnManual');
-    const scraperStatus = document.getElementById('scraperStatus');
+    const actionStatus = document.getElementById('actionStatus');
     const metricTotalValue = document.getElementById('metricTotalValue');
     const activeClientEl = document.getElementById('activeClient');
 
@@ -343,14 +335,14 @@
       URL.revokeObjectURL(url);
     }
 
-    function updateScraperStatus(message, tone){
-      if(!scraperStatus) return;
-      scraperStatus.textContent = message;
-      scraperStatus.classList.remove('success','error');
+    function updateActionStatus(message, tone){
+      if(!actionStatus) return;
+      actionStatus.textContent = message;
+      actionStatus.classList.remove('success','error');
       if(tone === 'success'){
-        scraperStatus.classList.add('success');
+        actionStatus.classList.add('success');
       }else if(tone === 'error'){
-        scraperStatus.classList.add('error');
+        actionStatus.classList.add('error');
       }
     }
 
@@ -363,83 +355,13 @@
       });
     }
 
-    function logScraperOutput(output){
-      if(!output) return;
-      const lines = Array.isArray(output)
-        ? output.flatMap(item => {
-            if(item == null) return [];
-            if(Array.isArray(item)) return item;
-            return String(item).split(/\r?\n/);
-          })
-        : String(output).split(/\r?\n/);
-      const filtered = lines.filter(Boolean);
-      if(filtered.length === 0) return;
-      const preview = filtered.slice(-20);
-      if(typeof console !== 'undefined' && typeof console.groupCollapsed === 'function'){
-        console.groupCollapsed('📦 Sortie du scraper (20 dernières lignes)');
-        preview.forEach(line => console.log(line));
-        console.groupEnd();
-      }else if(typeof console !== 'undefined' && typeof console.log === 'function'){
-        console.log('Sortie du scraper:\n' + preview.join('\n'));
-      }
-    }
-
-    async function triggerScraper(){
-      if(scraperButtons.length === 0) return;
-      const confirmed = window.confirm('Lancer la collecte des aubaines maintenant ?');
-      if(!confirmed) return;
-
-      setButtonsDisabled(scraperButtons, true);
-      updateScraperStatus('Lancement du scraper en cours…');
-
-      try{
-        const response = await fetch('/admin/run-scraper', {
-          method:'POST',
-          headers:{ 'Accept':'application/json' },
-          cache:'no-store'
-        });
-        const contentType = response.headers.get('content-type') || '';
-        const payload = contentType.includes('application/json')
-          ? await response.json().catch(() => ({}))
-          : {};
-
-        if(!response.ok){
-          const message = payload?.error
-            || (response.status === 404
-              ? "L'endpoint /admin/run-scraper est introuvable. Assurez-vous que le serveur backend est démarré."
-              : `Le serveur a retourné le statut ${response.status}.`);
-          updateScraperStatus(message, 'error');
-          if(payload?.output) logScraperOutput(payload.output);
-          return;
-        }
-
-        const parts = [];
-        if(payload?.message){
-          parts.push(String(payload.message));
-        }
-        if(typeof payload?.durationSeconds === 'number' && Number.isFinite(payload.durationSeconds)){
-          parts.push(`Terminé en ${payload.durationSeconds.toFixed(1)} s.`);
-        }
-        if(payload?.output){
-          parts.push('Consultez la console pour les journaux.');
-        }
-        const successMessage = parts.length ? parts.join(' ') : 'Scraper exécuté avec succès.';
-        updateScraperStatus(successMessage, 'success');
-        if(payload?.output) logScraperOutput(payload.output);
-      }catch(err){
-        updateScraperStatus(`Impossible de lancer le scraper : ${err?.message || err}`, 'error');
-      }finally{
-        setButtonsDisabled(scraperButtons, false);
-      }
-    }
-
     async function triggerWorkflow(){
       if(workflowButtons.length === 0) return;
       const confirmed = window.confirm('Déclencher le workflow GitHub Actions maintenant ?');
       if(!confirmed) return;
 
       setButtonsDisabled(workflowButtons, true);
-      updateScraperStatus('Déclenchement du workflow GitHub Actions…');
+      updateActionStatus('Déclenchement du workflow GitHub Actions…');
 
       try{
         const response = await fetch('/admin/dispatch-workflow', {
@@ -460,15 +382,15 @@
             || (response.status === 404
               ? "L'endpoint /admin/dispatch-workflow est introuvable. Assurez-vous que le serveur backend est démarré."
               : `Le serveur a retourné le statut ${response.status}.`);
-          updateScraperStatus(message, 'error');
+          updateActionStatus(message, 'error');
           return;
         }
 
         const successMessage = payload?.message
           || 'Workflow GitHub déclenché. Vérifiez la section Actions pour suivre son exécution.';
-        updateScraperStatus(successMessage, 'success');
+        updateActionStatus(successMessage, 'success');
       }catch(err){
-        updateScraperStatus(`Impossible de déclencher le workflow : ${err?.message || err}`, 'error');
+        updateActionStatus(`Impossible de déclencher le workflow : ${err?.message || err}`, 'error');
       }finally{
         setButtonsDisabled(workflowButtons, false);
       }
@@ -556,9 +478,6 @@
 
     btnRefresh.addEventListener('click', renderTable);
     btnExport.addEventListener('click', downloadCSV);
-    scraperButtons.forEach(button => {
-      button.addEventListener('click', triggerScraper);
-    });
     workflowButtons.forEach(button => {
       button.addEventListener('click', triggerWorkflow);
     });
