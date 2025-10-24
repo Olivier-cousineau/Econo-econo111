@@ -1,0 +1,40 @@
+import requests
+from bs4 import BeautifulSoup
+import json
+import os
+
+URL = "https://www.canadiantire.ca/fr/promotions/liquidation.html"
+TARGET_FILE = "blainville.json"
+
+headers = {
+    "User-Agent": "Mozilla/5.0"
+}
+
+def scrape_canadiantire_liquidation(url):
+    resp = requests.get(url, headers=headers)
+    if resp.status_code != 200:
+        raise Exception(f"Erreur téléchargement page : {resp.status_code}")
+
+    soup = BeautifulSoup(resp.text, 'html.parser')
+    produits = []
+    for article in soup.select("div.product-list__product"):  # adapte ce sélecteur si besoin
+        titre = article.select_one("h3.product-title")
+        prix = article.select_one("span.price")
+        lien = article.select_one("a")
+        image = article.select_one("img")
+        produits.append({
+            "titre": titre.text.strip() if titre else None,
+            "prix": prix.text.strip() if prix else None,
+            "url": "https://www.canadiantire.ca" + lien.get('href') if lien else None,
+            "image": image.get("src") if image else None
+        })
+    return produits
+
+def remplacer_fichier_json(donnees, cible):
+    with open(cible, "w", encoding="utf-8") as f:
+        json.dump(donnees, f, ensure_ascii=False, indent=2)
+
+if __name__ == "__main__":
+    data = scrape_canadiantire_liquidation(URL)
+    remplacer_fichier_json(data, TARGET_FILE)
+    print(f"{len(data)} produits sauvegardés dans {TARGET_FILE}.")
