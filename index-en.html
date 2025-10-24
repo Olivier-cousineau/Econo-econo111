@@ -546,7 +546,7 @@
     function fullBestBuyBranches(){
       return [
         {label:'En ligne (Canada)', slug:'en-ligne', city:'En ligne', hasData:true},
-        {label:'St. Jerome', slug:'st-jerome-658', city:'Saint-Jerome', address:'1040 Boul. du Grand-Heron, Saint-Jerome, QC', storeNumber:'658', hasData:false},
+        {label:'St. Jerome', slug:'st-jerome', city:'Saint-Jerome', address:'1040 Boul. du Grand-Heron, Saint-Jerome, QC', storeNumber:'658', hasData:true},
         {label:'Rosemere', slug:'rosemere-978', city:'Rosemere', address:'401 Boul. Labelle, Unit M-20, Rosemere, QC', storeNumber:'978', hasData:false},
         {label:'Mascouche', slug:'mascouche-663', city:'Mascouche', address:'113 Monte Masson, Bldg. C Unit 2, Mascouche, QC', storeNumber:'663', hasData:false},
         {label:'Best Buy Mobile Kiosk Laval', slug:'best-buy-mobile-kiosk-laval-543', city:'Laval', address:'3035 Boul. Le Carrefour, Unit ZD03, Laval, QC', storeNumber:'543', hasData:false},
@@ -757,6 +757,7 @@
     const DEFAULT_BRANCH_SLUGS = new Set([
       ...baseBranches().map(branch => branch.slug),
       'en-ligne',
+      'st-jerome',
       'montreal-best-buy',
       'laval-best-buy'
     ]);
@@ -963,6 +964,7 @@
 
     const STORES = [
       {label:'Walmart', slug:'walmart', branches: WALMART_QUEBEC_BRANCHES},
+      {label:'Best Buy', slug:'best-buy', branches: fullBestBuyBranches()},
       {label:'Canadian Tire', slug:'canadian-tire', branches: CANADIAN_TIRE_BRANCHES},
       {label:'Patrick Morin', slug:'patrick-morin', branches: patrickMorinBranches()},
       {label:'Sporting Life', slug:'sporting-life', branches: baseBranches()}
@@ -1749,7 +1751,7 @@
         item.amazon_link
       );
 
-      const title = firstDefined(item.title, item.name, 'Article en liquidation');
+      const title = firstDefined(item.title, item.name, item.product_name, item.productName, 'Article en liquidation');
       const cityDisplay = item.city ?? cityLabel;
       const searchIndex = buildSearchIndex(
         title,
@@ -1776,7 +1778,7 @@
         branch: branchLabel ?? cityLabel,
         branchSlug,
         citySlug,
-        url: firstDefined(item.url, item.link, '#'),
+        url: firstDefined(item.url, item.link, item.product_link, item.productLink, '#'),
         brand,
         model,
         sku,
