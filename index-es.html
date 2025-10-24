@@ -534,7 +534,8 @@
       return [
         {label:'Montréal', slug:'montreal', city:'Montréal'},
         {label:'Laval', slug:'laval', city:'Laval'},
-        {label:'Saint-Jérôme', slug:'saint-jerome', city:'Saint-Jérôme'}
+        {label:'Saint-Jérôme', slug:'saint-jerome', city:'Saint-Jérôme'},
+        {label:'Blainville', slug:'blainville', city:'Blainville'}
       ];
     }
     function patrickMorinBranches(){
@@ -768,7 +769,7 @@
     ];
 
     const HOME_DEPOT_CANADA_BRANCHES = WALMART_QUEBEC_BRANCHES.filter(branch => branch.slug !== 'online-7274').map(branch => {
-      const hasData = ['saint-jerome'].includes(branch.slug);
+      const hasData = ['saint-jerome','blainville'].includes(branch.slug);
       return {
         ...branch,
         label: branch.label.replace('Walmart', 'Home Depot'),
@@ -778,7 +779,7 @@
 
     const CANADIAN_TIRE_BRANCHES = baseBranches().map(branch => ({
       ...branch,
-      hasData: branch.slug === 'saint-jerome'
+      hasData: ['saint-jerome','blainville'].includes(branch.slug)
     }));
 
     const STORES = [
@@ -945,6 +946,11 @@
         branchSlug:'saint-jerome',
         cityLabel:'Saint-Jérôme',
         prefixes:['J5L','J7Y','J7Z','J8A']
+      },
+      {
+        branchSlug:'blainville',
+        cityLabel:'Blainville',
+        prefixes:['J7B','J7C','J7E']
       }
     ];
 
@@ -1243,7 +1249,8 @@
     const BRANCH_COORDINATES = {
       'montreal': {lat:45.5019, lng:-73.5674},
       'laval': {lat:45.6066, lng:-73.7124},
-      'saint-jerome': {lat:45.7811, lng:-74.0036}
+      'saint-jerome': {lat:45.7811, lng:-74.0036},
+      'blainville': {lat:45.6763, lng:-73.8736}
     };
 
     let postalBranchSlugs = null;
