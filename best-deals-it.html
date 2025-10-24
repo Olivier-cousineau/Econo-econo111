@@ -220,6 +220,11 @@
           {label:'Saint-Jérôme', slug:'saint-jerome', city:'Saint-Jérôme'}
         ];
       }
+      function patrickMorinBranches(){
+        return [
+          {label:'Prévost', slug:'prevost', city:'Prévost'}
+        ];
+      }
       function fullBestBuyBranches(){
         return [
           {label:'En ligne (Canada)', slug:'en-ligne', city:'En ligne', hasData:true},
@@ -637,7 +642,7 @@
       {label:'Walmart', slug:'walmart', branches: WALMART_QUEBEC_BRANCHES},
       {label:'Canadian Tire', slug:'canadian-tire', branches: CANADIAN_TIRE_BRANCHES},
       {label:'Rona', slug:'rona', branches: baseBranches()},
-      {label:'Patrick Morin', slug:'patrick-morin', branches: baseBranches()},
+      {label:'Patrick Morin', slug:'patrick-morin', branches: patrickMorinBranches()},
       {label:'Sporting Life', slug:'sporting-life', branches: baseBranches()}
     ];
 
