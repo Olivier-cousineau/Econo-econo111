@@ -186,7 +186,7 @@ html[data-page="landing"]{
     html[data-page="landing"] .value-card li{line-height:1.5}
     html[data-page="landing"] .value-metric{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:#86efac;background:rgba(34,197,94,.14);border:1px solid rgba(34,197,94,.28);padding:4px 10px;border-radius:999px;font-weight:600}
     @media (max-width:720px){html[data-page="landing"] .value-section{padding:24px}html[data-page="landing"] .value-grid{grid-template-columns:1fr}html[data-page="landing"] .value-card{gap:10px}}
-    html[data-page="landing"] #registrationOverlay{position:fixed;inset:0;background:radial-gradient(circle at 20% 20%,rgba(34,197,94,.12),transparent 55%),radial-gradient(circle at 80% 30%,rgba(59,130,246,.18),transparent 50%),rgba(4,7,16,.94);display:flex;align-items:center;justify-content:center;padding:20px;z-index:2000;backdrop-filter:blur(6px);pointer-events:none}
+    html[data-page="landing"] #registrationOverlay{position:fixed;inset:0;background:radial-gradient(circle at 20% 20%,rgba(34,197,94,.12),transparent 55%),radial-gradient(circle at 80% 30%,rgba(59,130,246,.18),transparent 50%),rgba(4,7,16,.94);display:flex;align-items:center;justify-content:center;padding:20px;z-index:2000;backdrop-filter:blur(6px)}
     html[data-page="landing"] #registrationOverlay.hidden{display:none}
     html[data-page="landing"] .registration-card{background:linear-gradient(200deg,rgba(9,16,32,.96),rgba(14,28,52,.9));border:1px solid rgba(59,130,246,.3);border-radius:var(--radius);max-width:440px;width:100%;padding:28px;display:grid;gap:16px;box-shadow:0 30px 70px rgba(2,6,23,.75);position:relative;overflow:hidden;pointer-events:auto}
     html[data-page="landing"] .registration-card::before{content:"";position:absolute;inset:2px;border-radius:calc(var(--radius) - 2px);border:1px solid rgba(34,197,94,.28);opacity:.6;pointer-events:none}
@@ -314,7 +314,7 @@ html[data-page="best-deals"]{
     html[data-page="best-deals"] .filters{display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end;margin-top:0;justify-content:flex-end}
     html[data-page="best-deals"] .filters > div:first-child{min-width:220px;flex:1 1 240px}
     html[data-page="best-deals"] .filters > div:last-child{margin-left:auto}
-    html[data-page="best-deals"] #registrationOverlay{position:fixed;inset:0;background:rgba(15,23,42,.95);display:flex;align-items:center;justify-content:center;padding:20px;z-index:2000;pointer-events:none}
+    html[data-page="best-deals"] #registrationOverlay{position:fixed;inset:0;background:rgba(15,23,42,.95);display:flex;align-items:center;justify-content:center;padding:20px;z-index:2000}
     html[data-page="best-deals"] #registrationOverlay.hidden{display:none}
     html[data-page="best-deals"] .registration-card{background:linear-gradient(180deg,var(--panel),#0e1626);border:1px solid var(--border);border-radius:var(--radius);max-width:420px;width:100%;padding:26px;display:grid;gap:16px;box-shadow:0 24px 60px rgba(15,23,42,.5);pointer-events:auto}
     html[data-page="best-deals"] .registration-card form{display:grid;gap:12px}
