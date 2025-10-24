@@ -99,7 +99,7 @@
         <span class="badge"><strong id="entryCount">0</strong>&nbsp;inscriptions</span>
         <button id="btnRefresh" type="button">Actualiser</button>
         <button id="btnExport" type="button">Exporter en CSV</button>
-        <button id="btnTriggerScraper" type="button">Déclencher le scraper</button>
+        <button id="btnRunScraper" data-action="run-scraper" type="button">Partir le scraper</button>
         <button id="btnManual" type="button">Partir manuellement</button>
       </div>
       <div id="scraperStatus" class="status" role="status" aria-live="polite"></div>
@@ -133,7 +133,13 @@
     const countEl = document.getElementById('entryCount');
     const btnRefresh = document.getElementById('btnRefresh');
     const btnExport = document.getElementById('btnExport');
-    const btnTriggerScraper = document.getElementById('btnTriggerScraper');
+    const scraperButtons = Array.from(
+      document.querySelectorAll('[data-action="run-scraper"]')
+    );
+    const legacyScraperButton = document.getElementById('btnTriggerScraper');
+    if(legacyScraperButton && !scraperButtons.includes(legacyScraperButton)){
+      scraperButtons.push(legacyScraperButton);
+    }
     const btnManual = document.getElementById('btnManual');
     const scraperStatus = document.getElementById('scraperStatus');
     const metricTotalValue = document.getElementById('metricTotalValue');
@@ -366,11 +372,13 @@
     }
 
     async function triggerScraper(){
-      if(!btnTriggerScraper) return;
+      if(scraperButtons.length === 0) return;
       const confirmed = window.confirm('Lancer la collecte des aubaines maintenant ?');
       if(!confirmed) return;
 
-      btnTriggerScraper.disabled = true;
+      scraperButtons.forEach(button => {
+        button.disabled = true;
+      });
       updateScraperStatus('Lancement du scraper en cours…');
 
       try{
@@ -410,7 +418,9 @@
       }catch(err){
         updateScraperStatus(`Impossible de lancer le scraper : ${err?.message || err}`, 'error');
       }finally{
-        btnTriggerScraper.disabled = false;
+        scraperButtons.forEach(button => {
+          button.disabled = false;
+        });
       }
     }
 
@@ -496,9 +506,9 @@
 
     btnRefresh.addEventListener('click', renderTable);
     btnExport.addEventListener('click', downloadCSV);
-    if(btnTriggerScraper){
-      btnTriggerScraper.addEventListener('click', triggerScraper);
-    }
+    scraperButtons.forEach(button => {
+      button.addEventListener('click', triggerScraper);
+    });
     if(btnManual){
       btnManual.addEventListener('click', promptManualRegistration);
     }
