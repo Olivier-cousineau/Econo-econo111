@@ -1,40 +1,35 @@
-import requests
-from bs4 import BeautifulSoup
-import json
-import os
+name: Update Canadian Tire Liquidations
 
-URL = "https://www.canadiantire.ca/fr/promotions/liquidation.html"
-TARGET_FILE = "blainville.json"
+on:
+  schedule:
+    - cron: "0 */6 * * *" # Toutes les 6 heures
+  workflow_dispatch: # Permet de lancer manuellement
 
-headers = {
-    "User-Agent": "Mozilla/5.0"
-}
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
 
-def scrape_canadiantire_liquidation(url):
-    resp = requests.get(url, headers=headers)
-    if resp.status_code != 200:
-        raise Exception(f"Erreur téléchargement page : {resp.status_code}")
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    soup = BeautifulSoup(resp.text, 'html.parser')
-    produits = []
-    for article in soup.select("div.product-list__product"):  # adapte ce sélecteur si besoin
-        titre = article.select_one("h3.product-title")
-        prix = article.select_one("span.price")
-        lien = article.select_one("a")
-        image = article.select_one("img")
-        produits.append({
-            "titre": titre.text.strip() if titre else None,
-            "prix": prix.text.strip() if prix else None,
-            "url": "https://www.canadiantire.ca" + lien.get('href') if lien else None,
-            "image": image.get("src") if image else None
-        })
-    return produits
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
 
-def remplacer_fichier_json(donnees, cible):
-    with open(cible, "w", encoding="utf-8") as f:
-        json.dump(donnees, f, ensure_ascii=False, indent=2)
+      - name: Install dependencies
+        run: |
+          pip install playwright pandas
+          playwright install chromium
 
-if __name__ == "__main__":
-    data = scrape_canadiantire_liquidation(URL)
-    remplacer_fichier_json(data, TARGET_FILE)
-    print(f"{len(data)} produits sauvegardés dans {TARGET_FILE}.")
+      - name: Run scraper
+        run: python scraper_canadiantire.py
+
+      - name: Commit and push updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "actions@github.com"
+          git add data/liquidations_canadiantire.json
+          git commit -m "🔁 Update Canadian Tire Liquidations" || echo "No changes to commit"
+          git push
