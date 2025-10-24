@@ -534,7 +534,8 @@
       return [
         {label:'Montréal', slug:'montreal', city:'Montréal'},
         {label:'Laval', slug:'laval', city:'Laval'},
-        {label:'Saint-Jérôme', slug:'saint-jerome', city:'Saint-Jérôme'}
+        {label:'Saint-Jérôme', slug:'saint-jerome', city:'Saint-Jérôme'},
+        {label:'Blainville', slug:'blainville', city:'Blainville'}
       ];
     }
     function patrickMorinBranches(){
@@ -778,7 +779,7 @@
 
     const CANADIAN_TIRE_BRANCHES = baseBranches().map(branch => ({
       ...branch,
-      hasData: branch.slug === 'saint-jerome'
+      hasData: branch.slug === 'saint-jerome' || branch.slug === 'blainville'
     }));
 
     const STORES = [
@@ -944,6 +945,11 @@
         branchSlug:'saint-jerome',
         cityLabel:'Saint-Jérôme',
         prefixes:['J5L','J7Y','J7Z','J8A']
+      },
+      {
+        branchSlug:'blainville',
+        cityLabel:'Blainville',
+        prefixes:['J7B','J7C']
       }
     ];
 
