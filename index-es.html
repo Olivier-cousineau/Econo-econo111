@@ -1409,15 +1409,140 @@
 
     function toNumber(value){
       if(typeof value === 'number' && Number.isFinite(value)) return value;
-      if(typeof value === 'string'){
-        const sanitized = value
-          .replace(/[^0-9,.-]/g,'')
-          .replace(/,(?=[^,]*,)/g,'')
-          .replace(',','.');
-        const num = Number(sanitized);
-        return Number.isFinite(num) ? num : null;
+      if(typeof value === 'string' && value.trim()){
+        const parsed = Number(value.replace(/[^0-9,.-]/g,'').replace(',','.'));
+        return Number.isFinite(parsed) ? parsed : null;
       }
       return null;
+    }
+
+    function collectNumbers(...values){
+      const results = [];
+      for(const value of values){
+        if(Array.isArray(value)){
+          value.forEach(entry => {
+            const parsed = toNumber(entry);
+            if(Number.isFinite(parsed) && parsed > 0) results.push(parsed);
+          });
+          continue;
+        }
+        if(value && typeof value === 'object'){
+          const objectCandidates = [value.value, value.amount, value.price, value.salePrice, value.current, value.lowest, value.highest];
+          objectCandidates.forEach(candidate => {
+            const parsed = toNumber(candidate);
+            if(Number.isFinite(parsed) && parsed > 0) results.push(parsed);
+          });
+          continue;
+        }
+        const parsed = toNumber(value);
+        if(Number.isFinite(parsed) && parsed > 0) results.push(parsed);
+      }
+      return results;
+    }
+
+    function normalizeImageCandidate(value){
+      if(!value) return null;
+      if(Array.isArray(value)){
+        for(const entry of value){
+          const normalized = normalizeImageCandidate(entry);
+          if(normalized) return normalized;
+        }
+        return null;
+      }
+      if(typeof value === 'object'){
+        const potentialKeys = ['url','href','src','image','large','medium','small','default'];
+        for(const key of potentialKeys){
+          if(value[key]){
+            const normalized = normalizeImageCandidate(value[key]);
+            if(normalized) return normalized;
+          }
+        }
+        return null;
+      }
+      const stringValue = String(value).trim();
+      if(!stringValue || stringValue === '#' || stringValue.toLowerCase() === 'null' || stringValue.toLowerCase() === 'n/a') return null;
+      if(stringValue.startsWith('//')) return `https:${stringValue}`;
+      if(/^https?:\/\//i.test(stringValue) || stringValue.startsWith('data:image')) return stringValue;
+      return null;
+    }
+
+    function resolveImage(item){
+      const candidates = [
+        item.image,
+        item.image_url,
+        item.imageUrl,
+        item.img,
+        item.primary_image,
+        item.primaryImage,
+        item.image_link,
+        item.imageLink,
+        item.thumbnail,
+        item.thumbnail_url,
+        item.thumbnailUrl,
+        item.product_image,
+        item.productImage,
+        item.images,
+        item.media
+      ];
+      for(const candidate of candidates){
+        const normalized = normalizeImageCandidate(candidate);
+        if(normalized) return normalized;
+      }
+      return PLACEHOLDER_IMAGE;
+    }
+
+    function resolvePrices(item){
+      const regularCandidates = collectNumbers(
+        item.original_price,
+        item.originalPrice,
+        item.regular_price,
+        item.regularPrice,
+        item.price_before,
+        item.priceBefore,
+        item.list_price,
+        item.listPrice,
+        item.compare_at_price,
+        item.compareAtPrice,
+        item.msrp,
+        item.price
+      );
+      const saleCandidates = collectNumbers(
+        item.salePrice,
+        item.sale_price,
+        item.discount_price,
+        item.discountPrice,
+        item.current_price,
+        item.currentPrice,
+        item.offer_price,
+        item.offerPrice,
+        item.deal_price,
+        item.dealPrice,
+        item.price
+      );
+      let regular = regularCandidates.length ? Math.max(...regularCandidates) : null;
+      let sale = saleCandidates.length ? Math.min(...saleCandidates) : null;
+      if(regular === null && sale !== null){
+        regular = saleCandidates.length > 1 ? Math.max(...saleCandidates) : sale;
+      }
+      if(sale === null && regular !== null){
+        sale = regularCandidates.length > 1 ? Math.min(...regularCandidates) : regular;
+      }
+      if(regular !== null && sale !== null && sale > regular){
+        const combined = [...regularCandidates, ...saleCandidates].filter(n => Number.isFinite(n));
+        if(combined.length){
+          combined.sort((a,b) => a - b);
+          sale = combined[0];
+          regular = combined[combined.length - 1];
+        }else{
+          const swap = sale;
+          sale = regular;
+          regular = swap;
+        }
+      }
+      return {
+        regular: regular ?? 0,
+        sale: sale ?? (regular ?? 0)
+      };
     }
 
     function firstDefined(...values){
@@ -1505,30 +1630,7 @@
       const branchSlug = typeof branch === 'object' && branch && branch.slug ? branch.slug : slugify(branchLabel || item.city || storeLabel);
       const cityLabel = typeof branch === 'object' && branch && branch.city ? branch.city : firstDefined(item.city, branchLabel, storeLabel);
       const citySlug = slugify(cityLabel);
-      const regular = toNumber(firstDefined(
-        item.original_price,
-        item.originalPrice,
-        item.regular_price,
-        item.regularPrice,
-        item.price_before,
-        item.priceBefore,
-        item.listPrice,
-        item.price // fallback when only one price exists
-      ));
-
-      const sale = toNumber(firstDefined(
-        item.salePrice,
-        item.sale_price,
-        item.discount_price,
-        item.discountPrice,
-        item.current_price,
-        item.currentPrice,
-        // When only price and original exist, price is the reduced amount
-        item.price
-      ));
-
-      const finalRegular = regular ?? sale ?? 0;
-      const finalSale = sale ?? regular ?? 0;
+      const {regular: finalRegular, sale: finalSale} = resolvePrices(item);
 
       const brand = firstDefined(
         item.brand,
@@ -1579,6 +1681,7 @@
 
       const title = firstDefined(item.title, item.name, item.product_name, item.productName, 'Article en liquidation');
       const cityDisplay = item.city ?? cityLabel;
+      const image = resolveImage(item);
       const searchIndex = buildSearchIndex(
         title,
         storeLabel,
@@ -1596,7 +1699,7 @@
 
       return {
         title,
-        image: firstDefined(item.image, item.image_url, item.imageUrl, item.img, PLACEHOLDER_IMAGE),
+        image,
         price: finalRegular,
         salePrice: finalSale,
         store: item.store ?? storeLabel,
