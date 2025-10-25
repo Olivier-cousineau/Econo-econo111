@@ -782,6 +782,9 @@
 
     const CANADIAN_TIRE_BRANCHES = baseBranches().map(branch => ({
       ...branch,
+      ...(branch.slug === 'laval'
+        ? { label: 'Laval — 1450 Boul. le Corbusier', address: '1450 Boul. le Corbusier, Laval, QC' }
+        : {}),
       hasData: branch.slug === 'saint-jerome' || branch.slug === 'blainville'
     }));
 
