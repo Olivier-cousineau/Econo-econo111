@@ -1,0 +1,44 @@
+[
+  {
+    "sku": "1695538",
+    "title": "Planche à déclin en MDF modèle vinyle noir Metrie 1/2 po x 5 1/2 po x 8 pi",
+    "brand": "METRIE",
+    "image": "https://cdn.rona.ca/images/00175872_M.jpg",
+    "url": "https://www.rona.ca/fr/produit/planche-a-declin-en-mdf-modele-vinyle-noir-metrie-1-2-po-x-5-1-2-po-x-8-pi-1695538-00175872",
+    "price": 13.0,
+    "original_price": 18.29,
+    "discount_pct": 29,
+    "availability": "12 en magasin",
+    "store": "Rona",
+    "store_id": null,
+    "last_updated": "2025-10-24"
+  },
+  {
+    "sku": "30942",
+    "title": "Housse pour barbecue Pit Boss Série 1150 en polyester noir",
+    "brand": "PIT BOSS",
+    "image": "https://cdn.rona.ca/images/49255033_M.jpg",
+    "url": "https://www.rona.ca/fr/produit/housse-pour-barbecue-pit-boss-serie-1150-en-polyester-noir-30942-49255033",
+    "price": 60.0,
+    "original_price": 97.99,
+    "discount_pct": 39,
+    "availability": "5 en magasin",
+    "store": "Rona",
+    "store_id": null,
+    "last_updated": "2025-10-24"
+  },
+  {
+    "sku": "40262",
+    "title": "Poêle en fonte Pit Boss avec couvercle, 14 po",
+    "brand": "PIT BOSS",
+    "image": "https://cdn.rona.ca/images/16335028_M.jpg",
+    "url": "https://www.rona.ca/fr/produit/poele-en-fonte-pit-boss-avec-couvercle-14-po-40262-16335028",
+    "price": 79.0,
+    "original_price": 99.99,
+    "discount_pct": 21,
+    "availability": "3 en magasin",
+    "store": "Rona",
+    "store_id": null,
+    "last_updated": "2025-10-24"
+  }
+]
