@@ -452,21 +452,30 @@
       };
     });
 
-    const CANADIAN_TIRE_BRANCHES = baseBranches().map(branch => {
+    const CANADIAN_TIRE_BRANCHES = [];
+    for(const branch of baseBranches()){
       if(branch.slug === 'laval'){
-        return {
+        CANADIAN_TIRE_BRANCHES.push({
           ...branch,
           label: 'Laval — 1450 Boul. le Corbusier',
           address: '1450 Boul. le Corbusier, Laval, QC',
           slug: 'laval',
           hasData: true
-        };
+        });
+        CANADIAN_TIRE_BRANCHES.push({
+          ...branch,
+          label: 'Laval — 4975 Blvd. Robert-Bourassa',
+          address: '4975 Blvd. Robert-Bourassa, Laval, QC',
+          slug: 'laval-robert-bourassa',
+          hasData: true
+        });
+        continue;
       }
-      return {
+      CANADIAN_TIRE_BRANCHES.push({
         ...branch,
         hasData: branch.slug === 'saint-jerome' || branch.slug === 'blainville'
-      };
-    });
+      });
+    }
 
     const STORES = [
       {label:'Walmart', slug:'walmart', branches: WALMART_QUEBEC_BRANCHES},
