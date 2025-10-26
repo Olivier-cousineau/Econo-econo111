@@ -629,6 +629,7 @@
           item.thumbnailUrl,
           item.product_image,
           item.productImage,
+          item['product-tile__image src'],
           item.images,
           item.media
         ];
@@ -666,6 +667,21 @@
           item.dealPrice,
           item.price
         );
+        const ronaRegular = toNumber(item['price-box__regularPrice']);
+        const ronaSale = toNumber(item['price-box__price__amount__integer']);
+        const ronaDiscount = toNumber(item['price-box__rebate__amount']);
+        if(Number.isFinite(ronaRegular) && ronaRegular > 0){
+          regularCandidates.push(ronaRegular);
+        }
+        if(Number.isFinite(ronaSale) && ronaSale > 0){
+          saleCandidates.push(ronaSale);
+        }
+        if(Number.isFinite(ronaRegular) && Number.isFinite(ronaDiscount) && ronaRegular > 0 && ronaDiscount > 0){
+          const computed = ronaRegular - ronaDiscount;
+          if(Number.isFinite(computed) && computed > 0){
+            saleCandidates.push(computed);
+          }
+        }
         let regular = regularCandidates.length ? Math.max(...regularCandidates) : null;
         let sale = saleCandidates.length ? Math.min(...saleCandidates) : null;
         if(regular === null && sale !== null){
@@ -698,7 +714,7 @@
         const citySlug = slugify(cityLabel);
         const {regular: finalRegular, sale: finalSale} = resolvePrices(item);
         return {
-          title: firstDefined(item.title, item.name, item.product_name, item.productName, 'Article en liquidation'),
+          title: firstDefined(item['product-tile__title'], item.title, item.name, item.product_name, item.productName, 'Article en liquidation'),
           image: resolveImage(item),
           price: finalRegular,
           salePrice: finalSale,
@@ -707,7 +723,7 @@
           branch: branchLabel ?? cityLabel,
           branchSlug,
           citySlug,
-          url: firstDefined(item.url, item.link, item.product_link, item.productLink, '#')
+          url: firstDefined(item['product-tile__image-link href'], item['button href'], item.url, item.link, item.product_link, item.productLink, '#')
         };
       }
 
