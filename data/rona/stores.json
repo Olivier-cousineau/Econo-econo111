@@ -22,5 +22,13 @@
     "province": "Québec",
     "slug": "mascouche",
     "hasData": true
+  },
+  {
+    "storeNumber": "",
+    "label": "RONA Sainte-Thérèse",
+    "city": "Sainte-Thérèse",
+    "province": "Québec",
+    "slug": "sainte-therese",
+    "hasData": true
   }
 ]
