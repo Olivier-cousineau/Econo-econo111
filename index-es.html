@@ -780,13 +780,21 @@
       };
     });
 
-    const CANADIAN_TIRE_BRANCHES = baseBranches().map(branch => ({
-      ...branch,
-      ...(branch.slug === 'laval'
-        ? { label: 'Laval — 1450 Boul. le Corbusier', address: '1450 Boul. le Corbusier, Laval, QC' }
-        : {}),
-      hasData: branch.slug === 'saint-jerome' || branch.slug === 'blainville'
-    }));
+    const CANADIAN_TIRE_BRANCHES = baseBranches().map(branch => {
+      if(branch.slug === 'laval'){
+        return {
+          ...branch,
+          label: 'Laval — 1450 Boul. le Corbusier',
+          address: '1450 Boul. le Corbusier, Laval, QC',
+          slug: 'laval-1450-boul-le-corbusier',
+          hasData: true
+        };
+      }
+      return {
+        ...branch,
+        hasData: branch.slug === 'saint-jerome' || branch.slug === 'blainville'
+      };
+    });
 
     const STORES = [
       {label:'Walmart', slug:'walmart', branches: WALMART_QUEBEC_BRANCHES},
