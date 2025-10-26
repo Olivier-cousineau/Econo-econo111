@@ -101,6 +101,56 @@
       const dealCount = document.getElementById('dealCount');
       const year = document.getElementById('year');
       const yearFooter = document.getElementById('yearFooter');
+      const DEFAULT_REMOTE_DATA_BASE = 'https://raw.githubusercontent.com/Olivier-cousineau/Econo-econo111/main';
+
+      function detectRemoteDataBase(){
+        const globalBase = window.ECONODEAL_DATA_BASE_URL || window.__ECONODEAL_DATA_BASE_URL__;
+        const htmlBase = document.documentElement?.getAttribute?.('data-data-base-url');
+        const bodyBase = document.body?.getAttribute?.('data-data-base-url');
+        const metaBase = document.querySelector('meta[name="econodeal-data-base"]')?.getAttribute('content');
+        const explicit = [globalBase, htmlBase, bodyBase, metaBase].find(value => typeof value === 'string' && value.trim());
+        if(explicit) return explicit.trim().replace(/\/+$/, '');
+        const host = window.location?.hostname || '';
+        if(host.endsWith('.vercel.app')) return DEFAULT_REMOTE_DATA_BASE;
+        return '';
+      }
+
+      const DATA_REMOTE_BASE = detectRemoteDataBase();
+
+      function buildDataFetchUrls(path){
+        if(!path) return [];
+        if(/^https?:\/\//i.test(path)) return [path];
+        const normalized = path.replace(/^\.?\//, '').replace(/^\/+/, '');
+        const encoded = normalized.split('/').map(segment => encodeURIComponent(segment)).join('/');
+        const urls = [];
+        if(DATA_REMOTE_BASE){
+          urls.push(`${DATA_REMOTE_BASE}/${encoded}`);
+        }
+        const original = path;
+        if(!urls.includes(original)) urls.push(original);
+        if(normalized !== original && !urls.includes(normalized)) urls.push(normalized);
+        return urls;
+      }
+
+      async function fetchDataJson(path, init){
+        const urls = buildDataFetchUrls(path);
+        if(!urls.length) return null;
+        let lastError = null;
+        for(const url of urls){
+          try{
+            const options = {...(init || {})};
+            if(options.cache === undefined) options.cache = 'no-store';
+            const res = await fetch(url, options);
+            if(res && res.ok) return res;
+            lastError = new Error(`Richiesta fallita (${res?.status}) per ${url}`);
+          }catch(err){
+            lastError = err;
+          }
+        }
+        if(lastError) throw lastError;
+        return null;
+      }
+
       const currentYear = new Date().getFullYear();
       if(year) year.textContent = currentYear;
       if(yearFooter) yearFooter.textContent = currentYear;
@@ -682,8 +732,8 @@
         const store = STORES.find(entry => entry.slug === 'rona');
         if(!store) return;
         try{
-          const res = await fetch('data/rona/stores.json', {cache:'no-store'});
-          if(!res.ok) return;
+          const res = await fetchDataJson('data/rona/stores.json');
+          if(!res) return;
           const json = await res.json();
           if(!Array.isArray(json)) return;
           const seen = new Map();
@@ -719,8 +769,8 @@
 
       async function fetchAmazonFallback(storeLabel, branch){
         try{
-          const res = await fetch(AMAZON_FALLBACK_PATH, {cache:'no-store'});
-          if(!res.ok) return {entries:[], updatedAt:null};
+          const res = await fetchDataJson(AMAZON_FALLBACK_PATH);
+          if(!res) return {entries:[], updatedAt:null};
           let updatedAt = null;
           const lastModified = res.headers?.get?.('Last-Modified');
           if(lastModified){
@@ -741,8 +791,8 @@
 
       async function fetchOne(path, storeLabel, branch){
         try{
-          const res = await fetch(path, {cache:'no-store'});
-          if(!res.ok) return {entries:[], updatedAt:null};
+          const res = await fetchDataJson(path);
+          if(!res) return {entries:[], updatedAt:null};
           let updatedAt = null;
           const lastModified = res.headers?.get?.('Last-Modified');
           if(lastModified){
