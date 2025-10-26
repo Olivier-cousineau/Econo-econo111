@@ -14,5 +14,13 @@
     "province": "Québec",
     "slug": "blainville",
     "hasData": true
+  },
+  {
+    "storeNumber": "",
+    "label": "RONA Mascouche",
+    "city": "Mascouche",
+    "province": "Québec",
+    "slug": "mascouche",
+    "hasData": true
   }
 ]
