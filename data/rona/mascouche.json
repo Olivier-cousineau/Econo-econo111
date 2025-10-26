@@ -1,0 +1,58 @@
+[
+  {
+    "sku": "00276237",
+    "title": "Perceuse à percussion sans balais DEWALT XR 20 V avec batterie 4,0 Ah",
+    "brand": "DEWALT",
+    "image": "https://cdn.rona.ca/images/00276237_M.jpg",
+    "url": "https://www.rona.ca/fr/produit/perceuse-a-percussion-sans-balais-dewalt-xr-20-v-avec-batterie-40-ah-dcd800p1-00276237",
+    "price": 299.0,
+    "original_price": 399.0,
+    "discount_pct": 25,
+    "availability": "5 en magasin",
+    "store": "Rona",
+    "store_id": "Mascouche",
+    "last_updated": "2025-01-27"
+  },
+  {
+    "sku": "6691001",
+    "title": "Thermostat intelligent Honeywell Home T9 avec capteur de pièce",
+    "brand": "HONEYWELL",
+    "image": "https://cdn.rona.ca/images/6691001_M.jpg",
+    "url": "https://www.rona.ca/fr/produit/thermostat-intelligent-honeywell-home-t9-avec-capteur-de-piece-rcht9610wfsw2003-6691001",
+    "price": 189.0,
+    "original_price": 249.0,
+    "discount_pct": 24,
+    "availability": "8 en magasin",
+    "store": "Rona",
+    "store_id": "Mascouche",
+    "last_updated": "2025-01-27"
+  },
+  {
+    "sku": "00277063",
+    "title": "Scie circulaire sans balais Metabo HPT MultiVolt 36 V avec lame 7-1/4 po",
+    "brand": "METABO HPT",
+    "image": "https://cdn.rona.ca/images/00277063_M.jpg",
+    "url": "https://www.rona.ca/fr/produit/scie-circulaire-sans-balais-metabo-hpt-multivolt-36-v-avec-lame-7-1-4-po-c3607daq4m-00277063",
+    "price": 279.0,
+    "original_price": 379.0,
+    "discount_pct": 26,
+    "availability": "3 en magasin",
+    "store": "Rona",
+    "store_id": "Mascouche",
+    "last_updated": "2025-01-27"
+  },
+  {
+    "sku": "15025619",
+    "title": "Lavabo autoportant en acrylique MAAX Magnifique 59 po blanc",
+    "brand": "MAAX",
+    "image": "https://cdn.rona.ca/images/15025619_M.jpg",
+    "url": "https://www.rona.ca/fr/produit/lavabo-autoportant-en-acrylique-maax-magnifique-59-po-blanc-105441-000-15025619",
+    "price": 1099.0,
+    "original_price": 1399.0,
+    "discount_pct": 21,
+    "availability": "2 en magasin",
+    "store": "Rona",
+    "store_id": "Mascouche",
+    "last_updated": "2025-01-27"
+  }
+]
