@@ -100,6 +100,7 @@
         <button id="btnRefresh" type="button">Actualiser</button>
         <button id="btnExport" type="button">Exporter en CSV</button>
         <button id="btnDispatchWorkflow" data-action="dispatch-workflow" type="button">Lancer via GitHub Actions</button>
+        <button id="btnPennyDeals" type="button">Détecter les penny deals Walmart</button>
         <button id="btnManual" type="button">Partir manuellement</button>
       </div>
       <div id="actionStatus" class="status" role="status" aria-live="polite"></div>
@@ -136,6 +137,7 @@
     const workflowButtons = Array.from(
       document.querySelectorAll('[data-action="dispatch-workflow"]')
     );
+    const btnPennyDeals = document.getElementById('btnPennyDeals');
     const btnManual = document.getElementById('btnManual');
     const actionStatus = document.getElementById('actionStatus');
     const metricTotalValue = document.getElementById('metricTotalValue');
@@ -335,9 +337,15 @@
       URL.revokeObjectURL(url);
     }
 
-    function updateActionStatus(message, tone){
+    function updateActionStatus(message, tone, options){
       if(!actionStatus) return;
-      actionStatus.textContent = message;
+      const opts = options || {};
+      const useHtml = Boolean(opts.html);
+      if(useHtml){
+        actionStatus.innerHTML = message;
+      }else{
+        actionStatus.textContent = message;
+      }
       actionStatus.classList.remove('success','error');
       if(tone === 'success'){
         actionStatus.classList.add('success');
@@ -393,6 +401,75 @@
         updateActionStatus(`Impossible de déclencher le workflow : ${err?.message || err}`, 'error');
       }finally{
         setButtonsDisabled(workflowButtons, false);
+      }
+    }
+
+    async function detectPennyDeals(){
+      if(!btnPennyDeals) return;
+      const confirmed = window.confirm('Lancer la détection des penny deals Walmart ?');
+      if(!confirmed) return;
+
+      setButtonsDisabled([btnPennyDeals], true);
+      updateActionStatus('Détection des penny deals en cours…');
+
+      let payload = {};
+
+      try{
+        const response = await fetch('/admin/penny-deals', {
+          method:'POST',
+          headers:{
+            'Accept':'application/json'
+          },
+          cache:'no-store'
+        });
+
+        const contentType = response.headers.get('content-type') || '';
+        if(contentType.includes('application/json')){
+          payload = await response.json().catch(() => ({}));
+        }
+
+        if(!response.ok){
+          const message = payload?.error
+            || `Le serveur a retourné le statut ${response.status}.`;
+          updateActionStatus(message, 'error');
+          return;
+        }
+
+        const count = typeof payload.count === 'number' ? payload.count : 0;
+        const plural = count > 1 ? 's' : '';
+        let message = `Détection terminée : ${count} penny deal${plural} détecté${plural}.`;
+
+        let warningCount = 0;
+        if(typeof payload.warningCount === 'number'){
+          warningCount = payload.warningCount;
+        }else if(Array.isArray(payload.errors)){
+          warningCount = payload.errors.length;
+        }
+
+        if(warningCount > 0){
+          message += ` ${warningCount} produit${warningCount > 1 ? 's' : ''} n'ont pas pu être vérifiés.`;
+        }
+
+        const downloadUrl = payload?.downloadUrl ? String(payload.downloadUrl) : '';
+        const outputFile = payload?.outputFile ? String(payload.outputFile) : '';
+
+        if(downloadUrl){
+          const linkLabel = outputFile
+            ? `Télécharger ${outputFile}`
+            : 'Télécharger le rapport';
+          const htmlMessage = `${message} <a href="${downloadUrl}" download>${linkLabel}</a>`;
+          updateActionStatus(htmlMessage, 'success', { html:true });
+        }else{
+          updateActionStatus(message, 'success');
+        }
+
+        if(Array.isArray(payload.errors) && payload.errors.length){
+          console.warn('Certaines vérifications Walmart ont échoué', payload.errors);
+        }
+      }catch(err){
+        updateActionStatus(`Impossible de détecter les penny deals : ${err?.message || err}`, 'error');
+      }finally{
+        setButtonsDisabled([btnPennyDeals], false);
       }
     }
 
@@ -481,6 +558,9 @@
     workflowButtons.forEach(button => {
       button.addEventListener('click', triggerWorkflow);
     });
+    if(btnPennyDeals){
+      btnPennyDeals.addEventListener('click', detectPennyDeals);
+    }
     if(btnManual){
       btnManual.addEventListener('click', promptManualRegistration);
     }

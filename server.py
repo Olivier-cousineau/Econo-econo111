@@ -1,6 +1,8 @@
+import json
 import os
+import re
 from pathlib import Path
-from typing import Dict, Optional
+from typing import Dict, List, Optional, Tuple
 from urllib.parse import quote
 
 import requests
@@ -9,6 +11,89 @@ from flask_cors import CORS
 import stripe
 
 BASE_DIR = Path(__file__).resolve().parent
+WALMART_STORE_ID = "3131"  # Walmart Blainville
+WALMART_SOURCE_FILE = BASE_DIR / "data" / "walmart" / "blainville.json"
+PENNY_DEAL_OUTPUT_FILE = BASE_DIR / "logs" / "penny_deals_blainville.json"
+WALMART_API_BASE = "https://www.walmart.ca/api/product-page"
+WALMART_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+        "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+    ),
+    "Accept": "application/json, text/plain, */*",
+}
+SKU_PATTERN = re.compile(r"/([A-Za-z0-9]+)(?:\?|$)")
+
+
+def _extract_walmart_sku(url: Optional[str]) -> Optional[str]:
+    if not isinstance(url, str):
+        return None
+    match = SKU_PATTERN.search(url)
+    if not match:
+        return None
+    return match.group(1)
+
+
+def _detect_walmart_penny_deals(
+    source_file: Path, store_id: str
+) -> Tuple[List[Dict[str, object]], List[str]]:
+    try:
+        raw_content = source_file.read_text(encoding="utf-8")
+    except FileNotFoundError:
+        raise
+    except OSError as exc:
+        raise RuntimeError(f"Impossible de lire {source_file.name} : {exc}") from exc
+
+    try:
+        products = json.loads(raw_content)
+    except json.JSONDecodeError as exc:
+        raise ValueError(f"Le fichier {source_file.name} contient un JSON invalide") from exc
+
+    if not isinstance(products, list):
+        raise ValueError(f"Le fichier {source_file.name} ne contient pas une liste de produits")
+
+    penny_deals: List[Dict[str, object]] = []
+    errors: List[str] = []
+
+    for product in products:
+        if not isinstance(product, dict):
+            continue
+
+        product_link = product.get("product_link")
+        sku = _extract_walmart_sku(product_link)
+        if not sku:
+            errors.append(
+                f"Impossible d'extraire le SKU depuis le lien produit : {product_link!r}"
+            )
+            continue
+
+        api_url = f"{WALMART_API_BASE}/{sku}?storeId={store_id}"
+        try:
+            response = requests.get(api_url, headers=WALMART_HEADERS, timeout=10)
+            response.raise_for_status()
+        except requests.RequestException as exc:
+            errors.append(f"Échec de la requête pour le SKU {sku} : {exc}")
+            continue
+
+        try:
+            payload = response.json()
+        except ValueError:
+            errors.append(
+                f"Réponse JSON invalide reçue pour le SKU {sku} (HTTP {response.status_code})"
+            )
+            continue
+
+        price_info = payload.get("priceInfo") if isinstance(payload, dict) else None
+        current_price = price_info.get("currentPrice") if isinstance(price_info, dict) else None
+        price = current_price.get("price") if isinstance(current_price, dict) else None
+
+        if price is None:
+            penny_entry = dict(product)
+            penny_entry["sku"] = sku
+            penny_entry["penny_price"] = "0.01$"
+            penny_deals.append(penny_entry)
+
+    return penny_deals, errors
 
 
 def _parse_env_value(raw_value: str) -> str:
@@ -98,6 +183,58 @@ def root() -> object:
 @app.route("/<path:asset>")
 def serve_asset(asset: str) -> object:
     return send_from_directory(str(BASE_DIR), asset)
+
+
+@app.route("/admin/penny-deals", methods=["POST"])
+def detect_penny_deals() -> object:
+    try:
+        penny_deals, errors = _detect_walmart_penny_deals(
+            WALMART_SOURCE_FILE, WALMART_STORE_ID
+        )
+    except FileNotFoundError:
+        return (
+            jsonify(
+                {
+                    "error": (
+                        f"Le fichier source {WALMART_SOURCE_FILE.name} est introuvable."
+                    )
+                }
+            ),
+            500,
+        )
+    except (RuntimeError, ValueError) as exc:
+        return jsonify({"error": str(exc)}), 500
+    except Exception as exc:  # pragma: no cover - erreurs inattendues
+        app.logger.exception("Erreur lors de la détection des penny deals")
+        return jsonify({"error": f"Impossible de détecter les penny deals : {exc}"}), 500
+
+    try:
+        PENNY_DEAL_OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
+        PENNY_DEAL_OUTPUT_FILE.write_text(
+            json.dumps(penny_deals, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
+    except OSError as exc:
+        return jsonify({"error": f"Impossible d'enregistrer le rapport : {exc}"}), 500
+
+    try:
+        relative_output = PENNY_DEAL_OUTPUT_FILE.relative_to(BASE_DIR)
+    except ValueError:
+        relative_output = PENNY_DEAL_OUTPUT_FILE
+
+    payload = {
+        "status": "ok",
+        "count": len(penny_deals),
+        "outputFile": str(relative_output),
+        "downloadUrl": f"/{relative_output.as_posix()}",
+        "errors": errors,
+    }
+    if penny_deals:
+        payload["deals"] = penny_deals
+    if errors:
+        payload["warningCount"] = len(errors)
+
+    return jsonify(payload), 200
 
 
 PUBLISHABLE_KEY_CANDIDATES = (
