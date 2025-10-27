@@ -87,11 +87,27 @@ def _detect_walmart_penny_deals(
         current_price = price_info.get("currentPrice") if isinstance(price_info, dict) else None
         price = current_price.get("price") if isinstance(current_price, dict) else None
 
-        if price is None:
+        numeric_price: Optional[float]
+        if isinstance(price, (int, float)):
+            numeric_price = float(price)
+        elif isinstance(price, str):
+            try:
+                numeric_price = float(price)
+            except ValueError:
+                numeric_price = None
+        else:
+            numeric_price = None
+
+        if numeric_price is not None and numeric_price <= 0.01:
             penny_entry = dict(product)
             penny_entry["sku"] = sku
-            penny_entry["penny_price"] = "0.01$"
+            penny_entry["penny_price"] = f"{numeric_price:.2f}$"
             penny_deals.append(penny_entry)
+        elif numeric_price is None:
+            errors.append(
+                "Prix manquant ou invalide pour le SKU "
+                f"{sku} dans la réponse de l'API Walmart"
+            )
 
     return penny_deals, errors
 
