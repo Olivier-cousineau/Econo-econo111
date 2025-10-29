@@ -1,146 +1,22 @@
 import json
 import os
-import re
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, Iterable, Optional
 from urllib.parse import quote
 
-import requests
 from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
-import stripe
 
-BASE_DIR = Path(__file__).resolve().parent
-WALMART_STORE_ID = "3131"  # Walmart Blainville
-WALMART_SOURCE_FILE = BASE_DIR / "data" / "walmart" / "blainville.json"
-PENNY_DEAL_OUTPUT_FILE = BASE_DIR / "logs" / "penny_deals_blainville.json"
-WALMART_API_BASE = "https://www.walmart.ca/api/product-page"
-WALMART_HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-        "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-    ),
-    "Accept": "application/json, text/plain, */*",
-}
-SKU_PATTERN = re.compile(r"/([A-Za-z0-9]+)(?:\?|$)")
+from api.payments import create_checkout_session as create_stripe_checkout
+from api.payments import get_publishable_key as resolve_publishable_key
+from config.settings import get_settings
+from services.walmart import (
+    detect_penny_deals as compute_walmart_penny_deals,
+    resolve_dataset_path,
+)
 
-
-def _extract_walmart_sku(url: Optional[str]) -> Optional[str]:
-    if not isinstance(url, str):
-        return None
-    match = SKU_PATTERN.search(url)
-    if not match:
-        return None
-    return match.group(1)
-
-
-def _detect_walmart_penny_deals(
-    source_file: Path, store_id: str
-) -> Tuple[List[Dict[str, object]], List[str]]:
-    try:
-        raw_content = source_file.read_text(encoding="utf-8")
-    except FileNotFoundError:
-        raise
-    except OSError as exc:
-        raise RuntimeError(f"Impossible de lire {source_file.name} : {exc}") from exc
-
-    try:
-        products = json.loads(raw_content)
-    except json.JSONDecodeError as exc:
-        raise ValueError(f"Le fichier {source_file.name} contient un JSON invalide") from exc
-
-    if not isinstance(products, list):
-        raise ValueError(f"Le fichier {source_file.name} ne contient pas une liste de produits")
-
-    penny_deals: List[Dict[str, object]] = []
-    errors: List[str] = []
-
-    for product in products:
-        if not isinstance(product, dict):
-            continue
-
-        product_link = product.get("product_link")
-        sku = _extract_walmart_sku(product_link)
-        if not sku:
-            errors.append(
-                f"Impossible d'extraire le SKU depuis le lien produit : {product_link!r}"
-            )
-            continue
-
-        api_url = f"{WALMART_API_BASE}/{sku}?storeId={store_id}"
-        try:
-            response = requests.get(api_url, headers=WALMART_HEADERS, timeout=10)
-            response.raise_for_status()
-        except requests.RequestException as exc:
-            errors.append(f"Échec de la requête pour le SKU {sku} : {exc}")
-            continue
-
-        try:
-            payload = response.json()
-        except ValueError:
-            errors.append(
-                f"Réponse JSON invalide reçue pour le SKU {sku} (HTTP {response.status_code})"
-            )
-            continue
-
-        price_info = payload.get("priceInfo") if isinstance(payload, dict) else None
-        current_price = price_info.get("currentPrice") if isinstance(price_info, dict) else None
-        price = current_price.get("price") if isinstance(current_price, dict) else None
-
-        if price is None:
-            penny_entry = dict(product)
-            penny_entry["sku"] = sku
-            penny_entry["penny_price"] = "0.01$"
-            penny_deals.append(penny_entry)
-
-    return penny_deals, errors
-
-
-def _parse_env_value(raw_value: str) -> str:
-    value = raw_value.strip()
-    if not value:
-        return ""
-
-    if (value.startswith("\"") and value.endswith("\"")) or (
-        value.startswith("'") and value.endswith("'")
-    ):
-        return value[1:-1]
-
-    if "#" in value:
-        hash_index = value.index("#")
-        if hash_index == 0 or value[hash_index - 1].isspace():
-            stripped = value[:hash_index].strip()
-            if stripped:
-                return stripped
-
-    return value
-
-
-def _load_env_files() -> None:
-    """Populate os.environ from local .env files when available."""
-
-    for filename in (".env.local", ".env"):
-        path = BASE_DIR / filename
-        if not path.exists() or not path.is_file():
-            continue
-
-        try:
-            for raw_line in path.read_text(encoding="utf-8").splitlines():
-                line = raw_line.strip()
-                if not line or line.startswith("#") or "=" not in line:
-                    continue
-
-                key, value = line.split("=", 1)
-                key = key.strip()
-                if not key or key in os.environ:
-                    continue
-
-                os.environ[key] = _parse_env_value(value)
-        except OSError:
-            continue
-
-
-_load_env_files()
+settings = get_settings()
+BASE_DIR = settings.base_dir
 
 app = Flask(__name__, static_folder=str(BASE_DIR), static_url_path="")
 CORS(app)
@@ -166,15 +42,6 @@ PLAN_CONFIG = {
 SUPPORTED_LOCALES = {"da", "de", "en", "es", "fi", "fr", "it", "ja", "nb", "nl", "pl", "pt", "sv"}
 
 
-def _ensure_stripe_secret() -> str:
-    secret_key = os.environ.get("STRIPE_SECRET_KEY")
-    if not secret_key:
-        raise RuntimeError(
-            "STRIPE_SECRET_KEY is not configured. Export it before starting the server."
-        )
-    return secret_key
-
-
 @app.route("/")
 def root() -> object:
     return send_from_directory(str(BASE_DIR), "index.html")
@@ -188,15 +55,13 @@ def serve_asset(asset: str) -> object:
 @app.route("/admin/penny-deals", methods=["POST"])
 def detect_penny_deals() -> object:
     try:
-        penny_deals, errors = _detect_walmart_penny_deals(
-            WALMART_SOURCE_FILE, WALMART_STORE_ID
-        )
+        penny_deals, errors = compute_walmart_penny_deals(settings)
     except FileNotFoundError:
         return (
             jsonify(
                 {
                     "error": (
-                        f"Le fichier source {WALMART_SOURCE_FILE.name} est introuvable."
+                        f"Le fichier source {settings.walmart_source_file.name} est introuvable."
                     )
                 }
             ),
@@ -209,8 +74,8 @@ def detect_penny_deals() -> object:
         return jsonify({"error": f"Impossible de détecter les penny deals : {exc}"}), 500
 
     try:
-        PENNY_DEAL_OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
-        PENNY_DEAL_OUTPUT_FILE.write_text(
+        settings.penny_deal_output_file.parent.mkdir(parents=True, exist_ok=True)
+        settings.penny_deal_output_file.write_text(
             json.dumps(penny_deals, ensure_ascii=False, indent=2),
             encoding="utf-8",
         )
@@ -218,9 +83,9 @@ def detect_penny_deals() -> object:
         return jsonify({"error": f"Impossible d'enregistrer le rapport : {exc}"}), 500
 
     try:
-        relative_output = PENNY_DEAL_OUTPUT_FILE.relative_to(BASE_DIR)
+        relative_output = settings.penny_deal_output_file.relative_to(BASE_DIR)
     except ValueError:
-        relative_output = PENNY_DEAL_OUTPUT_FILE
+        relative_output = settings.penny_deal_output_file
 
     payload = {
         "status": "ok",
@@ -237,11 +102,94 @@ def detect_penny_deals() -> object:
     return jsonify(payload), 200
 
 
-PUBLISHABLE_KEY_CANDIDATES = (
-    "STRIPE_PUBLISHABLE_KEY",
-    "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY",
-    "STRIPE_PUBLIC_KEY",
-)
+def _iter_dataset_files() -> Iterable[Path]:
+    data_root = settings.data_dir
+    if not data_root.exists() or not data_root.is_dir():
+        return []
+    return sorted(data_root.rglob("*.json"))
+
+
+def _load_dataset(relative_path: str) -> Dict[str, object]:
+    dataset_path = resolve_dataset_path(settings, relative_path)
+
+    try:
+        raw_content = dataset_path.read_text(encoding="utf-8")
+    except FileNotFoundError:
+        raise
+    except OSError as exc:
+        raise RuntimeError(f"Impossible de lire le jeu de données : {exc}") from exc
+
+    try:
+        payload = json.loads(raw_content)
+    except json.JSONDecodeError as exc:
+        raise ValueError("Le fichier de données contient un JSON invalide.") from exc
+
+    relative = dataset_path.relative_to(settings.data_dir)
+    count = None
+    if isinstance(payload, (list, dict)):
+        try:
+            count = len(payload)
+        except TypeError:
+            count = None
+
+    return {
+        "path": relative.as_posix(),
+        "count": count,
+        "data": payload,
+    }
+
+
+@app.route("/api/stores", methods=["GET"])
+def list_store_datasets() -> object:
+    datasets = []
+    for path in _iter_dataset_files():
+        relative = path.relative_to(settings.data_dir)
+        parts = relative.parts
+        source = parts[0] if len(parts) > 1 else None
+        store = path.stem
+        size = None
+        try:
+            size = path.stat().st_size
+        except OSError:
+            size = None
+        datasets.append(
+            {
+                "path": relative.as_posix(),
+                "source": source,
+                "store": store,
+                "size": size,
+            }
+        )
+
+    return jsonify({"datasets": datasets, "count": len(datasets)})
+
+
+@app.route("/api/deals", methods=["GET"])
+def get_deals_dataset() -> object:
+    relative_path = request.args.get("path")
+    if not relative_path:
+        default_path = settings.deals_default_path
+        if default_path:
+            relative_path = default_path
+        else:
+            return (
+                jsonify({"error": "Le paramètre 'path' est requis pour charger un jeu de données."}),
+                400,
+            )
+
+    try:
+        dataset = _load_dataset(relative_path)
+    except FileNotFoundError:
+        return jsonify({"error": "Jeu de données introuvable."}), 404
+    except ValueError as exc:
+        message = str(exc)
+        status = 400 if "Chemin de données" in message else 500
+        return jsonify({"error": message}), status
+    except RuntimeError as exc:
+        return jsonify({"error": str(exc)}), 500
+
+    return jsonify(dataset)
+
 
 GITHUB_API_BASE_URL = "https://api.github.com"
 DEFAULT_WORKFLOW_REF = "main"
@@ -296,19 +244,9 @@ def _normalise_workflow_inputs(
     return normalised or None
 
 
-def _get_publishable_key() -> Optional[str]:
-    """Return the publishable key used by the client side."""
-
-    for env_var in PUBLISHABLE_KEY_CANDIDATES:
-        value = os.environ.get(env_var)
-        if value:
-            return value
-    return None
-
-
 @app.route("/config", methods=["GET"])
 def get_publishable_key() -> object:
-    publishable_key = _get_publishable_key()
+    publishable_key = resolve_publishable_key(settings)
     if not publishable_key:
         return (
             jsonify({
@@ -324,58 +262,21 @@ def get_publishable_key() -> object:
 
 @app.route("/create-checkout-session", methods=["POST"])
 def create_checkout_session() -> object:
-    try:
-        stripe.api_key = _ensure_stripe_secret()
-    except RuntimeError as exc:  # pragma: no cover - configuration error
-        return jsonify({"error": str(exc)}), 500
-
     payload = request.get_json(silent=True) or {}
-    plan_key = payload.get("plan")
-    config = PLAN_CONFIG.get(plan_key)
-    if not config:
-        return jsonify({"error": "Unknown pricing plan."}), 400
-
-    locale = (payload.get("locale") or "en").split("-")[0].lower()
-    stripe_locale = locale if locale in SUPPORTED_LOCALES else "en"
-
-    product_name = (payload.get("name") or config["default_name"]).strip()
-    description = (payload.get("description") or config["default_description"]).strip()
-
-    success_url = os.environ.get(
-        "STRIPE_SUCCESS_URL",
-        "http://localhost:5000/success?session_id={CHECKOUT_SESSION_ID}",
-    )
-    cancel_url = os.environ.get("STRIPE_CANCEL_URL", "http://localhost:5000/cancel")
 
     try:
-        session = stripe.checkout.Session.create(
-            mode="payment",
-            payment_method_types=["card"],
-            line_items=[
-                {
-                    "quantity": 1,
-                    "price_data": {
-                        "currency": "cad",
-                        "unit_amount": config["amount"],
-                        "product_data": {
-                            "name": product_name,
-                            "description": description,
-                        },
-                    },
-                }
-            ],
-            allow_promotion_codes=True,
-            locale=stripe_locale,
-            success_url=success_url,
-            cancel_url=cancel_url,
-            automatic_tax={"enabled": False},
+        session_payload = create_stripe_checkout(
+            settings=settings,
+            plan_config=PLAN_CONFIG,
+            payload=payload,
+            supported_locales=SUPPORTED_LOCALES,
         )
-    except stripe.error.StripeError as exc:  # pragma: no cover - network/API error
-        return jsonify({"error": exc.user_message or str(exc)}), 400
+    except ValueError as exc:
+        return jsonify({"error": str(exc)}), 400
     except Exception as exc:  # pragma: no cover - unexpected error
         return jsonify({"error": str(exc)}), 500
 
-    return jsonify({"sessionId": session.get("id")})
+    return jsonify(session_payload)
 
 
 @app.route("/success", methods=["GET"])
