@@ -671,20 +671,32 @@
       }
     }
 
+    const memoryStorage = new Map();
+
     function safeGet(key){
+      if(!key) return null;
       try{
-        return localStorage.getItem(key);
+        const value = localStorage.getItem(key);
+        if(value !== null && value !== undefined){
+          memoryStorage.set(key, value);
+        }
+        return value;
       }catch(err){
         console.warn('Stockage local indisponible', err);
-        return null;
+        return memoryStorage.has(key) ? memoryStorage.get(key) : null;
       }
     }
 
     function safeSet(key, value){
+      if(!key) return false;
       try{
         localStorage.setItem(key, value);
+        memoryStorage.set(key, value);
+        return true;
       }catch(err){
         console.warn('Impossible d\'enregistrer les données', err);
+        memoryStorage.set(key, value);
+        return false;
       }
     }
 
@@ -807,11 +819,29 @@
     if(form){
       form.addEventListener('submit', (event) => {
         event.preventDefault();
-        if(!form.reportValidity()) return;
+        const rawName = (form.fullName?.value ?? '').trim();
+        const rawEmail = (form.email?.value ?? '').trim();
+        const hasReport = typeof form.reportValidity === 'function';
+        const hasCheck = typeof form.checkValidity === 'function';
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const nameValid = rawName.length > 0;
+        const emailValid = emailPattern.test(rawEmail);
+
+        if(hasReport){
+          if(!form.reportValidity()) return;
+        }else if(hasCheck){
+          if(!form.checkValidity()){
+            alert('Veuillez fournir un nom complet et une adresse courriel valides.');
+            return;
+          }
+        }else if(!nameValid || !emailValid){
+          alert('Veuillez fournir un nom complet et une adresse courriel valides.');
+          return;
+        }
 
         const payload = {
-          name: (form.fullName?.value ?? '').trim(),
-          email: (form.email?.value ?? '').trim(),
+          name: rawName,
+          email: rawEmail,
           consent: true,
           registeredAt: new Date().toISOString()
         };

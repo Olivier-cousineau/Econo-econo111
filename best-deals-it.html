@@ -161,13 +161,33 @@
         try{ return JSON.parse(value); }
         catch(err){ console.warn('Unable to read existing data', err); return null; }
       }
+      const memoryStorage = new Map();
       function safeGet(key){
-        try{ return localStorage.getItem(key); }
-        catch(err){ console.warn('Stockage local indisponible', err); return null; }
+        if(!key) return null;
+        try{
+          const value = localStorage.getItem(key);
+          if(value !== null && value !== undefined){
+            memoryStorage.set(key, value);
+          }
+          return value;
+        }
+        catch(err){
+          console.warn('Archivio locale non disponibile', err);
+          return memoryStorage.has(key) ? memoryStorage.get(key) : null;
+        }
       }
       function safeSet(key, value){
-        try{ localStorage.setItem(key, value); }
-        catch(err){ console.warn('Unable to save data', err); }
+        if(!key) return false;
+        try{
+          localStorage.setItem(key, value);
+          memoryStorage.set(key, value);
+          return true;
+        }
+        catch(err){
+          console.warn('Impossibile salvare i dati', err);
+          memoryStorage.set(key, value);
+          return false;
+        }
       }
       function cleanText(value){ return typeof value === 'string' ? value.trim() : ''; }
       function getRegistrations(){
@@ -241,10 +261,27 @@
       if(form){
         form.addEventListener('submit', (event) => {
           event.preventDefault();
-          if(!form.reportValidity()) return;
+          const rawName = (form.fullName?.value ?? '').trim();
+          const rawEmail = (form.email?.value ?? '').trim();
+          const hasReport = typeof form.reportValidity === 'function';
+          const hasCheck = typeof form.checkValidity === 'function';
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          const nameValid = rawName.length > 0;
+          const emailValid = emailPattern.test(rawEmail);
+          if(hasReport){
+            if(!form.reportValidity()) return;
+          }else if(hasCheck){
+            if(!form.checkValidity()){
+              alert('Inserisci un nome completo e un indirizzo email validi.');
+              return;
+            }
+          }else if(!nameValid || !emailValid){
+            alert('Inserisci un nome completo e un indirizzo email validi.');
+            return;
+          }
           const payload = {
-            name: (form.fullName?.value ?? '').trim(),
-            email: (form.email?.value ?? '').trim(),
+            name: rawName,
+            email: rawEmail,
             consent: true,
             registeredAt: new Date().toISOString()
           };
