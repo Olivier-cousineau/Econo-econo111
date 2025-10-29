@@ -1,0 +1,33 @@
+{% set pricing = pricing or {} %}
+<section class="section"{% if pricing.id %} id="{{ pricing.id }}"{% endif %}{% if pricing.style %} style="{{ pricing.style }}"{% endif %}>
+  {% if pricing.title %}
+  <h2{% if pricing.titleStyle %} style="{{ pricing.titleStyle }}"{% endif %}>{{ pricing.title | safe }}</h2>
+  {% endif %}
+  {% if pricing.description %}
+  <p class="muted"{% if pricing.descriptionStyle %} style="{{ pricing.descriptionStyle }}"{% endif %}>{{ pricing.description | safe }}</p>
+  {% endif %}
+  {% if pricing.plans %}
+  <div class="pricing-grid">
+    {% for plan in pricing.plans %}
+    <article class="pricing-card{% if plan.highlight %} pricing-highlight{% endif %}">
+      {% if plan.tag %}
+      <div class="pricing-tag">{{ plan.tag | safe }}</div>
+      {% endif %}
+      {% if plan.name %}
+      <h4>{{ plan.name | safe }}</h4>
+      {% endif %}
+      {% if plan.price %}
+      <div class="pricing-price">{{ plan.price | safe }}</div>
+      {% endif %}
+      {% if plan.features %}
+      <ul class="pricing-features">
+        {% for feature in plan.features %}
+        <li>{{ feature | safe }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </article>
+    {% endfor %}
+  </div>
+  {% endif %}
+</section>

@@ -1,0 +1,9 @@
+{% set footer = footer or {} %}
+<div class="container footer">
+  {% if footer.notice %}
+  <p style="margin:0 0 8px">{{ footer.notice | safe }}</p>
+  {% endif %}
+  {% if footer.copyright %}
+  <div>{{ footer.copyright | safe }}</div>
+  {% endif %}
+</div>

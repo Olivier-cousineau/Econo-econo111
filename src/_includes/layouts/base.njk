@@ -1,0 +1,60 @@
+{% set currentLocale = locale or 'fr' %}
+{% set localeBundle = locales[currentLocale] or {} %}
+{% set common = localeBundle.common or {} %}
+<!DOCTYPE html>
+<html lang="{{ common.htmlLang or currentLocale }}" data-page="{{ page.dataPage or common.dataPage or 'landing' }}">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ title or common.title }}</title>
+  {% if common.metaDescription %}
+  <meta name="description" content="{{ common.metaDescription }}" />
+  {% endif %}
+  <link rel="stylesheet" href="{{ common.stylesheet or 'assets/css/main.css' }}" />
+</head>
+<body class="overlay-active">
+  <div class="bg-visuals" aria-hidden="true">
+    <div class="bg-grid"></div>
+    <div class="bg-orb bg-orb--one"></div>
+    <div class="bg-orb bg-orb--two"></div>
+    <div class="bg-orb bg-orb--three"></div>
+  </div>
+  {% if common.overlay %}
+  <div id="registrationOverlay" role="dialog" aria-modal="true" aria-labelledby="registrationTitle">
+    <div class="registration-card">
+      {% if common.overlay.title %}
+      <h2 id="registrationTitle">{{ common.overlay.title | safe }}</h2>
+      {% endif %}
+      {% if common.overlay.subtitle %}
+      <p class="muted" style="margin:0">{{ common.overlay.subtitle | safe }}</p>
+      {% endif %}
+      {% if common.overlay.form %}
+      <form id="registrationForm">
+        {% for field in common.overlay.form.fields %}
+        <div>
+          <label for="{{ field.id }}">{{ field.label | safe }}</label>
+          <input id="{{ field.id }}" name="{{ field.name }}" type="{{ field.type }}" placeholder="{{ field.placeholder | safe }}" autocomplete="{{ field.autocomplete }}"{% if field.required %} required{% endif %} />
+        </div>
+        {% endfor %}
+        {% if common.overlay.form.consent %}
+        <div class="checkbox-row">
+          <input id="{{ common.overlay.form.consent.id }}" name="{{ common.overlay.form.consent.name }}" type="checkbox"{% if common.overlay.form.consent.required %} required{% endif %} />
+          <label for="{{ common.overlay.form.consent.id }}" style="margin:0">{{ common.overlay.form.consent.label | safe }}</label>
+        </div>
+        {% endif %}
+        {% if common.overlay.form.submit %}
+        <button id="{{ common.overlay.form.submit.id }}" type="submit" disabled>{{ common.overlay.form.submit.label | safe }}</button>
+        {% endif %}
+      </form>
+      {% endif %}
+    </div>
+  </div>
+  {% endif %}
+  {% include "partials/header.njk" with { header: common.header } %}
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+  {% include "partials/footer.njk" with { footer: common.footer } %}
+  {% block scripts %}{% endblock %}
+</body>
+</html>

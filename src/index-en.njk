@@ -1,0 +1,744 @@
+---
+layout: layouts/base.njk
+locale: en
+title: EconoDeal — Canada
+---
+{% set home = locales[locale].home %}
+{% block content %}
+{% include "partials/hero.njk" with { hero: home.hero } %}
+{% include "partials/value-grid.njk" with { valueGrid: home.valueGrid } %}
+<section class="section" id="search">
+  <h2 style="margin:0 0 10px">Find clearance inventory for your Amazon listings</h2>
+  <p class="muted">Files are loaded from <span class="kbd">data/&lt;store&gt;/&lt;city&gt;.json</span> to rapidly surface arbitrage opportunities.</p>
+
+  <div class="row" style="gap:12px;align-items:center;flex-wrap:wrap;margin-top:12px">
+    <span class="muted" data-country-label>Covered country: Canada · Currency: CAD</span>
+  </div>
+
+  <div class="filters" style="margin-top:12px">
+    <div>
+      <label for="searchInput">Quick search</label>
+      <input id="searchInput" name="search" type="text" inputmode="search" placeholder="Ex. Nintendo Switch, Lego..." autocomplete="off" />
+    </div>
+    <div>
+      <label for="storeSelect">Store</label>
+      <select id="storeSelect">
+        <option value="">(All)</option>
+      </select>
+    </div>
+    <div>
+      <label for="citySelect">City</label>
+      <select id="citySelect">
+        <option value="">(All)</option>
+      </select>
+    </div>
+    <div>
+      <label for="postalInput">Postal code</label>
+      <input id="postalInput" name="postal" type="text" inputmode="text" placeholder="Ex. H2X 1Y4" autocomplete="postal-code" />
+      <p id="postalHelper" class="field-helper">Enter the first three characters of the postal code to find branches within 50 km (e.g. H2X).</p>
+    </div>
+    <div>
+      <label for="discountRange">Minimum discount: <span id="discountValue" class="kbd">0%</span></label>
+      <input id="discountRange" type="range" min="0" max="90" step="5" value="0" />
+    </div>
+    <div style="align-self:end">
+      <button id="btnClear">Reset filters</button>
+    </div>
+  </div>
+
+  <div id="devError" class="dev-banner"></div>
+
+  <div class="section">
+    <div class="row" style="justify-content:space-between;align-items:center">
+      <h3 style="margin:0">Results</h3>
+      <div class="muted"><span id="resultCount">0</span> items</div>
+    </div>
+    <div id="cards" class="grid" style="margin-top:12px"></div>
+  </div>
+</section>
+<section class="amazon-section" id="amazon-sellers">
+  <div>
+    <h2>An experience built for Amazon resellers</h2>
+    <p class="amazon-intro">Run a sourcing hub designed for FBA, FBM and eBay workflows: detect profitable clearances in seconds, protect your margins and streamline your routines across Amazon.ca, Amazon.com, eBay.com and eBay.ca.</p>
+  </div>
+  <div class="seller-metrics">
+    <div class="seller-metric">
+      <strong>2.4M</strong>
+      <span>Tracked ASINs &amp; SKUs</span>
+      <p>Dynamic coverage for Amazon.ca, Amazon.com, Amazon EU and eBay North America.</p>
+    </div>
+    <div class="seller-metric">
+      <strong>18s</strong>
+      <span>Average detection</span>
+      <p>Latency between ingesting a deal and sending a priority alert to your team.</p>
+    </div>
+    <div class="seller-metric">
+      <strong>+32%</strong>
+      <span>Margin uplift</span>
+      <p>Median gain observed among sellers using our multi-marketplace AI scenarios.</p>
+    </div>
+  </div>
+  <div class="seller-calculator" id="profitCalculator">
+    <div>
+      <h3>Seller Central calculator</h3>
+      <p>Estimate net profit per item while accounting for Amazon, eBay and logistics fees.</p>
+    </div>
+    <form id="profitCalculatorForm" class="calculator-form" autocomplete="off">
+      <div class="calculator-field">
+        <label for="purchaseCost">Purchase price (<span data-calculator-currency>CAD</span>)</label>
+        <input id="purchaseCost" data-field="purchase" type="number" min="0" step="0.01" inputmode="decimal" placeholder="Ex. 18.50" />
+      </div>
+      <div class="calculator-field">
+        <label for="salePrice">Sale price (<span data-calculator-currency>CAD</span>)</label>
+        <input id="salePrice" data-field="sale" type="number" min="0" step="0.01" inputmode="decimal" placeholder="Ex. 34.99" />
+      </div>
+      <div class="calculator-field">
+        <label for="shippingCost">Shipping fees (<span data-calculator-currency>CAD</span>)</label>
+        <input id="shippingCost" data-field="shipping" type="number" min="0" step="0.01" inputmode="decimal" placeholder="Ex. 5.00" />
+      </div>
+      <div class="calculator-field">
+        <label for="feePercent">Marketplace fees (%)</label>
+        <input id="feePercent" data-field="feePercent" type="number" min="0" max="75" step="0.1" inputmode="decimal" value="15" />
+      </div>
+      <div class="calculator-field">
+        <label for="otherCosts">FBA / other fees (<span data-calculator-currency>CAD</span>)</label>
+        <input id="otherCosts" data-field="extras" type="number" min="0" step="0.01" inputmode="decimal" placeholder="Ex. 3.25" />
+      </div>
+      <div class="calculator-actions">
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+    <div class="calculator-results" aria-live="polite">
+      <div class="calculator-result">
+        <span class="result-label">Estimated net profit</span>
+        <strong class="result-value profit-output" data-profit-amount data-negative="false">$0.00</strong>
+      </div>
+      <div class="calculator-result">
+        <span class="result-label">Margin on sale</span>
+        <strong class="result-value margin-output" data-profit-margin data-negative="false">0%</strong>
+        <span class="result-note">Based on the entered sale price</span>
+      </div>
+      <div class="calculator-result">
+        <span class="result-label">Estimated marketplace fees</span>
+        <strong class="result-value" data-marketplace-fees>$0.00</strong>
+      </div>
+      <div class="calculator-result">
+        <span class="result-label">Total cost</span>
+        <strong class="result-value" data-total-cost>$0.00</strong>
+      </div>
+      <div class="calculator-result">
+        <span class="result-label">Break-even price</span>
+        <strong class="result-value" data-break-even>$0.00</strong>
+        <span class="result-note">To cover costs and fees</span>
+      </div>
+    </div>
+    <p class="calculator-footnote">Calculations are indicative only. Adjust fees for your categories and logistics settings.</p>
+  </div>
+  <div class="seller-grid">
+    <article class="seller-card">
+      <div class="seller-icon" aria-hidden="true">🚀</div>
+      <h3>Streamlined FBA onboarding</h3>
+      <p>Ready-to-use templates to model FBA fees, estimate sell-through, build eBay listings and sync inventory without spreadsheets.</p>
+    </article>
+    <article class="seller-card">
+      <div class="seller-icon" aria-hidden="true">📦</div>
+      <h3>Multi-supplier stock watch</h3>
+      <p>Combine inventories from Best Buy, Walmart and wholesale partners to spot arbitrage opportunities before competitors.</p>
+    </article>
+    <article class="seller-card">
+      <div class="seller-icon" aria-hidden="true">🤝</div>
+      <h3>Dedicated community</h3>
+      <p>Access a private lounge of Amazon resellers, share repricing tactics and rely on vetted product comps.</p>
+    </article>
+    <article class="seller-card">
+      <div class="seller-icon" aria-hidden="true">🧭</div>
+      <h3>Operational coaching</h3>
+      <ul class="seller-list">
+        <li><span aria-hidden="true">✔</span>Alerts when the Buy Box drops below your target.</li>
+        <li><span aria-hidden="true">✔</span>Seller Central-friendly exports and FBA analysis tools.</li>
+        <li><span aria-hidden="true">✔</span>AI suggestions tailored to seasonality and inventory mix.</li>
+      </ul>
+    </article>
+  </div>
+</section>
+{% include "partials/pricing.njk" with { pricing: home.pricing } %}
+<section class="section" id="roadmap" style="padding-top:0">
+  <h2 style="margin:0 0 10px">Our roadmap</h2>
+  <p class="muted" style="max-width:640px">A three-year vision to propel EconoDeal internationally, progressively integrating artificial intelligence at the core of our services.</p>
+  <div class="roadmap">
+    <div class="roadmap-grid">
+      <article class="roadmap-card">
+        <div class="roadmap-year"><strong>Year 1</strong> Canada</div>
+        <ul>
+          <li>Strengthen coverage of national retailers.</li>
+          <li>Optimise real-time discount alerts.</li>
+          <li>Launch bilingual regional dashboards.</li>
+        </ul>
+      </article>
+      <article class="roadmap-card">
+        <div class="roadmap-year"><strong>Year 2</strong> United States</div>
+        <ul>
+          <li>Expand the catalogue to major US retailers.</li>
+          <li>Deploy multi-state inventory monitoring.</li>
+          <li>Introduce predictive trend analysis.</li>
+        </ul>
+      </article>
+      <article class="roadmap-card roadmap-ai">
+        <div class="roadmap-year"><strong>Year 3</strong> Europe</div>
+        <ul>
+          <li>Localise the experience for key European marketplaces.</li>
+          <li>Activate a multilingual AI recommendation engine.</li>
+          <li>Refine pricing strategies through continuous learning.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+  const overlay = document.getElementById('registrationOverlay');
+  const form = document.getElementById('registrationForm');
+  const submitBtn = document.getElementById('registrationSubmit');
+  const regulationCheckbox = document.getElementById('regulationCheckbox');
+  const clientCountDisplays = Array.from(document.querySelectorAll('[data-client-count]'));
+  const countryButtons = document.querySelectorAll('.country-button');
+  const DEFAULT_FILTERS = {
+    search: '',
+    store: 'rona-sport',
+    city: 'montreal',
+    discount: 0
+  };
+  const BASE_CURRENCY = {
+    locale: 'en-CA',
+    code: 'CAD'
+  };
+
+  let activeCountry = 'canada';
+  let calculatorCurrencyFormatter = new Intl.NumberFormat(BASE_CURRENCY.locale,{style:'currency',currency:BASE_CURRENCY.code});
+  let calculatorPercentFormatter = new Intl.NumberFormat(BASE_CURRENCY.locale,{maximumFractionDigits:1,minimumFractionDigits:0});
+
+  const cardsContainer = document.getElementById('cards');
+  const devBanner = document.getElementById('devError');
+  const searchInput = document.getElementById('searchInput');
+  const storeSelect = document.getElementById('storeSelect');
+  const citySelect = document.getElementById('citySelect');
+  const postalInput = document.getElementById('postalInput');
+  const discountRange = document.getElementById('discountRange');
+  const discountValue = document.getElementById('discountValue');
+  const btnClear = document.getElementById('btnClear');
+  const resultCount = document.getElementById('resultCount');
+  const profitCalculatorForm = document.getElementById('profitCalculatorForm');
+  const calculatorCurrencyNodes = document.querySelectorAll('[data-calculator-currency]');
+  const profitOutputs = {
+    profit: document.querySelector('[data-profit-amount]'),
+    margin: document.querySelector('[data-profit-margin]'),
+    fees: document.querySelector('[data-marketplace-fees]'),
+    totalCost: document.querySelector('[data-total-cost]'),
+    breakEven: document.querySelector('[data-break-even]')
+  };
+
+  function toggleOverlay(show){
+    if(!overlay) return;
+    overlay.dataset.visible = show ? 'true' : 'false';
+    overlay.style.display = show ? 'flex' : 'none';
+    if(show){
+      overlay.focus?.();
+    }
+  }
+
+  if(submitBtn){
+    submitBtn.disabled = true;
+  }
+
+  function validateForm(){
+    if(!form || !submitBtn) return;
+    submitBtn.disabled = !form.checkValidity();
+  }
+
+  if(form){
+    form.addEventListener('input', validateForm);
+    form.addEventListener('change', validateForm);
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      const formData = new FormData(form);
+      const entry = {
+        name: (formData.get('fullName') ?? '').trim(),
+        email: (formData.get('email') ?? '').toLowerCase().trim(),
+        regulation: formData.get('regulation') === 'on',
+        registeredAt: new Date().toISOString()
+      };
+      upsertRegistration(entry);
+      const count = setClientCount(resolveClientCount() + 1);
+      updateClientDisplays(count);
+      toggleOverlay(false);
+      form.reset();
+      validateForm();
+    });
+  }
+
+  if(regulationCheckbox){
+    regulationCheckbox.addEventListener('change', validateForm);
+  }
+
+  function updateClientDisplays(value){
+    clientCountDisplays.forEach(node => {
+      node.textContent = value;
+    });
+  }
+
+  function parseJson(value){
+    if(!value) return null;
+    try{
+      return JSON.parse(value);
+    }catch(err){
+      console.warn('Unable to read stored data', err);
+      return null;
+    }
+  }
+
+  function safeGet(key){
+    try{
+      return localStorage.getItem(key);
+    }catch(err){
+      console.warn('Local storage unavailable', err);
+      return null;
+    }
+  }
+
+  function safeSet(key, value){
+    try{
+      localStorage.setItem(key, value);
+    }catch(err){
+      console.warn('Unable to persist data', err);
+    }
+  }
+
+  function cleanText(value){
+    return typeof value === 'string' ? value.trim() : '';
+  }
+
+  function getRegistrations(){
+    const parsed = parseJson(safeGet('econodealRegistrations'));
+    if(!Array.isArray(parsed)) return [];
+    return parsed
+      .filter(item => item && typeof item === 'object')
+      .map(item => ({
+        name: cleanText(item.name),
+        email: cleanText(item.email).toLowerCase(),
+        registeredAt: cleanText(item.registeredAt)
+      }))
+      .filter(item => item.email);
+  }
+
+  function saveRegistrations(items){
+    safeSet('econodealRegistrations', JSON.stringify(items));
+  }
+
+  function upsertRegistration(entry){
+    const collection = getRegistrations();
+    const email = cleanText(entry.email).toLowerCase();
+    if(!email) return;
+
+    const normalized = {
+      name: cleanText(entry.name),
+      email,
+      registeredAt: cleanText(entry.registeredAt)
+    };
+
+    const existingIndex = collection.findIndex(item => item.email === email);
+    if(existingIndex >= 0){
+      collection[existingIndex] = {
+        ...collection[existingIndex],
+        ...normalized
+      };
+    }else{
+      collection.push(normalized);
+    }
+
+    saveRegistrations(collection);
+  }
+
+  function parseCount(value){
+    const parsed = parseInt(value ?? '0', 10);
+    return Number.isFinite(parsed) && parsed >= 0 ? parsed : 0;
+  }
+
+  function setClientCount(value){
+    const normalized = Math.max(0, value);
+    safeSet('econodealClientCount', String(normalized));
+    return normalized;
+  }
+
+  function deriveClientCountFromRegistrations(){
+    const registrations = getRegistrations();
+    if(!registrations.length) return 0;
+    const uniqueEmails = new Set();
+    registrations.forEach(item => {
+      if(item?.email) uniqueEmails.add(item.email);
+    });
+    return uniqueEmails.size;
+  }
+
+  function resolveClientCount(){
+    const stored = parseCount(safeGet('econodealClientCount'));
+    const derived = deriveClientCountFromRegistrations();
+    const resolved = Math.max(stored, derived);
+    return setClientCount(resolved);
+  }
+
+  updateClientDisplays(resolveClientCount());
+
+  const yearNow = new Date().getFullYear();
+  const yearNodes = document.querySelectorAll('#year, #yearFooter');
+  yearNodes.forEach(node => {
+    node.textContent = yearNow;
+  });
+
+  const exchangeIndicator = document.querySelector('[data-exchange-indicator]');
+  if(exchangeIndicator){
+    exchangeIndicator.textContent = '1 CAD = 1 CAD';
+  }
+
+  function renderError(message){
+    if(!devBanner) return;
+    devBanner.textContent = message || '';
+    devBanner.hidden = !message;
+  }
+
+  function getCountryFile(){
+    if(activeCountry === 'canada') return 'data/rona/montreal.json';
+    if(activeCountry === 'usa') return 'data/walmart/usa.json';
+    if(activeCountry === 'europe') return 'data/europe/inventory.json';
+    return 'data/rona/montreal.json';
+  }
+
+  function renderCard(item){
+    const article = document.createElement('article');
+    article.className = 'card';
+    article.innerHTML = `
+      <header class="card-header">
+        <h4>${item.title ?? 'Item'}</h4>
+        <span class="badge">${item.store ?? 'Store'}</span>
+      </header>
+      <ul class="card-details">
+        <li><strong>Current price:</strong> ${item.price ?? '—'}</li>
+        <li><strong>Discount:</strong> ${item.discount ?? '—'}</li>
+        <li><strong>City:</strong> ${item.city ?? '—'}</li>
+        <li><strong>Stock:</strong> ${item.stock ?? '—'}</li>
+      </ul>
+    `;
+    return article;
+  }
+
+  function filterCards(data){
+    if(!Array.isArray(data)) return [];
+    const search = (searchInput?.value || '').toLowerCase();
+    const store = storeSelect?.value || '';
+    const city = citySelect?.value || '';
+    const postal = (postalInput?.value || '').trim().toUpperCase();
+    const minDiscount = Number(discountRange?.value || 0);
+
+    return data.filter(item => {
+      if(store && item.storeSlug !== store) return false;
+      if(city && item.citySlug !== city) return false;
+      if(postal && !String(item.postalCode || '').toUpperCase().startsWith(postal)) return false;
+      if(minDiscount && Number(item.discountValue || 0) < minDiscount) return false;
+      if(search){
+        const haystack = `${item.title ?? ''} ${item.store ?? ''} ${item.city ?? ''}`.toLowerCase();
+        if(!haystack.includes(search)) return false;
+      }
+      return true;
+    });
+  }
+
+  function renderCards(data){
+    if(!cardsContainer) return;
+    cardsContainer.innerHTML = '';
+    const items = filterCards(data);
+    resultCount.textContent = items.length;
+    items.forEach(item => {
+      cardsContainer.appendChild(renderCard(item));
+    });
+  }
+
+  async function fetchData(){
+    const file = getCountryFile();
+    try{
+      const response = await fetch(file);
+      if(!response.ok) throw new Error('Invalid response');
+      const data = await response.json();
+      renderCards(data.items || []);
+      renderError('');
+    }catch(err){
+      console.error('Unable to load inventory', err);
+      renderError('Unable to load inventory. Ensure the JSON files are available.');
+    }
+  }
+
+  function getStoreByIdentifier(slug){
+    const stores = Array.from(storeSelect?.options || []).map(option => ({
+      slug: option.value,
+      label: option.textContent
+    }));
+    return stores.find(item => item.slug === slug);
+  }
+
+  function setCityOptions(storeSlug, resetValue = true){
+    if(!citySelect) return;
+    const options = Array.from(citySelect.querySelectorAll('[data-store]'));
+    if(!options.length){
+      const fragment = document.createDocumentFragment();
+      (window.ECONODEAL_CITIES || []).forEach(city => {
+        const option = document.createElement('option');
+        option.value = city.slug;
+        option.textContent = city.label;
+        option.dataset.store = city.store;
+        fragment.appendChild(option);
+      });
+      citySelect.appendChild(fragment);
+    }
+
+    Array.from(citySelect.options).forEach(option => {
+      if(!option.value) return;
+      option.hidden = storeSlug ? option.dataset.store !== storeSlug : false;
+    });
+
+    if(resetValue){
+      citySelect.value = '';
+    }
+  }
+
+  async function loadRonaDirectory(){
+    try{
+      const response = await fetch('data/rona/directory.json');
+      if(!response.ok) throw new Error('Invalid response');
+      const data = await response.json();
+      if(storeSelect && Array.isArray(data.stores)){
+        const fragment = document.createDocumentFragment();
+        data.stores.forEach(store => {
+          const option = document.createElement('option');
+          option.value = store.slug;
+          option.textContent = store.label;
+          fragment.appendChild(option);
+        });
+        storeSelect.appendChild(fragment);
+      }
+      window.ECONODEAL_CITIES = Array.isArray(data.cities) ? data.cities : [];
+      setCityOptions(storeSelect?.value || '', false);
+    }catch(err){
+      console.error('Unable to load RONA directory', err);
+      renderError('Loading RONA stores failed.');
+    }
+  }
+
+  if(discountRange && discountValue){
+    const updateDiscountDisplay = () => {
+      discountValue.textContent = `${discountRange.value}%`;
+    };
+    discountRange.addEventListener('input', () => {
+      updateDiscountDisplay();
+      fetchData();
+    });
+    updateDiscountDisplay();
+  }
+
+  if(searchInput){
+    let searchTimer = null;
+    searchInput.addEventListener('input', () => {
+      if(searchTimer){
+        clearTimeout(searchTimer);
+      }
+      searchTimer = setTimeout(() => fetchData(), 200);
+    });
+  }
+
+  if(storeSelect){
+    storeSelect.addEventListener('change', event => {
+      const value = event.target.value;
+      setCityOptions(value);
+      fetchData();
+    });
+  }
+
+  if(citySelect){
+    citySelect.addEventListener('change', () => fetchData());
+  }
+
+  if(postalInput){
+    postalInput.addEventListener('input', () => fetchData());
+  }
+
+  if(btnClear){
+    btnClear.addEventListener('click', async () => {
+      if(activeCountry !== 'canada') return;
+      const defaults = DEFAULT_FILTERS;
+      if(searchInput){
+        searchInput.value = defaults.search ?? '';
+      }
+      const defaultStore = getStoreByIdentifier(defaults.store);
+      const defaultStoreValue = defaultStore?.slug || '';
+      storeSelect.value = defaultStoreValue;
+      setCityOptions(defaultStoreValue, false);
+      if(citySelect){
+        if(defaults.city){
+          const options = Array.from(citySelect.options || []);
+          citySelect.value = options.some(option => option.value === defaults.city) ? defaults.city : '';
+        }else{
+          citySelect.value = '';
+        }
+      }
+      discountRange.value = defaults.discount ?? '0';
+      if(postalInput){
+        postalInput.value = '';
+      }
+      await fetchData();
+    });
+  }
+
+  function getCurrencySettings(country){
+    if(country === 'usa'){
+      return { locale: 'en-US', code: 'USD' };
+    }
+    if(country === 'europe'){
+      return { locale: 'en-GB', code: 'EUR' };
+    }
+    return BASE_CURRENCY;
+  }
+
+  function updateProfitCalculator(){
+    if(!profitCalculatorForm) return;
+    const purchase = Number(profitCalculatorForm.querySelector('[data-field="purchase"]').value || 0);
+    const sale = Number(profitCalculatorForm.querySelector('[data-field="sale"]').value || 0);
+    const shipping = Number(profitCalculatorForm.querySelector('[data-field="shipping"]').value || 0);
+    const feePercent = Number(profitCalculatorForm.querySelector('[data-field="feePercent"]').value || 0);
+    const extras = Number(profitCalculatorForm.querySelector('[data-field="extras"]').value || 0);
+
+    const marketplaceFees = sale * (feePercent / 100);
+    const totalCost = purchase + shipping + extras + marketplaceFees;
+    const profit = sale - totalCost;
+    const margin = sale > 0 ? (profit / sale) * 100 : 0;
+    const breakEven = feePercent >= 100 ? null : (purchase + shipping + extras) / Math.max(1e-6, (1 - (feePercent / 100)));
+
+    if(profitOutputs.profit){
+      profitOutputs.profit.textContent = formatCurrencyValue(profit);
+      profitOutputs.profit.dataset.negative = profit < 0 ? 'true' : 'false';
+    }
+    if(profitOutputs.margin){
+      const displayMargin = sale > 0 ? margin : 0;
+      const formattedMargin = formatPercentValue(displayMargin);
+      const sign = sale > 0 ? (displayMargin > 0 ? '+' : displayMargin < 0 ? '−' : '') : '';
+      profitOutputs.margin.textContent = sale > 0 ? `${sign}${formattedMargin}%` : '0%';
+      profitOutputs.margin.dataset.negative = displayMargin < 0 ? 'true' : 'false';
+    }
+    if(profitOutputs.fees){
+      profitOutputs.fees.textContent = formatCurrencyValue(marketplaceFees);
+    }
+    if(profitOutputs.totalCost){
+      profitOutputs.totalCost.textContent = formatCurrencyValue(totalCost);
+    }
+    if(profitOutputs.breakEven){
+      if(Number.isFinite(breakEven) && breakEven >= 0){
+        profitOutputs.breakEven.textContent = formatCurrencyValue(breakEven);
+        profitOutputs.breakEven.dataset.invalid = 'false';
+      }else{
+        profitOutputs.breakEven.textContent = '—';
+        profitOutputs.breakEven.dataset.invalid = 'true';
+      }
+    }
+  }
+
+  function formatCurrencyValue(value){
+    try{
+      return calculatorCurrencyFormatter.format(value ?? 0);
+    }catch(err){
+      return `${value ?? 0}`;
+    }
+  }
+
+  function formatPercentValue(value){
+    try{
+      return calculatorPercentFormatter.format(value ?? 0);
+    }catch(err){
+      return `${value ?? 0}`;
+    }
+  }
+
+  function updateCalculatorLocale(){
+    const settings = getCurrencySettings(activeCountry);
+    const locale = settings?.locale || BASE_CURRENCY.locale;
+    const code = settings?.code || BASE_CURRENCY.code;
+    try{
+      calculatorCurrencyFormatter = new Intl.NumberFormat(locale,{style:'currency',currency:code});
+    }catch(_err){
+      calculatorCurrencyFormatter = new Intl.NumberFormat(BASE_CURRENCY.locale,{style:'currency',currency:BASE_CURRENCY.code});
+    }
+    try{
+      calculatorPercentFormatter = new Intl.NumberFormat(locale,{maximumFractionDigits:1,minimumFractionDigits:0});
+    }catch(_err){
+      calculatorPercentFormatter = new Intl.NumberFormat(BASE_CURRENCY.locale,{maximumFractionDigits:1,minimumFractionDigits:0});
+    }
+    for(const node of calculatorCurrencyNodes){
+      node.textContent = code;
+    }
+    updateProfitCalculator();
+  }
+
+  if(profitCalculatorForm){
+    profitCalculatorForm.addEventListener('input', () => updateProfitCalculator());
+    profitCalculatorForm.addEventListener('reset', () => {
+      const refresh = () => updateProfitCalculator();
+      if(typeof requestAnimationFrame === 'function'){
+        requestAnimationFrame(refresh);
+      }else{
+        setTimeout(refresh, 0);
+      }
+    });
+  }
+
+  countryButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      activeCountry = button.dataset.country;
+      countryButtons.forEach(node => {
+        const isActive = node === button;
+        node.classList.toggle('active', isActive);
+        node.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+      });
+
+      if(activeCountry === 'canada'){
+        discountRange?.removeAttribute('disabled');
+        searchInput?.removeAttribute('disabled');
+        storeSelect?.removeAttribute('disabled');
+        citySelect?.removeAttribute('disabled');
+        postalInput?.removeAttribute('disabled');
+        btnClear?.removeAttribute('disabled');
+      }else{
+        discountRange?.setAttribute('disabled', 'true');
+        searchInput?.setAttribute('disabled', 'true');
+        storeSelect?.setAttribute('disabled', 'true');
+        citySelect?.setAttribute('disabled', 'true');
+        postalInput?.setAttribute('disabled', 'true');
+        btnClear?.setAttribute('disabled', 'true');
+      }
+
+      updateCalculatorLocale();
+      fetchData();
+    });
+  });
+
+  await loadRonaDirectory();
+  const defaultStore = getStoreByIdentifier(DEFAULT_FILTERS.store);
+  const defaultStoreValue = defaultStore?.slug || '';
+  if(searchInput){
+    searchInput.value = DEFAULT_FILTERS.search ?? '';
+  }
+  storeSelect.value = defaultStoreValue;
+  setCityOptions(defaultStoreValue, false);
+  citySelect.value = DEFAULT_FILTERS.city;
+  discountRange.value = DEFAULT_FILTERS.discount;
+  await fetchData();
+  updateCalculatorLocale();
+});
+</script>
+{% endblock %}

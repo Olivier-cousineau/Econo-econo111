@@ -1,0 +1,107 @@
+{
+  "htmlLang": "fr",
+  "title": "EconoDeal — Canada",
+  "stylesheet": "assets/css/main.css",
+  "overlay": {
+    "title": "Accès réservé aux membres",
+    "subtitle": "Rejoignez <strong><span data-client-count>0</span></strong> revendeurs Amazon et eBay ainsi que chasseurs de rabais, puis accédez au catalogue complet.",
+    "form": {
+      "fields": [
+        {
+          "id": "fullName",
+          "name": "fullName",
+          "type": "text",
+          "label": "Nom complet",
+          "placeholder": "Entrez votre nom",
+          "autocomplete": "name",
+          "required": true
+        },
+        {
+          "id": "email",
+          "name": "email",
+          "type": "email",
+          "label": "Courriel",
+          "placeholder": "nom@exemple.com",
+          "autocomplete": "email",
+          "required": true
+        }
+      ],
+      "consent": {
+        "id": "regulationCheckbox",
+        "name": "regulation",
+        "label": "Je confirme avoir lu et accepté les réglementations d'utilisation du site.",
+        "required": true
+      },
+      "submit": {
+        "id": "registrationSubmit",
+        "label": "S'inscrire et accéder"
+      }
+    }
+  },
+  "header": {
+    "layout": "expanded",
+    "brand": {
+      "href": "index.html",
+      "logo": "assets/logo.svg",
+      "alt": "EconoDeal – accélérateur de revendeurs Amazon et eBay",
+      "title": "EconoDeal",
+      "tagline": "Votre hub Amazon &amp; eBay"
+    },
+    "countryToggle": {
+      "ariaLabel": "Choisir le pays",
+      "options": [
+        { "value": "canada", "label": "Canada", "active": true },
+        { "value": "usa", "label": "États-Unis" },
+        { "value": "europe", "label": "Europe" }
+      ]
+    },
+    "menuToggle": {
+      "icon": "☰",
+      "label": "Menu"
+    },
+    "menu": {
+      "navAria": "Navigation principale",
+      "nav": [
+        { "href": "best-deals.html", "label": "Meilleurs rabais", "style": "white-space:nowrap" },
+        { "href": "pricing.html", "label": "Forfaits / prix", "style": "white-space:nowrap" },
+        { "href": "roadmap.html", "label": "Roadmap / vision", "style": "white-space:nowrap" },
+        { "href": "#vision-investors", "label": "Vision &amp; investisseurs", "style": "white-space:nowrap" }
+      ],
+      "sections": [
+        "<section class=\"header-menu-section header-menu-scp\" aria-label=\"SCP – Aperçu de la plateforme\"><h3 class=\"header-menu-scp-title\">Une plateforme professionnelle pour les vendeurs Amazon &amp; eBay</h3><p class=\"header-menu-scp-lead\">EconoDeal consolide des indicateurs tangibles, une intelligence de marché constante et un accompagnement expert pour accélérer vos ventes sur Amazon et eBay.</p><div class=\"value-grid header-menu-scp-grid\"><article class=\"value-card value-card--compact\"><span class=\"value-icon\" aria-hidden=\"true\">📊</span><h4>Pilotage data-driven</h4><ul><li><span class=\"value-metric\">+4&nbsp;500 rabais actifs</span> prêts à intégrer à vos catalogues Amazon &amp; eBay.</li><li><span class=\"value-metric\">97&nbsp;% de fiches validées</span> pour fiabiliser les exports Seller Central et Seller Hub.</li></ul></article><article class=\"value-card value-card--compact\"><span class=\"value-icon\" aria-hidden=\"true\">🌐</span><h4>Infrastructure multicanal</h4><ul><li><span class=\"value-metric\">2,4&nbsp;M d'ASIN &amp; SKU</span> suivis en continu pour Amazon.ca, Amazon.com et eBay.</li><li>Alertes prioritaires en <span class=\"value-metric\">18&nbsp;secondes</span> lorsque la marge devient exploitable.</li></ul></article><article class=\"value-card value-card--compact\"><span class=\"value-icon\" aria-hidden=\"true\">🗺️</span><h4>Vision de croissance</h4><ul><li>Déploiement Canada → États-Unis → Europe avec localisation complète.</li><li>Monétisation graduée intégrant exports Seller Central, scénarios IA et insights avancés.</li></ul></article></div><a class=\"nav-button header-menu-scp-link\" href=\"#vision-investors\">Explorer la section complète</a></section>",
+        "<section class=\"header-menu-section header-menu-investors\" id=\"vision-investors\" aria-label=\"Vision et investisseurs\"><h3 class=\"header-menu-investors-title\">Vision &amp; investisseurs</h3><p class=\"header-menu-investors-lead\">EconoDeal consolide des indicateurs de performance tangibles, une intelligence de marché constante et un accompagnement expert pour accélérer vos ventes sur les deux marketplaces.</p><div class=\"header-menu-investors-grid\"><article class=\"value-card\"><span class=\"value-icon\" aria-hidden=\"true\">📊</span><h3>Pilotage data-driven de vos catalogues</h3><ul><li><span class=\"value-metric\">+4&nbsp;500 rabais actifs</span> consolidés dans un catalogue unique prêt pour Amazon et eBay.</li><li><span class=\"value-metric\">97&nbsp;% de fiches validées</span> garantissant la fiabilité des exports Seller Central et Seller Hub.</li><li><span class=\"value-metric\">12&nbsp;h économisées</span> par semaine grâce à l'automatisation des tâches de sourcing.</li></ul></article><article class=\"value-card\"><span class=\"value-icon\" aria-hidden=\"true\">🌐</span><h3>Infrastructure prête pour le multicanal</h3><ul><li><span class=\"value-metric\">2,4&nbsp;M d'ASIN &amp; SKU</span> suivis pour Amazon.ca, Amazon.com, eBay.com et eBay.ca.</li><li>Détection moyenne de <span class=\"value-metric\">18&nbsp;secondes</span> entre un rabais et l'alerte envoyée à vos équipes.</li><li>Analyses IA qui récupèrent une <span class=\"value-metric\">marge médiane de +32&nbsp;%</span> sur les scénarios multicanaux surveillés.</li></ul></article><article class=\"value-card\"><span class=\"value-icon\" aria-hidden=\"true\">🗺️</span><h3>Vision de croissance triennale</h3><ul><li>Expansion séquencée : Canada → États-Unis → Europe avec localisation complète Amazon &amp; eBay.</li><li>Déploiement d'alertes en temps réel, d'analyse prédictive et d'un moteur de recommandations IA multilingue.</li><li>Monétisation progressive intégrant exports Seller Central, Seller Hub, scénarios IA et insights marché avancés.</li></ul></article></div></section>"
+      ],
+      "localeSwitch": {
+        "ariaLabel": "Langues et régions",
+        "langAria": "Sélecteur de langue",
+        "entries": [
+          { "label": "FR", "href": "index.html", "active": true },
+          { "label": "EN", "href": "index-en.html" },
+          { "label": "ES", "href": "index-es.html" },
+          { "label": "DE", "href": "index-de.html" },
+          { "label": "IT", "href": "index-it.html" }
+        ],
+        "region": {
+          "ariaLabel": "Taux de change 1 CAD pour 1 CAD",
+          "label": "1 CAD = 1 CAD"
+        }
+      },
+      "meta": [
+        {
+          "label": "Clients inscrits&nbsp;: ",
+          "value": { "dataAttr": "client-count", "default": "0" }
+        },
+        {
+          "html": "© <span id=\"year\"></span>"
+        }
+      ]
+    },
+    "storeAds": {
+      "ariaLabel": "Magasins en vedette"
+    }
+  },
+  "footer": {
+    "notice": "EconoDeal n'est pas responsable de la disponibilité des stocks affichés et n'enregistre aucun renseignement personnel des visiteurs.",
+    "copyright": "© <span id=\"yearFooter\"></span> EconoDeal · Tous droits réservés"
+  }
+}

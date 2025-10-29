@@ -1,0 +1,94 @@
+{
+  "htmlLang": "en",
+  "title": "EconoDeal — Canada",
+  "stylesheet": "assets/css/main.css",
+  "overlay": {
+    "title": "Members-only access",
+    "subtitle": "Join <strong><span data-client-count>0</span></strong> Amazon resellers and deal hunters, then unlock the full catalogue.",
+    "form": {
+      "fields": [
+        {
+          "id": "fullName",
+          "name": "fullName",
+          "type": "text",
+          "label": "Full name",
+          "placeholder": "Enter your name",
+          "autocomplete": "name",
+          "required": true
+        },
+        {
+          "id": "email",
+          "name": "email",
+          "type": "email",
+          "label": "Email",
+          "placeholder": "name@example.com",
+          "autocomplete": "email",
+          "required": true
+        }
+      ],
+      "consent": {
+        "id": "regulationCheckbox",
+        "name": "regulation",
+        "label": "I confirm I have read and accepted the site usage guidelines.",
+        "required": true
+      },
+      "submit": {
+        "id": "registrationSubmit",
+        "label": "Sign up and unlock access"
+      }
+    }
+  },
+  "header": {
+    "layout": "compact",
+    "brand": {
+      "href": "index-en.html",
+      "logo": "assets/logo.svg",
+      "alt": "EconoDeal – Amazon sellers accelerator",
+      "title": "EconoDeal",
+      "tagline": "Your Amazon hub"
+    },
+    "countryToggle": {
+      "ariaLabel": "Select country",
+      "options": [
+        { "value": "canada", "label": "Canada", "active": true },
+        { "value": "usa", "label": "United States" },
+        { "value": "europe", "label": "Europe" }
+      ]
+    },
+    "nav": [
+      { "href": "best-deals-en.html", "label": "Top deals", "style": "white-space:nowrap" },
+      { "href": "pricing-en.html", "label": "Plans / pricing", "style": "white-space:nowrap" },
+      { "href": "roadmap-en.html", "label": "Roadmap / vision", "style": "white-space:nowrap" }
+    ],
+    "langSwitch": {
+      "ariaLabel": "Language selector",
+      "entries": [
+        { "label": "FR", "href": "index.html" },
+        { "label": "EN", "href": "index-en.html", "active": true },
+        { "label": "ES", "href": "index-es.html" },
+        { "label": "DE", "href": "index-de.html" },
+        { "label": "IT", "href": "index-it.html" }
+      ]
+    },
+    "regionIndicator": {
+      "ariaLabel": "Exchange rate 1 CAD to 1 CAD",
+      "label": "1 CAD = 1 CAD"
+    },
+    "meta": [
+      {
+        "html": "Registered clients:&nbsp; <span data-client-count>0</span>",
+        "style": "white-space:nowrap"
+      },
+      {
+        "html": "© <span id=\"year\"></span>"
+      }
+    ],
+    "storeAds": {
+      "ariaLabel": "Featured stores"
+    }
+  },
+  "footer": {
+    "notice": "EconoDeal does not guarantee stock availability and does not store any visitor personal data.",
+    "copyright": "© <span id=\"yearFooter\"></span> EconoDeal · All rights reserved"
+  }
+}

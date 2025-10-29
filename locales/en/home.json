@@ -1,0 +1,104 @@
+{
+  "hero": {
+    "kicker": "Amazon arbitrage platform",
+    "title": "Unlock the best clearance deals to grow your listings",
+    "description": "Centralise your product sourcing, plug in key suppliers and let our AI signals surface the most profitable discounts for Amazon.ca, Amazon.com and Europe.",
+    "actions": {
+      "primary": { "label": "Explore inventories", "href": "#search" },
+      "secondary": { "label": "See the benefits", "href": "#amazon-sellers" }
+    },
+    "stats": [
+      { "value": "+4 500", "label": "Active deals" },
+      { "value": "97 %", "label": "Validated Amazon listings" },
+      { "value": "12 h", "label": "Hours saved each week" }
+    ],
+    "preview": {
+      "header": {
+        "label": "Snapshot",
+        "badge": "Canada feed"
+      },
+      "title": "Opportunities in focus",
+      "description": "Track actionable price gaps between your favourite retailers and the Amazon Buy Box in real time.",
+      "items": [
+        { "index": "1", "label": "Priority alerts when margin exceeds 28%." },
+        { "index": "2", "label": "Consolidated stock statuses for Best Buy, Walmart and other partners." },
+        { "index": "3", "label": "Instant export to your FBA and FBM templates." }
+      ]
+    }
+  },
+  "valueGrid": {
+    "id": "investors",
+    "title": "Signals that reassure investors",
+    "description": "EconoDeal blends tangible usage indicators with an ambitious AI roadmap that proves its ability to create recurring value across markets.",
+    "cards": [
+      {
+        "icon": "📊",
+        "title": "Robust data-driven positioning",
+        "items": [
+          "<span class=\"value-metric\">4,500+ active deals</span> consolidated in a single arbitrage-ready catalogue.",
+          "<span class=\"value-metric\">97% of listings validated</span>, proving data quality and reliable Amazon exports.",
+          "<span class=\"value-metric\">12 hours saved</span> per week on average by centralising sourcing workflows."
+        ]
+      },
+      {
+        "icon": "🌐",
+        "title": "Scalable technology",
+        "items": [
+          "<span class=\"value-metric\">2.4M ASINs tracked</span> across Amazon.ca, Amazon.com and Amazon EU.",
+          "Average detection of <span class=\"value-metric\">18 seconds</span> between a new discount and its priority alert.",
+          "AI insights recovering a <span class=\"value-metric\">median +32% margin</span> on monitored scenarios."
+        ]
+      },
+      {
+        "icon": "🗺️",
+        "title": "Three-year growth vision",
+        "items": [
+          "Sequenced expansion: Canada → United States → Europe with full localisation.",
+          "Rollout of real-time alerts, predictive analytics and a multilingual AI recommendation engine.",
+          "Progressive monetisation that adds Seller Central exports, AI scenarios and advanced market insights."
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "id": "pricing",
+    "style": "padding-top:10px",
+    "title": "Plans tailored to your needs",
+    "titleStyle": "margin:0 0 10px",
+    "description": "Choose the option that best fits how you monitor discounts, feed your Amazon listings and protect your margins. Every plan includes a 7-day trial.",
+    "descriptionStyle": "max-width:620px",
+    "plans": [
+      {
+        "tag": "Essential",
+        "name": "Core access",
+        "price": "9,99&nbsp;$",
+        "features": [
+          "Access to popular Amazon-ready clearance deals",
+          "3 email alerts per week",
+          "30-day price history"
+        ]
+      },
+      {
+        "tag": "Most popular",
+        "name": "Advanced plan",
+        "price": "19,99&nbsp;$",
+        "highlight": true,
+        "features": [
+          "Unlimited access to the Amazon-optimised catalogue",
+          "Real-time personalised alerts",
+          "Seller Central exports and shared team lists"
+        ]
+      },
+      {
+        "tag": "Premium",
+        "name": "Full AI analysis",
+        "price": "29,99&nbsp;$",
+        "features": [
+          "Unlimited multichannel alerts",
+          "AI-assisted pricing analysis for Amazon",
+          "Market trend forecasts and FBA simulation"
+        ]
+      }
+    ]
+  }
+}

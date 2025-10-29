@@ -1,0 +1,44 @@
+{% set section = valueGrid or {} %}
+<section class="section value-section"{% if section.id %} id="{{ section.id }}"{% endif %}>
+  <div class="value-header">
+    {% if section.title %}
+    <h2>{{ section.title | safe }}</h2>
+    {% endif %}
+    {% if section.description %}
+    <p class="muted">{{ section.description | safe }}</p>
+    {% endif %}
+  </div>
+  {% if section.cards %}
+  <div class="value-grid{% if section.compact %} header-menu-scp-grid{% endif %}">
+    {% for card in section.cards %}
+    <article class="value-card{% if card.compact %} value-card--compact{% endif %}{% if card.modifier %} {{ card.modifier }}{% endif %}">
+      {% if card.icon %}
+      <span class="value-icon" aria-hidden="true">{{ card.icon | safe }}</span>
+      {% endif %}
+      {% if card.title %}
+      <h3{% if card.headingLevel == 4 %} class="value-card-subtitle"{% endif %}>{{ card.title | safe }}</h3>
+      {% endif %}
+      {% if card.items %}
+      <ul>
+        {% for item in card.items %}
+        <li>
+          {% if item is string %}
+            {{ item | safe }}
+          {% else %}
+            {% if item.prefix %}{{ item.prefix | safe }}{% endif %}
+            {% if item.metric %}<span class="value-metric">{{ item.metric | safe }}</span>{% endif %}
+            {% if item.text %}{{ item.text | safe }}{% endif %}
+            {% if item.suffix %}{{ item.suffix | safe }}{% endif %}
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </article>
+    {% endfor %}
+  </div>
+  {% endif %}
+  {% if section.link %}
+  <a class="nav-button header-menu-scp-link" href="{{ section.link.href }}">{{ section.link.label | safe }}</a>
+  {% endif %}
+</section>

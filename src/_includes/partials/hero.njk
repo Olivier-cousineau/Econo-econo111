@@ -1,0 +1,60 @@
+{% set hero = hero or {} %}
+<section class="hero" aria-labelledby="heroTitle">
+  <div class="hero-content">
+    {% if hero.kicker %}
+    <span class="hero-kicker">{{ hero.kicker | safe }}</span>
+    {% endif %}
+    {% if hero.title %}
+    <h1 id="heroTitle">{{ hero.title | safe }}</h1>
+    {% endif %}
+    {% if hero.description %}
+    <p>{{ hero.description | safe }}</p>
+    {% endif %}
+    {% if hero.actions %}
+    <div class="hero-actions">
+      {% if hero.actions.primary %}
+      <a class="btn btn-primary" href="{{ hero.actions.primary.href }}">{{ hero.actions.primary.label | safe }}</a>
+      {% endif %}
+      {% if hero.actions.secondary %}
+      <a class="btn btn-secondary" href="{{ hero.actions.secondary.href }}">{{ hero.actions.secondary.label | safe }}</a>
+      {% endif %}
+    </div>
+    {% endif %}
+    {% if hero.stats %}
+    <ul class="hero-stats">
+      {% for stat in hero.stats %}
+      <li class="hero-stat"><strong>{{ stat.value | safe }}</strong><span>{{ stat.label | safe }}</span></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+  {% if hero.preview %}
+  <div class="hero-preview" aria-hidden="true">
+    <article class="hero-preview-card">
+      {% if hero.preview.header %}
+      <header>
+        {% if hero.preview.header.label %}
+        <span>{{ hero.preview.header.label | safe }}</span>
+        {% endif %}
+        {% if hero.preview.header.badge %}
+        <div class="badge" style="margin:0">{{ hero.preview.header.badge | safe }}</div>
+        {% endif %}
+      </header>
+      {% endif %}
+      {% if hero.preview.title %}
+      <h2>{{ hero.preview.title | safe }}</h2>
+      {% endif %}
+      {% if hero.preview.description %}
+      <p>{{ hero.preview.description | safe }}</p>
+      {% endif %}
+      {% if hero.preview.items %}
+      <ul class="hero-preview-list">
+        {% for item in hero.preview.items %}
+        <li class="hero-preview-item"><span>{{ item.index | safe }}</span> {{ item.label | safe }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </article>
+  </div>
+  {% endif %}
+</section>

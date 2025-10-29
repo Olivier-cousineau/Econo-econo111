@@ -4,7 +4,15 @@
   "private": true,
   "description": "Static marketing site with optional Stripe Checkout integration.",
   "type": "module",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "watch": "eleventy --watch"
+  },
   "dependencies": {
     "stripe": "^14.24.0"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
   }
 }

@@ -1,0 +1,100 @@
+{% set header = header or {} %}
+<header>
+  <div class="container header-layout">
+    <div class="row header-top">
+      <div class="row" style="gap:16px;align-items:center;flex-wrap:wrap">
+        <a class="brand" href="{{ header.brand.href }}">
+          <img src="{{ header.brand.logo }}" alt="{{ header.brand.alt }}" />
+          <span class="brand-text">
+            <span class="brand-title">{{ header.brand.title }}</span>
+            {% if header.brand.tagline %}
+            <span class="brand-tagline">{{ header.brand.tagline | safe }}</span>
+            {% endif %}
+          </span>
+        </a>
+        {% if header.countryToggle %}
+        <div class="country-toggle country-toggle--header" role="group" aria-label="{{ header.countryToggle.ariaLabel }}">
+          {% for option in header.countryToggle.options %}
+          <button type="button" class="country-button{% if option.active %} active{% endif %}" data-country="{{ option.value }}" aria-pressed="{{ option.active ? 'true' : 'false' }}">{{ option.label | safe }}</button>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      {% if header.layout == 'compact' %}
+      <div class="row" style="gap:12px;align-items:center">
+        {% if header.nav %}
+          {% for item in header.nav %}
+          <a class="nav-button" href="{{ item.href }}"{% if item.style %} style="{{ item.style }}"{% endif %}>{{ item.label | safe }}</a>
+          {% endfor %}
+        {% endif %}
+        {% if header.langSwitch %}
+        <div class="lang-switch" aria-label="{{ header.langSwitch.ariaLabel }}">
+          {% for entry in header.langSwitch.entries %}
+            {% if entry.active %}
+            <span class="active" aria-current="true">{{ entry.label | safe }}</span>
+            {% else %}
+            <a href="{{ entry.href }}">{{ entry.label | safe }}</a>
+            {% endif %}
+          {% endfor %}
+        </div>
+        {% endif %}
+        {% if header.regionIndicator %}
+        <span class="header-region" data-exchange-indicator aria-live="polite" aria-label="{{ header.regionIndicator.ariaLabel }}">{{ header.regionIndicator.label | safe }}</span>
+        {% endif %}
+        {% if header.meta %}
+          {% for meta in header.meta %}
+          <div class="muted"{% if meta.style %} style="{{ meta.style }}"{% endif %}>{{ meta.html ? meta.html | safe : meta.label | safe }}{% if not meta.html and meta.value %}<span data-{{ meta.value.dataAttr }}>{{ meta.value.default }}</span>{% endif %}</div>
+          {% endfor %}
+        {% endif %}
+      </div>
+      {% else %}
+      {% if header.menuToggle %}
+      <button id="menuToggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="headerMenu" aria-haspopup="true">
+        <span class="menu-toggle-icon" aria-hidden="true">{{ header.menuToggle.icon | safe }}</span>
+        <span class="menu-toggle-label">{{ header.menuToggle.label | safe }}</span>
+      </button>
+      {% endif %}
+      {% endif %}
+    </div>
+    {% if header.layout != 'compact' and header.menu %}
+    <div id="headerMenu" class="header-menu" hidden aria-labelledby="menuToggle">
+      {% if header.menu.nav %}
+      <nav class="header-menu-section header-menu-nav" aria-label="{{ header.menu.navAria }}">
+        {% for item in header.menu.nav %}
+        <a class="nav-button" href="{{ item.href }}"{% if item.style %} style="{{ item.style }}"{% endif %}>{{ item.label | safe }}</a>
+        {% endfor %}
+      </nav>
+      {% endif %}
+      {% if header.menu.sections %}
+        {% for section in header.menu.sections %}
+        {{ section | safe }}
+        {% endfor %}
+      {% endif %}
+      {% if header.menu.localeSwitch %}
+      <div class="header-menu-section header-menu-locale" role="group" aria-label="{{ header.menu.localeSwitch.ariaLabel }}">
+        <div class="lang-switch" aria-label="{{ header.menu.localeSwitch.langAria }}">
+          {% for entry in header.menu.localeSwitch.entries %}
+            {% if entry.active %}
+            <span class="active" aria-current="true">{{ entry.label | safe }}</span>
+            {% else %}
+            <a href="{{ entry.href }}">{{ entry.label | safe }}</a>
+            {% endif %}
+          {% endfor %}
+        </div>
+        {% if header.menu.localeSwitch.region %}
+        <span class="header-region" data-exchange-indicator aria-live="polite" aria-label="{{ header.menu.localeSwitch.region.ariaLabel }}">{{ header.menu.localeSwitch.region.label | safe }}</span>
+        {% endif %}
+      </div>
+      {% endif %}
+      {% if header.menu.meta %}
+      <div class="header-menu-section header-menu-meta">
+        {% for meta in header.menu.meta %}
+        <div>{% if meta.html %}{{ meta.html | safe }}{% else %}{{ meta.label | safe }}{% if meta.value %}<span data-{{ meta.value.dataAttr }}>{{ meta.value.default }}</span>{% endif %}{% endif %}</div>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    {% endif %}
+    <aside id="storeAds" class="store-ads" aria-live="polite" aria-label="{{ header.storeAds.ariaLabel }}" aria-hidden="true"></aside>
+  </div>
+</header>

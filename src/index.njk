@@ -1,0 +1,842 @@
+---
+layout: layouts/base.njk
+locale: fr
+title: EconoDeal — Canada
+---
+{% set home = locales[locale].home %}
+{% block content %}
+{% include "partials/hero.njk" with { hero: home.hero } %}
+<section class="section" id="search">
+  <h2 style="margin:0 0 10px">Trouver des liquidations pour vos listings Amazon &amp; eBay</h2>
+  <p class="muted">Les fichiers sont chargés depuis <span class="kbd">data/&lt;magasin&gt;/&lt;ville&gt;.json</span> afin de repérer rapidement les opportunités d'arbitrage et d'approvisionnement multicanal.</p>
+
+  <!-- ✅ Les éléments requis existent et leurs IDs correspondent au script -->
+  <div class="row" style="gap:12px;align-items:center;flex-wrap:wrap;margin-top:12px">
+    <span class="muted" data-country-label>Pays couvert&nbsp;: Canada · Devise&nbsp;: CAD</span>
+  </div>
+
+  <div class="filters" style="margin-top:12px">
+    <div>
+      <label for="searchInput">Recherche rapide</label>
+      <input id="searchInput" name="search" type="text" inputmode="search" placeholder="Ex. Nintendo Switch, Lego..." autocomplete="off" />
+    </div>
+    <div>
+      <label for="storeSelect">Magasin</label>
+      <select id="storeSelect">
+        <option value="">(Tous)</option>
+      </select>
+    </div>
+    <div>
+      <label for="citySelect">Ville</label>
+      <select id="citySelect">
+        <option value="">(Toutes)</option>
+      </select>
+    </div>
+    <div>
+      <label for="postalInput">Code postal</label>
+      <input id="postalInput" name="postal" type="text" inputmode="text" placeholder="Ex. H2X 1Y4" autocomplete="postal-code" />
+      <p id="postalHelper" class="field-helper">Entrez les 3 premiers caractères du code postal pour trouver les succursales dans un rayon de 50&nbsp;km (ex. H2X).</p>
+    </div>
+    <div>
+      <label for="discountRange">% de rabais minimal : <span id="discountValue" class="kbd">0%</span></label>
+      <input id="discountRange" type="range" min="0" max="90" step="5" value="0" />
+    </div>
+    <div style="align-self:end">
+      <button id="btnClear">Réinitialiser</button>
+    </div>
+  </div>
+
+  <div id="devError" class="dev-banner"></div>
+
+  <div class="section">
+    <div class="row" style="justify-content:space-between;align-items:center">
+      <h3 style="margin:0">Résultats</h3>
+      <div class="muted"><span id="resultCount">0</span> articles</div>
+    </div>
+    <div id="cards" class="grid" style="margin-top:12px"></div>
+  </div>
+</section>
+{% include "partials/value-grid.njk" with { valueGrid: home.valueGrid } %}
+<section class="amazon-section" id="amazon-sellers">
+  <div>
+    <h2>Une expérience pensée pour les revendeurs Amazon &amp; eBay</h2>
+    <p class="amazon-intro">Profitez d'un hub d'approvisionnement bâti pour les opérations FBA, FBM et eBay&nbsp;: détectez les liquidations rentables en quelques secondes, sécurisez vos marges et structurez vos routines de sourcing pour Amazon.ca, Amazon.com, eBay.com et eBay.ca.</p>
+  </div>
+  <div class="seller-metrics">
+    <div class="seller-metric">
+      <strong>2,4&nbsp;M</strong>
+      <span>ASINs &amp; SKU suivis</span>
+      <p>Cartographie dynamique des catalogues Amazon.ca, Amazon.com, Amazon EU et eBay Amérique du Nord.</p>
+    </div>
+    <div class="seller-metric">
+      <strong>18&nbsp;s</strong>
+      <span>Détection moyenne</span>
+      <p>Latence entre l'import d'un rabais et l'alerte prioritaire envoyée à vos équipes Amazon &amp; eBay.</p>
+    </div>
+    <div class="seller-metric">
+      <strong>+32&nbsp;%</strong>
+      <span>Marge récupérée</span>
+      <p>Gain médian observé chez les revendeurs exploitant nos scénarios IA multi-marketplaces.</p>
+    </div>
+  </div>
+  <div class="seller-calculator" id="profitCalculator">
+    <div>
+      <h3>Calculatrice Seller Central</h3>
+      <p>Simulez votre profit net par article en tenant compte des frais Amazon, eBay et des coûts logistiques.</p>
+    </div>
+    <form id="profitCalculatorForm" class="calculator-form" autocomplete="off">
+      <div class="calculator-field">
+        <label for="purchaseCost">Prix d'achat (<span data-calculator-currency>CAD</span>)</label>
+        <input id="purchaseCost" data-field="purchase" type="number" min="0" step="0.01" inputmode="decimal" placeholder="Ex. 18,50" />
+      </div>
+      <div class="calculator-field">
+        <label for="salePrice">Prix de vente (<span data-calculator-currency>CAD</span>)</label>
+        <input id="salePrice" data-field="sale" type="number" min="0" step="0.01" inputmode="decimal" placeholder="Ex. 34,99" />
+      </div>
+      <div class="calculator-field">
+        <label for="shippingCost">Frais d'expédition (<span data-calculator-currency>CAD</span>)</label>
+        <input id="shippingCost" data-field="shipping" type="number" min="0" step="0.01" inputmode="decimal" placeholder="Ex. 5,00" />
+      </div>
+      <div class="calculator-field">
+        <label for="feePercent">Frais marketplace (%)</label>
+        <input id="feePercent" data-field="feePercent" type="number" min="0" max="75" step="0.1" inputmode="decimal" value="15" />
+      </div>
+      <div class="calculator-field">
+        <label for="otherCosts">Frais FBA / autres (<span data-calculator-currency>CAD</span>)</label>
+        <input id="otherCosts" data-field="extras" type="number" min="0" step="0.01" inputmode="decimal" placeholder="Ex. 3,25" />
+      </div>
+      <div class="calculator-actions">
+        <button type="reset">Réinitialiser</button>
+      </div>
+    </form>
+    <div class="calculator-results" aria-live="polite">
+      <div class="calculator-result">
+        <span class="result-label">Profit net estimé</span>
+        <strong class="result-value profit-output" data-profit-amount data-negative="false">0,00&nbsp;$</strong>
+      </div>
+      <div class="calculator-result">
+        <span class="result-label">Marge sur vente</span>
+        <strong class="result-value margin-output" data-profit-margin data-negative="false">0&nbsp;%</strong>
+        <span class="result-note">Basée sur le prix de vente saisi</span>
+      </div>
+      <div class="calculator-result">
+        <span class="result-label">Frais marketplace estimés</span>
+        <strong class="result-value" data-marketplace-fees>0,00&nbsp;$</strong>
+      </div>
+      <div class="calculator-result">
+        <span class="result-label">Coût total</span>
+        <strong class="result-value" data-total-cost>0,00&nbsp;$</strong>
+      </div>
+      <div class="calculator-result">
+        <span class="result-label">Prix de vente seuil</span>
+        <strong class="result-value" data-break-even>0,00&nbsp;$</strong>
+        <span class="result-note">Pour couvrir vos coûts et frais</span>
+      </div>
+    </div>
+    <p class="calculator-footnote">Les calculs sont fournis à titre indicatif. Ajustez les frais selon vos catégories et vos modalités d'expédition.</p>
+  </div>
+  <div class="seller-grid">
+    <article class="seller-card">
+      <div class="seller-icon" aria-hidden="true">🚀</div>
+      <h3>Onboarding FBA &amp; Seller Hub simplifié</h3>
+      <p>Des modèles prêts à l'emploi pour calculer les frais FBA, estimer la rotation, créer vos annonces eBay et synchroniser vos listes sans feuille de calcul complexe.</p>
+    </article>
+    <article class="seller-card">
+      <div class="seller-icon" aria-hidden="true">📦</div>
+      <h3>Veille des stocks multi-fournisseurs</h3>
+      <p>Combinez les inventaires de Best Buy, Walmart et grossistes eBay afin de détecter les écarts de prix exploitables avant vos concurrents.</p>
+    </article>
+    <article class="seller-card">
+      <div class="seller-icon" aria-hidden="true">🤝</div>
+      <h3>Communauté dédiée</h3>
+      <p>Accédez à un salon privé de revendeurs Amazon et eBay, partagez vos stratégies de repricing et bénéficiez de comparatifs produits validés par la communauté.</p>
+    </article>
+    <article class="seller-card">
+      <div class="seller-icon" aria-hidden="true">🧭</div>
+      <h3>Coaching opérationnel</h3>
+      <ul class="seller-list">
+        <li><span aria-hidden="true">✔</span>Alertes quand la Buy Box ou le Top Rated chute sous votre cible.</li>
+        <li><span aria-hidden="true">✔</span>Exports compatibles Seller Central, Seller Hub et outils d'analyse FBA.</li>
+        <li><span aria-hidden="true">✔</span>Suggestions IA pour reconditionner, arbitrer et fixer les prix selon la saison.</li>
+      </ul>
+    </article>
+  </div>
+</section>
+{% include "partials/pricing.njk" with { pricing: home.pricing } %}
+<section class="section" id="roadmap" style="padding-top:0">
+  <h2 style="margin:0 0 10px">Notre feuille de route</h2>
+  <p class="muted" style="max-width:640px">Une vision triennale pour propulser EconoDeal sur la scène internationale, avec une intégration progressive de l'intelligence artificielle au cœur de nos services Amazon et eBay.</p>
+  <div class="roadmap">
+    <div class="roadmap-grid">
+      <article class="roadmap-card">
+        <div class="roadmap-year"><strong>Année 1</strong> Canada</div>
+        <ul>
+          <li>Consolider la couverture des détaillants nationaux pour Amazon &amp; eBay.</li>
+          <li>Optimiser les alertes de rabais en temps réel.</li>
+          <li>Lancer des tableaux de bord régionaux bilingues.</li>
+        </ul>
+      </article>
+      <article class="roadmap-card">
+        <div class="roadmap-year"><strong>Année 2</strong> États-Unis</div>
+        <ul>
+          <li>Élargir le catalogue aux grandes bannières américaines Amazon &amp; eBay.</li>
+          <li>Déployer la surveillance des stocks multi-états.</li>
+          <li>Introduire l'analyse prédictive des tendances d'achat.</li>
+        </ul>
+      </article>
+      <article class="roadmap-card roadmap-ai">
+        <div class="roadmap-year"><strong>Année 3</strong> Europe</div>
+        <ul>
+          <li>Localiser l'expérience pour les principaux marchés européens Amazon &amp; eBay.</li>
+          <li>Activer un moteur de recommandations IA multilingue.</li>
+          <li>Affiner les stratégies de prix grâce à l'apprentissage continu.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script>
+// === Initialisation sûre ===
+document.addEventListener('DOMContentLoaded', async () => {
+  const overlay = document.getElementById('registrationOverlay');
+  const form = document.getElementById('registrationForm');
+  const submitBtn = document.getElementById('registrationSubmit');
+  const regulationCheckbox = document.getElementById('regulationCheckbox');
+  const clientCountDisplays = Array.from(document.querySelectorAll('[data-client-count]'));
+  const menuToggle = document.getElementById('menuToggle');
+  const headerMenu = document.getElementById('headerMenu');
+  const runNextFrame = typeof window.requestAnimationFrame === 'function'
+    ? window.requestAnimationFrame.bind(window)
+    : callback => window.setTimeout(callback, 0);
+  const MENU_TRANSITION_MS = 200;
+  let menuHideTimer = null;
+
+  function isMenuOpen(){
+    return menuToggle ? menuToggle.getAttribute('aria-expanded') === 'true' : false;
+  }
+
+  function openMenu(){
+    if(!menuToggle || !headerMenu) return;
+    if(menuHideTimer){
+      clearTimeout(menuHideTimer);
+      menuHideTimer = null;
+    }
+    headerMenu.hidden = false;
+    runNextFrame(() => {
+      headerMenu.classList.add('is-visible');
+    });
+    menuToggle.setAttribute('aria-expanded','true');
+  }
+
+  function scheduleCloseMenu(){
+    if(!menuToggle || !headerMenu) return;
+    if(menuHideTimer){
+      clearTimeout(menuHideTimer);
+    }
+    menuHideTimer = setTimeout(() => {
+      headerMenu.classList.remove('is-visible');
+      menuToggle.setAttribute('aria-expanded','false');
+      setTimeout(() => {
+        headerMenu.hidden = true;
+      }, MENU_TRANSITION_MS);
+    }, MENU_TRANSITION_MS);
+  }
+
+  if(menuToggle && headerMenu){
+    menuToggle.addEventListener('click', () => {
+      if(isMenuOpen()){
+        scheduleCloseMenu();
+      }else{
+        openMenu();
+      }
+    });
+
+    headerMenu.addEventListener('mouseenter', () => {
+      if(menuHideTimer){
+        clearTimeout(menuHideTimer);
+        menuHideTimer = null;
+      }
+    });
+
+    headerMenu.addEventListener('mouseleave', () => {
+      if(isMenuOpen()){
+        scheduleCloseMenu();
+      }
+    });
+  }
+
+  function toggleOverlay(show){
+    if(!overlay) return;
+    overlay.dataset.visible = show ? 'true' : 'false';
+    overlay.style.display = show ? 'flex' : 'none';
+    if(show){
+      overlay.focus?.();
+    }
+  }
+
+  if(submitBtn){
+    submitBtn.disabled = true;
+  }
+
+  function validateForm(){
+    if(!form || !submitBtn) return;
+    const isValid = form.checkValidity();
+    submitBtn.disabled = !isValid;
+  }
+
+  if(form){
+    form.addEventListener('input', validateForm);
+    form.addEventListener('change', validateForm);
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      const formData = new FormData(form);
+      const entry = {
+        name: formData.get('fullName') ?? '',
+        email: formData.get('email') ?? '',
+        regulation: formData.get('regulation') === 'on',
+        registeredAt: new Date().toISOString()
+      };
+      upsertRegistration(entry);
+      const count = setClientCount(resolveClientCount() + 1);
+      updateClientDisplays(count);
+      toggleOverlay(false);
+      form.reset();
+      validateForm();
+    });
+  }
+
+  if(regulationCheckbox){
+    regulationCheckbox.addEventListener('change', validateForm);
+  }
+
+  function updateClientDisplays(value){
+    clientCountDisplays.forEach(node => {
+      node.textContent = value;
+    });
+  }
+
+  function parseJson(value){
+    if(!value) return null;
+    try{
+      return JSON.parse(value);
+    }catch(err){
+      console.warn('Impossible de lire les données existantes', err);
+      return null;
+    }
+  }
+
+  function safeGet(key){
+    try{
+      return localStorage.getItem(key);
+    }catch(err){
+      console.warn('Stockage local indisponible', err);
+      return null;
+    }
+  }
+
+  function safeSet(key, value){
+    try{
+      localStorage.setItem(key, value);
+    }catch(err){
+      console.warn('Impossible d\'enregistrer les données', err);
+    }
+  }
+
+  function cleanText(value){
+    return typeof value === 'string' ? value.trim() : '';
+  }
+
+  function getRegistrations(){
+    const parsed = parseJson(safeGet('econodealRegistrations'));
+    if(!Array.isArray(parsed)) return [];
+    return parsed
+      .filter(item => item && typeof item === 'object')
+      .map(item => ({
+        name: cleanText(item.name),
+        email: cleanText(item.email).toLowerCase(),
+        registeredAt: cleanText(item.registeredAt)
+      }))
+      .filter(item => item.email);
+  }
+
+  function saveRegistrations(items){
+    safeSet('econodealRegistrations', JSON.stringify(items));
+  }
+
+  function upsertRegistration(entry){
+    const collection = getRegistrations();
+    const email = cleanText(entry.email).toLowerCase();
+    if(!email) return;
+
+    const normalized = {
+      name: cleanText(entry.name),
+      email,
+      registeredAt: cleanText(entry.registeredAt)
+    };
+
+    const existingIndex = collection.findIndex(item => item.email === email);
+    if(existingIndex >= 0){
+      collection[existingIndex] = {
+        ...collection[existingIndex],
+        ...normalized
+      };
+    }else{
+      collection.push(normalized);
+    }
+
+    saveRegistrations(collection);
+  }
+
+  function parseCount(value){
+    const parsed = parseInt(value ?? '0', 10);
+    return Number.isFinite(parsed) && parsed >= 0 ? parsed : 0;
+  }
+
+  function setClientCount(value){
+    const normalized = Math.max(0, value);
+    safeSet('econodealClientCount', String(normalized));
+    return normalized;
+  }
+
+  function deriveClientCountFromRegistrations(){
+    const registrations = getRegistrations();
+    if(!registrations.length) return 0;
+    const uniqueEmails = new Set();
+    registrations.forEach(item => {
+      if(item?.email) uniqueEmails.add(item.email);
+    });
+    return uniqueEmails.size;
+  }
+
+  function resolveClientCount(){
+    const stored = parseCount(safeGet('econodealClientCount'));
+    const derived = deriveClientCountFromRegistrations();
+    const resolved = Math.max(stored, derived);
+    return setClientCount(resolved);
+  }
+
+  const initialClientCount = resolveClientCount();
+  updateClientDisplays(initialClientCount);
+
+  if(overlay){
+    overlay.addEventListener('click', event => {
+      if(event.target === overlay){
+        toggleOverlay(false);
+      }
+    });
+  }
+
+  // Gestion des années dynamiques
+  const yearNow = new Date().getFullYear();
+  const yearNodes = document.querySelectorAll('#year, #yearFooter');
+  yearNodes.forEach(node => {
+    node.textContent = yearNow;
+  });
+
+  // Intégration des données d'échange
+  const exchangeIndicator = document.querySelector('[data-exchange-indicator]');
+  if(exchangeIndicator){
+    exchangeIndicator.textContent = '1 CAD = 1 CAD';
+  }
+
+  const DEFAULT_FILTERS = {
+    search: '',
+    store: 'rona-sport',
+    city: 'montreal',
+    discount: 0
+  };
+
+  const BASE_CURRENCY = {
+    locale: 'fr-CA',
+    code: 'CAD'
+  };
+
+  let calculatorCurrencyFormatter = new Intl.NumberFormat(BASE_CURRENCY.locale,{style:'currency',currency:BASE_CURRENCY.code});
+  let calculatorPercentFormatter = new Intl.NumberFormat(BASE_CURRENCY.locale,{maximumFractionDigits:1,minimumFractionDigits:0});
+
+  function formatCurrencyValue(value){
+    try{
+      return calculatorCurrencyFormatter.format(value ?? 0);
+    }catch(err){
+      return `${value ?? 0}`;
+    }
+  }
+
+  function formatPercentValue(value){
+    try{
+      return calculatorPercentFormatter.format(value ?? 0);
+    }catch(err){
+      return `${value ?? 0}`;
+    }
+  }
+
+  const cardsContainer = document.getElementById('cards');
+  const devBanner = document.getElementById('devError');
+  const searchInput = document.getElementById('searchInput');
+  const storeSelect = document.getElementById('storeSelect');
+  const citySelect = document.getElementById('citySelect');
+  const postalInput = document.getElementById('postalInput');
+  const discountRange = document.getElementById('discountRange');
+  const discountValue = document.getElementById('discountValue');
+  const btnClear = document.getElementById('btnClear');
+  const resultCount = document.getElementById('resultCount');
+  const range = discountRange;
+  const profitCalculator = document.getElementById('profitCalculator');
+  const profitCalculatorForm = document.getElementById('profitCalculatorForm');
+  const profitOutputs = {
+    profit: document.querySelector('[data-profit-amount]'),
+    margin: document.querySelector('[data-profit-margin]'),
+    fees: document.querySelector('[data-marketplace-fees]'),
+    totalCost: document.querySelector('[data-total-cost]'),
+    breakEven: document.querySelector('[data-break-even]')
+  };
+  const calculatorCurrencyNodes = document.querySelectorAll('[data-calculator-currency]');
+
+  let activeCountry = 'canada';
+
+  function renderError(message){
+    if(!devBanner) return;
+    devBanner.textContent = message || '';
+    devBanner.hidden = !message;
+  }
+
+  function getCountryFile(){
+    if(activeCountry === 'canada') return 'data/rona/montreal.json';
+    if(activeCountry === 'usa') return 'data/walmart/usa.json';
+    if(activeCountry === 'europe') return 'data/europe/inventory.json';
+    return 'data/rona/montreal.json';
+  }
+
+  function renderCard(item){
+    const article = document.createElement('article');
+    article.className = 'card';
+    article.innerHTML = `
+      <header class="card-header">
+        <h4>${item.title ?? 'Article'}</h4>
+        <span class="badge">${item.store ?? 'Magasin'}</span>
+      </header>
+      <ul class="card-details">
+        <li><strong>Prix actuel :</strong> ${item.price ?? '—'}</li>
+        <li><strong>Rabais :</strong> ${item.discount ?? '—'}</li>
+        <li><strong>Ville :</strong> ${item.city ?? '—'}</li>
+        <li><strong>Stock :</strong> ${item.stock ?? '—'}</li>
+      </ul>
+    `;
+    return article;
+  }
+
+  function filterCards(data){
+    if(!Array.isArray(data)) return [];
+    const search = (searchInput?.value || '').toLowerCase();
+    const store = storeSelect?.value || '';
+    const city = citySelect?.value || '';
+    const postal = (postalInput?.value || '').trim().toUpperCase();
+    const minDiscount = Number(range?.value || 0);
+
+    return data.filter(item => {
+      if(store && item.storeSlug !== store) return false;
+      if(city && item.citySlug !== city) return false;
+      if(postal && !String(item.postalCode || '').toUpperCase().startsWith(postal)) return false;
+      if(minDiscount && Number(item.discountValue || 0) < minDiscount) return false;
+      if(search){
+        const haystack = `${item.title ?? ''} ${item.store ?? ''} ${item.city ?? ''}`.toLowerCase();
+        if(!haystack.includes(search)) return false;
+      }
+      return true;
+    });
+  }
+
+  function renderCards(data){
+    if(!cardsContainer) return;
+    cardsContainer.innerHTML = '';
+    const items = filterCards(data);
+    resultCount.textContent = items.length;
+    items.forEach(item => {
+      cardsContainer.appendChild(renderCard(item));
+    });
+  }
+
+  async function fetchData(){
+    const file = getCountryFile();
+    try{
+      const response = await fetch(file);
+      if(!response.ok) throw new Error('Réponse invalide');
+      const data = await response.json();
+      renderCards(data.items || []);
+      renderError('');
+    }catch(err){
+      console.error('Impossible de charger les données', err);
+      renderError('Impossible de charger les données. Vérifiez que les fichiers JSON sont disponibles.');
+    }
+  }
+
+  function getStoreByIdentifier(slug){
+    const stores = Array.from(storeSelect?.options || []).map(option => ({
+      slug: option.value,
+      label: option.textContent
+    }));
+    return stores.find(item => item.slug === slug);
+  }
+
+  function setCityOptions(storeSlug, resetValue = true){
+    if(!citySelect) return;
+    const options = Array.from(citySelect.querySelectorAll('[data-store]'));
+    if(!options.length){
+      const fragment = document.createDocumentFragment();
+      (window.ECONODEAL_CITIES || []).forEach(city => {
+        const option = document.createElement('option');
+        option.value = city.slug;
+        option.textContent = city.label;
+        option.dataset.store = city.store;
+        fragment.appendChild(option);
+      });
+      citySelect.appendChild(fragment);
+    }
+
+    Array.from(citySelect.options).forEach(option => {
+      if(!option.value) return;
+      option.hidden = storeSlug ? option.dataset.store !== storeSlug : false;
+    });
+
+    if(resetValue){
+      citySelect.value = '';
+    }
+  }
+
+  async function loadRonaDirectory(){
+    try{
+      const response = await fetch('data/rona/directory.json');
+      if(!response.ok) throw new Error('Réponse invalide');
+      const data = await response.json();
+      if(storeSelect && Array.isArray(data.stores)){
+        const fragment = document.createDocumentFragment();
+        data.stores.forEach(store => {
+          const option = document.createElement('option');
+          option.value = store.slug;
+          option.textContent = store.label;
+          fragment.appendChild(option);
+        });
+        storeSelect.appendChild(fragment);
+      }
+      window.ECONODEAL_CITIES = Array.isArray(data.cities) ? data.cities : [];
+      setCityOptions(storeSelect?.value || '', false);
+    }catch(err){
+      console.error('Impossible de charger l\'annuaire RONA', err);
+      renderError('Le chargement des magasins RONA a échoué.');
+    }
+  }
+
+  if(range && discountValue){
+    const updateDiscountDisplay = () => {
+      discountValue.textContent = `${range.value}%`;
+    };
+    range.addEventListener('input', () => {
+      updateDiscountDisplay();
+      fetchData();
+    });
+    updateDiscountDisplay();
+  }
+
+  if(searchInput){
+    let searchTimer = null;
+    searchInput.addEventListener('input', () => {
+      if(searchTimer){
+        clearTimeout(searchTimer);
+      }
+      searchTimer = setTimeout(() => fetchData(), 200);
+    });
+  }
+
+  if(storeSelect){
+    storeSelect.addEventListener('change', event => {
+      const value = event.target.value;
+      setCityOptions(value);
+      fetchData();
+    });
+  }
+
+  if(citySelect){
+    citySelect.addEventListener('change', () => fetchData());
+  }
+
+  if(postalInput){
+    postalInput.addEventListener('input', () => {
+      fetchData();
+    });
+  }
+
+  if(btnClear){
+    btnClear.addEventListener('click', async ()=>{
+      if(activeCountry !== 'canada') return;
+      const defaults = DEFAULT_FILTERS;
+      if(searchInput){
+        searchInput.value = defaults.search ?? '';
+      }
+      const defaultStore = getStoreByIdentifier(defaults.store);
+      const defaultStoreValue = defaultStore?.slug || '';
+      storeSelect.value = defaultStoreValue;
+      setCityOptions(defaultStoreValue, false);
+      if(citySelect){
+        if(defaults.city){
+          const options = Array.from(citySelect.options || []);
+          citySelect.value = options.some(option => option.value === defaults.city) ? defaults.city : '';
+        }else{
+          citySelect.value='';
+        }
+      }
+      range.value = defaults.discount ?? '0';
+      resetPostalFilter();
+      await fetchData();
+    });
+  }
+
+  function resetPostalFilter(){
+    if(postalInput){
+      postalInput.value = '';
+    }
+  }
+
+  function updateProfitCalculator(){
+    if(!profitCalculatorForm) return;
+    const purchase = Number(profitCalculatorForm.querySelector('[data-field="purchase"]').value || 0);
+    const sale = Number(profitCalculatorForm.querySelector('[data-field="sale"]').value || 0);
+    const shipping = Number(profitCalculatorForm.querySelector('[data-field="shipping"]').value || 0);
+    const feePercent = Number(profitCalculatorForm.querySelector('[data-field="feePercent"]').value || 0);
+    const extras = Number(profitCalculatorForm.querySelector('[data-field="extras"]').value || 0);
+
+    const marketplaceFees = sale * (feePercent / 100);
+    const totalCost = purchase + shipping + extras + marketplaceFees;
+    const profit = sale - totalCost;
+    const margin = sale > 0 ? (profit / sale) * 100 : 0;
+    const breakEven = feePercent >= 100 ? null : (purchase + shipping + extras) / Math.max(1e-6, (1 - (feePercent / 100)));
+
+    if(profitOutputs.profit){
+      profitOutputs.profit.textContent = formatCurrencyValue(profit);
+      profitOutputs.profit.dataset.negative = profit < 0 ? 'true' : 'false';
+    }
+    if(profitOutputs.margin){
+      const displayMargin = sale > 0 ? margin : 0;
+      const formattedMargin = formatPercentValue(displayMargin);
+      const sign = sale > 0 ? (displayMargin > 0 ? '+' : displayMargin < 0 ? '−' : '') : '';
+      profitOutputs.margin.textContent = sale > 0 ? `${sign}${formattedMargin}%` : '0%';
+      profitOutputs.margin.dataset.negative = displayMargin < 0 ? 'true' : 'false';
+    }
+    if(profitOutputs.fees){
+      profitOutputs.fees.textContent = formatCurrencyValue(marketplaceFees);
+    }
+    if(profitOutputs.totalCost){
+      profitOutputs.totalCost.textContent = formatCurrencyValue(totalCost);
+    }
+    if(profitOutputs.breakEven){
+      if(Number.isFinite(breakEven) && breakEven >= 0){
+        profitOutputs.breakEven.textContent = formatCurrencyValue(breakEven);
+        profitOutputs.breakEven.dataset.invalid = 'false';
+      }else{
+        profitOutputs.breakEven.textContent = '—';
+        profitOutputs.breakEven.dataset.invalid = 'true';
+      }
+    }
+  }
+
+  function getCurrencySettings(country){
+    if(country === 'usa'){
+      return { locale: 'en-US', code: 'USD' };
+    }
+    if(country === 'europe'){
+      return { locale: 'fr-FR', code: 'EUR' };
+    }
+    return BASE_CURRENCY;
+  }
+
+  function updateCalculatorLocale(){
+    if(!profitCalculator) return;
+    const settings = getCurrencySettings(activeCountry);
+    const locale = settings?.locale || BASE_CURRENCY.locale;
+    const code = settings?.code || BASE_CURRENCY.code;
+    try{
+      calculatorCurrencyFormatter = new Intl.NumberFormat(locale,{style:'currency',currency:code});
+    }catch(_err){
+      calculatorCurrencyFormatter = new Intl.NumberFormat(BASE_CURRENCY.locale,{style:'currency',currency:BASE_CURRENCY.code});
+    }
+    try{
+      calculatorPercentFormatter = new Intl.NumberFormat(locale,{maximumFractionDigits:1,minimumFractionDigits:0});
+    }catch(_err){
+      calculatorPercentFormatter = new Intl.NumberFormat(BASE_CURRENCY.locale,{maximumFractionDigits:1,minimumFractionDigits:0});
+    }
+    for(const node of calculatorCurrencyNodes){
+      node.textContent = code;
+    }
+    updateProfitCalculator();
+  }
+
+  if(profitCalculatorForm){
+    profitCalculatorForm.addEventListener('input', () => {
+      updateProfitCalculator();
+    });
+    profitCalculatorForm.addEventListener('reset', () => {
+      const refresh = () => updateProfitCalculator();
+      if(typeof requestAnimationFrame === 'function'){
+        requestAnimationFrame(refresh);
+      }else{
+        setTimeout(refresh, 0);
+      }
+    });
+  }
+
+  function getActiveCountryButton(){
+    return document.querySelector('.country-button.active');
+  }
+
+  function setCountry(country){
+    activeCountry = country;
+    const buttons = document.querySelectorAll('.country-button');
+    buttons.forEach(button => {
+      const isActive = button.dataset.country === country;
+      button.classList.toggle('active', isActive);
+      button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    });
+
+    if(country === 'canada'){
+      discountRange?.removeAttribute('disabled');
+      searchInput?.removeAttribute('disabled');
+      storeSelect?.removeAttribute('disabled');
+      citySelect?.removeAttribute('disabled');
+      postalInput?.removeAttribute('disabled');
+      btnClear?.removeAttribute('disabled');
+    }else{
+      discountRange?.setAttribute('disabled','true');
+      searchInput?.setAttribute('disabled','true');
+      storeSelect?.setAttribute('disabled','true');
+      citySelect?.setAttribute('disabled','true');
+      postalInput?.setAttribute('disabled','true');
+      btnClear?.setAttribute('disabled','true');
+    }
+
+    updateCalculatorLocale();
+    fetchData();
+  }
+
+  const countryButtons = document.querySelectorAll('.country-button');
+  countryButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      setCountry(button.dataset.country);
+    });
+  });
+
+  // Démarrage
+  await loadRonaDirectory();
+  const defaultStore = getStoreByIdentifier(DEFAULT_FILTERS.store);
+  const defaultStoreValue = defaultStore?.slug || '';
+  if(searchInput){
+    searchInput.value = DEFAULT_FILTERS.search ?? '';
+  }
+  storeSelect.value = defaultStoreValue;
+  setCityOptions(defaultStoreValue, false);
+  citySelect.value = DEFAULT_FILTERS.city;
+  range.value = DEFAULT_FILTERS.discount; // ← 0% par défaut
+  await fetchData();
+});
+</script>
+{% endblock %}

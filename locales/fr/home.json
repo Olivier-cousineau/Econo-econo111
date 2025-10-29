@@ -1,0 +1,104 @@
+{
+  "hero": {
+    "kicker": "Plateforme d'arbitrage Amazon &amp; eBay",
+    "title": "Débloquez les meilleures liquidations pour propulser vos boutiques Amazon et eBay",
+    "description": "Centralisez vos achats, connectez vos fournisseurs clés et laissez nos signaux IA repérer les rabais les plus rentables pour vos catalogues Amazon.ca, Amazon.com, eBay.com et eBay.ca.",
+    "actions": {
+      "primary": { "label": "Explorer les inventaires", "href": "#search" },
+      "secondary": { "label": "Voir les avantages", "href": "#amazon-sellers" }
+    },
+    "stats": [
+      { "value": "+4 500", "label": "Rabais actifs multicanal" },
+      { "value": "97 %", "label": "Fiches Amazon &amp; eBay validées" },
+      { "value": "12 h", "label": "Gain moyen / semaine automatisé" }
+    ],
+    "preview": {
+      "header": {
+        "label": "Instantané",
+        "badge": "Flux Canada"
+      },
+      "title": "Opportunités en lumière",
+      "description": "Surveillez en temps réel les écarts de prix exploitables entre vos marchands favoris et la Buy Box Amazon ou le Top Rated eBay.",
+      "items": [
+        { "index": "1", "label": "Alertes prioritaires quand la marge dépasse 28&nbsp;% sur Amazon ou eBay." },
+        { "index": "2", "label": "Statuts de stocks consolidés Best Buy, Walmart et grossistes eBay." },
+        { "index": "3", "label": "Export instantané vers vos modèles FBA, FBM et Seller Hub." }
+      ]
+    }
+  },
+  "valueGrid": {
+    "id": "client-value",
+    "title": "Pourquoi les vendeurs Amazon &amp; eBay s'appuient sur EconoDeal",
+    "description": "La plateforme réduit l'effort de sourcing, oriente vos décisions sur les deux marketplaces et propose une montée en gamme cohérente à mesure que vos opérations se diversifient.",
+    "cards": [
+      {
+        "icon": "⚡",
+        "title": "Efficacité opérationnelle immédiate",
+        "items": [
+          { "text": "Filtres multi-critères (magasin, ville, code postal, seuil de rabais) pour centraliser les recherches produits." },
+          { "text": "Vue consolidée des stocks et des écarts de prix exploitables sans feuille de calcul." },
+          { "text": "Workflows prêts à exporter vers Seller Central et eBay Seller Hub en quelques clics." }
+        ]
+      },
+      {
+        "icon": "🛒",
+        "title": "Offre adaptée aux revendeurs Amazon &amp; eBay",
+        "items": [
+          { "text": "Onboarding FBA guidé, calcul des frais simplifié, scénarios FBM et eBay fulfilment intégrés." },
+          { "text": "Veille multi-fournisseurs (Best Buy, Walmart, grossistes eBay, etc.) pour sécuriser Buy Box et Top Rated." },
+          { "text": "Communauté privée, ateliers tactiques et assistance dédiée pour rester aligné sur les règles Amazon et eBay." }
+        ]
+      },
+      {
+        "icon": "💡",
+        "title": "Monétisation graduée et claire",
+        "items": [
+          { "text": "Forfait Essentiel : accès rapide aux liquidations Amazon &amp; eBay et alertes hebdomadaires." },
+          { "text": "Forfait Avancé : alertes en temps réel, exports Seller Central / Seller Hub et travail d'équipe." },
+          { "text": "Offre Premium : analyse IA, prévisions de tendances marketplace et accompagnement multicanal illimité." }
+        ]
+      }
+    ]
+  },
+  "pricing": {
+    "id": "pricing",
+    "style": "padding-top:10px",
+    "title": "Forfaits adaptés à vos besoins",
+    "titleStyle": "margin:0 0 10px",
+    "description": "Choisissez l'option qui correspond le mieux à votre façon de surveiller les rabais, d'alimenter vos listings Amazon &amp; eBay et de sécuriser vos marges. Chaque forfait inclut une période d'essai de 7 jours.",
+    "descriptionStyle": "max-width:620px",
+    "plans": [
+      {
+        "tag": "Essentiel",
+        "name": "Accès de base",
+        "price": "9,99&nbsp;$",
+        "features": [
+          "Accès aux liquidations populaires prêtes pour Amazon &amp; eBay",
+          "3 alertes courriel par semaine",
+          "Historique de prix sur 30 jours"
+        ]
+      },
+      {
+        "tag": "Le plus populaire",
+        "name": "Forfait Avancé",
+        "price": "19,99&nbsp;$",
+        "highlight": true,
+        "features": [
+          "Accès illimité au catalogue optimisé Amazon &amp; eBay",
+          "Alertes personnalisées en temps réel",
+          "Exports Seller Central, Seller Hub et listes partagées avec votre équipe"
+        ]
+      },
+      {
+        "tag": "Premium",
+        "name": "Analyse IA complète",
+        "price": "29,99&nbsp;$",
+        "features": [
+          "Alertes illimitées multicanal",
+          "Analyse des prix assistée par IA dédiée à Amazon &amp; eBay",
+          "Prévisions de tendances du marché et simulation FBA / eBay fulfilment"
+        ]
+      }
+    ]
+  }
+}
