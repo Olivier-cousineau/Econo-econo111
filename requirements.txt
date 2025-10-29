@@ -2,4 +2,4 @@ Flask
 flask-cors
 requests>=2.31.0
 stripe
-pydantic>=1.10
+pydantic>=1.10,<2
