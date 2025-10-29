@@ -61,7 +61,7 @@
       <div class="hero">
         <div class="badge">Nach jedem Crawl aktualisiert</div>
         <h2>Bestenliste der Restposten</h2>
-        <p class="muted" style="max-width:720px">Entdecke die attraktivsten Rabatte, die unsere Bots bei allen überwachten Händlern finden. Die Bestenliste wird nach jedem Crawl aktualisiert. Lade die Seite neu, um die neuesten Angebote zu sehen und die Top-100-Restposten nach Rabatt zu prüfen.</p>
+        <p class="muted" style="max-width:720px">Entdecke die attraktivsten Rabatte, die unsere Bots bei allen überwachten Händlern finden. Die Bestenliste wird nach jedem Crawl aktualisiert. Lade die Seite neu, um die neuesten Angebote zu sehen und die Top-1.000.000-Restposten nach Rabatt zu prüfen.</p>
         <div class="status-banner" id="statusBanner" role="status">
           <span id="statusText">Wir analysieren die neuesten Crawls ...</span>
         </div>
@@ -102,6 +102,7 @@
       const year = document.getElementById('year');
       const yearFooter = document.getElementById('yearFooter');
       const DEFAULT_REMOTE_DATA_BASE = 'https://raw.githubusercontent.com/Olivier-cousineau/Econo-econo111/main';
+      const MAX_TOP_DEALS = 1_000_000;
 
       function detectRemoteDataBase(){
         const globalBase = window.ECONODEAL_DATA_BASE_URL || window.__ECONODEAL_DATA_BASE_URL__;
@@ -877,7 +878,7 @@
             if(b.discountPct !== a.discountPct) return b.discountPct - a.discountPct;
             return (a.salePrice ?? Number.POSITIVE_INFINITY) - (b.salePrice ?? Number.POSITIVE_INFINITY);
           });
-        const top = sorted.slice(0, 100);
+        const top = sorted.slice(0, MAX_TOP_DEALS);
         dealCount.textContent = top.length.toString();
         if(top.length === 0){
           cardsEl.innerHTML = '';
