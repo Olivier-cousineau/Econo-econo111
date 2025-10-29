@@ -63,7 +63,7 @@ function updateProfitCalculator(){
   const purchase = clampNonNegative(parseDecimal(profitInputs.purchase?.value));
   const sale = clampNonNegative(parseDecimal(profitInputs.sale?.value));
   const shipping = clampNonNegative(parseDecimal(profitInputs.shipping?.value));
-  const extr));
+  const extras = clampNonNegative(parseDecimal(profitInputs.extras?.value));
   let feePercent = parseDecimal(profitInputs.feePercent?.value);
   if(!Number.isFinite(feePercent)) feePercent = 0;
   if(feePercent < 0) feePercent = 0;
@@ -74,7 +74,7 @@ function updateProfitCalculator(){
     }
   }
   const marketplaceFees = sale * (feePercent / 100);
-  const totalCost = purchase + shipping + extr;
+  const totalCost = purchase + shipping + extras;
   const profit = sale - totalCost;
   const margin = sale > 0 ? (profit / sale) * 100 : 0;
   const breakEven = feePercent >= 100 ? null : (purchase + shipping + extras) / Math.max(1e-6, (1 - (feePercent / 100)));
@@ -2064,26 +2064,28 @@ if(searchInput){
     render();
   });
 }
-btnClear.addEventListener('click', async ()=>{
-  if(activeCountry !== 'canada') return;
-  const defaults = DEFAULT_FILTERS;
-  if(searchInput){
-    searchInput.value = defaults.search ?? '';
-  }
-  const defaultStore = getStoreByIdentifier(defaults.store);
-  const defaultStoreValue = defaultStore?.slug || '';
-  storeSelect.value = defaultStoreValue;
-  setCityOptions(defaultStoreValue, false);
-  if(citySelect){
-    if(defaults.city){
-      const options = Array.from(citySelect.options || []);
-      citySelect.value = options.some(option => option.value === defaults.city) ? defaults.city : '';
-    }else{
-      citySelect.value='';
+if(btnClear){
+  btnClear.addEventListener('click', async () => {
+    if(activeCountry !== 'canada') return;
+    const defaults = DEFAULT_FILTERS;
+    if(searchInput){
+      searchInput.value = defaults.search ?? '';
     }
-  }
-  range.value = defaults.discount ?? '0';
-  resetPostalFilter();
-  await fetchData();
-
+    const defaultStore = getStoreByIdentifier(defaults.store);
+    const defaultStoreValue = defaultStore?.slug || '';
+    storeSelect.value = defaultStoreValue;
+    setCityOptions(defaultStoreValue, false);
+    if(citySelect){
+      if(defaults.city){
+        const options = Array.from(citySelect.options || []);
+        citySelect.value = options.some(option => option.value === defaults.city) ? defaults.city : '';
+      }else{
+        citySelect.value = '';
+      }
+    }
+    range.value = defaults.discount ?? '0';
+    resetPostalFilter();
+    await fetchData();
+  });
+}
 }
