@@ -4,6 +4,8 @@ from pathlib import Path
 from typing import Dict, Iterable, Optional
 from urllib.parse import quote
 
+import requests
+
 from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
 
