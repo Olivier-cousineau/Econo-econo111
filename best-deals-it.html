@@ -61,7 +61,7 @@
       <div class="hero">
         <div class="badge">Aggiornato dopo ogni crawl</div>
         <h2>Classifica delle migliori liquidazioni</h2>
-        <p class="muted" style="max-width:720px">Scopri gli sconti più aggressivi individuati dai nostri bot in tutti i rivenditori monitorati. La classifica viene aggiornata al termine di ogni crawl. Ricarica la pagina per vedere le offerte più recenti e rivedere le prime 100 liquidazioni ordinate per tasso di sconto.</p>
+        <p class="muted" style="max-width:720px">Scopri gli sconti più aggressivi individuati dai nostri bot in tutti i rivenditori monitorati. La classifica viene aggiornata al termine di ogni crawl. Ricarica la pagina per vedere le offerte più recenti e rivedere le prime 1&nbsp;000&nbsp;000 liquidazioni ordinate per tasso di sconto.</p>
         <div class="status-banner" id="statusBanner" role="status">
           <span id="statusText">Analisi degli ultimi crawl in corso...</span>
         </div>
@@ -102,6 +102,7 @@
       const year = document.getElementById('year');
       const yearFooter = document.getElementById('yearFooter');
       const DEFAULT_REMOTE_DATA_BASE = 'https://raw.githubusercontent.com/Olivier-cousineau/Econo-econo111/main';
+      const MAX_TOP_DEALS = 1_000_000;
 
       function detectRemoteDataBase(){
         const globalBase = window.ECONODEAL_DATA_BASE_URL || window.__ECONODEAL_DATA_BASE_URL__;
@@ -877,7 +878,7 @@
             if(b.discountPct !== a.discountPct) return b.discountPct - a.discountPct;
             return (a.salePrice ?? Number.POSITIVE_INFINITY) - (b.salePrice ?? Number.POSITIVE_INFINITY);
           });
-        const top = sorted.slice(0, 100);
+        const top = sorted.slice(0, MAX_TOP_DEALS);
         dealCount.textContent = top.length.toString();
         if(top.length === 0){
           cardsEl.innerHTML = '';
