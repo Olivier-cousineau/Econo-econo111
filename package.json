@@ -6,5 +6,19 @@
   "type": "module",
   "dependencies": {
     "stripe": "^14.24.0"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "autoprefixer": "^10.4.19",
+    "cross-env": "^7.0.3",
+    "cssnano": "^6.1.2",
+    "postcss": "^8.4.47",
+    "postcss-cli": "^11.0.0",
+    "postcss-import": "^16.1.0",
+    "shx": "^0.3.4"
+  },
+  "scripts": {
+    "build:css": "shx mkdir -p dist/assets && cross-env NODE_ENV=production postcss styles/main.css -o dist/assets/main.css",
+    "watch:css": "shx mkdir -p dist/assets && postcss styles/main.css -o dist/assets/main.css --watch"
   }
 }
