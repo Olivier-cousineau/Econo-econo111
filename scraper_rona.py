@@ -26,9 +26,7 @@ from playwright.sync_api import (
     sync_playwright,
 )
 
-LISTING_URL = (
-    "https://www.rona.ca/fr/promotions/liquidation?catalogId=10051&storeId=10151&langId=-2"
-)
+LISTING_URL = "https://www.rona.ca/fr/promotions/liquidation"
 PAGINATION_PARAM_KEYS: Sequence[str] = (
     "page",
     "pageNumber",
@@ -113,6 +111,21 @@ def _wait_for_listing_content(page) -> None:
         page.wait_for_timeout(2_000)
 
 
+def _scroll_to_bottom(page, pause_time: int = 1_000, max_scrolls: int = 20) -> None:
+    """Scroll down the page repeatedly to trigger lazy-loaded content."""
+
+    previous_height = 0
+    for i in range(max_scrolls):
+        print(f"[INFO] Scrolling... ({i + 1}/{max_scrolls})")
+        page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+        page.wait_for_timeout(pause_time)
+        current_height = page.evaluate("document.body.scrollHeight")
+        if current_height == previous_height:
+            print("[INFO] Reached bottom of page.")
+            break
+        previous_height = current_height
+
+
 def _iter_pagination_targets(soup: BeautifulSoup, base: ParseResult) -> Iterable[Tuple[str, int]]:
     """Yield absolute pagination URLs and their page numbers."""
 
@@ -156,13 +169,37 @@ def render_listing_pages() -> List[str]:
 
         queue_url(LISTING_URL, 1)
 
+        cookie_consent_checked = False
+
         try:
             while queue:
                 _, target_url = heapq.heappop(queue)
                 queued.discard(target_url)
                 page.goto(target_url, wait_until="domcontentloaded", timeout=30_000)
+                if not cookie_consent_checked:
+                    try:
+                        page.click("button#onetrust-accept-btn-handler", timeout=5_000)
+                        print("[INFO] Accepted cookie consent banner.")
+                    except Exception:
+                        print("[INFO] Cookie consent not shown or already accepted.")
+                    finally:
+                        cookie_consent_checked = True
                 _wait_for_listing_content(page)
+                _scroll_to_bottom(page)
                 html = page.content()
+                snapshot_index = len(html_pages) + 1
+                debug_html_path = Path(f"debug_page_{snapshot_index}.html")
+                debug_html_path.write_text(html, encoding="utf-8")
+                # Persist debug artifacts so the rendered DOM and visual state can be
+                # inspected when troubleshooting scraping issues.
+                screenshot_path = Path(f"screenshot_page_{snapshot_index}.png")
+                page.screenshot(path=str(screenshot_path))
+                print(
+                    "[DEBUG] Saved HTML snapshot to",
+                    debug_html_path,
+                    "and screenshot to",
+                    screenshot_path,
+                )
                 html_pages.append(html)
                 visited.add(target_url)
 
@@ -188,7 +225,7 @@ def _fallback_to_snapshot(error: Exception) -> List[str]:
 
     if DEFAULT_SNAPSHOT.is_file():
         print(
-            "Playwright could not render the liquidation listing ("
+            "[WARN] Playwright could not render the liquidation listing ("
             f"{error.__class__.__name__}: {error}). "
             "Using cached HTML snapshot instead.",
             file=sys.stderr,
@@ -206,7 +243,9 @@ def extract_products(soup: BeautifulSoup) -> List[Dict[str, Any]]:
     """Return product metadata extracted from the listing HTML."""
 
     products: List[Dict[str, Any]] = []
-    for item in soup.select(".product-tile__wrapper"):
+    wrappers = soup.select(".product-tile__wrapper")
+    print(f"[DEBUG] Found {len(wrappers)} product wrappers.")
+    for item in wrappers:
         title = item.select_one(".product-tile__title")
         price = item.select_one(".product-tile__price")
         url = item.select_one(".product-tile__title a")
@@ -240,22 +279,33 @@ def deduplicate_products(products: Sequence[Dict[str, Any]]) -> List[Dict[str, A
 def main() -> None:
     args = parse_args()
 
+    print("[INFO] Starting scraper...")
+
     if args.html:
+        print(f"[INFO] Using HTML snapshot: {args.html}")
         html_pages = _load_snapshot(args.html)
     else:
         try:
+            print("[INFO] Rendering listing pages with Playwright...")
             html_pages = render_listing_pages()
         except (PlaywrightTimeoutError, PlaywrightError) as exc:
+            print(f"[WARN] Playwright failed: {exc}")
             html_pages = _fallback_to_snapshot(exc)
 
+    print(f"[INFO] Extracting products from {len(html_pages)} pages...")
     products: List[Dict[str, Any]] = []
     for html in html_pages:
         soup = BeautifulSoup(html, "html.parser")
         products.extend(extract_products(soup))
     products = deduplicate_products(products)
+    print(f"[INFO] Total unique products: {len(products)}")
+    if not products:
+        print("[ERROR] No products scraped. DOM structure may have changed.")
+        sys.exit(1)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     with args.output.open("w", encoding="utf-8") as fp:
         json.dump(products, fp, ensure_ascii=False, indent=2)
+    print(f"[INFO] Scraped data saved to: {args.output}")
 
 
 if __name__ == "__main__":
