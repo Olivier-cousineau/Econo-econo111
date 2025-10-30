@@ -44,6 +44,10 @@ HEADERS = {
     "User-Agent": USER_AGENT,
     "Accept-Language": "fr-CA,fr;q=0.9,en-CA;q=0.8,en;q=0.7",
 }
+SHOW_MORE_PATTERN = re.compile(
+    r"(voir|afficher)\s+plus|see\s+more|show\s+more|load\s+more",
+    re.IGNORECASE,
+)
 
 
 @dataclass
@@ -242,7 +246,46 @@ def get_next_page_url(soup: BeautifulSoup, current_url: str) -> str:
     return ""
 
 
-def _load_page(playwright_page: Page, url: str) -> BeautifulSoup:
+def _expand_show_more_buttons(
+    playwright_page: Page, *, click_delay: float = 1.0, max_clicks: int = 100
+) -> None:
+    """Click the "show more" button until all products are revealed."""
+
+    wait_ms = max(int(click_delay * 1000), 500)
+    product_locator = playwright_page.locator("div.product-tile")
+
+    for _ in range(max_clicks):
+        candidates = playwright_page.locator("button, a").filter(
+            has_text=SHOW_MORE_PATTERN
+        )
+        try:
+            if candidates.count() == 0:
+                break
+            button = candidates.first
+            if not button.is_enabled() or not button.is_visible():
+                break
+        except PlaywrightTimeoutError:
+            break
+
+        before_count = product_locator.count()
+        try:
+            button.click(timeout=5000)
+        except PlaywrightTimeoutError:
+            break
+
+        playwright_page.wait_for_timeout(wait_ms)
+        after_count = product_locator.count()
+        if after_count <= before_count:
+            # No additional products were revealed; exit to avoid an infinite loop.
+            if candidates.count() == 0:
+                break
+    # Give the DOM a moment to settle after the last click.
+    playwright_page.wait_for_timeout(250)
+
+
+def _load_page(
+    playwright_page: Page, url: str, *, click_delay: float = 1.0
+) -> BeautifulSoup:
     try:
         playwright_page.goto(url, wait_until="networkidle")
     except PlaywrightTimeoutError:
@@ -253,6 +296,7 @@ def _load_page(playwright_page: Page, url: str) -> BeautifulSoup:
     except PlaywrightTimeoutError:
         # Proceed with whatever was rendered to allow downstream checks
         pass
+    _expand_show_more_buttons(playwright_page, click_delay=click_delay)
     return BeautifulSoup(playwright_page.content(), "html.parser")
 
 
@@ -276,7 +320,7 @@ def collect_all_pages(delay: float, *, headless: bool) -> List[Product]:
                     break
                 print(f"Téléchargement page {page_num}...")
                 visited_urls.add(current_url)
-                soup = _load_page(page, current_url)
+                soup = _load_page(page, current_url, click_delay=max(delay, 0.5))
                 page_products = parse_products(soup)
                 if not page_products:
                     break
