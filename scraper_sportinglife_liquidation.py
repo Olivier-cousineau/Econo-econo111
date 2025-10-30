@@ -30,7 +30,7 @@ import sys
 import time
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Iterable, List, Sequence
+from typing import Iterable, List, Sequence, Tuple
 
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException, WebDriverException
@@ -61,10 +61,15 @@ PRODUCT_SELECTORS = {
     "discount": ".product-savings-percent",
 }
 
-LOAD_MORE_SELECTORS: Sequence[str] = (
-    "button.load-more",
-    "button[data-action='load-more']",
-    "button[data-testid='load-more']",
+LOAD_MORE_LOCATORS: Sequence[Tuple[By, str]] = (
+    (By.CSS_SELECTOR, "button.load-more"),
+    (By.CSS_SELECTOR, "button[data-action='load-more']"),
+    (By.CSS_SELECTOR, "button[data-testid='load-more']"),
+    # Sporting Life sometimes renders the control with a French label "Voir plus".
+    (By.XPATH, "//button[normalize-space()='Voir plus']"),
+    (By.XPATH, "//button[contains(normalize-space(.), 'Voir plus')"]),
+    (By.XPATH, "//a[normalize-space()='Voir plus']"),
+    (By.XPATH, "//a[contains(normalize-space(.), 'Voir plus')]")
 )
 
 
@@ -98,9 +103,9 @@ def wait_for_products(driver: webdriver.Chrome, *, wait_seconds: float) -> None:
 def click_load_more(driver: webdriver.Chrome, *, wait_seconds: float) -> bool:
     """Attempt to click a "load more" control present on the page."""
 
-    for selector in LOAD_MORE_SELECTORS:
+    for by, selector in LOAD_MORE_LOCATORS:
         try:
-            button = driver.find_element(By.CSS_SELECTOR, selector)
+            button = driver.find_element(by, selector)
         except NoSuchElementException:
             continue
 
@@ -108,6 +113,8 @@ def click_load_more(driver: webdriver.Chrome, *, wait_seconds: float) -> bool:
             continue
 
         previous_count = len(driver.find_elements(By.CSS_SELECTOR, ".product-tile-inner"))
+        driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", button)
+        time.sleep(0.25)
         driver.execute_script("arguments[0].click();", button)
 
         end_time = time.time() + wait_seconds
