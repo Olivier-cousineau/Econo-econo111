@@ -1,0 +1,32 @@
+name: Scrape Sporting Life Liquidation
+
+on:
+  schedule:
+    # 04:00 America/Toronto (Montréal) — GitHub Actions cron is UTC
+    - cron: "0 9 * * *"
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+      - name: Run scraper
+        run: python sportinglife_liquidation_scraper.py
+      - name: Commit dataset updates
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add sportinglife_liquidation_laval.csv data/sporting-life/laval.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "MAJ quotidienne Sporting Life Laval"
+            git push
+          fi
