@@ -3,10 +3,10 @@
 from __future__ import annotations
 
 import json
-from typing import Any, Dict, List
+from typing import Any, Dict, Iterable, List
 
 from bs4 import BeautifulSoup
-from playwright.sync_api import TimeoutError, sync_playwright
+from playwright.sync_api import Page, TimeoutError, sync_playwright
 
 LISTING_URL = (
     "https://www.rona.ca/fr/promotions/liquidation?catalogId=10051&storeId=10151&langId=-2"
@@ -17,7 +17,29 @@ USER_AGENT = (
 )
 HEADERS = {
     "User-Agent": USER_AGENT,
+    "Accept-Language": "fr-CA,fr;q=0.9,en;q=0.8",
 }
+NAVIGATION_WAIT_STATES: Iterable[str] = ("domcontentloaded", "load")
+NAVIGATION_TIMEOUT_MS = 60_000
+SELECTOR_TIMEOUT_MS = 45_000
+
+
+def navigate_to_listing(page: Page) -> None:
+    """Navigate to the liquidation page trying multiple load strategies."""
+
+    last_exc: TimeoutError | None = None
+    for wait_state in NAVIGATION_WAIT_STATES:
+        try:
+            page.goto(
+                LISTING_URL,
+                wait_until=wait_state,
+                timeout=NAVIGATION_TIMEOUT_MS,
+            )
+            return
+        except TimeoutError as exc:
+            last_exc = exc
+    assert last_exc is not None  # pragma: no cover - defensive programming
+    raise last_exc
 
 
 def render_listing_page() -> str:
@@ -28,15 +50,19 @@ def render_listing_page() -> str:
         context = browser.new_context(
             user_agent=USER_AGENT,
             extra_http_headers=HEADERS,
+            locale="fr-CA",
+            timezone_id="America/Toronto",
         )
         page = context.new_page()
+        page.set_default_navigation_timeout(NAVIGATION_TIMEOUT_MS)
+        page.set_default_timeout(SELECTOR_TIMEOUT_MS)
         try:
-            page.goto(
-                LISTING_URL,
-                wait_until="domcontentloaded",
-                timeout=60_000,
+            navigate_to_listing(page)
+            page.wait_for_selector(
+                ".product-tile__wrapper",
+                timeout=SELECTOR_TIMEOUT_MS,
+                state="visible",
             )
-            page.wait_for_selector(".product-tile__wrapper", timeout=45_000)
             html = page.content()
         finally:
             context.close()
