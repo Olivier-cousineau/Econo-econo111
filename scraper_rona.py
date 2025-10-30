@@ -26,9 +26,7 @@ from playwright.sync_api import (
     sync_playwright,
 )
 
-LISTING_URL = (
-    "https://www.rona.ca/fr/promotions/liquidation?catalogId=10051&storeId=10151&langId=-2"
-)
+LISTING_URL = "https://www.rona.ca/fr/promotions/liquidation"
 PAGINATION_PARAM_KEYS: Sequence[str] = (
     "page",
     "pageNumber",
@@ -188,7 +186,7 @@ def _fallback_to_snapshot(error: Exception) -> List[str]:
 
     if DEFAULT_SNAPSHOT.is_file():
         print(
-            "Playwright could not render the liquidation listing ("
+            "[WARN] Playwright could not render the liquidation listing ("
             f"{error.__class__.__name__}: {error}). "
             "Using cached HTML snapshot instead.",
             file=sys.stderr,
@@ -240,22 +238,30 @@ def deduplicate_products(products: Sequence[Dict[str, Any]]) -> List[Dict[str, A
 def main() -> None:
     args = parse_args()
 
+    print("[INFO] Starting scraper...")
+
     if args.html:
+        print(f"[INFO] Using HTML snapshot: {args.html}")
         html_pages = _load_snapshot(args.html)
     else:
         try:
+            print("[INFO] Rendering listing pages with Playwright...")
             html_pages = render_listing_pages()
         except (PlaywrightTimeoutError, PlaywrightError) as exc:
+            print(f"[WARN] Playwright failed: {exc}")
             html_pages = _fallback_to_snapshot(exc)
 
+    print(f"[INFO] Extracting products from {len(html_pages)} pages...")
     products: List[Dict[str, Any]] = []
     for html in html_pages:
         soup = BeautifulSoup(html, "html.parser")
         products.extend(extract_products(soup))
     products = deduplicate_products(products)
+    print(f"[INFO] Total unique products: {len(products)}")
     args.output.parent.mkdir(parents=True, exist_ok=True)
     with args.output.open("w", encoding="utf-8") as fp:
         json.dump(products, fp, ensure_ascii=False, indent=2)
+    print(f"[INFO] Scraped data saved to: {args.output}")
 
 
 if __name__ == "__main__":
