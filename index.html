@@ -157,7 +157,7 @@
         <h1 id="heroTitle">Débloquez les meilleures liquidations pour propulser vos boutiques Amazon et eBay</h1>
         <p>Centralisez vos achats, connectez vos fournisseurs clés et laissez nos signaux IA repérer les rabais les plus rentables pour vos catalogues Amazon.ca, Amazon.com, eBay.com et eBay.ca.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="opportunites.html#search">Explorer les inventaires</a>
+          <a class="btn btn-primary" href="#search">Explorer les inventaires</a>
           <a class="btn btn-secondary" href="#amazon-sellers">Voir les avantages</a>
         </div>
         <ul class="hero-stats">
@@ -173,6 +173,56 @@
       <div class="hero-actions" style="margin-top:16px">
         <a class="btn btn-primary" href="opportunites.html#search">Accéder aux inventaires</a>
         <a class="btn btn-secondary" href="best-deals.html">Voir les meilleurs rabais</a>
+      </div>
+    </section>
+    <section class="section" id="search">
+      <h2 style="margin:0 0 10px">Trouver des liquidations pour vos listings Amazon &amp; eBay</h2>
+      <p class="muted">Les fichiers sont chargés depuis <span class="kbd">data/&lt;magasin&gt;/&lt;ville&gt;.json</span> afin de repérer rapidement les opportunités d'arbitrage et d'approvisionnement multicanal.</p>
+
+      <!-- ✅ Les éléments requis existent et leurs IDs correspondent au script -->
+      <div class="row" style="gap:12px;align-items:center;flex-wrap:wrap;margin-top:12px">
+        <span class="muted" data-country-label>Pays couvert&nbsp;: Canada · Devise&nbsp;: CAD</span>
+      </div>
+
+      <div class="filters" style="margin-top:12px">
+        <div>
+          <label for="searchInput">Recherche rapide</label>
+          <input id="searchInput" name="search" type="text" inputmode="search" placeholder="Ex. Nintendo Switch, Lego..." autocomplete="off" />
+        </div>
+        <div>
+          <label for="storeSelect">Magasin</label>
+          <select id="storeSelect">
+            <option value="">(Tous)</option>
+          </select>
+        </div>
+        <div>
+          <label for="citySelect">Ville</label>
+          <select id="citySelect">
+            <option value="">(Toutes)</option>
+          </select>
+        </div>
+        <div>
+          <label for="postalInput">Code postal</label>
+          <input id="postalInput" name="postal" type="text" inputmode="text" placeholder="Ex. H2X 1Y4" autocomplete="postal-code" />
+          <p id="postalHelper" class="field-helper">Entrez les 3 premiers caractères du code postal pour trouver les succursales dans un rayon de 50&nbsp;km (ex. H2X).</p>
+        </div>
+        <div>
+          <label for="discountRange">% de rabais minimal : <span id="discountValue" class="kbd">0%</span></label>
+          <input id="discountRange" type="range" min="0" max="90" step="5" value="0" />
+        </div>
+        <div style="align-self:end">
+          <button id="btnClear">Réinitialiser</button>
+        </div>
+      </div>
+
+      <div id="devError" class="dev-banner"></div>
+
+      <div class="section">
+        <div class="row" style="justify-content:space-between;align-items:center">
+          <h3 style="margin:0">Résultats</h3>
+          <div class="muted"><span id="resultCount">0</span> articles</div>
+        </div>
+        <div id="cards" class="grid" style="margin-top:12px"></div>
       </div>
     </section>
     <section class="section value-section" id="client-value">
