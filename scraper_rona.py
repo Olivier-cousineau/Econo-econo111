@@ -154,13 +154,33 @@ def render_listing_pages() -> List[str]:
 
         queue_url(LISTING_URL, 1)
 
+        cookie_consent_checked = False
+
         try:
             while queue:
                 _, target_url = heapq.heappop(queue)
                 queued.discard(target_url)
                 page.goto(target_url, wait_until="domcontentloaded", timeout=30_000)
+                if not cookie_consent_checked:
+                    try:
+                        page.click("button#onetrust-accept-btn-handler", timeout=5_000)
+                        print("[INFO] Accepted cookie consent banner.")
+                    except Exception:
+                        print("[INFO] Cookie consent not shown or already accepted.")
+                    finally:
+                        cookie_consent_checked = True
                 _wait_for_listing_content(page)
                 html = page.content()
+                snapshot_index = len(html_pages) + 1
+                debug_html_path = Path(f"debug_page_{snapshot_index}.html")
+                debug_html_path.write_text(html, encoding="utf-8")
+                page.screenshot(path=f"screenshot_page_{snapshot_index}.png")
+                print(
+                    "[DEBUG] Saved HTML snapshot to",
+                    debug_html_path,
+                    "and screenshot to",
+                    f"screenshot_page_{snapshot_index}.png",
+                )
                 html_pages.append(html)
                 visited.add(target_url)
 
@@ -204,7 +224,9 @@ def extract_products(soup: BeautifulSoup) -> List[Dict[str, Any]]:
     """Return product metadata extracted from the listing HTML."""
 
     products: List[Dict[str, Any]] = []
-    for item in soup.select(".product-tile__wrapper"):
+    wrappers = soup.select(".product-tile__wrapper")
+    print(f"[DEBUG] Found {len(wrappers)} product wrappers.")
+    for item in wrappers:
         title = item.select_one(".product-tile__title")
         price = item.select_one(".product-tile__price")
         url = item.select_one(".product-tile__title a")
