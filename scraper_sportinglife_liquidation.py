@@ -69,7 +69,14 @@ LOAD_MORE_LOCATORS: Sequence[Tuple[By, str]] = (
     (By.XPATH, "//button[normalize-space()='Voir plus']"),
     (By.XPATH, "//button[contains(normalize-space(.), 'Voir plus')"]),
     (By.XPATH, "//a[normalize-space()='Voir plus']"),
-    (By.XPATH, "//a[contains(normalize-space(.), 'Voir plus')]")
+    (By.XPATH, "//a[contains(normalize-space(.), 'Voir plus')"]),
+    # English fallbacks observed on the site.
+    (By.XPATH, "//button[normalize-space()='Show more']"),
+    (By.XPATH, "//button[normalize-space()='SHOW MORE']"),
+    (By.XPATH, "//button[contains(translate(normalize-space(.), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'show more')"]),
+    (By.XPATH, "//a[normalize-space()='Show more']"),
+    (By.XPATH, "//a[normalize-space()='SHOW MORE']"),
+    (By.XPATH, "//a[contains(translate(normalize-space(.), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'show more')"]),
 )
 
 
@@ -125,7 +132,7 @@ def click_load_more(driver: webdriver.Chrome, *, wait_seconds: float) -> bool:
             )
             if current_count > previous_count:
                 return True
-        return True
+        return False
 
     return False
 
