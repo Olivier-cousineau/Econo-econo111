@@ -1,9 +1,9 @@
 """Scrape Sporting Life liquidation listings and refresh local datasets.
 
-The script fetches the public liquidation listing, follows the pagination
-controls, and extracts key fields for every product. The collected data is
-stored in a CSV export as well as in the JSON dataset consumed by the web
-application.
+The script drives a headless Chromium browser via Playwright to load the
+liquidation listing, follows the pagination controls, and extracts key fields
+for every product. The collected data is stored in a CSV export as well as in
+the JSON dataset consumed by the web application.
 
 Usage
 -----
@@ -21,14 +21,15 @@ import argparse
 import csv
 import json
 import re
-import time
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable, List
 
-import requests
 from bs4 import BeautifulSoup
 from bs4.element import Tag
+from playwright.sync_api import Page
+from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
+from playwright.sync_api import sync_playwright
 
 BASE_URL = "https://www.sportinglife.ca/fr-CA/liquidation/"
 DEFAULT_CSV_PATH = Path("sportinglife_liquidation_laval.csv")
@@ -38,7 +39,10 @@ USER_AGENT = (
     "AppleWebKit/537.36 (KHTML, like Gecko) "
     "Chrome/120.0.0.0 Safari/537.36"
 )
-HEADERS = {"User-Agent": USER_AGENT}
+HEADERS = {
+    "User-Agent": USER_AGENT,
+    "Accept-Language": "fr-CA,fr;q=0.9,en-CA;q=0.8,en;q=0.7",
+}
 
 
 @dataclass
@@ -75,12 +79,6 @@ class Product:
             "sku": self.sku,
             "stock": self.stock,
         }
-
-
-def fetch_page(url: str) -> BeautifulSoup:
-    response = requests.get(url, headers=HEADERS, timeout=30)
-    response.raise_for_status()
-    return BeautifulSoup(response.text, "html.parser")
 
 
 def _select_text(parent: Tag, selectors: Iterable[str]) -> str:
@@ -217,22 +215,50 @@ def has_next_page(soup: BeautifulSoup) -> bool:
     return next_btn is not None
 
 
-def collect_all_pages(delay: float) -> List[Product]:
+def _load_page(playwright_page: Page, url: str) -> BeautifulSoup:
+    try:
+        playwright_page.goto(url, wait_until="networkidle")
+    except PlaywrightTimeoutError:
+        # Continue with the current DOM snapshot even if navigation timed out.
+        pass
+    try:
+        playwright_page.wait_for_selector("div.product-tile", timeout=20000)
+    except PlaywrightTimeoutError:
+        # Proceed with whatever was rendered to allow downstream checks
+        pass
+    return BeautifulSoup(playwright_page.content(), "html.parser")
+
+
+def collect_all_pages(delay: float, *, headless: bool) -> List[Product]:
     products: List[Product] = []
     page_num = 1
-    while True:
-        url = f"{BASE_URL}?page={page_num}"
-        print(f"Téléchargement page {page_num}...")
-        soup = fetch_page(url)
-        page_products = parse_products(soup)
-        if not page_products:
-            break
-        products.extend(page_products)
-        if not has_next_page(soup):
-            break
-        page_num += 1
-        if delay:
-            time.sleep(delay)
+
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch(headless=headless)
+        context = browser.new_context(
+            user_agent=USER_AGENT, extra_http_headers=HEADERS
+        )
+        page = context.new_page()
+        page.set_default_timeout(60000)
+
+        try:
+            while True:
+                url = f"{BASE_URL}?page={page_num}"
+                print(f"Téléchargement page {page_num}...")
+                soup = _load_page(page, url)
+                page_products = parse_products(soup)
+                if not page_products:
+                    break
+                products.extend(page_products)
+                if not has_next_page(soup):
+                    break
+                page_num += 1
+                if delay:
+                    page.wait_for_timeout(delay * 1000)
+        finally:
+            context.close()
+            browser.close()
+
     return products
 
 
@@ -272,6 +298,13 @@ def build_argument_parser() -> argparse.ArgumentParser:
         default=2.0,
         help="Temps d'attente (en secondes) entre les requêtes de pagination.",
     )
+    parser.add_argument(
+        "--no-headless",
+        dest="headless",
+        action="store_false",
+        help="Désactive le mode headless pour déboguer le navigateur.",
+    )
+    parser.set_defaults(headless=True)
     return parser
 
 
@@ -279,7 +312,7 @@ def main() -> int:
     parser = build_argument_parser()
     args = parser.parse_args()
 
-    products = collect_all_pages(delay=max(args.delay, 0.0))
+    products = collect_all_pages(delay=max(args.delay, 0.0), headless=args.headless)
     if not products:
         print("Aucun produit n'a été trouvé sur la page de liquidation.")
         return 1
