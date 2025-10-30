@@ -95,18 +95,39 @@ def wait_for_products(driver: webdriver.Chrome, *, wait_seconds: float) -> None:
         time.sleep(0.5)
 
 
-def click_load_more(driver: webdriver.Chrome, *, wait_seconds: float) -> None:
-    """Attempt to click any "load more" control present on the page."""
+def click_load_more(driver: webdriver.Chrome, *, wait_seconds: float) -> bool:
+    """Attempt to click a "load more" control present on the page."""
 
     for selector in LOAD_MORE_SELECTORS:
         try:
             button = driver.find_element(By.CSS_SELECTOR, selector)
         except NoSuchElementException:
             continue
-        if button.is_displayed() and button.is_enabled():
-            driver.execute_script("arguments[0].click();", button)
-            time.sleep(wait_seconds)
-        return
+
+        if not (button.is_displayed() and button.is_enabled()):
+            continue
+
+        previous_count = len(driver.find_elements(By.CSS_SELECTOR, ".product-tile-inner"))
+        driver.execute_script("arguments[0].click();", button)
+
+        end_time = time.time() + wait_seconds
+        while time.time() < end_time:
+            time.sleep(0.5)
+            current_count = len(
+                driver.find_elements(By.CSS_SELECTOR, ".product-tile-inner")
+            )
+            if current_count > previous_count:
+                return True
+        return True
+
+    return False
+
+
+def load_all_products(driver: webdriver.Chrome, *, wait_seconds: float) -> None:
+    """Keep clicking the "load more" control until it disappears."""
+
+    while click_load_more(driver, wait_seconds=wait_seconds):
+        continue
 
 
 def extract_products(driver: webdriver.Chrome) -> List[ProductRow]:
@@ -181,7 +202,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         driver.get(LISTING_URL)
         wait_for_products(driver, wait_seconds=args.wait)
         if args.click_load_more:
-            click_load_more(driver, wait_seconds=args.wait)
+            load_all_products(driver, wait_seconds=args.wait)
         products = extract_products(driver)
     finally:
         driver.quit()
