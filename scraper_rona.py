@@ -5,13 +5,43 @@ from __future__ import annotations
 import json
 from typing import Any, Dict, List
 
-import requests
 from bs4 import BeautifulSoup
+from playwright.sync_api import TimeoutError, sync_playwright
 
 LISTING_URL = (
     "https://www.rona.ca/fr/promotions/liquidation?catalogId=10051&storeId=10151&langId=-2"
 )
-HEADERS = {"User-Agent": "Mozilla/5.0"}
+USER_AGENT = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+)
+HEADERS = {
+    "User-Agent": USER_AGENT,
+}
+
+
+def render_listing_page() -> str:
+    """Return the fully rendered HTML for the liquidation listing page."""
+
+    with sync_playwright() as playwright:
+        browser = playwright.chromium.launch(headless=True)
+        context = browser.new_context(
+            user_agent=USER_AGENT,
+            extra_http_headers=HEADERS,
+        )
+        page = context.new_page()
+        try:
+            page.goto(
+                LISTING_URL,
+                wait_until="domcontentloaded",
+                timeout=60_000,
+            )
+            page.wait_for_selector(".product-tile__wrapper", timeout=45_000)
+            html = page.content()
+        finally:
+            context.close()
+            browser.close()
+    return html
 
 
 def extract_products(soup: BeautifulSoup) -> List[Dict[str, Any]]:
@@ -35,9 +65,12 @@ def extract_products(soup: BeautifulSoup) -> List[Dict[str, Any]]:
 
 
 def main() -> None:
-    response = requests.get(LISTING_URL, headers=HEADERS, timeout=30)
-    response.raise_for_status()
-    soup = BeautifulSoup(response.text, "html.parser")
+    try:
+        html = render_listing_page()
+    except TimeoutError as exc:  # pragma: no cover - defensive path for CI visibility
+        raise SystemExit(f"Timed out while loading liquidation listings: {exc}") from exc
+
+    soup = BeautifulSoup(html, "html.parser")
     products = extract_products(soup)
     with open("rona-st-jerome.json", "w", encoding="utf-8") as fp:
         json.dump(products, fp, ensure_ascii=False, indent=2)
