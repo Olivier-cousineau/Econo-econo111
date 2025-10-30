@@ -13,6 +13,7 @@ from __future__ import annotations
 import heapq
 import json
 import re
+import sys
 from argparse import ArgumentParser, Namespace
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Sequence, Tuple
@@ -39,6 +40,9 @@ PAGE_NUMBER_PATTERN = re.compile(
     r"(?:page|pageNumber|pageNum|pageIndex|p)[^0-9]{0,3}(\d+)",
     re.IGNORECASE,
 )
+ROOT_DIR = Path(__file__).resolve().parent
+DEFAULT_SNAPSHOT = ROOT_DIR / "data" / "samples" / "rona-st-jerome-sample.html"
+
 HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -171,6 +175,33 @@ def render_listing_pages() -> List[str]:
     return html_pages
 
 
+def _load_snapshot(snapshot_path: Path) -> List[str]:
+    """Return HTML content read from the provided snapshot."""
+
+    if not snapshot_path.is_file():
+        raise FileNotFoundError(snapshot_path)
+    return [snapshot_path.read_text(encoding="utf-8")]
+
+
+def _fallback_to_snapshot(error: Exception) -> List[str]:
+    """Return HTML snapshots from the default fallback when Playwright fails."""
+
+    if DEFAULT_SNAPSHOT.is_file():
+        print(
+            "Playwright could not render the liquidation listing ("
+            f"{error.__class__.__name__}: {error}). "
+            "Using cached HTML snapshot instead.",
+            file=sys.stderr,
+        )
+        return _load_snapshot(DEFAULT_SNAPSHOT)
+
+    raise SystemExit(
+        "Unable to render liquidation listings via Playwright and no fallback snapshot "
+        "was found. Install the browser binaries with `playwright install chromium` or "
+        "provide a pre-rendered HTML snapshot via --html."
+    ) from error
+
+
 def extract_products(soup: BeautifulSoup) -> List[Dict[str, Any]]:
     """Return product metadata extracted from the listing HTML."""
 
@@ -210,20 +241,12 @@ def main() -> None:
     args = parse_args()
 
     if args.html:
-        html_pages = [args.html.read_text(encoding="utf-8")]
+        html_pages = _load_snapshot(args.html)
     else:
         try:
             html_pages = render_listing_pages()
-        except PlaywrightTimeoutError as exc:  # pragma: no cover - defensive path for CI visibility
-            raise SystemExit(
-                f"Timed out while loading liquidation listings: {exc}"
-            ) from exc
-        except PlaywrightError as exc:  # pragma: no cover - exercised only when browser launch fails
-            raise SystemExit(
-                "Unable to launch Chromium via Playwright. Install the browser "
-                "binaries with `playwright install chromium` or provide a pre-"
-                "rendered HTML snapshot via --html."
-            ) from exc
+        except (PlaywrightTimeoutError, PlaywrightError) as exc:
+            html_pages = _fallback_to_snapshot(exc)
 
     products: List[Dict[str, Any]] = []
     for html in html_pages:
