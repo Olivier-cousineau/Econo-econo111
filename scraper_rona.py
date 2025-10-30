@@ -6,7 +6,7 @@ import json
 from typing import Any, Dict, List
 
 from bs4 import BeautifulSoup
-from playwright.sync_api import TimeoutError, sync_playwright
+from playwright.sync_api import TimeoutError as PlaywrightTimeoutError, sync_playwright
 
 LISTING_URL = (
     "https://www.rona.ca/fr/promotions/liquidation?catalogId=10051&storeId=10151&langId=-2"
@@ -27,8 +27,17 @@ def render_listing_page() -> str:
         context = browser.new_context(extra_http_headers=HEADERS)
         page = context.new_page()
         try:
-            page.goto(LISTING_URL, wait_until="networkidle", timeout=30_000)
-            page.wait_for_selector(".product-tile__wrapper", timeout=30_000)
+            page.goto(LISTING_URL, wait_until="domcontentloaded", timeout=30_000)
+            try:
+                page.wait_for_load_state("networkidle", timeout=10_000)
+            except PlaywrightTimeoutError:
+                # If network idle never triggers, ensure the DOM is ready before scraping.
+                page.wait_for_load_state("domcontentloaded", timeout=10_000)
+            try:
+                page.wait_for_selector(".product-tile__wrapper", timeout=20_000)
+            except PlaywrightTimeoutError:
+                # Give the page a moment longer before collecting the HTML snapshot.
+                page.wait_for_timeout(2_000)
             html = page.content()
         finally:
             context.close()
@@ -59,7 +68,7 @@ def extract_products(soup: BeautifulSoup) -> List[Dict[str, Any]]:
 def main() -> None:
     try:
         html = render_listing_page()
-    except TimeoutError as exc:  # pragma: no cover - defensive path for CI visibility
+    except PlaywrightTimeoutError as exc:  # pragma: no cover - defensive path for CI visibility
         raise SystemExit(f"Timed out while loading liquidation listings: {exc}") from exc
 
     soup = BeautifulSoup(html, "html.parser")
