@@ -83,6 +83,15 @@
     <section class="section" style="padding-top:12px">
       <div id="cards" class="grid" aria-live="polite"></div>
       <div id="emptyState" class="empty" style="display:none">Nessuna offerta in liquidazione trovata al momento. Riprova più tardi!</div>
+      <div id="paginationControls" class="load-more" hidden>
+        <button id="showMoreButton" type="button" class="nav-button show-more-button">Mostra di più</button>
+        <div class="load-more-status">
+          <div class="load-more-track" aria-hidden="true">
+            <div id="paginationProgress" class="load-more-fill" style="width:0%"></div>
+          </div>
+          <div id="paginationLabel" class="muted load-more-label">Visualizzazione di 0 su 0 offerte.</div>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -104,10 +113,15 @@
       const emptyState = document.getElementById('emptyState');
       const storeFilter = document.getElementById('storeFilter');
       const dealCount = document.getElementById('dealCount');
+      const paginationControls = document.getElementById('paginationControls');
+      const showMoreButton = document.getElementById('showMoreButton');
+      const paginationLabel = document.getElementById('paginationLabel');
+      const paginationProgress = document.getElementById('paginationProgress');
       const year = document.getElementById('year');
       const yearFooter = document.getElementById('yearFooter');
       const DEFAULT_REMOTE_DATA_BASE = 'https://raw.githubusercontent.com/Olivier-cousineau/Econo-econo111/main';
       const MAX_TOP_DEALS = 1_000_000;
+      const PAGE_SIZE = 36;
 
       function detectRemoteDataBase(){
         const globalBase = window.ECONODEAL_DATA_BASE_URL || window.__ECONODEAL_DATA_BASE_URL__;
@@ -819,6 +833,63 @@
         return Number.isFinite(pct) ? Math.max(pct, 0) : 0;
       }
       function currency(n){ return Number.isFinite(n) ? n.toLocaleString('en-CA',{style:'currency',currency:'CAD'}) : '—'; }
+
+      const paginationNumberFormatter = new Intl.NumberFormat('it-IT');
+
+      function formatPaginationLabel(shown, total){
+        return `Visualizzazione di ${paginationNumberFormatter.format(shown)} su ${paginationNumberFormatter.format(total)} offerte.`;
+      }
+
+      function renderDealCard(deal){
+        return `
+          <article class="card">
+            <img src="${deal.image}" alt="${deal.title}" loading="lazy" />
+            <div class="body">
+              <div class="badge">-${deal.discountPct}% Rabais</div>
+              <h3>${deal.title}</h3>
+              <div class="muted">${deal.store} · ${deal.branch ?? deal.city ?? ''}</div>
+              <div class="price"><div class="old">${currency(deal.price)}</div><div>${currency(deal.salePrice)}</div></div>
+              <a class="nav-button" href="${deal.url || '#'}" target="_blank" rel="noopener" style="justify-content:center;width:100%">Voir l'offre</a>
+            </div>
+          </article>`;
+      }
+
+      function updatePaginationControls(total){
+        if(!paginationControls) return;
+        if(!total || total <= PAGE_SIZE){
+          paginationControls.hidden = true;
+          return;
+        }
+        paginationControls.hidden = false;
+        const shown = Math.min(visibleCount, total);
+        if(paginationLabel){
+          paginationLabel.textContent = formatPaginationLabel(shown, total);
+        }
+        if(paginationProgress){
+          const ratio = total > 0 ? Math.min(shown / total, 1) : 0;
+          paginationProgress.style.width = `${ratio * 100}%`;
+        }
+        if(showMoreButton){
+          const hasMore = shown < total;
+          showMoreButton.hidden = !hasMore;
+          showMoreButton.disabled = !hasMore;
+        }
+      }
+
+      function renderVisibleDeals(){
+        if(!cardsEl || !emptyState) return;
+        if(filteredDeals.length === 0){
+          cardsEl.innerHTML = '';
+          emptyState.style.display = '';
+          updatePaginationControls(0);
+          return;
+        }
+        emptyState.style.display = 'none';
+        const shown = Math.min(visibleCount, filteredDeals.length);
+        const visible = filteredDeals.slice(0, shown);
+        cardsEl.innerHTML = visible.map(renderDealCard).join('');
+        updatePaginationControls(filteredDeals.length);
+      }
       function filePathFor(store, branch){
         const s = store?.slug;
         const c = typeof branch === 'object' ? branch?.slug : branch;
@@ -928,7 +999,11 @@
       }
 
       let allDeals = [];
-      function render(){
+      let filteredDeals = [];
+      let visibleCount = 0;
+
+      function render(options = {}){
+        const {resetVisible = false} = options;
         const filter = storeFilter.value;
         const subset = filter ? allDeals.filter(deal => deal.store === filter) : allDeals;
         const sorted = subset
@@ -938,25 +1013,20 @@
             if(b.discountPct !== a.discountPct) return b.discountPct - a.discountPct;
             return (a.salePrice ?? Number.POSITIVE_INFINITY) - (b.salePrice ?? Number.POSITIVE_INFINITY);
           });
-        const top = sorted.slice(0, MAX_TOP_DEALS);
-        dealCount.textContent = top.length.toString();
-        if(top.length === 0){
-          cardsEl.innerHTML = '';
-          emptyState.style.display = '';
+        filteredDeals = sorted.slice(0, MAX_TOP_DEALS);
+        dealCount.textContent = filteredDeals.length.toString();
+        if(filteredDeals.length === 0){
+          visibleCount = 0;
+          renderVisibleDeals();
           return;
         }
-        emptyState.style.display = 'none';
-        cardsEl.innerHTML = top.map(deal => `
-          <article class="card">
-            <img src="${deal.image}" alt="${deal.title}" loading="lazy" />
-            <div class="body">
-              <div class="badge">-${deal.discountPct}% Rabais</div>
-              <h3>${deal.title}</h3>
-              <div class="muted">${deal.store} · ${deal.branch ?? deal.city ?? ''}</div>
-              <div class="price"><div class="old">${currency(deal.price)}</div><div>${currency(deal.salePrice)}</div></div>
-              <a class="nav-button" href="${deal.url || '#'}" target="_blank" rel="noopener" style="justify-content:center;width:100%">Voir l'offre</a>
-            </div>
-          </article>`).join('');
+        const initialVisible = Math.min(PAGE_SIZE, filteredDeals.length);
+        if(resetVisible || visibleCount === 0){
+          visibleCount = initialVisible;
+        }else{
+          visibleCount = Math.min(filteredDeals.length, Math.max(visibleCount, initialVisible));
+        }
+        renderVisibleDeals();
       }
 
       async function fetchAllDeals(){
@@ -993,7 +1063,18 @@
       }
 
       populateStoreFilter();
-      storeFilter.addEventListener('change', render);
+      storeFilter.addEventListener('change', () => render({resetVisible:true}));
+
+      if(showMoreButton){
+        showMoreButton.addEventListener('click', () => {
+          if(filteredDeals.length === 0) return;
+          const total = filteredDeals.length;
+          const nextVisible = Math.min(total, visibleCount + PAGE_SIZE);
+          if(nextVisible === visibleCount) return;
+          visibleCount = nextVisible;
+          renderVisibleDeals();
+        });
+      }
 
       await loadRonaDirectory();
       try{
@@ -1011,7 +1092,7 @@
         statusText.textContent = "Erreur lors du chargement des liquidations.";
         statusBanner.classList.add('error');
       }
-      render();
+      render({resetVisible:true});
     });
   </script>
 </body>
