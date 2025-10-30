@@ -9,6 +9,9 @@
 <body class="overlay-active">
   <div id="registrationOverlay" role="dialog" aria-modal="true" aria-labelledby="registrationTitle">
     <div class="registration-card">
+      <button type="button" class="registration-close" data-overlay-dismiss aria-label="Fermer la fenêtre d'inscription">
+        <span aria-hidden="true">&times;</span>
+      </button>
       <h2 id="registrationTitle">Accès réservé aux membres</h2>
       <p class="muted" style="margin:0">Rejoignez <strong><span data-client-count>0</span></strong> chasseurs de rabais et accédez au classement des meilleures offres.</p>
       <form id="registrationForm">
@@ -93,6 +96,8 @@
       const submitBtn = document.getElementById('registrationSubmit');
       const regulationCheckbox = document.getElementById('regulationCheckbox');
       const clientCountDisplays = Array.from(document.querySelectorAll('[data-client-count]'));
+      const overlayDismissTriggers = Array.from(document.querySelectorAll('[data-overlay-dismiss]'));
+      const OVERLAY_DISMISSED_KEY = 'econodealOverlayDismissed';
       const statusBanner = document.getElementById('statusBanner');
       const statusText = document.getElementById('statusText');
       const cardsEl = document.getElementById('cards');
@@ -252,7 +257,8 @@
       resolveClientCount();
       updateClientCountDisplays();
       const alreadyRegistered = safeGet('econodealClientRegistered') === 'true';
-      if(alreadyRegistered){ hideOverlay(); }
+      const overlayDismissed = safeGet(OVERLAY_DISMISSED_KEY) === 'true';
+      if(alreadyRegistered || overlayDismissed){ hideOverlay(); }
       else{ showOverlay(); }
       if(submitBtn && regulationCheckbox){
         submitBtn.disabled = !regulationCheckbox.checked;
@@ -289,15 +295,29 @@
           upsertRegistration(payload);
           resolveClientCount();
           safeSet('econodealClientRegistered', 'true');
+          safeSet(OVERLAY_DISMISSED_KEY, 'true');
           updateClientCountDisplays();
           hideOverlay();
         });
       }
 
+      overlayDismissTriggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+          safeSet(OVERLAY_DISMISSED_KEY, 'true');
+          hideOverlay();
+        });
+      });
+
       window.addEventListener('storage', (event) => {
         if(!event) return;
         if(event.key === 'econodealRegistrations' || event.key === 'econodealClientCount'){
           updateClientCountDisplays();
+        }
+        if(event.key === 'econodealClientRegistered' || event.key === OVERLAY_DISMISSED_KEY){
+          const registered = safeGet('econodealClientRegistered') === 'true';
+          const dismissed = safeGet(OVERLAY_DISMISSED_KEY) === 'true';
+          if(registered || dismissed){ hideOverlay(); }
+          else{ showOverlay(); }
         }
       });
 
