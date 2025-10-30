@@ -190,12 +190,13 @@ def render_listing_pages() -> List[str]:
                 snapshot_index = len(html_pages) + 1
                 debug_html_path = Path(f"debug_page_{snapshot_index}.html")
                 debug_html_path.write_text(html, encoding="utf-8")
-                page.screenshot(path=f"screenshot_page_{snapshot_index}.png")
+                screenshot_path = Path(f"screenshot_page_{snapshot_index}.png")
+                page.screenshot(path=str(screenshot_path))
                 print(
                     "[DEBUG] Saved HTML snapshot to",
                     debug_html_path,
                     "and screenshot to",
-                    f"screenshot_page_{snapshot_index}.png",
+                    screenshot_path,
                 )
                 html_pages.append(html)
                 visited.add(target_url)
