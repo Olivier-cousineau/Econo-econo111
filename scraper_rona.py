@@ -26,9 +26,7 @@ from playwright.sync_api import (
     sync_playwright,
 )
 
-LISTING_URL = (
-    "https://www.rona.ca/fr/promotions/liquidation?catalogId=10051&storeId=10151&langId=-2"
-)
+LISTING_URL = "https://www.rona.ca/fr/promotions/liquidation"
 PAGINATION_PARAM_KEYS: Sequence[str] = (
     "page",
     "pageNumber",
