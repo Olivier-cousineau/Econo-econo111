@@ -1,12 +1,25 @@
-"""Scrape RONA St-Jérôme liquidation listings to JSON."""
+"""Scrape RONA St-Jérôme liquidation listings to JSON.
+
+The scraper normally relies on Playwright to render the dynamic listing
+page, but in restricted environments (like CI or development sandboxes)
+downloading the browser binaries may fail.  To keep the tool usable we
+allow passing in a pre-rendered HTML snapshot via ``--html`` and provide a
+more helpful error message when Playwright cannot launch a browser.
+"""
 
 from __future__ import annotations
 
 import json
+from argparse import ArgumentParser, Namespace
+from pathlib import Path
 from typing import Any, Dict, List
 
 from bs4 import BeautifulSoup
-from playwright.sync_api import TimeoutError as PlaywrightTimeoutError, sync_playwright
+from playwright.sync_api import (
+    Error as PlaywrightError,
+    TimeoutError as PlaywrightTimeoutError,
+    sync_playwright,
+)
 
 LISTING_URL = (
     "https://www.rona.ca/fr/promotions/liquidation?catalogId=10051&storeId=10151&langId=-2"
@@ -17,6 +30,27 @@ HEADERS = {
         "(KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
     )
 }
+
+
+def parse_args() -> Namespace:
+    """Return parsed CLI arguments."""
+
+    parser = ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--html",
+        type=Path,
+        help=(
+            "Read the listing HTML from a local file instead of fetching it "
+            "with Playwright.  Useful for offline development."
+        ),
+    )
+    parser.add_argument(
+        "--output",
+        type=Path,
+        default=Path("rona-st-jerome.json"),
+        help="Path to write the resulting JSON data (default: rona-st-jerome.json).",
+    )
+    return parser.parse_args()
 
 
 def render_listing_page() -> str:
@@ -66,14 +100,28 @@ def extract_products(soup: BeautifulSoup) -> List[Dict[str, Any]]:
 
 
 def main() -> None:
-    try:
-        html = render_listing_page()
-    except PlaywrightTimeoutError as exc:  # pragma: no cover - defensive path for CI visibility
-        raise SystemExit(f"Timed out while loading liquidation listings: {exc}") from exc
+    args = parse_args()
+
+    if args.html:
+        html = args.html.read_text(encoding="utf-8")
+    else:
+        try:
+            html = render_listing_page()
+        except PlaywrightTimeoutError as exc:  # pragma: no cover - defensive path for CI visibility
+            raise SystemExit(
+                f"Timed out while loading liquidation listings: {exc}"
+            ) from exc
+        except PlaywrightError as exc:  # pragma: no cover - exercised only when browser launch fails
+            raise SystemExit(
+                "Unable to launch Chromium via Playwright. Install the browser "
+                "binaries with `playwright install chromium` or provide a pre-"
+                "rendered HTML snapshot via --html."
+            ) from exc
 
     soup = BeautifulSoup(html, "html.parser")
     products = extract_products(soup)
-    with open("rona-st-jerome.json", "w", encoding="utf-8") as fp:
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    with args.output.open("w", encoding="utf-8") as fp:
         json.dump(products, fp, ensure_ascii=False, indent=2)
 
 
