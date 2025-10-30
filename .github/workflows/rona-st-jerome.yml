@@ -19,10 +19,10 @@ jobs:
       - name: Install dependencies
         run: |
           pip install playwright
-          playwright install
+          playwright install --with-deps chromium
 
       - name: Run Playwright scraper
-        run: python scraper_rona_playwright.py
+        run: python scraper_rona.py
 
       - name: Commit and push JSON
         env:
