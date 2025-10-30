@@ -24,6 +24,7 @@ import re
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable, List
+from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup
 from bs4.element import Tag
@@ -210,9 +211,35 @@ def parse_products(soup: BeautifulSoup) -> List[Product]:
     return products
 
 
-def has_next_page(soup: BeautifulSoup) -> bool:
-    next_btn = soup.select_one("li.pagination-next:not(.disabled) a")
-    return next_btn is not None
+def get_next_page_url(soup: BeautifulSoup, current_url: str) -> str:
+    """Return the absolute URL for the next pagination link if present."""
+
+    selectors = (
+        "li.pagination-next:not(.disabled) a",
+        "a.pagination__next",
+        "a[rel='next']",
+        "a[aria-label='Next']",
+        "a[aria-label='Suivant']",
+    )
+    for selector in selectors:
+        link = soup.select_one(selector)
+        if isinstance(link, Tag):
+            href = (link.get("href") or "").strip()
+            if href:
+                absolute = urljoin(current_url, href)
+                if absolute != current_url:
+                    return absolute
+
+    # Some Sporting Life templates expose data attributes for pagination.
+    candidate = soup.select_one("li.pagination-next[data-page], button[data-page]")
+    if isinstance(candidate, Tag):
+        for attribute in ("data-page", "data-page-number", "data-pagevalue"):
+            page_value = (candidate.get(attribute) or "").strip()
+            if page_value:
+                base, *_ = current_url.split("?", 1)
+                return f"{base}?page={page_value}"
+
+    return ""
 
 
 def _load_page(playwright_page: Page, url: str) -> BeautifulSoup:
@@ -232,6 +259,8 @@ def _load_page(playwright_page: Page, url: str) -> BeautifulSoup:
 def collect_all_pages(delay: float, *, headless: bool) -> List[Product]:
     products: List[Product] = []
     page_num = 1
+    current_url = BASE_URL
+    visited_urls: set[str] = set()
 
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch(headless=headless)
@@ -243,15 +272,19 @@ def collect_all_pages(delay: float, *, headless: bool) -> List[Product]:
 
         try:
             while True:
-                url = f"{BASE_URL}?page={page_num}"
+                if current_url in visited_urls:
+                    break
                 print(f"Téléchargement page {page_num}...")
-                soup = _load_page(page, url)
+                visited_urls.add(current_url)
+                soup = _load_page(page, current_url)
                 page_products = parse_products(soup)
                 if not page_products:
                     break
                 products.extend(page_products)
-                if not has_next_page(soup):
+                next_url = get_next_page_url(soup, current_url)
+                if not next_url or next_url in visited_urls:
                     break
+                current_url = next_url
                 page_num += 1
                 if delay:
                     page.wait_for_timeout(delay * 1000)
