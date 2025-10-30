@@ -51,6 +51,40 @@ SHOW_MORE_PATTERN = re.compile(
 )
 
 
+def _parse_result_count(text: str) -> tuple[int, int] | tuple[int, None] | None:
+    """Return the number of loaded and total items from a status string."""
+
+    numbers = re.findall(r"\d[\d\s.,]*", text)
+    if not numbers:
+        return None
+
+    def _to_int(raw: str) -> int:
+        cleaned = re.sub(r"[^0-9]", "", raw)
+        return int(cleaned) if cleaned else 0
+
+    loaded = _to_int(numbers[0])
+    total = _to_int(numbers[1]) if len(numbers) > 1 else None
+    return loaded, total
+
+
+def _read_loaded_total(page: Page) -> tuple[int, int] | tuple[int, None] | None:
+    """Attempt to read the current "showing X of Y" indicator."""
+
+    try:
+        locator = page.locator(
+            "div.search-result-count, span.search-result-count, #search-result-count"
+        )
+        if locator.count() == 0:
+            return None
+        text = locator.first.inner_text().strip()
+    except PlaywrightTimeoutError:
+        return None
+    except Exception:
+        return None
+
+    return _parse_result_count(text)
+
+
 @dataclass
 class Product:
     """Representation of a liquidation product entry."""
@@ -268,9 +302,15 @@ def _expand_show_more_buttons(
         try:
             if candidates.count() > 0:
                 button = candidates.first
-                if button.is_enabled() and button.is_visible():
-                    button.click(timeout=5000)
+                try:
+                    button.wait_for(state="visible", timeout=5000)
+                except PlaywrightTimeoutError:
+                    pass
+                try:
+                    button.click(timeout=5000, force=True)
                     triggered = True
+                except PlaywrightTimeoutError:
+                    triggered = False
         except PlaywrightTimeoutError:
             triggered = False
 
@@ -285,13 +325,28 @@ def _expand_show_more_buttons(
                 triggered = False
 
         if not triggered:
+            counts = _read_loaded_total(playwright_page)
+            if counts and counts[1] is not None and counts[0] < counts[1]:
+                playwright_page.wait_for_timeout(wait_ms)
+                continue
             break
 
         playwright_page.wait_for_timeout(wait_ms)
+        try:
+            playwright_page.wait_for_function(
+                "(previous) => document.querySelectorAll('div.product-tile').length > previous",
+                before_count,
+                timeout=max(wait_ms * 3, 5000),
+            )
+        except PlaywrightTimeoutError:
+            pass
         after_count = product_locator.count()
 
         if after_count <= before_count:
             stagnant_rounds += 1
+            counts = _read_loaded_total(playwright_page)
+            if counts and counts[1] is not None and counts[0] >= counts[1]:
+                break
             if stagnant_rounds >= 3:
                 break
         else:
