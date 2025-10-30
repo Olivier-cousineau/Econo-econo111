@@ -22,22 +22,31 @@ HEADERS = {
 NAVIGATION_WAIT_STATES: Iterable[str] = ("domcontentloaded", "load")
 NAVIGATION_TIMEOUT_MS = 60_000
 SELECTOR_TIMEOUT_MS = 45_000
+MAX_NAVIGATION_ATTEMPTS = 2
 
 
 def navigate_to_listing(page: Page) -> None:
     """Navigate to the liquidation page trying multiple load strategies."""
 
     last_exc: TimeoutError | None = None
-    for wait_state in NAVIGATION_WAIT_STATES:
-        try:
-            page.goto(
-                LISTING_URL,
-                wait_until=wait_state,
-                timeout=NAVIGATION_TIMEOUT_MS,
-            )
-            return
-        except TimeoutError as exc:
-            last_exc = exc
+    for attempt in range(MAX_NAVIGATION_ATTEMPTS):
+        for wait_state in NAVIGATION_WAIT_STATES:
+            try:
+                page.goto(
+                    LISTING_URL,
+                    wait_until=wait_state,
+                    timeout=NAVIGATION_TIMEOUT_MS,
+                )
+                return
+            except TimeoutError as exc:
+                last_exc = exc
+        # try a soft reload before the next attempt to clear partial loads
+        if attempt < MAX_NAVIGATION_ATTEMPTS - 1:
+            try:
+                page.reload(wait_until="domcontentloaded", timeout=NAVIGATION_TIMEOUT_MS)
+            except TimeoutError:
+                # ignore reload timeouts – the next attempt will retry navigation
+                pass
     assert last_exc is not None  # pragma: no cover - defensive programming
     raise last_exc
 
