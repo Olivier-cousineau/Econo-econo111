@@ -300,8 +300,21 @@ def _expand_show_more_buttons(
         triggered = False
 
         try:
-            if candidates.count() > 0:
-                button = candidates.first
+            count = candidates.count()
+            if count > 0:
+                button = None
+                for index in range(min(count, 5)):
+                    candidate = candidates.nth(index)
+                    try:
+                        if candidate.is_visible():
+                            button = candidate
+                            break
+                    except PlaywrightTimeoutError:
+                        continue
+                    except Exception:
+                        continue
+                if button is None:
+                    button = candidates.first
                 try:
                     button.wait_for(state="visible", timeout=5000)
                 except PlaywrightTimeoutError:
@@ -316,15 +329,21 @@ def _expand_show_more_buttons(
                     triggered = True
                 except PlaywrightTimeoutError:
                     triggered = False
-                except Exception as exc:
-                    # Sporadic site widgets (e.g. chat popups) can interfere with the
-                    # click binding and raise generic Playwright errors. Fallback to
-                    # scrolling behaviour instead of aborting the scrape.
-                    print(
-                        "Impossible de cliquer sur le bouton 'voir plus':",
-                        str(exc),
-                    )
-                    triggered = False
+                except Exception:
+                    try:
+                        button.evaluate("el => el.click()")
+                        triggered = True
+                    except PlaywrightTimeoutError:
+                        triggered = False
+                    except Exception as exc:
+                        # Sporadic site widgets (e.g. chat popups) can interfere with the
+                        # click binding and raise generic Playwright errors. Fallback to
+                        # scrolling behaviour instead of aborting the scrape.
+                        print(
+                            "Impossible de cliquer sur le bouton 'voir plus':",
+                            str(exc),
+                        )
+                        triggered = False
         except PlaywrightTimeoutError:
             triggered = False
         except Exception:
