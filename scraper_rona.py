@@ -190,8 +190,7 @@ def render_listing_pages() -> List[str]:
                 snapshot_index = len(html_pages) + 1
                 debug_html_path = Path(f"debug_page_{snapshot_index}.html")
                 debug_html_path.write_text(html, encoding="utf-8")
-                # Persist debug artifacts so the rendered DOM and visual state can be
-                # inspected when troubleshooting scraping issues.
+
                 screenshot_path = Path(f"screenshot_page_{snapshot_index}.png")
                 page.screenshot(path=str(screenshot_path))
                 print(
