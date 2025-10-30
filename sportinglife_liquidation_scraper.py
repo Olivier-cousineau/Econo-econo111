@@ -45,8 +45,9 @@ HEADERS = {
     "Accept-Language": "fr-CA,fr;q=0.9,en-CA;q=0.8,en;q=0.7",
 }
 SHOW_MORE_PATTERN = re.compile(
-    r"(voir|afficher)\s+plus|see\s+more|show\s+more|load\s+more",
-    re.IGNORECASE,
+    r"(voir|afficher).{0,40}?(plus|autres|encore|articles|items)"
+    r"|see\s+more|show\s+more|load\s+more|view\s+more|more\s+products",
+    re.IGNORECASE | re.DOTALL,
 )
 
 
@@ -249,37 +250,54 @@ def get_next_page_url(soup: BeautifulSoup, current_url: str) -> str:
 def _expand_show_more_buttons(
     playwright_page: Page, *, click_delay: float = 1.0, max_clicks: int = 100
 ) -> None:
-    """Click the "show more" button until all products are revealed."""
+    """Keep revealing products until no more can be loaded."""
 
     wait_ms = max(int(click_delay * 1000), 500)
     product_locator = playwright_page.locator("div.product-tile")
+    stagnant_rounds = 0
 
     for _ in range(max_clicks):
-        candidates = playwright_page.locator("button, a").filter(
+        before_count = product_locator.count()
+
+        # Try to click explicit "show more" controls first.
+        candidates = playwright_page.locator("button, a, [role='button']").filter(
             has_text=SHOW_MORE_PATTERN
         )
-        try:
-            if candidates.count() == 0:
-                break
-            button = candidates.first
-            if not button.is_enabled() or not button.is_visible():
-                break
-        except PlaywrightTimeoutError:
-            break
+        triggered = False
 
-        before_count = product_locator.count()
         try:
-            button.click(timeout=5000)
+            if candidates.count() > 0:
+                button = candidates.first
+                if button.is_enabled() and button.is_visible():
+                    button.click(timeout=5000)
+                    triggered = True
         except PlaywrightTimeoutError:
+            triggered = False
+
+        # Fallback for infinite scroll layouts where the products load on scroll.
+        if not triggered:
+            try:
+                playwright_page.evaluate(
+                    "window.scrollTo(0, document.documentElement.scrollHeight)"
+                )
+                triggered = True
+            except PlaywrightTimeoutError:
+                triggered = False
+
+        if not triggered:
             break
 
         playwright_page.wait_for_timeout(wait_ms)
         after_count = product_locator.count()
+
         if after_count <= before_count:
-            # No additional products were revealed; exit to avoid an infinite loop.
-            if candidates.count() == 0:
+            stagnant_rounds += 1
+            if stagnant_rounds >= 3:
                 break
-    # Give the DOM a moment to settle after the last click.
+        else:
+            stagnant_rounds = 0
+
+    # Give the DOM a moment to settle after the last interaction.
     playwright_page.wait_for_timeout(250)
 
 
