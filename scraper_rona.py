@@ -10,14 +10,12 @@ browser.
 
 from __future__ import annotations
 
-import heapq
 import json
-import re
 import sys
 from argparse import ArgumentParser, Namespace
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, Sequence, Tuple
-from urllib.parse import ParseResult, parse_qs, urljoin, urlparse
+from typing import Any, Dict, List, Sequence
+from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup
 from playwright.sync_api import (
@@ -27,16 +25,10 @@ from playwright.sync_api import (
 )
 
 LISTING_URL = "https://www.rona.ca/fr/promotions/liquidation"
-PAGINATION_PARAM_KEYS: Sequence[str] = (
-    "page",
-    "pageNumber",
-    "pageNum",
-    "pageIndex",
-    "p",
-)
-PAGE_NUMBER_PATTERN = re.compile(
-    r"(?:page|pageNumber|pageNum|pageIndex|p)[^0-9]{0,3}(\d+)",
-    re.IGNORECASE,
+NEXT_BUTTON_SELECTOR = (
+    ".pagination__next, "
+    "button[aria-label*='Suivant' i], a[aria-label*='Suivant' i], "
+    "button[aria-label*='Next' i], a[aria-label*='Next' i]"
 )
 ROOT_DIR = Path(__file__).resolve().parent
 DEFAULT_SNAPSHOT = ROOT_DIR / "data" / "samples" / "rona-st-jerome-sample.html"
@@ -70,33 +62,6 @@ def parse_args() -> Namespace:
     return parser.parse_args()
 
 
-def _extract_page_number(parsed: ParseResult) -> int | None:
-    """Return the page number encoded within a pagination URL."""
-
-    query = parse_qs(parsed.query)
-    for key in PAGINATION_PARAM_KEYS:
-        values = query.get(key)
-        if not values:
-            continue
-        for value in values:
-            try:
-                return int(value)
-            except (TypeError, ValueError):
-                continue
-
-    candidates = [parsed.path, parsed.fragment]
-    for candidate in candidates:
-        if not candidate:
-            continue
-        match = PAGE_NUMBER_PATTERN.search(candidate)
-        if match:
-            try:
-                return int(match.group(1))
-            except (TypeError, ValueError):
-                return None
-    return None
-
-
 def _wait_for_listing_content(page) -> None:
     """Block until the liquidation grid is populated or timing out."""
 
@@ -105,10 +70,23 @@ def _wait_for_listing_content(page) -> None:
     except PlaywrightTimeoutError:
         page.wait_for_load_state("domcontentloaded", timeout=10_000)
     try:
-        page.wait_for_selector(".product-tile__wrapper", timeout=20_000)
+        page.wait_for_selector(
+            ".product-list__item, .product-tile__wrapper",
+            timeout=20_000,
+        )
     except PlaywrightTimeoutError:
         # Give the page a brief grace period before collecting the HTML snapshot.
         page.wait_for_timeout(2_000)
+
+
+def _click_cookie_consent(page) -> None:
+    """Accept the cookie banner when it appears."""
+
+    try:
+        page.click("button#onetrust-accept-btn-handler", timeout=5_000)
+        print("[INFO] Accepted cookie consent banner.")
+    except Exception:
+        print("[INFO] Cookie consent not shown or already accepted.")
 
 
 def _scroll_to_bottom(page, pause_time: int = 1_000, max_scrolls: int = 20) -> None:
@@ -126,25 +104,27 @@ def _scroll_to_bottom(page, pause_time: int = 1_000, max_scrolls: int = 20) -> N
         previous_height = current_height
 
 
-def _iter_pagination_targets(soup: BeautifulSoup, base: ParseResult) -> Iterable[Tuple[str, int]]:
-    """Yield absolute pagination URLs and their page numbers."""
+def _has_next_page(locator) -> bool:
+    """Return True if the Playwright locator points to an enabled element."""
 
-    seen: set[str] = set()
-    for link in soup.select("a[href]"):
-        href = link.get("href")
-        if not href or href.startswith("#"):
-            continue
-        absolute = urljoin(LISTING_URL, href)
-        if absolute in seen:
-            continue
-        parsed = urlparse(absolute)
-        if parsed.path != base.path:
-            continue
-        page_number = _extract_page_number(parsed)
-        if page_number is None:
-            continue
-        seen.add(absolute)
-        yield absolute, page_number
+    if locator.count() == 0:
+        return False
+    element = locator.first
+    try:
+        if element.is_disabled():
+            return False
+    except Exception:
+        pass
+    class_attr = element.get_attribute("class") or ""
+    aria_disabled = element.get_attribute("aria-disabled")
+    disabled_attr = element.get_attribute("disabled")
+    if "disabled" in class_attr.split():
+        return False
+    if aria_disabled and aria_disabled.lower() == "true":
+        return False
+    if disabled_attr is not None:
+        return False
+    return True
 
 
 def render_listing_pages() -> List[str]:
@@ -155,35 +135,15 @@ def render_listing_pages() -> List[str]:
         browser = playwright.chromium.launch(headless=True)
         context = browser.new_context(extra_http_headers=HEADERS)
         page = context.new_page()
-        visited: set[str] = set()
-        queued: set[str] = set()
-        queue: List[Tuple[int, str]] = []
-        base = urlparse(LISTING_URL)
-
-        def queue_url(url: str, page_number: int | None) -> None:
-            if url in visited or url in queued:
-                return
-            priority = page_number if page_number is not None else len(queue) + 2
-            heapq.heappush(queue, (priority, url))
-            queued.add(url)
-
-        queue_url(LISTING_URL, 1)
-
-        cookie_consent_checked = False
 
         try:
-            while queue:
-                _, target_url = heapq.heappop(queue)
-                queued.discard(target_url)
-                page.goto(target_url, wait_until="domcontentloaded", timeout=30_000)
-                if not cookie_consent_checked:
-                    try:
-                        page.click("button#onetrust-accept-btn-handler", timeout=5_000)
-                        print("[INFO] Accepted cookie consent banner.")
-                    except Exception:
-                        print("[INFO] Cookie consent not shown or already accepted.")
-                    finally:
-                        cookie_consent_checked = True
+            page.goto(LISTING_URL, wait_until="domcontentloaded", timeout=30_000)
+            _click_cookie_consent(page)
+
+            page_number = 1
+            seen_signatures: set[int] = set()
+            while True:
+                print(f"[INFO] Processing page {page_number}...")
                 _wait_for_listing_content(page)
                 _scroll_to_bottom(page)
                 html = page.content()
@@ -199,12 +159,24 @@ def render_listing_pages() -> List[str]:
                     "and screenshot to",
                     screenshot_path,
                 )
+                signature = hash(html)
+                if signature in seen_signatures:
+                    print("[INFO] Duplicate page detected; stopping pagination.")
+                    break
+                seen_signatures.add(signature)
                 html_pages.append(html)
-                visited.add(target_url)
 
-                soup = BeautifulSoup(html, "html.parser")
-                for candidate_url, page_number in _iter_pagination_targets(soup, base):
-                    queue_url(candidate_url, page_number)
+                next_locator = page.locator(NEXT_BUTTON_SELECTOR)
+                if not _has_next_page(next_locator):
+                    break
+
+                next_locator.first.click()
+                page.wait_for_timeout(1_000)
+                try:
+                    page.wait_for_load_state("networkidle", timeout=10_000)
+                except PlaywrightTimeoutError:
+                    page.wait_for_load_state("domcontentloaded", timeout=10_000)
+                page_number += 1
         finally:
             context.close()
             browser.close()
@@ -242,21 +214,39 @@ def extract_products(soup: BeautifulSoup) -> List[Dict[str, Any]]:
     """Return product metadata extracted from the listing HTML."""
 
     products: List[Dict[str, Any]] = []
-    wrappers = soup.select(".product-tile__wrapper")
+    wrappers = soup.select(".product-list__item")
+    if not wrappers:
+        wrappers = soup.select(".product-tile__wrapper")
     print(f"[DEBUG] Found {len(wrappers)} product wrappers.")
+    price_selectors = [
+        ".price__amount",
+        ".product-pricing__price",
+        ".product__price",
+        ".product-tile__price",
+    ]
+
     for item in wrappers:
-        title = item.select_one(".product-tile__title")
-        price = item.select_one(".product-tile__price")
-        url = item.select_one(".product-tile__title a")
-        if not (title and price and url and url.has_attr("href")):
+        title_node = item.select_one(".product__name")
+        link_node = item.select_one(".product__name a, .product-tile__title a")
+        if link_node is None:
+            link_node = item.select_one("a[href]")
+        if title_node is None and link_node is not None:
+            title_node = link_node
+
+        price_node = None
+        for selector in price_selectors:
+            price_node = item.select_one(selector)
+            if price_node:
+                break
+
+        if not (title_node and price_node and link_node and link_node.has_attr("href")):
             continue
-        products.append(
-            {
-                "name": title.get_text(strip=True),
-                "price": price.get_text(strip=True),
-                "url": f"https://www.rona.ca{url['href']}",
-            }
-        )
+
+        name = title_node.get_text(strip=True)
+        price = price_node.get_text(strip=True)
+        href = link_node["href"]
+        url = urljoin(LISTING_URL, href)
+        products.append({"name": name, "price": price, "url": url})
     return products
 
 
