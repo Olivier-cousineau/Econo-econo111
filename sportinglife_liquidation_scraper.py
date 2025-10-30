@@ -351,7 +351,7 @@ def _expand_show_more_buttons(
         try:
             playwright_page.wait_for_function(
                 "(previous) => document.querySelectorAll('div.product-tile').length > previous",
-                before_count,
+                arg=before_count,
                 timeout=max(wait_ms * 3, 5000),
             )
         except PlaywrightTimeoutError:
