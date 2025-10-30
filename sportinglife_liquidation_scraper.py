@@ -307,11 +307,27 @@ def _expand_show_more_buttons(
                 except PlaywrightTimeoutError:
                     pass
                 try:
-                    button.click(timeout=5000, force=True)
+                    button.scroll_into_view_if_needed(timeout=2000)
+                except Exception:
+                    # Best effort; scrolling failures should not abort the run.
+                    pass
+                try:
+                    button.click(timeout=5000, force=True, no_wait_after=True)
                     triggered = True
                 except PlaywrightTimeoutError:
                     triggered = False
+                except Exception as exc:
+                    # Sporadic site widgets (e.g. chat popups) can interfere with the
+                    # click binding and raise generic Playwright errors. Fallback to
+                    # scrolling behaviour instead of aborting the scrape.
+                    print(
+                        "Impossible de cliquer sur le bouton 'voir plus':",
+                        str(exc),
+                    )
+                    triggered = False
         except PlaywrightTimeoutError:
+            triggered = False
+        except Exception:
             triggered = False
 
         # Fallback for infinite scroll layouts where the products load on scroll.
