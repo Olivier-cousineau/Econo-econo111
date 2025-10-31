@@ -23,7 +23,35 @@ STORE_POSTAL_CODE = "J7Y 4Y9"
 STORE_ID = "271"
 OUTPUT_FILE = "data/canadian-tire/saint-jerome.json"
 MIN_DISCOUNT = 0.60
-PRICE_PATTERN = re.compile(r"(\d+[\.,]\d+)")
+PRICE_PATTERN = re.compile(r"(\d+(?:[\.,]\d+)?)")
+
+TITLE_SELECTORS = (
+    "a[class*=\"product-title-link\"]",
+    "a[data-testid=\"product-card-title\"]",
+    "a[data-test=\"product-title-link\"]",
+)
+
+ORIGINAL_PRICE_SELECTORS = (
+    "span[class*=\"price-regular\"]",
+    "span[data-testid*=\"price-regular\"]",
+    "[data-test*=\"price-regular\"]",
+)
+
+SALE_PRICE_SELECTORS = (
+    "span[class*=\"price-sale\"]",
+    "span[data-testid*=\"price-sale\"]",
+    "[data-test*=\"price-sale\"]",
+)
+
+AVAILABILITY_SELECTORS = (
+    "[class*=\"availability\"]",
+    "[data-testid*=\"availability\"]",
+)
+
+SKU_SELECTORS = (
+    "[class*=\"product-number\"] span:last-child",
+    "[data-testid*=\"product-number\"] span:last-child",
+)
 
 
 @dataclass
@@ -67,6 +95,22 @@ async def _extract_attribute(locator, attribute: str) -> str:
     return value or ""
 
 
+async def _first_text_from_selectors(parent, selectors) -> str:
+    for selector in selectors:
+        text = await _extract_text(parent.locator(selector))
+        if text:
+            return text
+    return ""
+
+
+async def _first_attribute_from_selectors(parent, selectors, attribute: str) -> str:
+    for selector in selectors:
+        value = await _extract_attribute(parent.locator(selector), attribute)
+        if value:
+            return value
+    return ""
+
+
 def _parse_price(value: str) -> Optional[str]:
     if not value:
         return None
@@ -86,10 +130,18 @@ async def _select_store(page: Page) -> None:
     """Ensure the Saint-Jérôme store is selected when browsing the listing."""
 
     try:
-        store_button = page.locator("button:has-text(\"Sélectionner le magasin\")")
-        if await store_button.count():
-            await store_button.first.click()
-            await page.wait_for_timeout(1_000)
+        store_buttons = (
+            "button:has-text(\"Sélectionner le magasin\")",
+            "button:has-text(\"Sélectionner un magasin\")",
+            "button:has-text(\"Choisir ce magasin\")",
+            "button:has-text(\"Modifier de magasin\")",
+        )
+        for selector in store_buttons:
+            button = page.locator(selector)
+            if await button.count():
+                await button.first.click()
+                await page.wait_for_timeout(1_000)
+                break
     except PlaywrightError:
         return
 
@@ -100,6 +152,8 @@ async def _select_store(page: Page) -> None:
             await postal_input.first.press("Enter")
             await page.wait_for_timeout(3_000)
             store_option = page.locator(f"button:has-text(\"{STORE_ID}\")")
+            if not await store_option.count():
+                store_option = page.locator(f"[data-store-id=\"{STORE_ID}\"] button")
             if await store_option.count():
                 await store_option.first.click()
                 await page.wait_for_timeout(3_000)
@@ -113,15 +167,17 @@ async def _collect_products_from_page(page: Page) -> List[Product]:
     count = await cards.count()
     for index in range(count):
         card = cards.nth(index)
-        name = await _extract_text(card.locator("a[class*=\"product-title-link\"]"))
-        original_price_raw = await _extract_text(card.locator("span[class*=\"price-regular\"]"))
-        sale_price_raw = await _extract_text(card.locator("span[class*=\"price-sale\"]"))
-        product_link = await _extract_attribute(card.locator("a[class*=\"product-title-link\"]"), "href")
+        name = await _first_text_from_selectors(card, TITLE_SELECTORS)
+        original_price_raw = await _first_text_from_selectors(card, ORIGINAL_PRICE_SELECTORS)
+        sale_price_raw = await _first_text_from_selectors(card, SALE_PRICE_SELECTORS)
+        product_link = await _first_attribute_from_selectors(card, TITLE_SELECTORS, "href")
         if product_link:
             product_link = urljoin(LIQUIDATION_URL, product_link)
         image_url = await _extract_attribute(card.locator("img"), "src")
-        availability = await _extract_text(card.locator("[class*=\"availability\"]"))
-        sku = await _extract_text(card.locator("[class*=\"product-number\"] span:last-child"))
+        if not image_url:
+            image_url = await _extract_attribute(card.locator("img"), "data-src")
+        availability = await _first_text_from_selectors(card, AVAILABILITY_SELECTORS)
+        sku = await _first_text_from_selectors(card, SKU_SELECTORS)
 
         original_price = _parse_price(original_price_raw)
         sale_price = _parse_price(sale_price_raw)
@@ -149,11 +205,16 @@ async def _collect_products_from_page(page: Page) -> List[Product]:
 
 async def _paginate_products(page: Page) -> List[Product]:
     aggregated: List[Product] = []
+    visited_pages = set()
     while True:
         try:
             await page.wait_for_selector("div[class*=\"product-card\"]", timeout=20_000)
         except PlaywrightTimeoutError:
             await page.wait_for_timeout(1_000)
+        current_url = page.url
+        if current_url in visited_pages:
+            break
+        visited_pages.add(current_url)
         aggregated.extend(await _collect_products_from_page(page))
         next_button = page.locator('button[aria-label*="Suivant"]')
         try:
@@ -183,8 +244,8 @@ async def scrape_liquidation() -> List[Product]:
         )
         context = await browser.new_context(locale="fr-CA")
         page = await context.new_page()
-        await page.goto(LIQUIDATION_URL, wait_until="load", timeout=90_000)
-        await page.wait_for_timeout(5_000)
+        await page.goto(LIQUIDATION_URL, wait_until="networkidle", timeout=90_000)
+        await page.wait_for_timeout(3_000)
         await _select_store(page)
         products = await _paginate_products(page)
         await context.close()
