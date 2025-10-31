@@ -24,8 +24,6 @@ jobs:
           playwright install --with-deps chromium
 
       - name: Run scraper script
-        env:
-          PROXY: ${{ secrets.PROXY }}
         run: python scraper_canadian_tire_liquidation.py
 
       - name: Commit and push dataset

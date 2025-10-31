@@ -7,7 +7,7 @@ import json
 import os
 import re
 from dataclasses import asdict, dataclass
-from typing import Any, Dict, List, Optional
+from typing import Dict, List, Optional
 from urllib.parse import urljoin
 
 from playwright.async_api import (
@@ -175,16 +175,10 @@ async def _paginate_products(page: Page) -> List[Product]:
 
 
 async def scrape_liquidation() -> List[Product]:
-    proxy_url = os.environ.get("PROXY") or os.environ.get("HTTPS_PROXY")
-    proxy_config: Optional[Dict[str, Any]] = None
-    if proxy_url:
-        proxy_config = {"server": proxy_url}
-
     async with async_playwright() as playwright:
         browser: Browser
         browser = await playwright.chromium.launch(
             headless=True,
-            proxy=proxy_config,
             args=["--no-sandbox", "--disable-dev-shm-usage"],
         )
         context = await browser.new_context(locale="fr-CA")
