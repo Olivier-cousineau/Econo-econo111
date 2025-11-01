@@ -29,25 +29,14 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          key: ${{ runner.os }}-pip-${{ hashFiles('scripts/requirements-scraper.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip-
-
-      - name: Create requirements.txt if not present
-        run: |
-          if [ ! -f requirements.txt ]; then
-            cat > requirements.txt <<'REQ'
-playwright==1.43.0
-beautifulsoup4
-pandas
-lxml
-REQ
-          fi
 
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install -r scripts/requirements-scraper.txt
 
       - name: Install Playwright browsers
         run: |
