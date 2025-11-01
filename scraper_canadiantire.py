@@ -1,9 +1,10 @@
 from __future__ import annotations
 
+import argparse
 import os
 import random
 import urllib.parse
-from typing import Iterable
+from typing import Iterable, Sequence
 
 import requests
 from bs4 import BeautifulSoup
@@ -23,27 +24,21 @@ USER_AGENT = (
     "AppleWebKit/537.36 (KHTML, like Gecko) "
     "Chrome/119.0.0.0 Safari/537.36"
 )
-
-
-def _build_proxy_rotation() -> list[dict[str, str]]:
+def _build_proxy_rotation(
+    addresses: Iterable[str] | None,
+    username: str | None,
+    password: str | None,
+) -> list[dict[str, str]]:
     """Create a list of requests-compatible proxy dictionaries."""
 
-    addresses_env = os.environ.get("CANADIANTIRE_PROXIES")
-    if addresses_env:
-        addresses: Iterable[str] = (
-            entry.strip() for entry in addresses_env.split(",") if entry.strip()
-        )
-    else:
-        addresses = DEFAULT_PROXY_ADDRESSES
-
-    username = os.environ.get("CANADIANTIRE_PROXY_USERNAME", DEFAULT_PROXY_USERNAME)
-    password = os.environ.get("CANADIANTIRE_PROXY_PASSWORD", DEFAULT_PROXY_PASSWORD)
-
-    if not username or not password:
+    if not addresses or not username or not password:
         return []
 
     proxies: list[dict[str, str]] = []
     for address in addresses:
+        address = address.strip()
+        if not address:
+            continue
         proxies.append(
             {
                 "http": f"http://{username}:{password}@{address}",
@@ -53,17 +48,14 @@ def _build_proxy_rotation() -> list[dict[str, str]]:
     return proxies
 
 
-PROXIES = _build_proxy_rotation()
-
-
-def _request_with_proxy(url: str) -> str | None:
+def _request_with_proxy(url: str, proxies: Sequence[dict[str, str]]) -> str | None:
     """Attempt to download ``url`` using the configured proxies."""
 
-    if not PROXIES:
+    if not proxies:
         return None
 
     # shuffle to avoid hammering the same endpoint every run
-    for proxy in random.sample(PROXIES, k=len(PROXIES)):
+    for proxy in random.sample(list(proxies), k=len(proxies)):
         try:
             response = requests.get(
                 url,
@@ -78,10 +70,10 @@ def _request_with_proxy(url: str) -> str | None:
     return None
 
 
-def fetch_html(url: str, token: str | None) -> str:
+def fetch_html(url: str, token: str | None, proxies: Sequence[dict[str, str]]) -> str:
     """Fetch the rendered HTML for ``url`` using a proxy and fall back to scrape.do."""
 
-    html = _request_with_proxy(url)
+    html = _request_with_proxy(url, proxies)
     if html is not None:
         return html
 
@@ -131,16 +123,110 @@ def parse_liquidations(html: str) -> list[dict[str, float | str]]:
 
     return products
 
+def _format_liquidation(item: dict[str, float | str], language: str) -> str:
+    """Return a user-friendly string describing the liquidation item."""
+
+    if language == "en":
+        return (
+            f"{item['title']} - Sale price: ${item['price_sale']:.2f} "
+            f"(discount {item['discount_percent']}%)"
+        )
+
+    return (
+        f"{item['title']} - Prix soldé : {item['price_sale']:.2f}$ "
+        f"(rabais {item['discount_percent']}%)"
+    )
+
+
+def _parse_addresses(addresses: Sequence[str] | None) -> list[str] | None:
+    if not addresses:
+        return None
+    parsed: list[str] = []
+    for entry in addresses:
+        parts = [chunk.strip() for chunk in entry.split(",") if chunk.strip()]
+        parsed.extend(parts)
+    return parsed or None
+
+
 def main() -> None:
-    token = os.environ.get("SCRAPE_DO_TOKEN", API_TOKEN)
-    html = fetch_html(TARGET_URL, token)
+    parser = argparse.ArgumentParser(description="Scrape Canadian Tire liquidation deals")
+    parser.add_argument(
+        "--url",
+        default=TARGET_URL,
+        help="Page promotions à analyser (défaut: %(default)s)",
+    )
+    parser.add_argument(
+        "--token",
+        default=None,
+        help="Jeton scrape.do à utiliser en secours (défaut: variable d'environnement ou valeur intégrée).",
+    )
+    parser.add_argument(
+        "--language",
+        choices=("fr", "en"),
+        default="fr",
+        help="Langue de sortie pour les messages (fr ou en).",
+    )
+    parser.add_argument(
+        "--proxies",
+        nargs="*",
+        help="Liste d'adresses proxy (host:port). Accepte les valeurs séparées par des espaces ou des virgules.",
+    )
+    parser.add_argument(
+        "--proxy-username",
+        default=None,
+        help="Nom d'utilisateur pour les proxys protégés.",
+    )
+    parser.add_argument(
+        "--proxy-password",
+        default=None,
+        help="Mot de passe pour les proxys protégés.",
+    )
+
+    args = parser.parse_args()
+
+    token = (
+        args.token
+        or os.environ.get("SCRAPE_DO_TOKEN")
+        or os.environ.get("SCRAPEDO_TOKEN")
+        or API_TOKEN
+    )
+
+    addresses = _parse_addresses(args.proxies)
+    if addresses is None:
+        addresses_env = os.environ.get("CANADIANTIRE_PROXIES")
+        if addresses_env:
+            addresses = _parse_addresses([addresses_env])
+        else:
+            addresses = list(DEFAULT_PROXY_ADDRESSES)
+
+    proxy_username = (
+        args.proxy_username
+        or os.environ.get("CANADIANTIRE_PROXY_USERNAME")
+        or DEFAULT_PROXY_USERNAME
+    )
+    proxy_password = (
+        args.proxy_password
+        or os.environ.get("CANADIANTIRE_PROXY_PASSWORD")
+        or DEFAULT_PROXY_PASSWORD
+    )
+
+    proxies = _build_proxy_rotation(addresses, proxy_username, proxy_password)
+
+    html = fetch_html(args.url, token, proxies)
     liquidations = parse_liquidations(html)
 
-    for item in liquidations:
-        print(
-            f"{item['title']} - Prix soldé : {item['price_sale']}$ "
-            f"(rabais {item['discount_percent']}%)"
+    if not liquidations:
+        message = (
+            "Aucun rabais de 60 % ou plus trouvé sur la page."
+            if args.language == "fr"
+            else "No deals with at least 60% off were found on the page."
         )
+        print(message)
+        return
+
+    for item in liquidations:
+        print(_format_liquidation(item, args.language))
+
 
 if __name__ == "__main__":
     main()

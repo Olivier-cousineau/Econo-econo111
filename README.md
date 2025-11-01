@@ -40,6 +40,26 @@ confusion. Si tu dois remettre en place une automatisation, crée un nouveau
 script dans `admin/` et ajoute un workflow dans `.github/workflows/` selon tes
 besoins.
 
+### Scraper Canadian Tire (liquidation)
+
+Un exemple de script Python est fourni dans `scraper_canadiantire.py` pour
+récolter les rabais de 60 % et plus sur la page liquidation. Il fonctionne avec
+les proxys fournis par défaut, mais tu peux injecter les tiens sans modifier le
+code :
+
+```bash
+python scraper_canadiantire.py \
+  --proxies "111.222.333.444:1234" "555.666.777.888:9999" \
+  --proxy-username ton_user --proxy-password ton_mot_de_passe
+```
+
+Le script accepte aussi un jeton `scrape.do` (`--token`) si tous les proxys
+échouent, ainsi qu'un drapeau `--language en` pour obtenir la sortie en anglais.
+Sans arguments, il utilisera les valeurs par défaut définies dans le fichier ou
+les variables d'environnement `CANADIANTIRE_PROXIES`,
+`CANADIANTIRE_PROXY_USERNAME` et `CANADIANTIRE_PROXY_PASSWORD` si elles sont
+présentes.
+
 ## Aperçus HTML rapides
 - Les jeux de données organisés génèrent un aperçu statique dans `previews/<magasin>/<ville>.html`.
 - Par exemple : `previews/sporting-life/montreal.html`, `previews/sporting-life/laval.html` et
