@@ -1,0 +1,96 @@
+name: Scrape CanadianTire - St-Jérôme
+
+# Permet exécution manuelle (workflow_dispatch) et planifiée (cron)
+on:
+  workflow_dispatch:
+  schedule:
+    # every day at 03:00 UTC (modifie si nécessaire)
+    - cron: '0 3 * * *'
+
+concurrency:
+  group: scrape-canadiantire-stjerome
+  cancel-in-progress: true
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('scripts/requirements-scraper.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r scripts/requirements-scraper.txt
+
+      - name: Install Playwright browsers
+        run: |
+          python -m playwright install --with-deps
+
+      - name: Export proxies env vars from GitHub Secrets
+        # Mettre les proxies fournis comme variables d'environnement accessibles par le script Python
+        env:
+          PROXY1_SERVER: ${{ secrets.PROXY1_SERVER }}
+          PROXY2_SERVER: ${{ secrets.PROXY2_SERVER }}
+          PROXY_USERNAME: ${{ secrets.PROXY_USERNAME }}
+          PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+        run: |
+          echo "Proxies variables exported to environment for the run"
+
+      - name: Ensure script is executable
+        run: |
+          ls -la
+          # vérifie que ton script est présent ; adapte le nom si nécessaire
+          if [ ! -f scrape_canadiantire_stjerome.py ]; then
+            echo "ERROR: scrape_canadiantire_stjerome.py not found in repo root" >&2
+            exit 1
+          fi
+          chmod +x scrape_canadiantire_stjerome.py
+
+      - name: Run scraper
+        # On fournit les proxies via variables d'environnement pour que le script puisse les récupérer
+        env:
+          PROXY1_SERVER: ${{ secrets.PROXY1_SERVER }}
+          PROXY2_SERVER: ${{ secrets.PROXY2_SERVER }}
+          PROXY_USERNAME: ${{ secrets.PROXY_USERNAME }}
+          PROXY_PASSWORD: ${{ secrets.PROXY_PASSWORD }}
+          # optionnel: override URL if voulu
+          LIQUIDATION_URL: "https://www.canadiantire.ca/fr/promotions/liquidation.html?store=271"
+        run: |
+          # Affiche la version Python pour debug
+          python --version
+          # Lance le script (il doit lire les variables d'environnement)
+          python scrape_canadiantire_stjerome.py
+
+      - name: Upload CSV & HTML artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: canadiantire-st-jerome-results
+          path: |
+            liquidation_st_jerome.csv
+            preview.html
+            debug_last_response.html
+
+      - name: Success message
+        if: success()
+        run: echo "Scrape terminé avec succès — artefacts téléversés."
+
+      - name: Failure note
+        if: failure()
+        run: echo "Le scraper a échoué — vérifie debug_last_response.html ou les logs."

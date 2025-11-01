@@ -60,7 +60,7 @@ abonnements.
    frontend utilise déjà cette convention.
 2. Installez les dépendances Python supplémentaires :
    ```bash
-   pip install -r requirements.txt
+   pip install -r requirements-server.txt
    ```
 3. Les fonctions backend (`/config` et `/create-checkout-session`) chargent désormais automatiquement
    les variables définies dans `.env` ou `.env.local`. Vous pouvez toujours exporter manuellement
