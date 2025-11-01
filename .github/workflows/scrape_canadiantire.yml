@@ -24,4 +24,9 @@ jobs:
           pip install requests beautifulsoup4
 
       - name: Run scraper
+        env:
+          CANADIANTIRE_PROXIES: "142.111.48.253:7030"
+          CANADIANTIRE_PROXY_USERNAME: "rzjohgsg"
+          CANADIANTIRE_PROXY_PASSWORD: "55keyvw66umr"
+          SCRAPE_DO_TOKEN: ${{ secrets.SCRAPE_DO_TOKEN }}
         run: python scraper_canadiantire.py
