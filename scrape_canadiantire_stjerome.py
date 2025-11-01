@@ -27,11 +27,6 @@ def build_liquidation_url(base_url: str, store_id: Optional[str]) -> str:
 
 LIQUIDATION_URL_WITH_STORE = build_liquidation_url(BASE_LIQUIDATION_URL, STORE_ID)
 
-DEFAULT_PROXIES = [
-    {"server": "http://142.111.48.253:7030", "username": "rzjohgsg", "password": "55keyvw66umr"},
-    {"server": "http://31.59.20.176:6754", "username": "rzjohgsg", "password": "55keyvw66umr"},
-]
-
 HEADLESS = True
 MAX_PAGING = 20  # safety cap for "Charger plus"
 
@@ -82,26 +77,41 @@ def extract_sku_from_link(link: str) -> Optional[str]:
 
 
 # == SCRAPER ==
-PROXIES = env_proxy_list() or DEFAULT_PROXIES
 
 
-async def try_with_proxies(action_fn, proxies: List[dict]):
+def proxies_to_cycle() -> List[Optional[Dict[str, Optional[str]]]]:
+    proxies = env_proxy_list()
+    if proxies:
+        return proxies
+    # fall back to a single "no proxy" entry so the scraper can run locally
+    return [None]
+
+
+PROXIES = proxies_to_cycle()
+
+
+async def try_with_proxies(action_fn, proxies: List[Optional[Dict[str, Optional[str]]]]):
     last_exc = None
     for p in proxies:
         try:
             return await action_fn(p)
         except Exception as e:
-            print(f"[proxy error] proxy {p['server']} failed: {e}")
+            label = p.get("server") if isinstance(p, dict) and p else "<direct>"
+            print(f"[proxy error] proxy {label} failed: {e}")
             last_exc = e
             # short wait before next proxy
             time.sleep(1)
     raise last_exc
 
 
-async def fetch_and_extract(proxy):
-    print(f"Launching browser with proxy {proxy['server']}")
+async def fetch_and_extract(proxy: Optional[Dict[str, Optional[str]]]):
+    proxy_label = proxy.get("server") if proxy else "<direct>"
+    print(f"Launching browser with proxy {proxy_label}")
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=HEADLESS, proxy=proxy)
+        launch_kwargs = {"headless": HEADLESS}
+        if proxy:
+            launch_kwargs["proxy"] = proxy  # type: ignore[assignment]
+        browser = await p.chromium.launch(**launch_kwargs)
         context = await browser.new_context(locale="fr-CA")
         page = await context.new_page()
 
