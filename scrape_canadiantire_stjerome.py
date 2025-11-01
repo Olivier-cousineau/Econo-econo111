@@ -53,10 +53,9 @@ def env_proxy_list() -> List[Dict[str, Optional[str]]]:
     pwd = os.getenv("PROXY_PASSWORD")
 
     proxies: List[Dict[str, Optional[str]]] = []
-    if p1:
-        proxies.append({"server": p1, "username": user, "password": pwd})
-    if p2:
-        proxies.append({"server": p2, "username": user, "password": pwd})
+    for server in (p1, p2):
+        if server:
+            proxies.append({"server": server, "username": user, "password": pwd})
     return proxies
 
 
@@ -89,10 +88,17 @@ def extract_sku_from_link(link: str) -> Optional[str]:
 # == SCRAPER ==
 
 
+def proxy_label(proxy: Optional[Dict[str, Optional[str]]]) -> str:
+    if isinstance(proxy, dict):
+        return proxy.get("server", "<proxy>") or "<proxy>"
+    return "<direct>"
+
+
 def proxies_to_cycle() -> List[Optional[Dict[str, Optional[str]]]]:
     proxies = env_proxy_list()
     if proxies:
         return proxies
+    print("No proxy secrets detected; attempting direct connection.")
     # fall back to a single "no proxy" entry so the scraper can run locally
     return [None]
 
@@ -106,8 +112,7 @@ async def try_with_proxies(action_fn, proxies: List[Optional[Dict[str, Optional[
         try:
             return await action_fn(p)
         except Exception as e:
-            label = p.get("server") if isinstance(p, dict) and p else "<direct>"
-            print(f"[proxy error] proxy {label} failed: {e}")
+            print(f"[proxy error] proxy {proxy_label(p)} failed: {e}")
             last_exc = e
             # short wait before next proxy
             time.sleep(1)
@@ -115,8 +120,7 @@ async def try_with_proxies(action_fn, proxies: List[Optional[Dict[str, Optional[
 
 
 async def fetch_and_extract(proxy: Optional[Dict[str, Optional[str]]]):
-    proxy_label = proxy.get("server") if proxy else "<direct>"
-    print(f"Launching browser with proxy {proxy_label}")
+    print(f"Launching browser with proxy {proxy_label(proxy)}")
     async with async_playwright() as p:
         launch_kwargs = {"headless": HEADLESS}
         if proxy:
