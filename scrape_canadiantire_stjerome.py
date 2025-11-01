@@ -97,8 +97,13 @@ def proxy_label(proxy: Optional[Dict[str, Optional[str]]]) -> str:
 def proxies_to_cycle() -> List[Optional[Dict[str, Optional[str]]]]:
     proxies = env_proxy_list()
     if proxies:
+        print(
+            f"Configured {len(proxies)} proxy endpoint(s); will fall back to direct connection if they fail."
+        )
+        # Append a direct connection attempt after configured proxies
+        proxies.append(None)
         return proxies
-    print("No proxy secrets detected; attempting direct connection.")
+    print("No proxy secrets detected; attempting direct connection only.")
     # fall back to a single "no proxy" entry so the scraper can run locally
     return [None]
 
