@@ -1,0 +1,35 @@
+name: Scraper Best Buy Québec
+
+on:
+  schedule:
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+
+jobs:
+  run-scrapers:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: pip install requests
+
+      - name: Run Best Buy multi-scraper
+        env:
+          BESTBUY_API_KEY: ${{ secrets.BESTBUY_API_KEY }}
+        run: python scripts/bestbuy_multi.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "Olivier Cousineau"
+          git config --global user.email "ocousineau40@gmail.com"
+          git add data/bestbuy_*.json
+          git commit -m "♻️ Mise à jour Best Buy Québec (multi-succursales)" || echo "No changes"
+          git push
