@@ -82,6 +82,7 @@ def scrape_liquidation_ct() -> List[Dict[str, Any]]:
     print("Début du scraper Playwright")
     with sync_playwright() as p:
         print("Lancement de Chromium en mode headless…")
+    with sync_playwright() as p:
         browser = p.chromium.launch(headless=True, args=["--no-sandbox"])
         context = browser.new_context(
             locale="fr-CA",
@@ -98,6 +99,10 @@ def scrape_liquidation_ct() -> List[Dict[str, Any]]:
         print("Recherche du sélecteur produit actif…")
         active_selector = _wait_for_product_selector(page)
         print(f"Sélecteur actif identifié: {active_selector}")
+        page.goto(URL, wait_until="domcontentloaded")
+        page.wait_for_timeout(5_000)
+        _dismiss_overlays(page)
+        active_selector = _wait_for_product_selector(page)
 
         results: List[Dict[str, Any]] = []
         seen_urls = set()
@@ -169,6 +174,11 @@ def scrape_liquidation_ct() -> List[Dict[str, Any]]:
 
         browser.close()
         print("Navigateur fermé, extraction terminée.")
+                    active_selector = _wait_for_product_selector(page)
+            else:
+                break
+
+        browser.close()
 
     return results
 
@@ -178,6 +188,7 @@ def main() -> None:
     data = scrape_liquidation_ct()
     print(f"Nombre total d'offres collectées: {len(data)}")
     print("Écriture des résultats dans le fichier JSON…")
+    data = scrape_liquidation_ct()
     OUTPUT_PATH.write_text(
         json.dumps(data, ensure_ascii=False, indent=2),
         encoding="utf-8",
