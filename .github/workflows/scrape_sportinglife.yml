@@ -17,6 +17,13 @@ jobs:
           python-version: '3.11'
       - name: Install dependencies
         run: |
+          sudo apt-get update
+          # 🔧 Correction pour Ubuntu 24.04 : installer manuellement le bon paquet audio
+          sudo apt-get install -y libasound2t64 libnss3 libxss1 libatk-bridge2.0-0 libdrm2 libgbm1 libxkbcommon0 libxcomposite1 libxdamage1 libxrandr2 libgtk-3-0 libxshmfence1 xvfb
+
+          python -m pip install --upgrade pip
+          pip install -r scripts/requirements-scraper.txt
+          python -m playwright install --with-deps
           python -m pip install --upgrade pip
           pip install -r scripts/requirements-scraper.txt
           python -m playwright install --with-deps chromium
