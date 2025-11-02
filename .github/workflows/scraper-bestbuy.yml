@@ -21,19 +21,18 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests beautifulsoup4
+          pip install requests
 
-      - name: Run Best Buy scraper (tous les magasins)
-        run: python scripts/bestbuy_all_stores.py
+      - name: Run Best Buy scraper (Saint-Jérôme)
+        run: python scripts/bestbuy_stjerome.py
 
       - name: Commit and push changes
         run: |
           git config --global user.name "Olivier-cousineau"
           git config --global user.email "ocousineau40@gmail.com"
-          git add data/best-buy/liquidations
+          git add data/bestbuy_stjerome.json
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "♻️ Mise à jour liquidations Best Buy (multi-magasins)"
+            git commit -m "♻️ Mise à jour Best Buy Saint-Jérôme liquidation"
             git push
-          fi
