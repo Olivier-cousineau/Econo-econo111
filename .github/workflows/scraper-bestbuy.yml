@@ -1,15 +1,16 @@
-name: Scraper Best Buy
+name: Scraper Best Buy Saint-Jérôme
 
 on:
   schedule:
-    - cron: '0 10 * * *'   # Exécution automatique chaque jour à 10h UTC (5h AM Québec)
-  workflow_dispatch:        # 👈 Permet de le lancer manuellement depuis GitHub Actions
+    - cron: '0 10 * * *'  # chaque jour à 10h UTC (5h Québec)
+  workflow_dispatch:
 
 jobs:
   run-scraper:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout Repo
+      - name: Checkout repo
         uses: actions/checkout@v3
 
       - name: Set up Python
@@ -19,11 +20,16 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
           pip install requests
 
-      - name: Run Best Buy Scraper
-        env:
-          BESTBUY_API_KEY: ${{ secrets.BESTBUY_API_KEY }}
+      - name: Run Best Buy scraper (Saint-Jérôme)
         run: |
-          python scraper_bestbuy.py
+          python scripts/bestbuy_stjerome.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "Olivier-cousineau"
+          git config --global user.email "ocousineau40@gmail.com"
+          git add data/bestbuy_liquidation.json
+          git commit -m "♻️ Mise à jour Best Buy Saint-Jérôme liquidation"
+          git push
