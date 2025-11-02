@@ -17,8 +17,9 @@ jobs:
           python-version: "3.x"
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt playwright
-          playwright install --with-deps chromium
+          python -m pip install --upgrade pip
+          pip install -r scripts/requirements-scraper.txt
+          python -m playwright install --with-deps chromium
       - name: Run scraper
         run: python sportinglife_liquidation_scraper.py
       - name: Commit dataset updates
