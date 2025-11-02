@@ -123,12 +123,23 @@ async def fetch_and_extract(proxy: Optional[Dict[str, Optional[str]]]):
             launch_kwargs["proxy"] = proxy
 
         browser = await p.chromium.launch(**launch_kwargs)
-        context = await browser.new_context(locale="fr-CA")
+        context = await browser.new_context(
+            locale="fr-CA",
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+            viewport={"width": 1280, "height": 800},
+        )
         page = await context.new_page()
 
         try:
-            await page.goto(LIQUIDATION_URL_WITH_STORE, timeout=120000)
+            await page.goto(
+                "https://www.canadiantire.ca/fr/promotions/liquidation.html?store=271",
+                timeout=120000,
+            )
             await page.wait_for_load_state("networkidle", timeout=60000)
+            await page.add_init_script(
+                "window.localStorage.setItem('preferredStore','271');"
+            )
+            await page.reload(wait_until="networkidle")
         except PWTimeout as e:
             html = await page.content()
             Path(DEBUG_HTML).write_text(html, encoding="utf-8")
@@ -137,7 +148,7 @@ async def fetch_and_extract(proxy: Optional[Dict[str, Optional[str]]]):
 
         # Scroll et attente du contenu
         print("🔄 Waiting for product tiles to render...")
-        await page.wait_for_timeout(5000)
+        await page.wait_for_timeout(10000)
         for i in range(5):
             await page.mouse.wheel(0, 1000)
             await page.wait_for_timeout(1500)
@@ -219,6 +230,7 @@ async def fetch_and_extract(proxy: Optional[Dict[str, Optional[str]]]):
                 print("Parse error:", e)
                 continue
 
+        await page.screenshot(path="screenshot.png", full_page=True)
         await browser.close()
         return results
 
