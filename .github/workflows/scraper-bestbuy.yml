@@ -2,7 +2,8 @@ name: Scraper Best Buy
 
 on:
   schedule:
-    - cron: '0 10 * * *'
+    - cron: '0 10 * * *'   # Exécution automatique chaque jour à 10h UTC (5h AM Québec)
+  workflow_dispatch:        # 👈 Permet de le lancer manuellement depuis GitHub Actions
 
 jobs:
   run-scraper:
@@ -11,17 +12,17 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v3
 
-      - name: Setup Python
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.x'
+          python-version: '3.11'
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install requests
 
-      - name: Run scraper
+      - name: Run Best Buy Scraper
         env:
           BESTBUY_API_KEY: ${{ secrets.BESTBUY_API_KEY }}
         run: |
