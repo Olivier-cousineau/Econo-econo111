@@ -26,8 +26,6 @@ jobs:
 
       - name: Install Playwright browsers (stable)
         run: |
-          sudo apt-get update
-          sudo apt-get install -y libnss3 libxshmfence1 libxrandr2 libxcomposite1 libxdamage1 libxkbcommon0 libgtk-3-0 libgbm1 libdrm2
           python -m playwright install chromium
 
       - name: Export proxies env vars from GitHub Secrets
