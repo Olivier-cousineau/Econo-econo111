@@ -14,7 +14,7 @@ URL = "https://www.canadiantire.ca/fr/promotions/liquidation.html?store=271"
 OUTPUT_PATH = Path("liquidation_ct_stjerome.json")
 USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-    "(KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
+    "(KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
 )
 PRODUCT_SELECTORS = [
     "[data-automation='product-card']",
@@ -80,7 +80,7 @@ def _wait_for_product_selector(page) -> str:
 
 def scrape_liquidation_ct() -> List[Dict[str, Any]]:
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
+        browser = p.chromium.launch(headless=True, args=["--no-sandbox"])
         context = browser.new_context(
             locale="fr-CA",
             user_agent=USER_AGENT,
@@ -88,7 +88,8 @@ def scrape_liquidation_ct() -> List[Dict[str, Any]]:
         )
         page = context.new_page()
         page.set_default_timeout(60_000)
-        page.goto(URL, wait_until="networkidle")
+        page.goto(URL, wait_until="domcontentloaded")
+        page.wait_for_timeout(5_000)
         _dismiss_overlays(page)
         active_selector = _wait_for_product_selector(page)
 
