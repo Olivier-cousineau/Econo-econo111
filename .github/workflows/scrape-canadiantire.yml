@@ -13,7 +13,7 @@ concurrency:
 
 jobs:
   scrape:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     timeout-minutes: 45
 
     steps:
@@ -38,9 +38,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r scripts/requirements-scraper.txt
 
-      - name: Install Playwright browsers
+      - name: Install Playwright browsers (fixed)
         run: |
-          python -m playwright install --with-deps
+          sudo apt-get update
+          sudo apt-get install -y libasound2t64 libnss3 libxshmfence1 libxrandr2 libxcomposite1 libxdamage1 libxkbcommon0 libgtk-3-0 libgbm1 libdrm2
+          python -m playwright install chromium
 
       - name: Export proxies env vars from GitHub Secrets
         # Mettre les proxies fournis comme variables d'environnement accessibles par le script Python
