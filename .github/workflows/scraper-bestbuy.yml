@@ -31,8 +31,5 @@ jobs:
           git config --global user.name "Olivier-cousineau"
           git config --global user.email "ocousineau40@gmail.com"
           git add data/bestbuy_stjerome.json
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "♻️ Mise à jour Best Buy Saint-Jérôme liquidation"
-            git push
+          git commit -m "🛒 Mise à jour Best Buy Saint-Jérôme"
+          git push
