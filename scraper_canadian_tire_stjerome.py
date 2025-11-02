@@ -79,6 +79,9 @@ def _wait_for_product_selector(page) -> str:
 
 
 def scrape_liquidation_ct() -> List[Dict[str, Any]]:
+    print("Début du scraper Playwright")
+    with sync_playwright() as p:
+        print("Lancement de Chromium en mode headless…")
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True, args=["--no-sandbox"])
         context = browser.new_context(
@@ -88,6 +91,14 @@ def scrape_liquidation_ct() -> List[Dict[str, Any]]:
         )
         page = context.new_page()
         page.set_default_timeout(60_000)
+        print("Ouverture de la page de liquidation…")
+        page.goto(URL, wait_until="domcontentloaded")
+        page.wait_for_timeout(5_000)
+        print("Tentative de fermeture des overlays…")
+        _dismiss_overlays(page)
+        print("Recherche du sélecteur produit actif…")
+        active_selector = _wait_for_product_selector(page)
+        print(f"Sélecteur actif identifié: {active_selector}")
         page.goto(URL, wait_until="domcontentloaded")
         page.wait_for_timeout(5_000)
         _dismiss_overlays(page)
@@ -97,6 +108,7 @@ def scrape_liquidation_ct() -> List[Dict[str, Any]]:
         seen_urls = set()
 
         while True:
+            print("Récupération des produits sur la page courante…")
             items = page.query_selector_all(active_selector)
             for item in items:
                 titre = _extract_text(
@@ -144,12 +156,24 @@ def scrape_liquidation_ct() -> List[Dict[str, Any]]:
                     break
 
             if next_btn:
+                print("Bouton \"Suivant\" détecté, passage à la page suivante…")
                 next_btn.click()
                 page.wait_for_timeout(2_500)
                 _dismiss_overlays(page)
                 try:
                     page.wait_for_selector(active_selector, timeout=10_000)
                 except PlaywrightTimeoutError:
+                    print(
+                        "Sélecteur initial introuvable après pagination, nouvelle recherche…"
+                    )
+                    active_selector = _wait_for_product_selector(page)
+                    print(f"Nouveau sélecteur actif: {active_selector}")
+            else:
+                print("Aucun bouton \"Suivant\" disponible, fin de la pagination.")
+                break
+
+        browser.close()
+        print("Navigateur fermé, extraction terminée.")
                     active_selector = _wait_for_product_selector(page)
             else:
                 break
@@ -160,11 +184,16 @@ def scrape_liquidation_ct() -> List[Dict[str, Any]]:
 
 
 def main() -> None:
+    print("Démarrage du script de scraping Canadian Tire St-Jérôme…")
+    data = scrape_liquidation_ct()
+    print(f"Nombre total d'offres collectées: {len(data)}")
+    print("Écriture des résultats dans le fichier JSON…")
     data = scrape_liquidation_ct()
     OUTPUT_PATH.write_text(
         json.dumps(data, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
+    print(f"Fichier écrit: {OUTPUT_PATH.resolve()}")
 
 
 if __name__ == "__main__":
