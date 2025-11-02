@@ -120,7 +120,7 @@ async def fetch_and_extract(proxy: Optional[Dict[str, Optional[str]]]):
     async with async_playwright() as p:
         launch_kwargs = {"headless": HEADLESS}
         if proxy:
-            launch_kwargs["proxy"] = proxy  # type: ignore
+            launch_kwargs["proxy"] = proxy
 
         browser = await p.chromium.launch(**launch_kwargs)
         context = await browser.new_context(locale="fr-CA")
@@ -135,81 +135,55 @@ async def fetch_and_extract(proxy: Optional[Dict[str, Optional[str]]]):
             await browser.close()
             raise RuntimeError("Initial page load timed out; debug HTML saved.") from e
 
-        # Cookie / popup cleanup
-        try:
-            for sel in [
-                "button:has-text('Accepter')",
-                "button:has-text('OK')",
-                "button[aria-label='close']",
-            ]:
-                if await page.locator(sel).count() > 0:
-                    try:
-                        await page.locator(sel).first.click(timeout=3000)
-                    except Exception:
-                        pass
-        except Exception:
-            pass
+        # Scroll et attente du contenu
+        print("🔄 Waiting for product tiles to render...")
+        await page.wait_for_timeout(5000)
+        for i in range(5):
+            await page.mouse.wheel(0, 1000)
+            await page.wait_for_timeout(1500)
 
-        # Pagination / "Charger plus"
+        # Attendre jusqu’à ce qu’il y ait au moins un produit visible
+        try:
+            await page.wait_for_selector(
+                "div.product-tile, div.product-card, li.product, a[href*='/produit/']",
+                timeout=15000,
+            )
+            print("✅ Produits détectés dans la page.")
+        except PWTimeout:
+            print("⚠️ Aucun produit détecté après attente — la page est peut-être vide.")
+
+        # Tentative de clic sur “Charger plus”
         page_num = 0
         while page_num < MAX_PAGING:
             page_num += 1
-            print("Page batch:", page_num)
-            await page.wait_for_timeout(1500)
+            await page.wait_for_timeout(1000)
             clicked = False
-            try:
-                btn_selectors = [
-                    "button:has-text('Charger plus')",
-                    "button:has-text('Afficher plus')",
-                    "button:has-text('Show more')",
-                    "button.load-more",
-                    "button[data-testid='load-more']",
-                ]
-                for sel in btn_selectors:
-                    locator = page.locator(sel)
-                    if await locator.count() > 0 and await locator.is_visible():
-                        try:
-                            await locator.first.click()
-                            clicked = True
-                            await page.wait_for_load_state("networkidle", timeout=60000)
-                            await page.wait_for_timeout(1000)
-                            break
-                        except Exception:
-                            try:
-                                await page.eval_on_selector(sel, "el => el.click()")
-                                clicked = True
-                                await page.wait_for_load_state("networkidle", timeout=60000)
-                                await page.wait_for_timeout(1000)
-                                break
-                            except Exception:
-                                pass
-            except Exception:
-                pass
-
+            for sel in [
+                "button:has-text('Charger plus')",
+                "button:has-text('Afficher plus')",
+                "button:has-text('Show more')",
+            ]:
+                if await page.locator(sel).count() > 0:
+                    print(f"➡️ Click '{sel}'")
+                    try:
+                        await page.locator(sel).first.click()
+                        await page.wait_for_load_state("networkidle", timeout=30000)
+                        await page.wait_for_timeout(2000)
+                        clicked = True
+                        break
+                    except Exception:
+                        pass
             if not clicked:
-                await page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
-                await page.wait_for_timeout(1200)
-                found_any = False
-                for sel in [
-                    "button:has-text('Charger plus')",
-                    "button:has-text('Afficher plus')",
-                    "button:has-text('Show more')",
-                ]:
-                    if await page.locator(sel).count() > 0:
-                        found_any = True
-                if not found_any:
-                    print("No more 'Charger plus' found — stopping pagination.")
-                    break
+                break
 
         html = await page.content()
         Path(OUTPUT_HTML).write_text(html, encoding="utf-8")
 
         soup = BeautifulSoup(html, "lxml")
-
-        product_elements = soup.select("div.product-tile, div.product-card, li.product")
-        if not product_elements:
-            product_elements = soup.select("a[href*='/produit/']")
-            print(f"Fallback: {len(product_elements)} elements found")
+        product_elements = soup.select(
+            "div.product-tile, div.product-card, li.product, a[href*='/produit/']"
+        )
+        print(f"🔍 {len(product_elements)} produits trouvés avant extraction.")
 
         results = []
         for el in product_elements:
@@ -217,47 +191,19 @@ async def fetch_and_extract(proxy: Optional[Dict[str, Optional[str]]]):
                 link_tag = el.find("a", href=True)
                 link = ""
                 if link_tag:
+                    href = link_tag.get("href", "")
                     link = (
-                        "https://www.canadiantire.ca" + link_tag.get("href")
-                        if link_tag.get("href").startswith("/")
-                        else link_tag.get("href")
+                        "https://www.canadiantire.ca" + href if href.startswith("/") else href
                     )
-                elif el.name == "a" and el.get("href"):
-                    link = (
-                        "https://www.canadiantire.ca" + el.get("href")
-                        if el.get("href").startswith("/")
-                        else el.get("href")
-                    )
-
                 title_tag = el.find(["h2", "h3", "h4", "span"])
                 title = title_tag.get_text(strip=True) if title_tag else ""
-
                 img_tag = el.find("img")
-                img_src = (
-                    img_tag.get("data-src")
-                    or img_tag.get("src")
-                    if img_tag
-                    else None
-                )
-
-                price_tags = el.select("[class*='price'], [data-test*='price']")
-                price_text = " ".join(
-                    [t.get_text(" ", strip=True) for t in price_tags]
-                )
-                prices = re.findall(r"\$[\s]*[\d\.,]+", price_text)
+                img_src = img_tag.get("src") if img_tag else ""
+                prices = re.findall(r"\$[\s]*[\d\.,]+", el.get_text())
                 orig_price = clean_price(prices[0]) if len(prices) >= 2 else ""
                 sale_price = clean_price(prices[-1]) if prices else ""
-
-                availability = ""
-                avail_tag = el.find(
-                    lambda t: t.name in ["span", "div", "p"]
-                    and ("En stock" in t.get_text() or "En rupture" in t.get_text())
-                )
-                if avail_tag:
-                    availability = avail_tag.get_text(" ", strip=True)
-
+                availability = "En stock" if "En stock" in el.get_text() else ""
                 sku = extract_sku_from_link(link)
-
                 results.append(
                     {
                         "product_name": title,
