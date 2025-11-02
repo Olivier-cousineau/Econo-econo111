@@ -23,8 +23,6 @@ jobs:
           pip install requests
 
       - name: Run Best Buy scraper (Saint-Jérôme)
-        env:
-          BESTBUY_API_KEY: ${{ secrets.BESTBUY_API_KEY }}
         run: |
           python scripts/bestbuy_stjerome.py
 
