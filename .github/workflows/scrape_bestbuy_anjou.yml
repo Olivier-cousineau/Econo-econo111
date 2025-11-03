@@ -1,0 +1,41 @@
+name: Scraper Best Buy Anjou (quotidien)
+
+on:
+  schedule:
+    # GitHub Actions utilise UTC.
+    # 5:00 AM Heure de l'Est ≈ 10:00 UTC (hors heure d'été).
+    - cron: "0 10 * * *"
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install playwright
+          python -m playwright install --with-deps
+
+      - name: Run Best Buy Anjou scraper
+        run: |
+          mkdir -p data/bestbuy/anjou
+          python scripts/bestbuy_anjou.py
+
+      - name: Commit and push changes
+        if: ${{ success() }}
+        run: |
+          git config user.name "Olivier-cousineau"
+          git config user.email "ocousineau40@gmail.com"
+          git add -A
+          git commit -m "chore: update BestBuy Anjou data [skip ci]" || echo "No changes to commit"
+          git push
