@@ -6,12 +6,15 @@ STORE_ID = "917"  # ID du magasin Anjou
 API_KEY = os.getenv("BESTBUY_API_KEY")
 OUTPUT_FILE = "data/bestbuy_anjou.json"
 
+if not API_KEY:
+    raise SystemExit("❌ La variable d'environnement BESTBUY_API_KEY est manquante.")
+
 URL = f"https://api.bestbuy.com/v1/products((categoryPath.id=abcat0100000))&storeId={STORE_ID}&format=json&apiKey={API_KEY}"
 
 print(f"🛒 Scraping Best Buy Anjou (store {STORE_ID})...")
 
 try:
-    response = requests.get(URL)
+    response = requests.get(URL, timeout=30)
     response.raise_for_status()
     data = response.json()
 

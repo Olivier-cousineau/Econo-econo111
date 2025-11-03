@@ -8,6 +8,8 @@ on:
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    env:
+      BESTBUY_API_KEY: ${{ secrets.BESTBUY_API_KEY }}
 
     steps:
       - name: Checkout repository
