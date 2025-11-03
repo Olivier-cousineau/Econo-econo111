@@ -1,0 +1,36 @@
+name: Scraper Best Buy - Anjou
+
+on:
+  schedule:
+    - cron: "30 13 * * *"  # tourne chaque jour à 13h30 UTC (~8h30 Québec)
+  workflow_dispatch:        # permet de le lancer manuellement
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Run Best Buy scraper (Anjou)
+        run: |
+          echo "🛒 Lancement du scraper Best Buy Anjou..."
+          python scripts/bestbuy_anjou.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "Olivier-cousineau"
+          git config --global user.email "ocousineau40@gmail.com"
+          git add data/bestbuy_anjou.json
+          git diff --quiet && echo "Aucun changement à commiter" || (git commit -m "🛒 Mise à jour Best Buy Anjou" && git push)
