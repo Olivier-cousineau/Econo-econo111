@@ -1745,6 +1745,20 @@
       return null;
     }
 
+    function normalizeInput(value){
+      if(typeof value !== 'string') return '';
+      return value
+        .trim()
+        .toLowerCase()
+        .replace(/\s+/g, '-')
+        .replace(/[éèêë]/g, 'e')
+        .replace(/[àâä]/g, 'a')
+        .replace(/[îï]/g, 'i')
+        .replace(/[ôö]/g, 'o')
+        .replace(/[ûü]/g, 'u')
+        .replace(/[^a-z0-9-]/g, '');
+    }
+
     function slugify(value){
       if(value === undefined || value === null) return '';
       const text = String(value).normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -2128,21 +2142,39 @@
 
     const BEST_BUY_AGGREGATE_PATH = 'data/best-buy/liquidations.json';
 
+    function resolveStoreSlug(store){
+      if(!store) return '';
+      if(typeof store === 'string') return normalizeInput(store);
+      if(typeof store.slug === 'string' && store.slug) return normalizeInput(store.slug);
+      if(typeof store.label === 'string' && store.label) return normalizeInput(store.label);
+      if(typeof store.name === 'string' && store.name) return normalizeInput(store.name);
+      return '';
+    }
+
+    function resolveBranchSlug(branch){
+      if(!branch) return '';
+      if(typeof branch === 'string') return normalizeInput(branch);
+      if(typeof branch.slug === 'string' && branch.slug) return normalizeInput(branch.slug);
+      if(typeof branch.label === 'string' && branch.label) return normalizeInput(branch.label);
+      if(typeof branch.city === 'string' && branch.city) return normalizeInput(branch.city);
+      return '';
+    }
+
     function filePathFor(store, branch){
-      const s = store?.slug;
-      const c = branch?.slug;
-      if(!s) return null;
-      if(s === 'best-buy'){
-        if(c === 'en-ligne') return BEST_BUY_AGGREGATE_PATH;
-        if(!c) return BEST_BUY_AGGREGATE_PATH;
+      const storeSlug = resolveStoreSlug(store);
+      const branchSlug = resolveBranchSlug(branch);
+      if(!storeSlug) return null;
+      if(storeSlug === 'best-buy'){
+        if(branchSlug === 'en-ligne') return BEST_BUY_AGGREGATE_PATH;
+        if(!branchSlug) return BEST_BUY_AGGREGATE_PATH;
       }
-      if(s === 'amazon'){
-        if(c === 'canada') return AMAZON_DAILY_PATH;
-        if(!c) return null;
-        return `data/${s}/${c}.json`;
+      if(storeSlug === 'amazon'){
+        if(branchSlug === 'canada') return AMAZON_DAILY_PATH;
+        if(!branchSlug) return null;
+        return `data/${storeSlug}/${branchSlug}.json`;
       }
-      if(!c) return null;
-      return `data/${s}/${c}.json`;
+      if(!branchSlug) return null;
+      return `data/${storeSlug}/${branchSlug}.json`;
     }
 
     async function loadRonaDirectory(){

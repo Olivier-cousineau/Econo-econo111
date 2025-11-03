@@ -632,6 +632,21 @@
       const PLACEHOLDER_IMAGE = 'https://via.placeholder.com/400x300?text=Liquidation';
       const AMAZON_DAILY_PATH = 'data/amazon_ca_daily.json';
       const AMAZON_FALLBACK_PATH = 'data/amazon/canada.json';
+      const BEST_BUY_AGGREGATE_PATH = 'data/best-buy/liquidations.json';
+
+      function normalizeInput(value){
+        if(typeof value !== 'string') return '';
+        return value
+          .trim()
+          .toLowerCase()
+          .replace(/\s+/g, '-')
+          .replace(/[éèêë]/g, 'e')
+          .replace(/[àâä]/g, 'a')
+          .replace(/[îï]/g, 'i')
+          .replace(/[ôö]/g, 'o')
+          .replace(/[ûü]/g, 'u')
+          .replace(/[^a-z0-9-]/g, '');
+      }
 
       function slugify(value){
         if(value === undefined || value === null) return '';
@@ -893,17 +908,39 @@
         cardsEl.innerHTML = visible.map(renderDealCard).join('');
         updatePaginationControls(filteredDeals.length);
       }
+      function resolveStoreSlug(store){
+        if(!store) return '';
+        if(typeof store === 'string') return normalizeInput(store);
+        if(typeof store.slug === 'string' && store.slug) return normalizeInput(store.slug);
+        if(typeof store.label === 'string' && store.label) return normalizeInput(store.label);
+        if(typeof store.name === 'string' && store.name) return normalizeInput(store.name);
+        return '';
+      }
+
+      function resolveBranchSlug(branch){
+        if(!branch) return '';
+        if(typeof branch === 'string') return normalizeInput(branch);
+        if(typeof branch.slug === 'string' && branch.slug) return normalizeInput(branch.slug);
+        if(typeof branch.label === 'string' && branch.label) return normalizeInput(branch.label);
+        if(typeof branch.city === 'string' && branch.city) return normalizeInput(branch.city);
+        return '';
+      }
+
       function filePathFor(store, branch){
-        const s = store?.slug;
-        const c = typeof branch === 'object' ? branch?.slug : branch;
-        if(!s) return null;
-        if(s === 'amazon'){
-          if(c === 'canada') return AMAZON_DAILY_PATH;
-          if(!c) return null;
-          return `data/${s}/${c}.json`;
+        const storeSlug = resolveStoreSlug(store);
+        const branchSlug = resolveBranchSlug(branch);
+        if(!storeSlug) return null;
+        if(storeSlug === 'best-buy'){
+          if(branchSlug === 'en-ligne') return BEST_BUY_AGGREGATE_PATH;
+          if(!branchSlug) return BEST_BUY_AGGREGATE_PATH;
         }
-        if(!c) return null;
-        return `data/${s}/${c}.json`;
+        if(storeSlug === 'amazon'){
+          if(branchSlug === 'canada') return AMAZON_DAILY_PATH;
+          if(!branchSlug) return null;
+          return `data/${storeSlug}/${branchSlug}.json`;
+        }
+        if(!branchSlug) return null;
+        return `data/${storeSlug}/${branchSlug}.json`;
       }
 
       async function loadRonaDirectory(){
