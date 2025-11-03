@@ -1,13 +1,39 @@
 import json
-import os
+import re
 from datetime import datetime
-from typing import Any, Dict, List
+from pathlib import Path
+from typing import Any, Dict, List, Optional
 
 import requests
 
 # --- Configuration ---
 STORE_ID = "935"  # 🏬 Saint-Jérôme
-OUTPUT_PATH = "data/bestbuy_stjerome.json"
+OUTPUT_PATH = Path("data/best-buy/liquidations/saint-jerome.json")
+
+
+PRICE_CLEAN_RE = re.compile(r"[^0-9.,-]+")
+
+
+def parse_price(value: Any) -> Optional[float]:
+    """Convertit une valeur de prix Best Buy en float."""
+
+    if value is None:
+        return None
+    if isinstance(value, (int, float)):
+        return float(value)
+    if isinstance(value, str):
+        cleaned = PRICE_CLEAN_RE.sub("", value)
+        if not cleaned:
+            return None
+        if cleaned.count(",") == 1 and cleaned.count(".") == 0:
+            cleaned = cleaned.replace(",", ".")
+        else:
+            cleaned = cleaned.replace(",", "")
+        try:
+            return float(cleaned)
+        except ValueError:
+            return None
+    return None
 
 
 def fetch_bestbuy_canada() -> List[Dict[str, Any]]:
@@ -41,18 +67,46 @@ def fetch_bestbuy_canada() -> List[Dict[str, Any]]:
 
         # Ajoute tous les produits de la page
         for item in items:
-            products.append(
-                {
-                    "product_name": item.get("name"),
-                    "sku": str(item.get("sku")),
-                    "regular_price": item.get("regularPrice"),
-                    "sale_price": item.get("salePrice"),
-                    "image": item.get("thumbnailImage"),
-                    "product_link": f"https://www.bestbuy.ca/fr-ca/produit/{item.get('sku')}",
-                    "availability": item.get("availability", "Inconnu"),
-                    "store": "Best Buy Saint-Jérôme",
-                }
+            name = item.get("name") or item.get("title")
+            raw_sku = item.get("sku")
+            sku = str(raw_sku).strip() if raw_sku else ""
+            if not name or not sku:
+                continue
+
+            regular_price = parse_price(
+                item.get("regularPrice") or item.get("regular_price")
             )
+            sale_price = parse_price(
+                item.get("salePrice")
+                or item.get("sale_price")
+                or item.get("salePriceWithPromotions")
+            )
+
+            availability_raw = item.get("availability") or item.get(
+                "availabilityStatus"
+            )
+            if isinstance(availability_raw, dict):
+                availability = availability_raw.get("label") or availability_raw.get(
+                    "value"
+                )
+            else:
+                availability = availability_raw
+
+            product = {
+                "product_name": name,
+                "sku": sku,
+                "image": item.get("thumbnailImage"),
+                "product_link": f"https://www.bestbuy.ca/fr-ca/produit/{sku}",
+                "availability": availability or "Inconnu",
+                "store": "Best Buy Saint-Jérôme",
+            }
+
+            if regular_price is not None:
+                product["regular_price"] = regular_price
+            if sale_price is not None:
+                product["sale_price"] = sale_price
+
+            products.append(product)
 
         total_pages = data.get("totalPages", 1)
         print(f"✅ Page {page}/{total_pages} → {len(items)} produits")
@@ -70,8 +124,8 @@ def fetch_bestbuy_canada() -> List[Dict[str, Any]]:
 
 def save_json(products: List[Dict[str, Any]]) -> None:
     """Sauvegarde les produits dans le fichier JSON."""
-    os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
-    with open(OUTPUT_PATH, "w", encoding="utf-8") as file:
+    OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    with OUTPUT_PATH.open("w", encoding="utf-8") as file:
         json.dump(products, file, indent=2, ensure_ascii=False)
     print(f"💾 Sauvegardé dans {OUTPUT_PATH}")
 
