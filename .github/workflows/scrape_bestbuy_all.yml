@@ -1,0 +1,35 @@
+name: Scraper Best Buy - Tous les magasins
+
+on:
+  schedule:
+    - cron: "0 10 * * *"  # 5h AM Québec
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4
+
+      - name: Run Best Buy scraper (All stores)
+        run: python scripts/bestbuy_all_stores.py
+
+      - name: Commit and push results
+        run: |
+          git config --global user.name "Olivier-cousineau"
+          git config --global user.email "ocousineau40@gmail.com"
+          git add data/bestbuy/*.json
+          git commit -m "🛒 Mise à jour Best Buy - tous les magasins" || echo "Aucun changement"
+          git push
