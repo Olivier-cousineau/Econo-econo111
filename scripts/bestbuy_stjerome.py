@@ -8,7 +8,9 @@ import requests
 
 # --- Configuration ---
 STORE_ID = "935"  # 🏬 Saint-Jérôme
-OUTPUT_PATH = Path("data/best-buy/liquidations/saint-jerome.json")
+STORE_NAME = "best-buy"
+CITY = "st-jerome"
+OUTPUT_PATH = Path(f"data/{STORE_NAME}/{CITY}.json")
 
 
 PRICE_CLEAN_RE = re.compile(r"[^0-9.,-]+")
