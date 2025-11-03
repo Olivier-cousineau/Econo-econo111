@@ -9,7 +9,7 @@ import re
 import time
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Sequence
+from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 import requests
 from bs4 import BeautifulSoup
@@ -265,7 +265,9 @@ def normalize_product(product: Dict[str, Any], store_name: str) -> Dict[str, Any
     return {key: value for key, value in normalized.items() if value is not None}
 
 
-def scrape_store(config: StoreConfig, output_dir: Path, proxies: Sequence[str]) -> Path:
+def scrape_store(
+    config: StoreConfig, output_dir: Path, proxies: Sequence[str]
+) -> Tuple[Path, List[Dict[str, Any]]]:
     url = config.build_url()
     print(f"🔍 {config.display_name} → {url}")
 
@@ -295,7 +297,7 @@ def scrape_store(config: StoreConfig, output_dir: Path, proxies: Sequence[str]) 
     sleep_seconds = random.uniform(*THROTTLE_SECONDS)
     time.sleep(sleep_seconds)
 
-    return output_path
+    return output_path, products
 
 
 def main() -> None:
@@ -310,15 +312,34 @@ def main() -> None:
     proxies = load_proxy_pool()
     print(f"🌐 Proxies détectés: {len(proxies)}")
 
-    results: List[Path] = []
+    written_files: List[Path] = []
+    combined_products: List[Dict[str, Any]] = []
     for config in configs:
         try:
-            results.append(scrape_store(config, output_dir, proxies))
+            output_path, products = scrape_store(config, output_dir, proxies)
+            written_files.append(output_path)
+            combined_products.extend(products)
         except Exception as error:
             print(f"❌ Échec du magasin {config.display_name}: {error}")
 
-    if not results:
+    if not written_files:
         raise SystemExit("Aucun magasin n'a été mis à jour.")
+
+    if combined_products:
+        combined_products.sort(
+            key=lambda product: (
+                product.get("store", ""),
+                product.get("product_name", ""),
+                product.get("sku", ""),
+            )
+        )
+
+        aggregate_path = base_dir / "data" / "best-buy" / "liquidations.json"
+        with aggregate_path.open("w", encoding="utf-8") as handle:
+            json.dump(combined_products, handle, indent=2, ensure_ascii=False)
+        print(
+            f"📦 {len(combined_products)} produits combinés sauvegardés dans {aggregate_path}"
+        )
 
 
 if __name__ == "__main__":
