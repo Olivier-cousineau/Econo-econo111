@@ -632,6 +632,7 @@
       const PLACEHOLDER_IMAGE = 'https://via.placeholder.com/400x300?text=Liquidation';
       const AMAZON_DAILY_PATH = 'data/amazon_ca_daily.json';
       const AMAZON_FALLBACK_PATH = 'data/amazon/canada.json';
+      const BEST_BUY_AGGREGATE_PATH = 'data/best-buy/liquidations.json';
 
       function slugify(value){
         if(value === undefined || value === null) return '';
@@ -897,6 +898,9 @@
         const s = store?.slug;
         const c = typeof branch === 'object' ? branch?.slug : branch;
         if(!s) return null;
+        if(s === 'best-buy'){
+          return BEST_BUY_AGGREGATE_PATH;
+        }
         if(s === 'amazon'){
           if(c === 'canada') return AMAZON_DAILY_PATH;
           if(!c) return null;
@@ -904,6 +908,12 @@
         }
         if(!c) return null;
         return `data/${s}/${c}.json`;
+      }
+
+      function branchHasDeals(store, branch){
+        if(!branch) return false;
+        if(store?.slug === 'best-buy') return true;
+        return branch.hasData !== false;
       }
 
       async function loadRonaDirectory(){
@@ -1039,7 +1049,7 @@
         for(const store of STORES){
           const branches = store.branches ?? [];
           for(const branch of branches){
-            if(branch?.hasData === false) continue;
+            if(!branchHasDeals(store, branch)) continue;
             const path = filePathFor(store, branch);
             if(path) tasks.push({store, branch, path});
           }

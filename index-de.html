@@ -2133,8 +2133,7 @@
       const c = branch?.slug;
       if(!s) return null;
       if(s === 'best-buy'){
-        if(c === 'en-ligne') return BEST_BUY_AGGREGATE_PATH;
-        if(!c) return BEST_BUY_AGGREGATE_PATH;
+        return BEST_BUY_AGGREGATE_PATH;
       }
       if(s === 'amazon'){
         if(c === 'canada') return AMAZON_DAILY_PATH;
@@ -2143,6 +2142,12 @@
       }
       if(!c) return null;
       return `data/${s}/${c}.json`;
+    }
+
+    function branchHasDeals(store, branch){
+      if(!branch) return false;
+      if(store?.slug === 'best-buy') return true;
+      return branch.hasData !== false;
     }
 
     async function loadRonaDirectory(){
@@ -2195,11 +2200,12 @@
       const options = ['<option value="">(All)</option>'];
       const postalFilter = postalBranchSlugs && postalBranchSlugs.size ? postalBranchSlugs : null;
       for(const branch of branches){
-        const baseLabel = branch.hasData === false ? `${branch.label} (coming soon)` : branch.label;
+        const available = branchHasDeals(store, branch);
+        const baseLabel = available ? branch.label : `${branch.label} (coming soon)`;
         const isNearby = postalFilter ? postalFilter.has(branch.slug) : false;
         const displayLabel = isNearby ? `${baseLabel} – nearby` : baseLabel;
         const attrs = [];
-        if(branch.hasData === false) attrs.push('data-empty="true"');
+        if(!available) attrs.push('data-empty="true"');
         if(isNearby) attrs.push('data-nearby="true"');
         const attrString = attrs.length ? ` ${attrs.join(' ')}` : '';
         options.push(`<option value="${branch.slug}"${attrString}>${displayLabel}</option>`);
@@ -2274,7 +2280,7 @@
           branches = store.branches ?? [];
         }
         for(const branch of branches){
-          if(branch.hasData === false) continue;
+          if(!branchHasDeals(store, branch)) continue;
           const path = filePathFor(store, branch);
           if(path) tasks.push({store, branch, path});
         }
