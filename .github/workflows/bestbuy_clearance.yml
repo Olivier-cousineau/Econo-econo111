@@ -24,7 +24,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run Best Buy Liquidation Scraper
-        run: python scripts/bestbuy_liquidation_scraper.py --headless
+        run: python scripts/bestbuy_liquidation_scraper.py
 
       - name: Commit clearance data
         run: |
