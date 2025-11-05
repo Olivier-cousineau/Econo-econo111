@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests pydantic python-dotenv
+          pip install requests pydantic-settings python-dotenv
       - name: Collect clearance catalog
         run: |
           python -m services.bestbuy \
