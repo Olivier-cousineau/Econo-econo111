@@ -15,14 +15,19 @@ async def scrape_bestbuy() -> list[dict]:
     """Collect clearance products from the dynamically rendered catalogue."""
     logging.info("🌐 Visiting %s", URL)
     async with async_playwright() as playwright:
-        browser = await playwright.chromium.launch(headless=True)
-        context = await browser.new_context(locale="en-CA")
+        browser = await playwright.chromium.launch(headless=True, slow_mo=300)
+        context = await browser.new_context(
+            locale="en-CA", viewport={"width": 1920, "height": 1080}
+        )
         page = await context.new_page()
 
-        await page.goto(URL, timeout=90_000)
-        await page.wait_for_selector("li[class*='productItem']", timeout=60_000)
+        await page.goto(URL, timeout=120_000)
+        await page.wait_for_load_state("networkidle", timeout=120_000)
+        await asyncio.sleep(10)
 
-        items = await page.query_selector_all("li[class*='productItem']")
+        items = await page.query_selector_all(
+            "li[class*='productItem'], div[class*='productItem_']"
+        )
         products: list[dict] = []
 
         for item in items:

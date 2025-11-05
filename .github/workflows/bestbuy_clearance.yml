@@ -25,7 +25,9 @@ jobs:
           playwright install chromium
 
       - name: Run Best Buy Liquidation Scraper
-        run: python scripts/bestbuy_liquidation_scraper.py
+        run: |
+          sleep 15
+          python scripts/bestbuy_liquidation_scraper.py
 
       - name: Commit clearance data
         run: |
