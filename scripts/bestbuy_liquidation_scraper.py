@@ -1,15 +1,13 @@
 import json
 import logging
-from pathlib import Path
+from time import sleep
 
 import requests
-from bs4 import BeautifulSoup
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 
-CLEARANCE_URL = "https://www.bestbuy.ca/en-ca/collection/clearance-products/113065"
-OUTPUT_FILE = Path("data/best-buy/liquidations/clearance.json")
-
+OUTPUT_FILE = "data/best-buy/liquidations/clearance.json"
+API_URL = "https://www.bestbuy.ca/api/v2/json/search"
 HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -19,62 +17,64 @@ HEADERS = {
 }
 
 
-def fetch_html(url: str) -> str:
-    """Télécharge le HTML brut de la page Best Buy Clearance."""
-    logging.info("Fetching: %s", url)
-    response = requests.get(url, headers=HEADERS, timeout=30)
-    response.raise_for_status()
-    return response.text
-
-
-def parse_clearance(html: str) -> list[dict]:
-    """Analyse la page pour extraire les produits en liquidation."""
-    soup = BeautifulSoup(html, "html.parser")
+def fetch_clearance_products() -> list[dict]:
+    """Retrieve all clearance products through the public Best Buy API."""
     products: list[dict] = []
+    page = 1
 
-    # Chaque produit se trouve dans un <li> avec class qui contient "productItem"
-    for li in soup.find_all("li", class_=lambda c: c and "productItem" in c):
-        try:
-            name_el = li.find("h4")
-            name = name_el.get_text(strip=True) if name_el else "Unknown Product"
+    while True:
+        params = {
+            "query": "clearance",
+            "page": page,
+            "lang": "en-CA",
+            "sortBy": "salePrice",
+            "sortDir": "asc",
+        }
 
-            link_el = li.find("a", href=True)
-            link = f"https://www.bestbuy.ca{link_el['href']}" if link_el else None
+        logging.info("Fetching page %d ...", page)
+        response = requests.get(API_URL, headers=HEADERS, params=params, timeout=30)
+        if response.status_code != 200:
+            logging.error("HTTP %s on page %d", response.status_code, page)
+            break
 
-            image_el = li.find("img")
-            image = image_el.get("src") if image_el else None
+        data = response.json()
+        items = data.get("products", [])
+        if not items:
+            logging.info("No more products.")
+            break
 
-            price_el = li.select_one(".price_FHDfG span")
-            price = price_el.get_text(strip=True) if price_el else "N/A"
-
+        for product in items:
             products.append(
                 {
-                    "product_name": name,
-                    "price": price,
-                    "product_link": link,
-                    "image": image,
-                    "store": "Best Buy Clearance (EN)",
+                    "product_name": product.get("name"),
+                    "sku": str(product.get("sku")),
+                    "regular_price": product.get("regularPrice"),
+                    "sale_price": product.get("salePrice"),
+                    "product_link": f"https://www.bestbuy.ca/en-ca/product/{product.get('sku')}",
+                    "image": product.get("thumbnailImage"),
+                    "store": "Best Buy Canada",
+                    "availability": product.get("availability"),
                 }
             )
-        except Exception as exc:  # pragma: no cover - defensive logging
-            logging.warning("Skipping one product: %s", exc)
 
+        logging.info("✅ Collected %d products from page %d", len(items), page)
+        page += 1
+        sleep(0.8)  # avoid hammering the API
+
+    logging.info("🔹 Total collected: %d products", len(products))
     return products
 
 
 def main() -> None:
-    html = fetch_html(CLEARANCE_URL)
-    products = parse_clearance(html)
-    logging.info("✅ Extracted %d clearance items", len(products))
+    products = fetch_clearance_products()
 
     if not products:
-        raise SystemExit("❌ No products found. Site structure may have changed.")
+        raise SystemExit("❌ No clearance products found.")
 
-    OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
-    with OUTPUT_FILE.open("w", encoding="utf-8") as fp:
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as fp:
         json.dump(products, fp, indent=2, ensure_ascii=False)
 
-    logging.info("💾 Saved to %s", OUTPUT_FILE)
+    logging.info("💾 Saved %d items to %s", len(products), OUTPUT_FILE)
 
 
 if __name__ == "__main__":
