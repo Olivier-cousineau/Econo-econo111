@@ -24,8 +24,6 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run Best Buy Liquidation Scraper
-        env:
-          # Ajoute ici tes variables d'environnement comme proxy, user-agent, etc.
         run: python scripts/bestbuy_liquidation_scraper.py --headless
 
       - name: Commit clearance data
