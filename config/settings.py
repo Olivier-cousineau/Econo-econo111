@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import Dict, Iterable, Optional, Sequence
 
 from pydantic import BaseSettings, Field, validator
-from pydantic import dotenv_values
+from dotenv import dotenv_values
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent

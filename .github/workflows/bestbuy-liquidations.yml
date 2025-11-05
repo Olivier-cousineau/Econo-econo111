@@ -1,0 +1,47 @@
+name: Refresh Best Buy clearance feed
+
+on:
+  schedule:
+    - cron: '0 6 */2 * *'
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    name: Scrape Best Buy liquidations
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests pydantic python-dotenv
+      - name: Collect clearance catalog
+        run: |
+          python -m services.bestbuy \
+            --collection-id 113065 \
+            --query-path "soldandshippedby0enrchstring:Best Buy;currentoffers0enrchstring:On Clearance|Open Box" \
+            --language en-CA
+      - name: Commit updated datasets
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'chore: refresh Best Buy clearance data'
+          file_pattern: |
+            data/best-buy/**/*.json
+            data/bestbuy_liquidation.json
+      - name: Upload clearance datasets
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bestbuy-liquidations-data
+          path: |
+            data/best-buy/liquidations.json
+            data/bestbuy_liquidation.json
