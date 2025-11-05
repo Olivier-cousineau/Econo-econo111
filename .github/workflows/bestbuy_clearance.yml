@@ -1,0 +1,36 @@
+name: BestBuy Clearance Scraper
+
+on:
+  schedule:
+    - cron: '0 9 */2 * *'
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install playwright
+          playwright install chromium
+
+      - name: Run Best Buy Liquidation Scraper
+        run: python scripts/bestbuy_liquidation_scraper.py
+
+      - name: Commit clearance data
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add data/best-buy/liquidations/
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update Best Buy clearance data $(date -u '+%Y-%m-%d %H:%M')"
+          git push
