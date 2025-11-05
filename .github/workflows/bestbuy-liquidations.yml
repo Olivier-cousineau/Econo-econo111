@@ -1,48 +1,47 @@
-name: Refresh Best Buy clearance feed
+name: Scraper BestBuy Liquidations
 
 on:
   schedule:
-    - cron: '0 6 */2 * *'
+    - cron: '0 9 * * *'
   workflow_dispatch:
 
 jobs:
   scrape:
-    name: Scrape Best Buy liquidations
     runs-on: ubuntu-latest
     permissions:
       contents: write
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.10'
+
+      - name: Install Chrome
+        uses: browser-actions/setup-chrome@v1
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-      - name: Install Chrome
-        uses: browser-actions/setup-chrome@v1
-      - name: Collect clearance catalog
+
+      - name: Run Selenium scraper
         env:
-          DISPLAY: ':99'
+          # Ajoute ici proxy, tokens, etc. si requis
+          BESTBUY_PROXIES: ${{ secrets.BESTBUY_PROXIES || '' }}
+          BESTBUY_USER_AGENTS: ${{ secrets.BESTBUY_USER_AGENTS || '' }}
         run: |
           python scripts/bestbuy_liquidation_scraper.py --headless
-      - name: Commit updated datasets
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: 'chore: refresh Best Buy clearance data'
-          file_pattern: |
-            data/best-buy/**/*.json
-            data/bestbuy_liquidation.json
-      - name: Upload clearance datasets
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: bestbuy-liquidations-data
-          path: |
-            data/best-buy/liquidations.json
-            data/bestbuy_liquidation.json
+
+      - name: Commit & Push data
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git add data/best-buy/liquidations data/bestbuy_liquidation.json
+          git commit -m "update: best buy liquidation data $(date -u '+%Y-%m-%d %H:%M')" || echo "No changes to commit"
+          git push --force
