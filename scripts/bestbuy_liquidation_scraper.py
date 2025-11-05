@@ -17,6 +17,7 @@ import contextlib
 import logging
 import os
 import random
+import sys
 import time
 from dataclasses import dataclass
 from decimal import Decimal
@@ -34,6 +35,14 @@ from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
+
+# Ensure the repository root is importable even when the script is executed
+# directly (e.g. via ``python path/to/script.py``) so that sibling packages such
+# as :mod:`config` can be resolved without relying on the current working
+# directory.
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
 
 from config.settings import get_settings
 from services.bestbuy import (

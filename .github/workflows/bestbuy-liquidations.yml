@@ -35,6 +35,7 @@ jobs:
           # Ajoute ici proxy, tokens, etc. si requis
           BESTBUY_PROXIES: ${{ secrets.BESTBUY_PROXIES || '' }}
           BESTBUY_USER_AGENTS: ${{ secrets.BESTBUY_USER_AGENTS || '' }}
+          PYTHONPATH: ${{ github.workspace }}
         run: |
           python scripts/bestbuy_liquidation_scraper.py --headless
 
