@@ -3,7 +3,7 @@ import json
 import logging
 from pathlib import Path
 
-from playwright.async_api import async_playwright
+from playwright.async_api import TimeoutError as PlaywrightTimeoutError, async_playwright
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 
@@ -21,8 +21,12 @@ async def scrape_bestbuy() -> list[dict]:
         )
         page = await context.new_page()
 
-        await page.goto(URL, timeout=120_000)
-        await page.wait_for_load_state("networkidle", timeout=120_000)
+        await page.goto(URL, timeout=180_000)
+        await page.wait_for_load_state("domcontentloaded", timeout=180_000)
+        try:
+            await page.wait_for_load_state("networkidle", timeout=120_000)
+        except PlaywrightTimeoutError:
+            logging.warning("Network idle wait timed out; continuing with collected DOM")
         await asyncio.sleep(10)
 
         items = await page.query_selector_all(
