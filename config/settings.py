@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import os
 from functools import lru_cache
 from pathlib import Path
@@ -122,7 +123,21 @@ class Settings(BaseSettings):
         if value in (None, "", (), [], False):
             return []
         if isinstance(value, str):
-            return [item.strip() for item in value.split(",") if item.strip()]
+            text = value.strip()
+            if not text:
+                return []
+            try:
+                parsed = json.loads(text)
+            except json.JSONDecodeError:
+                return [item.strip() for item in text.split(",") if item.strip()]
+            else:
+                if isinstance(parsed, (list, tuple, set)):
+                    return [str(item).strip() for item in parsed if str(item).strip()]
+                if isinstance(parsed, str):
+                    parsed_text = parsed.strip()
+                    return [parsed_text] if parsed_text else []
+                parsed_text = str(parsed).strip()
+                return [parsed_text] if parsed_text else []
         if isinstance(value, (list, tuple, set)):
             return [str(item).strip() for item in value if str(item).strip()]
         return [str(value).strip()]
