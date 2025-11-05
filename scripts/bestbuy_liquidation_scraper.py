@@ -1,81 +1,66 @@
+import asyncio
 import json
 import logging
-from time import sleep
+from pathlib import Path
 
-import requests
+from playwright.async_api import async_playwright
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 
-OUTPUT_FILE = "data/best-buy/liquidations/clearance.json"
-API_URL = "https://www.bestbuy.ca/api/v2/json/search"
-HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-        "(KHTML, like Gecko) Chrome/120.0 Safari/537.36"
-    ),
-    "Accept-Language": "en-CA,en;q=0.9,fr;q=0.8",
-}
+URL = "https://www.bestbuy.ca/en-ca/collection/clearance-products/113065"
+OUTPUT = Path("data/best-buy/liquidations/clearance.json")
 
 
-def fetch_clearance_products() -> list[dict]:
-    """Retrieve all clearance products through the public Best Buy API."""
-    products: list[dict] = []
-    page = 1
+async def scrape_bestbuy() -> list[dict]:
+    """Collect clearance products from the dynamically rendered catalogue."""
+    logging.info("🌐 Visiting %s", URL)
+    async with async_playwright() as playwright:
+        browser = await playwright.chromium.launch(headless=True)
+        context = await browser.new_context(locale="en-CA")
+        page = await context.new_page()
 
-    while True:
-        params = {
-            "query": "clearance",
-            "page": page,
-            "lang": "en-CA",
-            "sortBy": "salePrice",
-            "sortDir": "asc",
-        }
+        await page.goto(URL, timeout=90_000)
+        await page.wait_for_selector("li[class*='productItem']", timeout=60_000)
 
-        logging.info("Fetching page %d ...", page)
-        response = requests.get(API_URL, headers=HEADERS, params=params, timeout=30)
-        if response.status_code != 200:
-            logging.error("HTTP %s on page %d", response.status_code, page)
-            break
+        items = await page.query_selector_all("li[class*='productItem']")
+        products: list[dict] = []
 
-        data = response.json()
-        items = data.get("products", [])
-        if not items:
-            logging.info("No more products.")
-            break
+        for item in items:
+            try:
+                name = await item.query_selector_eval("h4", "el => el.innerText") or "Unknown"
+                price = await item.query_selector_eval("div[class*='price']", "el => el.innerText") or "N/A"
+                link = await item.query_selector_eval("a", "el => el.href")
+                image = await item.query_selector_eval("img", "el => el.src")
 
-        for product in items:
-            products.append(
-                {
-                    "product_name": product.get("name"),
-                    "sku": str(product.get("sku")),
-                    "regular_price": product.get("regularPrice"),
-                    "sale_price": product.get("salePrice"),
-                    "product_link": f"https://www.bestbuy.ca/en-ca/product/{product.get('sku')}",
-                    "image": product.get("thumbnailImage"),
-                    "store": "Best Buy Canada",
-                    "availability": product.get("availability"),
-                }
-            )
+                products.append(
+                    {
+                        "product_name": name.strip(),
+                        "price": price.strip(),
+                        "product_link": link,
+                        "image": image,
+                        "store": "Best Buy Canada Clearance",
+                    }
+                )
+            except Exception as exc:  # pragma: no cover - defensive logging only
+                logging.debug("Skipping product due to error: %s", exc)
+                continue
 
-        logging.info("✅ Collected %d products from page %d", len(items), page)
-        page += 1
-        sleep(0.8)  # avoid hammering the API
-
-    logging.info("🔹 Total collected: %d products", len(products))
-    return products
+        await browser.close()
+        return products
 
 
-def main() -> None:
-    products = fetch_clearance_products()
+async def main() -> None:
+    products = await scrape_bestbuy()
+    logging.info("✅ Extracted %d products", len(products))
 
     if not products:
-        raise SystemExit("❌ No clearance products found.")
+        raise SystemExit("❌ No products found — check page structure or selector")
 
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as fp:
-        json.dump(products, fp, indent=2, ensure_ascii=False)
-
-    logging.info("💾 Saved %d items to %s", len(products), OUTPUT_FILE)
+    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+    with OUTPUT.open("w", encoding="utf-8") as file:
+        json.dump(products, file, indent=2, ensure_ascii=False)
+    logging.info("💾 Saved results to %s", OUTPUT)
 
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())
