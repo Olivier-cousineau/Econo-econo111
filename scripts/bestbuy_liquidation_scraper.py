@@ -16,22 +16,22 @@ import argparse
 import contextlib
 import logging
 import os
+import random
 import time
 from dataclasses import dataclass
 from decimal import Decimal
 from pathlib import Path
-from typing import Iterable, List, Optional, Sequence
+from typing import Iterable, List, Optional, Sequence, Tuple
 
-from selenium import webdriver
+import undetected_chromedriver as uc
 from selenium.common.exceptions import (
     ElementClickInterceptedException,
     StaleElementReferenceException,
     TimeoutException,
 )
-from selenium.webdriver import Chrome
-from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
+from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
@@ -53,6 +53,10 @@ DEFAULT_COLLECTION_URL = (
 DEFAULT_WAIT_SECONDS = 25
 DEFAULT_CLICK_DELAY = 1.5
 DEFAULT_MAX_PAGINATION = 120
+CLICK_DELAY_RANGE: Tuple[float, float] = (1.2, 3.7)
+SCROLL_PAUSE_RANGE: Tuple[float, float] = (0.8, 1.6)
+NAVIGATION_PAUSE_RANGE: Tuple[float, float] = (1.2, 2.8)
+SCROLL_DISTANCE_RANGE: Tuple[int, int] = (300, 620)
 
 
 @dataclass(frozen=True)
@@ -214,6 +218,35 @@ def _first_non_empty(values: Iterable[Optional[str]]) -> Optional[str]:
     return None
 
 
+def _random_user_agent(candidates: Sequence[str]) -> Optional[str]:
+    usable = [candidate.strip() for candidate in candidates if candidate and str(candidate).strip()]
+    if not usable:
+        return None
+    return random.choice(usable)
+
+
+def _random_proxy(candidates: Sequence[str]) -> Optional[str]:
+    usable = [candidate.strip() for candidate in candidates if candidate and str(candidate).strip()]
+    if not usable:
+        return None
+    return random.choice(usable)
+
+
+def _human_delay(base: float, bounds: Tuple[float, float]) -> float:
+    minimum, maximum = bounds
+    lower = max(minimum, base * 0.6 if base else minimum)
+    upper = max(maximum, base * 1.6 if base else maximum)
+    return random.uniform(lower, upper)
+
+
+def _pause(bounds: Tuple[float, float]) -> None:
+    time.sleep(random.uniform(*bounds))
+
+
+def _scroll_distance() -> int:
+    return random.randint(*SCROLL_DISTANCE_RANGE)
+
+
 def parse_arguments(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Scrape the Best Buy liquidation listing via Selenium.",
@@ -274,24 +307,44 @@ def configure_logging(verbose: bool) -> None:
     )
 
 
-def create_driver(headless: bool) -> Chrome:
-    options = Options()
+def create_driver(
+    headless: bool,
+    user_agents: Sequence[str],
+    proxies: Sequence[str],
+) -> WebDriver:
+    options = uc.ChromeOptions()
     if headless:
         options.add_argument("--headless=new")
     options.add_argument("--disable-gpu")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
-    options.add_argument("--window-size=1920,1080")
+    options.add_argument("--disable-blink-features=AutomationControlled")
     options.add_argument("--lang=en-CA")
-    options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                         "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36")
+    options.add_argument("--window-size=1920,1080")
+    options.add_argument("--disable-extensions")
+    options.add_argument("--disable-infobars")
+
+    user_agent = _random_user_agent(user_agents)
+    if user_agent:
+        options.add_argument(f"--user-agent={user_agent}")
+        LOGGER.debug("User-Agent sélectionné: %s", user_agent)
+
+    proxy = _random_proxy(proxies)
+    if proxy:
+        options.add_argument(f"--proxy-server={proxy}")
+        masked_proxy = proxy.split("@")[-1]
+        LOGGER.info("Proxy activé pour la session (%s)", masked_proxy)
+
     binary = os.environ.get("CHROME_BIN") or os.environ.get("CHROME_PATH")
     if binary:
         options.binary_location = binary
-    return webdriver.Chrome(options=options)
+
+    driver = uc.Chrome(options=options, headless=headless)
+    driver.set_window_size(1920, 1080)
+    return driver
 
 
-def wait_for_grid(driver: Chrome, wait_time: float) -> None:
+def wait_for_grid(driver: WebDriver, wait_time: float) -> None:
     LOGGER.debug("Waiting for the product grid to be visible")
     WebDriverWait(driver, wait_time).until(
         EC.presence_of_element_located((By.CSS_SELECTOR, "[data-testid='product-card']"))
@@ -305,7 +358,7 @@ def _show_more_xpath() -> str:
     )
 
 
-def click_show_more(driver: Chrome, wait_time: float, delay: float, max_pages: int) -> None:
+def click_show_more(driver: WebDriver, wait_time: float, delay: float, max_pages: int) -> None:
     wait = WebDriverWait(driver, wait_time)
     previous_count = len(driver.find_elements(By.CSS_SELECTOR, "[data-testid='product-card']"))
     for index in range(max_pages):
@@ -320,8 +373,10 @@ def click_show_more(driver: Chrome, wait_time: float, delay: float, max_pages: i
 
         LOGGER.debug("Clicking 'Show More' (%s/%s)", index + 1, max_pages)
         try:
+            driver.execute_script("window.scrollBy(0, arguments[0]);", _scroll_distance())
+            _pause(SCROLL_PAUSE_RANGE)
             driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", button)
-            time.sleep(0.2)
+            _pause(SCROLL_PAUSE_RANGE)
             try:
                 button.click()
             except ElementClickInterceptedException:
@@ -330,7 +385,7 @@ def click_show_more(driver: Chrome, wait_time: float, delay: float, max_pages: i
             LOGGER.debug("Stale pagination button, retrying")
             continue
 
-        time.sleep(delay)
+        time.sleep(_human_delay(delay, CLICK_DELAY_RANGE))
         try:
             wait.until(lambda d: _product_count(d) > previous_count)
         except TimeoutException:
@@ -344,11 +399,11 @@ def click_show_more(driver: Chrome, wait_time: float, delay: float, max_pages: i
         previous_count = new_count
 
 
-def _product_count(driver: Chrome) -> int:
+def _product_count(driver: WebDriver) -> int:
     return len(driver.find_elements(By.CSS_SELECTOR, "[data-testid='product-card']"))
 
 
-def collect_products(driver: Chrome) -> List[BestBuyProduct]:
+def collect_products(driver: WebDriver) -> List[BestBuyProduct]:
     cards = driver.find_elements(By.CSS_SELECTOR, "[data-testid='product-card']")
     LOGGER.info("Parsing %s product cards", len(cards))
     products: List[BestBuyProduct] = []
@@ -386,11 +441,20 @@ def collect_products(driver: Chrome) -> List[BestBuyProduct]:
     return products
 
 
-def scrape_bestbuy(url: str, headless: bool, wait_time: float, delay: float, max_pages: int) -> List[BestBuyProduct]:
+def scrape_bestbuy(
+    url: str,
+    headless: bool,
+    wait_time: float,
+    delay: float,
+    max_pages: int,
+    user_agents: Sequence[str],
+    proxies: Sequence[str],
+) -> List[BestBuyProduct]:
     LOGGER.info("Opening %s", url)
-    driver = create_driver(headless=headless)
+    driver = create_driver(headless=headless, user_agents=user_agents, proxies=proxies)
     try:
         driver.get(url)
+        _pause(NAVIGATION_PAUSE_RANGE)
         wait_for_grid(driver, wait_time)
         click_show_more(driver, wait_time, delay, max_pages)
         return collect_products(driver)
@@ -407,12 +471,22 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     root = args.data_root or settings.base_dir
     root = root.resolve()
 
+    user_agents = tuple(settings.bestbuy_user_agents)
+    proxies = tuple(settings.bestbuy_proxies)
+    LOGGER.debug(
+        "Configuration réseau: %s proxies, %s user-agents",
+        len(proxies),
+        len(user_agents),
+    )
+
     products = scrape_bestbuy(
         url=args.url,
         headless=args.headless,
         wait_time=args.wait_time,
         delay=args.click_delay,
         max_pages=args.max_pages,
+        user_agents=user_agents,
+        proxies=proxies,
     )
 
     if not products:
