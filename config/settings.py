@@ -4,7 +4,7 @@ import os
 from functools import lru_cache
 from pathlib import Path
 import re
-from typing import Dict, Iterable, Optional, Sequence, Tuple
+from typing import Dict, Iterable, List, Optional, Sequence, Tuple
 
 from pydantic import Field, FieldValidationInfo, field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
@@ -41,8 +41,8 @@ class Settings(BaseSettings):
         }
     )
 
-    bestbuy_user_agents: Sequence[str] = Field(
-        default=(
+    bestbuy_user_agents: List[str] = Field(
+        default_factory=lambda: [
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
             "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
             "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_5) AppleWebKit/605.1.15 "
@@ -50,7 +50,7 @@ class Settings(BaseSettings):
             "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) "
             "Chrome/125.0.6422.141 Safari/537.36",
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0",
-        )
+        ]
     )
     bestbuy_proxies: Sequence[str] = Field(default=())
 
@@ -117,7 +117,17 @@ class Settings(BaseSettings):
             path = (base_dir / path).resolve()
         return path
 
-    @field_validator("bestbuy_user_agents", "bestbuy_proxies", mode="before")
+    @field_validator("bestbuy_user_agents", mode="before")
+    def _coerce_user_agents(cls, value: object) -> List[str]:
+        if value in (None, "", (), [], False):
+            return []
+        if isinstance(value, str):
+            return [item.strip() for item in value.split(",") if item.strip()]
+        if isinstance(value, (list, tuple, set)):
+            return [str(item).strip() for item in value if str(item).strip()]
+        return [str(value).strip()]
+
+    @field_validator("bestbuy_proxies", mode="before")
     def _coerce_sequence(cls, value: object) -> Tuple[str, ...]:
         if value in (None, "", (), [], False):
             return ()
