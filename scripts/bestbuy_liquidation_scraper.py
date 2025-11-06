@@ -21,12 +21,15 @@ async def scrape_bestbuy() -> list[dict]:
         )
         page = await context.new_page()
 
-        await page.goto(URL, timeout=180_000)
-        await page.wait_for_load_state("domcontentloaded", timeout=180_000)
         try:
-            await page.wait_for_load_state("networkidle", timeout=120_000)
+            await page.goto(URL, timeout=180_000)
         except PlaywrightTimeoutError:
-            logging.warning("Network idle wait timed out; continuing with collected DOM")
+            logging.warning("Navigation timed out at %s; continuing with partial content", URL)
+
+        try:
+            await page.wait_for_load_state("domcontentloaded", timeout=180_000)
+        except PlaywrightTimeoutError:
+            logging.warning("DOM content load timed out; proceeding with available DOM")
         await asyncio.sleep(10)
 
         items = await page.query_selector_all(
