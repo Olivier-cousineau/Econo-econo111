@@ -21,9 +21,25 @@ FIELDNAMES = [
 ]
 PRODUCT_CARD_SELECTOR = (
     ".product-tile, [data-testid=\"product-tile\"], [data-testid=\"productTile\"], "
-    "[data-testid=\"product-card\"], article[data-testid=\"plp-product-tile\"], "
+    "[data-testid=\"product-card\"], [data-component=\"ProductCard\"], "
+    "article[data-testid=\"plp-product-tile\"], article[data-test=\"product-tile\"], "
     "li.grid-tile, div.grid-tile, div.product-grid__tile, div.plp-product-grid__item"
 )
+
+PRODUCT_CONTENT_WAIT_SELECTOR = (
+    ".pdp-link, .product-name, [data-testid=\"productTile-title\"], "
+    "[data-testid=\"product-card\"], [data-component=\"ProductCard\"], "
+    "article[data-testid=\"plp-product-tile\"], article[data-test=\"product-tile\"]"
+)
+
+
+def save_rows(rows: Iterable[dict]) -> None:
+    """Écrit le fichier CSV, même en l'absence de produits."""
+
+    with open(OUTPUT_FILE, "w", newline="", encoding="utf-8") as csv_file:
+        writer = csv.DictWriter(csv_file, fieldnames=FIELDNAMES)
+        writer.writeheader()
+        writer.writerows(rows)
 
 
 def save_rows(rows: Iterable[dict]) -> None:
@@ -45,6 +61,7 @@ async def accept_cookies(page) -> bool:
         "button:has-text(\"Tout accepter\")",
         "button:has-text(\"Allow all\")",
         "button:has-text(\"Accept All\")",
+        "button:has-text(\"Autoriser tous\")",
     ]
 
     for selector in cookie_selectors:
@@ -72,6 +89,8 @@ async def close_location_modal(page) -> bool:
         "button:has-text(\"Magasiner en ligne\")",
         "button:has-text(\"Shop Online\")",
         "button:has-text(\"Continue without\")",
+        "button:has-text(\"Continuer sans choisir\")",
+        "button:has-text(\"Continue without selecting\")",
     ]
 
     for selector in modal_buttons:
@@ -176,7 +195,7 @@ async def scrape_sportinglife():
 
             try:
                 await page.wait_for_selector(
-                    PRODUCT_CARD_SELECTOR,
+                    PRODUCT_CONTENT_WAIT_SELECTOR,
                     state="attached",
                     timeout=60000,
                 )
