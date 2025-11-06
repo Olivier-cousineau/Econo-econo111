@@ -2,11 +2,116 @@ from __future__ import annotations
 
 import asyncio
 import csv
-import sys
-from playwright.async_api import async_playwright
+from pathlib import Path
+from typing import Iterable, List
+
+from playwright.async_api import (
+    TimeoutError as PlaywrightTimeoutError,
+    async_playwright,
+)
 
 URL = "https://www.sportinglife.ca/fr-CA/liquidation/"
 OUTPUT_FILE = "sportinglife_laval_liquidation.csv"
+PRODUCT_CARD_SELECTOR = (
+    ".product-tile, [data-testid=\"product-tile\"], [data-testid=\"productTile\"], "
+    "li.grid-tile, div.grid-tile, div.product-grid__tile, div.plp-product-grid__item"
+)
+
+
+async def accept_cookies(page) -> bool:
+    """Ferme les bannières de consentement si elles sont visibles."""
+
+    cookie_selectors: List[str] = [
+        "#onetrust-accept-btn-handler",
+        "button:has-text(\"Accepter\")",
+        "button:has-text(\"J'accepte\")",
+        "button:has-text(\"Tout accepter\")",
+        "button:has-text(\"Allow all\")",
+    ]
+
+    for selector in cookie_selectors:
+        locator = page.locator(selector).first
+        try:
+            if await locator.count() == 0:
+                continue
+            await locator.wait_for(state="visible", timeout=2000)
+            await locator.click()
+            await page.wait_for_timeout(500)
+            print("🍪 Bandeau de cookies accepté.")
+            return True
+        except PlaywrightTimeoutError:
+            continue
+        except Exception:
+            continue
+    return False
+
+
+async def expand_all_products(page, max_clicks: int = 40) -> None:
+    """Clique sur « Voir plus » jusqu'à l'affichage de tous les produits."""
+
+    previous_count = await count_products(page)
+    for _ in range(max_clicks):
+        button = page.locator("button:has-text(\"Voir plus\")").first
+        try:
+            await button.wait_for(state="visible", timeout=4000)
+        except PlaywrightTimeoutError:
+            break
+
+        try:
+            await button.scroll_into_view_if_needed()
+            await button.click()
+        except Exception:
+            break
+
+        try:
+            await page.wait_for_function(
+                "(selector, previousCount) => "
+                "document.querySelectorAll(selector).length > previousCount",
+                PRODUCT_CARD_SELECTOR,
+                previous_count,
+                timeout=10000,
+            )
+            previous_count = await count_products(page)
+        except PlaywrightTimeoutError:
+            # Aucun nouveau produit : on stoppe pour éviter une boucle infinie.
+            break
+
+        await page.wait_for_timeout(800)
+
+
+async def count_products(page) -> int:
+    return await page.evaluate(
+        "(selector) => document.querySelectorAll(selector).length",
+        PRODUCT_CARD_SELECTOR,
+    )
+
+
+async def extract_first_text(product, selectors: Iterable[str]) -> str:
+    for selector in selectors:
+        locator = product.locator(selector).first
+        try:
+            if await locator.count() == 0:
+                continue
+            text = (await locator.inner_text()).strip()
+            if text:
+                return text
+        except Exception:
+            continue
+    return ""
+
+
+async def extract_first_attribute(product, selectors: Iterable[str], attribute: str) -> str:
+    for selector in selectors:
+        locator = product.locator(selector).first
+        try:
+            if await locator.count() == 0:
+                continue
+            value = await locator.get_attribute(attribute)
+            if value:
+                return value.strip()
+        except Exception:
+            continue
+    return ""
 
 
 async def scrape_sportinglife():
@@ -15,56 +120,101 @@ async def scrape_sportinglife():
         context = await browser.new_context(locale="fr-CA")
         page = await context.new_page()
 
-        print("\U0001F310 Ouverture de la page Sporting Life Liquidation...")
-        await page.goto(URL, timeout=120000)
+        print("🌐 Ouverture de la page Sporting Life Liquidation...")
+        await page.goto(URL, timeout=120000, wait_until="domcontentloaded")
         await page.wait_for_load_state("networkidle")
 
-        # Attendre que les produits apparaissent
-        try:
-            await page.wait_for_selector(".product-tile", timeout=45000)
-        except Exception:
-            print("\u26a0\ufe0f Aucun produit trouvé avant expiration du délai.")
-            # Sauvegarde du HTML pour débogage
-            html = await page.content()
-            with open("debug_sportinglife.html", "w", encoding="utf-8") as f:
-                f.write(html)
-            await browser.close()
-            sys.exit(0)
+        await accept_cookies(page)
 
-        print("\u2705 Produits trouvés, extraction en cours...")
-        products = await page.query_selector_all(".product-tile")
+        try:
+            await page.wait_for_selector(
+                ".pdp-link, .product-name, [data-testid='productTile-title']",
+                timeout=60000,
+            )
+        except PlaywrightTimeoutError:
+            print("⚠️ Aucun produit trouvé avant expiration du délai.")
+            html = await page.content()
+            Path("debug_sportinglife.html").write_text(html, encoding="utf-8")
+            await context.close()
+            await browser.close()
+            return
+
+        await expand_all_products(page)
+
+        product_locator = page.locator(PRODUCT_CARD_SELECTOR)
+        product_count = await product_locator.count()
+        if product_count == 0:
+            print("⚠️ Aucun produit détecté malgré le chargement de la page.")
+            html = await page.content()
+            Path("debug_sportinglife.html").write_text(html, encoding="utf-8")
+            await context.close()
+            await browser.close()
+            return
+
+        print("✅ Produits trouvés, extraction en cours...")
+
+        name_selectors = [
+            ".pdp-link",
+            "a[data-testid='productTile-link']",
+            ".product-name",
+            "a[aria-label]",
+        ]
+        price_now_selectors = [
+            ".sales",
+            "[data-testid='productTile-price'] .sales",
+            ".price-sales",
+            ".product-pricing__price",
+        ]
+        price_original_selectors = [
+            ".was",
+            "[data-testid='productTile-price'] .was",
+            ".price-standard",
+            ".product-pricing__was",
+        ]
+        link_selectors = [
+            ".pdp-link",
+            "a[data-testid='productTile-link']",
+            "a[href]",
+        ]
 
         data = []
-        for product in products:
-            try:
-                name = await product.locator(".pdp-link").inner_text()
-                image = await product.locator("img").get_attribute("src")
-                price_now = await product.locator(".sales").inner_text()
-                try:
-                    price_original = await product.locator(".was").inner_text()
-                except:
-                    price_original = "—"
-                link = await product.locator(".pdp-link").get_attribute("href")
-                if not link.startswith("http"):
-                    link = "https://www.sportinglife.ca" + link
+        for index in range(product_count):
+            product = product_locator.nth(index)
+            name = await extract_first_text(product, name_selectors)
+            price_now = await extract_first_text(product, price_now_selectors)
+            price_original = await extract_first_text(product, price_original_selectors)
+            image = await extract_first_attribute(product, ["img"], "src")
+            link = await extract_first_attribute(product, link_selectors, "href")
 
-                data.append({
-                    "Nom du produit": name.strip(),
-                    "Prix réduit": price_now.strip(),
-                    "Prix original": price_original.strip(),
+            if link and not link.startswith("http"):
+                link = "https://www.sportinglife.ca" + link
+
+            data.append(
+                {
+                    "Nom du produit": name,
+                    "Prix réduit": price_now,
+                    "Prix original": price_original or "—",
                     "Image": image,
                     "Lien": link,
-                })
-            except Exception as e:
-                print(f"Erreur sur un produit : {e}")
+                }
+            )
 
-        # Sauvegarde CSV
+        fieldnames = [
+            "Nom du produit",
+            "Prix réduit",
+            "Prix original",
+            "Image",
+            "Lien",
+        ]
+
         with open(OUTPUT_FILE, "w", newline="", encoding="utf-8") as f:
-            writer = csv.DictWriter(f, fieldnames=data[0].keys())
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
             writer.writerows(data)
 
-        print(f"\U0001F4BE {len(data)} produits enregistrés dans {OUTPUT_FILE}")
+        print(f"💾 {len(data)} produits enregistrés dans {OUTPUT_FILE}")
+
+        await context.close()
         await browser.close()
 
 
