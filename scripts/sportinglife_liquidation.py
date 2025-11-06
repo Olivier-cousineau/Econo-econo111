@@ -21,6 +21,7 @@ FIELDNAMES = [
 ]
 PRODUCT_CARD_SELECTOR = (
     ".product-tile, [data-testid=\"product-tile\"], [data-testid=\"productTile\"], "
+    "[data-testid=\"product-card\"], article[data-testid=\"plp-product-tile\"], "
     "li.grid-tile, div.grid-tile, div.product-grid__tile, div.plp-product-grid__item"
 )
 
@@ -43,6 +44,7 @@ async def accept_cookies(page) -> bool:
         "button:has-text(\"J'accepte\")",
         "button:has-text(\"Tout accepter\")",
         "button:has-text(\"Allow all\")",
+        "button:has-text(\"Accept All\")",
     ]
 
     for selector in cookie_selectors:
@@ -59,6 +61,33 @@ async def accept_cookies(page) -> bool:
             continue
         except Exception:
             continue
+    return False
+
+
+async def close_location_modal(page) -> bool:
+    """Ferme la fenêtre de sélection de magasin si elle apparaît."""
+
+    modal_buttons: List[str] = [
+        "button:has-text(\"Continuer sans\")",
+        "button:has-text(\"Magasiner en ligne\")",
+        "button:has-text(\"Shop Online\")",
+        "button:has-text(\"Continue without\")",
+    ]
+
+    for selector in modal_buttons:
+        locator = page.locator(selector).first
+        try:
+            if await locator.count() == 0:
+                continue
+            await locator.wait_for(state="visible", timeout=2000)
+            await locator.click()
+            print("📍 Sélection de magasin ignorée.")
+            return True
+        except PlaywrightTimeoutError:
+            continue
+        except Exception:
+            continue
+
     return False
 
 
@@ -143,9 +172,12 @@ async def scrape_sportinglife():
 
             await accept_cookies(page)
 
+            await close_location_modal(page)
+
             try:
                 await page.wait_for_selector(
-                    ".pdp-link, .product-name, [data-testid='productTile-title']",
+                    PRODUCT_CARD_SELECTOR,
+                    state="attached",
                     timeout=60000,
                 )
             except PlaywrightTimeoutError:
@@ -173,23 +205,32 @@ async def scrape_sportinglife():
                 "a[data-testid='productTile-link']",
                 ".product-name",
                 "a[aria-label]",
+                "[data-testid='product-card'] a",
+                "article[data-testid='plp-product-tile'] a",
+                "h3 a",
             ]
             price_now_selectors = [
                 ".sales",
                 "[data-testid='productTile-price'] .sales",
                 ".price-sales",
                 ".product-pricing__price",
+                "[data-testid='price-current']",
+                "span[data-test='price-sales']",
             ]
             price_original_selectors = [
                 ".was",
                 "[data-testid='productTile-price'] .was",
                 ".price-standard",
                 ".product-pricing__was",
+                "[data-testid='price-original']",
+                "span[data-test='price-standard']",
             ]
             link_selectors = [
                 ".pdp-link",
                 "a[data-testid='productTile-link']",
                 "a[href]",
+                "[data-testid='product-card'] a",
+                "article[data-testid='plp-product-tile'] a",
             ]
 
             data = []
