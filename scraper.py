@@ -13,6 +13,7 @@ from pathlib import Path
 from typing import Any, Dict, List
 
 from playwright.async_api import TimeoutError as PlaywrightTimeoutError, async_playwright
+from playwright.async_api import async_playwright
 
 URLS: Dict[str, str] = {
     "st-jerome": "https://www.sportinglife.ca/fr-CA/liquidation/?store=st-jerome",
@@ -38,6 +39,10 @@ PRICE_SELECTORS = [
 ]
 SCROLL_PAUSE_SECONDS = 2
 PRODUCT_WAIT_TIMEOUT_MS = 60_000
+PRODUCT_TILE_SELECTOR = ".product-listing__list-item"
+TITLE_SELECTOR = ".product-tile__title"
+PRICE_SELECTOR = ".product-price__value"
+SCROLL_PAUSE_SECONDS = 2
 
 
 def parse_args() -> argparse.Namespace:
@@ -81,6 +86,25 @@ async def collect_products(page, selector: str) -> List[Dict[str, Any]]:
     for tile in tiles:
         title = await extract_text(tile, TITLE_SELECTORS)
         price = await extract_text(tile, PRICE_SELECTORS)
+    return parser.parse_args()
+
+
+async def extract_text(element, selector: str) -> str:
+    """Return the trimmed text content for a selector within an element."""
+    target = await element.query_selector(selector)
+    if not target:
+        return ""
+    text = await target.inner_text()
+    return text.strip()
+
+
+async def collect_products(page) -> List[Dict[str, Any]]:
+    """Collect product information from the current page."""
+    tiles = await page.query_selector_all(PRODUCT_TILE_SELECTOR)
+    items: List[Dict[str, Any]] = []
+    for tile in tiles:
+        title = await extract_text(tile, TITLE_SELECTOR)
+        price = await extract_text(tile, PRICE_SELECTOR)
         if not title and not price:
             continue
         items.append({"title": title, "price": price})
@@ -102,6 +126,7 @@ async def wait_for_product_tiles(page) -> str:
 
 
 async def run_scraper(ville: str, output_path: Path, debug_html: bool = False) -> None:
+async def run_scraper(ville: str, output_path: Path) -> None:
     """Run the scraper for the given city and output path."""
     url = URLS[ville]
 
@@ -132,6 +157,7 @@ async def run_scraper(ville: str, output_path: Path, debug_html: bool = False) -
                 if tiles:
                     product_selector = selector
                     break
+        await page.wait_for_selector(PRODUCT_TILE_SELECTOR, timeout=30000)
 
         previous_height = -1
         while True:
@@ -144,6 +170,7 @@ async def run_scraper(ville: str, output_path: Path, debug_html: bool = False) -
 
         print(f"Extraction avec le sélecteur: {product_selector}")
         items = await collect_products(page, product_selector)
+        items = await collect_products(page)
 
         output_path.parent.mkdir(parents=True, exist_ok=True)
         with output_path.open("w", encoding="utf-8") as output_file:
@@ -159,6 +186,7 @@ def main() -> None:
     ville = args.ville.lower()
     output = Path(args.output)
     asyncio.run(run_scraper(ville, output, args.debug_html))
+    asyncio.run(run_scraper(ville, output))
 
 
 if __name__ == "__main__":
