@@ -10,6 +10,9 @@ from __future__ import annotations
 
 import json
 import os
+import re
+import shutil
+import subprocess
 from dataclasses import asdict, dataclass
 from typing import Iterable, List, Optional
 
@@ -73,6 +76,46 @@ def _join_selectors(selectors: Iterable[str]) -> str:
     return ", ".join(selectors)
 
 
+def _get_browser_version(chrome_binary: Optional[str]) -> Optional[str]:
+    """Return the full version string of the available Chrome binary."""
+
+    candidates = []
+    if chrome_binary:
+        candidates.append(chrome_binary)
+
+    candidates.extend(
+        filter(
+            None,
+            (
+                shutil.which(name)
+                for name in (
+                    "google-chrome",
+                    "google-chrome-stable",
+                    "chromium",
+                    "chromium-browser",
+                )
+            ),
+        )
+    )
+
+    for binary in candidates:
+        try:
+            result = subprocess.run(
+                [binary, "--version"],
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+        except (FileNotFoundError, subprocess.CalledProcessError):
+            continue
+
+        match = re.search(r"(\d+\.\d+\.\d+\.\d+)", result.stdout)
+        if match:
+            return match.group(1)
+
+    return None
+
+
 def _configure_driver() -> webdriver.Chrome:
     """Initialise a headless Chrome driver that works on CI environments."""
 
@@ -87,7 +130,14 @@ def _configure_driver() -> webdriver.Chrome:
     if chrome_binary:
         chrome_options.binary_location = chrome_binary
 
-    service = Service(ChromeDriverManager().install())
+    browser_version = _get_browser_version(chrome_binary)
+    if browser_version:
+        service = Service(
+            ChromeDriverManager(driver_version=browser_version).install()
+        )
+    else:
+        service = Service(ChromeDriverManager().install())
+
     return webdriver.Chrome(service=service, options=chrome_options)
 
 
