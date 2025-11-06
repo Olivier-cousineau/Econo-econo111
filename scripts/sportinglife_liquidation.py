@@ -42,6 +42,15 @@ def save_rows(rows: Iterable[dict]) -> None:
         writer.writerows(rows)
 
 
+def save_rows(rows: Iterable[dict]) -> None:
+    """Écrit le fichier CSV, même en l'absence de produits."""
+
+    with open(OUTPUT_FILE, "w", newline="", encoding="utf-8") as csv_file:
+        writer = csv.DictWriter(csv_file, fieldnames=FIELDNAMES)
+        writer.writeheader()
+        writer.writerows(rows)
+
+
 async def accept_cookies(page) -> bool:
     """Ferme les bannières de consentement si elles sont visibles."""
 
