@@ -1,8 +1,7 @@
 import json
 import os
 from pathlib import Path
-from typing import Dict, Iterable, Optional
-from urllib.parse import quote
+from typing import Dict, Iterable
 
 from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
@@ -10,10 +9,6 @@ from flask_cors import CORS
 from api.payments import create_checkout_session as create_stripe_checkout
 from api.payments import get_publishable_key as resolve_publishable_key
 from config.settings import get_settings
-from services.walmart import (
-    detect_penny_deals as compute_walmart_penny_deals,
-    resolve_dataset_path,
-)
 
 settings = get_settings()
 BASE_DIR = settings.base_dir
@@ -52,56 +47,6 @@ def serve_asset(asset: str) -> object:
     return send_from_directory(str(BASE_DIR), asset)
 
 
-@app.route("/admin/penny-deals", methods=["POST"])
-def detect_penny_deals() -> object:
-    try:
-        penny_deals, errors = compute_walmart_penny_deals(settings)
-    except FileNotFoundError:
-        return (
-            jsonify(
-                {
-                    "error": (
-                        f"Le fichier source {settings.walmart_source_file.name} est introuvable."
-                    )
-                }
-            ),
-            500,
-        )
-    except (RuntimeError, ValueError) as exc:
-        return jsonify({"error": str(exc)}), 500
-    except Exception as exc:  # pragma: no cover - erreurs inattendues
-        app.logger.exception("Erreur lors de la détection des penny deals")
-        return jsonify({"error": f"Impossible de détecter les penny deals : {exc}"}), 500
-
-    try:
-        settings.penny_deal_output_file.parent.mkdir(parents=True, exist_ok=True)
-        settings.penny_deal_output_file.write_text(
-            json.dumps(penny_deals, ensure_ascii=False, indent=2),
-            encoding="utf-8",
-        )
-    except OSError as exc:
-        return jsonify({"error": f"Impossible d'enregistrer le rapport : {exc}"}), 500
-
-    try:
-        relative_output = settings.penny_deal_output_file.relative_to(BASE_DIR)
-    except ValueError:
-        relative_output = settings.penny_deal_output_file
-
-    payload = {
-        "status": "ok",
-        "count": len(penny_deals),
-        "outputFile": str(relative_output),
-        "downloadUrl": f"/{relative_output.as_posix()}",
-        "errors": errors,
-    }
-    if penny_deals:
-        payload["deals"] = penny_deals
-    if errors:
-        payload["warningCount"] = len(errors)
-
-    return jsonify(payload), 200
-
-
 def _iter_dataset_files() -> Iterable[Path]:
     data_root = settings.data_dir
     if not data_root.exists() or not data_root.is_dir():
@@ -109,8 +54,21 @@ def _iter_dataset_files() -> Iterable[Path]:
     return sorted(data_root.rglob("*.json"))
 
 
+def _resolve_dataset_path(relative_path: str) -> Path:
+    normalized = (relative_path or "").lstrip("/\\")
+    candidate = (settings.data_dir / normalized).resolve()
+    data_root = settings.data_dir.resolve()
+    try:
+        candidate.relative_to(data_root)
+    except ValueError as exc:
+        raise ValueError("Chemin de données invalide.") from exc
+    if candidate.suffix.lower() != ".json" or not candidate.is_file():
+        raise FileNotFoundError(normalized or relative_path)
+    return candidate
+
+
 def _load_dataset(relative_path: str) -> Dict[str, object]:
-    dataset_path = resolve_dataset_path(settings, relative_path)
+    dataset_path = _resolve_dataset_path(relative_path)
 
     try:
         raw_content = dataset_path.read_text(encoding="utf-8")
@@ -168,7 +126,7 @@ def list_store_datasets() -> object:
 def get_deals_dataset() -> object:
     relative_path = request.args.get("path")
     if not relative_path:
-        default_path = settings.deals_default_path
+        default_path = getattr(settings, "deals_default_path", None)
         if default_path:
             relative_path = default_path
         else:
@@ -189,59 +147,6 @@ def get_deals_dataset() -> object:
         return jsonify({"error": str(exc)}), 500
 
     return jsonify(dataset)
-
-
-GITHUB_API_BASE_URL = "https://api.github.com"
-DEFAULT_WORKFLOW_REF = "main"
-
-
-def _get_env_value(*keys: str) -> str:
-    for key in keys:
-        value = os.environ.get(key)
-        if isinstance(value, str):
-            trimmed = value.strip()
-            if trimmed:
-                return trimmed
-    return ""
-
-
-def _resolve_workflow_repository() -> str:
-    return _get_env_value(
-        "ADMIN_WORKFLOW_REPOSITORY", "ADMIN_WORKFLOW_REPO", "GITHUB_REPOSITORY"
-    )
-
-
-def _resolve_workflow_identifier() -> str:
-    return _get_env_value(
-        "ADMIN_WORKFLOW_ID", "ADMIN_WORKFLOW_FILE", "ADMIN_WORKFLOW_FILENAME"
-    )
-
-
-def _resolve_workflow_token() -> str:
-    return _get_env_value("ADMIN_WORKFLOW_TOKEN", "GITHUB_TOKEN")
-
-
-def _resolve_workflow_ref(payload: Optional[Dict[str, object]] = None) -> str:
-    if isinstance(payload, dict):
-        ref = payload.get("ref")
-        if isinstance(ref, str) and ref.strip():
-            return ref.strip()
-    env_ref = _get_env_value("ADMIN_WORKFLOW_REF")
-    return env_ref or DEFAULT_WORKFLOW_REF
-
-
-def _normalise_workflow_inputs(
-    inputs: Optional[Dict[str, object]]
-) -> Optional[Dict[str, str]]:
-    if not isinstance(inputs, dict):
-        return None
-
-    normalised: Dict[str, str] = {}
-    for key, value in inputs.items():
-        if not isinstance(key, str) or not key.strip():
-            continue
-        normalised[key.strip()] = "" if value is None else str(value)
-    return normalised or None
 
 
 @app.route("/config", methods=["GET"])
@@ -299,110 +204,6 @@ def checkout_cancelled() -> object:
         "<p><a href='/pricing.html'>Retour à la page des forfaits</a></p>",
         200,
         {"Content-Type": "text/html; charset=utf-8"},
-    )
-
-
-@app.route("/admin/dispatch-workflow", methods=["POST"])
-def dispatch_workflow() -> object:
-    repository = _resolve_workflow_repository()
-    if not repository:
-        return (
-            jsonify(
-                {
-                    "error": "ADMIN_WORKFLOW_REPOSITORY (ou ADMIN_WORKFLOW_REPO) n'est pas configurée.",
-                }
-            ),
-            500,
-        )
-
-    workflow_identifier = _resolve_workflow_identifier()
-    if not workflow_identifier:
-        return (
-            jsonify(
-                {
-                    "error": "ADMIN_WORKFLOW_FILE (ou ADMIN_WORKFLOW_ID) n'est pas configuré.",
-                }
-            ),
-            500,
-        )
-
-    token = _resolve_workflow_token()
-    if not token:
-        return (
-            jsonify(
-                {
-                    "error": "ADMIN_WORKFLOW_TOKEN (ou GITHUB_TOKEN) est requis pour déclencher le workflow.",
-                }
-            ),
-            500,
-        )
-
-    payload = request.get_json(silent=True) or {}
-    ref = _resolve_workflow_ref(payload)
-    inputs = None
-    if isinstance(payload, dict):
-        inputs = _normalise_workflow_inputs(payload.get("inputs"))
-
-    url = (
-        f"{GITHUB_API_BASE_URL}/repos/{repository}/actions/workflows/"
-        f"{quote(workflow_identifier, safe='')}"
-        "/dispatches"
-    )
-
-    body = {"ref": ref or DEFAULT_WORKFLOW_REF}
-    if inputs:
-        body["inputs"] = inputs
-
-    app.logger.info(
-        "Dispatching GitHub workflow %s on %s (ref=%s)",
-        workflow_identifier,
-        repository,
-        body["ref"],
-    )
-
-    headers = {
-        "Accept": "application/vnd.github+json",
-        "Authorization": f"Bearer {token}",
-        "Content-Type": "application/json; charset=utf-8",
-        "User-Agent": "econodeal-admin-workflow-trigger",
-    }
-
-    try:
-        response = requests.post(url, headers=headers, json=body, timeout=10)
-    except requests.RequestException as exc:  # pragma: no cover - network error
-        app.logger.exception("Unable to dispatch GitHub workflow")
-        return (
-            jsonify(
-                {
-                    "error": f"Impossible de contacter l'API GitHub : {exc}",
-                }
-            ),
-            500,
-        )
-
-    if response.status_code >= 400:
-        message = f"GitHub a retourné le statut {response.status_code}."
-        try:
-            details = response.json()
-            if isinstance(details, dict) and details.get("message"):
-                message = str(details["message"])
-        except ValueError:
-            pass
-        app.logger.error(
-            "GitHub workflow dispatch failed (%s): %s",
-            response.status_code,
-            message,
-        )
-        return jsonify({"error": message}), response.status_code
-
-    return (
-        jsonify(
-            {
-                "status": "ok",
-                "message": "Déclenchement du workflow GitHub effectué. Surveillez l'onglet Actions pour suivre le run.",
-            }
-        ),
-        200,
     )
 
 

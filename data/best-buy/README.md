@@ -1,6 +1,5 @@
 # Données Best Buy
 
-La collecte des liquidations Best Buy est désormais automatisée via
-`python -m services.bestbuy`. Le script met à jour `liquidations.json` ainsi que
-les fichiers de succursale pour refléter les mêmes offres dans toutes les
-villes.
+Toutes les collectes automatisées ont été retirées. Ajoute ici tes exports
+manuels (JSON, CSV, etc.) pour tenir les liquidations Best Buy à jour selon tes
+besoins.
