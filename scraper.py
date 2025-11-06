@@ -132,7 +132,9 @@ def _configure_driver() -> webdriver.Chrome:
 
     browser_version = _get_browser_version(chrome_binary)
     if browser_version:
-        service = Service(ChromeDriverManager(version=browser_version).install())
+        service = Service(
+            ChromeDriverManager(driver_version=browser_version).install()
+        )
     else:
         service = Service(ChromeDriverManager().install())
 
