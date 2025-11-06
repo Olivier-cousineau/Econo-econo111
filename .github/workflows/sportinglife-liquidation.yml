@@ -1,0 +1,115 @@
+name: Scraper Sporting Life Liquidation
+
+on:
+  schedule:
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  laval:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Setup Chrome
+        uses: browser-actions/setup-chrome@v1
+      - name: Setup Chromedriver
+        uses: nanasess/setup-chromedriver@v2
+      - name: Installer les dépendances
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Run scraper Laval
+        env:
+          SPORTING_LIFE_LAVAL_URL: ${{ vars.SPORTING_LIFE_LAVAL_URL }}
+        run: |
+          python scripts/sportinglife_liquidation.py \
+            --output data/sporting-life/laval.json \
+            --url "${SPORTING_LIFE_LAVAL_URL:-https://www.sportinglife.ca/fr-CA/liquidation/}"
+      - name: Commit Laval data
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git add data/sporting-life/laval.json
+          if git diff --cached --quiet; then
+            echo "Aucune mise à jour pour Laval"
+          else
+            git commit -m "MAJ quotidienne Sporting Life Laval"
+            git push
+          fi
+
+  dix30:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Setup Chrome
+        uses: browser-actions/setup-chrome@v1
+      - name: Setup Chromedriver
+        uses: nanasess/setup-chromedriver@v2
+      - name: Installer les dépendances
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Run scraper DIX30
+        env:
+          SPORTING_LIFE_DIX30_URL: ${{ vars.SPORTING_LIFE_DIX30_URL }}
+        run: |
+          python scripts/sportinglife_liquidation.py \
+            --output data/sporting-life/dix30.json \
+            --url "${SPORTING_LIFE_DIX30_URL:-https://www.sportinglife.ca/fr-CA/liquidation/}"
+      - name: Commit DIX30 data
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git add data/sporting-life/dix30.json
+          if git diff --cached --quiet; then
+            echo "Aucune mise à jour pour DIX30"
+          else
+            git commit -m "MAJ quotidienne Sporting Life DIX30"
+            git push
+          fi
+
+  toronto:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Setup Chrome
+        uses: browser-actions/setup-chrome@v1
+      - name: Setup Chromedriver
+        uses: nanasess/setup-chromedriver@v2
+      - name: Installer les dépendances
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Run scraper Toronto
+        env:
+          SPORTING_LIFE_TORONTO_URL: ${{ vars.SPORTING_LIFE_TORONTO_URL }}
+        run: |
+          python scripts/sportinglife_liquidation.py \
+            --output data/sporting-life/toronto.json \
+            --url "${SPORTING_LIFE_TORONTO_URL:-https://www.sportinglife.ca/fr-CA/liquidation/}"
+      - name: Commit Toronto data
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git add data/sporting-life/toronto.json
+          if git diff --cached --quiet; then
+            echo "Aucune mise à jour pour Toronto"
+          else
+            git commit -m "MAJ quotidienne Sporting Life Toronto"
+            git push
+          fi
