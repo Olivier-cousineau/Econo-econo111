@@ -30,6 +30,13 @@ jobs:
       - name: Run scraper Laval
         run: python scripts/sportinglife_liquidation.py
 
+      - name: Upload debug page (if exists)
+        uses: actions/upload-artifact@v4
+        with:
+          name: sportinglife-debug
+          path: debug_sportinglife.html
+          if-no-files-found: ignore
+
       - name: Commit Laval data
         run: |
           git config --global user.name "Olivier-cousineau"
