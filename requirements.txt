@@ -1,5 +1,1 @@
 -r requirements-server.txt
-selenium>=4.21,<5
-undetected-chromedriver>=3.5,<4
-webdriver-manager>=4.0,<5
-playwright>=1.42,<2
