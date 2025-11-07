@@ -10,7 +10,7 @@ from playwright.async_api import (
     async_playwright,
 )
 
-URL = "https://www.sportinglife.ca/fr-CA/liquidation/"
+LIQ_URL = "https://www.sportinglife.ca/fr/c/promotions/liquidation"
 OUTPUT_FILE = "sportinglife_laval_liquidation.csv"
 FIELDNAMES = [
     "Nom du produit",
@@ -186,29 +186,64 @@ async def scrape_sportinglife():
 
         try:
             print("🌐 Ouverture de la page Sporting Life Liquidation...")
-            await page.goto(URL, timeout=120000, wait_until="domcontentloaded")
-            await page.wait_for_load_state("networkidle")
+            await page.goto(LIQ_URL, timeout=90000)
+
+            # Accepte cookies si présent (évite blocage)
+            try:
+                await page.get_by_role("button", name="Accepter", exact=False).click(timeout=5000)
+            except:
+                pass
+            # Ferme éventuelle modale infolettre
+            for sel in ['button[aria-label="Close"]', 'button[title="Close"]', '.ltkmodal-close', '.modal-close']:
+                try:
+                    await page.locator(sel).first.click(timeout=2000)
+                    break
+                except:
+                    pass
 
             await accept_cookies(page)
 
             await close_location_modal(page)
 
-            try:
-                await page.wait_for_selector(
-                    PRODUCT_CONTENT_WAIT_SELECTOR,
-                    state="attached",
-                    timeout=60000,
-                )
-            except PlaywrightTimeoutError:
-                print("⚠️ Aucun produit trouvé avant expiration du délai.")
+            selectors = [
+                '[data-testid="plp-product-card"]',
+                '.product-tile',
+                'article[data-sku]',
+            ]
+            found = False
+            product_selector = None
+            product_locator = None
+            for sel in selectors:
+                try:
+                    await page.wait_for_selector(sel, state="visible", timeout=45000)
+                    product_cards = page.locator(sel)
+                    if await product_cards.count() > 0:
+                        found = True
+                        product_selector = sel
+                        product_locator = product_cards
+                        break
+                except Exception:
+                    continue
+
+            if not found or product_locator is None:
                 html = await page.content()
                 Path("debug_sportinglife.html").write_text(html, encoding="utf-8")
-                save_rows([])
-                return
+                raise RuntimeError("Aucun produit détecté (sélecteurs non matchés). Dump: debug_sportinglife.html")
 
-            await expand_all_products(page)
+            # Scroll progressif pour charger les cartes
+            for _ in range(6):
+                await page.mouse.wheel(0, 2000)
+                await page.wait_for_timeout(1000)
+            # Clique "Voir plus" si présent
+            for txt in ["Voir plus", "Load More", "Afficher plus"]:
+                try:
+                    await page.get_by_role("button", name=txt).click(timeout=2000)
+                    await page.wait_for_timeout(1500)
+                except:
+                    pass
 
-            product_locator = page.locator(PRODUCT_CARD_SELECTOR)
+            if product_selector:
+                product_locator = page.locator(product_selector)
             product_count = await product_locator.count()
             if product_count == 0:
                 print("⚠️ Aucun produit détecté malgré le chargement de la page.")
