@@ -2,8 +2,7 @@ import asyncio
 import json
 import os
 from pathlib import Path
-from typing import List, Dict
-
+from typing import List, Dict, Optional
 from playwright.async_api import async_playwright, Page
 
 # =============== CONFIG ===============
@@ -11,7 +10,7 @@ from playwright.async_api import async_playwright, Page
 CATEGORIES: List[Dict[str, str]] = [
     # Exemple – remplace par tes URLs de catégories:
     {"name": "televisions", "url": "https://www.bestbuy.ca/en-ca/category/tvs/21117"},
-    {"name": "laptops", "url": "https://www.bestbuy.ca/en-ca/category/laptops-macbooks/20352"},
+    {"name": "laptops",     "url": "https://www.bestbuy.ca/en-ca/category/laptops-macbooks/20352"},
 ]
 OUT_DIR = "screenshots"      # dossier de sortie
 MAX_PAGES = 999              # sécurité : limite haute de pagination
@@ -48,15 +47,7 @@ PRODUCT_GRID_HINTS = [
 ]
 
 
-def ensure_json_serializable_categories() -> None:
-    """Ensure categories are JSON serializable for logging purposes."""
-    try:
-        json.dumps(CATEGORIES)
-    except TypeError as exc:
-        raise ValueError("CATEGORIES must be a list of dictionaries with JSON-serializable values") from exc
-
-
-async def click_if_visible(page: Page, selectors: List[str], timeout: int = 4000) -> bool:
+async def click_if_visible(page: Page, selectors: List[str], timeout=4000) -> bool:
     for sel in selectors:
         try:
             loc = page.locator(sel)
@@ -68,7 +59,7 @@ async def click_if_visible(page: Page, selectors: List[str], timeout: int = 4000
     return False
 
 
-async def wait_grid_or_idle(page: Page) -> None:
+async def wait_grid_or_idle(page: Page):
     # attendre que le contenu arrive
     for sel in PRODUCT_GRID_HINTS:
         try:
@@ -79,22 +70,20 @@ async def wait_grid_or_idle(page: Page) -> None:
     await page.wait_for_load_state("networkidle", timeout=WAIT_IDLE_MS)
 
 
-async def take_full_screenshot(page: Page, out_path: Path) -> None:
+async def take_full_screenshot(page: Page, out_path: Path):
     out_path.parent.mkdir(parents=True, exist_ok=True)
     # petit scroll pour charger les images lazy
     await page.evaluate("window.scrollTo(0,0)")
     await page.wait_for_timeout(500)
-    await page.evaluate(
-        """
+    await page.evaluate("""
         const h = document.body.scrollHeight;
         window.scrollTo(0, h);
-    """
-    )
+    """)
     await page.wait_for_timeout(800)
     await page.screenshot(path=str(out_path), full_page=True)
 
 
-async def capture_category(page: Page, name: str, url: str) -> None:
+async def capture_category(page: Page, name: str, url: str):
     base_dir = Path(OUT_DIR) / name
     await page.goto(url, timeout=WAIT_IDLE_MS)
     await page.wait_for_load_state("domcontentloaded", timeout=WAIT_IDLE_MS)
@@ -121,8 +110,7 @@ async def capture_category(page: Page, name: str, url: str) -> None:
         page_num += 1
 
 
-async def main() -> None:
-    ensure_json_serializable_categories()
+async def main():
     os.makedirs(OUT_DIR, exist_ok=True)
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=HEADLESS, slow_mo=150)
@@ -131,11 +119,8 @@ async def main() -> None:
 
         # (optionnel) accepter un bandeau cookies si présent
         try:
-            cookies_button = page.locator(
-                "button:has-text('Accepter'), button:has-text('J’accepte'), button:has-text('Accept')"
-            )
-            if await cookies_button.is_visible(timeout=3000):
-                await cookies_button.click()
+            if await page.locator("button:has-text('Accepter'), button:has-text('J’accepte'), button:has-text('Accept')").is_visible(timeout=3000):
+                await page.locator("button:has-text('Accepter'), button:has-text('J’accepte'), button:has-text('Accept')").click()
         except Exception:
             pass
 
