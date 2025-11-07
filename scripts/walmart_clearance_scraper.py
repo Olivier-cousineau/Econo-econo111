@@ -36,6 +36,7 @@ from pathlib import Path
 from typing import Dict, Iterable, List, MutableMapping, Optional, Sequence
 
 import requests
+import uuid
 
 LOGGER = logging.getLogger(__name__)
 
@@ -61,6 +62,7 @@ DEFAULT_HEADERS = {
     ),
     "x-apollo-operation-name": GRAPHQL_OPERATION,
     "x-apollo-operation-type": "query",
+    "x-requested-with": "XMLHttpRequest",
 }
 SECTION_KEYWORDS = {
     "toys": (
@@ -166,6 +168,7 @@ class WalmartClearanceScraper:
             self.session.headers["accept-language"] = (
                 f"{language},en-CA;q=0.8,en;q=0.7"
             )
+        self.session.headers["wm_store_id"] = str(self.store_id)
 
     # ------------------------------------------------------------------
     # Public API
@@ -190,11 +193,26 @@ class WalmartClearanceScraper:
             payload = self._build_payload(page)
             LOGGER.debug("Requesting page %s with payload %s", page, payload)
             response = self.session.post(
-                GRAPHQL_ENDPOINT, json=payload, timeout=self.timeout
+                GRAPHQL_ENDPOINT,
+                json=payload,
+                timeout=self.timeout,
+                headers={
+                    "wm_qos.correlation_id": str(uuid.uuid4()),
+                    "wm_store_id": str(self.store_id),
+                },
             )
+            if response.status_code != requests.codes.ok:
+                LOGGER.error("=== Walmart GraphQL ERROR ===")
+                LOGGER.error("Status: %s", response.status_code)
+                LOGGER.error(response.text[:1000])
+                response.raise_for_status()
             response.raise_for_status()
 
-            data = response.json()
+            try:
+                data = response.json()
+            except ValueError:
+                LOGGER.error("Failed to decode Walmart response: %s", response.text[:1000])
+                raise
             if "errors" in data:
                 raise RuntimeError(f"GraphQL returned errors: {data['errors']}")
 
@@ -277,7 +295,7 @@ class WalmartClearanceScraper:
     # ------------------------------------------------------------------
     def _build_payload(self, page: int) -> Dict[str, object]:
         variables = {
-            "query": "",
+            "query": "clearance",
             "page": page,
             "count": self.page_size,
             "storeId": str(self.store_id),
