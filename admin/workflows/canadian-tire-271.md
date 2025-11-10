@@ -2,6 +2,15 @@
 
 Le fichier `admin/workflows/canadian-tire-271.json` contient le workflow complet prêt à être importé dans l’IDE Web Scraper de Bright Data. Ce workflow récolte les produits en liquidation du magasin Canadian Tire #271. Il se compose de deux étapes : une première pour lister toutes les fiches produits et une seconde pour extraire les informations détaillées de chaque fiche (prix régulier, prix soldé, rabais, disponibilité, etc.).
 
+## Résumé du workflow
+
+1. **Importer** le JSON dans l’IDE Web Scraper de Bright Data et vérifier que l’étape d’entrée est `listing`.
+2. **Listing** : parcourir la page liquidation du magasin 271, extraire les URLs produits, ajouter le paramètre `store=271` si nécessaire et gérer la pagination.
+3. **Parser Listing** : dédupliquer et normaliser toutes les URLs contenant `/pdp/` ou `/product/`.
+4. **PDP** : charger chaque fiche produit, laisser le temps aux scripts de prix, puis lancer le parsing.
+5. **Parser PDP** : lire les prix via JSON-LD ou DOM, capturer les métadonnées (titre, marque, disponibilité, image, SKU) et calculer le rabais.
+6. **Sortie** : renvoyer un enregistrement JSON/CSV par produit avec les champs requis (`title`, `brand`, `price_now`, `price_was`, etc.).
+
 ## Import dans Bright Data
 
 1. Ouvrir l’IDE Web Scraper de Bright Data et créer un nouveau workflow.
@@ -11,7 +20,7 @@ Le fichier `admin/workflows/canadian-tire-271.json` contient le workflow complet
 
 ## Étape 1 — Listing
 
-**Objectif :** parcourir la page de liquidation, récupérer toutes les URLs produits et suivre la pagination.
+**Objectif :** parcourir la page de liquidation, récupérer toutes les URLs produits, injecter le paramètre `store=271` si manquant et suivre la pagination.
 
 ```javascript
 // INPUT: { url: "https://www.canadiantire.ca/fr/promotions/liquidation.html?store=271" }
@@ -71,7 +80,7 @@ return { urls: Array.from(new Set(urls)) };
 
 ## Étape 2 — Fiche produit (PDP)
 
-**Objectif :** ouvrir chaque fiche, récupérer les prix actuel/ancien, calculer le rabais et extraire les métadonnées utiles.
+**Objectif :** ouvrir chaque fiche, laisser les scripts de prix se charger, récupérer les prix actuel/ancien, calculer le rabais et extraire les métadonnées utiles.
 
 ```javascript
 // INPUT: { url: "<URL fiche produit avec ?store=271>" }
