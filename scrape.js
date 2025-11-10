@@ -18,16 +18,39 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // ------------- CLI -------------
-const START_URL =
-  args.url ||
-  "https://www.canadiantire.ca/fr/promotions/liquidation.html?store=271";
-const MAX_PAGES = Number(args.maxPages || 20);
+const DEFAULT_STORE = "0271";
+const storeArg =
+  args.store !== undefined && args.store !== null && args.store !== ""
+    ? String(args.store)
+    : DEFAULT_STORE;
+const DEFAULT_URL = `https://www.canadiantire.ca/fr/promotions/liquidation.html?store=${storeArg}`;
+const START_URL = args.url || DEFAULT_URL;
+const MAX_PAGES = Number(args.maxPages || 125);
 const HEADLESS = !args.headful;
 
 // ------------- CONFIG -------------
-const OUT_DIR = "./images";
-const OUT_JSON = "./data.json";
-const OUT_CSV = "./data.csv";
+const DEFAULT_OUT_JSON = path.join(
+  "data",
+  "canadian-tire",
+  "saint-jerome.json"
+);
+const resolvedOutJson = path.resolve(args.out || args.outJson || DEFAULT_OUT_JSON);
+const outJsonExt = path.extname(resolvedOutJson) || ".json";
+const outJsonBase = path.basename(resolvedOutJson, outJsonExt);
+const outJsonDir = path.dirname(resolvedOutJson);
+
+const OUT_JSON = resolvedOutJson;
+const OUT_CSV = path.resolve(
+  args.outCsv ||
+    args.csv ||
+    path.join(outJsonDir, `${outJsonBase}.csv`)
+);
+const OUT_DIR = path.resolve(
+  args.imagesDir ||
+    args.images ||
+    args.outImages ||
+    path.join(outJsonDir, `${outJsonBase}-images`)
+);
 const CONCURRENCY = 6;
 
 const SELECTORS = {
@@ -65,18 +88,28 @@ const SELECTORS = {
 };
 
 const PAGINATION = {
+  // conteneur de la grille (inchangé)
+  waitForList: "ul[data-testid='product-grids'], .product-grid",
+
+  // flèche "suivant" — plusieurs variantes possibles sur CT
+  nextSelectors: [
+    "nav[aria-label='Pagination'] a[aria-label='Next']:not(.pagination_chevron--disabled)",
+    "nav[aria-label='Pagination'] button[aria-label='Next']:not([disabled])",
+    "a[data-testid='chevron->']:not(.pagination_chevron--disabled)",
+    "button:has-text('>'):not([disabled])",
+    "a.pagination_chevron:not(.pagination_chevron--disabled)",
+  ],
+
   loadMoreBtn: [
     "button[data-testid='load-more']",
     "button:has-text('Charger plus')",
     "button:has-text('Load more')",
   ].join(", "),
-  nextBtn: [
-    "a[aria-label='Next']:not(.pagination_chevron--disabled)",
-    "a[data-testid='chevron->']:not(.pagination_chevron--disabled')",
-    "a[rel='next']:not(.disabled)",
-  ].join(", "),
-  waitForList: ["ul[data-testid='product-grids']", ".product-grid"].join(", "),
 };
+
+function nextBtn(page) {
+  return page.locator(PAGINATION.nextSelectors.join(", ")).first();
+}
 
 // ------------- UTILS -------------
 function extractPrice(text) {
@@ -213,19 +246,37 @@ async function main() {
     console.log(`✅ Page ${pageCount}: ${items.length} produits`);
     all.push(...items);
 
-    const hasLoadMore = await page.locator(PAGINATION.loadMoreBtn).first().isVisible().catch(() => false);
-    if (hasLoadMore) {
-      await Promise.all([page.click(PAGINATION.loadMoreBtn).catch(() => {}), page.waitForLoadState("domcontentloaded")]);
+    if (pageCount % 10 === 0) await page.waitForTimeout(1500);
+
+    const loadMore = page.locator(PAGINATION.loadMoreBtn).first();
+    if (await loadMore.isVisible().catch(() => false)) {
+      await Promise.all([
+        loadMore.click({ delay: 30 }).catch(() => {}),
+        page.waitForLoadState("domcontentloaded"),
+      ]);
+      await page.waitForSelector(PAGINATION.waitForList, { timeout: 20000 }).catch(() => {});
+      await page.waitForTimeout(800);
       continue;
     }
 
-    const hasNext = await page.locator(PAGINATION.nextBtn).first().isVisible().catch(() => false);
-    if (hasNext) {
-      await Promise.all([page.click(PAGINATION.nextBtn).catch(() => {}), page.waitForLoadState("domcontentloaded")]);
-      continue;
+    // ---- pagination: cliquer sur la flèche "suivant"
+    const next = nextBtn(page);
+    if (await next.isVisible().catch(() => false)) {
+      const before = page.url();
+      await next.click({ delay: 30 }).catch(() => {});
+      await page.waitForLoadState("domcontentloaded");
+      await page.waitForSelector(PAGINATION.waitForList, { timeout: 20000 }).catch(() => {});
+      await page.waitForTimeout(800);
+
+      // Si l'URL n'a pas bougé, on force un petit scroll pour déclencher le rendu
+      if (page.url() === before) {
+        await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+        await page.waitForTimeout(800);
+      }
+      continue; // prochaine page
     }
 
-    break;
+    break; // plus de "suivant" visible → fin
   }
 
   const limit = pLimit(CONCURRENCY);
@@ -247,8 +298,11 @@ async function main() {
     )
   );
 
+  await fs.ensureDir(outJsonDir);
   await fs.writeJson(OUT_JSON, withLocalImages, { spaces: 2 });
   console.log(`💾  JSON → ${OUT_JSON}`);
+
+  await fs.ensureDir(path.dirname(OUT_CSV));
 
   const csv = createObjectCsvWriter({
     path: OUT_CSV,
