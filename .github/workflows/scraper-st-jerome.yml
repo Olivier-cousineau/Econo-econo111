@@ -1,0 +1,58 @@
+# Workflow: run scraper using parameters from st-jerome.json in the repo
+name: Scraper — st-jerome
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 4 * * *'
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Cache npm
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Ensure jq (JSON parser)
+        run: sudo apt-get update && sudo apt-get install -y jq
+
+      - name: Read st-jerome.json and run scraper
+        # Expects st-jerome.json at repo root with at least { "url": "...", "maxPages": N }
+        run: |
+          if [ ! -f ./st-jerome.json ]; then
+            echo "st-jerome.json not found"; exit 1;
+          fi
+          URL="$(jq -r '.url // empty' ./st-jerome.json)"
+          MAX="$(jq -r '.maxPages // 20' ./st-jerome.json)"
+          if [ -z "$URL" ]; then
+            echo "st-jerome.json must contain a url"; exit 1;
+          fi
+          echo "Running scraper for: $URL (maxPages=$MAX)"
+          node ./scrape.js --url "$URL" --maxPages "$MAX"
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: scraper-results-st-jerome
+          path: |
+            data.json
+            data.csv
+            images
