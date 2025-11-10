@@ -2,6 +2,7 @@ import asyncio
 import csv
 import json
 import os
+import random
 import re
 import sys
 from pathlib import Path
@@ -9,22 +10,38 @@ from typing import Dict, List, Tuple
 
 from playwright.async_api import TimeoutError as PWTimeout
 from playwright.async_api import async_playwright
+from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 # --- Réglages magasin Saint-Jérôme
 POSTAL_CODE = "J7Y 4Y9"  # on peut remplacer via VAR d'env si tu veux
 CITY_QUERY = "Saint-Jérôme, QC"
 CITY_LABEL = "Saint-Jérôme"
+USER_AGENT = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+)
 
 # Sélecteurs "robustes" Walmart (peuvent bouger – on a des fallback)
-CARD = "article[data-automation='product-item']," \
-       "div[data-automation='product-card']," \
-       "div[data-automation='product-tile']"
+CARD = "div[data-automation='product'], li[data-automation='product'], div[class*='product-tile']"
 
-NAME = "[data-automation='product-title'], [data-automation='product-name'], a[aria-label]"
-PRICE_CURR = "[data-automation='current-price'], span[data-automation='pricing-price'], span:has-text('$')"
-PRICE_WAS = "[data-automation='was-price'], [data-automation='strike-price'], s"
+NAME = "a, h2, h3, [data-automation*='title']"
+PRICE_CURR = "[data-automation*='current-price'], .price-current, [class*='sale']"
+PRICE_WAS = "[data-automation*='was-price'], .price-was, s, del, [class*='was']"
 IMG = "img"
-LINK = "a[href*='/ip/'], a[href*='/product/']"
+LINK = "a[href]"
+
+
+def parse_price(txt: str | None) -> float | None:
+    if not txt:
+        return None
+    cleaned = txt.replace("\xa0", " ").replace(",", ".")
+    match = re.search(r"(\d+(?:\.\d{1,2})?)", cleaned)
+    if match:
+        try:
+            return float(match.group(1))
+        except ValueError:
+            return None
+    return None
 
 
 def money_from_text(txt: str) -> float | None:
@@ -36,10 +53,25 @@ def money_from_text(txt: str) -> float | None:
     return None
 
 
+async def human_pause(min_ms: int = 300, max_ms: int = 900) -> None:
+    await asyncio.sleep(random.uniform(min_ms / 1000, max_ms / 1000))
+
+
+async def accept_cookies(page) -> None:
+    try:
+        await page.locator("button:has-text('Accepter tout')").first.click(timeout=4000)
+        await human_pause()
+    except Exception:
+        pass
+
+
 async def ensure_store(page):
     """Sélectionne le magasin via code postal; robuste aux variantes UI."""
     try:
         await page.goto("https://www.walmart.ca/", timeout=90000)
+        await accept_cookies(page)
+        await page.wait_for_load_state("networkidle")
+        await human_pause()
         # Ouvre le sélecteur de localisation (plusieurs variantes)
         candidates = [
             "[data-automation='header-location-button']",
@@ -51,6 +83,7 @@ async def ensure_store(page):
             locator = page.locator(sel).first
             if await locator.count() and await locator.is_visible():
                 await locator.click()
+                await human_pause()
                 break
 
         # Champ de recherche d’emplacement
@@ -59,6 +92,7 @@ async def ensure_store(page):
         await page.keyboard.press("Enter")
         # Choisit le premier magasin proposé
         await page.locator("button:has-text('Sélectionner')").first.click()
+        await human_pause()
         # Petite pause pour laisser appliquer le magasin
         await page.wait_for_timeout(2000)
     except PWTimeout:
@@ -204,122 +238,157 @@ def _extract_items_from_json(payload: Dict) -> List[Dict]:
     return items
 
 
-async def extract_from_category(page, url: str, category: str) -> List[Dict]:
+def _build_page_url(base_url: str, page_num: int) -> str:
+    if page_num <= 1:
+        return base_url
+
+    parts = urlsplit(base_url)
+    query_pairs = [(k, v) for k, v in parse_qsl(parts.query, keep_blank_values=True) if k.lower() != "page"]
+    query_pairs.append(("page", str(page_num)))
+    query = urlencode(query_pairs, doseq=True)
+    return urlunsplit(parts._replace(query=query))
+
+
+async def _extract_from_dom(cards, category: str) -> List[Dict]:
     items: List[Dict] = []
+    for card in cards:
+        try:
+            locator = card.locator(NAME).first
+            title = (await locator.text_content()) if await locator.count() else ""
+        except Exception:
+            try:
+                title = await card.text_content()
+            except Exception:
+                title = ""
 
-    # Aller à la page catégorie
-    await page.goto(url, timeout=90000)
-    await page.wait_for_timeout(2000)
+        title = " ".join(title.split()) if title else ""
 
-    seen_urls = set()
+        try:
+            link_loc = card.locator(LINK).first
+            href = await link_loc.get_attribute("href") if await link_loc.count() else None
+        except Exception:
+            href = None
+
+        if href and href.startswith("/"):
+            href = f"https://www.walmart.ca{href}"
+
+        try:
+            img_loc = card.locator(IMG).first
+            image = await img_loc.get_attribute("src") if await img_loc.count() else None
+        except Exception:
+            image = None
+
+        try:
+            sale_loc = card.locator(PRICE_CURR).first
+            sale_txt = await sale_loc.text_content() if await sale_loc.count() else None
+        except Exception:
+            sale_txt = None
+
+        try:
+            regular_loc = card.locator(PRICE_WAS).first
+            regular_txt = await regular_loc.text_content() if await regular_loc.count() else None
+        except Exception:
+            regular_txt = None
+
+        price_sale = parse_price(sale_txt)
+        price_regular = parse_price(regular_txt)
+
+        discount = None
+        if price_sale and price_regular and price_regular > 0:
+            discount = round((1 - price_sale / price_regular) * 100)
+
+        if title and (price_sale or price_regular) and href:
+            items.append(
+                {
+                    "title": title,
+                    "category": category,
+                    "price": price_regular,
+                    "sale_price": price_sale,
+                    "discount_pct": discount,
+                    "url": href,
+                    "image": image or "",
+                    "store": "Walmart",
+                    "city": CITY_LABEL,
+                }
+            )
+
+    return items
+
+
+async def extract_from_category(page, url: str, category: str) -> List[Dict]:
+    seen_urls: Dict[str, Dict] = {}
+    page_num = 1
 
     while True:
-        if page.url in seen_urls:
+        current_url = _build_page_url(url, page_num)
+        try:
+            await page.goto(current_url, timeout=90000)
+        except PWTimeout:
             break
-        seen_urls.add(page.url)
 
-        # 1) Essaye d’abord d’utiliser les données JSON embarquées
+        await accept_cookies(page)
+        await page.wait_for_load_state("networkidle")
+        await human_pause()
+
+        try:
+            await page.wait_for_selector(CARD, timeout=15000)
+        except PWTimeout:
+            cards = []
+        else:
+            for _ in range(15):
+                await page.mouse.wheel(0, 2000)
+                await human_pause()
+            cards = await page.query_selector_all(CARD)
+
         try:
             data = await page.evaluate("() => window.__NEXT_DATA__")
         except Exception:
             data = None
 
+        parsed: List[Dict] = []
         if isinstance(data, dict):
             parsed = _extract_items_from_json(data)
+
+        if not parsed and cards:
+            parsed = await _extract_from_dom(cards, category)
+        else:
             for item in parsed:
                 item["category"] = category
-            items.extend([i for i in parsed if i.get("url")])
 
-        # 2) Fallback DOM si jamais le JSON n’a rien donné
-        if not items:
-            for c in await page.locator(CARD).all():
-                try:
-                    name = (await c.locator(NAME).first.text_content()) or ""
-                except Exception:
-                    name = (await c.text_content()) or ""
-                name = " ".join(name.split())
-
-                href = ""
-                if await c.locator(LINK).first.count():
-                    href = await c.locator(LINK).first.get_attribute("href") or ""
-                    if href.startswith("/"):
-                        href = "https://www.walmart.ca" + href
-
-                img = ""
-                if await c.locator(IMG).first.count():
-                    img = (await c.locator(IMG).first.get_attribute("src")) or ""
-
-                price_curr_loc = c.locator(PRICE_CURR).first
-                price_was_loc = c.locator(PRICE_WAS).first
-                price_curr_txt = await price_curr_loc.text_content() if await price_curr_loc.count() else ""
-                price_was_txt = await price_was_loc.text_content() if await price_was_loc.count() else ""
-                price = money_from_text(price_curr_txt)
-                was = money_from_text(price_was_txt)
-
-                discount = None
-                if price and was and was > 0:
-                    discount = round(100.0 * (was - price) / was, 1)
-
-                if name and href:
-                    items.append({
-                        "title": name,
-                        "category": category,
-                        "price": was,
-                        "sale_price": price,
-                        "discount_pct": discount,
-                        "url": href,
-                        "image": img,
-                        "store": "Walmart",
-                        "city": CITY_LABEL,
-                    })
-
-        next_btns = page.locator("a:has-text('Suivant'), button:has-text('Suivant'), a[aria-label='Suivant']")
-        if await next_btns.count():
-            if await next_btns.last.is_enabled():
-                await next_btns.last.click()
-                await page.wait_for_timeout(1500)
+        new_items = 0
+        for item in parsed:
+            href = item.get("url")
+            if not href or href in seen_urls:
                 continue
+            seen_urls[href] = item
+            new_items += 1
 
-        m = re.search(r"([?&])page=(\d+)", page.url)
-        base = page.url
-        if m:
-            curr = int(m.group(2))
-            nxt = curr + 1
-            base = re.sub(r"([?&])page=\d+", rf"\1page={nxt}", base)
-        else:
-            sep = "&" if "?" in base else "?"
-            base = f"{base}{sep}page=2"
-
-        prev_len = len(items)
-        try:
-            await page.goto(base, timeout=60000)
-            await page.wait_for_timeout(1500)
-        except PWTimeout:
+        if not parsed or new_items == 0:
             break
 
-        if len(items) == prev_len:
-            # aucune donnée supplémentaire → fin
-            break
+        await human_pause()
+        page_num += 1
 
-    # dédoublonne sur l’URL
-    deduped: Dict[str, Dict] = {}
-    for item in items:
-        url = item.get("url")
-        if url and url not in deduped:
-            deduped[url] = item
-
-    return list(deduped.values())
+    return list(seen_urls.values())
 
 
 async def run(electronics_url: str, toys_url: str, appliances_url: str, out_dir: Path):
     out_dir.mkdir(parents=True, exist_ok=True)
 
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True)
-        ctx = await browser.new_context(locale="fr-CA")
+        browser = await p.chromium.launch(
+            headless=True,
+            args=[
+                "--disable-blink-features=AutomationControlled",
+                "--no-sandbox",
+                "--disable-dev-shm-usage",
+            ],
+        )
+        ctx = await browser.new_context(locale="fr-CA", user_agent=USER_AGENT)
         page = await ctx.new_page()
 
         await ensure_store(page)
+        await human_pause()
 
         datasets: List[Tuple[str, str]] = [
             ("electronique", electronics_url),
@@ -329,6 +398,7 @@ async def run(electronics_url: str, toys_url: str, appliances_url: str, out_dir:
 
         for cat, url in datasets:
             print(f"➡️  Catégorie {cat} → {url}")
+            await human_pause()
             data = await extract_from_category(page, url, cat)
             json_path = out_dir / f"{cat}.json"
             csv_path = out_dir / f"{cat}.csv"
