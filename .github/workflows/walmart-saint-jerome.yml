@@ -33,12 +33,20 @@ jobs:
           python scripts/walmart_scraper.py
 
       - name: Commit changes (Walmart Saint-Jérôme)
+        shell: bash
         run: |
+          set -e
           git config --global user.name  "Olivier-cousineau"
           git config --global user.email "ocousineau40@gmail.com"
-          git add data/walmart/saint-jerome/*.json data/walmart/saint-jerome/*.csv || true
-          if ! git diff --cached --quiet; then
-            git commit -m "Walmart Saint-Jérôme: MAJ données (auto)"
-            git push
-          else
+
+          # Ajoute tout ce qui a changé dans le dossier (JSON, CSV s’ils existent)
+          git add -A data/walmart/saint-jerome
+
+          # S'il n'y a rien à committer, on sort proprement
+          if git diff --cached --quiet; then
             echo "No changes – nothing to commit."
+            exit 0
+          fi
+
+          git commit -m "Walmart Saint-Jérôme: MAJ données (auto)"
+          git push
