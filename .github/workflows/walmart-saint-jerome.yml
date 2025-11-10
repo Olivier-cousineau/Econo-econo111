@@ -1,0 +1,44 @@
+name: Scraper Walmart - Saint-Jérôme
+
+on:
+  schedule:
+    - cron: "0 8 */3 * *"   # Tous les 3 jours à ~03:00 heure du Québec (≈08:00 UTC)
+  workflow_dispatch: {}
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install playwright==1.45.0
+          python -m playwright install --with-deps chromium
+
+      - name: Run Walmart scraper (Saint-Jérôme)
+        env:
+          WAL_ELECTRONICS_URL: "https://www.walmart.ca/fr/browse/electronics/10003?facet=special_offers%3ALiquidation&icid=cp_page_other_electronic_carousal_web_50803_4QMWQHY292"
+          WAL_TOYS_URL: "https://www.walmart.ca/fr/browse/jouets/10011?facet=special_offers%3ALiquidation&icid=cp_page_other_toys_32623_GXW6JFAZLX"
+          WAL_APPLIANCES_URL: "https://www.walmart.ca/fr/browse/appliances/10018?facet=special_offers%3ALiquidation&icid=cp_page_other_appliances_carousal_web_50804_ODJF6KQFZT"
+        run: |
+          python scripts/walmart_scraper.py
+
+      - name: Commit changes (Walmart Saint-Jérôme)
+        run: |
+          git config --global user.name  "Olivier-cousineau"
+          git config --global user.email "ocousineau40@gmail.com"
+          git add data/walmart/saint-jerome/*.json data/walmart/saint-jerome/*.csv || true
+          if ! git diff --cached --quiet; then
+            git commit -m "Walmart Saint-Jérôme: MAJ données (auto)"
+            git push
+          else
+            echo "No changes – nothing to commit."
