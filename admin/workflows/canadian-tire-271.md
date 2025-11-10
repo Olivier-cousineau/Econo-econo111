@@ -22,6 +22,17 @@ Le fichier `admin/workflows/canadian-tire-271.json` contient le workflow complet
 
 > 💡 Si le workflow n’apparaît pas après l’import, rafraîchissez la page **My workflows** ou cliquez sur **Open in IDE** depuis la notification d’importation afin de recharger le graphe `listing → pdp`.
 
+### Dépannage — « Je ne vois pas le workflow »
+
+Le fichier `.json` de ce dépôt est un export Bright Data uniquement ; il ne crée **pas** de workflow GitHub Actions. Si vous cherchez dans l’onglet **Actions** de GitHub (capture d’écran avec « All workflows »), rien n’apparaîtra car l’automatisation se fait côté Bright Data.
+
+1. Connectez-vous sur [https://brightdata.com](https://brightdata.com) et ouvrez **Web Scraper → My workflows**.
+2. Vérifiez dans la barre supérieure que vous êtes dans le bon **account / workspace** (le workflow est enregistré dans celui utilisé lors de l’import).
+3. Utilisez la recherche interne pour `canadian-tire-271-liquidation`. S’il n’existe pas, réimportez `admin/workflows/canadian-tire-271.json` via **New workflow → Import JSON**.
+4. Après réimport, cliquez sur **Save** puis sur **Back to My workflows** : le graphe doit apparaître immédiatement dans la liste.
+
+Si malgré cela le workflow reste invisible, supprimez les éventuels doublons puis refaites l’import en vous assurant que la sauvegarde s’effectue bien (icône verte en haut à droite). Vous pouvez également partager une capture de la vue **My workflows** pour confirmer que vous êtes dans le bon espace.
+
 ## Étape 1 — Listing
 
 **Objectif :** parcourir la page de liquidation, récupérer toutes les URLs produits, injecter le paramètre `store=271` si manquant et suivre la pagination.
