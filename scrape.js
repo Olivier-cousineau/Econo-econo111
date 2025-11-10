@@ -65,17 +65,13 @@ const SELECTORS = {
 };
 
 const PAGINATION = {
-  loadMoreBtn: [
-    "button[data-testid='load-more']",
-    "button:has-text('Charger plus')",
-    "button:has-text('Load more')",
-  ].join(", "),
   nextBtn: [
     "a[aria-label='Next']:not(.pagination_chevron--disabled)",
-    "a[data-testid='chevron->']:not(.pagination_chevron--disabled')",
-    "a[rel='next']:not(.disabled)",
+    "button[aria-label='Next']:not([disabled])",
+    "a[data-testid='chevron->']:not(.pagination_chevron--disabled)",
   ].join(", "),
   waitForList: ["ul[data-testid='product-grids']", ".product-grid"].join(", "),
+  rangeTextContainer: "body",
 };
 
 // ------------- UTILS -------------
@@ -198,10 +194,33 @@ async function main() {
 
   await maybeCloseStoreModal(page);
 
+  let totalPages = MAX_PAGES;
+  try {
+    await page
+      .waitForSelector(PAGINATION.waitForList, { timeout: 20000 })
+      .catch(() => {});
+    const rangeText = (
+      await page.locator(PAGINATION.rangeTextContainer).innerText()
+    ).replace(/\s+/g, " ");
+    const match = rangeText.match(
+      /Affichage de \d+ à \d+ de (\d+)\s+articles/i
+    );
+    if (match) {
+      const totalItems = parseInt(match[1], 10);
+      const perPage = 50;
+      if (Number.isFinite(totalItems) && totalItems > 0) {
+        totalPages = Math.min(Math.ceil(totalItems / perPage), MAX_PAGES);
+        console.log(
+          `ℹ️  Total estimé: ${totalItems} items → ${totalPages} pages (cap=${MAX_PAGES})`
+        );
+      }
+    }
+  } catch (_) {}
+
   const all = [];
   let pageCount = 0;
 
-  while (pageCount < MAX_PAGES) {
+  while (pageCount < totalPages) {
     pageCount += 1;
     try {
       await page.waitForSelector(PAGINATION.waitForList, { timeout: 15000 });
@@ -213,15 +232,29 @@ async function main() {
     console.log(`✅ Page ${pageCount}: ${items.length} produits`);
     all.push(...items);
 
-    const hasLoadMore = await page.locator(PAGINATION.loadMoreBtn).first().isVisible().catch(() => false);
-    if (hasLoadMore) {
-      await Promise.all([page.click(PAGINATION.loadMoreBtn).catch(() => {}), page.waitForLoadState("domcontentloaded")]);
-      continue;
-    }
-
-    const hasNext = await page.locator(PAGINATION.nextBtn).first().isVisible().catch(() => false);
+    const hasNext = await page
+      .locator(PAGINATION.nextBtn)
+      .first()
+      .isVisible()
+      .catch(() => false);
     if (hasNext) {
-      await Promise.all([page.click(PAGINATION.nextBtn).catch(() => {}), page.waitForLoadState("domcontentloaded")]);
+      const beforeUrl = page.url();
+      await page
+        .locator(PAGINATION.nextBtn)
+        .first()
+        .click({ delay: 30 })
+        .catch(() => {});
+      await page.waitForLoadState("domcontentloaded");
+      await page
+        .waitForSelector(PAGINATION.waitForList, { timeout: 20000 })
+        .catch(() => {});
+      await page.waitForTimeout(800);
+      if (page.url() === beforeUrl) {
+        await page.evaluate(() => {
+          window.scrollTo(0, document.body.scrollHeight);
+        });
+        await page.waitForTimeout(800);
+      }
       continue;
     }
 
