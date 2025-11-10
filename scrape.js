@@ -21,7 +21,7 @@ const __dirname = path.dirname(__filename);
 const START_URL =
   args.url ||
   "https://www.canadiantire.ca/fr/promotions/liquidation.html?store=271";
-const MAX_PAGES = Number(args.maxPages || 20);
+const MAX_PAGES = Number(args.maxPages || 125);
 const HEADLESS = !args.headful;
 
 // ------------- CONFIG -------------
@@ -65,18 +65,28 @@ const SELECTORS = {
 };
 
 const PAGINATION = {
+  // conteneur de la grille (inchangé)
+  waitForList: "ul[data-testid='product-grids'], .product-grid",
+
+  // flèche "suivant" — plusieurs variantes possibles sur CT
+  nextSelectors: [
+    "nav[aria-label='Pagination'] a[aria-label='Next']:not(.pagination_chevron--disabled)",
+    "nav[aria-label='Pagination'] button[aria-label='Next']:not([disabled])",
+    "a[data-testid='chevron->']:not(.pagination_chevron--disabled)",
+    "button:has-text('>'):not([disabled])",
+    "a.pagination_chevron:not(.pagination_chevron--disabled)",
+  ],
+
   loadMoreBtn: [
     "button[data-testid='load-more']",
     "button:has-text('Charger plus')",
     "button:has-text('Load more')",
   ].join(", "),
-  nextBtn: [
-    "a[aria-label='Next']:not(.pagination_chevron--disabled)",
-    "a[data-testid='chevron->']:not(.pagination_chevron--disabled')",
-    "a[rel='next']:not(.disabled)",
-  ].join(", "),
-  waitForList: ["ul[data-testid='product-grids']", ".product-grid"].join(", "),
 };
+
+function nextBtn(page) {
+  return page.locator(PAGINATION.nextSelectors.join(", ")).first();
+}
 
 // ------------- UTILS -------------
 function extractPrice(text) {
@@ -213,19 +223,37 @@ async function main() {
     console.log(`✅ Page ${pageCount}: ${items.length} produits`);
     all.push(...items);
 
-    const hasLoadMore = await page.locator(PAGINATION.loadMoreBtn).first().isVisible().catch(() => false);
-    if (hasLoadMore) {
-      await Promise.all([page.click(PAGINATION.loadMoreBtn).catch(() => {}), page.waitForLoadState("domcontentloaded")]);
+    if (pageCount % 10 === 0) await page.waitForTimeout(1500);
+
+    const loadMore = page.locator(PAGINATION.loadMoreBtn).first();
+    if (await loadMore.isVisible().catch(() => false)) {
+      await Promise.all([
+        loadMore.click({ delay: 30 }).catch(() => {}),
+        page.waitForLoadState("domcontentloaded"),
+      ]);
+      await page.waitForSelector(PAGINATION.waitForList, { timeout: 20000 }).catch(() => {});
+      await page.waitForTimeout(800);
       continue;
     }
 
-    const hasNext = await page.locator(PAGINATION.nextBtn).first().isVisible().catch(() => false);
-    if (hasNext) {
-      await Promise.all([page.click(PAGINATION.nextBtn).catch(() => {}), page.waitForLoadState("domcontentloaded")]);
-      continue;
+    // ---- pagination: cliquer sur la flèche "suivant"
+    const next = nextBtn(page);
+    if (await next.isVisible().catch(() => false)) {
+      const before = page.url();
+      await next.click({ delay: 30 }).catch(() => {});
+      await page.waitForLoadState("domcontentloaded");
+      await page.waitForSelector(PAGINATION.waitForList, { timeout: 20000 }).catch(() => {});
+      await page.waitForTimeout(800);
+
+      // Si l'URL n'a pas bougé, on force un petit scroll pour déclencher le rendu
+      if (page.url() === before) {
+        await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+        await page.waitForTimeout(800);
+      }
+      continue; // prochaine page
     }
 
-    break;
+    break; // plus de "suivant" visible → fin
   }
 
   const limit = pLimit(CONCURRENCY);
