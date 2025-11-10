@@ -5,13 +5,14 @@ import os
 import re
 import sys
 from pathlib import Path
+from urllib.parse import parse_qsl, urlencode, urlparse, urlunparse
 from typing import Dict, List, Tuple
 
 from playwright.async_api import TimeoutError as PWTimeout
 from playwright.async_api import async_playwright
 
 # --- Réglages magasin Saint-Jérôme
-POSTAL_CODE = "J7Y 4Y9"  # on peut remplacer via VAR d'env si tu veux
+POSTAL_CODE = "J7Z 5T3"  # on peut remplacer via VAR d'env si tu veux
 CITY_QUERY = "Saint-Jérôme, QC"
 CITY_LABEL = "Saint-Jérôme"
 
@@ -25,6 +26,35 @@ PRICE_CURR = "[data-automation='current-price'], span[data-automation='pricing-p
 PRICE_WAS = "[data-automation='was-price'], [data-automation='strike-price'], s"
 IMG = "img"
 LINK = "a[href*='/ip/'], a[href*='/product/']"
+
+
+def ensure_clearance_query(raw_url: str) -> str:
+    if not raw_url:
+        return raw_url
+
+    parsed = urlparse(raw_url)
+    query_pairs = parse_qsl(parsed.query, keep_blank_values=True)
+    params: Dict[str, List[str]] = {}
+    for key, value in query_pairs:
+        params.setdefault(key, []).append(value)
+
+    def _set_param(key: str, value: str):
+        params[key] = [value]
+
+    # Normalise les variations Liquidation → Clearance
+    if "facet" in params:
+        normalized = [v.replace("Liquidation", "Clearance") for v in params["facet"]]
+        params["facet"] = normalized
+
+    if "special_offers" in params:
+        params["special_offers"] = [v.replace("Liquidation", "Clearance") for v in params["special_offers"]]
+
+    # Force les paramètres attendus
+    _set_param("special_offers", "Clearance")
+    _set_param("postalCode", POSTAL_CODE.replace(" ", ""))
+
+    new_query = urlencode([(k, val) for k, values in params.items() for val in values])
+    return urlunparse(parsed._replace(query=new_query))
 
 
 def money_from_text(txt: str) -> float | None:
@@ -328,8 +358,9 @@ async def run(electronics_url: str, toys_url: str, appliances_url: str, out_dir:
         ]
 
         for cat, url in datasets:
-            print(f"➡️  Catégorie {cat} → {url}")
-            data = await extract_from_category(page, url, cat)
+            normalized_url = ensure_clearance_query(url)
+            print(f"➡️  Catégorie {cat} → {normalized_url}")
+            data = await extract_from_category(page, normalized_url, cat)
             json_path = out_dir / f"{cat}.json"
             csv_path = out_dir / f"{cat}.csv"
 
