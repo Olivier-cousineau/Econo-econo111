@@ -7,7 +7,7 @@ import re
 import sys
 from pathlib import Path
 from urllib.parse import parse_qsl, urlencode, urlparse, urlunparse
-from typing import Dict, List, Tuple
+from typing import Dict, List, Set, Tuple
 
 from playwright.async_api import TimeoutError as PWTimeout
 from playwright.async_api import async_playwright
@@ -23,7 +23,16 @@ USER_AGENT = (
 )
 
 # Sélecteurs "robustes" Walmart (peuvent bouger – on a des fallback)
-CARD = "div[data-automation='product'], li[data-automation='product'], div[class*='product-tile']"
+CARD = ", ".join(
+    [
+        "div[data-automation='product']",
+        "li[data-automation='product']",
+        "div[class*='product-tile']",
+        "div[data-automation='product-card']",
+        "li[data-testid*='product']",
+        "div[data-testid*='product']",
+    ]
+)
 
 NAME = "a, h2, h3, [data-automation*='title']"
 PRICE_CURR = "[data-automation*='current-price'], .price-current, [class*='sale']"
@@ -164,106 +173,112 @@ def _price_from_item(item: Dict, *paths: Tuple[str, ...]) -> float | None:
     return None
 
 
+def _iter_dicts(payload):
+    stack = [payload]
+    while stack:
+        current = stack.pop()
+        if isinstance(current, dict):
+            yield current
+            stack.extend(current.values())
+        elif isinstance(current, list):
+            stack.extend(current)
+
+
 def _extract_items_from_json(payload: Dict) -> List[Dict]:
-    stacks = []
-    search_paths = [
-        ("props", "pageProps", "initialData", "searchResult", "itemStacks"),
-        ("props", "pageProps", "initialState", "search", "searchResult", "itemStacks"),
-        ("props", "pageProps", "initialData", "productSearch", "searchResult", "itemStacks"),
-    ]
-
-    def _dig(data: Dict, path: Tuple[str, ...]):
-        cur = data
-        for key in path:
-            if not isinstance(cur, dict) or key not in cur:
-                return None
-            cur = cur[key]
-        return cur
-
-    for path in search_paths:
-        res = _dig(payload, path)
-        if isinstance(res, list) and res:
-            stacks = res
-            break
-
     items: List[Dict] = []
-    for stack in stacks:
-        stack_items = stack.get("items") if isinstance(stack, dict) else None
-        if not isinstance(stack_items, list):
+    seen_urls: Set[str] = set()
+
+    for raw in _iter_dicts(payload):
+        if not isinstance(raw, dict):
             continue
-        for raw in stack_items:
-            if not isinstance(raw, dict):
-                continue
 
-            title = raw.get("name") or raw.get("productName") or ""
-            title = " ".join(str(title).split())
-            if not title:
-                continue
+        title = raw.get("name") or raw.get("productName") or ""
+        url = raw.get("canonicalUrl") or raw.get("productPageUrl") or ""
+        if not title or not url:
+            continue
 
-            # URL
-            url = raw.get("canonicalUrl") or raw.get("productPageUrl") or ""
-            if url.startswith("/"):
-                url = "https://www.walmart.ca" + url
+        # La plupart des objets non produits n'ont pas d'offres/prix
+        if not any(
+            key in raw
+            for key in (
+                "priceInfo",
+                "primaryOffer",
+                "availabilityStatus",
+                "imageInfo",
+            )
+        ):
+            continue
 
-            # Image (plusieurs clés possibles)
-            image = ""
-            image_info = raw.get("imageInfo") or {}
-            if isinstance(image_info, dict):
-                for key in ("thumbnailUrl", "allImages", "images"):
-                    value = image_info.get(key)
-                    if isinstance(value, str) and value:
-                        image = value
+        title = " ".join(str(title).split())
+        if url.startswith("/"):
+            url = "https://www.walmart.ca" + url
+
+        if url in seen_urls:
+            continue
+
+        image = ""
+        image_info = raw.get("imageInfo") or {}
+        if isinstance(image_info, dict):
+            for key in ("thumbnailUrl", "allImages", "images"):
+                value = image_info.get(key)
+                if isinstance(value, str) and value:
+                    image = value
+                    break
+                if isinstance(value, list) and value:
+                    first = value[0]
+                    if isinstance(first, dict):
+                        image = (
+                            first.get("url")
+                            or first.get("assetSizeUrls", {}).get("large")
+                            or ""
+                        )
+                    elif isinstance(first, str):
+                        image = first
+                    if image:
                         break
-                    if isinstance(value, list) and value:
-                        first = value[0]
-                        if isinstance(first, dict):
-                            image = first.get("url") or first.get("assetSizeUrls", {}).get("large") or ""
-                        elif isinstance(first, str):
-                            image = first
-                        if image:
-                            break
-                if not image:
-                    image = image_info.get("primaryImageUrl", "")
+            if not image:
+                image = image_info.get("primaryImageUrl", "")
 
-            current_price = _price_from_item(
-                raw,
-                ("priceInfo", "currentPrice"),
-                ("priceInfo", "currentPrice", "price"),
-                ("priceInfo", "currentPrice", "amount"),
-                ("priceInfo", "currentPrice", "value"),
-                ("primaryOffer", "offerPrice"),
-                ("primaryOffer", "offerPrice", "price"),
-                ("primaryOffer", "offerPrice", "value"),
-                ("primaryOffer", "prices", "current"),
-                ("primaryOffer", "prices", "current", "price"),
-            )
+        current_price = _price_from_item(
+            raw,
+            ("priceInfo", "currentPrice"),
+            ("priceInfo", "currentPrice", "price"),
+            ("priceInfo", "currentPrice", "amount"),
+            ("priceInfo", "currentPrice", "value"),
+            ("primaryOffer", "offerPrice"),
+            ("primaryOffer", "offerPrice", "price"),
+            ("primaryOffer", "offerPrice", "value"),
+            ("primaryOffer", "prices", "current"),
+            ("primaryOffer", "prices", "current", "price"),
+        )
 
-            was_price = _price_from_item(
-                raw,
-                ("priceInfo", "wasPrice"),
-                ("priceInfo", "wasPrice", "price"),
-                ("priceInfo", "previousPrice"),
-                ("primaryOffer", "prices", "was"),
-                ("primaryOffer", "prices", "was", "price"),
-            )
+        was_price = _price_from_item(
+            raw,
+            ("priceInfo", "wasPrice"),
+            ("priceInfo", "wasPrice", "price"),
+            ("priceInfo", "previousPrice"),
+            ("primaryOffer", "prices", "was"),
+            ("primaryOffer", "prices", "was", "price"),
+        )
 
-            discount = None
-            if current_price and was_price and was_price > 0:
-                discount = round(100.0 * (was_price - current_price) / was_price, 1)
+        discount = None
+        if current_price and was_price and was_price > 0:
+            discount = round(100.0 * (was_price - current_price) / was_price, 1)
 
-            items.append(
-                {
-                    "title": title,
-                    "category": raw.get("category") or raw.get("department") or "",
-                    "price": was_price,
-                    "sale_price": current_price,
-                    "discount_pct": discount,
-                    "url": url,
-                    "image": image,
-                    "store": "Walmart",
-                    "city": CITY_LABEL,
-                }
-            )
+        items.append(
+            {
+                "title": title,
+                "category": raw.get("category") or raw.get("department") or "",
+                "price": was_price,
+                "sale_price": current_price,
+                "discount_pct": discount,
+                "url": url,
+                "image": image,
+                "store": "Walmart",
+                "city": CITY_LABEL,
+            }
+        )
+        seen_urls.add(url)
 
     return items
 
@@ -379,6 +394,16 @@ async def extract_from_category(page, url: str, category: str) -> List[Dict]:
         if isinstance(data, dict):
             parsed = _extract_items_from_json(data)
 
+        if not parsed:
+            try:
+                redux_state = await page.evaluate(
+                    "() => window.__WML_REDUX_INITIAL_STATE__"
+                )
+            except Exception:
+                redux_state = None
+            if isinstance(redux_state, dict):
+                parsed = _extract_items_from_json(redux_state)
+
         if not parsed and cards:
             parsed = await _extract_from_dom(cards, category)
         else:
@@ -421,9 +446,9 @@ async def run(electronics_url: str, toys_url: str, appliances_url: str, out_dir:
         await human_pause()
 
         datasets: List[Tuple[str, str]] = [
-            ("electronique", electronics_url),
-            ("jouets", toys_url),
-            ("electromenagers", appliances_url),
+            ("electronique", ensure_clearance_query(electronics_url)),
+            ("jouets", ensure_clearance_query(toys_url)),
+            ("electromenagers", ensure_clearance_query(appliances_url)),
         ]
 
         for cat, url in datasets:
