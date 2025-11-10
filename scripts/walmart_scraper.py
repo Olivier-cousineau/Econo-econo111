@@ -6,6 +6,7 @@ import random
 import re
 import sys
 from pathlib import Path
+from urllib.parse import parse_qsl, urlencode, urlparse, urlunparse
 from typing import Dict, List, Tuple
 
 from playwright.async_api import TimeoutError as PWTimeout
@@ -13,7 +14,7 @@ from playwright.async_api import async_playwright
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 # --- Réglages magasin Saint-Jérôme
-POSTAL_CODE = "J7Y 4Y9"  # on peut remplacer via VAR d'env si tu veux
+POSTAL_CODE = "J7Z 5T3"  # on peut remplacer via VAR d'env si tu veux
 CITY_QUERY = "Saint-Jérôme, QC"
 CITY_LABEL = "Saint-Jérôme"
 USER_AGENT = (
@@ -42,6 +43,35 @@ def parse_price(txt: str | None) -> float | None:
         except ValueError:
             return None
     return None
+
+
+def ensure_clearance_query(raw_url: str) -> str:
+    if not raw_url:
+        return raw_url
+
+    parsed = urlparse(raw_url)
+    query_pairs = parse_qsl(parsed.query, keep_blank_values=True)
+    params: Dict[str, List[str]] = {}
+    for key, value in query_pairs:
+        params.setdefault(key, []).append(value)
+
+    def _set_param(key: str, value: str):
+        params[key] = [value]
+
+    # Normalise les variations Liquidation → Clearance
+    if "facet" in params:
+        normalized = [v.replace("Liquidation", "Clearance") for v in params["facet"]]
+        params["facet"] = normalized
+
+    if "special_offers" in params:
+        params["special_offers"] = [v.replace("Liquidation", "Clearance") for v in params["special_offers"]]
+
+    # Force les paramètres attendus
+    _set_param("special_offers", "Clearance")
+    _set_param("postalCode", POSTAL_CODE.replace(" ", ""))
+
+    new_query = urlencode([(k, val) for k, values in params.items() for val in values])
+    return urlunparse(parsed._replace(query=new_query))
 
 
 def money_from_text(txt: str) -> float | None:
