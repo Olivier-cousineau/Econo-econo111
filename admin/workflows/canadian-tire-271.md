@@ -1,6 +1,13 @@
 # Workflow Bright Data — Canadian Tire (Store 271)
 
-Ce workflow Bright Data Web Scraper IDE récolte les produits en liquidation du magasin Canadian Tire #271. Il se compose de deux étapes : une première pour lister toutes les fiches produits et une seconde pour extraire les informations détaillées de chaque fiche (prix régulier, prix soldé, rabais, disponibilité, etc.).
+Le fichier `admin/workflows/canadian-tire-271.json` contient le workflow complet prêt à être importé dans l’IDE Web Scraper de Bright Data. Ce workflow récolte les produits en liquidation du magasin Canadian Tire #271. Il se compose de deux étapes : une première pour lister toutes les fiches produits et une seconde pour extraire les informations détaillées de chaque fiche (prix régulier, prix soldé, rabais, disponibilité, etc.).
+
+## Import dans Bright Data
+
+1. Ouvrir l’IDE Web Scraper de Bright Data et créer un nouveau workflow.
+2. Dans l’onglet **Code**, choisir l’option d’import JSON puis coller le contenu de `admin/workflows/canadian-tire-271.json` (ou importer le fichier tel quel).
+3. Vérifier que l’étape d’entrée est bien `listing` et que l’étape `pdp` reçoit les URLs transmises par `next_stage`.
+4. Lancer un test sur quelques produits pour confirmer la récupération des prix et métadonnées.
 
 ## Étape 1 — Listing
 
