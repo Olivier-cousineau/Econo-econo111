@@ -13,6 +13,7 @@ from playwright.async_api import async_playwright
 # --- Réglages magasin Saint-Jérôme
 POSTAL_CODE = "J7Y 4Y9"  # on peut remplacer via VAR d'env si tu veux
 CITY_QUERY = "Saint-Jérôme, QC"
+CITY_LABEL = "Saint-Jérôme"
 
 # Sélecteurs "robustes" Walmart (peuvent bouger – on a des fallback)
 CARD = "article[data-automation='product-item']," \
@@ -103,13 +104,15 @@ async def extract_from_category(page, url: str, category: str) -> List[Dict]:
 
             if name and href:
                 items.append({
-                    "Nom du produit": name,
-                    "Catégorie": category,
-                    "Prix original ($)": was,
-                    "Prix liquidation ($)": price,
-                    "Rabais (%)": discount,
-                    "Lien": href,
-                    "Image": img,
+                    "title": name,
+                    "category": category,
+                    "price": was,
+                    "sale_price": price,
+                    "discount_pct": discount,
+                    "url": href,
+                    "image": img,
+                    "store": "Walmart",
+                    "city": CITY_LABEL,
                 })
 
     # Aller à la page catégorie
@@ -189,7 +192,20 @@ async def run(electronics_url: str, toys_url: str, appliances_url: str, out_dir:
             # CSV (écrase aussi)
             if data:
                 with open(csv_path, "w", newline="", encoding="utf-8") as f:
-                    w = csv.DictWriter(f, fieldnames=list(data[0].keys()))
+                    w = csv.DictWriter(
+                        f,
+                        fieldnames=[
+                            "title",
+                            "category",
+                            "price",
+                            "sale_price",
+                            "discount_pct",
+                            "url",
+                            "image",
+                            "store",
+                            "city",
+                        ],
+                    )
                     w.writeheader()
                     w.writerows(data)
 
