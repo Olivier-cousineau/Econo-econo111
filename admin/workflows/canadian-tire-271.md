@@ -16,7 +16,11 @@ Le fichier `admin/workflows/canadian-tire-271.json` contient le workflow complet
 1. Ouvrir l’IDE Web Scraper de Bright Data et créer un nouveau workflow.
 2. Dans l’onglet **Code**, choisir l’option d’import JSON puis coller le contenu de `admin/workflows/canadian-tire-271.json` (ou importer le fichier tel quel).
 3. Vérifier que l’étape d’entrée est bien `listing` et que l’étape `pdp` reçoit les URLs transmises par `next_stage`.
-4. Lancer un test sur quelques produits pour confirmer la récupération des prix et métadonnées.
+4. Enregistrer le workflow : Bright Data le place ensuite dans **My workflows** sous le nom `canadian-tire-271-liquidation`.
+5. Depuis le tableau de bord Bright Data, ouvrez **Web Scraper → My workflows** puis cliquez sur `canadian-tire-271-liquidation` pour afficher le graphe et confirmer que les deux étapes apparaissent.
+6. Lancer un test sur quelques produits pour confirmer la récupération des prix et métadonnées.
+
+> 💡 Si le workflow n’apparaît pas après l’import, rafraîchissez la page **My workflows** ou cliquez sur **Open in IDE** depuis la notification d’importation afin de recharger le graphe `listing → pdp`.
 
 ## Étape 1 — Listing
 
