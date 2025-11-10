@@ -46,7 +46,11 @@ jobs:
             echo "st-jerome.json must contain a url"; exit 1;
           fi
           echo "Running scraper for: $URL (maxPages=$MAX)"
-          node ./scrape.js --url "$URL" --maxPages "$MAX"
+          node ./scrape.js \
+            --url "$URL" \
+            --maxPages "$MAX" \
+            --include-liquidation-price \
+            --include-regular-price
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4

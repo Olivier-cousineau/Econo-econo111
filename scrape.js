@@ -14,6 +14,19 @@ import minimist from "minimist";
 import { fileURLToPath } from "url";
 
 const args = minimist(process.argv.slice(2));
+
+function parseBooleanArg(value, defaultValue = false) {
+  if (value === undefined) return defaultValue;
+  if (typeof value === "boolean") return value;
+  if (typeof value === "number") return value !== 0;
+  if (typeof value === "string") {
+    const normalized = value.trim().toLowerCase();
+    if (["false", "0", "no", "off"].includes(normalized)) return false;
+    if (["true", "1", "yes", "on"].includes(normalized)) return true;
+  }
+  return defaultValue;
+}
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -23,6 +36,14 @@ const START_URL =
   "https://www.canadiantire.ca/fr/promotions/liquidation.html?store=271";
 const MAX_PAGES = Number(args.maxPages || 125);
 const HEADLESS = !args.headful;
+const INCLUDE_REGULAR_PRICE = parseBooleanArg(
+  args["include-regular-price"] ?? args.includeRegularPrice,
+  true
+);
+const INCLUDE_LIQUIDATION_PRICE = parseBooleanArg(
+  args["include-liquidation-price"] ?? args.includeLiquidationPrice,
+  true
+);
 
 // ------------- CONFIG -------------
 const OUT_DIR = "./images";
@@ -44,11 +65,19 @@ const SELECTORS = {
     ".pdp-link",
     "h3, h2",
   ].join(", "),
-  price: [
+  priceSale: [
     "[data-testid='sale-price']",
     "[data-testid='product-price']",
     ".price__value, .sale-price__value, .product-price",
     ".price, .c-pricing__sale, .c-pricing__current",
+  ].join(", "),
+  priceRegular: [
+    "[data-testid='reg-price']",
+    "[data-testid='regular-price']",
+    "[data-testid='list-price']",
+    "[data-testid='was-price']",
+    ".price__was, .was-price__value, .product-was-price",
+    ".c-pricing__was, .price--was, .price__value--was",
   ].join(", "),
   badge: [
     ".badge--clearance",
@@ -141,7 +170,6 @@ async function scrapeListOnce(page) {
 
     return cards.map((el) => {
       const title = pickText(el, SELECTORS.title);
-      const priceRaw = pickText(el, SELECTORS.price);
       const hasBadge = !!el.querySelector(SELECTORS.badge);
       const text = el.textContent || "";
       const liquidation =
@@ -151,12 +179,52 @@ async function scrapeListOnce(page) {
       const image = pickImg(el, SELECTORS.image);
       const url = pickHref(el, SELECTORS.link);
 
-      return { title, price_raw: priceRaw, liquidation, image, url };
+      const priceSaleRaw = pickText(el, SELECTORS.priceSale);
+      const priceRegularRaw = pickText(el, SELECTORS.priceRegular);
+
+      return {
+        title,
+        price_sale_raw: priceSaleRaw,
+        price_regular_raw: priceRegularRaw,
+        liquidation,
+        image,
+        url,
+      };
     });
   }, SELECTORS);
 
-  for (const it of items) it.price = extractPrice(it.price_raw);
-  return items.filter((p) => p.title || p.price || p.image);
+  return items
+    .map((item) => {
+      const liquidationPrice = extractPrice(item.price_sale_raw);
+      const regularPrice = extractPrice(item.price_regular_raw);
+      const priceRaw = item.price_sale_raw || item.price_regular_raw || null;
+      const price = liquidationPrice ?? regularPrice;
+
+      const record = {
+        title: item.title,
+        price,
+        price_raw: priceRaw,
+        liquidation:
+          item.liquidation ||
+          (liquidationPrice != null &&
+            (regularPrice == null || liquidationPrice <= regularPrice)),
+        image: item.image,
+        url: item.url,
+      };
+
+      if (INCLUDE_LIQUIDATION_PRICE) {
+        record.liquidation_price = liquidationPrice;
+        record.liquidation_price_raw = item.price_sale_raw || null;
+      }
+
+      if (INCLUDE_REGULAR_PRICE) {
+        record.regular_price = regularPrice;
+        record.regular_price_raw = item.price_regular_raw || null;
+      }
+
+      return record;
+    })
+    .filter((p) => p.title || p.price != null || p.image);
 }
 
 async function maybeCloseStoreModal(page) {
@@ -192,6 +260,9 @@ async function main() {
   const page = await context.newPage();
 
   console.log("➡️  Go to:", START_URL);
+  console.log(
+    `⚙️  Options → liquidation_price=${INCLUDE_LIQUIDATION_PRICE ? "on" : "off"}, regular_price=${INCLUDE_REGULAR_PRICE ? "on" : "off"}`
+  );
 
   let retries = 3;
   while (retries > 0) {
@@ -284,6 +355,18 @@ async function main() {
       { id: "title", title: "title" },
       { id: "price", title: "price" },
       { id: "price_raw", title: "price_raw" },
+      ...(INCLUDE_REGULAR_PRICE
+        ? [
+            { id: "regular_price", title: "regular_price" },
+            { id: "regular_price_raw", title: "regular_price_raw" },
+          ]
+        : []),
+      ...(INCLUDE_LIQUIDATION_PRICE
+        ? [
+            { id: "liquidation_price", title: "liquidation_price" },
+            { id: "liquidation_price_raw", title: "liquidation_price_raw" },
+          ]
+        : []),
       { id: "liquidation", title: "liquidation" },
       { id: "url", title: "url" },
       { id: "image", title: "image" },
