@@ -66,80 +66,220 @@ async def ensure_store(page):
         pass
 
 
-async def extract_from_category(page, url: str, category: str) -> List[Dict]:
-    items = []
+def _price_from_item(item: Dict, *paths: Tuple[str, ...]) -> float | None:
+    """Utility pour extraire les prix numériques d’un dict Walmart."""
 
-    async def parse_cards():
-        for c in await page.locator(CARD).all():
-            try:
-                name = (await c.locator(NAME).first.text_content()) or ""
-            except Exception:
-                name = (await c.text_content()) or ""
-            name = " ".join(name.split())
+    def _dig(data: Dict, keys: Tuple[str, ...]) -> object:
+        cur = data
+        for key in keys:
+            if not isinstance(cur, dict) or key not in cur:
+                return None
+            cur = cur[key]
+        return cur
 
-            # lien
-            href = ""
-            if await c.locator(LINK).first.count():
-                href = await c.locator(LINK).first.get_attribute("href") or ""
-                if href.startswith("/"):
-                    href = "https://www.walmart.ca" + href
+    for path in paths:
+        value = _dig(item, path)
+        if value is None:
+            continue
+        if isinstance(value, (int, float)):
+            return float(value)
+        if isinstance(value, str):
+            money = money_from_text(value)
+            if money is not None:
+                return money
+        if isinstance(value, dict):
+            for key in ("price", "amount", "value"):
+                if key in value and value[key] is not None:
+                    nested = value[key]
+                    if isinstance(nested, (int, float)):
+                        return float(nested)
+                    if isinstance(nested, str):
+                        money = money_from_text(nested)
+                        if money is not None:
+                            return money
+    return None
 
-            # image
-            img = ""
-            if await c.locator(IMG).first.count():
-                img = (await c.locator(IMG).first.get_attribute("src")) or ""
 
-            # prix
-            price_curr_loc = c.locator(PRICE_CURR).first
-            price_was_loc = c.locator(PRICE_WAS).first
-            price_curr_txt = await price_curr_loc.text_content() if await price_curr_loc.count() else ""
-            price_was_txt = await price_was_loc.text_content() if await price_was_loc.count() else ""
-            price = money_from_text(price_curr_txt)
-            was = money_from_text(price_was_txt)
+def _extract_items_from_json(payload: Dict) -> List[Dict]:
+    stacks = []
+    search_paths = [
+        ("props", "pageProps", "initialData", "searchResult", "itemStacks"),
+        ("props", "pageProps", "initialState", "search", "searchResult", "itemStacks"),
+        ("props", "pageProps", "initialData", "productSearch", "searchResult", "itemStacks"),
+    ]
 
-            # rabais %
+    def _dig(data: Dict, path: Tuple[str, ...]):
+        cur = data
+        for key in path:
+            if not isinstance(cur, dict) or key not in cur:
+                return None
+            cur = cur[key]
+        return cur
+
+    for path in search_paths:
+        res = _dig(payload, path)
+        if isinstance(res, list) and res:
+            stacks = res
+            break
+
+    items: List[Dict] = []
+    for stack in stacks:
+        stack_items = stack.get("items") if isinstance(stack, dict) else None
+        if not isinstance(stack_items, list):
+            continue
+        for raw in stack_items:
+            if not isinstance(raw, dict):
+                continue
+
+            title = raw.get("name") or raw.get("productName") or ""
+            title = " ".join(str(title).split())
+            if not title:
+                continue
+
+            # URL
+            url = raw.get("canonicalUrl") or raw.get("productPageUrl") or ""
+            if url.startswith("/"):
+                url = "https://www.walmart.ca" + url
+
+            # Image (plusieurs clés possibles)
+            image = ""
+            image_info = raw.get("imageInfo") or {}
+            if isinstance(image_info, dict):
+                for key in ("thumbnailUrl", "allImages", "images"):
+                    value = image_info.get(key)
+                    if isinstance(value, str) and value:
+                        image = value
+                        break
+                    if isinstance(value, list) and value:
+                        first = value[0]
+                        if isinstance(first, dict):
+                            image = first.get("url") or first.get("assetSizeUrls", {}).get("large") or ""
+                        elif isinstance(first, str):
+                            image = first
+                        if image:
+                            break
+                if not image:
+                    image = image_info.get("primaryImageUrl", "")
+
+            current_price = _price_from_item(
+                raw,
+                ("priceInfo", "currentPrice"),
+                ("priceInfo", "currentPrice", "price"),
+                ("priceInfo", "currentPrice", "amount"),
+                ("priceInfo", "currentPrice", "value"),
+                ("primaryOffer", "offerPrice"),
+                ("primaryOffer", "offerPrice", "price"),
+                ("primaryOffer", "offerPrice", "value"),
+                ("primaryOffer", "prices", "current"),
+                ("primaryOffer", "prices", "current", "price"),
+            )
+
+            was_price = _price_from_item(
+                raw,
+                ("priceInfo", "wasPrice"),
+                ("priceInfo", "wasPrice", "price"),
+                ("priceInfo", "previousPrice"),
+                ("primaryOffer", "prices", "was"),
+                ("primaryOffer", "prices", "was", "price"),
+            )
+
             discount = None
-            if price and was and was > 0:
-                discount = round(100.0 * (was - price) / was, 1)
+            if current_price and was_price and was_price > 0:
+                discount = round(100.0 * (was_price - current_price) / was_price, 1)
 
-            if name and href:
-                items.append({
-                    "title": name,
-                    "category": category,
-                    "price": was,
-                    "sale_price": price,
+            items.append(
+                {
+                    "title": title,
+                    "category": raw.get("category") or raw.get("department") or "",
+                    "price": was_price,
+                    "sale_price": current_price,
                     "discount_pct": discount,
-                    "url": href,
-                    "image": img,
+                    "url": url,
+                    "image": image,
                     "store": "Walmart",
                     "city": CITY_LABEL,
-                })
+                }
+            )
+
+    return items
+
+
+async def extract_from_category(page, url: str, category: str) -> List[Dict]:
+    items: List[Dict] = []
 
     # Aller à la page catégorie
     await page.goto(url, timeout=90000)
     await page.wait_for_timeout(2000)
 
-    # Pagination : Walmart a soit bouton "Suivant", soit param ?page=
     seen_urls = set()
 
     while True:
-        # anti-loop
         if page.url in seen_urls:
             break
         seen_urls.add(page.url)
 
-        # attendre le grid
-        await page.wait_for_timeout(1500)
-        await parse_cards()
+        # 1) Essaye d’abord d’utiliser les données JSON embarquées
+        try:
+            data = await page.evaluate("() => window.__NEXT_DATA__")
+        except Exception:
+            data = None
 
-        # tente de trouver un bouton "Suivant"
+        if isinstance(data, dict):
+            parsed = _extract_items_from_json(data)
+            for item in parsed:
+                item["category"] = category
+            items.extend([i for i in parsed if i.get("url")])
+
+        # 2) Fallback DOM si jamais le JSON n’a rien donné
+        if not items:
+            for c in await page.locator(CARD).all():
+                try:
+                    name = (await c.locator(NAME).first.text_content()) or ""
+                except Exception:
+                    name = (await c.text_content()) or ""
+                name = " ".join(name.split())
+
+                href = ""
+                if await c.locator(LINK).first.count():
+                    href = await c.locator(LINK).first.get_attribute("href") or ""
+                    if href.startswith("/"):
+                        href = "https://www.walmart.ca" + href
+
+                img = ""
+                if await c.locator(IMG).first.count():
+                    img = (await c.locator(IMG).first.get_attribute("src")) or ""
+
+                price_curr_loc = c.locator(PRICE_CURR).first
+                price_was_loc = c.locator(PRICE_WAS).first
+                price_curr_txt = await price_curr_loc.text_content() if await price_curr_loc.count() else ""
+                price_was_txt = await price_was_loc.text_content() if await price_was_loc.count() else ""
+                price = money_from_text(price_curr_txt)
+                was = money_from_text(price_was_txt)
+
+                discount = None
+                if price and was and was > 0:
+                    discount = round(100.0 * (was - price) / was, 1)
+
+                if name and href:
+                    items.append({
+                        "title": name,
+                        "category": category,
+                        "price": was,
+                        "sale_price": price,
+                        "discount_pct": discount,
+                        "url": href,
+                        "image": img,
+                        "store": "Walmart",
+                        "city": CITY_LABEL,
+                    })
+
         next_btns = page.locator("a:has-text('Suivant'), button:has-text('Suivant'), a[aria-label='Suivant']")
         if await next_btns.count():
             if await next_btns.last.is_enabled():
                 await next_btns.last.click()
+                await page.wait_for_timeout(1500)
                 continue
 
-        # sinon, essaie param page=
         m = re.search(r"([?&])page=(\d+)", page.url)
         base = page.url
         if m:
@@ -154,13 +294,21 @@ async def extract_from_category(page, url: str, category: str) -> List[Dict]:
         try:
             await page.goto(base, timeout=60000)
             await page.wait_for_timeout(1500)
-            await parse_cards()
-            if len(items) == prev_len:
-                break  # pas de nouveaux items → fin
         except PWTimeout:
             break
 
-    return items
+        if len(items) == prev_len:
+            # aucune donnée supplémentaire → fin
+            break
+
+    # dédoublonne sur l’URL
+    deduped: Dict[str, Dict] = {}
+    for item in items:
+        url = item.get("url")
+        if url and url not in deduped:
+            deduped[url] = item
+
+    return list(deduped.values())
 
 
 async def run(electronics_url: str, toys_url: str, appliances_url: str, out_dir: Path):
