@@ -7,7 +7,6 @@ import { chromium } from "playwright";
 import fs from "fs-extra";
 import path from "path";
 import axios from "axios";
-import cheerio from "cheerio";
 import pLimit from "p-limit";
 import sanitize from "sanitize-filename";
 import { createObjectCsvWriter } from "csv-writer";
@@ -51,7 +50,6 @@ const OUT_DIR = "./images";
 const OUT_JSON = "./data.json";
 const OUT_CSV = "./data.csv";
 const CONCURRENCY = 6;
-const DETAIL_CONCURRENCY = 4;
 
 const SELECTORS = {
   product: [
@@ -127,248 +125,6 @@ function extractPrice(text) {
   const norm = m[1].replace(",", ".");
   const num = Number(norm);
   return Number.isFinite(num) ? num : null;
-}
-
-function extractQuantityValue(text) {
-  if (!text) return null;
-  const normalized = text.replace(/\s+/g, "");
-  const match = normalized.match(/(\d+)/);
-  if (!match) return null;
-  const value = Number(match[1]);
-  return Number.isFinite(value) ? value : null;
-}
-
-function normalizeText(text) {
-  return text ? text.replace(/\s+/g, " ").trim() : "";
-}
-
-function firstNonEmptyText($, selectors) {
-  for (const selector of selectors) {
-    if (!selector) continue;
-    const value = normalizeText($(selector).first().text());
-    if (value) return value;
-  }
-  return null;
-}
-
-function findSku($) {
-  const attributeSources = [
-    ["[data-product-sku]", "data-product-sku"],
-    ["[data-sku]", "data-sku"],
-    ["meta[itemprop='sku']", "content"],
-    ["meta[name='sku']", "content"],
-    ["meta[property='product:retailer_item_id']", "content"],
-  ];
-  for (const [selector, attr] of attributeSources) {
-    const value = normalizeText($(selector).first().attr(attr));
-    if (value) return value;
-  }
-
-  let labelValue = null;
-  $("body *").each((_, el) => {
-    if (labelValue) return false;
-    const text = normalizeText($(el).text());
-    if (!text) return;
-
-    const directMatch = text.match(/Num[eé]ro d['’]article\s*[:#\-\s]*([A-Za-z0-9-]+)/i);
-    if (directMatch && directMatch[1]) {
-      labelValue = directMatch[1].trim();
-      return false;
-    }
-
-    if (/Num[eé]ro d['’]article/i.test(text)) {
-      const siblingText = $(el)
-        .nextAll()
-        .map((_, sib) => normalizeText($(sib).text()))
-        .get()
-        .find((t) => t);
-      if (siblingText) {
-        labelValue = siblingText;
-        return false;
-      }
-      const parent = $(el).parent();
-      if (parent && parent.length) {
-        const siblings = parent.children().toArray();
-        const startIdx = siblings.indexOf(el);
-        for (let i = (startIdx === -1 ? 0 : startIdx + 1); i < siblings.length; i++) {
-          const siblingTextAlt = normalizeText($(siblings[i]).text());
-          if (siblingTextAlt) {
-            labelValue = siblingTextAlt;
-            return false;
-          }
-        }
-      }
-    }
-  });
-
-  return labelValue;
-}
-
-function findAvailability($) {
-  const direct = firstNonEmptyText($, [
-    "[data-testid='availability']",
-    ".availability",
-    ".availability-message",
-    ".store-availability",
-    "[data-store-availability]",
-  ]);
-  if (direct) return direct;
-
-  let labelValue = null;
-  $("body *").each((_, el) => {
-    if (labelValue) return false;
-    const text = normalizeText($(el).text());
-    if (!text) return;
-    if (/(en stock|en magasin)/i.test(text)) {
-      labelValue = text;
-      return false;
-    }
-  });
-  return labelValue;
-}
-
-async function fetchProductDetails(url) {
-  if (!url) return {};
-  try {
-    const res = await axios.get(url, {
-      timeout: 60000,
-      headers: {
-        "User-Agent":
-          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
-        Accept:
-          "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
-        "Accept-Language": "fr-CA,fr;q=0.9,en;q=0.8",
-      },
-    });
-    const $ = cheerio.load(res.data);
-
-    const priceSaleRaw = firstNonEmptyText($, [
-      ".product-price__sale",
-      ".product-price__value--sale",
-      ".price--sale",
-      ".price__sale",
-      ".sale-price",
-    ]);
-
-    const priceRegularRaw = firstNonEmptyText($, [
-      ".product-price__regular",
-      ".product-price__value--regular",
-      ".price--regular",
-      ".price__was",
-      ".was-price",
-    ]);
-
-    const priceTextRaw = firstNonEmptyText($, [
-      ".product-price",
-      ".product__price",
-      ".pricing",
-      "[data-testid='product-price']",
-    ]);
-
-    const sku = findSku($);
-    const availabilityRaw = findAvailability($);
-    const quantityValue = extractQuantityValue(availabilityRaw);
-
-    return {
-      price_sale_raw: priceSaleRaw || null,
-      price_regular_raw: priceRegularRaw || null,
-      price_text_raw: priceTextRaw || null,
-      sku: sku || null,
-      quantity_raw: availabilityRaw || null,
-      quantity_value: quantityValue,
-    };
-  } catch (error) {
-    const message = error?.response?.status
-      ? `${error.response.status}`
-      : error?.message || String(error);
-    console.warn("⚠️  detail fetch failed:", url, message);
-    return {};
-  }
-}
-
-async function enrichItemsWithDetails(items) {
-  if (!items.length) return items;
-  const limit = pLimit(DETAIL_CONCURRENCY);
-  return Promise.all(
-    items.map((item) =>
-      limit(async () => {
-        if (!item.url) return item;
-        const details = await fetchProductDetails(item.url);
-        const merged = { ...item };
-        if (details.price_sale_raw) merged.price_sale_raw = details.price_sale_raw;
-        if (details.price_regular_raw)
-          merged.price_regular_raw = details.price_regular_raw;
-        if (details.price_text_raw && !merged.price_text_raw)
-          merged.price_text_raw = details.price_text_raw;
-        if (details.sku) merged.sku = details.sku;
-        if (details.quantity_raw) merged.quantity_raw = details.quantity_raw;
-        if (details.quantity_value != null)
-          merged.quantity_value = details.quantity_value;
-        return merged;
-      })
-    )
-  );
-}
-
-function normalizeRecord(item) {
-  const liquidationPrice = extractPrice(item.price_sale_raw);
-  const regularPrice = extractPrice(item.price_regular_raw);
-  const fallbackPrice = extractPrice(item.price_text_raw);
-  const priceRaw =
-    item.price_text_raw || item.price_sale_raw || item.price_regular_raw || null;
-  const price = liquidationPrice ?? regularPrice ?? fallbackPrice;
-
-  const record = {
-    title: item.title,
-    price,
-    price_raw: priceRaw,
-    liquidation:
-      item.liquidation ||
-      (liquidationPrice != null &&
-        (regularPrice == null || liquidationPrice <= regularPrice)),
-    image: item.image,
-    url: item.url,
-  };
-
-  if (INCLUDE_LIQUIDATION_PRICE) {
-    record.liquidation_price = liquidationPrice;
-    record.liquidation_price_raw = item.price_sale_raw || null;
-  }
-
-  if (INCLUDE_REGULAR_PRICE) {
-    record.regular_price = regularPrice;
-    record.regular_price_raw = item.price_regular_raw || null;
-  }
-
-  if (liquidationPrice != null) {
-    record.sale_price = liquidationPrice;
-  }
-
-  if (item.price_sale_raw) {
-    record.sale_price_raw = item.price_sale_raw;
-  }
-
-  if (item.price_text_raw) {
-    record.price_text_raw = item.price_text_raw;
-  }
-
-  if (item.sku) {
-    record.sku = item.sku;
-  }
-
-  if (item.quantity_raw) {
-    record.quantity = item.quantity_raw;
-  }
-
-  const quantityValue =
-    item.quantity_value != null
-      ? item.quantity_value
-      : extractQuantityValue(item.quantity_raw);
-  if (quantityValue != null) {
-    record.quantity_value = quantityValue;
-  }
-
-  return record;
 }
 
 async function downloadImage(url, idx, title) {
@@ -450,11 +206,68 @@ async function scrapeListOnce(page) {
         image,
         url,
         sku: skuText || null,
-        quantity_raw: quantityText || null,
+        quantity: quantityText || null,
       };
     });
   }, SELECTORS);
-  return items;
+
+  return items
+    .map((item) => {
+      const liquidationPrice = extractPrice(item.price_sale_raw);
+      const regularPrice = extractPrice(item.price_regular_raw);
+      const fallbackPrice = extractPrice(item.price_text_raw);
+      const priceRaw =
+        item.price_text_raw ||
+        item.price_sale_raw ||
+        item.price_regular_raw ||
+        null;
+      const price = liquidationPrice ?? regularPrice ?? fallbackPrice;
+
+      const record = {
+        title: item.title,
+        price,
+        price_raw: priceRaw,
+        liquidation:
+          item.liquidation ||
+          (liquidationPrice != null &&
+            (regularPrice == null || liquidationPrice <= regularPrice)),
+        image: item.image,
+        url: item.url,
+      };
+
+      if (INCLUDE_LIQUIDATION_PRICE) {
+        record.liquidation_price = liquidationPrice;
+        record.liquidation_price_raw = item.price_sale_raw || null;
+      }
+
+      if (INCLUDE_REGULAR_PRICE) {
+        record.regular_price = regularPrice;
+        record.regular_price_raw = item.price_regular_raw || null;
+      }
+
+      if (liquidationPrice != null) {
+        record.sale_price = liquidationPrice;
+      }
+
+      if (item.price_sale_raw) {
+        record.sale_price_raw = item.price_sale_raw;
+      }
+
+      if (item.price_text_raw) {
+        record.price_text_raw = item.price_text_raw;
+      }
+
+      if (item.sku) {
+        record.sku = item.sku || null;
+      }
+
+      if (item.quantity) {
+        record.quantity = item.quantity || null;
+      }
+
+      return record;
+    })
+    .filter((p) => p.title || p.price != null || p.image);
 }
 
 async function maybeCloseStoreModal(page) {
@@ -557,17 +370,10 @@ async function main() {
     break; // plus de "suivant" visible → fin
   }
 
-  const enriched = await enrichItemsWithDetails(all);
-  const normalized = enriched
-    .map((item) => normalizeRecord(item))
-    .filter((p) => p.title || p.price != null || p.image);
-
-  console.log(`📦  Produits valides: ${normalized.length}`);
-
   const limit = pLimit(CONCURRENCY);
   let idx = 0;
   const withLocalImages = await Promise.all(
-    normalized.map((p) =>
+    all.map((p) =>
       limit(async () => {
         idx += 1;
         let image_path = null;
@@ -608,12 +414,6 @@ async function main() {
       { id: "url", title: "url" },
       { id: "image", title: "image" },
       { id: "image_path", title: "image_path" },
-      { id: "sale_price", title: "sale_price" },
-      { id: "sale_price_raw", title: "sale_price_raw" },
-      { id: "price_text_raw", title: "price_text_raw" },
-      { id: "sku", title: "sku" },
-      { id: "quantity", title: "quantity" },
-      { id: "quantity_value", title: "quantity_value" },
     ],
   });
   await csv.writeRecords(withLocalImages);
