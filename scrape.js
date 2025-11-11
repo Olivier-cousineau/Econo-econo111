@@ -179,16 +179,34 @@ async function scrapeListOnce(page) {
       const image = pickImg(el, SELECTORS.image);
       const url = pickHref(el, SELECTORS.link);
 
-      const priceSaleRaw = pickText(el, SELECTORS.priceSale);
-      const priceRegularRaw = pickText(el, SELECTORS.priceRegular);
+      const priceText = pickText(el, ".price");
+      const salePriceText = pickText(el, ".sale-price");
+
+      let priceSaleRaw = salePriceText || pickText(el, SELECTORS.priceSale);
+      let priceRegularRaw = pickText(el, SELECTORS.priceRegular);
+
+      if (!priceSaleRaw && priceText && salePriceText) {
+        priceSaleRaw = salePriceText;
+      }
+
+      if (!priceRegularRaw && priceText && !salePriceText) {
+        priceRegularRaw = priceText;
+      }
+
+      const skuAttr = el.getAttribute("data-sku");
+      const skuText = (skuAttr && skuAttr.trim()) || pickText(el, ".sku");
+      const quantityText = pickText(el, ".stock");
 
       return {
         title,
-        price_sale_raw: priceSaleRaw,
-        price_regular_raw: priceRegularRaw,
+        price_sale_raw: priceSaleRaw || null,
+        price_regular_raw: priceRegularRaw || null,
+        price_text_raw: priceText || null,
         liquidation,
         image,
         url,
+        sku: skuText || null,
+        quantity: quantityText || null,
       };
     });
   }, SELECTORS);
@@ -197,8 +215,13 @@ async function scrapeListOnce(page) {
     .map((item) => {
       const liquidationPrice = extractPrice(item.price_sale_raw);
       const regularPrice = extractPrice(item.price_regular_raw);
-      const priceRaw = item.price_sale_raw || item.price_regular_raw || null;
-      const price = liquidationPrice ?? regularPrice;
+      const fallbackPrice = extractPrice(item.price_text_raw);
+      const priceRaw =
+        item.price_text_raw ||
+        item.price_sale_raw ||
+        item.price_regular_raw ||
+        null;
+      const price = liquidationPrice ?? regularPrice ?? fallbackPrice;
 
       const record = {
         title: item.title,
@@ -220,6 +243,26 @@ async function scrapeListOnce(page) {
       if (INCLUDE_REGULAR_PRICE) {
         record.regular_price = regularPrice;
         record.regular_price_raw = item.price_regular_raw || null;
+      }
+
+      if (liquidationPrice != null) {
+        record.sale_price = liquidationPrice;
+      }
+
+      if (item.price_sale_raw) {
+        record.sale_price_raw = item.price_sale_raw;
+      }
+
+      if (item.price_text_raw) {
+        record.price_text_raw = item.price_text_raw;
+      }
+
+      if (item.sku) {
+        record.sku = item.sku || null;
+      }
+
+      if (item.quantity) {
+        record.quantity = item.quantity || null;
       }
 
       return record;
