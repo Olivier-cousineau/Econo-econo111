@@ -30,6 +30,11 @@ jobs:
           PLAYWRIGHT_BROWSERS_PATH: 0
         run: |
           python scripts/walmart_scraper.py
+          echo "---- Résumé des fichiers ----"
+          ls -lh data/walmart/saint-jerome || true
+          for f in data/walmart/saint-jerome/*.json; do
+            echo "$f -> $(jq 'length' "$f" 2>/dev/null || echo NA) produits"
+          done
 
       - name: Commit changes (if any)
         run: |
