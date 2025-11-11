@@ -17,11 +17,13 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install deps (Playwright + Chromium)
+      - name: Install Playwright + Chromium (with system deps)
         run: |
           python -m pip install --upgrade pip
           pip install playwright
           python -m playwright install --with-deps chromium
+        env:
+          PLAYWRIGHT_BROWSERS_PATH: 0
 
       - name: Run Walmart scraper (Saint-Jérôme)
         env:
@@ -34,14 +36,14 @@ jobs:
             echo "$f -> $(jq 'length' "$f" 2>/dev/null || echo NA) produits"
           done
 
-      - name: Commit changes
+      - name: Commit changes (if any)
         run: |
           git config user.name "Olivier-cousineau"
           git config user.email "ocousineau40@gmail.com"
           git add -A
           if git diff --cached --quiet; then
-            echo "No changes to commit."
+            echo "No changes – nothing to commit."
           else
-            git commit -m "chore: update Walmart Saint-Jérôme clearance JSON $(date -u +'%Y-%m-%dT%H:%MZ')"
+            git commit -m "update walmart json"
             git push
           fi
