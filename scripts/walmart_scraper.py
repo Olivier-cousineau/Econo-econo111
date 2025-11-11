@@ -1,8 +1,18 @@
-import asyncio, json, math, re
+import asyncio
+import json
+import re
+import subprocess
+import sys
 from pathlib import Path
-from urllib.parse import urlparse, parse_qs, urlencode, urlunparse
+from urllib.parse import parse_qs, urlencode, urlparse, urlunparse
 
-from playwright.async_api import async_playwright
+try:
+    from playwright.async_api import Error as PlaywrightError
+    from playwright.async_api import async_playwright
+except ModuleNotFoundError as exc:  # pragma: no cover - import-time guard
+    raise SystemExit(
+        "Playwright is required to run this scraper. Install it with 'pip install playwright'."
+    ) from exc
 
 OUT_DIR = Path("data/walmart/saint-jerome")
 OUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -30,6 +40,18 @@ async def accept_cookies(page):
             break
         except Exception:
             pass
+
+
+def install_chromium_if_needed():
+    """Install Chromium for Playwright when it has not been provisioned yet."""
+    print("Installing Playwright Chromium browser ...", flush=True)
+    try:
+        subprocess.run(
+            [sys.executable, "-m", "playwright", "install", "chromium"],
+            check=True,
+        )
+    except subprocess.CalledProcessError as exc:
+        raise RuntimeError("Unable to install Playwright Chromium browser") from exc
 
 def with_page(url: str, page_num: int) -> str:
     """Ajoute/maj le param ?page=N si présent (pagination côté Walmart)."""
@@ -155,10 +177,27 @@ async def scrape_category(context, name: str, base_url: str):
 
 async def main():
     async with async_playwright() as p:
-        browser = await p.chromium.launch(
-            headless=True,
-            args=["--disable-blink-features=AutomationControlled", "--no-sandbox", "--disable-dev-shm-usage"],
-        )
+        try:
+            browser = await p.chromium.launch(
+                headless=True,
+                args=[
+                    "--disable-blink-features=AutomationControlled",
+                    "--no-sandbox",
+                    "--disable-dev-shm-usage",
+                ],
+            )
+        except PlaywrightError as exc:
+            if "Executable doesn't exist" not in str(exc):
+                raise
+            install_chromium_if_needed()
+            browser = await p.chromium.launch(
+                headless=True,
+                args=[
+                    "--disable-blink-features=AutomationControlled",
+                    "--no-sandbox",
+                    "--disable-dev-shm-usage",
+                ],
+            )
         context = await browser.new_context(
             locale="fr-CA",
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
