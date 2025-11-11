@@ -1,52 +1,47 @@
-name: Scraper Walmart - Saint-Jérôme
+name: Walmart Saint-Jérôme
 
 on:
+  workflow_dispatch:
   schedule:
-    - cron: "0 8 */3 * *"   # Tous les 3 jours à ~03:00 heure du Québec (≈08:00 UTC)
-  workflow_dispatch: {}
+    - cron: "0 10 * * *"   # 10:00 UTC ≈ 5h QC
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
-      - name: Install dependencies
+      - name: Install deps (Playwright + Chromium)
         run: |
           python -m pip install --upgrade pip
-          pip install playwright==1.45.0
+          pip install playwright
           python -m playwright install --with-deps chromium
 
       - name: Run Walmart scraper (Saint-Jérôme)
         env:
-          WAL_ELECTRONICS_URL: "https://www.walmart.ca/fr/browse/electronics/10003?facet=special_offers%3ALiquidation&icid=cp_page_other_electronic_carousal_web_50803_4QMWQHY292"
-          WAL_TOYS_URL: "https://www.walmart.ca/fr/browse/jouets/10011?facet=special_offers%3ALiquidation&icid=cp_page_other_toys_32623_GXW6JFAZLX"
-          WAL_APPLIANCES_URL: "https://www.walmart.ca/fr/browse/appliances/10018?facet=special_offers%3ALiquidation&icid=cp_page_other_appliances_carousal_web_50804_ODJF6KQFZT"
+          PLAYWRIGHT_BROWSERS_PATH: 0
         run: |
           python scripts/walmart_scraper.py
+          echo "---- Résumé des fichiers ----"
+          ls -lh data/walmart/saint-jerome || true
+          for f in data/walmart/saint-jerome/*.json; do
+            echo "$f -> $(jq 'length' "$f" 2>/dev/null || echo NA) produits"
+          done
 
-      - name: Commit changes (Walmart Saint-Jérôme)
-        shell: bash
+      - name: Commit changes
         run: |
-          set -e
-          git config --global user.name  "Olivier-cousineau"
-          git config --global user.email "ocousineau40@gmail.com"
-
-          # Ajoute tout ce qui a changé dans le dossier (JSON, CSV s’ils existent)
-          git add -A data/walmart/saint-jerome
-
-          # S'il n'y a rien à committer, on sort proprement
+          git config user.name "Olivier-cousineau"
+          git config user.email "ocousineau40@gmail.com"
+          git add -A
           if git diff --cached --quiet; then
-            echo "No changes – nothing to commit."
-            exit 0
+            echo "No changes to commit."
+          else
+            git commit -m "chore: update Walmart Saint-Jérôme clearance JSON $(date -u +'%Y-%m-%dT%H:%MZ')"
+            git push
           fi
-
-          git commit -m "Walmart Saint-Jérôme: MAJ données (auto)"
-          git push
