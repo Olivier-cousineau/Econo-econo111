@@ -48,7 +48,12 @@ const INCLUDE_LIQUIDATION_PRICE = parseBooleanArg(
 
 // ------------- CONFIG -------------
 const OUT_DIR = "./images";
-const OUT_JSON = "./data.json";
+const OUT_JSON = path.join(
+  __dirname,
+  "data",
+  "canadian-tire",
+  "saint-jerome.json"
+);
 const OUT_CSV = "./data.csv";
 const CONCURRENCY = 6;
 const DETAIL_CONCURRENCY = 4;
@@ -583,6 +588,7 @@ async function main() {
     )
   );
 
+  await fs.ensureDir(path.dirname(OUT_JSON));
   await fs.writeJson(OUT_JSON, withLocalImages, { spaces: 2 });
   console.log(`💾  JSON → ${OUT_JSON}`);
 
