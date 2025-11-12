@@ -63,6 +63,14 @@ const SELECTORS = {
   card: "li[data-testid='product-grids']",
 };
 
+const SEL = {
+  card: "li[data-testid=\"product-grids\"]",
+  price: "span[data-testid=\"priceTotal\"]",
+  currentPage: "nav[aria-label=\"pagination\"] [aria-current=\"page\"]",
+  pageLinkByNum: (n) => `nav[aria-label="pagination"] a[aria-label="Page ${n}"]`,
+  anyPageLinks: "nav[aria-label=\"pagination\"] a[aria-label^=\"Page \"]",
+};
+
 const cleanMoney = (s) => {
   if (!s) return null;
   s = s.replace(/\u00a0/g, " ").trim();
@@ -70,24 +78,201 @@ const cleanMoney = (s) => {
   return m ? m[1].replace(/\s/g, "") : s;
 };
 
-const PAGINATION = {
-  waitForList: SELECTORS.card,
-  nextSelectors: [
-    "nav[aria-label='Pagination'] a[aria-label='Next']:not(.pagination_chevron--disabled)",
-    "nav[aria-label='Pagination'] button[aria-label='Next']:not([disabled])",
-    "a[data-testid='chevron->']:not(.pagination_chevron--disabled)",
-    "button:has-text('>'):not([disabled])",
-    "a.pagination_chevron:not(.pagination_chevron--disabled)",
-  ],
-  loadMoreBtn: [
-    "button[data-testid='load-more']",
-    "button:has-text('Charger plus')",
-    "button:has-text('Load more')",
-  ].join(", "),
-};
+async function getFirstSku(page) {
+  try {
+    const t = await page.locator(".nl-product__code").first().textContent({ timeout: 2000 });
+    return t ? t.replace(/^#/, "").trim() : null;
+  } catch {
+    return null;
+  }
+}
 
-function nextBtn(page) {
-  return page.locator(PAGINATION.nextSelectors.join(", ")).first();
+async function waitProductsStable(page, timeout = 30000) {
+  await page.waitForSelector(SEL.card, { timeout });
+  await page.waitForSelector(SEL.price, { timeout });
+
+  await page.waitForFunction(
+    () => document.querySelectorAll('li[data-testid="product-grids"]').length > 0,
+    { timeout }
+  );
+}
+
+async function getTotalPages(page) {
+  const links = page.locator(SEL.anyPageLinks);
+  const n = await links.count();
+  if (n === 0) return 1;
+
+  let max = 1;
+  for (let i = 0; i < n; i++) {
+    const a = links.nth(i);
+    const label = (await a.getAttribute("aria-label")) || "";
+    const m = label.match(/Page\s+(\d+)/i);
+    if (m) max = Math.max(max, parseInt(m[1], 10));
+  }
+  return max;
+}
+
+async function getCurrentPageNum(page) {
+  try {
+    const el = page.locator(SEL.currentPage);
+    const label = (await el.getAttribute("aria-label")) || (await el.textContent()) || "";
+    const m = label.match(/(\d+)/);
+    return m ? parseInt(m[1], 10) : 1;
+  } catch {
+    return 1;
+  }
+}
+
+async function extractFromCard(card) {
+  return card.evaluate((el, { base }) => {
+    const cleanMoney = (s) => {
+      if (!s) return null;
+      s = s.replace(/\u00a0/g, " ").trim();
+      const m = s.match(/(\d[\d\s.,]*)(?:\s*\$)?/);
+      return m ? m[1].replace(/\s/g, "") : s;
+    };
+
+    const textFromEl = (node) => {
+      if (!node) return null;
+      const t = node.textContent;
+      return t ? t.trim() : null;
+    };
+
+    const titleEl = el.querySelector("[id^='title__promolisting-'], .nl-product-card__title");
+    const title = textFromEl(titleEl);
+
+    const priceSaleRaw = textFromEl(el.querySelector("span[data-testid='priceTotal'], .nl-price--total"));
+    const priceWasRaw = textFromEl(el.querySelector(".nl-price__was s, .nl-price__was, .nl-price--was, .nl-price__change s"));
+    const price_sale = cleanMoney(priceSaleRaw);
+    const price_original = cleanMoney(priceWasRaw);
+
+    const imgEl = el.querySelector(".nl-product-card__image-wrap img");
+    let image = null;
+    if (imgEl) image = imgEl.getAttribute("src") || imgEl.getAttribute("data-src");
+    if (image && image.startsWith("//")) image = `https:${image}`;
+    if (image && image.startsWith("/")) image = base + image;
+
+    const availability = textFromEl(el.querySelector(".nl-product-card__availability-message"));
+
+    let sku = textFromEl(el.querySelector(".nl-product__code"));
+    if (sku) sku = sku.replace(/^#/, "").trim();
+
+    const badges = Array.from(el.querySelectorAll(".nl-plp-badges"))
+      .map((node) => textFromEl(node))
+      .filter(Boolean);
+
+    let link = null;
+    const titleAnchor = titleEl ? titleEl.closest("a") : null;
+    if (titleAnchor) link = titleAnchor.getAttribute("href");
+    if (!link) {
+      const any = el.querySelector("a[href*='/p/'], a[href*='/product/']");
+      if (any) link = any.getAttribute("href");
+    }
+    if (link && link.startsWith("/")) link = base + link;
+
+    return {
+      name: title || null,
+      price_sale,
+      price_sale_raw: priceSaleRaw || null,
+      price_original,
+      price_original_raw: priceWasRaw || null,
+      image: image || null,
+      availability: availability || null,
+      sku: sku || null,
+      badges,
+      link: link || null,
+    };
+  }, { base: BASE });
+}
+
+async function scrapeListing(page) {
+  await page.waitForSelector(SELECTORS.card, { timeout: 60000 });
+  await page.waitForSelector("span[data-testid='priceTotal'], .nl-price--total", { timeout: 60000 }).catch(() => {});
+
+  try {
+    return (await page.locator(SELECTORS.card).evaluateAll((nodes, { base }) => {
+      const cleanMoney = (s) => {
+        if (!s) return null;
+        s = s.replace(/\u00a0/g, " ").trim();
+        const m = s.match(/(\d[\d\s.,]*)(?:\s*\$)?/);
+        return m ? m[1].replace(/\s/g, "") : s;
+      };
+
+      const textFromEl = (node) => {
+        if (!node) return null;
+        const t = node.textContent;
+        return t ? t.trim() : null;
+      };
+
+      return nodes.map((el) => {
+        const titleEl = el.querySelector("[id^='title__promolisting-'], .nl-product-card__title");
+        const title = textFromEl(titleEl);
+
+        const priceSaleRaw = textFromEl(el.querySelector("span[data-testid='priceTotal'], .nl-price--total"));
+        const priceWasRaw = textFromEl(el.querySelector(".nl-price__was s, .nl-price__was, .nl-price--was, .nl-price__change s"));
+        const price_sale = cleanMoney(priceSaleRaw);
+        const price_original = cleanMoney(priceWasRaw);
+
+        const imgEl = el.querySelector(".nl-product-card__image-wrap img");
+        let image = null;
+        if (imgEl) image = imgEl.getAttribute("src") || imgEl.getAttribute("data-src");
+        if (image && image.startsWith("//")) image = `https:${image}`;
+        if (image && image.startsWith("/")) image = base + image;
+
+        const availability = textFromEl(el.querySelector(".nl-product-card__availability-message"));
+
+        let sku = textFromEl(el.querySelector(".nl-product__code"));
+        if (sku) sku = sku.replace(/^#/, "").trim();
+
+        const badges = Array.from(el.querySelectorAll(".nl-plp-badges"))
+          .map((node) => textFromEl(node))
+          .filter(Boolean);
+
+        let link = null;
+        const titleAnchor = titleEl ? titleEl.closest("a") : null;
+        if (titleAnchor) link = titleAnchor.getAttribute("href");
+        if (!link) {
+          const any = el.querySelector("a[href*='/p/'], a[href*='/product/']");
+          if (any) link = any.getAttribute("href");
+        }
+        if (link && link.startsWith("/")) link = base + link;
+
+        const productId = el.getAttribute("data-product-id") || el.getAttribute("data-productid") || null;
+        const productSku = el.getAttribute("data-sku") || el.getAttribute("data-product-sku") || sku || null;
+
+        return {
+          name: title || null,
+          price_sale,
+          price_sale_raw: priceSaleRaw || null,
+          price_original,
+          price_original_raw: priceWasRaw || null,
+          image: image || null,
+          availability: availability || null,
+          sku: sku || null,
+          badges,
+          link: link || null,
+          product_id: productId,
+          product_sku: productSku,
+        };
+      });
+    }, { base: BASE })) || [];
+  } catch (e) {
+    console.warn("scrapeListing evaluateAll error:", e?.message || e);
+    const cards = page.locator(SELECTORS.card);
+    const n = await cards.count();
+    const tasks = [];
+    for (let i = 0; i < n; i++) {
+      const card = cards.nth(i);
+      tasks.push(
+        extractFromCard(card).catch((err) => {
+          console.warn("extractFromCard error:", err?.message || err);
+          return null;
+        })
+      );
+    }
+    const out = await Promise.all(tasks);
+    return out.filter(Boolean);
+  }
 }
 
 async function extractFromCard(card) {
@@ -435,12 +620,18 @@ async function main() {
   await fs.ensureDir(OUT_BASE);
 
   const all = [];
-  let pageCount = 0;
   const seenProducts = new Set();
 
-  while (pageCount < MAX_PAGES) {
-    pageCount += 1;
-    try { await page.waitForSelector(PAGINATION.waitForList, { timeout: 15000 }); } catch {}
+  await waitProductsStable(page);
+  await lazyWarmup(page);
+
+  let firstSku = await getFirstSku(page);
+  const totalPages = await getTotalPages(page);
+  const currentPage = await getCurrentPageNum(page);
+  const lastPage = Math.min(totalPages, MAX_PAGES || totalPages);
+
+  for (let p = currentPage; p <= lastPage; p++) {
+    await waitProductsStable(page);
     await lazyWarmup(page);
 
     const cards = await scrapeListing(page);
@@ -476,48 +667,44 @@ async function main() {
       const record = createRecordFromCard(card, pageIsClearance);
       if (record.title || record.price != null || record.image) batch.push(record);
     });
-    console.log(`✅ Page ${pageCount}: ${batch.length} produits`);
+    console.log(`✅ Page ${p}: ${batch.length} produits`);
     all.push(...batch);
 
-    if (pageCount % 10 === 0) await page.waitForTimeout(1200);
+    if (((p - currentPage + 1) % 10) === 0) await page.waitForTimeout(1200);
 
-    const loadMore = page.locator(PAGINATION.loadMoreBtn).first();
-    if (await loadMore.isVisible().catch(()=>false)) {
-      await Promise.all([ loadMore.click({ delay: 30 }).catch(()=>{}), page.waitForLoadState("domcontentloaded") ]);
-      await page.waitForSelector(PAGINATION.waitForList, { timeout: 20000 }).catch(()=>{});
-      await page.waitForTimeout(600);
-      continue;
+    if (p === lastPage) break;
+
+    const prevFirstSku = firstSku;
+    const linkSel = SEL.pageLinkByNum(p + 1);
+    if (!(await page.locator(linkSel).isVisible().catch(() => false))) {
+      await page.locator('nav[aria-label="pagination"]').scrollIntoViewIfNeeded().catch(() => {});
     }
-
-    const next = nextBtn(page);
-    if (await next.isVisible().catch(()=>false)) {
-      const before = page.url();
-      const responsePromise = page.waitForResponse(
-        (response) => {
-          try {
-            return response.url().includes("liquidation") && response.status() === 200;
-          } catch {
-            return false;
-          }
+    await Promise.all([
+      page.locator(linkSel).click({ timeout: 10000 }),
+      page.waitForFunction(
+        (expected) => {
+          const el = document.querySelector('nav[aria-label="pagination"] [aria-current="page"]');
+          if (!el) return false;
+          const txt = el.getAttribute('aria-label') || el.textContent || '';
+          return new RegExp(`\\b${expected}\\b`).test(txt);
         },
-        { timeout: 20000 }
-      ).catch(() => null);
-      const cardsReady = page.waitForSelector(SELECTORS.card, { timeout: 20000 }).catch(() => null);
-      await Promise.all([
-        next.click({ delay: 30 }).catch(() => {}),
-        responsePromise,
-        cardsReady,
-      ]);
-      await page.waitForLoadState("domcontentloaded").catch(() => {});
-      await page.waitForSelector(PAGINATION.waitForList, { timeout: 20000 }).catch(() => {});
-      await page.waitForTimeout(1000);
-      if (page.url() === before) {
-        await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
-        await page.waitForTimeout(600);
+        p + 1,
+        { timeout: 30000 }
+      ),
+    ]);
+
+    await waitProductsStable(page);
+    firstSku = await getFirstSku(page);
+
+    if (firstSku && prevFirstSku && firstSku === prevFirstSku) {
+      await page.evaluate(() => window.scrollTo(0, 0));
+      await waitProductsStable(page);
+      firstSku = await getFirstSku(page);
+      if (firstSku === prevFirstSku) {
+        console.warn("Pagination bloquée, arrêt pour éviter les 0-produits fantômes.");
+        break;
       }
-      continue;
     }
-    break;
   }
 
   // Enrichissement PDP (limite soft)
