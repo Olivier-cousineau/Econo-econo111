@@ -492,10 +492,25 @@ async function main() {
     const next = nextBtn(page);
     if (await next.isVisible().catch(()=>false)) {
       const before = page.url();
-      await next.click({ delay: 30 }).catch(()=>{});
-      await page.waitForLoadState("domcontentloaded");
-      await page.waitForSelector(PAGINATION.waitForList, { timeout: 20000 }).catch(()=>{});
-      await page.waitForTimeout(600);
+      const responsePromise = page.waitForResponse(
+        (response) => {
+          try {
+            return response.url().includes("liquidation") && response.status() === 200;
+          } catch {
+            return false;
+          }
+        },
+        { timeout: 20000 }
+      ).catch(() => null);
+      const cardsReady = page.waitForSelector(SELECTORS.card, { timeout: 20000 }).catch(() => null);
+      await Promise.all([
+        next.click({ delay: 30 }).catch(() => {}),
+        responsePromise,
+        cardsReady,
+      ]);
+      await page.waitForLoadState("domcontentloaded").catch(() => {});
+      await page.waitForSelector(PAGINATION.waitForList, { timeout: 20000 }).catch(() => {});
+      await page.waitForTimeout(1000);
       if (page.url() === before) {
         await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
         await page.waitForTimeout(600);
