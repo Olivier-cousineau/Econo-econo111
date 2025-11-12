@@ -69,9 +69,8 @@ const SELECTORS = {
 const SEL = {
   card: "li[data-testid=\"product-grids\"]",
   price: "span[data-testid=\"priceTotal\"], .nl-price--total, .price, .c-pricing__current",
+  paginationNav: "nav[aria-label=\"pagination\"]",
   currentPage: "nav[aria-label=\"pagination\"] [aria-current=\"page\"]",
-  pageLinkByNum: (n) => `nav[aria-label="pagination"] a[aria-label="Page ${n}"]`,
-  anyPageLinks: "nav[aria-label=\"pagination\"] a[aria-label^=\"Page \"]",
 };
 
 const cleanMoney = (s) => {
@@ -106,17 +105,30 @@ async function waitProductsStable(page, timeout = 30000) {
 }
 
 async function getTotalPages(page) {
-  const links = page.locator(SEL.anyPageLinks);
-  const n = await links.count();
-  if (n === 0) return 1;
+  const nav = page.locator(SEL.paginationNav).first();
+  if (!(await nav.count())) return 1;
 
+  const links = nav.locator("a, button");
+  const n = await links.count();
   let max = 1;
   for (let i = 0; i < n; i++) {
-    const a = links.nth(i);
-    const label = (await a.getAttribute("aria-label")) || (await a.textContent()) || "";
+    const btn = links.nth(i);
+    const disabled = await btn.getAttribute("aria-disabled");
+    if (disabled === "true") continue;
+    const label = (await btn.getAttribute("aria-label")) || (await btn.textContent()) || "";
     const m = label.match(/(\d+)/);
     if (m) max = Math.max(max, parseInt(m[1], 10));
   }
+
+  if (max === 1) {
+    const navText = ((await nav.textContent().catch(() => "")) || "").trim();
+    const match = navText.match(/(?:sur|of)\s*(\d+)/i);
+    if (match) {
+      const parsed = parseInt(match[1], 10);
+      if (Number.isFinite(parsed)) max = parsed;
+    }
+  }
+
   return max;
 }
 
@@ -129,6 +141,62 @@ async function getCurrentPageNum(page) {
   } catch {
     return 1;
   }
+}
+
+async function findPaginationTarget(page, nextPage) {
+  const nav = page.locator(SEL.paginationNav).first();
+  if (!(await nav.count())) return null;
+
+  const items = nav.locator("a, button");
+  const hiddenCandidates = [];
+  const count = await items.count();
+  const numberPattern = new RegExp(`\\b${nextPage}\\b`);
+  for (let i = 0; i < count; i++) {
+    const item = items.nth(i);
+    const disabled = await item.getAttribute("aria-disabled");
+    if (disabled === "true") continue;
+    const label = ((await item.getAttribute("aria-label")) || (await item.textContent()) || "").trim();
+    if (!label) continue;
+    if (numberPattern.test(label)) {
+      if (await item.isVisible().catch(() => false)) return item;
+      hiddenCandidates.push(item);
+    }
+  }
+
+  const arrowSelectors = [
+    "button[aria-label*='Suiv']",
+    "a[aria-label*='Suiv']",
+    "button[aria-label*='Next']",
+    "a[aria-label*='Next']",
+    "button[rel='next']",
+    "a[rel='next']",
+  ];
+  for (const selector of arrowSelectors) {
+    const loc = nav.locator(selector).first();
+    if (await loc.count()) {
+      const disabled = await loc.getAttribute("aria-disabled");
+      if (disabled === "true") continue;
+      if (await loc.isVisible().catch(() => false)) return loc;
+      hiddenCandidates.push(loc);
+    }
+  }
+
+  if (hiddenCandidates.length) return hiddenCandidates[0];
+
+  const textFallbacks = [
+    nav.locator("button:has-text('Suivant')"),
+    nav.locator("a:has-text('Suivant')"),
+    nav.locator("button:has-text('Next')"),
+    nav.locator("a:has-text('Next')"),
+  ];
+  for (const loc of textFallbacks) {
+    if (await loc.count()) {
+      if (await loc.first().isVisible().catch(() => false)) return loc.first();
+      hiddenCandidates.push(loc.first());
+    }
+  }
+
+  return hiddenCandidates.length ? hiddenCandidates[0] : null;
 }
 
 async function extractFromCard(card) {
@@ -357,19 +425,20 @@ async function downloadImage(url, idx, title) {
 }
 
 async function lazyWarmup(page) {
-  // scroll pour déclencher lazy render des prix/images
-  await page.evaluate(() => new Promise(res => {
-    let y = 0;
-    const step = Math.floor(window.innerHeight * 0.9);
-    const t = setInterval(() => {
+  // scroll rapide pour déclencher lazy render des prix/images sans multiplier les pauses
+  await page.evaluate(async () => {
+    const step = Math.max(150, Math.floor(window.innerHeight * 0.8));
+    const delay = 70;
+    for (let y = 0; y < document.body.scrollHeight; y += step) {
       window.scrollTo(0, y);
-      y += step;
-      if (y >= document.body.scrollHeight) { clearInterval(t); res(); }
-    }, 120);
-  }));
+      await new Promise((resolve) => setTimeout(resolve, delay));
+    }
+    window.scrollTo(0, 0);
+  });
+  await page.waitForTimeout(120);
   await page.waitForSelector(
     "[data-testid='sale-price'], [data-testid='regular-price'], span[data-testid='priceTotal'], .nl-price--total, .price, .price__value",
-    { timeout: 15000 }
+    { timeout: 12000 }
   ).catch(()=>{});
 }
 
@@ -535,18 +604,29 @@ async function main() {
     if (p === lastPage) break;
 
     const prevFirstSku = firstSku;
-    const linkSel = SEL.pageLinkByNum(p + 1);
-    const linkLoc = page.locator(linkSel).first();
-    if (!(await linkLoc.isVisible().catch(() => false))) {
-      await page.locator('nav[aria-label="pagination"]').scrollIntoViewIfNeeded().catch(() => {});
-    }
-    if (!(await linkLoc.count())) {
+    const target = await findPaginationTarget(page, p + 1);
+    if (!target) {
       console.warn(`Lien de pagination introuvable pour la page ${p + 1}, arrêt.`);
       break;
     }
 
+    if (!(await target.isVisible().catch(() => false))) {
+      await page.locator(SEL.paginationNav).scrollIntoViewIfNeeded().catch(() => {});
+      await page.waitForTimeout(100);
+    }
+
+    await target.scrollIntoViewIfNeeded().catch(() => {});
+
+    const clickNavigation = (async () => {
+      if (await target.isVisible().catch(() => false)) {
+        await target.click({ timeout: 12000 });
+      } else {
+        await target.evaluate((el) => { if (el) el.click(); }).catch(() => {});
+      }
+    })();
+
     await Promise.all([
-      linkLoc.click({ timeout: 10000 }),
+      clickNavigation,
       page.waitForFunction(
         (expected) => {
           const el = document.querySelector('nav[aria-label="pagination"] [aria-current="page"]');
@@ -556,8 +636,10 @@ async function main() {
         },
         p + 1,
         { timeout: 30000 }
-      ),
+      ).catch(() => {}),
     ]);
+
+    await page.waitForLoadState("networkidle").catch(() => {});
 
     await waitProductsStable(page);
     await lazyWarmup(page);
