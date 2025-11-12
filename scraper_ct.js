@@ -449,12 +449,21 @@ async function main() {
     const pageSeen = new Set();
     cards.forEach((card) => {
       const normalizedLink = card.link ? card.link.split("?")[0].toLowerCase() : null;
+      const linkKey = normalizedLink ? `link:${normalizedLink}` : null;
       const productId = card.product_id ? `id:${card.product_id}` : null;
       const skuKey = card.product_sku ? `sku:${card.product_sku}` : null;
-      const strongKey = productId || skuKey || normalizedLink;
-      if (strongKey) {
-        if (seenProducts.has(strongKey)) return;
-        seenProducts.add(strongKey);
+
+      const keys = [linkKey, productId, skuKey].filter(Boolean);
+      let duplicate = false;
+      if (keys.length) {
+        for (const key of keys) {
+          if (seenProducts.has(key)) {
+            duplicate = true;
+            break;
+          }
+        }
+        if (duplicate) return;
+        keys.forEach((key) => seenProducts.add(key));
       } else {
         const fallbackKey = card.name
           ? `${card.name}|${card.price_sale || ""}|${card.price_original || ""}|${card.image || ""}`.toLowerCase()
