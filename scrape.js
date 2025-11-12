@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // @ts-check
 /**
- * Scraper Canadian Tire - Liquidation (Playwright)
+ * Scraper Canadian Tire - Liquidation (Playwright + enrichissement fiche produit)
  */
 import { chromium } from "playwright";
 import fs from "fs-extra";
@@ -14,7 +14,6 @@ import minimist from "minimist";
 import { fileURLToPath } from "url";
 
 const args = minimist(process.argv.slice(2));
-
 function parseBooleanArg(value, defaultValue = false) {
   if (value === undefined) return defaultValue;
   if (typeof value === "boolean") return value;
@@ -26,7 +25,6 @@ function parseBooleanArg(value, defaultValue = false) {
   }
   return defaultValue;
 }
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -49,7 +47,7 @@ const INCLUDE_LIQUIDATION_PRICE = parseBooleanArg(
 const OUT_DIR = "./images";
 const OUT_JSON = "./data.json";
 const OUT_CSV = "./data.csv";
-const CONCURRENCY = 6;
+const CONCURRENCY = 5;
 
 const SELECTORS = {
   product: [
@@ -70,6 +68,7 @@ const SELECTORS = {
     "[data-testid='product-price']",
     ".price__value, .sale-price__value, .product-price",
     ".price, .c-pricing__sale, .c-pricing__current",
+    ".sale-price, .product__sale-price, .price-current",
   ].join(", "),
   priceRegular: [
     "[data-testid='reg-price']",
@@ -78,6 +77,7 @@ const SELECTORS = {
     "[data-testid='was-price']",
     ".price__was, .was-price__value, .product-was-price",
     ".c-pricing__was, .price--was, .price__value--was",
+    ".regular-price, .product__was-price, .price-old",
   ].join(", "),
   badge: [
     ".badge--clearance",
@@ -94,10 +94,7 @@ const SELECTORS = {
 };
 
 const PAGINATION = {
-  // conteneur de la grille (inchangé)
   waitForList: "ul[data-testid='product-grids'], .product-grid",
-
-  // flèche "suivant" — plusieurs variantes possibles sur CT
   nextSelectors: [
     "nav[aria-label='Pagination'] a[aria-label='Next']:not(.pagination_chevron--disabled)",
     "nav[aria-label='Pagination'] button[aria-label='Next']:not([disabled])",
@@ -105,7 +102,6 @@ const PAGINATION = {
     "button:has-text('>'):not([disabled])",
     "a.pagination_chevron:not(.pagination_chevron--disabled)",
   ],
-
   loadMoreBtn: [
     "button[data-testid='load-more']",
     "button:has-text('Charger plus')",
@@ -118,6 +114,7 @@ function nextBtn(page) {
 }
 
 // ------------- UTILS -------------
+
 function extractPrice(text) {
   if (!text) return null;
   const m = text.replace(/\s/g, "").match(/([0-9]+(?:[.,][0-9]{2})?)/);
@@ -157,7 +154,8 @@ async function scrapeListOnce(page) {
       for (const a of ["src", "data-src", "data-original", "data-image", "srcset"]) {
         const v = n.getAttribute(a);
         if (v) {
-          if (a === "srcset" && v.includes(",")) return new URL(v.split(",")[0].trim().split(" ")[0], location.href).toString();
+          if (a === "srcset" && v.includes(",")) 
+            return new URL(v.split(",")[0].trim().split(" ")[0], location.href).toString();
           return new URL(v, location.href).toString();
         }
       }
@@ -181,17 +179,11 @@ async function scrapeListOnce(page) {
 
       const priceText = pickText(el, ".price");
       const salePriceText = pickText(el, ".sale-price");
-
       let priceSaleRaw = salePriceText || pickText(el, SELECTORS.priceSale);
       let priceRegularRaw = pickText(el, SELECTORS.priceRegular);
 
-      if (!priceSaleRaw && priceText && salePriceText) {
-        priceSaleRaw = salePriceText;
-      }
-
-      if (!priceRegularRaw && priceText && !salePriceText) {
-        priceRegularRaw = priceText;
-      }
+      if (!priceSaleRaw && priceText && salePriceText) priceSaleRaw = salePriceText;
+      if (!priceRegularRaw && priceText && !salePriceText) priceRegularRaw = priceText;
 
       const skuAttr = el.getAttribute("data-sku");
       const skuText = (skuAttr && skuAttr.trim()) || pickText(el, ".sku");
@@ -213,61 +205,55 @@ async function scrapeListOnce(page) {
 
   return items
     .map((item) => {
-      const liquidationPrice = extractPrice(item.price_sale_raw);
+      const liquidationPrice = extractPrice(item.price_sale_raw || item.price_text_raw);
       const regularPrice = extractPrice(item.price_regular_raw);
-      const fallbackPrice = extractPrice(item.price_text_raw);
+      const quantity = item.quantity || null;
+      const sku = item.sku || null;
       const priceRaw =
-        item.price_text_raw ||
-        item.price_sale_raw ||
-        item.price_regular_raw ||
-        null;
-      const price = liquidationPrice ?? regularPrice ?? fallbackPrice;
+        item.price_text_raw || item.price_sale_raw || item.price_regular_raw || null;
+      const price = liquidationPrice ?? regularPrice;
+      const isLiquidation =
+        item.liquidation ||
+        (liquidationPrice != null &&
+          (regularPrice == null || liquidationPrice <= regularPrice));
 
-      const record = {
+      return {
         title: item.title,
         price,
         price_raw: priceRaw,
-        liquidation:
-          item.liquidation ||
-          (liquidationPrice != null &&
-            (regularPrice == null || liquidationPrice <= regularPrice)),
+        liquidation: isLiquidation,
         image: item.image,
         url: item.url,
+        sale_price: liquidationPrice,
+        sale_price_raw: item.price_sale_raw,
+        regular_price: regularPrice,
+        regular_price_raw: item.price_regular_raw,
+        sku,
+        quantity,
       };
-
-      if (INCLUDE_LIQUIDATION_PRICE) {
-        record.liquidation_price = liquidationPrice;
-        record.liquidation_price_raw = item.price_sale_raw || null;
-      }
-
-      if (INCLUDE_REGULAR_PRICE) {
-        record.regular_price = regularPrice;
-        record.regular_price_raw = item.price_regular_raw || null;
-      }
-
-      if (liquidationPrice != null) {
-        record.sale_price = liquidationPrice;
-      }
-
-      if (item.price_sale_raw) {
-        record.sale_price_raw = item.price_sale_raw;
-      }
-
-      if (item.price_text_raw) {
-        record.price_text_raw = item.price_text_raw;
-      }
-
-      if (item.sku) {
-        record.sku = item.sku || null;
-      }
-
-      if (item.quantity) {
-        record.quantity = item.quantity || null;
-      }
-
-      return record;
     })
     .filter((p) => p.title || p.price != null || p.image);
+}
+
+async function enrichWithDetails(context, item) {
+  if (!item.url) return item;
+  let sku = item.sku;
+  let quantity = item.quantity;
+  try {
+    const productPage = await context.newPage();
+    await productPage.goto(item.url, { timeout: 60000, waitUntil: "domcontentloaded" });
+    await productPage.waitForTimeout(1500);
+    sku =
+      (await productPage.locator(".ProductDetails__Sku, .sku, .spec-row:has-text('Sku')").textContent().catch(() => null)) ||
+      sku;
+    quantity =
+      (await productPage.locator(".storeAvailableStock, .prod-availability, .stock-info")
+        .textContent()
+        .catch(() => null)) ||
+      quantity;
+    await productPage.close();
+  } catch (_) {}
+  return { ...item, sku, quantity };
 }
 
 async function maybeCloseStoreModal(page) {
@@ -288,12 +274,12 @@ async function maybeCloseStoreModal(page) {
         await page.waitForTimeout(500);
       }
     } catch {
-      // ignore
     }
   }
 }
 
 // ------------- MAIN -------------
+
 async function main() {
   const browser = await chromium.launch({
     headless: HEADLESS,
@@ -303,9 +289,6 @@ async function main() {
   const page = await context.newPage();
 
   console.log("➡️  Go to:", START_URL);
-  console.log(
-    `⚙️  Options → liquidation_price=${INCLUDE_LIQUIDATION_PRICE ? "on" : "off"}, regular_price=${INCLUDE_REGULAR_PRICE ? "on" : "off"}`
-  );
 
   let retries = 3;
   while (retries > 0) {
@@ -329,9 +312,7 @@ async function main() {
     pageCount += 1;
     try {
       await page.waitForSelector(PAGINATION.waitForList, { timeout: 15000 });
-    } catch {
-      // continue anyway
-    }
+    } catch {}
 
     const items = await scrapeListOnce(page);
     console.log(`✅ Page ${pageCount}: ${items.length} produits`);
@@ -350,7 +331,6 @@ async function main() {
       continue;
     }
 
-    // ---- pagination: cliquer sur la flèche "suivant"
     const next = nextBtn(page);
     if (await next.isVisible().catch(() => false)) {
       const before = page.url();
@@ -359,20 +339,18 @@ async function main() {
       await page.waitForSelector(PAGINATION.waitForList, { timeout: 20000 }).catch(() => {});
       await page.waitForTimeout(800);
 
-      // Si l'URL n'a pas bougé, on force un petit scroll pour déclencher le rendu
       if (page.url() === before) {
         await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
         await page.waitForTimeout(800);
       }
-      continue; // prochaine page
+      continue;
     }
-
-    break; // plus de "suivant" visible → fin
+    break;
   }
 
   const limit = pLimit(CONCURRENCY);
   let idx = 0;
-  const withLocalImages = await Promise.all(
+  const withLocalImagesAndDetails = await Promise.all(
     all.map((p) =>
       limit(async () => {
         idx += 1;
@@ -384,12 +362,13 @@ async function main() {
             console.warn("⚠️  image download failed:", p.image);
           }
         }
-        return { ...p, image_path };
+        const enriched = await enrichWithDetails(context, p);
+        return { ...enriched, image_path };
       })
     )
   );
 
-  await fs.writeJson(OUT_JSON, withLocalImages, { spaces: 2 });
+  await fs.writeJson(OUT_JSON, withLocalImagesAndDetails, { spaces: 2 });
   console.log(`💾  JSON → ${OUT_JSON}`);
 
   const csv = createObjectCsvWriter({
@@ -398,25 +377,19 @@ async function main() {
       { id: "title", title: "title" },
       { id: "price", title: "price" },
       { id: "price_raw", title: "price_raw" },
-      ...(INCLUDE_REGULAR_PRICE
-        ? [
-            { id: "regular_price", title: "regular_price" },
-            { id: "regular_price_raw", title: "regular_price_raw" },
-          ]
-        : []),
-      ...(INCLUDE_LIQUIDATION_PRICE
-        ? [
-            { id: "liquidation_price", title: "liquidation_price" },
-            { id: "liquidation_price_raw", title: "liquidation_price_raw" },
-          ]
-        : []),
+      { id: "regular_price", title: "regular_price" },
+      { id: "regular_price_raw", title: "regular_price_raw" },
+      { id: "sale_price", title: "sale_price" },
+      { id: "sale_price_raw", title: "sale_price_raw" },
       { id: "liquidation", title: "liquidation" },
       { id: "url", title: "url" },
       { id: "image", title: "image" },
       { id: "image_path", title: "image_path" },
+      { id: "sku", title: "sku" },
+      { id: "quantity", title: "quantity" },
     ],
   });
-  await csv.writeRecords(withLocalImages);
+  await csv.writeRecords(withLocalImagesAndDetails);
   console.log(`📄  CSV  → ${OUT_CSV}`);
 
   await browser.close();
