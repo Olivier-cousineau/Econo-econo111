@@ -199,6 +199,10 @@ html[data-page="landing"] .seller-metric{background:linear-gradient(160deg,rgba(
 
 html[data-page="landing"] .seller-metric strong{font-size:24px;color:#bbf7d0}
 
+html[data-page] .city-chip-grid{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;padding:12px;border-radius:12px;background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.2)}
+html[data-page] .city-chip{display:inline-flex;align-items:center;justify-content:center;padding:4px 12px;border-radius:999px;border:1px solid rgba(148,163,184,.35);background:rgba(15,23,42,.65);font-size:12px;line-height:1.2;color:inherit;white-space:nowrap}
+html[data-page] .city-chip-grid.is-empty{justify-content:center;color:rgba(148,163,184,.85);font-style:italic}
+
 html[data-page="landing"] .seller-metric span{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:rgba(226,232,240,.8)}
 
 html[data-page="landing"] .seller-metric p{margin:0;font-size:13px;color:rgba(226,232,240,.75);line-height:1.4}
