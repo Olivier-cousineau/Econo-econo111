@@ -863,37 +863,7 @@
       };
     });
 
-    const CANADIAN_TIRE_BRANCHES = [];
-    for(const branch of baseBranches()){
-      if(branch.slug === 'laval'){
-        CANADIAN_TIRE_BRANCHES.push({
-          ...branch,
-          label: 'Laval — 1450 Boul. le Corbusier',
-          address: '1450 Boul. le Corbusier, Laval, QC',
-          slug: 'laval',
-          hasData: true
-        });
-        CANADIAN_TIRE_BRANCHES.push({
-          ...branch,
-          label: 'Laval — 4975 Blvd. Robert-Bourassa',
-          address: '4975 Blvd. Robert-Bourassa, Laval, QC',
-          slug: 'laval-robert-bourassa',
-          hasData: true
-        });
-        CANADIAN_TIRE_BRANCHES.push({
-          ...branch,
-          label: 'Laval — 2075 Bd Chomedey',
-          address: '2075 Bd Chomedey, Laval, QC',
-          slug: 'laval-chomedey',
-          hasData: true
-        });
-        continue;
-      }
-      CANADIAN_TIRE_BRANCHES.push({
-        ...branch,
-        hasData: branch.slug === 'saint-jerome' || branch.slug === 'blainville'
-      });
-    }
+    const CANADIAN_TIRE_BRANCHES = buildCanadianTireBranchesFromLocations(await loadCanadianTireLocations());
 
     const STORES = [
       {label:'Walmart', slug:'walmart', branches: WALMART_QUEBEC_BRANCHES},
@@ -1157,6 +1127,121 @@
       if(lastError) throw lastError;
       return null;
     }
+      const CANADIAN_TIRE_LOCATIONS_PATH = 'data/canadian-tire/branches.json';
+      const CANADIAN_TIRE_FALLBACK_PATH = 'data/canadian-tire/stores_raw.txt';
+      const CANADIAN_TIRE_SLUG_OVERRIDES = {
+        '271':'saint-jerome',
+        '649':'blainville',
+        '300':'laval',
+        '231':'laval-robert-bourassa',
+        '155':'laval-chomedey'
+      };
+      const CANADIAN_TIRE_LABEL_OVERRIDES = {
+        '271':'Saint-Jérôme — 700, boul. Monseigneur-Dubois',
+        '649':'Blainville — 500, boul. de la Seigneurie Ouest',
+        '300':'Laval — 1450, boul. le Corbusier',
+        '231':'Laval — 4975, boul. Robert-Bourassa',
+        '155':'Laval — 500, Chomedey (A-13) Ouest'
+      };
+      const CANADIAN_TIRE_CITY_OVERRIDES = {
+        '271':'Saint-Jérôme',
+        '649':'Blainville',
+        '300':'Laval',
+        '231':'Laval',
+        '155':'Laval'
+      };
+      const CANADIAN_TIRE_BRANCHES_WITH_DATA = new Set(['saint-jerome','blainville','laval','laval-robert-bourassa','laval-chomedey']);
+
+      function canonicalizeCanadianTireSlug(value){
+        if(value === undefined || value === null) return '';
+        return String(value).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').replace(/--+/g,'-');
+      }
+
+      async function loadCanadianTireLocations(){
+        if(window.__ECONODEAL_CANADIAN_TIRE_LOCATIONS__){
+          return window.__ECONODEAL_CANADIAN_TIRE_LOCATIONS__;
+        }
+        let entries = [];
+        try{
+          const response = await fetchDataJson(CANADIAN_TIRE_LOCATIONS_PATH);
+          if(response){
+            try{
+              const parsed = await response.clone().json();
+              if(Array.isArray(parsed)){
+                entries = parsed;
+              }
+            }catch(err){
+              console.warn('Failed to parse Canadian Tire locations JSON', err);
+            }
+          }
+        }catch(err){
+          console.warn('Failed to load Canadian Tire locations', err);
+        }
+        if(!entries.length){
+          try{
+            const fallbackResponse = await fetchDataJson(CANADIAN_TIRE_FALLBACK_PATH);
+            if(fallbackResponse){
+              const text = await fallbackResponse.clone().text();
+              const lines = text.split(/\r?\n/);
+              const parsedEntries = [];
+              for(const rawLine of lines.slice(1)){
+                const line = rawLine.trim();
+                if(!line) continue;
+                const parts = line.split(/\t+/);
+                if(parts.length < 2) continue;
+                const [idPart, namePart, addressPart=''] = parts;
+                const normalizedId = (idPart || '').trim();
+                const normalizedName = (namePart || '').trim();
+                const normalizedAddress = (addressPart || '').trim();
+                if(!normalizedId || !normalizedName) continue;
+                parsedEntries.push({ id: normalizedId, name: normalizedName, address: normalizedAddress });
+              }
+              if(parsedEntries.length){
+                entries = parsedEntries;
+              }
+            }
+          }catch(err){
+            console.warn('Failed to parse fallback Canadian Tire locations', err);
+          }
+        }
+        const normalized = Array.isArray(entries) ? entries.map(entry => ({
+          id: String(entry.id ?? '').trim(),
+          name: String(entry.name ?? entry.city ?? '').trim(),
+          address: String(entry.address ?? '').trim()
+        })).filter(entry => entry.id && entry.name) : [];
+        window.__ECONODEAL_CANADIAN_TIRE_LOCATIONS__ = normalized;
+        return normalized;
+      }
+
+      function buildCanadianTireBranchesFromLocations(locations){
+        if(!Array.isArray(locations)) return [];
+        const seen = new Set();
+        const branches = [];
+        for(const entry of locations){
+          if(!entry) continue;
+          const id = String(entry.id ?? '').trim();
+          const name = String(entry.name ?? '').trim();
+          const address = String(entry.address ?? '').trim();
+          if(!id || !name) continue;
+          const slug = CANADIAN_TIRE_SLUG_OVERRIDES[id] || canonicalizeCanadianTireSlug(name);
+          const label = CANADIAN_TIRE_LABEL_OVERRIDES[id] || `${name} (#${id})`;
+          const citySource = CANADIAN_TIRE_CITY_OVERRIDES[id] || name.split(',')[0] || name;
+          const city = String(citySource).trim();
+          const key = `${slug}#${id}`;
+          if(seen.has(key)) continue;
+          seen.add(key);
+          branches.push({
+            label,
+            slug,
+            city,
+            address,
+            storeNumber: id,
+            hasData: CANADIAN_TIRE_BRANCHES_WITH_DATA.has(slug)
+          });
+        }
+        return branches;
+      }
+
     // currency.cadToLocalRate indique la conversion d'un dollar canadien vers la devise locale.
     const COUNTRY_CONFIG = {
       canada: {
