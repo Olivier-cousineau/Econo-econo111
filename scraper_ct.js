@@ -90,13 +90,21 @@ async function getFirstSku(page) {
 }
 
 async function waitProductsStable(page, timeout = 30000) {
+  const start = Date.now();
   await page.waitForSelector(SEL.card, { timeout });
-  await page.waitForSelector(SEL.price, { timeout }).catch(() => {});
 
+  const priceTimeout = Math.min(4500, Math.max(1500, Math.floor(timeout / 4)));
+  await Promise.race([
+    page.waitForSelector(SEL.price, { timeout: priceTimeout }),
+    page.waitForTimeout(priceTimeout + 200),
+  ]).catch(() => {});
+
+  const elapsed = Date.now() - start;
+  const remaining = Math.max(1500, timeout - elapsed);
   try {
     await page.waitForFunction(
       () => document.querySelectorAll('li[data-testid="product-grids"]').length > 0,
-      { timeout }
+      { timeout: remaining }
     );
   } catch (err) {
     const count = await page.locator(SEL.card).count().catch(() => 0);
@@ -427,19 +435,28 @@ async function downloadImage(url, idx, title) {
 async function lazyWarmup(page) {
   // scroll rapide pour déclencher lazy render des prix/images sans multiplier les pauses
   await page.evaluate(async () => {
-    const step = Math.max(150, Math.floor(window.innerHeight * 0.8));
-    const delay = 70;
-    for (let y = 0; y < document.body.scrollHeight; y += step) {
+    const viewport = window.innerHeight || 800;
+    const maxScroll = document.body.scrollHeight || viewport;
+    if (maxScroll <= viewport * 1.2) {
+      window.scrollTo(0, 0);
+      return;
+    }
+    const step = Math.max(200, Math.floor(viewport * 1.1));
+    const delay = 55;
+    for (let y = 0; y < maxScroll; y += step) {
       window.scrollTo(0, y);
       await new Promise((resolve) => setTimeout(resolve, delay));
     }
     window.scrollTo(0, 0);
   });
-  await page.waitForTimeout(120);
-  await page.waitForSelector(
-    "[data-testid='sale-price'], [data-testid='regular-price'], span[data-testid='priceTotal'], .nl-price--total, .price, .price__value",
-    { timeout: 12000 }
-  ).catch(()=>{});
+  await page.waitForTimeout(70);
+  await Promise.race([
+    page.waitForSelector(
+      "[data-testid='sale-price'], [data-testid='regular-price'], span[data-testid='priceTotal'], .nl-price--total, .price, .price__value",
+      { timeout: 6500 }
+    ),
+    page.waitForTimeout(900),
+  ]).catch(()=>{});
 }
 
 async function enrichWithDetails(context, item) {
@@ -599,7 +616,7 @@ async function main() {
     console.log(`✅ Page ${p}: ${batch.length} produits`);
     all.push(...batch);
 
-    if (((p - currentPage + 1) % 10) === 0) await page.waitForTimeout(1200);
+    if (((p - currentPage + 1) % 10) === 0) await page.waitForTimeout(900);
 
     if (p === lastPage) break;
 
@@ -639,11 +656,14 @@ async function main() {
       ).catch(() => {}),
     ]);
 
-    await page.waitForLoadState("networkidle").catch(() => {});
+    await Promise.race([
+      page.waitForLoadState("networkidle").catch(() => {}),
+      page.waitForTimeout(1800),
+    ]);
 
     await waitProductsStable(page);
     await lazyWarmup(page);
-    await page.waitForTimeout(450);
+    await page.waitForTimeout(250);
     pagePrimed = true;
     firstSku = await getFirstSku(page);
 
