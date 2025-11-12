@@ -481,14 +481,18 @@ async function main() {
   await waitProductsStable(page);
   await lazyWarmup(page);
 
+  let pagePrimed = true;
   let firstSku = await getFirstSku(page);
   const totalPages = await getTotalPages(page);
   const currentPage = await getCurrentPageNum(page);
   const lastPage = SHOULD_LIMIT_PAGES ? Math.min(totalPages, MAX_PAGES) : totalPages;
 
   for (let p = currentPage; p <= lastPage; p++) {
-    await waitProductsStable(page);
-    await lazyWarmup(page);
+    if (!pagePrimed) {
+      await waitProductsStable(page);
+      await lazyWarmup(page);
+    }
+    pagePrimed = false;
 
     const cards = await scrapeListing(page);
     const pageIsClearance = /\/liquidation\.html/i.test(await page.url());
@@ -556,12 +560,16 @@ async function main() {
     ]);
 
     await waitProductsStable(page);
-    await page.waitForTimeout(600);
+    await lazyWarmup(page);
+    await page.waitForTimeout(450);
+    pagePrimed = true;
     firstSku = await getFirstSku(page);
 
     if (firstSku && prevFirstSku && firstSku === prevFirstSku) {
       await page.evaluate(() => window.scrollTo(0, 0));
       await waitProductsStable(page);
+      await lazyWarmup(page);
+      pagePrimed = true;
       firstSku = await getFirstSku(page);
       if (firstSku === prevFirstSku) {
         console.warn("Pagination bloquée, arrêt pour éviter les 0-produits fantômes.");
