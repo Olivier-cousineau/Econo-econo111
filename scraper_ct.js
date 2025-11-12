@@ -38,7 +38,10 @@ const CITY     = args.city ? String(args.city) : null;
 const DEFAULT_BASE = "https://www.canadiantire.ca/fr/promotions/liquidation.html";
 const START_URL = args.url || (STORE_ID ? `${DEFAULT_BASE}?store=${STORE_ID}` : `${DEFAULT_BASE}?store=271`);
 
-const MAX_PAGES = Number(args.maxPages || 125);
+const parsedMaxPages = Number(args.maxPages);
+const hasExplicitMaxPages = Number.isFinite(parsedMaxPages);
+const MAX_PAGES = hasExplicitMaxPages && parsedMaxPages > 0 ? parsedMaxPages : 125;
+const SHOULD_LIMIT_PAGES = !hasExplicitMaxPages || parsedMaxPages > 0;
 const HEADLESS  = !args.headful;
 
 const INCLUDE_REGULAR_PRICE    = parseBooleanArg(args["include-regular-price"] ?? args.includeRegularPrice, true);
@@ -56,69 +59,228 @@ console.log(`OUT_BASE=${OUT_BASE}`);
 
 const CONCURRENCY = 5;
 
-// ---------- SELECTORS ----------
+// === Helpers & Sélecteurs ===
+const BASE = "https://www.canadiantire.ca";
+
 const SELECTORS = {
-  product: [
-    "li[data-testid='product-grids'] article",
-    "li[data-testid='product-grids']",
-    "article[data-testid='product-tile']",
-    "li[data-testid^='product-grid']",
-    ".product-grid__item article",
-  ].join(", "),
-  title: [
-    "[data-testid='product-title']",
-    ".product-name",
-    ".pdp-link",
-    "h3, h2",
-  ].join(", "),
-  priceSale: [
-    "[data-testid='sale-price']",
-    "[data-testid='product-price']",
-    ".price__value, .sale-price__value, .product-price",
-    ".price, .c-pricing__sale, .c-pricing__current",
-    ".sale-price, .product__sale-price, .price-current",
-  ].join(", "),
-  priceRegular: [
-    "[data-testid='reg-price']",
-    "[data-testid='regular-price']",
-    "[data-testid='list-price']",
-    "[data-testid='was-price']",
-    ".price__was, .was-price__value, .product-was-price",
-    ".c-pricing__was, .price--was, .price__value--was",
-    ".regular-price, .product__was-price, .price-old",
-  ].join(", "),
-  badge: [
-    ".badge--clearance",
-    ".badge--liquidation",
-    ".tag--clearance",
-    "[data-testid='badge-clearance']",
-  ].join(", "),
-  image: [
-    "img[data-testid='product-image']",
-    ".product-image img",
-    "img",
-  ].join(", "),
-  link: "a[href]",
+  card: "li[data-testid='product-grids']",
 };
 
-const PAGINATION = {
-  waitForList: "ul[data-testid='product-grids'], .product-grid",
-  nextSelectors: [
-    "nav[aria-label='Pagination'] a[aria-label='Next']:not(.pagination_chevron--disabled)",
-    "nav[aria-label='Pagination'] button[aria-label='Next']:not([disabled])",
-    "a[data-testid='chevron->']:not(.pagination_chevron--disabled)",
-    "button:has-text('>'):not([disabled])",
-    "a.pagination_chevron:not(.pagination_chevron--disabled)",
-  ],
-  loadMoreBtn: [
-    "button[data-testid='load-more']",
-    "button:has-text('Charger plus')",
-    "button:has-text('Load more')",
-  ].join(", "),
+const SEL = {
+  card: "li[data-testid=\"product-grids\"]",
+  price: "span[data-testid=\"priceTotal\"], .nl-price--total, .price, .c-pricing__current",
+  currentPage: "nav[aria-label=\"pagination\"] [aria-current=\"page\"]",
+  pageLinkByNum: (n) => `nav[aria-label="pagination"] a[aria-label="Page ${n}"]`,
+  anyPageLinks: "nav[aria-label=\"pagination\"] a[aria-label^=\"Page \"]",
 };
 
-function nextBtn(page) {
-  return page.locator(PAGINATION.nextSelectors.join(", ")).first();
+const cleanMoney = (s) => {
+  if (!s) return null;
+  s = s.replace(/\u00a0/g, " ").trim();
+  const m = s.match(/(\d[\d\s.,]*)(?:\s*\$)?/);
+  return m ? m[1].replace(/\s/g, "") : s;
+};
+
+async function getFirstSku(page) {
+  try {
+    const t = await page.locator(".nl-product__code").first().textContent({ timeout: 2000 });
+    return t ? t.replace(/^#/, "").trim() : null;
+  } catch {
+    return null;
+  }
+}
+
+async function waitProductsStable(page, timeout = 30000) {
+  await page.waitForSelector(SEL.card, { timeout });
+  await page.waitForSelector(SEL.price, { timeout }).catch(() => {});
+
+  try {
+    await page.waitForFunction(
+      () => document.querySelectorAll('li[data-testid="product-grids"]').length > 0,
+      { timeout }
+    );
+  } catch (err) {
+    const count = await page.locator(SEL.card).count().catch(() => 0);
+    if (count === 0) throw err;
+  }
+}
+
+async function getTotalPages(page) {
+  const links = page.locator(SEL.anyPageLinks);
+  const n = await links.count();
+  if (n === 0) return 1;
+
+  let max = 1;
+  for (let i = 0; i < n; i++) {
+    const a = links.nth(i);
+    const label = (await a.getAttribute("aria-label")) || (await a.textContent()) || "";
+    const m = label.match(/(\d+)/);
+    if (m) max = Math.max(max, parseInt(m[1], 10));
+  }
+  return max;
+}
+
+async function getCurrentPageNum(page) {
+  try {
+    const el = page.locator(SEL.currentPage);
+    const label = (await el.getAttribute("aria-label")) || (await el.textContent()) || "";
+    const m = label.match(/(\d+)/);
+    return m ? parseInt(m[1], 10) : 1;
+  } catch {
+    return 1;
+  }
+}
+
+async function extractFromCard(card) {
+  return card.evaluate((el, { base }) => {
+    const cleanMoney = (s) => {
+      if (!s) return null;
+      s = s.replace(/\u00a0/g, " ").trim();
+      const m = s.match(/(\d[\d\s.,]*)(?:\s*\$)?/);
+      return m ? m[1].replace(/\s/g, "") : s;
+    };
+
+    const textFromEl = (node) => {
+      if (!node) return null;
+      const t = node.textContent;
+      return t ? t.trim() : null;
+    };
+
+    const titleEl = el.querySelector("[id^='title__promolisting-'], .nl-product-card__title");
+    const title = textFromEl(titleEl);
+
+    const priceSaleRaw = textFromEl(el.querySelector("span[data-testid='priceTotal'], .nl-price--total"));
+    const priceWasRaw = textFromEl(el.querySelector(".nl-price__was s, .nl-price__was, .nl-price--was, .nl-price__change s"));
+    const price_sale = cleanMoney(priceSaleRaw);
+    const price_original = cleanMoney(priceWasRaw);
+
+    const imgEl = el.querySelector(".nl-product-card__image-wrap img");
+    let image = null;
+    if (imgEl) image = imgEl.getAttribute("src") || imgEl.getAttribute("data-src");
+    if (image && image.startsWith("//")) image = `https:${image}`;
+    if (image && image.startsWith("/")) image = base + image;
+
+    const availability = textFromEl(el.querySelector(".nl-product-card__availability-message"));
+
+    let sku = textFromEl(el.querySelector(".nl-product__code"));
+    if (sku) sku = sku.replace(/^#/, "").trim();
+
+    const badges = Array.from(el.querySelectorAll(".nl-plp-badges"))
+      .map((node) => textFromEl(node))
+      .filter(Boolean);
+
+    let link = null;
+    const titleAnchor = titleEl ? titleEl.closest("a") : null;
+    if (titleAnchor) link = titleAnchor.getAttribute("href");
+    if (!link) {
+      const any = el.querySelector("a[href*='/p/'], a[href*='/product/']");
+      if (any) link = any.getAttribute("href");
+    }
+    if (link && link.startsWith("/")) link = base + link;
+
+    return {
+      name: title || null,
+      price_sale,
+      price_sale_raw: priceSaleRaw || null,
+      price_original,
+      price_original_raw: priceWasRaw || null,
+      image: image || null,
+      availability: availability || null,
+      sku: sku || null,
+      badges,
+      link: link || null,
+    };
+  }, { base: BASE });
+}
+
+async function scrapeListing(page) {
+  await page.waitForSelector(SELECTORS.card, { timeout: 60000 });
+  await page.waitForSelector("span[data-testid='priceTotal'], .nl-price--total", { timeout: 60000 }).catch(() => {});
+
+  try {
+    return (await page.locator(SELECTORS.card).evaluateAll((nodes, { base }) => {
+      const cleanMoney = (s) => {
+        if (!s) return null;
+        s = s.replace(/\u00a0/g, " ").trim();
+        const m = s.match(/(\d[\d\s.,]*)(?:\s*\$)?/);
+        return m ? m[1].replace(/\s/g, "") : s;
+      };
+
+      const textFromEl = (node) => {
+        if (!node) return null;
+        const t = node.textContent;
+        return t ? t.trim() : null;
+      };
+
+      return nodes.map((el) => {
+        const titleEl = el.querySelector("[id^='title__promolisting-'], .nl-product-card__title");
+        const title = textFromEl(titleEl);
+
+        const priceSaleRaw = textFromEl(el.querySelector("span[data-testid='priceTotal'], .nl-price--total"));
+        const priceWasRaw = textFromEl(el.querySelector(".nl-price__was s, .nl-price__was, .nl-price--was, .nl-price__change s"));
+        const price_sale = cleanMoney(priceSaleRaw);
+        const price_original = cleanMoney(priceWasRaw);
+
+        const imgEl = el.querySelector(".nl-product-card__image-wrap img");
+        let image = null;
+        if (imgEl) image = imgEl.getAttribute("src") || imgEl.getAttribute("data-src");
+        if (image && image.startsWith("//")) image = `https:${image}`;
+        if (image && image.startsWith("/")) image = base + image;
+
+        const availability = textFromEl(el.querySelector(".nl-product-card__availability-message"));
+
+        let sku = textFromEl(el.querySelector(".nl-product__code"));
+        if (sku) sku = sku.replace(/^#/, "").trim();
+
+        const badges = Array.from(el.querySelectorAll(".nl-plp-badges"))
+          .map((node) => textFromEl(node))
+          .filter(Boolean);
+
+        let link = null;
+        const titleAnchor = titleEl ? titleEl.closest("a") : null;
+        if (titleAnchor) link = titleAnchor.getAttribute("href");
+        if (!link) {
+          const any = el.querySelector("a[href*='/p/'], a[href*='/product/']");
+          if (any) link = any.getAttribute("href");
+        }
+        if (link && link.startsWith("/")) link = base + link;
+
+        const productId = el.getAttribute("data-product-id") || el.getAttribute("data-productid") || null;
+        const productSku = el.getAttribute("data-sku") || el.getAttribute("data-product-sku") || sku || null;
+
+        return {
+          name: title || null,
+          price_sale,
+          price_sale_raw: priceSaleRaw || null,
+          price_original,
+          price_original_raw: priceWasRaw || null,
+          image: image || null,
+          availability: availability || null,
+          sku: sku || null,
+          badges,
+          link: link || null,
+          product_id: productId,
+          product_sku: productSku,
+        };
+      });
+    }, { base: BASE })) || [];
+  } catch (e) {
+    console.warn("scrapeListing evaluateAll error:", e?.message || e);
+    const cards = page.locator(SELECTORS.card);
+    const n = await cards.count();
+    const tasks = [];
+    for (let i = 0; i < n; i++) {
+      const card = cards.nth(i);
+      tasks.push(
+        extractFromCard(card).catch((err) => {
+          console.warn("extractFromCard error:", err?.message || err);
+          return null;
+        })
+      );
+    }
+    const out = await Promise.all(tasks);
+    return out.filter(Boolean);
+  }
 }
 
 // ---------- UTILS ----------
@@ -128,6 +290,54 @@ function extractPrice(text) {
   if (!m) return null;
   const num = Number(m[1].replace(",", "."));
   return Number.isFinite(num) ? num : null;
+}
+
+function createRecordFromCard(card, pageIsClearance) {
+  const priceSaleRaw = card.price_sale_raw ?? card.price_sale ?? null;
+  const priceWasRaw = card.price_original_raw ?? card.price_original ?? null;
+  const salePrice = extractPrice(priceSaleRaw ?? undefined);
+  const regularPrice = extractPrice(priceWasRaw ?? undefined);
+  const priceRaw = priceSaleRaw || priceWasRaw || null;
+  const price = salePrice ?? regularPrice ?? null;
+
+  const badges = Array.isArray(card.badges) ? card.badges : [];
+  const normalizedBadges = badges.map((b) => b.toLowerCase());
+  const hasLiquidationBadge = normalizedBadges.some((b) => /liquidation|clearance/.test(b));
+  const isLiquidation = hasLiquidationBadge ||
+    (pageIsClearance && salePrice != null && (regularPrice == null || salePrice <= regularPrice));
+
+  const rec = {
+    store_id: STORE_ID || null,
+    city: CITY || null,
+    title: card.name || null,
+    price,
+    price_raw: priceRaw,
+    liquidation: !!isLiquidation,
+    image: card.image || null,
+    url: card.link || null,
+    sku: card.sku || card.product_sku || null,
+    product_id: card.product_id || null,
+    product_sku: card.product_sku || null,
+    quantity: null,
+    availability: card.availability || null,
+    badges,
+  };
+
+  if (INCLUDE_LIQUIDATION_PRICE) {
+    rec.liquidation_price = salePrice ?? null;
+    rec.liquidation_price_raw = priceSaleRaw || null;
+    rec.sale_price = salePrice ?? null;
+    rec.sale_price_raw = priceSaleRaw || null;
+  }
+  if (INCLUDE_REGULAR_PRICE) {
+    rec.regular_price = regularPrice ?? null;
+    rec.regular_price_raw = priceWasRaw || null;
+  }
+
+  rec.price_sale_clean = card.price_sale || null;
+  rec.price_original_clean = card.price_original || null;
+
+  return rec;
 }
 
 async function downloadImage(url, idx, title) {
@@ -158,115 +368,9 @@ async function lazyWarmup(page) {
     }, 120);
   }));
   await page.waitForSelector(
-    "[data-testid='sale-price'], [data-testid='regular-price'], .price, .price__value",
+    "[data-testid='sale-price'], [data-testid='regular-price'], span[data-testid='priceTotal'], .nl-price--total, .price, .price__value",
     { timeout: 15000 }
   ).catch(()=>{});
-}
-
-async function scrapeListOnce(page) {
-  const items = await page.$$eval(SELECTORS.product, (cards, SELECTORS) => {
-    const nodeText = n => (n ? (n.textContent || "").trim() : "");
-    const firstAttr = (el, attrs) => {
-      for (const a of attrs) { const v = el?.getAttribute?.(a); if (v) return v.trim(); }
-      return null;
-    };
-    const abs = u => new URL(u, location.href).toString();
-
-    const pickImg = (el, sel) => {
-      const n = el.querySelector(sel);
-      if (!n) return null;
-      const v = firstAttr(n, ["src","data-src","data-original","data-image","srcset","data-lazy"]);
-      if (!v) return null;
-      if (v.includes("srcset")) return abs(v.split(",")[0].trim().split(" ")[0]);
-      return abs(v);
-    };
-    const pickHref = (el, sel) => {
-      const a = el.querySelector(sel);
-      return a ? abs(a.getAttribute("href")) : null;
-    };
-
-    return cards.map((el) => {
-      // ----- title
-      let title = "";
-      const tNode = el.querySelector(SELECTORS.title) || el.querySelector("a[href]");
-      if (tNode) {
-        title = tNode.getAttribute("aria-label")
-              || tNode.getAttribute("title")
-              || tNode.getAttribute("alt")
-              || nodeText(tNode);
-      }
-
-      // ----- prices
-      const saleNode = el.querySelector(SELECTORS.priceSale);
-      const regNode  = el.querySelector(SELECTORS.priceRegular);
-      const priceTextNode = el.querySelector(".price");
-
-      const saleRaw = saleNode?.getAttribute?.("data-price")
-                   || saleNode?.getAttribute?.("data-value")
-                   || nodeText(saleNode);
-      const regRaw  = regNode?.getAttribute?.("data-price")
-                   || regNode?.getAttribute?.("data-value")
-                   || nodeText(regNode);
-      const priceTextRaw = nodeText(priceTextNode);
-
-      const hasBadge = !!el.querySelector(SELECTORS.badge);
-      const image = pickImg(el, SELECTORS.image);
-      const url   = pickHref(el, SELECTORS.link);
-
-      // sku/qty éventuels en grille
-      const sku = el.getAttribute("data-sku") || nodeText(el.querySelector(".sku")) || null;
-      const quantity = nodeText(el.querySelector(".stock")) || null;
-
-      return {
-        title, image, url,
-        price_sale_raw: saleRaw || null,
-        price_regular_raw: regRaw || null,
-        price_text_raw: priceTextRaw || null,
-        has_clearance_badge: hasBadge,
-        sku, quantity
-      };
-    });
-  }, SELECTORS);
-
-  const pageIsClearance = /\/liquidation\.html/i.test(await page.url());
-
-  return items.map((it) => {
-    const liquidationPrice = extractPrice(it.price_sale_raw || it.price_text_raw);
-    const regularPrice     = extractPrice(it.price_regular_raw);
-    const priceRaw = it.price_text_raw || it.price_sale_raw || it.price_regular_raw || null;
-    const price = liquidationPrice ?? regularPrice ?? null;
-
-    const isLiquidation = it.has_clearance_badge ||
-      (pageIsClearance && liquidationPrice != null &&
-       (regularPrice == null || liquidationPrice <= regularPrice));
-
-    const rec = {
-      store_id: STORE_ID || null,
-      city: CITY || null,
-      title: it.title || null,
-      price,
-      price_raw: priceRaw,
-      liquidation: !!isLiquidation,
-      image: it.image,
-      url: it.url,
-      sku: it.sku || null,
-      quantity: it.quantity || null
-    };
-
-    if (INCLUDE_LIQUIDATION_PRICE) {
-      rec.liquidation_price = liquidationPrice ?? null;
-      rec.liquidation_price_raw = it.price_sale_raw || null;
-      rec.sale_price = liquidationPrice ?? null;
-      rec.sale_price_raw = it.price_sale_raw || null;
-    }
-    if (INCLUDE_REGULAR_PRICE) {
-      rec.regular_price = regularPrice ?? null;
-      rec.regular_price_raw = it.price_regular_raw || null;
-    }
-    if (it.price_text_raw) rec.price_text_raw = it.price_text_raw;
-
-    return rec;
-  }).filter(p => p.title || p.price != null || p.image);
 }
 
 async function enrichWithDetails(context, item) {
@@ -372,41 +476,98 @@ async function main() {
   await fs.ensureDir(OUT_BASE);
 
   const all = [];
-  let pageCount = 0;
+  const seenProducts = new Set();
 
-  while (pageCount < MAX_PAGES) {
-    pageCount += 1;
-    try { await page.waitForSelector(PAGINATION.waitForList, { timeout: 15000 }); } catch {}
+  await waitProductsStable(page);
+  await lazyWarmup(page);
+
+  let firstSku = await getFirstSku(page);
+  const totalPages = await getTotalPages(page);
+  const currentPage = await getCurrentPageNum(page);
+  const lastPage = SHOULD_LIMIT_PAGES ? Math.min(totalPages, MAX_PAGES) : totalPages;
+
+  for (let p = currentPage; p <= lastPage; p++) {
+    await waitProductsStable(page);
     await lazyWarmup(page);
 
-    const batch = await scrapeListOnce(page);
-    console.log(`✅ Page ${pageCount}: ${batch.length} produits`);
+    const cards = await scrapeListing(page);
+    const pageIsClearance = /\/liquidation\.html/i.test(await page.url());
+    const batch = [];
+    const pageSeen = new Set();
+    cards.forEach((card) => {
+      const normalizedLink = card.link ? card.link.split("?")[0].toLowerCase() : null;
+      const linkKey = normalizedLink ? `link:${normalizedLink}` : null;
+      const productId = card.product_id ? `id:${card.product_id}` : null;
+      const skuKey = card.product_sku ? `sku:${card.product_sku}` : null;
+
+      const keys = [linkKey, productId, skuKey].filter(Boolean);
+      let duplicate = false;
+      if (keys.length) {
+        for (const key of keys) {
+          if (seenProducts.has(key)) {
+            duplicate = true;
+            break;
+          }
+        }
+        if (duplicate) return;
+        keys.forEach((key) => seenProducts.add(key));
+      } else {
+        const fallbackKey = card.name
+          ? `${card.name}|${card.price_sale || ""}|${card.price_original || ""}|${card.image || ""}`.toLowerCase()
+          : null;
+        if (fallbackKey) {
+          if (pageSeen.has(fallbackKey)) return;
+          pageSeen.add(fallbackKey);
+        }
+      }
+      const record = createRecordFromCard(card, pageIsClearance);
+      if (record.title || record.price != null || record.image) batch.push(record);
+    });
+    console.log(`✅ Page ${p}: ${batch.length} produits`);
     all.push(...batch);
 
-    if (pageCount % 10 === 0) await page.waitForTimeout(1200);
+    if (((p - currentPage + 1) % 10) === 0) await page.waitForTimeout(1200);
 
-    const loadMore = page.locator(PAGINATION.loadMoreBtn).first();
-    if (await loadMore.isVisible().catch(()=>false)) {
-      await Promise.all([ loadMore.click({ delay: 30 }).catch(()=>{}), page.waitForLoadState("domcontentloaded") ]);
-      await page.waitForSelector(PAGINATION.waitForList, { timeout: 20000 }).catch(()=>{});
-      await page.waitForTimeout(600);
-      continue;
+    if (p === lastPage) break;
+
+    const prevFirstSku = firstSku;
+    const linkSel = SEL.pageLinkByNum(p + 1);
+    const linkLoc = page.locator(linkSel).first();
+    if (!(await linkLoc.isVisible().catch(() => false))) {
+      await page.locator('nav[aria-label="pagination"]').scrollIntoViewIfNeeded().catch(() => {});
+    }
+    if (!(await linkLoc.count())) {
+      console.warn(`Lien de pagination introuvable pour la page ${p + 1}, arrêt.`);
+      break;
     }
 
-    const next = nextBtn(page);
-    if (await next.isVisible().catch(()=>false)) {
-      const before = page.url();
-      await next.click({ delay: 30 }).catch(()=>{});
-      await page.waitForLoadState("domcontentloaded");
-      await page.waitForSelector(PAGINATION.waitForList, { timeout: 20000 }).catch(()=>{});
-      await page.waitForTimeout(600);
-      if (page.url() === before) {
-        await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
-        await page.waitForTimeout(600);
+    await Promise.all([
+      linkLoc.click({ timeout: 10000 }),
+      page.waitForFunction(
+        (expected) => {
+          const el = document.querySelector('nav[aria-label="pagination"] [aria-current="page"]');
+          if (!el) return false;
+          const txt = el.getAttribute('aria-label') || el.textContent || '';
+          return new RegExp(`\\b${expected}\\b`).test(txt);
+        },
+        p + 1,
+        { timeout: 30000 }
+      ),
+    ]);
+
+    await waitProductsStable(page);
+    await page.waitForTimeout(600);
+    firstSku = await getFirstSku(page);
+
+    if (firstSku && prevFirstSku && firstSku === prevFirstSku) {
+      await page.evaluate(() => window.scrollTo(0, 0));
+      await waitProductsStable(page);
+      firstSku = await getFirstSku(page);
+      if (firstSku === prevFirstSku) {
+        console.warn("Pagination bloquée, arrêt pour éviter les 0-produits fantômes.");
+        break;
       }
-      continue;
     }
-    break;
   }
 
   // Enrichissement PDP (limite soft)
@@ -454,7 +615,13 @@ async function main() {
       { id: "image", title: "image" },
       { id: "image_path", title: "image_path" },
       { id: "sku", title: "sku" },
+      { id: "product_id", title: "product_id" },
+      { id: "product_sku", title: "product_sku" },
       { id: "quantity", title: "quantity" },
+      { id: "availability", title: "availability" },
+      { id: "badges", title: "badges" },
+      { id: "price_sale_clean", title: "price_sale_clean" },
+      { id: "price_original_clean", title: "price_original_clean" },
     ],
   });
   await csv.writeRecords(enriched);
