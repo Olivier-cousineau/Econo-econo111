@@ -77,12 +77,28 @@ jobs:
 
       - name: Compute store output path (same slug as scraper)
         id: outpath
+        env:
+          MATRIX_STORE: ${{ matrix.store }}
+          MATRIX_CITY: ${{ matrix.city }}
         run: |
-          node -e "const slugify=require('slugify'); \
-          const s='${{ matrix.store }}'; \
-          const c=slugify('${{ matrix.city }}',{lower:true,strict:true}); \
-          const p=`outputs/canadiantire/${s}-${c}`; \
-          console.log(p)" > .store_path
+          node - <<'NODE' > .store_path
+          const slugify = require('slugify');
+          const store = process.env.MATRIX_STORE;
+          const city = process.env.MATRIX_CITY || "";
+
+          if (!store) {
+            throw new Error('Identifiant du magasin non défini');
+          }
+
+          const slug = slugify(city, { lower: true, strict: true });
+          if (!slug) {
+            throw new Error('Slug du store non défini');
+          }
+
+          const path = `outputs/canadiantire/${store}-${slug}`;
+          console.error('Chemin généré:', path);
+          process.stdout.write(path);
+          NODE
           echo "path=$(cat .store_path)" >> $GITHUB_OUTPUT
 
       - name: Commit only this store’s JSON
