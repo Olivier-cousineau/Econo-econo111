@@ -93,14 +93,14 @@ async function waitProductsStable(page, timeout = 30000) {
   const start = Date.now();
   await page.waitForSelector(SEL.card, { timeout });
 
-  const priceTimeout = Math.min(4500, Math.max(1500, Math.floor(timeout / 4)));
+  const priceTimeout = Math.min(2500, Math.max(900, Math.floor(timeout / 5)));
   await Promise.race([
     page.waitForSelector(SEL.price, { timeout: priceTimeout }),
-    page.waitForTimeout(priceTimeout + 200),
+    page.waitForTimeout(priceTimeout + 120),
   ]).catch(() => {});
 
   const elapsed = Date.now() - start;
-  const remaining = Math.max(1500, timeout - elapsed);
+  const remaining = Math.max(900, timeout - elapsed);
   try {
     await page.waitForFunction(
       () => document.querySelectorAll('li[data-testid="product-grids"]').length > 0,
@@ -269,9 +269,16 @@ async function extractFromCard(card) {
   }, { base: BASE });
 }
 
-async function scrapeListing(page) {
-  await page.waitForSelector(SELECTORS.card, { timeout: 60000 });
-  await page.waitForSelector("span[data-testid='priceTotal'], .nl-price--total", { timeout: 60000 }).catch(() => {});
+async function scrapeListing(page, { skipGuards = false } = {}) {
+  if (!skipGuards) {
+    await page.waitForSelector(SELECTORS.card, { timeout: 45000 });
+    await page.waitForSelector("span[data-testid='priceTotal'], .nl-price--total", { timeout: 20000 }).catch(() => {});
+  } else {
+    const hasCards = await page.locator(SELECTORS.card).count();
+    if (!hasCards) {
+      await page.waitForSelector(SELECTORS.card, { timeout: 20000 });
+    }
+  }
 
   try {
     return (await page.locator(SELECTORS.card).evaluateAll((nodes, { base }) => {
@@ -342,6 +349,9 @@ async function scrapeListing(page) {
     }, { base: BASE })) || [];
   } catch (e) {
     console.warn("scrapeListing evaluateAll error:", e?.message || e);
+    if (!skipGuards) {
+      await page.waitForSelector(SELECTORS.card, { timeout: 20000 }).catch(() => {});
+    }
     const cards = page.locator(SELECTORS.card);
     const n = await cards.count();
     const tasks = [];
@@ -437,25 +447,25 @@ async function lazyWarmup(page) {
   await page.evaluate(async () => {
     const viewport = window.innerHeight || 800;
     const maxScroll = document.body.scrollHeight || viewport;
-    if (maxScroll <= viewport * 1.2) {
+    if (maxScroll <= viewport * 1.15) {
       window.scrollTo(0, 0);
       return;
     }
-    const step = Math.max(200, Math.floor(viewport * 1.1));
-    const delay = 55;
+    const step = Math.max(260, Math.floor(viewport * 1.3));
+    const delay = 35;
     for (let y = 0; y < maxScroll; y += step) {
       window.scrollTo(0, y);
       await new Promise((resolve) => setTimeout(resolve, delay));
     }
     window.scrollTo(0, 0);
   });
-  await page.waitForTimeout(70);
+  await page.waitForTimeout(40);
   await Promise.race([
     page.waitForSelector(
       "[data-testid='sale-price'], [data-testid='regular-price'], span[data-testid='priceTotal'], .nl-price--total, .price, .price__value",
-      { timeout: 6500 }
+      { timeout: 4500 }
     ),
-    page.waitForTimeout(900),
+    page.waitForTimeout(650),
   ]).catch(()=>{});
 }
 
@@ -574,13 +584,14 @@ async function main() {
   const lastPage = SHOULD_LIMIT_PAGES ? Math.min(totalPages, MAX_PAGES) : totalPages;
 
   for (let p = currentPage; p <= lastPage; p++) {
+    const skipGuards = pagePrimed;
     if (!pagePrimed) {
       await waitProductsStable(page);
       await lazyWarmup(page);
     }
     pagePrimed = false;
 
-    const cards = await scrapeListing(page);
+    const cards = await scrapeListing(page, { skipGuards });
     const pageIsClearance = /\/liquidation\.html/i.test(await page.url());
     const batch = [];
     const pageSeen = new Set();
@@ -616,7 +627,7 @@ async function main() {
     console.log(`✅ Page ${p}: ${batch.length} produits`);
     all.push(...batch);
 
-    if (((p - currentPage + 1) % 10) === 0) await page.waitForTimeout(900);
+    if (((p - currentPage + 1) % 10) === 0) await page.waitForTimeout(550);
 
     if (p === lastPage) break;
 
@@ -658,12 +669,12 @@ async function main() {
 
     await Promise.race([
       page.waitForLoadState("networkidle").catch(() => {}),
-      page.waitForTimeout(1800),
+      page.waitForTimeout(1200),
     ]);
 
     await waitProductsStable(page);
     await lazyWarmup(page);
-    await page.waitForTimeout(250);
+    await page.waitForTimeout(150);
     pagePrimed = true;
     firstSku = await getFirstSku(page);
 
@@ -692,9 +703,9 @@ async function main() {
         try { image_path = await downloadImage(p.image, idx, p.title); }
         catch { console.warn("⚠️ image download failed:", p.image); }
       }
-      // enrichir ~jusqu'à 60 items/lot pour rester soft
+      // enrichir ~jusqu'à 40 items/lot pour rester réactif
       let out = p;
-      if (i < 60) out = await enrichWithDetails(context, p);
+      if (i < 40) out = await enrichWithDetails(context, p);
       return { ...out, image_path };
     }))
   );
