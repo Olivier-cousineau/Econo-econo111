@@ -12,12 +12,11 @@ from __future__ import annotations
 
 import argparse
 import asyncio
-import math
 import re
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
-from typing import Iterable, List, Optional
+from typing import List, Optional
 
 import pandas as pd
 from playwright.async_api import Browser, BrowserContext, Locator, Page, async_playwright
@@ -31,8 +30,6 @@ PRODUCT_SELECTORS = (
     "li[class*='product']",
 )
 PRICE_RE = re.compile(r"(\d+[.,]\d{2})")
-RATING_RE = re.compile(r"(\d+[.,]?\d*)")
-REVIEWS_RE = re.compile(r"\((\d+[.,]?\d*)\)")
 
 
 @dataclass
@@ -85,51 +82,110 @@ def parse_price(text: Optional[str]) -> Optional[float]:
     except ValueError:
         return None
 
-
-def parse_rating(text: Optional[str]) -> Optional[float]:
-    if not text:
+def clean_money(s: str | None) -> str | None:
+    if not s:
         return None
-    match = RATING_RE.search(text.replace(",", "."))
-    if not match:
-        return None
-    try:
-        val = float(match.group(1))
-        return val if math.isfinite(val) else None
-    except ValueError:
-        return None
+    s = s.replace("\xa0", " ").replace("\u202f", " ").strip()
+    match = re.search(r"(\d[\d\s.,]*)(?:\s*\$)?", s)
+    return match.group(1).replace(" ", "") if match else s
 
 
-def parse_reviews(texts: Iterable[str]) -> Optional[int]:
-    for txt in texts:
-        if not txt:
+async def extract_product(card: Locator) -> dict:
+    title = await card.locator("[id^='title__promolisting-']").first.text_content()
+    if not title:
+        title = await card.locator(".nl-product-card__title").first.text_content()
+    title = title.strip() if title else None
+
+    price_sale = await card.locator("span[data-testid='priceTotal'], .nl-price--total").first.text_content()
+    price_was = await card.locator(
+        ".nl-price__was s, .nl-price__was, .nl-price--was, .nl-price__change s"
+    ).first.text_content()
+
+    price_sale = clean_money(price_sale)
+    price_original = clean_money(price_was)
+
+    img_el = card.locator(".nl-product-card__image-wrap img").first
+    img_src = await img_el.get_attribute("src")
+    if not img_src:
+        img_src = await img_el.get_attribute("data-src")
+
+    availability = await card.locator(
+        ".nl-product-card__availability-message"
+    ).first.text_content()
+    availability = availability.strip() if availability else None
+
+    sku = await card.locator(".nl-product__code").first.text_content()
+    sku = sku.strip().lstrip("#") if sku else None
+
+    badges: List[str] = []
+    if await card.locator(".nl-plp-badges").count():
+        badges_text = await card.locator(".nl-plp-badges").all_inner_texts()
+        badges = [b.strip() for b in badges_text if b.strip()]
+
+    link = None
+    title_anchor = card.locator("[id^='title__promolisting-']").locator("xpath=ancestor::a[1]")
+    if await title_anchor.count():
+        link = await title_anchor.first.get_attribute("href")
+    if not link:
+        link = await card.locator("a[href*='/p/'], a[href*='/product/']").first.get_attribute("href")
+    if link and link.startswith("/"):
+        link = "https://www.canadiantire.ca" + link
+
+    return {
+        "name": title,
+        "price_sale": price_sale,
+        "price_original": price_original,
+        "image": img_src,
+        "availability": availability,
+        "sku": sku,
+        "badges": badges,
+        "link": link,
+    }
+
+
+async def scrape_listing(page: Page) -> List[dict]:
+    await page.wait_for_selector("li[data-testid='product-grids']", timeout=60_000)
+    await page.wait_for_selector("span[data-testid='priceTotal']", timeout=60_000)
+    cards = page.locator("li[data-testid='product-grids']")
+    count = await cards.count()
+    results: List[dict] = []
+    for i in range(count):
+        card = cards.nth(i)
+        try:
+            results.append(await extract_product(card))
+        except Exception:
             continue
-        match = REVIEWS_RE.search(txt)
-        if match:
-            try:
-                return int(match.group(1).replace(",", ""))
-            except ValueError:
-                continue
-    return None
+    return results
 
 
-async def first_text(card: Locator, selectors: Iterable[str]) -> str:
-    for selector in selectors:
-        locator = card.locator(selector).first
-        if await locator.count() > 0:
-            text = await locator.text_content()
-            if text:
-                return text.strip()
-    return ""
+def listing_to_product(data: dict, category: str) -> Optional[Product]:
+    name = (data.get("name") or "").strip()
+    link = data.get("link")
+    if not name or not link:
+        return None
 
+    sale_price = parse_price(data.get("price_sale"))
+    regular_price = parse_price(data.get("price_original"))
+    availability = data.get("availability") or None
+    sku = data.get("sku") or None
+    image = data.get("image") or None
+    raw_tags = data.get("badges") or []
+    tags = [t for t in raw_tags if t]
 
-async def first_attr(card: Locator, selectors: Iterable[str], attr: str) -> Optional[str]:
-    for selector in selectors:
-        locator = card.locator(selector).first
-        if await locator.count() > 0:
-            value = await locator.get_attribute(attr)
-            if value:
-                return value.strip()
-    return None
+    return Product(
+        name=name,
+        brand=None,
+        url=link,
+        image_url=image,
+        sku=sku,
+        category=category,
+        regular_price=regular_price,
+        sale_price=sale_price,
+        availability=availability,
+        tags=tags,
+        rating=None,
+        reviews=None,
+    )
 
 
 async def accept_banners(page: Page) -> None:
@@ -181,140 +237,6 @@ async def ensure_store(context: BrowserContext, store_id: str, store_slug: str, 
         await page.close()
 
 
-async def scrape_page(page: Page, category: str) -> List[Product]:
-    selector_union = ", ".join(PRODUCT_SELECTORS)
-    await page.wait_for_selector(selector_union, timeout=60_000)
-
-    # Scroll pour charger les images lazy.
-    for _ in range(6):
-        await page.mouse.wheel(0, 2200)
-        await page.wait_for_timeout(250)
-
-    cards = page.locator(selector_union)
-    count = await cards.count()
-    results: List[Product] = []
-
-    for idx in range(count):
-        card = cards.nth(idx)
-        try:
-            name = await first_text(card, [
-                "[data-testid='product-summary-name']",
-                "a[title]",
-                "h3",
-                "h2",
-            ])
-            if not name:
-                continue
-
-            link = await first_attr(card, [
-                "a[href*='/pdp/']",
-                "a[href*='/produit/']",
-                "a[href]",
-            ], "href")
-            if not link:
-                continue
-            if link.startswith("/"):
-                link = "https://www.canadiantire.ca" + link
-
-            image_url = await first_attr(card, ["img"], "src") or await first_attr(
-                card,
-                ["img"],
-                "data-src",
-            )
-            if not image_url:
-                srcset = await first_attr(card, ["img"], "srcset")
-                if srcset:
-                    image_url = srcset.split(",")[-1].strip().split(" ")[0]
-
-            brand = await first_text(card, [
-                "[data-testid='product-brand']",
-                ".nl-product__brand--bold",
-                "[class*='brand']",
-            ]) or None
-
-            sku_text = await first_text(card, [
-                "[data-testid='product-code']",
-                ".nl-product__code",
-                "[class*='product-code']",
-            ])
-            sku = None
-            if sku_text:
-                match = re.search(r"#([0-9A-Z\-]+)", sku_text)
-                if match:
-                    sku = match.group(1)
-                else:
-                    sku = sku_text.strip()
-
-            regular_raw = await first_text(card, [
-                "[data-testid='was-price']",
-                ".price_was",
-                ".was-price",
-                "[class*='price'] [class*='was']",
-            ])
-            sale_raw = await first_text(card, [
-                "[data-testid='sale-price']",
-                ".price_sale",
-                ".sale-price",
-                "[data-testid='product-price']",
-                ".price__value",
-            ])
-
-            regular_price = parse_price(regular_raw)
-            sale_price = parse_price(sale_raw)
-
-            if regular_price is None and sale_price is not None:
-                all_text = await card.text_content() or ""
-                numbers = [float(x.replace(",", ".")) for x in PRICE_RE.findall(all_text)]
-                if len(numbers) >= 2:
-                    regular_price = max(numbers)
-                    sale_price = min(numbers)
-
-            availability = await first_text(card, [
-                "[data-testid='availability']",
-                ".nl-product-card__availability-message",
-                "[class*='availability']",
-            ]) or None
-
-            tag_nodes = await card.locator(
-                "[data-testid='badge'], .nl-tag, [class*='badge'], [class*='tag']"
-            ).all_text_contents()
-            tags = sorted(set(t.strip() for t in tag_nodes if t and t.strip()))
-
-            rating_txt = await first_text(card, [
-                "[data-testid='rating']",
-                ".bv_text",
-                "[class*='rating']",
-            ])
-            rating = parse_rating(rating_txt)
-            review_texts = await card.locator(".bv_text, [class*='review']").all_text_contents()
-            reviews = parse_reviews(review_texts)
-
-            if not sale_price and not regular_price:
-                # Pas de prix → ignorer
-                continue
-
-            results.append(
-                Product(
-                    name=name.strip(),
-                    brand=brand.strip() if brand else None,
-                    url=link,
-                    image_url=image_url,
-                    sku=sku,
-                    category=category,
-                    regular_price=regular_price,
-                    sale_price=sale_price,
-                    availability=availability.strip() if availability else None,
-                    tags=tags,
-                    rating=rating,
-                    reviews=reviews,
-                )
-            )
-        except Exception:
-            continue
-
-    return results
-
-
 async def goto_next_page(page: Page) -> bool:
     selectors = [
         "a[data-testid='chevron->']:not(.pagination_chevron--disabled)",
@@ -327,8 +249,9 @@ async def goto_next_page(page: Page) -> bool:
         if await loc.count() > 0 and await loc.first.is_enabled():
             try:
                 await loc.first.click()
-                await page.wait_for_load_state("networkidle")
-                await page.wait_for_timeout(800)
+                await page.wait_for_load_state("domcontentloaded")
+                await page.wait_for_selector("li[data-testid='product-grids']", timeout=60_000)
+                await page.wait_for_selector("span[data-testid='priceTotal']", timeout=60_000)
                 return True
             except Exception:
                 continue
@@ -372,7 +295,12 @@ async def scrape_liquidation(
 
     all_products: List[Product] = []
     for page_idx in range(1, max_pages + 1):
-        page_products = await scrape_page(page, category_label)
+        listings = await scrape_listing(page)
+        page_products = []
+        for data in listings:
+            product = listing_to_product(data, category_label)
+            if product:
+                page_products.append(product)
         all_products.extend(page_products)
         moved = await goto_next_page(page)
         if not moved:
