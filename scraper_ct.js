@@ -40,8 +40,10 @@ const START_URL = args.url || (STORE_ID ? `${DEFAULT_BASE}?store=${STORE_ID}` : 
 
 const parsedMaxPages = Number(args.maxPages);
 const hasExplicitMaxPages = Number.isFinite(parsedMaxPages);
-const MAX_PAGES = hasExplicitMaxPages && parsedMaxPages > 0 ? parsedMaxPages : 125;
-const SHOULD_LIMIT_PAGES = !hasExplicitMaxPages || parsedMaxPages > 0;
+const HARD_MAX_PAGES = 125;
+const MAX_PAGES = hasExplicitMaxPages && parsedMaxPages > 0
+  ? Math.min(parsedMaxPages, HARD_MAX_PAGES)
+  : HARD_MAX_PAGES;
 const HEADLESS  = !args.headful;
 
 const INCLUDE_REGULAR_PRICE    = parseBooleanArg(args["include-regular-price"] ?? args.includeRegularPrice, true);
@@ -581,7 +583,10 @@ async function main() {
   let firstSku = await getFirstSku(page);
   const totalPages = await getTotalPages(page);
   const currentPage = await getCurrentPageNum(page);
-  const lastPage = SHOULD_LIMIT_PAGES ? Math.min(totalPages, MAX_PAGES) : totalPages;
+  const lastPage = Math.min(totalPages, MAX_PAGES);
+  if (totalPages > MAX_PAGES) {
+    console.log(`⚠️  Limitation: maximum ${MAX_PAGES} pages seront parcourues sur ${totalPages} disponibles.`);
+  }
 
   for (let p = currentPage; p <= lastPage; p++) {
     const skipGuards = pagePrimed;
