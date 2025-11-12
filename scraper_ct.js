@@ -275,6 +275,158 @@ async function scrapeListing(page) {
   }
 }
 
+async function extractFromCard(card) {
+  return card.evaluate((el, { base }) => {
+    const cleanMoney = (s) => {
+      if (!s) return null;
+      s = s.replace(/\u00a0/g, " ").trim();
+      const m = s.match(/(\d[\d\s.,]*)(?:\s*\$)?/);
+      return m ? m[1].replace(/\s/g, "") : s;
+    };
+
+    const textFromEl = (node) => {
+      if (!node) return null;
+      const t = node.textContent;
+      return t ? t.trim() : null;
+    };
+
+    const titleEl = el.querySelector("[id^='title__promolisting-'], .nl-product-card__title");
+    const title = textFromEl(titleEl);
+
+    const priceSaleRaw = textFromEl(el.querySelector("span[data-testid='priceTotal'], .nl-price--total"));
+    const priceWasRaw = textFromEl(el.querySelector(".nl-price__was s, .nl-price__was, .nl-price--was, .nl-price__change s"));
+    const price_sale = cleanMoney(priceSaleRaw);
+    const price_original = cleanMoney(priceWasRaw);
+
+    const imgEl = el.querySelector(".nl-product-card__image-wrap img");
+    let image = null;
+    if (imgEl) image = imgEl.getAttribute("src") || imgEl.getAttribute("data-src");
+    if (image && image.startsWith("//")) image = `https:${image}`;
+    if (image && image.startsWith("/")) image = base + image;
+
+    const availability = textFromEl(el.querySelector(".nl-product-card__availability-message"));
+
+    let sku = textFromEl(el.querySelector(".nl-product__code"));
+    if (sku) sku = sku.replace(/^#/, "").trim();
+
+    const badges = Array.from(el.querySelectorAll(".nl-plp-badges"))
+      .map((node) => textFromEl(node))
+      .filter(Boolean);
+
+    let link = null;
+    const titleAnchor = titleEl ? titleEl.closest("a") : null;
+    if (titleAnchor) link = titleAnchor.getAttribute("href");
+    if (!link) {
+      const any = el.querySelector("a[href*='/p/'], a[href*='/product/']");
+      if (any) link = any.getAttribute("href");
+    }
+    if (link && link.startsWith("/")) link = base + link;
+
+    return {
+      name: title || null,
+      price_sale,
+      price_sale_raw: priceSaleRaw || null,
+      price_original,
+      price_original_raw: priceWasRaw || null,
+      image: image || null,
+      availability: availability || null,
+      sku: sku || null,
+      badges,
+      link: link || null,
+    };
+  }, { base: BASE });
+}
+
+async function scrapeListing(page) {
+  await page.waitForSelector(SELECTORS.card, { timeout: 60000 });
+  await page.waitForSelector("span[data-testid='priceTotal'], .nl-price--total", { timeout: 60000 }).catch(() => {});
+
+  try {
+    return (await page.locator(SELECTORS.card).evaluateAll((nodes, { base }) => {
+      const cleanMoney = (s) => {
+        if (!s) return null;
+        s = s.replace(/\u00a0/g, " ").trim();
+        const m = s.match(/(\d[\d\s.,]*)(?:\s*\$)?/);
+        return m ? m[1].replace(/\s/g, "") : s;
+      };
+
+      const textFromEl = (node) => {
+        if (!node) return null;
+        const t = node.textContent;
+        return t ? t.trim() : null;
+      };
+
+      return nodes.map((el) => {
+        const titleEl = el.querySelector("[id^='title__promolisting-'], .nl-product-card__title");
+        const title = textFromEl(titleEl);
+
+        const priceSaleRaw = textFromEl(el.querySelector("span[data-testid='priceTotal'], .nl-price--total"));
+        const priceWasRaw = textFromEl(el.querySelector(".nl-price__was s, .nl-price__was, .nl-price--was, .nl-price__change s"));
+        const price_sale = cleanMoney(priceSaleRaw);
+        const price_original = cleanMoney(priceWasRaw);
+
+        const imgEl = el.querySelector(".nl-product-card__image-wrap img");
+        let image = null;
+        if (imgEl) image = imgEl.getAttribute("src") || imgEl.getAttribute("data-src");
+        if (image && image.startsWith("//")) image = `https:${image}`;
+        if (image && image.startsWith("/")) image = base + image;
+
+        const availability = textFromEl(el.querySelector(".nl-product-card__availability-message"));
+
+        let sku = textFromEl(el.querySelector(".nl-product__code"));
+        if (sku) sku = sku.replace(/^#/, "").trim();
+
+        const badges = Array.from(el.querySelectorAll(".nl-plp-badges"))
+          .map((node) => textFromEl(node))
+          .filter(Boolean);
+
+        let link = null;
+        const titleAnchor = titleEl ? titleEl.closest("a") : null;
+        if (titleAnchor) link = titleAnchor.getAttribute("href");
+        if (!link) {
+          const any = el.querySelector("a[href*='/p/'], a[href*='/product/']");
+          if (any) link = any.getAttribute("href");
+        }
+        if (link && link.startsWith("/")) link = base + link;
+
+        const productId = el.getAttribute("data-product-id") || el.getAttribute("data-productid") || null;
+        const productSku = el.getAttribute("data-sku") || el.getAttribute("data-product-sku") || sku || null;
+
+        return {
+          name: title || null,
+          price_sale,
+          price_sale_raw: priceSaleRaw || null,
+          price_original,
+          price_original_raw: priceWasRaw || null,
+          image: image || null,
+          availability: availability || null,
+          sku: sku || null,
+          badges,
+          link: link || null,
+          product_id: productId,
+          product_sku: productSku,
+        };
+      });
+    }, { base: BASE })) || [];
+  } catch (e) {
+    console.warn("scrapeListing evaluateAll error:", e?.message || e);
+    const cards = page.locator(SELECTORS.card);
+    const n = await cards.count();
+    const tasks = [];
+    for (let i = 0; i < n; i++) {
+      const card = cards.nth(i);
+      tasks.push(
+        extractFromCard(card).catch((err) => {
+          console.warn("extractFromCard error:", err?.message || err);
+          return null;
+        })
+      );
+    }
+    const out = await Promise.all(tasks);
+    return out.filter(Boolean);
+  }
+}
+
 // ---------- UTILS ----------
 function extractPrice(text) {
   if (!text) return null;
