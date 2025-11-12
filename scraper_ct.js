@@ -61,15 +61,6 @@ const BASE = "https://www.canadiantire.ca";
 
 const SELECTORS = {
   card: "li[data-testid='product-grids']",
-  title: "[id^='title__promolisting-'], .nl-product-card__title",
-  priceSale: "span[data-testid='priceTotal'], .nl-price--total",
-  priceWas: ".nl-price__was s, .nl-price__was, .nl-price--was, .nl-price__change s",
-  img: ".nl-product-card__image-wrap img",
-  availability: ".nl-product-card__availability-message",
-  sku: ".nl-product__code",
-  badges: ".nl-plp-badges",
-  titleAncestorA: "[id^='title__promolisting-'] >> xpath=ancestor::a[1]",
-  anyProductLink: "a[href*='/p/'], a[href*='/product/']",
 };
 
 const cleanMoney = (s) => {
@@ -77,24 +68,6 @@ const cleanMoney = (s) => {
   s = s.replace(/\u00a0/g, " ").trim();
   const m = s.match(/(\d[\d\s.,]*)(?:\s*\$)?/);
   return m ? m[1].replace(/\s/g, "") : s;
-};
-
-const text = async (loc) => {
-  try {
-    const t = await loc.first().textContent();
-    return t ? t.trim() : null;
-  } catch {
-    return null;
-  }
-};
-
-const attr = async (loc, name) => {
-  try {
-    const v = await loc.first().getAttribute(name);
-    return v || null;
-  } catch {
-    return null;
-  }
 };
 
 const PAGINATION = {
@@ -118,66 +91,155 @@ function nextBtn(page) {
 }
 
 async function extractFromCard(card) {
-  let title = await text(card.locator(SELECTORS.title));
+  return card.evaluate((el, { base }) => {
+    const cleanMoney = (s) => {
+      if (!s) return null;
+      s = s.replace(/\u00a0/g, " ").trim();
+      const m = s.match(/(\d[\d\s.,]*)(?:\s*\$)?/);
+      return m ? m[1].replace(/\s/g, "") : s;
+    };
 
-  const priceSaleRaw = await text(card.locator(SELECTORS.priceSale));
-  const priceWasRaw = await text(card.locator(SELECTORS.priceWas));
-  const price_sale = cleanMoney(priceSaleRaw);
-  const price_original = cleanMoney(priceWasRaw);
+    const textFromEl = (node) => {
+      if (!node) return null;
+      const t = node.textContent;
+      return t ? t.trim() : null;
+    };
 
-  const imgEl = card.locator(SELECTORS.img);
-  let image = await attr(imgEl, "src");
-  if (!image) image = await attr(imgEl, "data-src");
-  if (image && image.startsWith("//")) image = `https:${image}`;
-  if (image && image.startsWith("/")) image = BASE + image;
+    const titleEl = el.querySelector("[id^='title__promolisting-'], .nl-product-card__title");
+    const title = textFromEl(titleEl);
 
-  const availability = await text(card.locator(SELECTORS.availability));
+    const priceSaleRaw = textFromEl(el.querySelector("span[data-testid='priceTotal'], .nl-price--total"));
+    const priceWasRaw = textFromEl(el.querySelector(".nl-price__was s, .nl-price__was, .nl-price--was, .nl-price__change s"));
+    const price_sale = cleanMoney(priceSaleRaw);
+    const price_original = cleanMoney(priceWasRaw);
 
-  let sku = await text(card.locator(SELECTORS.sku));
-  if (sku) sku = sku.replace(/^#/, "").trim();
+    const imgEl = el.querySelector(".nl-product-card__image-wrap img");
+    let image = null;
+    if (imgEl) image = imgEl.getAttribute("src") || imgEl.getAttribute("data-src");
+    if (image && image.startsWith("//")) image = `https:${image}`;
+    if (image && image.startsWith("/")) image = base + image;
 
-  let badges = [];
-  try {
-    const arr = await card.locator(SELECTORS.badges).allInnerTexts();
-    badges = arr.map((s) => s.trim()).filter(Boolean);
-  } catch {}
+    const availability = textFromEl(el.querySelector(".nl-product-card__availability-message"));
 
-  let link = null;
-  const titleA = card.locator(SELECTORS.titleAncestorA);
-  if (await titleA.count()) link = await attr(titleA, "href");
-  if (!link) link = await attr(card.locator(SELECTORS.anyProductLink), "href");
-  if (link && link.startsWith("/")) link = BASE + link;
+    let sku = textFromEl(el.querySelector(".nl-product__code"));
+    if (sku) sku = sku.replace(/^#/, "").trim();
 
-  return {
-    name: title || null,
-    price_sale,
-    price_sale_raw: priceSaleRaw || null,
-    price_original,
-    price_original_raw: priceWasRaw || null,
-    image: image || null,
-    availability: availability || null,
-    sku: sku || null,
-    badges,
-    link: link || null,
-  };
+    const badges = Array.from(el.querySelectorAll(".nl-plp-badges"))
+      .map((node) => textFromEl(node))
+      .filter(Boolean);
+
+    let link = null;
+    const titleAnchor = titleEl ? titleEl.closest("a") : null;
+    if (titleAnchor) link = titleAnchor.getAttribute("href");
+    if (!link) {
+      const any = el.querySelector("a[href*='/p/'], a[href*='/product/']");
+      if (any) link = any.getAttribute("href");
+    }
+    if (link && link.startsWith("/")) link = base + link;
+
+    return {
+      name: title || null,
+      price_sale,
+      price_sale_raw: priceSaleRaw || null,
+      price_original,
+      price_original_raw: priceWasRaw || null,
+      image: image || null,
+      availability: availability || null,
+      sku: sku || null,
+      badges,
+      link: link || null,
+    };
+  }, { base: BASE });
 }
 
 async function scrapeListing(page) {
   await page.waitForSelector(SELECTORS.card, { timeout: 60000 });
   await page.waitForSelector("span[data-testid='priceTotal'], .nl-price--total", { timeout: 60000 }).catch(() => {});
 
-  const cards = page.locator(SELECTORS.card);
-  const n = await cards.count();
-  const out = [];
-  for (let i = 0; i < n; i++) {
-    const card = cards.nth(i);
-    try {
-      out.push(await extractFromCard(card));
-    } catch (e) {
-      console.warn("extractFromCard error:", e.message || e);
+  try {
+    return (await page.locator(SELECTORS.card).evaluateAll((nodes, { base }) => {
+      const cleanMoney = (s) => {
+        if (!s) return null;
+        s = s.replace(/\u00a0/g, " ").trim();
+        const m = s.match(/(\d[\d\s.,]*)(?:\s*\$)?/);
+        return m ? m[1].replace(/\s/g, "") : s;
+      };
+
+      const textFromEl = (node) => {
+        if (!node) return null;
+        const t = node.textContent;
+        return t ? t.trim() : null;
+      };
+
+      return nodes.map((el) => {
+        const titleEl = el.querySelector("[id^='title__promolisting-'], .nl-product-card__title");
+        const title = textFromEl(titleEl);
+
+        const priceSaleRaw = textFromEl(el.querySelector("span[data-testid='priceTotal'], .nl-price--total"));
+        const priceWasRaw = textFromEl(el.querySelector(".nl-price__was s, .nl-price__was, .nl-price--was, .nl-price__change s"));
+        const price_sale = cleanMoney(priceSaleRaw);
+        const price_original = cleanMoney(priceWasRaw);
+
+        const imgEl = el.querySelector(".nl-product-card__image-wrap img");
+        let image = null;
+        if (imgEl) image = imgEl.getAttribute("src") || imgEl.getAttribute("data-src");
+        if (image && image.startsWith("//")) image = `https:${image}`;
+        if (image && image.startsWith("/")) image = base + image;
+
+        const availability = textFromEl(el.querySelector(".nl-product-card__availability-message"));
+
+        let sku = textFromEl(el.querySelector(".nl-product__code"));
+        if (sku) sku = sku.replace(/^#/, "").trim();
+
+        const badges = Array.from(el.querySelectorAll(".nl-plp-badges"))
+          .map((node) => textFromEl(node))
+          .filter(Boolean);
+
+        let link = null;
+        const titleAnchor = titleEl ? titleEl.closest("a") : null;
+        if (titleAnchor) link = titleAnchor.getAttribute("href");
+        if (!link) {
+          const any = el.querySelector("a[href*='/p/'], a[href*='/product/']");
+          if (any) link = any.getAttribute("href");
+        }
+        if (link && link.startsWith("/")) link = base + link;
+
+        const productId = el.getAttribute("data-product-id") || el.getAttribute("data-productid") || null;
+        const productSku = el.getAttribute("data-sku") || el.getAttribute("data-product-sku") || sku || null;
+
+        return {
+          name: title || null,
+          price_sale,
+          price_sale_raw: priceSaleRaw || null,
+          price_original,
+          price_original_raw: priceWasRaw || null,
+          image: image || null,
+          availability: availability || null,
+          sku: sku || null,
+          badges,
+          link: link || null,
+          product_id: productId,
+          product_sku: productSku,
+        };
+      });
+    }, { base: BASE })) || [];
+  } catch (e) {
+    console.warn("scrapeListing evaluateAll error:", e?.message || e);
+    const cards = page.locator(SELECTORS.card);
+    const n = await cards.count();
+    const tasks = [];
+    for (let i = 0; i < n; i++) {
+      const card = cards.nth(i);
+      tasks.push(
+        extractFromCard(card).catch((err) => {
+          console.warn("extractFromCard error:", err?.message || err);
+          return null;
+        })
+      );
     }
+    const out = await Promise.all(tasks);
+    return out.filter(Boolean);
   }
-  return out;
 }
 
 // ---------- UTILS ----------
@@ -212,7 +274,9 @@ function createRecordFromCard(card, pageIsClearance) {
     liquidation: !!isLiquidation,
     image: card.image || null,
     url: card.link || null,
-    sku: card.sku || null,
+    sku: card.sku || card.product_sku || null,
+    product_id: card.product_id || null,
+    product_sku: card.product_sku || null,
     quantity: null,
     availability: card.availability || null,
     badges,
@@ -382,14 +446,24 @@ async function main() {
     const cards = await scrapeListing(page);
     const pageIsClearance = /\/liquidation\.html/i.test(await page.url());
     const batch = [];
+    const pageSeen = new Set();
     cards.forEach((card) => {
-      const linkKey = card.link ? card.link.toLowerCase() : null;
-      const fallbackKey = card.name
-        ? `${card.name}|${card.price_sale || ""}|${card.price_original || ""}`.toLowerCase()
-        : null;
-      const key = linkKey || fallbackKey;
-      if (key && seenProducts.has(key)) return;
-      if (key) seenProducts.add(key);
+      const normalizedLink = card.link ? card.link.split("?")[0].toLowerCase() : null;
+      const productId = card.product_id ? `id:${card.product_id}` : null;
+      const skuKey = card.product_sku ? `sku:${card.product_sku}` : null;
+      const strongKey = productId || skuKey || normalizedLink;
+      if (strongKey) {
+        if (seenProducts.has(strongKey)) return;
+        seenProducts.add(strongKey);
+      } else {
+        const fallbackKey = card.name
+          ? `${card.name}|${card.price_sale || ""}|${card.price_original || ""}|${card.image || ""}`.toLowerCase()
+          : null;
+        if (fallbackKey) {
+          if (pageSeen.has(fallbackKey)) return;
+          pageSeen.add(fallbackKey);
+        }
+      }
       const record = createRecordFromCard(card, pageIsClearance);
       if (record.title || record.price != null || record.image) batch.push(record);
     });
@@ -467,6 +541,8 @@ async function main() {
       { id: "image", title: "image" },
       { id: "image_path", title: "image_path" },
       { id: "sku", title: "sku" },
+      { id: "product_id", title: "product_id" },
+      { id: "product_sku", title: "product_sku" },
       { id: "quantity", title: "quantity" },
       { id: "availability", title: "availability" },
       { id: "badges", title: "badges" },
