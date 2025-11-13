@@ -286,6 +286,10 @@
         return branches;
       }
 
+      const CANADIAN_TIRE_LOCATIONS = await loadCanadianTireLocations();
+      const BUILT_CANADIAN_TIRE_BRANCHES = buildCanadianTireBranchesFromLocations(CANADIAN_TIRE_LOCATIONS);
+      CANADIAN_TIRE_BRANCHES.splice(0, CANADIAN_TIRE_BRANCHES.length, ...BUILT_CANADIAN_TIRE_BRANCHES);
+
       const currentYear = new Date().getFullYear();
       if(year) year.textContent = currentYear;
       if(yearFooter) yearFooter.textContent = currentYear;
@@ -702,7 +706,7 @@
       };
     });
 
-    const CANADIAN_TIRE_BRANCHES = buildCanadianTireBranchesFromLocations(await loadCanadianTireLocations());
+    const CANADIAN_TIRE_BRANCHES = [];
 
     const STORES = [
       {label:'Walmart', slug:'walmart', branches: WALMART_QUEBEC_BRANCHES},
