@@ -863,7 +863,7 @@
       };
     });
 
-    const CANADIAN_TIRE_BRANCHES = buildCanadianTireBranchesFromLocations(await loadCanadianTireLocations());
+    const CANADIAN_TIRE_BRANCHES = [];
 
     const STORES = [
       {label:'Walmart', slug:'walmart', branches: WALMART_QUEBEC_BRANCHES},
@@ -1004,8 +1004,6 @@
         storeAdsContainer.onfocusout = null;
       }
     }
-
-    renderStoreAds();
 
     const POSTAL_DIRECTORY = [
       {
@@ -1243,6 +1241,11 @@
         }
         return branches;
       }
+
+      const CANADIAN_TIRE_LOCATIONS = await loadCanadianTireLocations();
+      const BUILT_CANADIAN_TIRE_BRANCHES = buildCanadianTireBranchesFromLocations(CANADIAN_TIRE_LOCATIONS);
+      CANADIAN_TIRE_BRANCHES.splice(0, CANADIAN_TIRE_BRANCHES.length, ...BUILT_CANADIAN_TIRE_BRANCHES);
+      renderStoreAds();
 
     // currency.cadToLocalRate indique la conversion d'un dollar canadien vers la devise locale.
     const COUNTRY_CONFIG = {
