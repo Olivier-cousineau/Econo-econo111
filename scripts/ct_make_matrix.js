@@ -1,4 +1,5 @@
 // node scripts/ct_make_matrix.js --file data/canadian-tire/stores_raw.txt --shard 0 --shards 7
+// Emits a JSON array that run_canadiantire_matrix.js can consume directly (id/city fields).
 import fs from "fs";
 import minimist from "minimist";
 
@@ -19,6 +20,11 @@ const rows = raw.slice(1).map(line => {
 }).filter(r => r.id && r.city);
 
 const shardRows = rows.filter((_, idx) => idx % SHARDS === SHARD);
-const matrix = shardRows.map(r => ({ store: r.id, city: r.city }));
+const matrix = shardRows.map((row) => ({
+  id: row.id,
+  store: row.id,
+  name: row.city,
+  city: row.city,
+}));
 
 process.stdout.write(JSON.stringify(matrix));
