@@ -68,11 +68,19 @@ const SELECTORS = {
   card: "li[data-testid='product-grids']",
 };
 
+const PAGINATION_NAV_SELECTOR = [
+  "nav[aria-label*='pagination' i]",
+  "nav[aria-label*='Pagination' i]",
+  "[data-testid='pagination']",
+  "[data-testid='pagination-container']",
+  "nav[role='navigation']:has([aria-current])",
+].join(", ");
+
 const SEL = {
   card: "li[data-testid=\"product-grids\"]",
   price: "span[data-testid=\"priceTotal\"], .nl-price--total, .price, .c-pricing__current",
-  paginationNav: "nav[aria-label=\"pagination\"]",
-  currentPage: "nav[aria-label=\"pagination\"] [aria-current=\"page\"]",
+  paginationNav: PAGINATION_NAV_SELECTOR,
+  currentPage: `${PAGINATION_NAV_SELECTOR} [aria-current], ${PAGINATION_NAV_SELECTOR} [aria-current=\"page\"]`,
 };
 
 const cleanMoney = (s) => {
