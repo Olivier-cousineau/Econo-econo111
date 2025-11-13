@@ -1127,6 +1127,7 @@
     }
       const CANADIAN_TIRE_LOCATIONS_PATH = 'data/canadian-tire/branches.json';
       const CANADIAN_TIRE_FALLBACK_PATH = 'data/canadian-tire/stores_raw.txt';
+      const CANADIAN_TIRE_DATA_AVAILABILITY_PATH = 'data/canadian-tire/stores_with_data.json';
       const CANADIAN_TIRE_SLUG_OVERRIDES = {
         '271':'saint-jerome',
         '649':'blainville',
@@ -1148,7 +1149,45 @@
         '231':'Laval',
         '155':'Laval'
       };
-      const CANADIAN_TIRE_BRANCHES_WITH_DATA = new Set(['saint-jerome','blainville','laval','laval-robert-bourassa','laval-chomedey']);
+      async function loadCanadianTireDataAvailability(){
+        if(window.__ECONODEAL_CANADIAN_TIRE_DATA_AVAILABILITY__){
+          return window.__ECONODEAL_CANADIAN_TIRE_DATA_AVAILABILITY__;
+        }
+        let entries = [];
+        try{
+          const response = await fetchDataJson(CANADIAN_TIRE_DATA_AVAILABILITY_PATH);
+          if(response){
+            const parsed = await response.clone().json();
+            if(Array.isArray(parsed)){
+              entries = parsed;
+            }
+          }
+        }catch(err){
+          console.warn('Failed to load Canadian Tire data availability', err);
+        }
+        const normalized = Array.isArray(entries) ? entries.map(entry => {
+          if(!entry) return null;
+          if(typeof entry === 'string'){
+            const slug = canonicalizeCanadianTireSlug(entry);
+            return slug ? { slug, storeNumber: '' } : null;
+          }
+          const slugSource = entry.slug ?? entry.city ?? entry.label ?? entry;
+          const slug = canonicalizeCanadianTireSlug(slugSource);
+          if(!slug) return null;
+          const storeNumber = String(entry.storeNumber ?? entry.store ?? entry.id ?? '').trim();
+          return { slug, storeNumber };
+        }).filter(Boolean) : [];
+        const slugSet = new Set(normalized.map(entry => entry.slug));
+        const storeToSlug = new Map();
+        normalized.forEach(entry => {
+          if(entry.storeNumber){
+            storeToSlug.set(entry.storeNumber, entry.slug);
+          }
+        });
+        const availability = { entries: normalized, slugSet, storeToSlug };
+        window.__ECONODEAL_CANADIAN_TIRE_DATA_AVAILABILITY__ = availability;
+        return availability;
+      }
 
       function canonicalizeCanadianTireSlug(value){
         if(value === undefined || value === null) return '';
@@ -1211,17 +1250,20 @@
         return normalized;
       }
 
-      function buildCanadianTireBranchesFromLocations(locations){
+      function buildCanadianTireBranchesFromLocations(locations, availability){
         if(!Array.isArray(locations)) return [];
         const seen = new Set();
         const branches = [];
+        const slugSet = availability?.slugSet instanceof Set ? availability.slugSet : new Set();
+        const storeToSlug = availability?.storeToSlug instanceof Map ? availability.storeToSlug : new Map();
         for(const entry of locations){
           if(!entry) continue;
           const id = String(entry.id ?? '').trim();
           const name = String(entry.name ?? '').trim();
           const address = String(entry.address ?? '').trim();
           if(!id || !name) continue;
-          const slug = CANADIAN_TIRE_SLUG_OVERRIDES[id] || canonicalizeCanadianTireSlug(name);
+          const availabilitySlug = storeToSlug.get(id);
+          const slug = availabilitySlug || CANADIAN_TIRE_SLUG_OVERRIDES[id] || canonicalizeCanadianTireSlug(name);
           const label = CANADIAN_TIRE_LABEL_OVERRIDES[id] || `${name} (#${id})`;
           const citySource = CANADIAN_TIRE_CITY_OVERRIDES[id] || name.split(',')[0] || name;
           const city = String(citySource).trim();
@@ -1234,14 +1276,15 @@
             city,
             address,
             storeNumber: id,
-            hasData: CANADIAN_TIRE_BRANCHES_WITH_DATA.has(slug)
+            hasData: slug ? slugSet.has(slug) : false
           });
         }
         return branches;
       }
 
       const CANADIAN_TIRE_LOCATIONS = await loadCanadianTireLocations();
-      const BUILT_CANADIAN_TIRE_BRANCHES = buildCanadianTireBranchesFromLocations(CANADIAN_TIRE_LOCATIONS);
+      const CANADIAN_TIRE_AVAILABILITY = await loadCanadianTireDataAvailability();
+      const BUILT_CANADIAN_TIRE_BRANCHES = buildCanadianTireBranchesFromLocations(CANADIAN_TIRE_LOCATIONS, CANADIAN_TIRE_AVAILABILITY);
       CANADIAN_TIRE_BRANCHES.splice(0, CANADIAN_TIRE_BRANCHES.length, ...BUILT_CANADIAN_TIRE_BRANCHES);
       renderStoreAds();
 
