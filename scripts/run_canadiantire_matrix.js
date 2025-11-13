@@ -10,6 +10,7 @@
  *                                           [--limit 5]
  *                                           [--maxPages 80]
  *                                           [--dry-run]
+ *                                           [--publish] [--skip-publish]
  */
 import fs from "fs";
 import path from "path";
@@ -20,10 +21,11 @@ import slugify from "slugify";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const repoRoot = path.join(__dirname, "..");
 
 const args = minimist(process.argv.slice(2), {
   string: ["file", "stores", "maxPages"],
-  boolean: ["dry-run", "dryRun", "continue"],
+  boolean: ["dry-run", "dryRun", "continue", "publish"],
   alias: { dryRun: "dry-run" },
 });
 
@@ -77,6 +79,14 @@ if (Number.isFinite(limit) && limit > 0) {
 const dryRun = parseBooleanArg(args["dry-run"] ?? args.dryRun, false);
 const continueOnError = parseBooleanArg(args.continue ?? args["continue-on-error"], false);
 
+const skipPublishArg = args["skip-publish"] ?? args.skipPublish ?? args["no-publish"];
+let shouldPublish = true;
+if (args.publish !== undefined) {
+  shouldPublish = parseBooleanArg(args.publish, true);
+} else if (skipPublishArg !== undefined) {
+  shouldPublish = !parseBooleanArg(skipPublishArg, false);
+}
+
 const extraScraperArgs = [];
 if (args.maxPages) {
   extraScraperArgs.push("--maxPages", String(args.maxPages));
@@ -99,8 +109,11 @@ for (const { key, flag } of passthrough) {
 console.log(`📦 Stores file: ${storesFile}`);
 console.log(`🧮 ${stores.length} store(s) to scrape`);
 if (dryRun) console.log("⚠️ Dry run mode: scrapes will be skipped, commits will not be created");
+if (!shouldPublish) console.log("ℹ️ Publication to data/canadian-tire disabled (--skip-publish)");
 
-const scraperEntry = path.join(__dirname, "..", "scraper_ct.js");
+const scraperEntry = path.join(repoRoot, "scraper_ct.js");
+const publishScript = path.join(repoRoot, "scripts", "publish_canadiantire_outputs.js");
+const publishedSlugs = [];
 
 for (const store of stores) {
   const cityLabel = store.city || store.name || "";
@@ -170,6 +183,47 @@ for (const store of stores) {
     console.warn(`⚠️ git commit skipped for ${cityLabel} (store ${store.id})`);
     if (!continueOnError && gitCommit.status !== 1) {
       process.exit(gitCommit.status ?? 1);
+    }
+  }
+
+  if (!dryRun) {
+    publishedSlugs.push(slug || "default");
+  }
+}
+
+if (shouldPublish && !dryRun && publishedSlugs.length) {
+  console.log("\n📤 Publishing normalized Canadian Tire feeds...");
+  const publish = spawnSync("node", [publishScript], { stdio: "inherit" });
+  if (publish.status !== 0) {
+    console.error("❌ Failed to publish Canadian Tire datasets");
+    if (!continueOnError) process.exit(publish.status ?? 1);
+  } else {
+    const uniqueSlugs = Array.from(new Set(publishedSlugs));
+    const candidates = new Set(
+      uniqueSlugs.map((slug) => path.join("data", "canadian-tire", `${slug}.json`))
+    );
+    candidates.add(path.join("data", "canadian-tire", "stores_with_data.json"));
+
+    const existingFiles = Array.from(candidates).filter((relativePath) =>
+      fs.existsSync(path.join(repoRoot, relativePath))
+    );
+
+    if (existingFiles.length) {
+      const gitAdd = spawnSync("git", ["add", ...existingFiles], { stdio: "inherit" });
+      if (gitAdd.status !== 0) {
+        console.error("❌ git add failed while staging published datasets");
+        if (!continueOnError) process.exit(gitAdd.status ?? 1);
+      } else {
+        const publishMsg =
+          uniqueSlugs.length === 1
+            ? `Canadian Tire: publish dataset for ${uniqueSlugs[0]}`
+            : `Canadian Tire: publish datasets for ${uniqueSlugs.length} stores`;
+        const gitCommit = spawnSync("git", ["commit", "-m", publishMsg], { stdio: "inherit" });
+        if (gitCommit.status !== 0 && gitCommit.status !== 1) {
+          console.error("❌ git commit failed for published datasets");
+          if (!continueOnError) process.exit(gitCommit.status ?? 1);
+        }
+      }
     }
   }
 }
