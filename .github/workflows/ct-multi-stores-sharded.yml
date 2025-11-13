@@ -47,7 +47,6 @@ jobs:
     needs: prepare-matrix
     runs-on: ubuntu-latest
     strategy:
-      max-parallel: 3
       fail-fast: false
       matrix:
         include: ${{ fromJSON(needs.prepare-matrix.outputs.stores) }}
@@ -112,5 +111,3 @@ jobs:
           git commit -m "CT shard: ${ROWS} items → $STORE_PATH/data.json" || echo "No changes"
           git push || true
 
-      - name: Cooldown (anti-bot)
-        run: sleep $((20 + RANDOM % 25))
