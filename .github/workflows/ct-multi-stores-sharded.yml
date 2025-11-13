@@ -111,3 +111,38 @@ jobs:
           git commit -m "CT shard: ${ROWS} items → $STORE_PATH/data.json" || echo "No changes"
           git push || true
 
+  publish-datasets:
+    needs: scrape
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository (latest main)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
+
+      - name: Sync with origin/main
+        run: |
+          git fetch origin main
+          git checkout main
+          git pull --rebase origin main
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Publish normalized Canadian Tire datasets
+        run: npm run publish:canadiantire
+
+      - name: Commit normalized feeds
+        run: |
+          git config --global user.name "EconoDeal Bot"
+          git config --global user.email "bot@econodeal.local"
+          find data/canadian-tire -maxdepth 1 -name '*.json' -print0 | xargs -0 -r git add
+          git commit -m "CT shard: publish normalized datasets" || echo "Nothing to commit"
+          git push || true
+
