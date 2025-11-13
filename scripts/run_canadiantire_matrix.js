@@ -41,6 +41,65 @@ function parseBooleanArg(value, defaultValue = false) {
   return defaultValue;
 }
 
+function parseNumeric(value) {
+  if (value === undefined || value === null) return null;
+  if (typeof value === "number" && Number.isFinite(value)) return value;
+  if (typeof value === "string" && value.trim() !== "") {
+    const parsed = Number(value);
+    if (Number.isFinite(parsed)) return parsed;
+  }
+  return null;
+}
+
+const DAY_NAME_TO_INDEX = {
+  monday: 1,
+  mon: 1,
+  mardi: 2,
+  tuesday: 2,
+  tue: 2,
+  mercredi: 3,
+  wednesday: 3,
+  wed: 3,
+  jeudi: 4,
+  thursday: 4,
+  thu: 4,
+  vendredi: 5,
+  friday: 5,
+  fri: 5,
+  samedi: 6,
+  saturday: 6,
+  sat: 6,
+  dimanche: 7,
+  sunday: 7,
+  sun: 7,
+};
+
+function parseShardInput(...values) {
+  for (const value of values) {
+    if (value === undefined || value === null) continue;
+    if (typeof value === "string") {
+      const trimmed = value.trim();
+      if (!trimmed) continue;
+      const lower = trimmed.toLowerCase();
+      if (DAY_NAME_TO_INDEX[lower]) {
+        return DAY_NAME_TO_INDEX[lower];
+      }
+      const numeric = parseNumeric(trimmed);
+      if (numeric !== null) return numeric;
+    } else if (typeof value === "number") {
+      if (Number.isFinite(value)) return value;
+    }
+  }
+  return null;
+}
+
+function toZeroBasedShard(oneBased, totalShards) {
+  const fallback = 1;
+  const input = Number.isFinite(oneBased) ? oneBased : fallback;
+  const normalized = Math.max(1, Math.floor(input));
+  return Math.min(totalShards - 1, normalized - 1);
+}
+
 const storesFile = args.file || path.join("data", "canadian-tire", "branches.json");
 if (!fs.existsSync(storesFile)) {
   console.error(`❌ Stores file not found: ${storesFile}`);
@@ -74,6 +133,41 @@ if (filterIds.length) {
 const limit = Number(args.limit ?? args.count ?? args.n ?? 0);
 if (Number.isFinite(limit) && limit > 0) {
   stores = stores.slice(0, limit);
+}
+
+const shards = parseNumeric(args.shards ?? args.parts ?? args.divide ?? 1);
+const totalShards = Math.max(1, Math.floor(shards ?? 1));
+if (totalShards > 1) {
+  const shardInput = parseShardInput(
+    args.shard,
+    args.part,
+    args.segment,
+    args.slice,
+    args.bucket,
+    args.index,
+    args.day,
+    args.weekday,
+    process.env.CT_SHARD,
+    process.env.CT_SHARD_INDEX,
+    process.env.CANADIANTIRE_SHARD,
+    process.env.CANADIANTIRE_SHARD_INDEX,
+    process.env.SHARD,
+    process.env.SHARD_INDEX
+  );
+
+  const zeroBasedShard = toZeroBasedShard(shardInput, totalShards);
+  const originalCount = stores.length;
+  stores = stores.filter((_, idx) => idx % totalShards === zeroBasedShard);
+  console.log(
+    `🪓 Shard ${zeroBasedShard + 1}/${totalShards}: ${stores.length} store(s) out of ${originalCount}`
+  );
+  if (!stores.length) {
+    console.error(
+      `❌ No stores left after applying shard ${zeroBasedShard + 1}/${totalShards}. ` +
+        `Check --shard/--shards arguments.`
+    );
+    process.exit(1);
+  }
 }
 
 const dryRun = parseBooleanArg(args["dry-run"] ?? args.dryRun, false);
