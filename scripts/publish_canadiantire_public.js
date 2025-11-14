@@ -1,24 +1,30 @@
 #!/usr/bin/env node
-// Copie tous les data.json de outputs/canadiantire vers public/canadiantire
+// scripts/publish_canadiantire_public.js
+// Copie tous les data.json de outputs/canadiantire/* vers public/canadiantire/*.json
 // Exemple :
 //   outputs/canadiantire/271-st-jerome-qc/data.json
 // → public/canadiantire/271-st-jerome-qc.json
 
-import { promises as fs } from "fs";
+import fs from "fs-extra";
 import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Racines à partir du repo (scripts/ → ..)
+const outputsRoot = path.join(__dirname, "..", "outputs", "canadiantire");
+const publicRoot = path.join(__dirname, "..", "public", "canadiantire");
 
 async function main() {
-  const outputsRoot = path.join("outputs", "canadiantire");
-  const publicRoot = path.join("public", "canadiantire");
-
-  // Crée le dossier public/canadiantire s'il n'existe pas
-  await fs.mkdir(publicRoot, { recursive: true });
+  console.log("📦 Publication des JSON Canadian Tire vers public/…");
+  await fs.ensureDir(publicRoot);
 
   let entries;
   try {
     entries = await fs.readdir(outputsRoot, { withFileTypes: true });
   } catch (err) {
-    console.error("❌ Impossible de lire", outputsRoot, err.message);
+    console.error("❌ Impossible de lire", outputsRoot, "-", err.message);
     process.exit(1);
   }
 
@@ -29,18 +35,16 @@ async function main() {
     const src = path.join(outputsRoot, storeSlug, "data.json");
     const dest = path.join(publicRoot, `${storeSlug}.json`);
 
-    try {
-      // Vérifie que data.json existe
-      await fs.access(src);
-    } catch {
-      console.log(`⚠️  Pas de data.json pour ${storeSlug}, on saute.`);
+    const exists = await fs.pathExists(src);
+    if (!exists) {
+      console.log(`⚠️  ${storeSlug} : pas de data.json, on saute.`);
       continue;
     }
 
     try {
       const raw = await fs.readFile(src, "utf-8");
 
-      // Vérifie que c'est du JSON valide (évite de déployer du contenu corrompu)
+      // Vérifie que le JSON est valide (pour éviter de publier un fichier corrompu)
       JSON.parse(raw);
 
       await fs.writeFile(dest, raw);
