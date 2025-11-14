@@ -1,63 +1,54 @@
-#!/usr/bin/env node
-// scripts/publish_canadiantire_public.js
-// Copie tous les data.json de outputs/canadiantire/* vers public/canadiantire/*.json
-// Exemple :
-//   outputs/canadiantire/271-st-jerome-qc/data.json
-// → public/canadiantire/271-st-jerome-qc.json
+name: Canadian Tire - Multi Stores (Sharded 1/7)
 
-import fs from "fs-extra";
-import path from "path";
-import { fileURLToPath } from "url";
+on:
+  schedule:
+    # 05:00 America/Toronto ≈ 10:00 UTC
+    - cron: "0 10 * * *"
+  workflow_dispatch:
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+concurrency:
+  group: canadian-tire-shard-1
+  cancel-in-progress: false
 
-// Racines à partir du repo (scripts/ → ..)
-const outputsRoot = path.join(__dirname, "..", "outputs", "canadiantire");
-const publicRoot = path.join(__dirname, "..", "public", "canadiantire");
+jobs:
+  run-shard:
+    name: Run shard 1 of 7
+    runs-on: ubuntu-latest
 
-async function main() {
-  console.log("📦 Publication des JSON Canadian Tire vers public/…");
-  await fs.ensureDir(publicRoot);
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-  let entries;
-  try {
-    entries = await fs.readdir(outputsRoot, { withFileTypes: true });
-  } catch (err) {
-    console.error("❌ Impossible de lire", outputsRoot, "-", err.message);
-    process.exit(1);
-  }
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
-  for (const entry of entries) {
-    if (!entry.isDirectory()) continue;
+      - name: Install dependencies
+        run: npm install
 
-    const storeSlug = entry.name; // ex: "271-st-jerome-qc"
-    const src = path.join(outputsRoot, storeSlug, "data.json");
-    const dest = path.join(publicRoot, `${storeSlug}.json`);
+      - name: Configure Git user
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-    const exists = await fs.pathExists(src);
-    if (!exists) {
-      console.log(`⚠️  ${storeSlug} : pas de data.json, on saute.`);
-      continue;
-    }
+      - name: Run Canadian Tire scraper shard
+        run: |
+          node scripts/run_canadiantire_matrix.js \
+            --shards 7 \
+            --shard 1 \
+            --continue \
+            --publish
 
-    try {
-      const raw = await fs.readFile(src, "utf-8");
-
-      // Vérifie que le JSON est valide (pour éviter de publier un fichier corrompu)
-      JSON.parse(raw);
-
-      await fs.writeFile(dest, raw);
-      console.log(`✅ Copié ${src} → ${dest}`);
-    } catch (err) {
-      console.warn(`❌ Erreur pour ${storeSlug}: ${err.message}`);
-    }
-  }
-
-  console.log("✨ Publication Canadian Tire vers public/ terminée.");
-}
-
-main().catch((err) => {
-  console.error("❌ Erreur dans publish_canadiantire_public:", err);
-  process.exit(1);
-});
+      - name: Push changes
+        env:
+          GIT_AUTHOR_NAME: github-actions[bot]
+          GIT_AUTHOR_EMAIL: github-actions[bot]@users.noreply.github.com
+          GIT_COMMITTER_NAME: github-actions[bot]
+          GIT_COMMITTER_EMAIL: github-actions[bot]@users.noreply.github.com
+        run: |
+          git status -sb
+          git push origin HEAD:main
