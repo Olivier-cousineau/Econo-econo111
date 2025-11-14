@@ -30,6 +30,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      # 👉 Étape ajoutée pour corriger l'erreur Playwright
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
       - name: Configure Git user
         run: |
           git config --global user.name "github-actions[bot]"
@@ -52,3 +56,4 @@ jobs:
         run: |
           git status -sb
           git push origin HEAD:main
+
