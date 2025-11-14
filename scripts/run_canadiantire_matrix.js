@@ -13,9 +13,10 @@
  *                                           [--publish] [--skip-publish]
  */
 import fs from "fs";
+import os from "os";
 import path from "path";
 import { fileURLToPath } from "url";
-import { spawnSync } from "child_process";
+import { spawn } from "child_process";
 import minimist from "minimist";
 import slugify from "slugify";
 
@@ -28,6 +29,33 @@ const args = minimist(process.argv.slice(2), {
   boolean: ["dry-run", "dryRun", "continue", "publish"],
   alias: { dryRun: "dry-run" },
 });
+
+function availableParallelism() {
+  if (typeof os.availableParallelism === "function") {
+    return os.availableParallelism();
+  }
+  const cpus = os.cpus?.();
+  return Array.isArray(cpus) && cpus.length ? cpus.length : 1;
+}
+
+function runCommand(command, args, options = {}) {
+  return new Promise((resolve) => {
+    const child = spawn(command, args, {
+      cwd: repoRoot,
+      stdio: options.stdio ?? "inherit",
+      env: { ...process.env, ...options.env },
+    });
+
+    child.on("close", (code, signal) => {
+      resolve({ code, signal });
+    });
+
+    child.on("error", (error) => {
+      console.error(`❌ Failed to start ${command}:`, error);
+      resolve({ code: 1, error });
+    });
+  });
+}
 
 function parseBooleanArg(value, defaultValue = false) {
   if (value === undefined) return defaultValue;
@@ -200,23 +228,97 @@ for (const { key, flag } of passthrough) {
   }
 }
 
-console.log(`📦 Stores file: ${storesFile}`);
-console.log(`🧮 ${stores.length} store(s) to scrape`);
-if (dryRun) console.log("⚠️ Dry run mode: scrapes will be skipped, commits will not be created");
-if (!shouldPublish) console.log("ℹ️ Publication to data/canadian-tire disabled (--skip-publish)");
-
 const scraperEntry = path.join(repoRoot, "scraper_ct.js");
 const publishScript = path.join(repoRoot, "scripts", "publish_canadiantire_outputs.js");
+const statusMap = new Map();
 const publishedSlugs = [];
+let gitQueue = Promise.resolve();
 
-for (const store of stores) {
-  const cityLabel = store.city || store.name || "";
+function runWithGitLock(task) {
+  const next = gitQueue.then(() => task());
+  gitQueue = next.catch(() => {});
+  return next;
+}
+
+function storeLabel(store) {
+  return store.city || store.name || "(inconnu)";
+}
+
+function getStatusKey(store, index) {
+  return store.id ? String(store.id) : `idx-${index}`;
+}
+
+function setStatus(store, index, status, details = "") {
+  const entry = {
+    id: store.id ? String(store.id) : "?",
+    city: storeLabel(store),
+    status,
+    details,
+  };
+  statusMap.set(getStatusKey(store, index), entry);
+  return entry;
+}
+
+function getStatuses() {
+  return stores.map((store, index) =>
+    statusMap.get(getStatusKey(store, index)) ?? {
+      id: store.id ? String(store.id) : "?",
+      city: storeLabel(store),
+      status: "pending",
+      details: "",
+    }
+  );
+}
+
+async function summarizeStatuses() {
+  const entries = getStatuses();
+  const lines = [
+    "## Canadian Tire shard summary",
+    "",
+    `Total stores: ${entries.length}`,
+    "",
+    "| # | Store ID | Ville | Statut | Détails |",
+    "| - | - | - | - | - |",
+  ];
+
+  entries.forEach((entry, idx) => {
+    lines.push(
+      `| ${idx + 1} | ${entry.id} | ${entry.city || "(inconnu)"} | ${entry.status} | ${
+        entry.details || ""
+      } |`
+    );
+  });
+
+  const summary = lines.join("\n");
+  console.log(`\n${summary}\n`);
+  const summaryPath = process.env.GITHUB_STEP_SUMMARY;
+  if (summaryPath) {
+    fs.appendFileSync(summaryPath, `${summary}\n`);
+  }
+}
+
+const maxConcurrentArg = parseNumeric(
+  args["max-concurrent"] ??
+    args.maxConcurrent ??
+    args.parallel ??
+    args.concurrency ??
+    process.env.CT_MAX_CONCURRENT
+);
+const defaultParallelism = availableParallelism();
+const maxConcurrent = Math.max(
+  1,
+  Math.min(stores.length, maxConcurrentArg ?? defaultParallelism)
+);
+
+async function processStore(store, index) {
+  const cityLabel = storeLabel(store);
   if (!store.id || !cityLabel) {
     console.warn(`⚠️ Skipping invalid store entry: ${JSON.stringify(store)}`);
-    continue;
+    setStatus(store, index, "skipped", "missing id or city");
+    return { success: true };
   }
 
-  console.log(`\n==============================`);
+  console.log("\n==============================");
   console.log(`🏬 Scraping store ${store.id} – ${cityLabel}`);
 
   const scraperArgs = [
@@ -230,15 +332,19 @@ for (const store of stores) {
 
   if (dryRun) {
     console.log(`(dry-run) node ${scraperArgs.join(" ")}`);
-  } else {
-    const scrape = spawnSync("node", scraperArgs, { stdio: "inherit" });
-    if (scrape.status !== 0) {
-      console.error(`❌ Scraper failed for store ${store.id}`);
-      if (!continueOnError) {
-        process.exit(scrape.status ?? 1);
-      }
-      continue;
+    setStatus(store, index, "skipped", "dry-run");
+    return { success: true };
+  }
+
+  const scrape = await runCommand("node", scraperArgs);
+  if (scrape.code !== 0) {
+    const message = `scraper exited with code ${scrape.code}`;
+    console.error(`❌ Scraper failed for store ${store.id}: ${message}`);
+    setStatus(store, index, "failed", message);
+    if (!continueOnError) {
+      throw new Error(message);
     }
+    return { success: false };
   }
 
   const slug = slugify(cityLabel, { lower: true, strict: true }) || "default";
@@ -246,21 +352,10 @@ for (const store of stores) {
   const jsonPath = path.join(storePath, "data.json");
 
   if (!fs.existsSync(jsonPath)) {
-    console.warn(`⚠️ No data.json found at ${jsonPath}`);
-    continue;
-  }
-
-  if (dryRun) {
-    console.log(`(dry-run) would commit ${jsonPath}`);
-    continue;
-  }
-
-  console.log(`💾 Committing ${jsonPath}`);
-  const gitAdd = spawnSync("git", ["add", jsonPath], { stdio: "inherit" });
-  if (gitAdd.status !== 0) {
-    console.error(`❌ git add failed for ${jsonPath}`);
-    if (!continueOnError) process.exit(gitAdd.status ?? 1);
-    continue;
+    const message = `data.json not found at ${jsonPath}`;
+    console.warn(`⚠️ ${message}`);
+    setStatus(store, index, "skipped", message);
+    return { success: false };
   }
 
   let rows = "?";
@@ -271,55 +366,165 @@ for (const store of stores) {
     rows = "?";
   }
 
-  const commitMsg = `Canadian Tire: ${cityLabel} (${store.id}) – ${rows} produits`;
-  const gitCommit = spawnSync("git", ["commit", "-m", commitMsg], { stdio: "inherit" });
-  if (gitCommit.status !== 0) {
-    console.warn(`⚠️ git commit skipped for ${cityLabel} (store ${store.id})`);
-    if (!continueOnError && gitCommit.status !== 1) {
-      process.exit(gitCommit.status ?? 1);
+  const gitOutcome = await runWithGitLock(async () => {
+    console.log(`💾 Committing ${jsonPath}`);
+    const gitAdd = await runCommand("git", ["add", jsonPath]);
+    if (gitAdd.code !== 0) {
+      return { stage: "add", code: gitAdd.code };
     }
+    const commitMsg = `Canadian Tire: ${cityLabel} (${store.id}) – ${rows} produits`;
+    const gitCommit = await runCommand("git", ["commit", "-m", commitMsg]);
+    return { stage: "commit", code: gitCommit.code };
+  });
+
+  if (gitOutcome.stage === "add" && gitOutcome.code !== 0) {
+    const message = `git add failed for ${jsonPath}`;
+    console.error(`❌ ${message}`);
+    setStatus(store, index, "failed", message);
+    if (!continueOnError) {
+      throw new Error(message);
+    }
+    return { success: false };
   }
 
-  if (!dryRun) {
-    publishedSlugs.push(slug || "default");
+  if (gitOutcome.stage === "commit" && gitOutcome.code !== 0 && gitOutcome.code !== 1) {
+    const message = `git commit failed for ${cityLabel}`;
+    console.error(`❌ ${message}`);
+    setStatus(store, index, "failed", message);
+    if (!continueOnError) {
+      throw new Error(message);
+    }
+    return { success: false };
   }
+
+  if (gitOutcome.stage === "commit" && gitOutcome.code === 1) {
+    console.warn(`⚠️ git commit skipped for ${cityLabel} (store ${store.id})`);
+    setStatus(store, index, "skipped", "nothing to commit");
+    return { success: true };
+  }
+
+  setStatus(store, index, "committed", `${rows} produits`);
+  publishedSlugs.push(slug || "default");
+  return { success: true };
 }
 
-if (shouldPublish && !dryRun && publishedSlugs.length) {
-  console.log("\n📤 Publishing normalized Canadian Tire feeds...");
-  const publish = spawnSync("node", [publishScript], { stdio: "inherit" });
-  if (publish.status !== 0) {
-    console.error("❌ Failed to publish Canadian Tire datasets");
-    if (!continueOnError) process.exit(publish.status ?? 1);
-  } else {
-    const uniqueSlugs = Array.from(new Set(publishedSlugs));
-    const candidates = new Set(
-      uniqueSlugs.map((slug) => path.join("data", "canadian-tire", `${slug}.json`))
-    );
-    candidates.add(path.join("data", "canadian-tire", "stores_with_data.json"));
+async function runAllStores() {
+  console.log(`📦 Stores file: ${storesFile}`);
+  console.log(`🧮 ${stores.length} store(s) to scrape`);
+  if (dryRun)
+    console.log("⚠️ Dry run mode: scrapes will be skipped, commits will not be created");
+  if (!shouldPublish)
+    console.log("ℹ️ Publication to data/canadian-tire disabled (--skip-publish)");
+  console.log("\n📋 Stores in this shard:");
+  stores.forEach((store, idx) => {
+    console.log(`  ${idx + 1}. ${store.id ?? "?"} – ${storeLabel(store)}`);
+  });
+  console.log(`\n🚀 Running up to ${maxConcurrent} scraper(s) in parallel`);
 
-    const existingFiles = Array.from(candidates).filter((relativePath) =>
-      fs.existsSync(path.join(repoRoot, relativePath))
-    );
+  let cursor = 0;
+  let encounteredError = false;
 
-    if (existingFiles.length) {
-      const gitAdd = spawnSync("git", ["add", ...existingFiles], { stdio: "inherit" });
-      if (gitAdd.status !== 0) {
-        console.error("❌ git add failed while staging published datasets");
-        if (!continueOnError) process.exit(gitAdd.status ?? 1);
-      } else {
-        const publishMsg =
-          uniqueSlugs.length === 1
-            ? `Canadian Tire: publish dataset for ${uniqueSlugs[0]}`
-            : `Canadian Tire: publish datasets for ${uniqueSlugs.length} stores`;
-        const gitCommit = spawnSync("git", ["commit", "-m", publishMsg], { stdio: "inherit" });
-        if (gitCommit.status !== 0 && gitCommit.status !== 1) {
-          console.error("❌ git commit failed for published datasets");
-          if (!continueOnError) process.exit(gitCommit.status ?? 1);
+  async function worker() {
+    while (true) {
+      const index = cursor++;
+      if (index >= stores.length) break;
+      const store = stores[index];
+      try {
+        const result = await processStore(store, index);
+        if (!result.success) {
+          encounteredError = true;
         }
+      } catch (error) {
+        encounteredError = true;
+        throw error;
       }
     }
   }
+
+  const workers = Array.from({ length: Math.max(1, maxConcurrent) }, () => worker());
+  try {
+    await Promise.all(workers);
+  } catch (error) {
+    encounteredError = true;
+    throw error;
+  }
+  return { encounteredError };
 }
 
-console.log("\n✅ Done");
+async function publishDatasets() {
+  if (!shouldPublish || dryRun || !publishedSlugs.length) {
+    return;
+  }
+
+  console.log("\n📤 Publishing normalized Canadian Tire feeds...");
+  const publish = await runCommand("node", [publishScript]);
+  if (publish.code !== 0) {
+    console.error("❌ Failed to publish Canadian Tire datasets");
+    if (!continueOnError) {
+      throw new Error("publish failed");
+    }
+    return;
+  }
+
+  const uniqueSlugs = Array.from(new Set(publishedSlugs));
+  const candidates = new Set(
+    uniqueSlugs.map((slug) => path.join("data", "canadian-tire", `${slug}.json`))
+  );
+  candidates.add(path.join("data", "canadian-tire", "stores_with_data.json"));
+
+  const existingFiles = Array.from(candidates).filter((relativePath) =>
+    fs.existsSync(path.join(repoRoot, relativePath))
+  );
+
+  if (!existingFiles.length) {
+    return;
+  }
+
+  const gitAdd = await runCommand("git", ["add", ...existingFiles]);
+  if (gitAdd.code !== 0) {
+    console.error("❌ git add failed while staging published datasets");
+    if (!continueOnError) {
+      throw new Error("git add failed for published datasets");
+    }
+    return;
+  }
+
+  const publishMsg =
+    uniqueSlugs.length === 1
+      ? `Canadian Tire: publish dataset for ${uniqueSlugs[0]}`
+      : `Canadian Tire: publish datasets for ${uniqueSlugs.length} stores`;
+  const gitCommit = await runCommand("git", ["commit", "-m", publishMsg]);
+  if (gitCommit.code !== 0 && gitCommit.code !== 1) {
+    console.error("❌ git commit failed for published datasets");
+    if (!continueOnError) {
+      throw new Error("git commit failed for published datasets");
+    }
+  }
+}
+
+async function main() {
+  let encounteredError = false;
+  try {
+    const result = await runAllStores();
+    encounteredError = result.encounteredError;
+    await publishDatasets();
+    console.log("\n✅ Done");
+    if (encounteredError && !continueOnError) {
+      process.exit(1);
+    }
+    if (encounteredError && continueOnError) {
+      process.exitCode = 1;
+    }
+  } finally {
+    try {
+      await summarizeStatuses();
+    } catch (error) {
+      console.error("⚠️ Failed to write summary:", error);
+    }
+  }
+}
+
+await main().catch((error) => {
+  console.error(error?.message ?? error);
+  process.exit(1);
+});
