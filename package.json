@@ -27,6 +27,7 @@
   },
   "scripts": {
     "build:css": "shx mkdir -p dist/assets && cross-env NODE_ENV=production postcss styles/main.css -o dist/assets/main.css",
-    "watch:css": "shx mkdir -p dist/assets && postcss styles/main.css -o dist/assets/main.css --watch"
+    "watch:css": "shx mkdir -p dist/assets && postcss styles/main.css -o dist/assets/main.css --watch",
+    "publish-canadiantire-public": "node scripts/publish_canadiantire_public.js"
   }
 }
