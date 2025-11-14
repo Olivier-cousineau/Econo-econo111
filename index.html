@@ -54,6 +54,10 @@
             <button type="button" class="country-button" data-country="europe" aria-pressed="false">Europe</button>
           </div>
         </div>
+        <div class="site-meta" aria-live="polite">
+          <span class="site-meta-label">Catalogue synchronisé (HE)</span>
+          <time id="siteDateTime" class="site-meta-value" datetime="">Chargement…</time>
+        </div>
         <button id="menuToggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="headerMenu" aria-haspopup="true">
           <span class="menu-toggle-icon" aria-hidden="true">☰</span>
           <span class="menu-toggle-label">Menu</span>
@@ -489,6 +493,14 @@
     const overlayDismissTriggers = Array.from(document.querySelectorAll('[data-overlay-dismiss]'));
     const OVERLAY_DISMISSED_KEY = 'econodealOverlayDismissed';
     const storeAdsContainer = document.getElementById('storeAds');
+    const siteDateTimeElement = document.getElementById('siteDateTime');
+    const siteDateTimeFormatter = siteDateTimeElement
+      ? new Intl.DateTimeFormat('fr-CA', {
+          dateStyle: 'full',
+          timeStyle: 'short',
+          timeZone: 'America/Toronto'
+        })
+      : null;
     function parseJson(value){
       if(!value) return null;
       try{
@@ -500,6 +512,18 @@
     }
 
     const memoryStorage = new Map();
+
+    function updateSiteDateTime(){
+      if(!siteDateTimeElement || !siteDateTimeFormatter) return;
+      const now = new Date();
+      siteDateTimeElement.textContent = siteDateTimeFormatter.format(now);
+      siteDateTimeElement.setAttribute('datetime', now.toISOString());
+    }
+
+    if(siteDateTimeElement && siteDateTimeFormatter){
+      updateSiteDateTime();
+      setInterval(updateSiteDateTime, 60000);
+    }
 
     function safeGet(key){
       if(!key) return null;
