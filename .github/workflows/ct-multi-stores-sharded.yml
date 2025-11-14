@@ -1,113 +1,63 @@
-# (05:00 America/Toronto, 1/7 de la liste par jour, commit uniquement le JSON du magasin)
+#!/usr/bin/env node
+// scripts/publish_canadiantire_public.js
+// Copie tous les data.json de outputs/canadiantire/* vers public/canadiantire/*.json
+// Exemple :
+//   outputs/canadiantire/271-st-jerome-qc/data.json
+// → public/canadiantire/271-st-jerome-qc.json
 
-name: Canadian Tire - Multi Stores (Sharded 1/7)
+import fs from "fs-extra";
+import path from "path";
+import { fileURLToPath } from "url";
 
-on:
-  schedule:
-    # 05:00 America/Toronto ≈ 10:00 UTC (heure d'hiver)
-    - cron: "0 10 * * *"
-  workflow_dispatch:
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-jobs:
-  prepare-matrix:
-    runs-on: ubuntu-latest
-    outputs:
-      stores: ${{ steps.make-matrix.outputs.stores }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+// Racines à partir du repo (scripts/ → ..)
+const outputsRoot = path.join(__dirname, "..", "outputs", "canadiantire");
+const publicRoot = path.join(__dirname, "..", "public", "canadiantire");
 
-      - name: Install Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
+async function main() {
+  console.log("📦 Publication des JSON Canadian Tire vers public/…");
+  await fs.ensureDir(publicRoot);
 
-      - name: Install deps (matrix gen)
-        run: npm i minimist
+  let entries;
+  try {
+    entries = await fs.readdir(outputsRoot, { withFileTypes: true });
+  } catch (err) {
+    console.error("❌ Impossible de lire", outputsRoot, "-", err.message);
+    process.exit(1);
+  }
 
-      - name: Compute shard index for America/Toronto
-        id: dow
-        run: |
-          echo "TZ=America/Toronto" >> $GITHUB_ENV
-          DOW=$(TZ=America/Toronto date +%w)   # 0=dimanche .. 6=samedi
-          echo "shard=${DOW}" >> $GITHUB_OUTPUT
+  for (const entry of entries) {
+    if (!entry.isDirectory()) continue;
 
-      - name: Build matrix (1/7)
-        id: make-matrix
-        run: |
-          node scripts/ct_make_matrix.js \
-            --file data/canadian-tire/stores_raw.txt \
-            --shards 7 \
-            --shard ${{ steps.dow.outputs.shard }} > matrix.json
-          echo "stores=$(cat matrix.json)" >> $GITHUB_OUTPUT
-          echo "Matrix for shard ${{ steps.dow.outputs.shard }}:"
-          cat matrix.json
+    const storeSlug = entry.name; // ex: "271-st-jerome-qc"
+    const src = path.join(outputsRoot, storeSlug, "data.json");
+    const dest = path.join(publicRoot, `${storeSlug}.json`);
 
-  scrape:
-    needs: prepare-matrix
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        include: ${{ fromJSON(needs.prepare-matrix.outputs.stores) }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+    const exists = await fs.pathExists(src);
+    if (!exists) {
+      console.log(`⚠️  ${storeSlug} : pas de data.json, on saute.`);
+      continue;
+    }
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
+    try {
+      const raw = await fs.readFile(src, "utf-8");
 
-      - name: Install deps
-        run: |
-          npm ci || npm i
-          npm i slugify minimist
-          npx playwright install --with-deps chromium
+      // Vérifie que le JSON est valide (pour éviter de publier un fichier corrompu)
+      JSON.parse(raw);
 
-      - name: Scrape ${{ matrix.city }} (store ${{ matrix.store }})
-        id: scrape
-        run: |
-          set -e
-          node scraper_ct.js \
-            --store "${{ matrix.store }}" \
-            --city "${{ matrix.city }}" \
-            --maxPages 120 | tee scrape.log
+      await fs.writeFile(dest, raw);
+      console.log(`✅ Copié ${src} → ${dest}`);
+    } catch (err) {
+      console.warn(`❌ Erreur pour ${storeSlug}: ${err.message}`);
+    }
+  }
 
-      - name: Compute store output path (same slug as scraper)
-        id: outpath
-        env:
-          MATRIX_STORE: ${{ matrix.store }}
-          MATRIX_CITY: ${{ matrix.city }}
-        run: |
-          node - <<'NODE' > .store_path
-          const slugify = require('slugify');
-          const store = process.env.MATRIX_STORE;
-          const city = process.env.MATRIX_CITY || "";
+  console.log("✨ Publication Canadian Tire vers public/ terminée.");
+}
 
-          if (!store) {
-            throw new Error('Identifiant du magasin non défini');
-          }
-
-          const slug = slugify(city, { lower: true, strict: true });
-          if (!slug) {
-            throw new Error('Slug du store non défini');
-          }
-
-          const path = `outputs/canadiantire/${store}-${slug}`;
-          console.error('Chemin généré:', path);
-          process.stdout.write(path);
-          NODE
-          echo "path=$(cat .store_path)" >> $GITHUB_OUTPUT
-
-      - name: Commit only this store’s JSON
-        run: |
-          STORE_PATH='${{ steps.outpath.outputs.path }}'
-          echo "Committing: $STORE_PATH/data.json"
-          git config user.name "EconoDeal Bot"
-          git config user.email "bot@econodeal.local"
-          git add "$STORE_PATH/data.json"
-          ROWS=$(jq 'length' "$STORE_PATH/data.json" 2>/dev/null || echo "?")
-          git commit -m "CT shard: ${ROWS} items → $STORE_PATH/data.json" || echo "No changes"
-          git push || true
-
+main().catch((err) => {
+  console.error("❌ Erreur dans publish_canadiantire_public:", err);
+  process.exit(1);
+});
