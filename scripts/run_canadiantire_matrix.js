@@ -118,9 +118,13 @@ if (Number.isFinite(limit) && limit > 0) {
   stores = stores.slice(0, limit);
 }
 
-const shardIndexInput = parseNumeric(args.shardIndex ?? args["shard-index"]);
+const shardIndexInput = parseNumeric(
+  args.shard ?? args.shardIndex ?? args["shard-index"]
+);
+const shardTotalInput = parseNumeric(
+  args.shards ?? args.shardTotal ?? args["shard-total"]
+);
 if (shardIndexInput !== null) {
-  const shardTotalInput = parseNumeric(args.shardTotal ?? args["shard-total"]);
   const shardTotal = Math.max(1, Math.floor(shardTotalInput ?? 7));
   const shardIndex = Math.floor(shardIndexInput);
   if (!Number.isFinite(shardIndex) || shardIndex < 1 || shardIndex > shardTotal) {
