@@ -1,0 +1,91 @@
+name: Canadian Tire - Shards 10-12 (21 total)
+
+on:
+  schedule:
+    # 05:00 America/Toronto ≈ 10:00 UTC every Thursday
+    - cron: "0 10 * * 4"
+  workflow_dispatch:
+
+concurrency:
+  group: canadian-tire-shards-10-12
+  cancel-in-progress: false
+
+jobs:
+  run-shards:
+    name: Run shards 10-12 of 21
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Playwright browsers (Chromium)
+        run: npx playwright install --with-deps chromium
+
+      - name: Install Playwright browsers (all)
+        run: npx playwright install --with-deps
+
+      - name: Configure Git user
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Run Canadian Tire shards 10-12
+        id: run_shards
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          set +e
+          failures=0
+
+          for shard in 10 11 12; do
+            echo "Running shard ${shard}/21"
+            node scripts/run_canadiantire_matrix.js \
+              --shards 21 \
+              --shard ${shard} \
+              --continue \
+              --publish
+            status=$?
+            if [ "$status" -ne 0 ]; then
+              echo "Shard ${shard} reported failures"
+              failures=1
+            fi
+          done
+
+          if [ "$failures" -ne 0 ]; then
+            exit 1
+          fi
+
+      - name: Commit Canadian Tire outputs
+        if: always()
+        run: |
+          git add outputs/canadiantire || true
+          git commit -m "Update Canadian Tire data (shards 10-12/21)" || echo "Nothing to commit"
+
+      - name: Push changes
+        if: always()
+        env:
+          GIT_AUTHOR_NAME: github-actions[bot]
+          GIT_AUTHOR_EMAIL: github-actions[bot]@users.noreply.github.com
+          GIT_COMMITTER_NAME: github-actions[bot]
+          GIT_COMMITTER_EMAIL: github-actions[bot]@users.noreply.github.com
+        run: |
+          git status -sb
+          git push origin HEAD:main
+
+      - name: Fail when shards reported errors
+        if: steps.run_shards.outcome == 'failure'
+        run: |
+          echo "Some shards failed to scrape"
+          exit 1
