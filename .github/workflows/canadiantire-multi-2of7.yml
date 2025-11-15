@@ -25,6 +25,11 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps chromium
 
+      - name: Configure git identity
+        run: |
+          git config --global user.name "Olivier-cousineau"
+          git config --global user.email "ocousineau40@gmail.com"
+
       - name: Run Canadian Tire shard 2/7
         run: |
           node scripts/run_canadiantire_matrix.js \
@@ -34,8 +39,6 @@ jobs:
 
       - name: Commit and push updates
         run: |
-          git config --global user.name "Olivier-cousineau"
-          git config --global user.email "ocousineau40@gmail.com"
           git add outputs/canadiantire/**/*.json outputs/canadiantire/**/*.csv outputs/canadiantire/**/images/* package-lock.json || echo "Rien à ajouter"
           git commit -m "Update Canadian Tire data (shard 2/7)" || echo "Nothing to commit"
           git push
