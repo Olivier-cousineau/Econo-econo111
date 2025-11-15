@@ -44,7 +44,7 @@ jobs:
           set -e
           git config user.name  "Olivier-cousineau"
           git config user.email "ocousineau40@gmail.com"
-          git add data/canadian-tire/saint-jerome/*
+          git add outputs/canadiantire/**/*.json outputs/canadiantire/**/*.csv outputs/canadiantire/**/images/* package-lock.json
           if ! git diff --cached --quiet; then
             git commit -m "Canadian Tire Saint-Jérôme: update data (auto)"
             git push
