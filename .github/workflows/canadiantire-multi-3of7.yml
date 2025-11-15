@@ -1,0 +1,38 @@
+name: Canadian Tire - Multi Stores (Sharded 3/7)
+
+on:
+  schedule:
+    # 05:00 America/Toronto ≈ 10:00 UTC every Wednesday
+    - cron: "0 10 * * 3"
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Canadian Tire shard 3/7
+        run: |
+          node scripts/run_canadiantire_matrix.js \
+            --file data/canadian-tire/branches.json \
+            --shardIndex 3 \
+            --shardTotal 7
+
+      - name: Commit and push updates
+        run: |
+          git config --global user.name "Olivier-cousineau"
+          git config --global user.email "ocousineau40@gmail.com"
+          git add outputs/canadiantire/**/*.json outputs/canadiantire/**/*.csv outputs/canadiantire/**/images/* package-lock.json || echo "Rien à ajouter"
+          git commit -m "Update Canadian Tire data (shard 3/7)" || echo "Nothing to commit"
+          git push
