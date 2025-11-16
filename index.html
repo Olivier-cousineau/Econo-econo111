@@ -492,6 +492,7 @@
     const clientCountDisplays = Array.from(document.querySelectorAll('[data-client-count]'));
     const overlayDismissTriggers = Array.from(document.querySelectorAll('[data-overlay-dismiss]'));
     const OVERLAY_DISMISSED_KEY = 'econodealOverlayDismissed';
+    const STORE_ADS_DISMISS_KEY = 'econodealStoreAdsDismissed';
     const storeAdsContainer = document.getElementById('storeAds');
     const siteDateTimeElement = document.getElementById('siteDateTime');
     const siteDateTimeFormatter = siteDateTimeElement
@@ -1032,8 +1033,25 @@
       storeAdsRotationTimer = window.setInterval(callback, 4500);
     }
 
+    function hideStoreAds(){
+      stopStoreAdsRotation();
+      if(!storeAdsContainer) return;
+      storeAdsContainer.setAttribute('aria-hidden', 'true');
+      storeAdsContainer.innerHTML = '';
+      storeAdsContainer.classList.remove('store-ads--static');
+      storeAdsContainer.onmouseenter = null;
+      storeAdsContainer.onmouseleave = null;
+      storeAdsContainer.onfocusin = null;
+      storeAdsContainer.onfocusout = null;
+    }
+
     function renderStoreAds(){
       if(!storeAdsContainer) return;
+      const isDismissed = safeGet(STORE_ADS_DISMISS_KEY) === 'true';
+      if(isDismissed){
+        hideStoreAds();
+        return;
+      }
       stopStoreAdsRotation();
       const items = STORES
         .map(store => {
@@ -1046,13 +1064,7 @@
         })
         .filter(Boolean);
       if(items.length === 0){
-        storeAdsContainer.setAttribute('aria-hidden', 'true');
-        storeAdsContainer.innerHTML = '';
-        storeAdsContainer.classList.remove('store-ads--static');
-        storeAdsContainer.onmouseenter = null;
-        storeAdsContainer.onmouseleave = null;
-        storeAdsContainer.onfocusin = null;
-        storeAdsContainer.onfocusout = null;
+        hideStoreAds();
         return;
       }
       const list = items.map((item, index) => {
@@ -1064,11 +1076,20 @@
         ? `<div class="store-ads-dots" role="presentation">${items.map((_, index) => `<span class="store-ads-dot${index === 0 ? ' is-active' : ''}" aria-hidden="true"></span>`).join('')}</div>`
         : '';
       storeAdsContainer.innerHTML = `
+        <button type="button" class="store-ads-dismiss" aria-label="Fermer les magasins en vedette" title="Masquer les magasins en vedette">×</button>
         <div class="store-ads-header">Stores en vedette</div>
         <div class="store-ads-spotlight">${list}</div>
         ${dots}
       `;
       storeAdsContainer.removeAttribute('aria-hidden');
+
+      const dismissBtn = storeAdsContainer.querySelector('.store-ads-dismiss');
+      if(dismissBtn){
+        dismissBtn.addEventListener('click', () => {
+          safeSet(STORE_ADS_DISMISS_KEY, 'true');
+          hideStoreAds();
+        });
+      }
 
       const slides = Array.from(storeAdsContainer.querySelectorAll('.store-ads-item'));
       const dotEls = Array.from(storeAdsContainer.querySelectorAll('.store-ads-dot'));
