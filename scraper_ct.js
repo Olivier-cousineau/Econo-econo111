@@ -553,6 +553,61 @@ async function selectStoreById(page, storeIdFromUrl) {
   } catch {}
 }
 
+async function killAllPopups(page) {
+  await page.evaluate(() => {
+    const forceHide = (el) => {
+      if (!el || !(el instanceof HTMLElement)) return;
+      el.style.setProperty("display", "none", "important");
+      el.style.setProperty("pointer-events", "none", "important");
+      el.style.setProperty("visibility", "hidden", "important");
+      el.setAttribute("aria-hidden", "true");
+    };
+
+    const looksLikeOverlay = (el) => {
+      if (!(el instanceof HTMLElement)) return false;
+      const rect = el.getBoundingClientRect();
+      if (!rect || rect.width === 0 || rect.height === 0) return false;
+      const style = getComputedStyle(el);
+      if (style.display === "none" || style.visibility === "hidden") return false;
+      const coversViewport =
+        rect.top <= 0 && rect.left <= 0 &&
+        rect.width >= (document.documentElement.clientWidth || window.innerWidth || 0) * 0.35 &&
+        rect.height >= (document.documentElement.clientHeight || window.innerHeight || 0) * 0.25;
+      const positioned = ["fixed", "sticky", "absolute"].includes(style.position);
+      const interceptsPointer = style.pointerEvents !== "none";
+      const highZ = Number(style.zIndex) > 10 || style.zIndex === "auto";
+      return interceptsPointer && (coversViewport || positioned) && highZ;
+    };
+
+    const suspiciousIds = ["kampyle", "mdigital", "medallia", "invite", "survey"]; // Medallia / Kampyle patterns
+
+    const iframes = Array.from(document.querySelectorAll("iframe"));
+    for (const frame of iframes) {
+      const id = (frame.id || frame.name || "").toLowerCase();
+      const src = (frame.getAttribute("src") || "").toLowerCase();
+      if (suspiciousIds.some((k) => id.includes(k) || src.includes(k))) {
+        forceHide(frame);
+        continue;
+      }
+      const rect = frame.getBoundingClientRect();
+      if (rect && rect.height > 0 && rect.width > 0 && rect.top < (window.innerHeight || 0) * 0.9) {
+        forceHide(frame);
+      }
+    }
+
+    const bodyChildren = Array.from(document.body.querySelectorAll("body > *"));
+    for (const el of bodyChildren) {
+      const id = (el.id || "").toLowerCase();
+      const cls = (el.className || "").toString().toLowerCase();
+      if (suspiciousIds.some((k) => id.includes(k) || cls.includes(k))) {
+        forceHide(el);
+        continue;
+      }
+      if (looksLikeOverlay(el)) forceHide(el);
+    }
+  }).catch(() => {});
+}
+
 // ---------- MAIN ----------
 async function main() {
   const browser = await chromium.launch({ headless: HEADLESS, args: ["--disable-dev-shm-usage"] });
@@ -569,6 +624,8 @@ async function main() {
     catch (e) { if (--retries === 0) throw e; console.log("Retrying page load..."); await page.waitForTimeout(3000); }
   }
 
+  await killAllPopups(page);
+
   await maybeCloseStoreModal(page);
 
   // 2) forcer le magasin si présent dans l'URL puis recharger
@@ -577,6 +634,7 @@ async function main() {
   if (storeIdFromUrl) {
     await selectStoreById(page, storeIdFromUrl);
     await page.goto(START_URL, { timeout: 120000, waitUntil: "domcontentloaded" }).catch(()=>{});
+    await killAllPopups(page);
   }
 
   await fs.ensureDir(OUT_BASE);
@@ -657,6 +715,8 @@ async function main() {
     }
 
     await target.scrollIntoViewIfNeeded().catch(() => {});
+
+    await killAllPopups(page);
 
     const clickNavigation = (async () => {
       if (await target.isVisible().catch(() => false)) {
