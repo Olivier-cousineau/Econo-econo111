@@ -1,9 +1,9 @@
-name: Canadian Tire - Shards 19-21 (21 total)
+name: Canadian Tire - Shard 4 of 21
 
 on:
   schedule:
-    # 05:00 America/Toronto ≈ 10:00 UTC every Sunday
-    - cron: "0 10 * * 0"
+    # 05:00 America/Toronto ≈ 10:00 UTC daily
+    - cron: "0 10 * * *"
   workflow_dispatch:
 
 concurrency:
@@ -11,8 +11,8 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  run-shards:
-    name: Run shards 19-21 of 21
+  run-shard-04:
+    name: Run shard 4 of 21
     runs-on: ubuntu-latest
 
     steps:
@@ -41,37 +41,20 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Run Canadian Tire shards 19-21
-        id: run_shards
-        continue-on-error: true
+      - name: Run Canadian Tire shard 4/21
         run: |
           set -o pipefail
-          set +e
-          failures=0
-
-          for shard in 19 20 21; do
-            echo "Running shard ${shard}/21"
-            node scripts/run_canadiantire_matrix.js \
-              --shards 21 \
-              --shard ${shard} \
-              --continue \
-              --publish
-            status=$?
-            if [ "$status" -ne 0 ]; then
-              echo "Shard ${shard} reported failures"
-              failures=1
-            fi
-          done
-
-          if [ "$failures" -ne 0 ]; then
-            exit 1
-          fi
+          node scripts/run_canadiantire_matrix.js \
+            --shards 21 \
+            --shard 4 \
+            --continue \
+            --publish
 
       - name: Commit Canadian Tire outputs
         if: always()
         run: |
           git add outputs/canadiantire || true
-          git commit -m "Update Canadian Tire data (shards 19-21/21)" || echo "Nothing to commit"
+          git commit -m "Update Canadian Tire data (shard 4/21)" || echo "Nothing to commit"
 
       - name: Push changes
         if: always()
@@ -83,9 +66,3 @@ jobs:
         run: |
           git status -sb
           git push origin HEAD:main
-
-      - name: Fail when shards reported errors
-        if: steps.run_shards.outcome == 'failure'
-        run: |
-          echo "Some shards failed to scrape"
-          exit 1
