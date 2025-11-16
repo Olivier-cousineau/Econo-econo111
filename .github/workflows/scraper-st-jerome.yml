@@ -1,10 +1,9 @@
+# Archived / unused workflow
 # Workflow: run scraper using parameters from st-jerome.json in the repo
 name: Scraper — st-jerome
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 4 * * *'
 
 jobs:
   scrape:
@@ -49,7 +48,7 @@ jobs:
             echo "st-jerome.json must contain a url"; exit 1;
           fi
           echo "Running scraper for: $URL (maxPages=$MAX)"
-          node ./scrape.js \
+          node ./archive/unused-scrapers/scrape.js \
             --url "$URL" \
             --maxPages "$MAX" \
             --include-liquidation-price \

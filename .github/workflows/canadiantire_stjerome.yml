@@ -1,8 +1,7 @@
+# Archived / unused workflow
 name: Scraper Canadian Tire - Saint-Jérôme
 
 on:
-  schedule:
-    - cron: "0 10 * * *"   # tous les jours 05:00 (Québec = UTC-5 → 10:00 UTC)
   workflow_dispatch:
 
 jobs:
@@ -30,7 +29,7 @@ jobs:
           OUT_DIR: "data/canadian-tire/saint-jerome"
         run: |
           mkdir -p "$OUT_DIR"
-          python scripts/canadian_tire_scraper.py \
+          python archive/unused-scrapers/canadian_tire_scraper.py \
             --store-id "$STORE_ID" \
             --store-name "Canadian Tire Saint-Jérôme" \
             --store-slug "saint-jerome" \
