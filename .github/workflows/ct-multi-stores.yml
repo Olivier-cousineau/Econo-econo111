@@ -20,6 +20,14 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Sync with latest main
+        run: |
+          git fetch origin main
+          if ! git rebase origin/main; then
+            git rebase --abort
+            exit 1
+          fi
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -43,11 +51,6 @@ jobs:
 
       - name: Commit store JSON
         run: |
-          echo "Pull latest changes"
-          git fetch origin
-          git checkout main
-          git pull --rebase origin main
-
           echo "Committing ${{ matrix.store }}..."
           git add outputs/canadiantire/${{ matrix.store }}*/data.json
           git add outputs/canadiantire/${{ matrix.store }}*/data.csv
@@ -55,10 +58,41 @@ jobs:
 
           git commit -m "CT shard: update store ${{ matrix.store }}" || echo "Nothing to commit"
 
-          git push origin main
+      - name: Push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          if git diff --quiet origin/main..HEAD; then
+            echo "No new commits to push"
+            exit 0
+          fi
+
+          attempts=0
+          max_attempts=3
+          while true; do
+            if git push origin HEAD:main; then
+              echo "Push succeeded"
+              break
+            fi
+
+            attempts=$((attempts + 1))
+            if [ "$attempts" -ge "$max_attempts" ]; then
+              echo "Push failed after ${max_attempts} attempts."
+              exit 1
+            fi
+
+            echo "Push failed (main moved). Refetching and rebasing... attempt ${attempts}/${max_attempts}"
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort
+              exit 1
+            fi
+          done
 
     strategy:
       fail-fast: false
       matrix:
         store: [271, 649, 418, 641, 218, 690] # mettre tes stores ici
         city: ["St-Jérôme", "Blainville", "Rosemère", "La-Plaine", "St-Eustache", "Laval"]
+      max-parallel: 1

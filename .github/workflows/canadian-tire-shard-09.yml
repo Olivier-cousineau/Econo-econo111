@@ -41,6 +41,14 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
+      - name: Sync with latest main
+        run: |
+          git fetch origin main
+          if ! git rebase origin/main; then
+            git rebase --abort
+            exit 1
+          fi
+
       - name: Run Canadian Tire shard 9/21
         run: |
           set -o pipefail
@@ -62,17 +70,27 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          echo "👉 Status before pull"
-          git status -sb
-
-          echo "👉 Fetch origin/main"
-          git fetch origin main
-
-          echo "👉 Pull with rebase"
-          git pull --rebase origin main || true
-
           echo "👉 Status before push"
           git status -sb
 
-          echo "👉 Push to origin/main"
-          git push origin main
+          attempts=0
+          max_attempts=3
+          while true; do
+            if git push origin HEAD:main; then
+              echo "Push succeeded"
+              break
+            fi
+
+            attempts=$((attempts + 1))
+            if [ "$attempts" -ge "$max_attempts" ]; then
+              echo "Push failed after ${max_attempts} attempts."
+              exit 1
+            fi
+
+            echo "Push failed (main moved). Refetching and rebasing... attempt ${attempts}/${max_attempts}"
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort
+              exit 1
+            fi
+          done
