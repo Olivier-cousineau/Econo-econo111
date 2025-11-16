@@ -20,14 +20,6 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Sync with latest main
-        run: |
-          git fetch origin main
-          if ! git rebase origin/main; then
-            git rebase --abort
-            exit 1
-          fi
-
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -49,46 +41,63 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Commit store JSON
+      - name: Commit and push updates
+        if: always()
         run: |
-          echo "Committing ${{ matrix.store }}..."
-          git add outputs/canadiantire/${{ matrix.store }}*/data.json
-          git add outputs/canadiantire/${{ matrix.store }}*/data.csv
-          git add outputs/canadiantire/${{ matrix.store }}*/images || true
-
-          git commit -m "CT shard: update store ${{ matrix.store }}" || echo "Nothing to commit"
-
-      - name: Push changes
-        run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          if git diff --quiet origin/main..HEAD; then
-            echo "No new commits to push"
-            exit 0
+          git add -A
+
+          if git diff --cached --quiet; then
+            echo "Nothing to commit"
+          else
+            git commit -m "chore: update Canadian Tire data"
           fi
 
           attempts=0
           max_attempts=3
-          while true; do
+          while [ "$attempts" -lt "$max_attempts" ]; do
+            if git status --porcelain | grep -q .; then
+              echo "Working tree dirty before rebase; staging pending changes."
+              git add -A
+              if git diff --cached --quiet; then
+                echo "No changes to commit after restaging."
+              else
+                git commit -m "chore: update Canadian Tire data"
+              fi
+            fi
+
+            if ! git pull --rebase origin main; then
+              git rebase --abort || true
+              attempts=$((attempts + 1))
+              echo "Rebase failed; retrying (${attempts}/${max_attempts})..."
+              continue
+            fi
+
+            if git status --porcelain | grep -q .; then
+              echo "Working tree dirty after rebase; aborting."
+              exit 1
+            fi
+
+            if git diff --quiet origin/main..HEAD; then
+              echo "No new commits to push"
+              exit 0
+            fi
+
             if git push origin HEAD:main; then
               echo "Push succeeded"
-              break
+              exit 0
             fi
 
             attempts=$((attempts + 1))
-            if [ "$attempts" -ge "$max_attempts" ]; then
-              echo "Push failed after ${max_attempts} attempts."
-              exit 1
-            fi
-
-            echo "Push failed (main moved). Refetching and rebasing... attempt ${attempts}/${max_attempts}"
-            git fetch origin main
-            if ! git rebase origin/main; then
-              git rebase --abort
-              exit 1
-            fi
+            echo "Push failed; retrying (${attempts}/${max_attempts})..."
           done
+
+          echo "Push failed after ${max_attempts} attempts."
+          exit 1
+
 
     strategy:
       fail-fast: false
