@@ -4,6 +4,10 @@
     "slug": "4975-blvd-robert-bourassa"
   },
   {
+    "storeNumber": "1",
+    "slug": "alliston-on"
+  },
+  {
     "storeNumber": "298",
     "slug": "alma-qc"
   },
@@ -72,6 +76,10 @@
     "slug": "guelph-north-on"
   },
   {
+    "storeNumber": "177",
+    "slug": "hamilton-mtwest-on"
+  },
+  {
     "storeNumber": "47",
     "slug": "huntsville-on"
   },
@@ -88,8 +96,16 @@
     "slug": "kanata-on"
   },
   {
+    "storeNumber": "694",
+    "slug": "kingston-division-st-on"
+  },
+  {
     "storeNumber": "209",
     "slug": "kingston-rd-on"
+  },
+  {
+    "storeNumber": "233",
+    "slug": "la-sarre-qc"
   },
   {
     "storeNumber": "",
@@ -132,6 +148,10 @@
     "slug": "london-west-on"
   },
   {
+    "storeNumber": "451",
+    "slug": "marathon-on"
+  },
+  {
     "storeNumber": "315",
     "slug": "matane-qc"
   },
@@ -172,6 +192,10 @@
     "slug": "ottawa-merivale-on"
   },
   {
+    "storeNumber": "463",
+    "slug": "paspebiac-qc"
+  },
+  {
     "storeNumber": "79",
     "slug": "pembroke-on"
   },
@@ -198,6 +222,10 @@
   {
     "storeNumber": "86",
     "slug": "renfrew-on"
+  },
+  {
+    "storeNumber": "697",
+    "slug": "richmond-hill-north-on"
   },
   {
     "storeNumber": "476",
@@ -228,6 +256,10 @@
     "slug": "st-jerome-qc"
   },
   {
+    "storeNumber": "91",
+    "slug": "st-marys-on"
+  },
+  {
     "storeNumber": "102",
     "slug": "sturgeon-falls-on"
   },
@@ -246,5 +278,13 @@
   {
     "storeNumber": "235",
     "slug": "ville-st-laurent-qc"
+  },
+  {
+    "storeNumber": "251",
+    "slug": "waterloo-on"
+  },
+  {
+    "storeNumber": "199",
+    "slug": "windsor-east-on"
   }
 ]
