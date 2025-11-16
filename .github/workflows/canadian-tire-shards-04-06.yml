@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: canadian-tire-shards-04-06
+  group: canadian-tire-shards-push
   cancel-in-progress: false
 
 jobs:
