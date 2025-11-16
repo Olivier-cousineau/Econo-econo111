@@ -2,8 +2,8 @@ name: Canadian Tire - Shard 20 of 21
 
 on:
   schedule:
-    # 05:00 America/Toronto ≈ 10:00 UTC daily
-    - cron: "0 10 * * *"
+    # 05:00 America/Toronto ≈ 10:00 UTC on Friday
+    - cron: "0 10 * * 5"
   workflow_dispatch:
 
 concurrency:
