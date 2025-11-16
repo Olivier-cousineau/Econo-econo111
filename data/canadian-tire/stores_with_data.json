@@ -24,6 +24,10 @@
     "slug": "blainville"
   },
   {
+    "storeNumber": "649",
+    "slug": "blainville-qc"
+  },
+  {
     "storeNumber": "446",
     "slug": "bradford-on"
   },
@@ -132,8 +136,16 @@
     "slug": "matane-qc"
   },
   {
+    "storeNumber": "682",
+    "slug": "minden-on"
+  },
+  {
     "storeNumber": "249",
     "slug": "moncton-mountain-rd-nb"
+  },
+  {
+    "storeNumber": "461",
+    "slug": "mont-tremblant-qc"
   },
   {
     "storeNumber": "71",
@@ -152,6 +164,10 @@
     "slug": "oshawa-mid-on"
   },
   {
+    "storeNumber": "174",
+    "slug": "ottawa-east-on"
+  },
+  {
     "storeNumber": "258",
     "slug": "ottawa-merivale-on"
   },
@@ -166,6 +182,10 @@
   {
     "storeNumber": "324",
     "slug": "pickering-on"
+  },
+  {
+    "storeNumber": "928",
+    "slug": "place-versailles-qc"
   },
   {
     "storeNumber": "303",
@@ -192,6 +212,10 @@
     "slug": "sainte-therese"
   },
   {
+    "storeNumber": "98",
+    "slug": "smiths-falls-on"
+  },
+  {
     "storeNumber": "173",
     "slug": "st-georges-qc"
   },
@@ -202,6 +226,10 @@
   {
     "storeNumber": "271",
     "slug": "st-jerome-qc"
+  },
+  {
+    "storeNumber": "102",
+    "slug": "sturgeon-falls-on"
   },
   {
     "storeNumber": "445",
