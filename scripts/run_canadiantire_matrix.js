@@ -19,6 +19,7 @@ import { fileURLToPath } from "url";
 import { spawn } from "child_process";
 import minimist from "minimist";
 import slugify from "slugify";
+import { INVALID_DATA_EXIT_CODE } from "./safe_output.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -267,7 +268,7 @@ async function processStore(store, index) {
   const cityLabel = storeLabel(store);
   if (!store.id || !cityLabel) {
     console.warn(`⚠️ Skipping invalid store entry: ${JSON.stringify(store)}`);
-    setStatus(store, index, "skipped", "missing id or city");
+    setStatus(store, index, "SKIPPED", "missing id or city");
     return { success: true };
   }
 
@@ -285,19 +286,26 @@ async function processStore(store, index) {
 
   if (dryRun) {
     console.log(`(dry-run) node ${scraperArgs.join(" ")}`);
-    setStatus(store, index, "skipped", "dry-run");
+    setStatus(store, index, "SKIPPED", "dry-run");
     return { success: true };
   }
 
   const scrape = await runCommand("node", scraperArgs);
+  if (scrape.code === INVALID_DATA_EXIT_CODE) {
+    const message = "scraper reported invalid data; keeping previous files";
+    console.warn(`⚠️ ${message}`);
+    setStatus(store, index, "FAILED (kept old data)", message);
+    return { success: false, softFailure: true };
+  }
+
   if (scrape.code !== 0) {
     const message = `scraper exited with code ${scrape.code}`;
     console.error(`❌ Scraper failed for store ${store.id}: ${message}`);
-    setStatus(store, index, "failed", message);
+    setStatus(store, index, "HARD ERROR", message);
     if (!continueOnError) {
       throw new Error(message);
     }
-    return { success: false };
+    return { success: false, hardError: true };
   }
 
   const slug = slugify(cityLabel, { lower: true, strict: true }) || "default";
@@ -307,7 +315,7 @@ async function processStore(store, index) {
   if (!fs.existsSync(jsonPath)) {
     const message = `data.json not found at ${jsonPath}`;
     console.warn(`⚠️ ${message}`);
-    setStatus(store, index, "skipped", message);
+    setStatus(store, index, "SKIPPED", message);
     return { success: false };
   }
 
@@ -333,30 +341,30 @@ async function processStore(store, index) {
   if (gitOutcome.stage === "add" && gitOutcome.code !== 0) {
     const message = `git add failed for ${jsonPath}`;
     console.error(`❌ ${message}`);
-    setStatus(store, index, "failed", message);
+    setStatus(store, index, "HARD ERROR", message);
     if (!continueOnError) {
       throw new Error(message);
     }
-    return { success: false };
+    return { success: false, hardError: true };
   }
 
   if (gitOutcome.stage === "commit" && gitOutcome.code !== 0 && gitOutcome.code !== 1) {
     const message = `git commit failed for ${cityLabel}`;
     console.error(`❌ ${message}`);
-    setStatus(store, index, "failed", message);
+    setStatus(store, index, "HARD ERROR", message);
     if (!continueOnError) {
       throw new Error(message);
     }
-    return { success: false };
+    return { success: false, hardError: true };
   }
 
   if (gitOutcome.stage === "commit" && gitOutcome.code === 1) {
     console.warn(`⚠️ git commit skipped for ${cityLabel} (store ${store.id})`);
-    setStatus(store, index, "skipped", "nothing to commit");
+    setStatus(store, index, "SKIPPED", "nothing to commit");
     return { success: true };
   }
 
-  setStatus(store, index, "committed", `${rows} produits`);
+  setStatus(store, index, "OK", `${rows} produits`);
   publishedSlugs.push(slug || "default");
   return { success: true };
 }
@@ -375,7 +383,8 @@ async function runAllStores() {
   console.log(`\n🚀 Running up to ${maxConcurrent} scraper(s) in parallel`);
 
   let cursor = 0;
-  let encounteredError = false;
+  let encounteredHardError = false;
+  let encounteredSoftFailure = false;
 
   async function worker() {
     while (true) {
@@ -385,10 +394,11 @@ async function runAllStores() {
       try {
         const result = await processStore(store, index);
         if (!result.success) {
-          encounteredError = true;
+          if (result.softFailure) encounteredSoftFailure = true;
+          if (result.hardError) encounteredHardError = true;
         }
       } catch (error) {
-        encounteredError = true;
+        encounteredHardError = true;
         throw error;
       }
     }
@@ -398,10 +408,10 @@ async function runAllStores() {
   try {
     await Promise.all(workers);
   } catch (error) {
-    encounteredError = true;
+    encounteredHardError = true;
     throw error;
   }
-  return { encounteredError };
+  return { encounteredHardError, encounteredSoftFailure };
 }
 
 async function publishDatasets() {
@@ -456,16 +466,18 @@ async function publishDatasets() {
 }
 
 async function main() {
-  let encounteredError = false;
+  let encounteredHardError = false;
+  let encounteredSoftFailure = false;
   try {
     const result = await runAllStores();
-    encounteredError = result.encounteredError;
+    encounteredHardError = result.encounteredHardError;
+    encounteredSoftFailure = result.encounteredSoftFailure;
     await publishDatasets();
     console.log("\n✅ Done");
-    if (encounteredError && !continueOnError) {
+    if (encounteredHardError && !continueOnError) {
       process.exit(1);
     }
-    if (encounteredError && continueOnError) {
+    if (encounteredHardError && continueOnError) {
       process.exitCode = 1;
     }
   } finally {

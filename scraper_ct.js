@@ -14,8 +14,8 @@ import axios from "axios";
 import pLimit from "p-limit";
 import sanitize from "sanitize-filename";
 import slugify from "slugify";
-import { createObjectCsvWriter } from "csv-writer";
 import minimist from "minimist";
+import { INVALID_DATA_EXIT_CODE, safeWriteOutputs } from "./scripts/safe_output.js";
 
 const args = minimist(process.argv.slice(2));
 
@@ -430,6 +430,13 @@ function createRecordFromCard(card, pageIsClearance) {
     rec.regular_price_raw = priceWasRaw || null;
   }
 
+  if (!("liquidation_price" in rec)) {
+    rec.liquidation_price = salePrice ?? null;
+  }
+  if (!("regular_price" in rec)) {
+    rec.regular_price = regularPrice ?? null;
+  }
+
   rec.price_sale_clean = card.price_sale || null;
   rec.price_original_clean = card.price_original || null;
 
@@ -693,7 +700,7 @@ async function main() {
         }
       }
       const record = createRecordFromCard(card, pageIsClearance);
-      if (record.title || record.price != null || record.image) batch.push(record);
+      if ((record.title || record.price != null || record.image) && record.url) batch.push(record);
     });
     console.log(`✅ Page ${p}: ${batch.length} produits`);
     all.push(...batch);
@@ -783,42 +790,57 @@ async function main() {
     }))
   );
 
-  await fs.writeJson(OUT_JSON, enriched, { spaces: 2 });
-  console.log(`💾  JSON → ${OUT_JSON}`);
+  const csvHeaders = [
+    { id: "store_id", title: "store_id" },
+    { id: "city", title: "city" },
+    { id: "title", title: "title" },
+    { id: "price", title: "price" },
+    { id: "price_raw", title: "price_raw" },
+    ...(INCLUDE_REGULAR_PRICE
+      ? [
+          { id: "regular_price", title: "regular_price" },
+          { id: "regular_price_raw", title: "regular_price_raw" },
+        ]
+      : []),
+    ...(INCLUDE_LIQUIDATION_PRICE
+      ? [
+          { id: "liquidation_price", title: "liquidation_price" },
+          { id: "liquidation_price_raw", title: "liquidation_price_raw" },
+          { id: "sale_price", title: "sale_price" },
+          { id: "sale_price_raw", title: "sale_price_raw" },
+        ]
+      : []),
+    { id: "liquidation", title: "liquidation" },
+    { id: "url", title: "url" },
+    { id: "image", title: "image" },
+    { id: "image_path", title: "image_path" },
+    { id: "sku", title: "sku" },
+    { id: "product_id", title: "product_id" },
+    { id: "product_sku", title: "product_sku" },
+    { id: "quantity", title: "quantity" },
+    { id: "availability", title: "availability" },
+    { id: "badges", title: "badges" },
+    { id: "price_sale_clean", title: "price_sale_clean" },
+    { id: "price_original_clean", title: "price_original_clean" },
+  ];
 
-  const csv = createObjectCsvWriter({
-    path: OUT_CSV,
-    header: [
-      { id: "store_id", title: "store_id" },
-      { id: "city", title: "city" },
-      { id: "title", title: "title" },
-      { id: "price", title: "price" },
-      { id: "price_raw", title: "price_raw" },
-      ...(INCLUDE_REGULAR_PRICE ? [
-        { id: "regular_price", title: "regular_price" },
-        { id: "regular_price_raw", title: "regular_price_raw" },
-      ] : []),
-      ...(INCLUDE_LIQUIDATION_PRICE ? [
-        { id: "liquidation_price", title: "liquidation_price" },
-        { id: "liquidation_price_raw", title: "liquidation_price_raw" },
-        { id: "sale_price", title: "sale_price" },
-        { id: "sale_price_raw", title: "sale_price_raw" },
-      ] : []),
-      { id: "liquidation", title: "liquidation" },
-      { id: "url", title: "url" },
-      { id: "image", title: "image" },
-      { id: "image_path", title: "image_path" },
-      { id: "sku", title: "sku" },
-      { id: "product_id", title: "product_id" },
-      { id: "product_sku", title: "product_sku" },
-      { id: "quantity", title: "quantity" },
-      { id: "availability", title: "availability" },
-      { id: "badges", title: "badges" },
-      { id: "price_sale_clean", title: "price_sale_clean" },
-      { id: "price_original_clean", title: "price_original_clean" },
-    ],
+  const writeResult = await safeWriteOutputs({
+    outBase: OUT_BASE,
+    products: enriched,
+    csvHeaders,
   });
-  await csv.writeRecords(enriched);
+
+  if (!writeResult.wrote) {
+    console.warn(`⚠️  Refusing to overwrite existing data: ${writeResult.reason}`);
+    await browser.close();
+    process.exit(INVALID_DATA_EXIT_CODE);
+  }
+
+  if (writeResult.backup) {
+    console.log(`🛟  Previous data backed up to ${writeResult.backup}`);
+  }
+
+  console.log(`💾  JSON → ${OUT_JSON}`);
   console.log(`📄  CSV  → ${OUT_CSV}`);
 
   await browser.close();
