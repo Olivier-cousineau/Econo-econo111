@@ -1,18 +1,17 @@
-name: Canadian Tire - Shards 07-09 (21 total)
+name: Run Canadian Tire shard 03 (daily)
 
 on:
   schedule:
-    # 05:00 America/Toronto ≈ 10:00 UTC every Wednesday
-    - cron: "0 10 * * 3"
+    - cron: "0 5 * * 1"
   workflow_dispatch:
 
 concurrency:
-  group: canadian-tire-shards-07-09
+  group: canadian-tire-shard-03
   cancel-in-progress: false
 
 jobs:
-  run-shards:
-    name: Run shards 07-09 of 21
+  run-shard:
+    name: Run shard 03 of 21
     runs-on: ubuntu-latest
 
     steps:
@@ -41,37 +40,22 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Run Canadian Tire shards 07-09
+      - name: Run Canadian Tire shard 03
         id: run_shards
         continue-on-error: true
         run: |
           set -o pipefail
-          set +e
-          failures=0
-
-          for shard in 7 8 9; do
-            echo "Running shard ${shard}/21"
-            node scripts/run_canadiantire_matrix.js \
-              --shards 21 \
-              --shard ${shard} \
-              --continue \
-              --publish
-            status=$?
-            if [ "$status" -ne 0 ]; then
-              echo "Shard ${shard} reported failures"
-              failures=1
-            fi
-          done
-
-          if [ "$failures" -ne 0 ]; then
-            exit 1
-          fi
+          node scripts/run_canadiantire_matrix.js \
+            --shards 21 \
+            --shard 3 \
+            --continue \
+            --publish
 
       - name: Commit Canadian Tire outputs
         if: always()
         run: |
           git add outputs/canadiantire || true
-          git commit -m "Update Canadian Tire data (shards 07-09/21)" || echo "Nothing to commit"
+          git commit -m "Update Canadian Tire data (shard 03/21)" || echo "Nothing to commit"
 
       - name: Push changes
         if: always()
@@ -87,5 +71,5 @@ jobs:
       - name: Fail when shards reported errors
         if: steps.run_shards.outcome == 'failure'
         run: |
-          echo "Some shards failed to scrape"
+          echo "Shard 03 failed to scrape"
           exit 1
