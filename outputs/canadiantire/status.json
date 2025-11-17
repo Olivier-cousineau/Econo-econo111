@@ -2,120 +2,120 @@
   {
     "id": "271",
     "city": "St. Jerome, QC",
-    "status": "HARD ERROR",
-    "details": "scraper exited with code 1",
+    "status": "FAILED (kept old data)",
+    "details": "scraper reported invalid data; keeping previous files",
     "index": 0
   },
   {
     "id": "303",
     "city": "Pointe aux Trembles, QC",
-    "status": "HARD ERROR",
-    "details": "scraper exited with code 1",
+    "status": "FAILED (kept old data)",
+    "details": "scraper reported invalid data; keeping previous files",
     "index": 1
   },
   {
     "id": "115",
     "city": "Valleyfield, QC",
-    "status": "HARD ERROR",
-    "details": "scraper exited with code 1",
+    "status": "FAILED (kept old data)",
+    "details": "scraper reported invalid data; keeping previous files",
     "index": 2
   },
   {
     "id": "659",
     "city": "Leitrim, ON",
-    "status": "HARD ERROR",
-    "details": "scraper exited with code 1",
+    "status": "FAILED (kept old data)",
+    "details": "scraper reported invalid data; keeping previous files",
     "index": 3
   },
   {
     "id": "14",
     "city": "Brockville, ON",
-    "status": "HARD ERROR",
-    "details": "scraper exited with code 1",
+    "status": "FAILED (kept old data)",
+    "details": "scraper reported invalid data; keeping previous files",
     "index": 4
   },
   {
     "id": "173",
     "city": "St. Georges, QC",
-    "status": "HARD ERROR",
-    "details": "scraper exited with code 1",
+    "status": "FAILED (kept old data)",
+    "details": "scraper reported invalid data; keeping previous files",
     "index": 5
   },
   {
     "id": "81",
     "city": "Peterborough, ON",
-    "status": "HARD ERROR",
-    "details": "scraper exited with code 1",
+    "status": "FAILED (kept old data)",
+    "details": "scraper reported invalid data; keeping previous files",
     "index": 6
   },
   {
     "id": "324",
     "city": "Pickering, ON",
-    "status": "HARD ERROR",
-    "details": "scraper exited with code 1",
+    "status": "FAILED (kept old data)",
+    "details": "scraper reported invalid data; keeping previous files",
     "index": 7
   },
   {
     "id": "446",
     "city": "Bradford, ON",
-    "status": "HARD ERROR",
-    "details": "scraper exited with code 1",
+    "status": "FAILED (kept old data)",
+    "details": "scraper reported invalid data; keeping previous files",
     "index": 8
   },
   {
     "id": "242",
     "city": "Rexdale, ON",
-    "status": "HARD ERROR",
-    "details": "scraper exited with code 1",
+    "status": "FAILED (kept old data)",
+    "details": "scraper reported invalid data; keeping previous files",
     "index": 9
   },
   {
     "id": "424",
     "city": "Oak., Winston Churchill, ON",
-    "status": "HARD ERROR",
-    "details": "scraper exited with code 1",
+    "status": "FAILED (kept old data)",
+    "details": "scraper reported invalid data; keeping previous files",
     "index": 10
   },
   {
     "id": "445",
     "city": "Sudbury South, ON",
-    "status": "HARD ERROR",
-    "details": "scraper exited with code 1",
+    "status": "FAILED (kept old data)",
+    "details": "scraper reported invalid data; keeping previous files",
     "index": 11
   },
   {
     "id": "265",
     "city": "Baie-Comeau, QC",
-    "status": "HARD ERROR",
-    "details": "scraper exited with code 1",
+    "status": "FAILED (kept old data)",
+    "details": "scraper reported invalid data; keeping previous files",
     "index": 12
   },
   {
     "id": "110",
     "city": "Tillsonburg, ON",
-    "status": "HARD ERROR",
-    "details": "scraper exited with code 1",
+    "status": "FAILED (kept old data)",
+    "details": "scraper reported invalid data; keeping previous files",
     "index": 13
   },
   {
     "id": "249",
     "city": "Moncton Mountain Rd, NB",
-    "status": "HARD ERROR",
-    "details": "scraper exited with code 1",
+    "status": "FAILED (kept old data)",
+    "details": "scraper reported invalid data; keeping previous files",
     "index": 14
   },
   {
     "id": "55",
     "city": "Leamington, ON",
-    "status": "HARD ERROR",
-    "details": "scraper exited with code 1",
+    "status": "FAILED (kept old data)",
+    "details": "scraper reported invalid data; keeping previous files",
     "index": 15
   },
   {
     "id": "213",
     "city": "Port Hawkesbury, NS",
-    "status": "HARD ERROR",
-    "details": "scraper exited with code 1",
+    "status": "FAILED (kept old data)",
+    "details": "scraper reported invalid data; keeping previous files",
     "index": 16
   }
 ]
