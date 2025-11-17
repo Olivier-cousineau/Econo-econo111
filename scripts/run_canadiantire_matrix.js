@@ -217,6 +217,7 @@ function setStatus(store, index, status, details = "") {
     city: storeLabel(store),
     status,
     details,
+    index,
   };
   statusMap.set(getStatusKey(store, index), entry);
   return entry;
@@ -415,6 +416,56 @@ async function runAllStores() {
   return { encounteredHardError, encounteredSoftFailure };
 }
 
+function failedStoreIndexes() {
+  const entries = getStatuses();
+  const failures = [];
+  entries.forEach((entry, idx) => {
+    const normalized = String(entry.status || "").toUpperCase();
+    if (normalized.includes("FAILED") || normalized.includes("ERROR")) {
+      failures.push(idx);
+    }
+  });
+  return failures;
+}
+
+async function runStoresWithRetry() {
+  let encounteredHardError = false;
+  let encounteredSoftFailure = false;
+
+  console.log("\n🚚 Initial shard pass");
+  const initial = await runAllStores();
+  encounteredHardError = initial.encounteredHardError;
+  encounteredSoftFailure = initial.encounteredSoftFailure;
+
+  if (continueOnError) {
+    const failures = failedStoreIndexes();
+    if (failures.length) {
+      console.log(`\n🔁 Retrying ${failures.length} failed store(s) one more time...`);
+      for (const index of failures) {
+        const store = stores[index];
+        setStatus(store, index, "RETRYING", "second attempt");
+      }
+
+      // Run retries sequentially to keep the log readable and avoid re-triggering the same failures in parallel.
+      for (const index of failures) {
+        const store = stores[index];
+        try {
+          const result = await processStore(store, index);
+          if (!result.success) {
+            if (result.softFailure) encounteredSoftFailure = true;
+            if (result.hardError) encounteredHardError = true;
+          }
+        } catch (error) {
+          encounteredHardError = true;
+          if (!continueOnError) throw error;
+        }
+      }
+    }
+  }
+
+  return { encounteredHardError, encounteredSoftFailure };
+}
+
 async function publishDatasets() {
   if (!shouldPublish || dryRun || !publishedSlugs.length) {
     return;
@@ -449,7 +500,7 @@ async function main() {
   let encounteredHardError = false;
   let encounteredSoftFailure = false;
   try {
-    const result = await runAllStores();
+    const result = await runStoresWithRetry();
     encounteredHardError = result.encounteredHardError;
     encounteredSoftFailure = result.encounteredSoftFailure;
     await publishDatasets();

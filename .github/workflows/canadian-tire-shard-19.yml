@@ -2,8 +2,8 @@ name: Canadian Tire - Shard 19 of 21
 
 on:
   schedule:
-    # 05:00 America/Toronto ≈ 10:00 UTC on Friday
-    - cron: "0 10 * * 5"
+    # 02:00 UTC on Sunday (Saturday evening in America/Toronto)
+    - cron: "0 2 * * 0"
   workflow_dispatch:
 
 concurrency:
@@ -83,11 +83,11 @@ jobs:
 
             attempts=$((attempts + 1))
             if [ "$attempts" -ge "$max_attempts" ]; then
-              echo "Push failed after ${max_attempts} attempts."
+              echo "Push failed after $max_attempts attempts."
               exit 1
             fi
 
-            echo "Push failed (main moved). Refetching and rebasing... attempt ${attempts}/${max_attempts}"
+            echo "Push failed (main moved). Refetching and rebasing... attempt $attempts/$max_attempts"
             git fetch origin main
             if ! git rebase origin/main; then
               git rebase --abort
