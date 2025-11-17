@@ -5,20 +5,21 @@ With the scheduled GitHub Actions workflows removed, scraping must be run manual
 ## Prerequisites
 - Node.js 18+ and npm installed
 - Repository dependencies installed (`npm install`)
-- A copy of `scraper_ct.js` present at the repo root (restore from git history if removed)
+- A copy of `scraper_ct.js` present at the repo root (restored in this repository)
 
 ## Run the Canadian Tire matrix job locally
-1. Ensure the scraper entry exists:
+1. Confirm prerequisites are installed:
    ```bash
-   ls scraper_ct.js
+   npm install
    ```
-   If missing, restore it from a commit that still contained the file:
+   (Run `npx playwright install` if Playwright browsers are missing.)
+2. Run the matrix runner with your desired options (examples below are safe to copy-paste). You can invoke it directly or via the npm script:
    ```bash
-   git checkout <commit-with-scraper> -- scraper_ct.js
-   ```
-2. Run the matrix runner with your desired options (examples below are safe to copy-paste):
-   ```bash
+   # direct
    node scripts/run_canadiantire_matrix.js --file data/canadian-tire/branches.json --limit 5 --publish
+
+   # via npm script (adds a consistent working directory)
+   npm run scrape:canadiantire -- --file data/canadian-tire/branches.json --limit 5 --publish
    ```
 3. Optional flags you may find useful:
    - `--stores 271,649` to target specific store IDs
