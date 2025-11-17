@@ -254,12 +254,64 @@ async function findPaginationTarget(page, nextPage) {
   return hiddenCandidates.length ? hiddenCandidates[0] : null;
 }
 
+async function extractCardAttributes(card) {
+  let sku = null;
+  try {
+    sku =
+      (await card.getAttribute("data-sku")) ||
+      (await card.getAttribute("data-product-id")) ||
+      (await card
+        .locator("[data-sku]")
+        .first()
+        .getAttribute("data-sku")
+        .catch(() => null)) ||
+      (await card
+        .locator("[data-product-id]")
+        .first()
+        .getAttribute("data-product-id")
+        .catch(() => null));
+  } catch (e) {
+    sku = null;
+  }
+
+  let quantity_available = null;
+  try {
+    const qtyText = await card
+      .locator(
+        "[data-test='inventory'], [data-test='store-inventory'], .inventory, .product__inventory"
+      )
+      .first()
+      .innerText();
+    quantity_available = extractQuantity(qtyText);
+  } catch (e) {
+    quantity_available = null;
+  }
+
+  return { sku, quantity_available };
+}
+
 async function extractFromCard(card) {
-  const baseData = await card.evaluate((el, { base }) => {
+  const attrs = await extractCardAttributes(card);
+  const data = await card.evaluate((el, { base }) => {
+    const cleanMoney = (s) => {
+      if (!s) return null;
+      s = s.replace(/\u00a0/g, " ").trim();
+      const m = s.match(/(\d[\d\s.,]*)(?:\s*\$)?/);
+      return m ? m[1].replace(/\s/g, "") : s;
+    };
+
     const textFromEl = (node) => {
       if (!node) return null;
       const t = node.textContent;
       return t ? t.trim() : null;
+    };
+
+    const parseQuantity = (text) => {
+      if (!text) return null;
+      const m = text.match(/(\d+)\s*(en stock|in stock|disponibles?|available)/i);
+      if (m) return parseInt(m[1], 10);
+      const n = text.match(/(\d+)/);
+      return n ? parseInt(n[1], 10) : null;
     };
 
     const titleEl = el.querySelector("[id^='title__promolisting-'], .nl-product-card__title");
@@ -272,6 +324,13 @@ async function extractFromCard(card) {
     if (image && image.startsWith("/")) image = base + image;
 
     const availability = textFromEl(el.querySelector(".nl-product-card__availability-message"));
+    const quantity_available = parseQuantity(
+      textFromEl(
+        el.querySelector(
+          "[data-test='inventory'], [data-test='store-inventory'], .inventory, .product__inventory"
+        )
+      )
+    );
 
     let sku = textFromEl(el.querySelector(".nl-product__code"));
     if (sku) sku = sku.replace(/^#/, "").trim();
@@ -299,64 +358,15 @@ async function extractFromCard(card) {
       sku: sku || null,
       badges,
       link: link || null,
-      product_id: productId,
-      product_sku: productSku,
+      quantity_available: quantity_available ?? null,
     };
   }, { base: BASE });
 
-  let regular_price = null;
-  let sale_price = null;
-  let regularText = null;
-  let saleText = null;
-
-  try {
-    regularText = await card
-      .locator("[data-test='product-price'], .price__regular, .reg-price")
-      .innerText();
-    regular_price = extractPrice(regularText);
-  } catch (e) {
-    regular_price = null;
-  }
-
-  try {
-    saleText = await card
-      .locator("[data-test='product-sale-price'], .price__sale, .sale-price")
-      .innerText();
-    sale_price = extractPrice(saleText);
-  } catch (e) {
-    sale_price = null;
-  }
-
-  let discount_percent = 0;
-  if (regular_price && sale_price && regular_price > 0 && sale_price > 0) {
-    discount_percent = Math.round(
-      ((regular_price - sale_price) / regular_price) * 100
-    );
-  }
-
-  if (
-    (!regular_price || regular_price === 0) &&
-    (!sale_price || sale_price === 0)
-  ) {
-    return null;
-  }
-
   return {
-    name: baseData.name ?? null,
-    image: baseData.image ?? null,
-    regular_price,
-    sale_price,
-    discount_percent,
-    availability: baseData.availability ?? null,
-    link: baseData.link ?? null,
-    price_sale: sale_price,
-    price_sale_raw: saleText || null,
-    price_original: regular_price,
-    price_original_raw: regularText || null,
-    sku: baseData.sku,
-    badges: baseData.badges,
-    product_id: baseData.product_id,
-    product_sku: baseData.product_sku,
+    ...data,
+    sku: data.sku || attrs.sku || data.product_sku || null,
+    product_sku: data.product_sku || attrs.sku || null,
+    quantity_available: data.quantity_available ?? attrs.quantity_available ?? null,
   };
 }
 
@@ -371,8 +381,17 @@ async function scrapeListing(page, { skipGuards = false } = {}) {
     }
   }
 
+  const cardsLocator = page.locator(SELECTORS.card);
+  const cardCount = await cardsLocator.count();
+  const attrData = await Promise.all(
+    Array.from({ length: cardCount }, (_, i) =>
+      extractCardAttributes(cardsLocator.nth(i)).catch(() => ({ }))
+    )
+  );
+
   try {
-    return (await page.locator(SELECTORS.card).evaluateAll((nodes, { base }) => {
+    const items =
+      (await cardsLocator.evaluateAll((nodes, { base }) => {
       const cleanMoney = (s) => {
         if (!s) return null;
         s = s.replace(/\u00a0/g, " ").trim();
@@ -438,6 +457,16 @@ async function scrapeListing(page, { skipGuards = false } = {}) {
         };
       });
     }, { base: BASE })) || [];
+
+    return items.map((item, idx) => {
+      const attrs = attrData[idx] || {};
+      return {
+        ...item,
+        sku: item.sku || attrs.sku || item.product_sku || null,
+        product_sku: item.product_sku || attrs.sku || null,
+        quantity_available: item.quantity_available ?? attrs.quantity_available ?? null,
+      };
+    });
   } catch (e) {
     console.warn("scrapeListing evaluateAll error:", e?.message || e);
     if (!skipGuards) {
@@ -468,6 +497,21 @@ function extractPrice(text) {
   return m ? parseFloat(m[1].replace(",", ".")) : null;
 }
 
+function extractQuantity(text) {
+  if (!text) return null;
+  const m = text.match(/(\d+)\s*(en stock|in stock|disponibles?|available)/i);
+  if (m) return parseInt(m[1], 10);
+
+  const n = text.match(/(\d+)/);
+  return n ? parseInt(n[1], 10) : null;
+}
+
+function extractSku(text) {
+  if (!text) return null;
+  const m = text.match(/(\d[\d\-]+)/);
+  return m ? m[1] : null;
+}
+
 function createRecordFromCard(card, pageIsClearance) {
   const priceSaleRaw = card.price_sale_raw ?? card.price_sale ?? null;
   const priceWasRaw = card.price_original_raw ?? card.price_original ?? null;
@@ -475,6 +519,16 @@ function createRecordFromCard(card, pageIsClearance) {
   const regularPrice = extractPrice(priceWasRaw ?? undefined);
   const priceRaw = priceSaleRaw || priceWasRaw || null;
   const price = salePrice ?? regularPrice ?? null;
+
+  const missingPrices =
+    (salePrice == null || salePrice === 0) &&
+    (regularPrice == null || regularPrice === 0);
+  if (missingPrices) return null;
+
+  const discount_percent =
+    salePrice > 0 && regularPrice > 0
+      ? Math.round(((regularPrice - salePrice) / regularPrice) * 100)
+      : null;
 
   const badges = Array.isArray(card.badges) ? card.badges : [];
   const normalizedBadges = badges.map((b) => b.toLowerCase());
@@ -485,18 +539,22 @@ function createRecordFromCard(card, pageIsClearance) {
   const rec = {
     store_id: STORE_ID || null,
     city: CITY || null,
+    name: card.name || null,
     title: card.name || null,
     price,
     price_raw: priceRaw,
     liquidation: !!isLiquidation,
     image: card.image || null,
     url: card.link || null,
+    link: card.link || null,
     sku: card.sku || card.product_sku || null,
     product_id: card.product_id || null,
     product_sku: card.product_sku || null,
-    quantity: null,
+    quantity: card.quantity_available ?? card.quantity ?? null,
+    quantity_available: card.quantity_available ?? null,
     availability: card.availability || null,
     badges,
+    discount_percent,
   };
 
   if (INCLUDE_LIQUIDATION_PRICE) {
@@ -578,6 +636,16 @@ async function enrichWithDetails(context, item) {
     // sku / quantité
     const skuTxt = (await pp.locator(".ProductDetails__Sku, .sku, .spec-row:has-text('Sku')").first().textContent().catch(()=>null))?.trim();
     const qtyTxt = (await pp.locator(".storeAvailableStock, .prod-availability, .stock-info").first().textContent().catch(()=>null))?.trim();
+    let pdpSku = null;
+    try {
+      const skuText = await pp
+        .locator("text=Article #, text=Article no., text=SKU")
+        .first()
+        .innerText();
+      pdpSku = extractSku(skuText);
+    } catch (e) {
+      pdpSku = null;
+    }
 
     await pp.close();
 
@@ -592,7 +660,11 @@ async function enrichWithDetails(context, item) {
     if (!out.sale_price_raw && saleTxt) out.sale_price_raw = saleTxt;
     if (!out.regular_price_raw && regTxt) out.regular_price_raw = regTxt;
 
-    if (!out.sku && skuTxt) out.sku = skuTxt;
+    const parsedQty = extractQuantity(qtyTxt);
+
+    if (!out.sku && skuTxt) out.sku = extractSku(skuTxt) || skuTxt;
+    if (!out.sku && pdpSku) out.sku = pdpSku;
+    if (out.quantity_available == null && parsedQty != null) out.quantity_available = parsedQty;
     if (!out.quantity && qtyTxt) out.quantity = qtyTxt;
 
     return out;
@@ -734,6 +806,7 @@ async function main() {
         }
       }
       const record = createRecordFromCard(card, pageIsClearance);
+      if (!record) return;
       if (record.title || record.price != null || record.image) batch.push(record);
     });
     console.log(`✅ Page ${p}: ${batch.length} produits`);
@@ -836,6 +909,7 @@ async function main() {
     header: [
       { id: "store_id", title: "store_id" },
       { id: "city", title: "city" },
+      { id: "name", title: "name" },
       { id: "title", title: "title" },
       { id: "price", title: "price" },
       { id: "price_raw", title: "price_raw" },
@@ -851,14 +925,17 @@ async function main() {
       ] : []),
       { id: "liquidation", title: "liquidation" },
       { id: "url", title: "url" },
+      { id: "link", title: "link" },
       { id: "image", title: "image" },
       { id: "image_path", title: "image_path" },
       { id: "sku", title: "sku" },
       { id: "product_id", title: "product_id" },
       { id: "product_sku", title: "product_sku" },
       { id: "quantity", title: "quantity" },
+      { id: "quantity_available", title: "quantity_available" },
       { id: "availability", title: "availability" },
       { id: "badges", title: "badges" },
+      { id: "discount_percent", title: "discount_percent" },
       { id: "price_sale_clean", title: "price_sale_clean" },
       { id: "price_original_clean", title: "price_original_clean" },
     ],
