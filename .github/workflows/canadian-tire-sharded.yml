@@ -1,0 +1,164 @@
+name: Canadian Tire - Sharded scraper
+
+on:
+  schedule:
+    # Run once per day and rotate through shards
+    - cron: "0 10 * * *"
+  workflow_dispatch:
+    inputs:
+      shard_index:
+        description: "Shard index to run (1-21). Default cycles daily."
+        required: false
+
+concurrency:
+  group: canadian-tire-sharded
+  cancel-in-progress: false
+
+env:
+  TOTAL_SHARDS: 21
+
+jobs:
+  run-single-shard:
+    name: Run shard ${{ steps.determine-shard.outputs.shard_index }}/21
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Playwright browsers (Chromium)
+        run: npx playwright install --with-deps chromium
+
+      - name: Install Playwright browsers (all)
+        run: npx playwright install --with-deps
+
+      - name: Determine shard index
+        id: determine-shard
+        run: |
+          set -euo pipefail
+          if [ -n "${{ github.event.inputs.shard_index || '' }}" ]; then
+            shard="${{ github.event.inputs.shard_index }}"
+          else
+            # Cycle deterministically through shards based on the day of year
+            shard=$(( ( ( $(date -u +%j) - 1 ) % ${TOTAL_SHARDS} ) + 1 ))
+          fi
+
+          echo "Shard selected: ${shard}/${TOTAL_SHARDS}"
+          echo "shard_index=${shard}" >> "$GITHUB_OUTPUT"
+
+      - name: Run Canadian Tire shard
+        id: run-shard
+        env:
+          SHARD_INDEX: ${{ steps.determine-shard.outputs.shard_index }}
+        run: |
+          set +e
+          RUN_DIR="outputs/canadiantire/shard-${SHARD_INDEX}"
+          mkdir -p "${RUN_DIR}"
+          node scripts/run_canadiantire_matrix.js \
+            --shards ${TOTAL_SHARDS} \
+            --shard "${SHARD_INDEX}" \
+            --continue \
+            --publish \
+            --status-file "${RUN_DIR}/status.json" \
+            --failed-stores-file "${RUN_DIR}/failed_stores.json"
+          status=$?
+          echo "exit_code=${status}" >> "$GITHUB_OUTPUT"
+
+      - name: Collect failed stores
+        id: collect-failed
+        env:
+          SHARD_INDEX: ${{ steps.determine-shard.outputs.shard_index }}
+        run: |
+          set -euo pipefail
+          RUN_DIR="outputs/canadiantire/shard-${SHARD_INDEX}"
+          FAILED_FILE="${RUN_DIR}/failed_stores.json"
+          if [ -f "${FAILED_FILE}" ]; then
+            failed_ids=$(jq -r '.[].id' "${FAILED_FILE}" | grep -v '^$' | paste -sd, -)
+          else
+            failed_ids=""
+          fi
+
+          echo "failed_ids=${failed_ids}" >> "$GITHUB_OUTPUT"
+          if [ -n "${failed_ids}" ]; then
+            echo "Found failed stores: ${failed_ids}"
+          else
+            echo "No failed stores detected"
+          fi
+
+      - name: Retry failed stores
+        if: steps.collect-failed.outputs.failed_ids != ''
+        env:
+          SHARD_INDEX: ${{ steps.determine-shard.outputs.shard_index }}
+        run: |
+          set +e
+          RUN_DIR="outputs/canadiantire/shard-${SHARD_INDEX}"
+          RETRY_DIR="${RUN_DIR}/retry"
+          mkdir -p "${RETRY_DIR}"
+          node scripts/run_canadiantire_matrix.js \
+            --stores "${{ steps.collect-failed.outputs.failed_ids }}" \
+            --continue \
+            --publish \
+            --status-file "${RETRY_DIR}/status.json" \
+            --failed-stores-file "${RETRY_DIR}/failed_stores.json" || true
+
+      - name: Aggregate final failures
+        id: aggregate-final
+        env:
+          SHARD_INDEX: ${{ steps.determine-shard.outputs.shard_index }}
+        run: |
+          set -euo pipefail
+          RUN_DIR="outputs/canadiantire/shard-${SHARD_INDEX}"
+          RETRY_FILE="${RUN_DIR}/retry/failed_stores.json"
+          INITIAL_FILE="${RUN_DIR}/failed_stores.json"
+
+          files=()
+          [ -f "${INITIAL_FILE}" ] && files+=("${INITIAL_FILE}")
+          [ -f "${RETRY_FILE}" ] && files+=("${RETRY_FILE}")
+
+          if [ ${#files[@]} -eq 0 ]; then
+            echo "[]" > "${RUN_DIR}/final_failed_stores.json"
+          else
+            jq -s 'map(. // []) | add' "${files[@]}" > "${RUN_DIR}/final_failed_stores.json"
+          fi
+
+          final_count=$(jq 'length' "${RUN_DIR}/final_failed_stores.json")
+          echo "final_failed_count=${final_count}" >> "$GITHUB_OUTPUT"
+          echo "Final failed store count: ${final_count}"
+
+      - name: Upload shard outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: canadian-tire-shard-${{ steps.determine-shard.outputs.shard_index }}
+          path: |
+            outputs/canadiantire
+          if-no-files-found: error
+
+      - name: Configure Git user
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit and push updates
+        run: |
+          set -euo pipefail
+          git add -A
+          git commit -m "chore: update Canadian Tire data" || echo "Nothing to commit"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Fail if unresolved stores remain
+        if: steps.aggregate-final.outputs.final_failed_count != '0'
+        run: |
+          echo "Some stores are still failing after retry. Check outputs/canadiantire/shard-${{ steps.determine-shard.outputs.shard_index }}/final_failed_stores.json for details." >&2
+          exit 1
