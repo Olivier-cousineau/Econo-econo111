@@ -255,14 +255,7 @@ async function findPaginationTarget(page, nextPage) {
 }
 
 async function extractFromCard(card) {
-  return card.evaluate((el, { base }) => {
-    const cleanMoney = (s) => {
-      if (!s) return null;
-      s = s.replace(/\u00a0/g, " ").trim();
-      const m = s.match(/(\d[\d\s.,]*)(?:\s*\$)?/);
-      return m ? m[1].replace(/\s/g, "") : s;
-    };
-
+  const baseData = await card.evaluate((el, { base }) => {
     const textFromEl = (node) => {
       if (!node) return null;
       const t = node.textContent;
@@ -271,11 +264,6 @@ async function extractFromCard(card) {
 
     const titleEl = el.querySelector("[id^='title__promolisting-'], .nl-product-card__title");
     const title = textFromEl(titleEl);
-
-    const priceSaleRaw = textFromEl(el.querySelector("span[data-testid='priceTotal'], .nl-price--total"));
-    const priceWasRaw = textFromEl(el.querySelector(".nl-price__was s, .nl-price__was, .nl-price--was, .nl-price__change s"));
-    const price_sale = cleanMoney(priceSaleRaw);
-    const price_original = cleanMoney(priceWasRaw);
 
     const imgEl = el.querySelector(".nl-product-card__image-wrap img");
     let image = null;
@@ -301,19 +289,75 @@ async function extractFromCard(card) {
     }
     if (link && link.startsWith("/")) link = base + link;
 
+    const productId = el.getAttribute("data-product-id") || el.getAttribute("data-productid") || null;
+    const productSku = el.getAttribute("data-sku") || el.getAttribute("data-product-sku") || sku || null;
+
     return {
       name: title || null,
-      price_sale,
-      price_sale_raw: priceSaleRaw || null,
-      price_original,
-      price_original_raw: priceWasRaw || null,
       image: image || null,
       availability: availability || null,
       sku: sku || null,
       badges,
       link: link || null,
+      product_id: productId,
+      product_sku: productSku,
     };
   }, { base: BASE });
+
+  let regular_price = null;
+  let sale_price = null;
+  let regularText = null;
+  let saleText = null;
+
+  try {
+    regularText = await card
+      .locator("[data-test='product-price'], .price__regular, .reg-price")
+      .innerText();
+    regular_price = extractPrice(regularText);
+  } catch (e) {
+    regular_price = null;
+  }
+
+  try {
+    saleText = await card
+      .locator("[data-test='product-sale-price'], .price__sale, .sale-price")
+      .innerText();
+    sale_price = extractPrice(saleText);
+  } catch (e) {
+    sale_price = null;
+  }
+
+  let discount_percent = 0;
+  if (regular_price && sale_price && regular_price > 0 && sale_price > 0) {
+    discount_percent = Math.round(
+      ((regular_price - sale_price) / regular_price) * 100
+    );
+  }
+
+  if (
+    (!regular_price || regular_price === 0) &&
+    (!sale_price || sale_price === 0)
+  ) {
+    return null;
+  }
+
+  return {
+    name: baseData.name ?? null,
+    image: baseData.image ?? null,
+    regular_price,
+    sale_price,
+    discount_percent,
+    availability: baseData.availability ?? null,
+    link: baseData.link ?? null,
+    price_sale: sale_price,
+    price_sale_raw: saleText || null,
+    price_original: regular_price,
+    price_original_raw: regularText || null,
+    sku: baseData.sku,
+    badges: baseData.badges,
+    product_id: baseData.product_id,
+    product_sku: baseData.product_sku,
+  };
 }
 
 async function scrapeListing(page, { skipGuards = false } = {}) {
@@ -418,11 +462,10 @@ async function scrapeListing(page, { skipGuards = false } = {}) {
 
 // ---------- UTILS ----------
 function extractPrice(text) {
-  if (!text) return null;
-  const m = text.replace(/\s/g, "").match(/([0-9]+(?:[.,][0-9]{2})?)/);
-  if (!m) return null;
-  const num = Number(m[1].replace(",", "."));
-  return Number.isFinite(num) ? num : null;
+  if (text == null) return null;
+  const normalized = String(text);
+  const m = normalized.replace(/\s/g, "").match(/(\d+[\.,]?\d*)/);
+  return m ? parseFloat(m[1].replace(",", ".")) : null;
 }
 
 function createRecordFromCard(card, pageIsClearance) {
@@ -646,6 +689,25 @@ async function main() {
     const batch = [];
     const pageSeen = new Set();
     cards.forEach((card) => {
+      const regularPriceForCheck = extractPrice(
+        card.price_original_raw ??
+        card.price_original ??
+        card.regular_price ??
+        null
+      );
+      const salePriceForCheck = extractPrice(
+        card.price_sale_raw ??
+        card.price_sale ??
+        card.sale_price ??
+        null
+      );
+      if (
+        (!regularPriceForCheck || regularPriceForCheck === 0) &&
+        (!salePriceForCheck || salePriceForCheck === 0)
+      ) {
+        return;
+      }
+
       const normalizedLink = card.link ? card.link.split("?")[0].toLowerCase() : null;
       const linkKey = normalizedLink ? `link:${normalizedLink}` : null;
       const productId = card.product_id ? `id:${card.product_id}` : null;
