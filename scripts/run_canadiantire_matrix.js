@@ -223,7 +223,7 @@ function getStatuses() {
   );
 }
 
-async function summarizeStatuses() {
+async function summarizeStatuses(runResult) {
   const entries = getStatuses();
   const lines = [
     "## Canadian Tire shard summary",
@@ -248,6 +248,29 @@ async function summarizeStatuses() {
   if (summaryPath) {
     fs.appendFileSync(summaryPath, `${summary}\n`);
   }
+
+  if (runResult) {
+    const statusFile = path.join(repoRoot, "outputs", "canadiantire", "shard-status.json");
+    try {
+      fs.mkdirSync(path.dirname(statusFile), { recursive: true });
+      const payload = {
+        generatedAt: new Date().toISOString(),
+        stores: entries,
+        failedTwice: runResult.failedTwiceStores?.map((store) => ({
+          id: store.id ?? "?",
+          city: storeLabel(store),
+        })),
+        retriedAndSucceeded: runResult.retrySucceededStores?.map((store) => ({
+          id: store.id ?? "?",
+          city: storeLabel(store),
+        })),
+      };
+      fs.writeFileSync(statusFile, JSON.stringify(payload, null, 2));
+      console.log(`📝 Shard status written to ${statusFile}`);
+    } catch (error) {
+      console.error("⚠️ Failed to write shard status file:", error);
+    }
+  }
 }
 
 const maxConcurrentArg = parseNumeric(
@@ -263,7 +286,13 @@ const maxConcurrent = Math.max(
   Math.min(stores.length, maxConcurrentArg ?? defaultParallelism)
 );
 
-async function processStore(store, index) {
+/**
+ * @param {Store} store
+ * @param {number} index
+ * @param {{ allowFailFast?: boolean; attempt?: number }} [options]
+ */
+async function processStore(store, index, options = {}) {
+  const { allowFailFast = true, attempt = 1 } = options;
   const cityLabel = storeLabel(store);
   if (!store.id || !cityLabel) {
     console.warn(`⚠️ Skipping invalid store entry: ${JSON.stringify(store)}`);
@@ -291,10 +320,10 @@ async function processStore(store, index) {
 
   const scrape = await runCommand("node", scraperArgs);
   if (scrape.code !== 0) {
-    const message = `scraper exited with code ${scrape.code}`;
+    const message = `scraper exited with code ${scrape.code} (attempt ${attempt})`;
     console.error(`❌ Scraper failed for store ${store.id}: ${message}`);
-    setStatus(store, index, "failed", message);
-    if (!continueOnError) {
+    setStatus(store, index, attempt > 1 ? "failed_twice" : "failed", message);
+    if (allowFailFast && !continueOnError) {
       throw new Error(message);
     }
     return { success: false };
@@ -334,7 +363,7 @@ async function processStore(store, index) {
     const message = `git add failed for ${jsonPath}`;
     console.error(`❌ ${message}`);
     setStatus(store, index, "failed", message);
-    if (!continueOnError) {
+    if (allowFailFast && !continueOnError) {
       throw new Error(message);
     }
     return { success: false };
@@ -344,7 +373,7 @@ async function processStore(store, index) {
     const message = `git commit failed for ${cityLabel}`;
     console.error(`❌ ${message}`);
     setStatus(store, index, "failed", message);
-    if (!continueOnError) {
+    if (allowFailFast && !continueOnError) {
       throw new Error(message);
     }
     return { success: false };
@@ -356,7 +385,8 @@ async function processStore(store, index) {
     return { success: true };
   }
 
-  setStatus(store, index, "committed", `${rows} produits`);
+  const details = attempt > 1 ? `${rows} produits (after retry)` : `${rows} produits`;
+  setStatus(store, index, "committed", details);
   publishedSlugs.push(slug || "default");
   return { success: true };
 }
@@ -375,7 +405,8 @@ async function runAllStores() {
   console.log(`\n🚀 Running up to ${maxConcurrent} scraper(s) in parallel`);
 
   let cursor = 0;
-  let encounteredError = false;
+  /** @type {{ store: Store; index: number }[]} */
+  const failedStores = [];
 
   async function worker() {
     while (true) {
@@ -383,12 +414,11 @@ async function runAllStores() {
       if (index >= stores.length) break;
       const store = stores[index];
       try {
-        const result = await processStore(store, index);
+        const result = await processStore(store, index, { allowFailFast: false, attempt: 1 });
         if (!result.success) {
-          encounteredError = true;
+          failedStores.push({ store, index });
         }
       } catch (error) {
-        encounteredError = true;
         throw error;
       }
     }
@@ -398,10 +428,39 @@ async function runAllStores() {
   try {
     await Promise.all(workers);
   } catch (error) {
-    encounteredError = true;
     throw error;
   }
-  return { encounteredError };
+
+  /** @type {Store[]} */
+  const retrySucceededStores = [];
+  /** @type {Store[]} */
+  const failedTwiceStores = [];
+
+  if (failedStores.length > 0) {
+    console.log("\n🔁 Starting retry pass for failed stores...");
+    for (const { store, index } of failedStores) {
+      console.log(`\n➡️ Retry attempt for store ${store.id} – ${storeLabel(store)}`);
+      const retryResult = await processStore(store, index, { allowFailFast: false, attempt: 2 });
+      if (retryResult.success) {
+        retrySucceededStores.push(store);
+      } else {
+        failedTwiceStores.push(store);
+        const warningLabel = `${store.id ?? "?"} (${storeLabel(store)})`;
+        console.warn(
+          `⚠️ Store ${warningLabel} failed twice – marking as permanently failed but allowing shard to succeed.`
+        );
+        setStatus(store, index, "failed_twice", "failed twice – accepted");
+      }
+    }
+  }
+
+  const succeededFirstPass = stores.length - failedStores.length;
+  console.log("\n📊 Canadian Tire shard results:");
+  console.log(`  ✅ Succeeded on first pass: ${succeededFirstPass}`);
+  console.log(`  🔁 Failed once then succeeded on retry: ${retrySucceededStores.length}`);
+  console.log(`  ⚠️ Failed twice (accepted): ${failedTwiceStores.length}`);
+
+  return { failedStores, retrySucceededStores, failedTwiceStores };
 }
 
 async function publishDatasets() {
@@ -456,21 +515,14 @@ async function publishDatasets() {
 }
 
 async function main() {
-  let encounteredError = false;
+  let runResult = null;
   try {
-    const result = await runAllStores();
-    encounteredError = result.encounteredError;
+    runResult = await runAllStores();
     await publishDatasets();
     console.log("\n✅ Done");
-    if (encounteredError && !continueOnError) {
-      process.exit(1);
-    }
-    if (encounteredError && continueOnError) {
-      process.exitCode = 1;
-    }
   } finally {
     try {
-      await summarizeStatuses();
+      await summarizeStatuses(runResult);
     } catch (error) {
       console.error("⚠️ Failed to write summary:", error);
     }
