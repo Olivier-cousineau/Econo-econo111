@@ -15,7 +15,7 @@ import pLimit from "p-limit";
 import sanitize from "sanitize-filename";
 import slugify from "slugify";
 import minimist from "minimist";
-import { INVALID_DATA_EXIT_CODE, safeWriteOutputs } from "./scripts/safe_output.js";
+import { safeWriteOutputs } from "./scripts/safe_output.js";
 
 const args = minimist(process.argv.slice(2));
 
@@ -55,6 +55,7 @@ const OUT_BASE = `./outputs/canadiantire/${STORE_ID || "default"}${citySlug}`;
 const OUT_DIR  = `${OUT_BASE}/images`;
 const OUT_JSON = `${OUT_BASE}/data.json`;
 const OUT_CSV  = `${OUT_BASE}/data.csv`;
+const FAILED_STORES_FILE = path.join("outputs", "canadiantire", "failed_stores.json");
 
 // (utile pour le workflow si on veut parser les logs)
 console.log(`OUT_BASE=${OUT_BASE}`);
@@ -90,6 +91,35 @@ const cleanMoney = (s) => {
   return m ? m[1].replace(/\s/g, "") : s;
 };
 
+async function recordFailedStore(entry) {
+  const normalized = {
+    id: entry.id ? String(entry.id) : "?",
+    city: entry.city || "",
+    status: "FAILED",
+    details: entry.reason || entry.details || "",
+  };
+
+  try {
+    await fs.ensureDir(path.dirname(FAILED_STORES_FILE));
+    let existing = [];
+    if (await fs.pathExists(FAILED_STORES_FILE)) {
+      const raw = await fs.readFile(FAILED_STORES_FILE, "utf8");
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed)) existing = parsed;
+    }
+
+    const deduped = existing.filter(
+      (item) => !(String(item.id || item.store_id || item.storeId || "?") === normalized.id && (item.city || "") === normalized.city)
+    );
+    deduped.push(normalized);
+
+    await fs.writeFile(FAILED_STORES_FILE, JSON.stringify(deduped, null, 2));
+    console.warn(`⚠️  Recorded failed store ${normalized.id} (${normalized.city || "unknown city"})`);
+  } catch (error) {
+    console.warn("⚠️  Unable to record failed store:", error);
+  }
+}
+
 async function getFirstSku(page) {
   try {
     const t = await page.locator(".nl-product__code").first().textContent({ timeout: 2000 });
@@ -99,26 +129,17 @@ async function getFirstSku(page) {
   }
 }
 
-async function waitProductsStable(page, timeout = 30000) {
-  const start = Date.now();
-  await page.waitForSelector(SEL.card, { timeout });
+async function waitProductsStable(page, timeoutMs = 60000) {
+  const cards = page.locator(SEL.card);
 
-  const priceTimeout = Math.min(2500, Math.max(900, Math.floor(timeout / 5)));
-  await Promise.race([
-    page.waitForSelector(SEL.price, { timeout: priceTimeout }),
-    page.waitForTimeout(priceTimeout + 120),
-  ]).catch(() => {});
+  // Wait for at least one product card to be visible (longer timeout to tolerate slow pages)
+  await cards.first().waitFor({ state: "visible", timeout: timeoutMs });
 
-  const elapsed = Date.now() - start;
-  const remaining = Math.max(900, timeout - elapsed);
+  // Best effort: allow prices/layout to settle but never fail the scrape if this is slow.
   try {
-    await page.waitForFunction(
-      () => document.querySelectorAll('li[data-testid="product-grids"]').length > 0,
-      { timeout: remaining }
-    );
-  } catch (err) {
-    const count = await page.locator(SEL.card).count().catch(() => 0);
-    if (count === 0) throw err;
+    await page.waitForTimeout(1000);
+  } catch (e) {
+    console.warn("Non-fatal waitProductsStable extra wait failed:", e);
   }
 }
 
@@ -620,230 +641,243 @@ async function main() {
   const browser = await chromium.launch({ headless: HEADLESS, args: ["--disable-dev-shm-usage"] });
   const context = await browser.newContext({ locale: "fr-CA" });
   const page = await context.newPage();
+  const failedStores = [];
+  let failureReason = "";
 
   console.log("➡️  Go to:", START_URL);
   console.log(`⚙️  Options → liquidation_price=${INCLUDE_LIQUIDATION_PRICE ? "on":"off"}, regular_price=${INCLUDE_REGULAR_PRICE ? "on":"off"}`);
 
-  // 1) charger
-  let retries = 3;
-  while (retries > 0) {
-    try { await page.goto(START_URL, { timeout: 120000, waitUntil: "domcontentloaded" }); break; }
-    catch (e) { if (--retries === 0) throw e; console.log("Retrying page load..."); await page.waitForTimeout(3000); }
-  }
-
-  await killAllPopups(page);
-
-  await maybeCloseStoreModal(page);
-
-  // 2) forcer le magasin si présent dans l'URL puis recharger
-  const m = START_URL.match(/[?&]store=(\d+)/);
-  const storeIdFromUrl = m ? m[1] : null;
-  if (storeIdFromUrl) {
-    await selectStoreById(page, storeIdFromUrl);
-    await page.goto(START_URL, { timeout: 120000, waitUntil: "domcontentloaded" }).catch(()=>{});
-    await killAllPopups(page);
-  }
-
-  await fs.ensureDir(OUT_BASE);
-
-  const all = [];
-  const seenProducts = new Set();
-
-  await waitProductsStable(page);
-  await lazyWarmup(page);
-
-  let pagePrimed = true;
-  let firstSku = await getFirstSku(page);
-  const totalPages = await getTotalPages(page);
-  const currentPage = await getCurrentPageNum(page);
-  const lastPage = Math.min(totalPages, MAX_PAGES);
-  if (totalPages > MAX_PAGES) {
-    console.log(`⚠️  Limitation: maximum ${MAX_PAGES} pages seront parcourues sur ${totalPages} disponibles.`);
-  }
-
-  for (let p = currentPage; p <= lastPage; p++) {
-    const skipGuards = pagePrimed;
-    if (!pagePrimed) {
-      await waitProductsStable(page);
-      await lazyWarmup(page);
+  try {
+    // 1) charger
+    let retries = 3;
+    while (retries > 0) {
+      try { await page.goto(START_URL, { timeout: 120000, waitUntil: "domcontentloaded" }); break; }
+      catch (e) { if (--retries === 0) throw e; console.log("Retrying page load..."); await page.waitForTimeout(3000); }
     }
-    pagePrimed = false;
-
-    const cards = await scrapeListing(page, { skipGuards });
-    const pageIsClearance = /\/liquidation\.html/i.test(await page.url());
-    const batch = [];
-    const pageSeen = new Set();
-    cards.forEach((card) => {
-      const normalizedLink = card.link ? card.link.split("?")[0].toLowerCase() : null;
-      const linkKey = normalizedLink ? `link:${normalizedLink}` : null;
-      const productId = card.product_id ? `id:${card.product_id}` : null;
-      const skuKey = card.product_sku ? `sku:${card.product_sku}` : null;
-
-      const keys = [linkKey, productId, skuKey].filter(Boolean);
-      let duplicate = false;
-      if (keys.length) {
-        for (const key of keys) {
-          if (seenProducts.has(key)) {
-            duplicate = true;
-            break;
-          }
-        }
-        if (duplicate) return;
-        keys.forEach((key) => seenProducts.add(key));
-      } else {
-        const fallbackKey = card.name
-          ? `${card.name}|${card.price_sale || ""}|${card.price_original || ""}|${card.image || ""}`.toLowerCase()
-          : null;
-        if (fallbackKey) {
-          if (pageSeen.has(fallbackKey)) return;
-          pageSeen.add(fallbackKey);
-        }
-      }
-      const record = createRecordFromCard(card, pageIsClearance);
-      if ((record.title || record.price != null || record.image) && record.url) batch.push(record);
-    });
-    console.log(`✅ Page ${p}: ${batch.length} produits`);
-    all.push(...batch);
-
-    if (((p - currentPage + 1) % 10) === 0) await page.waitForTimeout(550);
-
-    if (p === lastPage) break;
-
-    const prevFirstSku = firstSku;
-    const target = await findPaginationTarget(page, p + 1);
-    if (!target) {
-      console.warn(`Lien de pagination introuvable pour la page ${p + 1}, arrêt.`);
-      break;
-    }
-
-    if (!(await target.isVisible().catch(() => false))) {
-      await page.locator(SEL.paginationNav).scrollIntoViewIfNeeded().catch(() => {});
-      await page.waitForTimeout(100);
-    }
-
-    await target.scrollIntoViewIfNeeded().catch(() => {});
 
     await killAllPopups(page);
 
-    const clickNavigation = (async () => {
-      if (await target.isVisible().catch(() => false)) {
-        await target.click({ timeout: 12000 });
-      } else {
-        await target.evaluate((el) => { if (el) el.click(); }).catch(() => {});
-      }
-    })();
+    await maybeCloseStoreModal(page);
 
-    await Promise.all([
-      clickNavigation,
-      page.waitForFunction(
-        (expected) => {
-          const el = document.querySelector('nav[aria-label="pagination"] [aria-current="page"]');
-          if (!el) return false;
-          const txt = el.getAttribute('aria-label') || el.textContent || '';
-          return new RegExp(`\\b${expected}\\b`).test(txt);
-        },
-        p + 1,
-        { timeout: 30000 }
-      ).catch(() => {}),
-    ]);
+    // 2) forcer le magasin si présent dans l'URL puis recharger
+    const m = START_URL.match(/[?&]store=(\d+)/);
+    const storeIdFromUrl = m ? m[1] : null;
+    if (storeIdFromUrl) {
+      await selectStoreById(page, storeIdFromUrl);
+      await page.goto(START_URL, { timeout: 120000, waitUntil: "domcontentloaded" }).catch(()=>{});
+      await killAllPopups(page);
+    }
 
-    await Promise.race([
-      page.waitForLoadState("networkidle").catch(() => {}),
-      page.waitForTimeout(1200),
-    ]);
+    await fs.ensureDir(OUT_BASE);
+
+    const all = [];
+    const seenProducts = new Set();
 
     await waitProductsStable(page);
     await lazyWarmup(page);
-    await page.waitForTimeout(150);
-    pagePrimed = true;
-    firstSku = await getFirstSku(page);
 
-    if (firstSku && prevFirstSku && firstSku === prevFirstSku) {
-      await page.evaluate(() => window.scrollTo(0, 0));
-      await waitProductsStable(page);
-      await lazyWarmup(page);
-      pagePrimed = true;
-      firstSku = await getFirstSku(page);
-      if (firstSku === prevFirstSku) {
-        console.warn("Pagination bloquée, arrêt pour éviter les 0-produits fantômes.");
+    let pagePrimed = true;
+    let firstSku = await getFirstSku(page);
+    const totalPages = await getTotalPages(page);
+    const currentPage = await getCurrentPageNum(page);
+    const lastPage = Math.min(totalPages, MAX_PAGES);
+    if (totalPages > MAX_PAGES) {
+      console.log(`⚠️  Limitation: maximum ${MAX_PAGES} pages seront parcourues sur ${totalPages} disponibles.`);
+    }
+
+    for (let p = currentPage; p <= lastPage; p++) {
+      const skipGuards = pagePrimed;
+      if (!pagePrimed) {
+        await waitProductsStable(page);
+        await lazyWarmup(page);
+      }
+      pagePrimed = false;
+
+      const cards = await scrapeListing(page, { skipGuards });
+      const pageIsClearance = /\/liquidation\.html/i.test(await page.url());
+      const batch = [];
+      const pageSeen = new Set();
+      cards.forEach((card) => {
+        const normalizedLink = card.link ? card.link.split("?")[0].toLowerCase() : null;
+        const linkKey = normalizedLink ? `link:${normalizedLink}` : null;
+        const productId = card.product_id ? `id:${card.product_id}` : null;
+        const skuKey = card.product_sku ? `sku:${card.product_sku}` : null;
+
+        const keys = [linkKey, productId, skuKey].filter(Boolean);
+        let duplicate = false;
+        if (keys.length) {
+          for (const key of keys) {
+            if (seenProducts.has(key)) {
+              duplicate = true;
+              break;
+            }
+          }
+          if (duplicate) return;
+          keys.forEach((key) => seenProducts.add(key));
+        } else {
+          const fallbackKey = card.name
+            ? `${card.name}|${card.price_sale || ""}|${card.price_original || ""}|${card.image || ""}`.toLowerCase()
+            : null;
+          if (fallbackKey) {
+            if (pageSeen.has(fallbackKey)) return;
+            pageSeen.add(fallbackKey);
+          }
+        }
+        const record = createRecordFromCard(card, pageIsClearance);
+        if ((record.title || record.price != null || record.image) && record.url) batch.push(record);
+      });
+      console.log(`✅ Page ${p}: ${batch.length} produits`);
+      all.push(...batch);
+
+      if (((p - currentPage + 1) % 10) === 0) await page.waitForTimeout(550);
+
+      if (p === lastPage) break;
+
+      const prevFirstSku = firstSku;
+      const target = await findPaginationTarget(page, p + 1);
+      if (!target) {
+        console.warn(`Lien de pagination introuvable pour la page ${p + 1}, arrêt.`);
         break;
       }
+
+      if (!(await target.isVisible().catch(() => false))) {
+        await page.locator(SEL.paginationNav).scrollIntoViewIfNeeded().catch(() => {});
+        await page.waitForTimeout(100);
+      }
+
+      await target.scrollIntoViewIfNeeded().catch(() => {});
+
+      await killAllPopups(page);
+
+      const clickNavigation = (async () => {
+        if (await target.isVisible().catch(() => false)) {
+          await target.click({ timeout: 12000 });
+        } else {
+          await target.evaluate((el) => { if (el) el.click(); }).catch(() => {});
+        }
+      })();
+
+      await Promise.all([
+        clickNavigation,
+        page.waitForFunction(
+          (expected) => {
+            const el = document.querySelector('nav[aria-label="pagination"] [aria-current="page"]');
+            if (!el) return false;
+            const txt = el.getAttribute('aria-label') || el.textContent || '';
+            return new RegExp(`\\b${expected}\\b`).test(txt);
+          },
+          p + 1,
+          { timeout: 30000 }
+        ).catch(() => {}),
+      ]);
+
+      await Promise.race([
+        page.waitForLoadState("networkidle").catch(() => {}),
+        page.waitForTimeout(1200),
+      ]);
+
+      await waitProductsStable(page);
+      await lazyWarmup(page);
+      await page.waitForTimeout(150);
+      pagePrimed = true;
+      firstSku = await getFirstSku(page);
+
+      if (firstSku && prevFirstSku && firstSku === prevFirstSku) {
+        await page.evaluate(() => window.scrollTo(0, 0));
+        await waitProductsStable(page);
+        await lazyWarmup(page);
+        pagePrimed = true;
+        firstSku = await getFirstSku(page);
+        if (firstSku === prevFirstSku) {
+          console.warn("Pagination bloquée, arrêt pour éviter les 0-produits fantômes.");
+          break;
+        }
+      }
+    }
+
+    // Enrichissement PDP (limite soft)
+    const limit = pLimit(CONCURRENCY);
+    let idx = 0;
+    const enriched = await Promise.all(
+      all.map((p, i) => limit(async () => {
+        // télécharge image
+        idx += 1;
+        let image_path = null;
+        if (p.image) {
+          try { image_path = await downloadImage(p.image, idx, p.title); }
+          catch { console.warn("⚠️ image download failed:", p.image); }
+        }
+        // enrichir ~jusqu'à 40 items/lot pour rester réactif
+        let out = p;
+        if (i < 40) out = await enrichWithDetails(context, p);
+        return { ...out, image_path };
+      }))
+    );
+
+    const csvHeaders = [
+      { id: "store_id", title: "store_id" },
+      { id: "city", title: "city" },
+      { id: "title", title: "title" },
+      { id: "price", title: "price" },
+      { id: "price_raw", title: "price_raw" },
+      ...(INCLUDE_REGULAR_PRICE
+        ? [
+            { id: "regular_price", title: "regular_price" },
+            { id: "regular_price_raw", title: "regular_price_raw" },
+          ]
+        : []),
+      ...(INCLUDE_LIQUIDATION_PRICE
+        ? [
+            { id: "liquidation_price", title: "liquidation_price" },
+            { id: "liquidation_price_raw", title: "liquidation_price_raw" },
+            { id: "sale_price", title: "sale_price" },
+            { id: "sale_price_raw", title: "sale_price_raw" },
+          ]
+        : []),
+      { id: "liquidation", title: "liquidation" },
+      { id: "url", title: "url" },
+      { id: "image", title: "image" },
+      { id: "image_path", title: "image_path" },
+      { id: "sku", title: "sku" },
+      { id: "product_id", title: "product_id" },
+      { id: "product_sku", title: "product_sku" },
+      { id: "quantity", title: "quantity" },
+      { id: "availability", title: "availability" },
+      { id: "badges", title: "badges" },
+      { id: "price_sale_clean", title: "price_sale_clean" },
+      { id: "price_original_clean", title: "price_original_clean" },
+    ];
+
+    const writeResult = await safeWriteOutputs({
+      outBase: OUT_BASE,
+      products: enriched,
+      csvHeaders,
+    });
+
+    if (!writeResult.wrote) {
+      const message = `Refusing to overwrite existing data: ${writeResult.reason}`;
+      console.warn(`⚠️  ${message}`);
+      failureReason = message;
+      failedStores.push({ id: STORE_ID, city: CITY, reason: message });
+      return;
+    }
+
+    if (writeResult.backup) {
+      console.log(`🛟  Previous data backed up to ${writeResult.backup}`);
+    }
+
+    console.log(`💾  JSON → ${OUT_JSON}`);
+    console.log(`📄  CSV  → ${OUT_CSV}`);
+  } catch (error) {
+    failureReason = error?.message || String(error);
+    console.error("⚠️ Store", STORE_ID || "(unknown)", "failed with", error);
+    failedStores.push({ id: STORE_ID, city: CITY, reason: failureReason });
+  } finally {
+    await browser.close().catch(() => {});
+    for (const entry of failedStores) {
+      await recordFailedStore(entry);
     }
   }
-
-  // Enrichissement PDP (limite soft)
-  const limit = pLimit(CONCURRENCY);
-  let idx = 0;
-  const enriched = await Promise.all(
-    all.map((p, i) => limit(async () => {
-      // télécharge image
-      idx += 1;
-      let image_path = null;
-      if (p.image) {
-        try { image_path = await downloadImage(p.image, idx, p.title); }
-        catch { console.warn("⚠️ image download failed:", p.image); }
-      }
-      // enrichir ~jusqu'à 40 items/lot pour rester réactif
-      let out = p;
-      if (i < 40) out = await enrichWithDetails(context, p);
-      return { ...out, image_path };
-    }))
-  );
-
-  const csvHeaders = [
-    { id: "store_id", title: "store_id" },
-    { id: "city", title: "city" },
-    { id: "title", title: "title" },
-    { id: "price", title: "price" },
-    { id: "price_raw", title: "price_raw" },
-    ...(INCLUDE_REGULAR_PRICE
-      ? [
-          { id: "regular_price", title: "regular_price" },
-          { id: "regular_price_raw", title: "regular_price_raw" },
-        ]
-      : []),
-    ...(INCLUDE_LIQUIDATION_PRICE
-      ? [
-          { id: "liquidation_price", title: "liquidation_price" },
-          { id: "liquidation_price_raw", title: "liquidation_price_raw" },
-          { id: "sale_price", title: "sale_price" },
-          { id: "sale_price_raw", title: "sale_price_raw" },
-        ]
-      : []),
-    { id: "liquidation", title: "liquidation" },
-    { id: "url", title: "url" },
-    { id: "image", title: "image" },
-    { id: "image_path", title: "image_path" },
-    { id: "sku", title: "sku" },
-    { id: "product_id", title: "product_id" },
-    { id: "product_sku", title: "product_sku" },
-    { id: "quantity", title: "quantity" },
-    { id: "availability", title: "availability" },
-    { id: "badges", title: "badges" },
-    { id: "price_sale_clean", title: "price_sale_clean" },
-    { id: "price_original_clean", title: "price_original_clean" },
-  ];
-
-  const writeResult = await safeWriteOutputs({
-    outBase: OUT_BASE,
-    products: enriched,
-    csvHeaders,
-  });
-
-  if (!writeResult.wrote) {
-    console.warn(`⚠️  Refusing to overwrite existing data: ${writeResult.reason}`);
-    await browser.close();
-    process.exit(INVALID_DATA_EXIT_CODE);
-  }
-
-  if (writeResult.backup) {
-    console.log(`🛟  Previous data backed up to ${writeResult.backup}`);
-  }
-
-  console.log(`💾  JSON → ${OUT_JSON}`);
-  console.log(`📄  CSV  → ${OUT_CSV}`);
-
-  await browser.close();
 }
 
-main().catch((e) => { console.error("❌ Error:", e); process.exit(1); });
+main().catch((e) => { console.error("❌ Error:", e); process.exitCode = 1; });
