@@ -19,7 +19,6 @@ import { fileURLToPath } from "url";
 import { spawn } from "child_process";
 import minimist from "minimist";
 import slugify from "slugify";
-import { INVALID_DATA_EXIT_CODE } from "./safe_output.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -186,22 +185,13 @@ const scraperEntry = path.join(repoRoot, "scraper_ct.js");
 const publishScript = path.join(repoRoot, "scripts", "publish_canadiantire_outputs.js");
 const statusMap = new Map();
 const publishedSlugs = [];
+let gitQueue = Promise.resolve();
 
-if (!fs.existsSync(scraperEntry)) {
-  console.error(
-    "❌ Canadian Tire scraper entry point not found. Restore scraper_ct.js from history or provide an alternative scraper before running this script."
-  );
-  console.error("   Example to restore from git: git checkout <commit-with-scraper> -- scraper_ct.js");
-  process.exit(1);
+function runWithGitLock(task) {
+  const next = gitQueue.then(() => task());
+  gitQueue = next.catch(() => {});
+  return next;
 }
-
-const statusFile = args["status-file"]
-  ? path.resolve(repoRoot, args["status-file"])
-  : path.join(repoRoot, "outputs", "canadiantire", "status.json");
-
-const failedStoresFile = args["failed-stores-file"]
-  ? path.resolve(repoRoot, args["failed-stores-file"])
-  : path.join(repoRoot, "outputs", "canadiantire", "failed_stores.json");
 
 function storeLabel(store) {
   return store.city || store.name || "(inconnu)";
@@ -217,7 +207,6 @@ function setStatus(store, index, status, details = "") {
     city: storeLabel(store),
     status,
     details,
-    index,
   };
   statusMap.set(getStatusKey(store, index), entry);
   return entry;
@@ -232,23 +221,6 @@ function getStatuses() {
       details: "",
     }
   );
-}
-
-function ensureParentDirectory(filePath) {
-  const dir = path.dirname(filePath);
-  fs.mkdirSync(dir, { recursive: true });
-}
-
-function writeJson(filePath, data) {
-  ensureParentDirectory(filePath);
-  fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
-}
-
-function collectFailedStores(entries) {
-  return entries.filter((entry) => {
-    const status = String(entry.status || "").toUpperCase();
-    return status.includes("FAILED") || status.includes("ERROR");
-  });
 }
 
 async function summarizeStatuses() {
@@ -278,19 +250,6 @@ async function summarizeStatuses() {
   }
 }
 
-function writeStatusFiles() {
-  const entries = getStatuses();
-  const failed = collectFailedStores(entries);
-
-  writeJson(statusFile, entries);
-  writeJson(failedStoresFile, failed);
-
-  const statusRel = path.relative(repoRoot, statusFile);
-  const failedRel = path.relative(repoRoot, failedStoresFile);
-  console.log(`📄 Wrote status report to ${statusRel}`);
-  console.log(`📄 Wrote failed-store report to ${failedRel}`);
-}
-
 const maxConcurrentArg = parseNumeric(
   args["max-concurrent"] ??
     args.maxConcurrent ??
@@ -308,7 +267,7 @@ async function processStore(store, index) {
   const cityLabel = storeLabel(store);
   if (!store.id || !cityLabel) {
     console.warn(`⚠️ Skipping invalid store entry: ${JSON.stringify(store)}`);
-    setStatus(store, index, "SKIPPED", "missing id or city");
+    setStatus(store, index, "skipped", "missing id or city");
     return { success: true };
   }
 
@@ -326,26 +285,19 @@ async function processStore(store, index) {
 
   if (dryRun) {
     console.log(`(dry-run) node ${scraperArgs.join(" ")}`);
-    setStatus(store, index, "SKIPPED", "dry-run");
+    setStatus(store, index, "skipped", "dry-run");
     return { success: true };
   }
 
   const scrape = await runCommand("node", scraperArgs);
-  if (scrape.code === INVALID_DATA_EXIT_CODE) {
-    const message = "scraper reported invalid data; keeping previous files";
-    console.warn(`⚠️ ${message}`);
-    setStatus(store, index, "FAILED (kept old data)", message);
-    return { success: false, softFailure: true };
-  }
-
   if (scrape.code !== 0) {
     const message = `scraper exited with code ${scrape.code}`;
     console.error(`❌ Scraper failed for store ${store.id}: ${message}`);
-    setStatus(store, index, "HARD ERROR", message);
+    setStatus(store, index, "failed", message);
     if (!continueOnError) {
       throw new Error(message);
     }
-    return { success: false, hardError: true };
+    return { success: false };
   }
 
   const slug = slugify(cityLabel, { lower: true, strict: true }) || "default";
@@ -355,7 +307,7 @@ async function processStore(store, index) {
   if (!fs.existsSync(jsonPath)) {
     const message = `data.json not found at ${jsonPath}`;
     console.warn(`⚠️ ${message}`);
-    setStatus(store, index, "SKIPPED", message);
+    setStatus(store, index, "skipped", message);
     return { success: false };
   }
 
@@ -367,7 +319,44 @@ async function processStore(store, index) {
     rows = "?";
   }
 
-  setStatus(store, index, "OK", `${rows} produits`);
+  const gitOutcome = await runWithGitLock(async () => {
+    console.log(`💾 Committing ${jsonPath}`);
+    const gitAdd = await runCommand("git", ["add", jsonPath]);
+    if (gitAdd.code !== 0) {
+      return { stage: "add", code: gitAdd.code };
+    }
+    const commitMsg = `Canadian Tire: ${cityLabel} (${store.id}) – ${rows} produits`;
+    const gitCommit = await runCommand("git", ["commit", "-m", commitMsg]);
+    return { stage: "commit", code: gitCommit.code };
+  });
+
+  if (gitOutcome.stage === "add" && gitOutcome.code !== 0) {
+    const message = `git add failed for ${jsonPath}`;
+    console.error(`❌ ${message}`);
+    setStatus(store, index, "failed", message);
+    if (!continueOnError) {
+      throw new Error(message);
+    }
+    return { success: false };
+  }
+
+  if (gitOutcome.stage === "commit" && gitOutcome.code !== 0 && gitOutcome.code !== 1) {
+    const message = `git commit failed for ${cityLabel}`;
+    console.error(`❌ ${message}`);
+    setStatus(store, index, "failed", message);
+    if (!continueOnError) {
+      throw new Error(message);
+    }
+    return { success: false };
+  }
+
+  if (gitOutcome.stage === "commit" && gitOutcome.code === 1) {
+    console.warn(`⚠️ git commit skipped for ${cityLabel} (store ${store.id})`);
+    setStatus(store, index, "skipped", "nothing to commit");
+    return { success: true };
+  }
+
+  setStatus(store, index, "committed", `${rows} produits`);
   publishedSlugs.push(slug || "default");
   return { success: true };
 }
@@ -375,7 +364,8 @@ async function processStore(store, index) {
 async function runAllStores() {
   console.log(`📦 Stores file: ${storesFile}`);
   console.log(`🧮 ${stores.length} store(s) to scrape`);
-  if (dryRun) console.log("⚠️ Dry run mode: scrapes will be skipped");
+  if (dryRun)
+    console.log("⚠️ Dry run mode: scrapes will be skipped, commits will not be created");
   if (!shouldPublish)
     console.log("ℹ️ Publication to data/canadian-tire disabled (--skip-publish)");
   console.log("\n📋 Stores in this shard:");
@@ -385,8 +375,7 @@ async function runAllStores() {
   console.log(`\n🚀 Running up to ${maxConcurrent} scraper(s) in parallel`);
 
   let cursor = 0;
-  let encounteredHardError = false;
-  let encounteredSoftFailure = false;
+  let encounteredError = false;
 
   async function worker() {
     while (true) {
@@ -396,11 +385,10 @@ async function runAllStores() {
       try {
         const result = await processStore(store, index);
         if (!result.success) {
-          if (result.softFailure) encounteredSoftFailure = true;
-          if (result.hardError) encounteredHardError = true;
+          encounteredError = true;
         }
       } catch (error) {
-        encounteredHardError = true;
+        encounteredError = true;
         throw error;
       }
     }
@@ -410,60 +398,10 @@ async function runAllStores() {
   try {
     await Promise.all(workers);
   } catch (error) {
-    encounteredHardError = true;
+    encounteredError = true;
     throw error;
   }
-  return { encounteredHardError, encounteredSoftFailure };
-}
-
-function failedStoreIndexes() {
-  const entries = getStatuses();
-  const failures = [];
-  entries.forEach((entry, idx) => {
-    const normalized = String(entry.status || "").toUpperCase();
-    if (normalized.includes("FAILED") || normalized.includes("ERROR")) {
-      failures.push(idx);
-    }
-  });
-  return failures;
-}
-
-async function runStoresWithRetry() {
-  let encounteredHardError = false;
-  let encounteredSoftFailure = false;
-
-  console.log("\n🚚 Initial shard pass");
-  const initial = await runAllStores();
-  encounteredHardError = initial.encounteredHardError;
-  encounteredSoftFailure = initial.encounteredSoftFailure;
-
-  if (continueOnError) {
-    const failures = failedStoreIndexes();
-    if (failures.length) {
-      console.log(`\n🔁 Retrying ${failures.length} failed store(s) one more time...`);
-      for (const index of failures) {
-        const store = stores[index];
-        setStatus(store, index, "RETRYING", "second attempt");
-      }
-
-      // Run retries sequentially to keep the log readable and avoid re-triggering the same failures in parallel.
-      for (const index of failures) {
-        const store = stores[index];
-        try {
-          const result = await processStore(store, index);
-          if (!result.success) {
-            if (result.softFailure) encounteredSoftFailure = true;
-            if (result.hardError) encounteredHardError = true;
-          }
-        } catch (error) {
-          encounteredHardError = true;
-          if (!continueOnError) throw error;
-        }
-      }
-    }
-  }
-
-  return { encounteredHardError, encounteredSoftFailure };
+  return { encounteredError };
 }
 
 async function publishDatasets() {
@@ -494,26 +432,44 @@ async function publishDatasets() {
   if (!existingFiles.length) {
     return;
   }
+
+  const gitAdd = await runCommand("git", ["add", ...existingFiles]);
+  if (gitAdd.code !== 0) {
+    console.error("❌ git add failed while staging published datasets");
+    if (!continueOnError) {
+      throw new Error("git add failed for published datasets");
+    }
+    return;
+  }
+
+  const publishMsg =
+    uniqueSlugs.length === 1
+      ? `Canadian Tire: publish dataset for ${uniqueSlugs[0]}`
+      : `Canadian Tire: publish datasets for ${uniqueSlugs.length} stores`;
+  const gitCommit = await runCommand("git", ["commit", "-m", publishMsg]);
+  if (gitCommit.code !== 0 && gitCommit.code !== 1) {
+    console.error("❌ git commit failed for published datasets");
+    if (!continueOnError) {
+      throw new Error("git commit failed for published datasets");
+    }
+  }
 }
 
 async function main() {
-  let encounteredHardError = false;
-  let encounteredSoftFailure = false;
+  let encounteredError = false;
   try {
-    const result = await runStoresWithRetry();
-    encounteredHardError = result.encounteredHardError;
-    encounteredSoftFailure = result.encounteredSoftFailure;
+    const result = await runAllStores();
+    encounteredError = result.encounteredError;
     await publishDatasets();
     console.log("\n✅ Done");
-    if (encounteredHardError && !continueOnError) {
+    if (encounteredError && !continueOnError) {
       process.exit(1);
     }
-    if (encounteredHardError && continueOnError) {
+    if (encounteredError && continueOnError) {
       process.exitCode = 1;
     }
   } finally {
     try {
-      writeStatusFiles();
       await summarizeStatuses();
     } catch (error) {
       console.error("⚠️ Failed to write summary:", error);
