@@ -1,0 +1,96 @@
+name: Canadian Tire - Shard 16 of 21
+
+on:
+  schedule:
+    # 05:00 America/Toronto ≈ 10:00 UTC on Thursday
+    - cron: "0 10 * * 4"
+  workflow_dispatch:
+
+concurrency:
+  group: canadian-tire-shards-push
+  cancel-in-progress: false
+
+jobs:
+  run-shard-16:
+    name: Run shard 16 of 21
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Playwright browsers (Chromium)
+        run: npx playwright install --with-deps chromium
+
+      - name: Install Playwright browsers (all)
+        run: npx playwright install --with-deps
+
+      - name: Configure Git user
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Sync with latest main
+        run: |
+          git fetch origin main
+          if ! git rebase origin/main; then
+            git rebase --abort
+            exit 1
+          fi
+
+      - name: Run Canadian Tire shard 16/21
+        run: |
+          set -o pipefail
+          node scripts/run_canadiantire_matrix.js \
+            --shards 21 \
+            --shard 16 \
+            --continue \
+            --publish
+
+      - name: Commit Canadian Tire outputs
+        if: always()
+        run: |
+          git add outputs/canadiantire || true
+          git commit -m "Update Canadian Tire data (shard 16/21)" || echo "Nothing to commit"
+
+      - name: Push changes
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          echo "👉 Status before push"
+          git status -sb
+
+          attempts=0
+          max_attempts=3
+          while true; do
+            if git push origin HEAD:main; then
+              echo "Push succeeded"
+              break
+            fi
+
+            attempts=$((attempts + 1))
+            if [ "$attempts" -ge "$max_attempts" ]; then
+              echo "Push failed after ${max_attempts} attempts."
+              exit 1
+            fi
+
+            echo "Push failed (main moved). Refetching and rebasing... attempt ${attempts}/${max_attempts}"
+            git fetch origin main
+            if ! git rebase origin/main; then
+              git rebase --abort
+              exit 1
+            fi
+          done
