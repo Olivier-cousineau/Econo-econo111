@@ -1,119 +1,119 @@
 [
   {
-    "id": "271",
-    "city": "St. Jerome, QC",
+    "id": "649",
+    "city": "Blainville, QC",
     "status": "FAILED (kept old data)",
     "details": "scraper reported invalid data; keeping previous files",
     "index": 0
   },
   {
-    "id": "303",
-    "city": "Pointe aux Trembles, QC",
+    "id": "928",
+    "city": "Place Versailles, QC",
     "status": "FAILED (kept old data)",
     "details": "scraper reported invalid data; keeping previous files",
     "index": 1
   },
   {
-    "id": "115",
-    "city": "Valleyfield, QC",
+    "id": "461",
+    "city": "Mont-Tremblant, QC",
     "status": "FAILED (kept old data)",
     "details": "scraper reported invalid data; keeping previous files",
     "index": 2
   },
   {
-    "id": "659",
-    "city": "Leitrim, ON",
+    "id": "174",
+    "city": "Ottawa East, ON",
     "status": "FAILED (kept old data)",
     "details": "scraper reported invalid data; keeping previous files",
     "index": 3
   },
   {
-    "id": "14",
-    "city": "Brockville, ON",
+    "id": "98",
+    "city": "Smiths Falls, ON",
     "status": "FAILED (kept old data)",
     "details": "scraper reported invalid data; keeping previous files",
     "index": 4
   },
   {
-    "id": "173",
-    "city": "St. Georges, QC",
+    "id": "694",
+    "city": "Kingston Division St., ON",
     "status": "FAILED (kept old data)",
     "details": "scraper reported invalid data; keeping previous files",
     "index": 5
   },
   {
-    "id": "81",
-    "city": "Peterborough, ON",
+    "id": "682",
+    "city": "Minden, ON",
     "status": "FAILED (kept old data)",
     "details": "scraper reported invalid data; keeping previous files",
     "index": 6
   },
   {
-    "id": "324",
-    "city": "Pickering, ON",
+    "id": "102",
+    "city": "Sturgeon Falls, ON",
     "status": "FAILED (kept old data)",
     "details": "scraper reported invalid data; keeping previous files",
     "index": 7
   },
   {
-    "id": "446",
-    "city": "Bradford, ON",
+    "id": "697",
+    "city": "Richmond Hill North, ON",
     "status": "FAILED (kept old data)",
     "details": "scraper reported invalid data; keeping previous files",
     "index": 8
   },
   {
-    "id": "242",
-    "city": "Rexdale, ON",
+    "id": "1",
+    "city": "Alliston, ON",
     "status": "FAILED (kept old data)",
     "details": "scraper reported invalid data; keeping previous files",
     "index": 9
   },
   {
-    "id": "424",
-    "city": "Oak., Winston Churchill, ON",
+    "id": "233",
+    "city": "La Sarre, QC",
     "status": "FAILED (kept old data)",
     "details": "scraper reported invalid data; keeping previous files",
     "index": 10
   },
   {
-    "id": "445",
-    "city": "Sudbury South, ON",
+    "id": "177",
+    "city": "Hamilton Mt.West, ON",
     "status": "FAILED (kept old data)",
     "details": "scraper reported invalid data; keeping previous files",
     "index": 11
   },
   {
-    "id": "265",
-    "city": "Baie-Comeau, QC",
+    "id": "251",
+    "city": "Waterloo, ON",
     "status": "FAILED (kept old data)",
     "details": "scraper reported invalid data; keeping previous files",
     "index": 12
   },
   {
-    "id": "110",
-    "city": "Tillsonburg, ON",
+    "id": "91",
+    "city": "St. Marys, ON",
     "status": "FAILED (kept old data)",
     "details": "scraper reported invalid data; keeping previous files",
     "index": 13
   },
   {
-    "id": "249",
-    "city": "Moncton Mountain Rd, NB",
+    "id": "463",
+    "city": "Paspebiac, QC",
     "status": "FAILED (kept old data)",
     "details": "scraper reported invalid data; keeping previous files",
     "index": 14
   },
   {
-    "id": "55",
-    "city": "Leamington, ON",
+    "id": "199",
+    "city": "Windsor East, ON",
     "status": "FAILED (kept old data)",
     "details": "scraper reported invalid data; keeping previous files",
     "index": 15
   },
   {
-    "id": "213",
-    "city": "Port Hawkesbury, NS",
+    "id": "451",
+    "city": "Marathon, ON",
     "status": "FAILED (kept old data)",
     "details": "scraper reported invalid data; keeping previous files",
     "index": 16
