@@ -187,6 +187,14 @@ const publishScript = path.join(repoRoot, "scripts", "publish_canadiantire_outpu
 const statusMap = new Map();
 const publishedSlugs = [];
 
+if (!fs.existsSync(scraperEntry)) {
+  console.error(
+    "❌ Canadian Tire scraper entry point not found. Restore scraper_ct.js from history or provide an alternative scraper before running this script."
+  );
+  console.error("   Example to restore from git: git checkout <commit-with-scraper> -- scraper_ct.js");
+  process.exit(1);
+}
+
 const statusFile = args["status-file"]
   ? path.resolve(repoRoot, args["status-file"])
   : path.join(repoRoot, "outputs", "canadiantire", "status.json");
