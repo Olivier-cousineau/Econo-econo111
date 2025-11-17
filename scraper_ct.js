@@ -90,6 +90,43 @@ const cleanMoney = (s) => {
   return m ? m[1].replace(/\s/g, "") : s;
 };
 
+async function dismissMedalliaPopup(page) {
+  try {
+    const possibleCloseButtons = page.locator(
+      [
+        '#kampyleInviteContainer button',
+        '#MDigitalInvitationWrapper button',
+        'button[aria-label*="close" i]',
+        'button[aria-label*="fermer" i]',
+        'button[aria-label*="feedback" i]'
+      ].join(', ')
+    );
+
+    const count = await possibleCloseButtons.count();
+    for (let i = 0; i < count; i++) {
+      const btn = possibleCloseButtons.nth(i);
+      if (await btn.isVisible().catch(() => false)) {
+        console.log('🧹 Medallia: clic sur le bouton de fermeture');
+        await btn.click({ timeout: 2000 }).catch(() => {});
+        break;
+      }
+    }
+
+    await page.evaluate(() => {
+      const ids = ['kampyleInviteContainer', 'kampyleInvite', 'MDigitalInvitationWrapper'];
+      for (const id of ids) {
+        const el = document.getElementById(id);
+        if (el) {
+          console.log('🧹 Medallia: suppression de', id);
+          el.remove();
+        }
+      }
+    });
+  } catch (e) {
+    console.warn('⚠️ Impossible de fermer le pop-up Medallia:', e);
+  }
+}
+
 async function getFirstSku(page) {
   try {
     const t = await page.locator(".nl-product__code").first().textContent({ timeout: 2000 });
@@ -660,7 +697,13 @@ async function main() {
 
     const clickNavigation = (async () => {
       if (await target.isVisible().catch(() => false)) {
-        await target.click({ timeout: 12000 });
+        try {
+          await target.click({ timeout: 12000 });
+        } catch (err) {
+          console.warn('⚠️ Pagination click blocked, trying to dismiss Medallia popup...', err);
+          await dismissMedalliaPopup(page);
+          await target.click({ timeout: 12000 });
+        }
       } else {
         await target.evaluate((el) => { if (el) el.click(); }).catch(() => {});
       }
