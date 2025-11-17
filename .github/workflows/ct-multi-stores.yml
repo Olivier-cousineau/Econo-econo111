@@ -2,11 +2,11 @@ name: Canadian Tire - Multi Stores (Sharded)
 
 on:
   schedule:
-    - cron: "0 10 * * *"   # 05:00 AM Montréal
+    - cron: "0 12 * * *"   # 07:00 America/Toronto daily, staggered away from shard start times
   workflow_dispatch:
 
 concurrency:
-  group: canadian-tire-shards
+  group: canadian-tire-shards-push
   cancel-in-progress: false
 
 jobs:
@@ -36,11 +36,15 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Install Playwright browsers
+      - name: Install Playwright browsers (Chromium)
         run: npx playwright install --with-deps chromium
+
+      - name: Install Playwright browsers (all)
+        run: npx playwright install --with-deps
 
       - name: Run Canadian Tire scraper for this store
         run: |
+          set -o pipefail
           echo "Running store ${{ matrix.store }} - ${{ matrix.city }}"
           node scraper_ct.js --store "${{ matrix.store }}" --city "${{ matrix.city }}"
 
@@ -62,6 +66,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          echo "👉 Status before push"
+          git status -sb
 
           if git diff --quiet origin/main..HEAD; then
             echo "No new commits to push"
