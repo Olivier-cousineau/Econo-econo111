@@ -1,0 +1,52 @@
+# Archived / unused workflow
+name: Scraper Canadian Tire - Saint-Jérôme
+
+on:
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install playwright==1.45.0 pandas
+          python -m playwright install --with-deps chromium
+
+      - name: Run Canadian Tire scraper (Saint-Jérôme)
+        env:
+          STORE_ID: "271"
+          OUT_DIR: "data/canadian-tire/saint-jerome"
+        run: |
+          mkdir -p "$OUT_DIR"
+          python archive/unused-scrapers/canadian_tire_scraper.py \
+            --store-id "$STORE_ID" \
+            --store-name "Canadian Tire Saint-Jérôme" \
+            --store-slug "saint-jerome" \
+            --outdir "$OUT_DIR" \
+            --html "$OUT_DIR/index.html" \
+            --csv  "$OUT_DIR/products.csv" \
+            --json "$OUT_DIR/products.json"
+
+      - name: Commit and push changes
+        run: |
+          set -e
+          git config user.name  "Olivier-cousineau"
+          git config user.email "ocousineau40@gmail.com"
+          git add outputs/canadiantire/**/*.json outputs/canadiantire/**/*.csv outputs/canadiantire/**/images/* package-lock.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Canadian Tire Saint-Jérôme: update data (auto)"
+            git push
+          else
+            echo "No changes – nothing to commit."
+          fi
