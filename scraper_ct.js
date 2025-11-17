@@ -45,7 +45,6 @@ const MAX_PAGES = hasExplicitMaxPages && parsedMaxPages > 0
   ? Math.min(parsedMaxPages, HARD_MAX_PAGES)
   : HARD_MAX_PAGES;
 const HEADLESS  = !args.headful;
-const WAIT_PRODUCTS_TIMEOUT = 60000;
 
 const INCLUDE_REGULAR_PRICE    = parseBooleanArg(args["include-regular-price"] ?? args.includeRegularPrice, true);
 const INCLUDE_LIQUIDATION_PRICE= parseBooleanArg(args["include-liquidation-price"] ?? args.includeLiquidationPrice, true);
@@ -100,45 +99,26 @@ async function getFirstSku(page) {
   }
 }
 
-async function waitProductsStable(page, timeout = 60000) {
-  const cards = page.locator(SEL.card);
-  await cards.first().waitFor({ state: "visible", timeout });
+async function waitProductsStable(page, timeout = 30000) {
+  const start = Date.now();
+  await page.waitForSelector(SEL.card, { timeout });
 
-  // Best-effort wait for price rendering, but do not block the scraper if it is slow.
-  const priceTimeout = Math.min(5000, Math.max(1200, Math.floor(timeout / 4)));
+  const priceTimeout = Math.min(2500, Math.max(900, Math.floor(timeout / 5)));
+  await Promise.race([
+    page.waitForSelector(SEL.price, { timeout: priceTimeout }),
+    page.waitForTimeout(priceTimeout + 120),
+  ]).catch(() => {});
+
+  const elapsed = Date.now() - start;
+  const remaining = Math.max(900, timeout - elapsed);
   try {
-    await Promise.race([
-      page.waitForSelector(SEL.price, { timeout: priceTimeout }),
-      page.waitForTimeout(priceTimeout + 200),
-    ]);
+    await page.waitForFunction(
+      () => document.querySelectorAll('li[data-testid="product-grids"]').length > 0,
+      { timeout: remaining }
+    );
   } catch (err) {
-    if (err?.name === "TimeoutError") {
-      console.warn("⚠️  Prices did not stabilize in time; continuing anyway.");
-    } else {
-      throw err;
-    }
-  }
-
-  const count = await cards.count().catch(() => 0);
-  if (count === 0) {
-    console.warn("⚠️  No product cards detected after initial visibility check; continuing.");
-  }
-}
-
-const isTimeoutError = (error) => error?.name === "TimeoutError";
-
-async function waitForProductsOrMarkFailure(page, browser, contextLabel = "") {
-  try {
-    await waitProductsStable(page, WAIT_PRODUCTS_TIMEOUT);
-  } catch (error) {
-    if (isTimeoutError(error)) {
-      const label = STORE_ID || "?";
-      const suffix = contextLabel ? ` (${contextLabel})` : "";
-      console.warn(`⚠️  Timed out waiting for product list on store ${label}${suffix} – mark as failed and continue.`);
-      await browser.close();
-      process.exit(INVALID_DATA_EXIT_CODE);
-    }
-    throw error;
+    const count = await page.locator(SEL.card).count().catch(() => 0);
+    if (count === 0) throw err;
   }
 }
 
@@ -669,7 +649,7 @@ async function main() {
   const all = [];
   const seenProducts = new Set();
 
-  await waitForProductsOrMarkFailure(page, browser, "initial load");
+  await waitProductsStable(page);
   await lazyWarmup(page);
 
   let pagePrimed = true;
@@ -684,7 +664,7 @@ async function main() {
   for (let p = currentPage; p <= lastPage; p++) {
     const skipGuards = pagePrimed;
     if (!pagePrimed) {
-      await waitForProductsOrMarkFailure(page, browser, "pagination");
+      await waitProductsStable(page);
       await lazyWarmup(page);
     }
     pagePrimed = false;
@@ -772,7 +752,7 @@ async function main() {
       page.waitForTimeout(1200),
     ]);
 
-    await waitForProductsOrMarkFailure(page, browser, "pagination");
+    await waitProductsStable(page);
     await lazyWarmup(page);
     await page.waitForTimeout(150);
     pagePrimed = true;
@@ -780,7 +760,7 @@ async function main() {
 
     if (firstSku && prevFirstSku && firstSku === prevFirstSku) {
       await page.evaluate(() => window.scrollTo(0, 0));
-      await waitForProductsOrMarkFailure(page, browser, "pagination retry");
+      await waitProductsStable(page);
       await lazyWarmup(page);
       pagePrimed = true;
       firstSku = await getFirstSku(page);
