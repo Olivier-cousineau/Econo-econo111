@@ -4,12 +4,11 @@
  * Scraper Canadian Tire - Liquidation (Playwright + enrichissement fiche produit)
  * - Multi-magasins via --store <ID> --city "<Nom>"
  * - Titres/prix robustes (aria-label/title/alt, data-*), scroll "lazy"
- * - Enrichissement PDP (titre, prix, sku, quantité)
+ * - Enrichissement depuis la liste uniquement (pas de PDP)
  * - Sorties par magasin: outputs/canadiantire/<store>-<city-slug>/{data.json,data.csv}
  */
 import { chromium } from "playwright";
 import fs from "fs-extra";
-import pLimit from "p-limit";
 import slugify from "slugify";
 import { createObjectCsvWriter } from "csv-writer";
 import minimist from "minimist";
@@ -54,8 +53,6 @@ const OUT_CSV  = `${OUT_BASE}/data.csv`;
 
 // (utile pour le workflow si on veut parser les logs)
 console.log(`OUT_BASE=${OUT_BASE}`);
-
-const CONCURRENCY = 5;
 
 // === Helpers & Sélecteurs ===
 const BASE = "https://www.canadiantire.ca";
@@ -128,15 +125,6 @@ async function dismissMedalliaPopup(page) {
     });
   } catch (e) {
     console.warn('⚠️ Impossible de fermer le pop-up Medallia:', e);
-  }
-}
-
-async function getFirstSku(page) {
-  try {
-    const t = await page.locator(".nl-product__code").first().textContent({ timeout: 2000 });
-    return t ? t.replace(/^#/, "").trim() : null;
-  } catch {
-    return null;
   }
 }
 
@@ -258,44 +246,7 @@ async function findPaginationTarget(page, nextPage) {
   return hiddenCandidates.length ? hiddenCandidates[0] : null;
 }
 
-async function extractCardAttributes(card) {
-  let sku = null;
-  try {
-    sku =
-      (await card.getAttribute("data-sku")) ||
-      (await card.getAttribute("data-product-id")) ||
-      (await card
-        .locator("[data-sku]")
-        .first()
-        .getAttribute("data-sku")
-        .catch(() => null)) ||
-      (await card
-        .locator("[data-product-id]")
-        .first()
-        .getAttribute("data-product-id")
-        .catch(() => null));
-  } catch (e) {
-    sku = null;
-  }
-
-  let quantity_available = null;
-  try {
-    const qtyText = await card
-      .locator(
-        "[data-test='inventory'], [data-test='store-inventory'], .inventory, .product__inventory"
-      )
-      .first()
-      .innerText();
-    quantity_available = extractQuantity(qtyText);
-  } catch (e) {
-    quantity_available = null;
-  }
-
-  return { sku, quantity_available };
-}
-
 async function extractFromCard(card) {
-  const attrs = await extractCardAttributes(card);
   const data = await card.evaluate((el, { base }) => {
     const cleanMoney = (s) => {
       if (!s) return null;
@@ -310,14 +261,6 @@ async function extractFromCard(card) {
       return t ? t.trim() : null;
     };
 
-    const parseQuantity = (text) => {
-      if (!text) return null;
-      const m = text.match(/(\d+)\s*(en stock|in stock|disponibles?|available)/i);
-      if (m) return parseInt(m[1], 10);
-      const n = text.match(/(\d+)/);
-      return n ? parseInt(n[1], 10) : null;
-    };
-
     const titleEl = el.querySelector("[id^='title__promolisting-'], .nl-product-card__title");
     const title = textFromEl(titleEl);
 
@@ -328,16 +271,6 @@ async function extractFromCard(card) {
     if (image && image.startsWith("/")) image = base + image;
 
     const availability = textFromEl(el.querySelector(".nl-product-card__availability-message"));
-    const quantity_available = parseQuantity(
-      textFromEl(
-        el.querySelector(
-          "[data-test='inventory'], [data-test='store-inventory'], .inventory, .product__inventory"
-        )
-      )
-    );
-
-    let sku = textFromEl(el.querySelector(".nl-product__code"));
-    if (sku) sku = sku.replace(/^#/, "").trim();
 
     const badges = Array.from(el.querySelectorAll(".nl-plp-badges"))
       .map((node) => textFromEl(node))
@@ -353,25 +286,18 @@ async function extractFromCard(card) {
     if (link && link.startsWith("/")) link = base + link;
 
     const productId = el.getAttribute("data-product-id") || el.getAttribute("data-productid") || null;
-    const productSku = el.getAttribute("data-sku") || el.getAttribute("data-product-sku") || sku || null;
 
     return {
       name: title || null,
       image: image || null,
       availability: availability || null,
-      sku: sku || null,
       badges,
       link: link || null,
-      quantity_available: quantity_available ?? null,
+      product_id: productId,
     };
   }, { base: BASE });
 
-  return {
-    ...data,
-    sku: data.sku || attrs.sku || data.product_sku || null,
-    product_sku: data.product_sku || attrs.sku || null,
-    quantity_available: data.quantity_available ?? attrs.quantity_available ?? null,
-  };
+  return data;
 }
 
 async function scrapeListing(page, { skipGuards = false } = {}) {
@@ -386,13 +312,6 @@ async function scrapeListing(page, { skipGuards = false } = {}) {
   }
 
   const cardsLocator = page.locator(SELECTORS.card);
-  const cardCount = await cardsLocator.count();
-  const attrData = await Promise.all(
-    Array.from({ length: cardCount }, (_, i) =>
-      extractCardAttributes(cardsLocator.nth(i)).catch(() => ({ }))
-    )
-  );
-
   try {
     const items =
       (await cardsLocator.evaluateAll((nodes, { base }) => {
@@ -426,9 +345,6 @@ async function scrapeListing(page, { skipGuards = false } = {}) {
 
         const availability = textFromEl(el.querySelector(".nl-product-card__availability-message"));
 
-        let sku = textFromEl(el.querySelector(".nl-product__code"));
-        if (sku) sku = sku.replace(/^#/, "").trim();
-
         const badges = Array.from(el.querySelectorAll(".nl-plp-badges"))
           .map((node) => textFromEl(node))
           .filter(Boolean);
@@ -443,7 +359,6 @@ async function scrapeListing(page, { skipGuards = false } = {}) {
         if (link && link.startsWith("/")) link = base + link;
 
         const productId = el.getAttribute("data-product-id") || el.getAttribute("data-productid") || null;
-        const productSku = el.getAttribute("data-sku") || el.getAttribute("data-product-sku") || sku || null;
 
         return {
           name: title || null,
@@ -453,24 +368,14 @@ async function scrapeListing(page, { skipGuards = false } = {}) {
           price_original_raw: priceWasRaw || null,
           image: image || null,
           availability: availability || null,
-          sku: sku || null,
           badges,
           link: link || null,
           product_id: productId,
-          product_sku: productSku,
         };
       });
     }, { base: BASE })) || [];
 
-    return items.map((item, idx) => {
-      const attrs = attrData[idx] || {};
-      return {
-        ...item,
-        sku: item.sku || attrs.sku || item.product_sku || null,
-        product_sku: item.product_sku || attrs.sku || null,
-        quantity_available: item.quantity_available ?? attrs.quantity_available ?? null,
-      };
-    });
+    return items;
   } catch (e) {
     console.warn("scrapeListing evaluateAll error:", e?.message || e);
     if (!skipGuards) {
@@ -507,21 +412,6 @@ function computeDiscountPercent(regularPrice, liquidationPrice) {
 
   const discount = ((regularPrice - liquidationPrice) / regularPrice) * 100;
   return Number.isFinite(discount) ? discount : null;
-}
-
-function extractQuantity(text) {
-  if (!text) return null;
-  const m = text.match(/(\d+)\s*(en stock|in stock|disponibles?|available)/i);
-  if (m) return parseInt(m[1], 10);
-
-  const n = text.match(/(\d+)/);
-  return n ? parseInt(n[1], 10) : null;
-}
-
-function extractSku(text) {
-  if (!text) return null;
-  const m = text.match(/(\d[\d\-]+)/);
-  return m ? m[1] : null;
 }
 
 function createRecordFromCard(card, pageIsClearance) {
@@ -567,11 +457,7 @@ function createRecordFromCard(card, pageIsClearance) {
     image_url: card.image || null,
     url: card.link || null,
     link: card.link || null,
-    sku: card.sku || card.product_sku || null,
     product_id: card.product_id || null,
-    product_sku: card.product_sku || null,
-    quantity: card.quantity_available ?? card.quantity ?? null,
-    quantity_available: card.quantity_available ?? null,
     availability: card.availability || null,
     badges,
     discount_percent,
@@ -619,62 +505,6 @@ async function lazyWarmup(page) {
     ),
     page.waitForTimeout(650),
   ]).catch(()=>{});
-}
-
-async function enrichWithDetails(context, item) {
-  if (!item.url) return item;
-  try {
-    const pp = await context.newPage();
-    await pp.goto(item.url, { timeout: 90000, waitUntil: "domcontentloaded" });
-    await pp.waitForTimeout(1200);
-
-    // titre
-    const title = (await pp.locator("h1, [data-testid='product-title']").first().textContent().catch(()=>null))?.trim();
-
-    // prix
-    const saleTxt = (await pp.locator("[data-testid='sale-price'], .price__value, .c-pricing__current").first().textContent().catch(()=>null))?.trim();
-    const regTxt  = (await pp.locator("[data-testid='regular-price'], [data-testid='was-price'], .price__was").first().textContent().catch(()=>null))?.trim();
-    const saleNum = extractPrice(saleTxt);
-    const regNum  = extractPrice(regTxt);
-
-    // sku / quantité
-    const skuTxt = (await pp.locator(".ProductDetails__Sku, .sku, .spec-row:has-text('Sku')").first().textContent().catch(()=>null))?.trim();
-    const qtyTxt = (await pp.locator(".storeAvailableStock, .prod-availability, .stock-info").first().textContent().catch(()=>null))?.trim();
-    let pdpSku = null;
-    try {
-      const skuText = await pp
-        .locator("text=Article #, text=Article no., text=SKU")
-        .first()
-        .innerText();
-      pdpSku = extractSku(skuText);
-    } catch (e) {
-      pdpSku = null;
-    }
-
-    await pp.close();
-
-    const out = { ...item };
-    if (!out.title && title) out.title = title;
-    if (out.price == null) out.price = saleNum ?? regNum ?? out.price;
-
-    if (out.liquidation_price == null && saleNum != null) out.liquidation_price = saleNum;
-    if (out.regular_price == null && regNum != null) out.regular_price = regNum;
-
-    if (!out.sale_price && saleNum != null) out.sale_price = saleNum;
-    if (!out.sale_price_raw && saleTxt) out.sale_price_raw = saleTxt;
-    if (!out.regular_price_raw && regTxt) out.regular_price_raw = regTxt;
-
-    const parsedQty = extractQuantity(qtyTxt);
-
-    if (!out.sku && skuTxt) out.sku = extractSku(skuTxt) || skuTxt;
-    if (!out.sku && pdpSku) out.sku = pdpSku;
-    if (out.quantity_available == null && parsedQty != null) out.quantity_available = parsedQty;
-    if (!out.quantity && qtyTxt) out.quantity = qtyTxt;
-
-    return out;
-  } catch {
-    return item;
-  }
 }
 
 async function maybeCloseStoreModal(page) {
@@ -747,7 +577,6 @@ async function main() {
   await lazyWarmup(page);
 
   let pagePrimed = true;
-  let firstSku = await getFirstSku(page);
   const totalPages = await getTotalPages(page);
   const currentPage = await getCurrentPageNum(page);
   const lastPage = Math.min(totalPages, MAX_PAGES);
@@ -796,9 +625,7 @@ async function main() {
       const normalizedLink = card.link ? card.link.split("?")[0].toLowerCase() : null;
       const linkKey = normalizedLink ? `link:${normalizedLink}` : null;
       const productId = card.product_id ? `id:${card.product_id}` : null;
-      const skuKey = card.product_sku ? `sku:${card.product_sku}` : null;
-
-      const keys = [linkKey, productId, skuKey].filter(Boolean);
+      const keys = [linkKey, productId].filter(Boolean);
       let duplicate = false;
       if (keys.length) {
         for (const key of keys) {
@@ -832,7 +659,6 @@ async function main() {
 
     if (p === lastPage) break;
 
-    const prevFirstSku = firstSku;
     const target = await findPaginationTarget(page, p + 1);
     if (!target) {
       console.warn(`Lien de pagination introuvable pour la page ${p + 1}, arrêt.`);
@@ -884,33 +710,11 @@ async function main() {
     await lazyWarmup(page);
     await page.waitForTimeout(150);
     pagePrimed = true;
-    firstSku = await getFirstSku(page);
-
-    if (firstSku && prevFirstSku && firstSku === prevFirstSku) {
-      await page.evaluate(() => window.scrollTo(0, 0));
-      await waitProductsStable(page);
-      await lazyWarmup(page);
-      pagePrimed = true;
-      firstSku = await getFirstSku(page);
-      if (firstSku === prevFirstSku) {
-        console.warn("Pagination bloquée, arrêt pour éviter les 0-produits fantômes.");
-        break;
-      }
-    }
   }
 
-  // Enrichissement PDP (limite soft)
-  const limit = pLimit(CONCURRENCY);
-  const enriched = await Promise.all(
-    all.map((p, i) => limit(async () => {
-      // enrichir ~jusqu'à 40 items/lot pour rester réactif
-      let out = p;
-      if (i < 40) out = await enrichWithDetails(context, p);
-      return { ...out, image_url: out.image_url ?? out.image ?? null };
-    }))
-  );
+  const results = all.map((out) => ({ ...out, image_url: out.image_url ?? out.image ?? null }));
 
-  await fs.writeJson(OUT_JSON, enriched, { spaces: 2 });
+  await fs.writeJson(OUT_JSON, results, { spaces: 2 });
   console.log(`💾  JSON → ${OUT_JSON}`);
 
   const csv = createObjectCsvWriter({
@@ -937,11 +741,7 @@ async function main() {
       { id: "link", title: "link" },
       { id: "image", title: "image" },
       { id: "image_url", title: "image_url" },
-      { id: "sku", title: "sku" },
       { id: "product_id", title: "product_id" },
-      { id: "product_sku", title: "product_sku" },
-      { id: "quantity", title: "quantity" },
-      { id: "quantity_available", title: "quantity_available" },
       { id: "availability", title: "availability" },
       { id: "badges", title: "badges" },
       { id: "discount_percent", title: "discount_percent" },
@@ -949,7 +749,7 @@ async function main() {
       { id: "price_original_clean", title: "price_original_clean" },
     ],
   });
-  await csv.writeRecords(enriched);
+  await csv.writeRecords(results);
   console.log(`📄  CSV  → ${OUT_CSV}`);
 
   await browser.close();
