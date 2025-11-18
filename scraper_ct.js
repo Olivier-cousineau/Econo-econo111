@@ -501,6 +501,14 @@ function extractPrice(text) {
   return m ? parseFloat(m[1].replace(",", ".")) : null;
 }
 
+function computeDiscountPercent(regularPrice, liquidationPrice) {
+  if (regularPrice == null || liquidationPrice == null) return null;
+  if (regularPrice <= 0 || liquidationPrice <= 0) return null;
+
+  const discount = ((regularPrice - liquidationPrice) / regularPrice) * 100;
+  return Number.isFinite(discount) ? discount : null;
+}
+
 function extractQuantity(text) {
   if (!text) return null;
   const m = text.match(/(\d+)\s*(en stock|in stock|disponibles?|available)/i);
@@ -525,9 +533,9 @@ function createRecordFromCard(card, pageIsClearance) {
   const price = salePrice ?? regularPrice ?? null;
 
   const discountPercent =
-    regularPrice > 0 && salePrice > 0
-      ? ((regularPrice - salePrice) / regularPrice) * 100
-      : null;
+    card.discount_percent != null
+      ? card.discount_percent
+      : computeDiscountPercent(regularPrice, salePrice);
 
   const meetsDiscountThreshold =
     regularPrice != null &&
@@ -759,7 +767,7 @@ async function main() {
     const pageIsClearance = /\/liquidation\.html/i.test(await page.url());
     const batch = [];
     const pageSeen = new Set();
-    cards.forEach((card) => {
+    for (const card of cards) {
       const regularPriceForCheck = extractPrice(
         card.price_original_raw ??
         card.price_original ??
@@ -772,11 +780,17 @@ async function main() {
         card.sale_price ??
         null
       );
+
+      const discountPercent = computeDiscountPercent(
+        regularPriceForCheck,
+        salePriceForCheck
+      );
+
       if (
-        (!regularPriceForCheck || regularPriceForCheck === 0) &&
-        (!salePriceForCheck || salePriceForCheck === 0)
+        discountPercent == null ||
+        discountPercent < 50
       ) {
-        return;
+        continue;
       }
 
       const normalizedLink = card.link ? card.link.split("?")[0].toLowerCase() : null;
@@ -793,21 +807,24 @@ async function main() {
             break;
           }
         }
-        if (duplicate) return;
+        if (duplicate) continue;
         keys.forEach((key) => seenProducts.add(key));
       } else {
         const fallbackKey = card.name
           ? `${card.name}|${card.price_sale || ""}|${card.price_original || ""}|${card.image || ""}`.toLowerCase()
           : null;
         if (fallbackKey) {
-          if (pageSeen.has(fallbackKey)) return;
+          if (pageSeen.has(fallbackKey)) continue;
           pageSeen.add(fallbackKey);
         }
       }
-      const record = createRecordFromCard(card, pageIsClearance);
-      if (!record) return;
+      const record = createRecordFromCard(
+        { ...card, discount_percent: discountPercent },
+        pageIsClearance
+      );
+      if (!record) continue;
       if (record.title || record.price != null || record.image) batch.push(record);
-    });
+    }
     console.log(`✅ Page ${p}: ${batch.length} produits`);
     all.push(...batch);
 
