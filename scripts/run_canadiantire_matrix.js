@@ -398,6 +398,42 @@ async function runAllStores() {
   });
   console.log(`\n🚀 Running up to ${maxConcurrent} scraper(s) in parallel`);
 
+  // TASK FOR CODEX:
+  // Fix the bug where store 218 (St. Eustache, QC) is still writing to
+  // outputs/canadiantire/418-rosemere-qc/data.json instead of its own folder.
+  //
+  // Goal:
+  //  - For every store, OUT_BASE, JSON/CSV paths, and the git commit message
+  //    must be based ONLY on the current store.id and store.name.
+  //  - No hard-coded "418" or "rosemere" should be reused between stores.
+  //
+  // Please:
+  // 1) For each store in the loop, compute a fresh citySlug and outBase:
+  //    const citySlug = slugify(store.name, { lower: true, strict: true });
+  //    const outBase = path.join("outputs", "canadiantire", `${store.id}-${citySlug}`);
+  //    console.log(`OUT_BASE=${outBase}`);
+  //
+  // 2) When spawning the scraper (scraper_ct.js), always pass these args:
+  //    --storeId <store.id>
+  //    --storeName "<store.name>"
+  //    --outBase <outBase>
+  //
+  //    Example:
+  //    spawnSync("node", [
+  //      "scripts/scraper_ct.js",
+  //      "--storeId", store.id,
+  //      "--storeName", store.name,
+  //      "--outBase", outBase,
+  //      "--maxPages", args.maxPages || "120",
+  //    ], { ... });
+  //
+  // 3) Do NOT reuse any previous outBase / storeId / storeName variable from another store.
+  //    Each iteration must compute its own values from the current "store" object.
+  //
+  // This should guarantee that store 218 writes to:
+  //   outputs/canadiantire/218-st-eustache-qc/data.json
+  // and not to 418-rosemere-qc anymore.
+
   let cursor = 0;
   /** @type {{ store: Store; index: number }[]} */
   const failedStores = [];

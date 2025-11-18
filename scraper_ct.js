@@ -13,6 +13,41 @@ import slugify from "slugify";
 import { createObjectCsvWriter } from "csv-writer";
 import minimist from "minimist";
 
+// TASK FOR CODEX:
+// Ensure this scraper always writes JSON/CSV to the OUT_BASE passed via CLI,
+// and that the paths never depend on a previous store.
+//
+// 1) Parse the CLI arguments like this:
+//    const args = minimist(process.argv.slice(2), {
+//      string: ["storeId", "storeName", "outBase", "maxPages"],
+//      boolean: ["debug", "headful", "downloadImages"],
+//      default: { maxPages: "120" },
+//    });
+//
+// 2) Derive OUT_BASE using only args.outBase when provided:
+//    const storeId = String(args.storeId);
+//    const storeName = String(args.storeName || "");
+//    let OUT_BASE = args.outBase;
+//    if (!OUT_BASE) {
+//      const citySlug = slugify(storeName, { lower: true, strict: true });
+//      OUT_BASE = path.join("outputs", "canadiantire", `${storeId}-${citySlug}`);
+//    }
+//    const jsonPath = path.join(OUT_BASE, "data.json");
+//    const csvPath = path.join(OUT_BASE, "data.csv");
+//    console.log(`OUT_BASE=${OUT_BASE}`);
+//    console.log(`💾  JSON → ${jsonPath}`);
+//    console.log(`📄  CSV  → ${csvPath}`);
+//
+// 3) When writing files, always use jsonPath and csvPath above.
+//    Do NOT hard-code "418-rosemere-qc" or any specific store folder.
+//
+// 4) If there is a git commit step inside this file, make sure the commit message uses:
+//      storeName and storeId from the current args,
+//    e.g. "Canadian Tire: St. Eustache, QC (218) – XXX produits".
+//
+// With these changes, each run of the scraper will correctly write to the folder matching
+// the current store (including 218 St. Eustache), and will not reuse Rosemere's paths.
+
 const args = minimist(process.argv.slice(2));
 
 function parseBooleanArg(value, defaultValue = false) {
