@@ -121,12 +121,10 @@ if (Number.isFinite(limit) && limit > 0) {
 const shardIndexInput = parseNumeric(
   args.shard ?? args.shardIndex ?? args["shard-index"]
 );
-const shardTotalInput = parseNumeric(
-  args.shards ?? args.shardTotal ?? args["shard-total"]
-);
+const shardSize = 8;
 if (shardIndexInput !== null) {
-  const shardTotal = Math.max(1, Math.floor(shardTotalInput ?? 7));
   const shardIndex = Math.floor(shardIndexInput);
+  const shardTotal = Math.max(1, Math.ceil(stores.length / shardSize));
   if (!Number.isFinite(shardIndex) || shardIndex < 1 || shardIndex > shardTotal) {
     console.error(
       `❌ Invalid shard index ${shardIndexInput}. Expected a value between 1 and ${shardTotal}.`
@@ -134,12 +132,8 @@ if (shardIndexInput !== null) {
     process.exit(1);
   }
 
-  const filteredStores = stores.filter((store) => {
-    const originalIndex = storeIndexMap.get(store);
-    return typeof originalIndex === "number"
-      ? originalIndex % shardTotal === shardIndex - 1
-      : false;
-  });
+  const startIndex = (shardIndex - 1) * shardSize;
+  const filteredStores = stores.slice(startIndex, startIndex + shardSize);
 
   console.log(`Running shard ${shardIndex}/${shardTotal} with ${filteredStores.length} stores`);
 
