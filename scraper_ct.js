@@ -113,14 +113,22 @@ async function dismissMedalliaPopup(page) {
     }
 
     await page.evaluate(() => {
-      const ids = ['kampyleInviteContainer', 'kampyleInvite', 'MDigitalInvitationWrapper'];
+      const ids = ['MDigitalInvitationWrapper', 'kampyleInviteContainer', 'kampyleInvite'];
       for (const id of ids) {
         const el = document.getElementById(id);
         if (el) {
-          console.log('🧹 Medallia: suppression de', id);
+          console.log('🧹 Medallia: suppression/masquage de', id);
           el.remove();
         }
       }
+
+      ids.forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.style.setProperty('display', 'none', 'important');
+          el.style.setProperty('pointer-events', 'none', 'important');
+        }
+      });
     });
   } catch (e) {
     console.warn('⚠️ Impossible de fermer le pop-up Medallia:', e);
@@ -711,6 +719,9 @@ async function main() {
   const context = await browser.newContext({ locale: "fr-CA" });
   const page = await context.newPage();
 
+  await page.route("**/*medallia*", (route) => route.abort());
+  await page.route("**/resources.digital-cloud.medallia.ca/**", (route) => route.abort());
+
   console.log("➡️  Go to:", START_URL);
   console.log(`⚙️  Options → liquidation_price=${INCLUDE_LIQUIDATION_PRICE ? "on":"off"}, regular_price=${INCLUDE_REGULAR_PRICE ? "on":"off"}`);
 
@@ -831,11 +842,12 @@ async function main() {
     await target.scrollIntoViewIfNeeded().catch(() => {});
 
     const clickNavigation = (async () => {
+      await dismissMedalliaPopup(page);
       if (await target.isVisible().catch(() => false)) {
         try {
           await target.click({ timeout: 12000 });
         } catch (err) {
-          console.warn('⚠️ Pagination click blocked, trying to dismiss Medallia popup...', err);
+          console.warn('⚠️ Pagination click blocked, retrying after dismissing Medallia popup...', err);
           await dismissMedalliaPopup(page);
           await target.click({ timeout: 12000 });
         }
