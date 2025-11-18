@@ -57,5 +57,14 @@ jobs:
           GIT_COMMITTER_NAME: github-actions[bot]
           GIT_COMMITTER_EMAIL: github-actions[bot]@users.noreply.github.com
         run: |
+          echo "🔄 Fetch origin..."
+          git fetch origin
+
+          echo "📌 Status before rebase:"
           git status -sb
+
+          echo "🔁 Rebase on origin/main..."
+          git pull --rebase origin main
+
+          echo "🚀 Push to origin/main..."
           git push origin HEAD:main
