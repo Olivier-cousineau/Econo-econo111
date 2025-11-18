@@ -1,9 +1,6 @@
 name: Canadian Tire - Shard 18 of 21
 
 on:
-  schedule:
-    # 05:00 America/Toronto ≈ 10:00 UTC daily
-    - cron: "0 10 * * *"
   workflow_dispatch:
 
 concurrency:
