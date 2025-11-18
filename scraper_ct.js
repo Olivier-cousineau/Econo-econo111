@@ -5,14 +5,11 @@
  * - Multi-magasins via --store <ID> --city "<Nom>"
  * - Titres/prix robustes (aria-label/title/alt, data-*), scroll "lazy"
  * - Enrichissement PDP (titre, prix, sku, quantité)
- * - Sorties par magasin: outputs/canadiantire/<store>-<city-slug>/{data.json,data.csv,images/}
+ * - Sorties par magasin: outputs/canadiantire/<store>-<city-slug>/{data.json,data.csv}
  */
 import { chromium } from "playwright";
 import fs from "fs-extra";
-import path from "path";
-import axios from "axios";
 import pLimit from "p-limit";
-import sanitize from "sanitize-filename";
 import slugify from "slugify";
 import { createObjectCsvWriter } from "csv-writer";
 import minimist from "minimist";
@@ -52,7 +49,6 @@ const INCLUDE_LIQUIDATION_PRICE= parseBooleanArg(args["include-liquidation-price
 // ---------- SORTIES ----------
 const citySlug = CITY ? `-${slugify(CITY, { lower:true, strict:true })}` : "";
 const OUT_BASE = `./outputs/canadiantire/${STORE_ID || "default"}${citySlug}`;
-const OUT_DIR  = `${OUT_BASE}/images`;
 const OUT_JSON = `${OUT_BASE}/data.json`;
 const OUT_CSV  = `${OUT_BASE}/data.csv`;
 
@@ -528,15 +524,22 @@ function createRecordFromCard(card, pageIsClearance) {
   const priceRaw = priceSaleRaw || priceWasRaw || null;
   const price = salePrice ?? regularPrice ?? null;
 
-  const missingPrices =
-    (salePrice == null || salePrice === 0) &&
-    (regularPrice == null || regularPrice === 0);
-  if (missingPrices) return null;
+  const discountPercent =
+    regularPrice > 0 && salePrice > 0
+      ? ((regularPrice - salePrice) / regularPrice) * 100
+      : null;
+
+  const meetsDiscountThreshold =
+    regularPrice != null &&
+    salePrice != null &&
+    regularPrice > 0 &&
+    salePrice > 0 &&
+    discountPercent >= 50;
+
+  if (!meetsDiscountThreshold) return null;
 
   const discount_percent =
-    salePrice > 0 && regularPrice > 0
-      ? Math.round(((regularPrice - salePrice) / regularPrice) * 100)
-      : null;
+    discountPercent != null ? Math.round(discountPercent * 100) / 100 : null;
 
   const badges = Array.isArray(card.badges) ? card.badges : [];
   const normalizedBadges = badges.map((b) => b.toLowerCase());
@@ -553,6 +556,7 @@ function createRecordFromCard(card, pageIsClearance) {
     price_raw: priceRaw,
     liquidation: !!isLiquidation,
     image: card.image || null,
+    image_url: card.image || null,
     url: card.link || null,
     link: card.link || null,
     sku: card.sku || card.product_sku || null,
@@ -580,22 +584,6 @@ function createRecordFromCard(card, pageIsClearance) {
   rec.price_original_clean = card.price_original || null;
 
   return rec;
-}
-
-async function downloadImage(url, idx, title) {
-  if (!url) return null;
-  await fs.ensureDir(OUT_DIR);
-  let ext = ".jpg";
-  try {
-    const u = new URL(url);
-    const guess = path.extname(u.pathname).split("?")[0];
-    if (guess) ext = guess || ext;
-  } catch {}
-  const name = sanitize(`${String(idx).padStart(4,"0")}-${(title || "product").slice(0,40)}`)+ext;
-  const outPath = path.join(OUT_DIR, name);
-  const res = await axios.get(url, { responseType: "arraybuffer", timeout: 60000 });
-  await fs.writeFile(outPath, res.data);
-  return outPath;
 }
 
 async function lazyWarmup(page) {
@@ -896,20 +884,12 @@ async function main() {
 
   // Enrichissement PDP (limite soft)
   const limit = pLimit(CONCURRENCY);
-  let idx = 0;
   const enriched = await Promise.all(
     all.map((p, i) => limit(async () => {
-      // télécharge image
-      idx += 1;
-      let image_path = null;
-      if (p.image) {
-        try { image_path = await downloadImage(p.image, idx, p.title); }
-        catch { console.warn("⚠️ image download failed:", p.image); }
-      }
       // enrichir ~jusqu'à 40 items/lot pour rester réactif
       let out = p;
       if (i < 40) out = await enrichWithDetails(context, p);
-      return { ...out, image_path };
+      return { ...out, image_url: out.image_url ?? out.image ?? null };
     }))
   );
 
@@ -939,7 +919,7 @@ async function main() {
       { id: "url", title: "url" },
       { id: "link", title: "link" },
       { id: "image", title: "image" },
-      { id: "image_path", title: "image_path" },
+      { id: "image_url", title: "image_url" },
       { id: "sku", title: "sku" },
       { id: "product_id", title: "product_id" },
       { id: "product_sku", title: "product_sku" },
