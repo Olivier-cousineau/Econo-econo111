@@ -65,35 +65,17 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          echo "👉 Status before push"
+          echo "🔄 Fetch origin..."
+          git fetch origin
+
+          echo "📌 Status before rebase:"
           git status -sb
 
-          if git diff --quiet origin/main..HEAD; then
-            echo "No new commits to push"
-            exit 0
-          fi
+          echo "🔁 Rebase on origin/main..."
+          git pull --rebase origin main
 
-          attempts=0
-          max_attempts=3
-          while true; do
-            if git push origin HEAD:main; then
-              echo "Push succeeded"
-              break
-            fi
-
-            attempts=$((attempts + 1))
-            if [ "$attempts" -ge "$max_attempts" ]; then
-              echo "Push failed after ${max_attempts} attempts."
-              exit 1
-            fi
-
-            echo "Push failed (main moved). Refetching and rebasing... attempt ${attempts}/${max_attempts}"
-            git fetch origin main
-            if ! git rebase origin/main; then
-              git rebase --abort
-              exit 1
-            fi
-          done
+          echo "🚀 Push to origin/main..."
+          git push origin HEAD:main
 
     strategy:
       fail-fast: false
