@@ -1,8 +1,6 @@
 name: Canadian Tire - Multi Stores (Sharded)
 
 on:
-  schedule:
-    - cron: "0 12 * * *"   # 07:00 America/Toronto daily, staggered away from shard start times
   workflow_dispatch:
 
 concurrency:
