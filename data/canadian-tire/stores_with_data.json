@@ -28,8 +28,12 @@
     "slug": "blainville"
   },
   {
-    "storeNumber": "649",
+    "storeNumber": "",
     "slug": "blainville-qc"
+  },
+  {
+    "storeNumber": "332",
+    "slug": "boucherville-qc"
   },
   {
     "storeNumber": "446",
@@ -48,6 +52,10 @@
     "slug": "campbellford-on"
   },
   {
+    "storeNumber": "626",
+    "slug": "chambly-qc"
+  },
+  {
     "storeNumber": "147",
     "slug": "chateauguay-qc"
   },
@@ -56,8 +64,16 @@
     "slug": "collingwood-on"
   },
   {
+    "storeNumber": "401",
+    "slug": "cote-des-neiges-qc"
+  },
+  {
     "storeNumber": "274",
     "slug": "cowansville-qc"
+  },
+  {
+    "storeNumber": "396",
+    "slug": "delson-qc"
   },
   {
     "storeNumber": "485",
@@ -72,12 +88,20 @@
     "slug": "fredericton-nb"
   },
   {
+    "storeNumber": "190",
+    "slug": "greenfield-park-qc"
+  },
+  {
     "storeNumber": "260",
     "slug": "guelph-north-on"
   },
   {
     "storeNumber": "177",
     "slug": "hamilton-mtwest-on"
+  },
+  {
+    "storeNumber": "157",
+    "slug": "hawkesbury-on"
   },
   {
     "storeNumber": "47",
@@ -92,6 +116,10 @@
     "slug": "innisfil-on"
   },
   {
+    "storeNumber": "200",
+    "slug": "joliette-qc"
+  },
+  {
     "storeNumber": "457",
     "slug": "kanata-on"
   },
@@ -102,6 +130,18 @@
   {
     "storeNumber": "209",
     "slug": "kingston-rd-on"
+  },
+  {
+    "storeNumber": "417",
+    "slug": "kingston-township-on"
+  },
+  {
+    "storeNumber": "",
+    "slug": "la-plaine"
+  },
+  {
+    "storeNumber": "",
+    "slug": "la-plaine-qc"
   },
   {
     "storeNumber": "233",
@@ -148,6 +188,10 @@
     "slug": "london-west-on"
   },
   {
+    "storeNumber": "256",
+    "slug": "longueuil-qc"
+  },
+  {
     "storeNumber": "451",
     "slug": "marathon-on"
   },
@@ -166,6 +210,10 @@
   {
     "storeNumber": "461",
     "slug": "mont-tremblant-qc"
+  },
+  {
+    "storeNumber": "120",
+    "slug": "morrisburg-on"
   },
   {
     "storeNumber": "71",
@@ -228,6 +276,10 @@
     "slug": "richmond-hill-north-on"
   },
   {
+    "storeNumber": "",
+    "slug": "rosemere"
+  },
+  {
     "storeNumber": "476",
     "slug": "rothesay-nb"
   },
@@ -240,8 +292,20 @@
     "slug": "sainte-therese"
   },
   {
+    "storeNumber": "427",
+    "slug": "scarborough-east-on"
+  },
+  {
+    "storeNumber": "99",
+    "slug": "shawville-qc"
+  },
+  {
     "storeNumber": "98",
     "slug": "smiths-falls-on"
+  },
+  {
+    "storeNumber": "649",
+    "slug": "st-eustache"
   },
   {
     "storeNumber": "173",
@@ -250,6 +314,22 @@
   {
     "storeNumber": "151",
     "slug": "st-hyacinthe-qc"
+  },
+  {
+    "storeNumber": "218",
+    "slug": "st-jerome"
+  },
+  {
+    "storeNumber": "418",
+    "slug": "st-jerome"
+  },
+  {
+    "storeNumber": "641",
+    "slug": "st-jerome"
+  },
+  {
+    "storeNumber": "690",
+    "slug": "st-jerome"
   },
   {
     "storeNumber": "271",
@@ -272,8 +352,20 @@
     "slug": "tillsonburg-on"
   },
   {
+    "storeNumber": "273",
+    "slug": "toronto-main-and-danforth-on"
+  },
+  {
+    "storeNumber": "114",
+    "slug": "val-dor-qc"
+  },
+  {
     "storeNumber": "115",
     "slug": "valleyfield-qc"
+  },
+  {
+    "storeNumber": "117",
+    "slug": "verdun-qc"
   },
   {
     "storeNumber": "235",
