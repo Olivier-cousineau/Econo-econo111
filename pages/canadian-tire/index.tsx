@@ -2,6 +2,8 @@ import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
+import { CanadianTireStatsCard } from '../../components/CanadianTireStatsCard';
+import { readCanadianTireStats, type CanadianTireStats } from '../../lib/canadianTireStats';
 
 interface StoreSummary {
   storeSlug: string;
@@ -25,6 +27,7 @@ const slugToLabel = (slug: string) => {
 
 export const getStaticProps: GetStaticProps<{
   stores: StoreSummary[];
+  stats: CanadianTireStats;
 }> = async () => {
   const outputsRoot = path.join(process.cwd(), 'outputs', 'canadiantire');
   let dirEntries: fs.Dirent[] = [];
@@ -34,7 +37,7 @@ export const getStaticProps: GetStaticProps<{
   } catch (error) {
     console.error('Unable to read outputs/canadiantire directory', error);
     return {
-      props: { stores: [] },
+      props: { stores: [], stats: await readCanadianTireStats() },
       revalidate: 300,
     };
   }
@@ -76,13 +79,14 @@ export const getStaticProps: GetStaticProps<{
   stores.sort((a, b) => a.label.localeCompare(b.label));
 
   return {
-    props: { stores },
+    props: { stores, stats: await readCanadianTireStats() },
     revalidate: 300,
   };
 };
 
 const CanadianTireIndexPage = ({
   stores,
+  stats,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <main style={{ padding: '2rem 1rem', maxWidth: '1100px', margin: '0 auto' }}>
@@ -93,6 +97,8 @@ const CanadianTireIndexPage = ({
           Product details only load when you open a store page, keeping this list fast and light.
         </p>
       </header>
+
+      <CanadianTireStatsCard stats={stats} />
 
       {stores.length === 0 ? (
         <p>No stores were found in the scraper outputs yet.</p>

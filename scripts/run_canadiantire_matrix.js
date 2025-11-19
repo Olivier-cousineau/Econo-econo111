@@ -177,6 +177,7 @@ for (const { key, flag } of passthrough) {
 
 const scraperEntry = path.join(repoRoot, "scraper_ct.js");
 const publishScript = path.join(repoRoot, "scripts", "publish_canadiantire_outputs.js");
+const statsScript = path.join(repoRoot, "scripts", "update_canadiantire_stats.js");
 const statusMap = new Map();
 const publishedSlugs = [];
 let gitQueue = Promise.resolve();
@@ -544,11 +545,28 @@ async function publishDatasets() {
   }
 }
 
+async function refreshGlobalStats() {
+  if (dryRun) {
+    console.log("\nℹ️ Skipping global stats update in dry-run mode");
+    return;
+  }
+
+  console.log("\n📈 Refreshing global Canadian Tire stats...");
+  const statsUpdate = await runCommand("node", [statsScript]);
+  if (statsUpdate.code !== 0) {
+    console.error("❌ Failed to refresh Canadian Tire stats");
+    if (!continueOnError) {
+      throw new Error("stats update failed");
+    }
+  }
+}
+
 async function main() {
   let runResult = null;
   try {
     runResult = await runAllStores();
     await publishDatasets();
+    await refreshGlobalStats();
     console.log("\n✅ Done");
   } finally {
     try {
