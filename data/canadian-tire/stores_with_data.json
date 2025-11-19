@@ -68,6 +68,10 @@
     "slug": "campbellford-on"
   },
   {
+    "storeNumber": "109",
+    "slug": "cap-de-la-madeleine-qc"
+  },
+  {
     "storeNumber": "625",
     "slug": "casselman-on"
   },
@@ -300,6 +304,10 @@
     "slug": "niagara-falls-north-on"
   },
   {
+    "storeNumber": "686",
+    "slug": "nicolet-qc"
+  },
+  {
     "storeNumber": "424",
     "slug": "oak-winston-churchill-on"
   },
@@ -316,8 +324,16 @@
     "slug": "ottawa-east-on"
   },
   {
+    "storeNumber": "297",
+    "slug": "ottawa-gloucester-on"
+  },
+  {
     "storeNumber": "258",
     "slug": "ottawa-merivale-on"
+  },
+  {
+    "storeNumber": "422",
+    "slug": "ottawa-orleans-on"
   },
   {
     "storeNumber": "463",
@@ -390,6 +406,10 @@
   {
     "storeNumber": "427",
     "slug": "scarborough-east-on"
+  },
+  {
+    "storeNumber": "131",
+    "slug": "shawinigan-qc"
   },
   {
     "storeNumber": "99",
@@ -482,6 +502,10 @@
   {
     "storeNumber": "273",
     "slug": "toronto-main-and-danforth-on"
+  },
+  {
+    "storeNumber": "308",
+    "slug": "trois-rivieres-qc"
   },
   {
     "storeNumber": "114",
