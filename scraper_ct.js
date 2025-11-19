@@ -327,8 +327,8 @@ async function extractFromCard(card) {
     if (primaryAnchor) {
       const href = primaryAnchor.getAttribute("href") || "";
       const ariaLabelledby = primaryAnchor.getAttribute("aria-labelledby") || "";
-      const skuMatch = href.match(/-([0-9]{7})p\.html/i);
-      const skuFormattedMatch = ariaLabelledby.match(/promolisting-([0-9-]+)/i);
+      const skuMatch = href.match(/-(\d+)p\.html/);
+      const skuFormattedMatch = ariaLabelledby.match(/promolisting-(\d{3}-\d{4}-\d)/);
       if (skuMatch) sku = skuMatch[1];
       if (skuFormattedMatch) skuFormatted = skuFormattedMatch[1];
     }
@@ -361,34 +361,42 @@ async function scrapeListing(page, { skipGuards = false } = {}) {
 
   const cardsLocator = page.locator(SELECTORS.card);
   try {
-    const items =
-      (await cardsLocator.evaluateAll((nodes, { base }) => {
-      const cleanMoney = (s) => {
-        if (!s) return null;
-        s = s.replace(/\u00a0/g, " ").trim();
-        const m = s.match(/(\d[\d\s.,]*)(?:\s*\$)?/);
-        return m ? m[1].replace(/\s/g, "") : s;
-      };
+    const handles = await cardsLocator.elementHandles();
+    const items = [];
 
-      const textFromEl = (node) => {
-        if (!node) return null;
-        const t = node.textContent;
-        return t ? t.trim() : null;
-      };
+    for (const card of handles) {
+      const link = await card.$("a.nl-product-card__no-button.prod-link");
+      const href = link ? await link.getAttribute("href") : null;
+      const ariaLabelledBy = link ? await link.getAttribute("aria-labelledby") : null;
+      console.log("DEBUG LINK:", href, ariaLabelledBy);
 
-      const extractSkuData = (anchor) => {
-        if (!anchor) return { sku: null, sku_formatted: null };
-        const href = anchor.getAttribute("href") || "";
-        const ariaLabelledby = anchor.getAttribute("aria-labelledby") || "";
-        const skuMatch = href.match(/-([0-9]{7})p\.html/i);
-        const skuFormattedMatch = ariaLabelledby.match(/promolisting-([0-9-]+)/i);
-        return {
-          sku: skuMatch ? skuMatch[1] : null,
-          sku_formatted: skuFormattedMatch ? skuFormattedMatch[1] : null,
+      let sku = null;
+      if (href) {
+        const m = href.match(/-(\d+)p\.html/);
+        if (m) sku = m[1];
+      }
+
+      let skuFormatted = null;
+      if (ariaLabelledBy) {
+        const m2 = ariaLabelledBy.match(/promolisting-(\d{3}-\d{4}-\d)/);
+        if (m2) skuFormatted = m2[1];
+      }
+      console.log("DEBUG SKU:", sku, skuFormatted);
+
+      const data = await card.evaluate((el, { base }) => {
+        const cleanMoney = (s) => {
+          if (!s) return null;
+          s = s.replace(/\u00a0/g, " ").trim();
+          const m = s.match(/(\d[\d\s.,]*)(?:\s*\$)?/);
+          return m ? m[1].replace(/\s/g, "") : s;
         };
-      };
 
-      return nodes.map((el) => {
+        const textFromEl = (node) => {
+          if (!node) return null;
+          const t = node.textContent;
+          return t ? t.trim() : null;
+        };
+
         const titleEl = el.querySelector("[id^='title__promolisting-'], .nl-product-card__title");
         const title = textFromEl(titleEl);
 
@@ -410,17 +418,16 @@ async function scrapeListing(page, { skipGuards = false } = {}) {
           .filter(Boolean);
 
         const primaryAnchor = el.querySelector("a.nl-product-card__no-button.prod-link");
-        let link = primaryAnchor ? primaryAnchor.getAttribute("href") : null;
+        let linkHref = primaryAnchor ? primaryAnchor.getAttribute("href") : null;
         const titleAnchor = titleEl ? titleEl.closest("a") : null;
-        if (!link && titleAnchor) link = titleAnchor.getAttribute("href");
-        if (!link) {
+        if (!linkHref && titleAnchor) linkHref = titleAnchor.getAttribute("href");
+        if (!linkHref) {
           const any = el.querySelector("a[href*='/p/'], a[href*='/product/']");
-          if (any) link = any.getAttribute("href");
+          if (any) linkHref = any.getAttribute("href");
         }
-        if (link && link.startsWith("/")) link = base + link;
+        if (linkHref && linkHref.startsWith("/")) linkHref = base + linkHref;
 
         const productId = el.getAttribute("data-product-id") || el.getAttribute("data-productid") || null;
-        const { sku, sku_formatted } = extractSkuData(primaryAnchor);
 
         return {
           name: title || null,
@@ -431,17 +438,21 @@ async function scrapeListing(page, { skipGuards = false } = {}) {
           image: image || null,
           availability: availability || null,
           badges,
-          link: link || null,
+          link: linkHref || null,
           product_id: productId,
-          sku,
-          sku_formatted,
         };
+      }, { base: BASE });
+
+      items.push({
+        ...data,
+        sku,
+        sku_formatted: skuFormatted,
       });
-    }, { base: BASE })) || [];
+    }
 
     return items;
   } catch (e) {
-    console.warn("scrapeListing evaluateAll error:", e?.message || e);
+    console.warn("scrapeListing extraction error:", e?.message || e);
     if (!skipGuards) {
       await page.waitForSelector(SELECTORS.card, { timeout: 20000 }).catch(() => {});
     }
@@ -808,8 +819,8 @@ async function main() {
       { id: "image", title: "image" },
       { id: "image_url", title: "image_url" },
       { id: "product_id", title: "product_id" },
-      { id: "sku", title: "sku" },
-      { id: "sku_formatted", title: "sku_formatted" },
+      { id: "sku", title: "SKU" },
+      { id: "sku_formatted", title: "SKU_Formatted" },
       { id: "availability", title: "availability" },
       { id: "badges", title: "badges" },
       { id: "discount_percent", title: "discount_percent" },
