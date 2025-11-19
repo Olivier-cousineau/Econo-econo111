@@ -260,6 +260,14 @@
     "slug": "montreal-cremazie-and-papineau-qc"
   },
   {
+    "storeNumber": "435",
+    "slug": "montreal-downtown-qc"
+  },
+  {
+    "storeNumber": "400",
+    "slug": "montreal-maisonneuve-qc"
+  },
+  {
     "storeNumber": "267",
     "slug": "montreal-nord-qc"
   },
@@ -322,6 +330,10 @@
   {
     "storeNumber": "86",
     "slug": "renfrew-on"
+  },
+  {
+    "storeNumber": "222",
+    "slug": "repentigny-qc"
   },
   {
     "storeNumber": "697",
@@ -388,6 +400,10 @@
     "slug": "st-hyacinthe-qc"
   },
   {
+    "storeNumber": "627",
+    "slug": "st-jacques-montreal-qc"
+  },
+  {
     "storeNumber": "218",
     "slug": "st-jerome"
   },
@@ -448,8 +464,16 @@
     "slug": "valleyfield-qc"
   },
   {
+    "storeNumber": "646",
+    "slug": "vaudreuil-qc"
+  },
+  {
     "storeNumber": "117",
     "slug": "verdun-qc"
+  },
+  {
+    "storeNumber": "230",
+    "slug": "ville-la-salle-qc"
   },
   {
     "storeNumber": "235",
