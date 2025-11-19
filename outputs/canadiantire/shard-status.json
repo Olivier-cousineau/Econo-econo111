@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2025-11-19T13:38:26.172Z",
+  "generatedAt": "2025-11-19T15:01:29.307Z",
   "stores": [
     {
-      "id": "262",
-      "city": "Lachute, QC",
+      "id": "64",
+      "city": "Montreal Cremazie & Papineau, QC",
       "status": "committed",
-      "details": "1908 produits"
+      "details": "602 produits"
     },
     {
-      "id": "300",
-      "city": "Laval, Bl. Le Corbusier, QC",
+      "id": "235",
+      "city": "Ville St. Laurent, QC",
       "status": "committed",
-      "details": "766 produits"
+      "details": "914 produits"
     },
     {
-      "id": "155",
-      "city": "Laval, Ste-Dorothee, QC",
+      "id": "292",
+      "city": "Marche Central, QC",
       "status": "committed",
-      "details": "1287 produits"
+      "details": "544 produits"
     },
     {
-      "id": "454",
-      "city": "Rivieres des Prairies, QC",
+      "id": "9",
+      "city": "Langelier, QC",
       "status": "committed",
-      "details": "785 produits"
+      "details": "926 produits"
     },
     {
-      "id": "267",
-      "city": "Montreal Nord, QC",
+      "id": "247",
+      "city": "St. Leonard, QC",
       "status": "committed",
-      "details": "725 produits"
+      "details": "471 produits"
     },
     {
-      "id": "234",
-      "city": "Dollard des Ormeaux, QC",
+      "id": "303",
+      "city": "Pointe aux Trembles, QC",
       "status": "committed",
-      "details": "540 produits"
+      "details": "287 produits"
     },
     {
-      "id": "257",
-      "city": "Ste. Agathe des Monts, QC",
+      "id": "928",
+      "city": "Place Versailles, QC",
       "status": "committed",
-      "details": "728 produits"
+      "details": "465 produits"
     },
     {
-      "id": "149",
-      "city": "Kirkland, QC",
+      "id": "343",
+      "city": "Montreal Bellechasse, QC",
       "status": "committed",
-      "details": "449 produits"
+      "details": "597 produits"
     }
   ],
   "failedTwice": [],
