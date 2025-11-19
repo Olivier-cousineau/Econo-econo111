@@ -56,12 +56,20 @@
     "slug": "brossard-qc"
   },
   {
+    "storeNumber": "15",
+    "slug": "buckingham-qc"
+  },
+  {
     "storeNumber": "122",
     "slug": "burlington-fairview-on"
   },
   {
     "storeNumber": "17",
     "slug": "campbellford-on"
+  },
+  {
+    "storeNumber": "625",
+    "slug": "casselman-on"
   },
   {
     "storeNumber": "626",
@@ -74,6 +82,10 @@
   {
     "storeNumber": "108",
     "slug": "collingwood-on"
+  },
+  {
+    "storeNumber": "26",
+    "slug": "cornwall-on"
   },
   {
     "storeNumber": "401",
@@ -92,6 +104,10 @@
     "slug": "dollard-des-ormeaux-qc"
   },
   {
+    "storeNumber": "158",
+    "slug": "drummondville-qc"
+  },
+  {
     "storeNumber": "485",
     "slug": "dufferin-and-finch-auto-ctr-on"
   },
@@ -102,6 +118,10 @@
   {
     "storeNumber": "35",
     "slug": "fredericton-nb"
+  },
+  {
+    "storeNumber": "138",
+    "slug": "granby-qc"
   },
   {
     "storeNumber": "190",
@@ -344,6 +364,10 @@
     "slug": "rivieres-des-prairies-qc"
   },
   {
+    "storeNumber": "623",
+    "slug": "rockland-on"
+  },
+  {
     "storeNumber": "",
     "slug": "rosemere"
   },
@@ -402,6 +426,10 @@
   {
     "storeNumber": "627",
     "slug": "st-jacques-montreal-qc"
+  },
+  {
+    "storeNumber": "153",
+    "slug": "st-jean-sur-richelieu-qc"
   },
   {
     "storeNumber": "218",
