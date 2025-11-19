@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2025-11-19T16:35:06.574Z",
+  "generatedAt": "2025-11-19T18:39:46.508Z",
   "stores": [
     {
-      "id": "401",
-      "city": "Cote des Neiges, QC",
+      "id": "153",
+      "city": "St. Jean-sur-Richelieu, QC",
       "status": "committed",
-      "details": "439 produits"
+      "details": "256 produits"
     },
     {
-      "id": "646",
-      "city": "Vaudreuil, QC",
+      "id": "151",
+      "city": "St. Hyacinthe, QC",
       "status": "committed",
-      "details": "495 produits"
+      "details": "454 produits"
     },
     {
-      "id": "222",
-      "city": "Repentigny, QC",
+      "id": "625",
+      "city": "Casselman, ON",
       "status": "committed",
-      "details": "1235 produits"
+      "details": "253 produits"
     },
     {
-      "id": "400",
-      "city": "Montreal Maisonneuve, QC",
+      "id": "26",
+      "city": "Cornwall, ON",
       "status": "committed",
-      "details": "288 produits"
+      "details": "477 produits"
     },
     {
-      "id": "181",
-      "city": "Ile Perrot, QC",
+      "id": "138",
+      "city": "Granby, QC",
       "status": "committed",
-      "details": "721 produits"
+      "details": "461 produits"
     },
     {
-      "id": "435",
-      "city": "Montreal Downtown, QC",
+      "id": "623",
+      "city": "Rockland, ON",
       "status": "committed",
-      "details": "159 produits"
+      "details": "469 produits"
     },
     {
-      "id": "627",
-      "city": "St. Jacques - Montreal, QC",
+      "id": "15",
+      "city": "Buckingham, QC",
       "status": "committed",
-      "details": "1047 produits"
+      "details": "340 produits"
     },
     {
-      "id": "230",
-      "city": "Ville La Salle, QC",
+      "id": "158",
+      "city": "Drummondville, QC",
       "status": "committed",
-      "details": "1134 produits"
+      "details": "748 produits"
     }
   ],
   "failedTwice": [],
