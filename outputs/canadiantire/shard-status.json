@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2025-11-19T02:45:28.338Z",
+  "generatedAt": "2025-11-19T04:18:07.529Z",
   "stores": [
     {
-      "id": "117",
-      "city": "Verdun, QC",
+      "id": "484",
+      "city": "St. Bruno, QC",
       "status": "committed",
-      "details": "952 produits"
+      "details": "534 produits"
     },
     {
-      "id": "332",
-      "city": "Boucherville, QC",
+      "id": "643",
+      "city": "Brossard, QC",
       "status": "committed",
-      "details": "621 produits"
+      "details": "796 produits"
     },
     {
-      "id": "256",
-      "city": "Longueuil, QC",
+      "id": "115",
+      "city": "Valleyfield, QC",
       "status": "committed",
-      "details": "492 produits"
+      "details": "568 produits"
     },
     {
-      "id": "147",
-      "city": "Chateauguay, QC",
+      "id": "461",
+      "city": "Mont-Tremblant, QC",
       "status": "committed",
-      "details": "472 produits"
+      "details": "440 produits"
     },
     {
-      "id": "157",
-      "city": "Hawkesbury, ON",
+      "id": "228",
+      "city": "Beloeil, QC",
       "status": "committed",
-      "details": "442 produits"
+      "details": "454 produits"
     },
     {
-      "id": "190",
-      "city": "Greenfield Park, QC",
+      "id": "626",
+      "city": "Chambly, QC",
       "status": "committed",
-      "details": "530 produits"
+      "details": "1233 produits"
     },
     {
-      "id": "200",
-      "city": "Joliette, QC",
+      "id": "238",
+      "city": "Alexandria, ON",
       "status": "committed",
-      "details": "704 produits"
+      "details": "489 produits"
     },
     {
-      "id": "396",
-      "city": "Delson, QC",
+      "id": "148",
+      "city": "Sorel & Tracy, QC",
       "status": "committed",
-      "details": "613 produits"
+      "details": "440 produits"
     }
   ],
   "failedTwice": [],
