@@ -172,6 +172,10 @@
     "slug": "lachute-qc"
   },
   {
+    "storeNumber": "9",
+    "slug": "langelier-qc"
+  },
+  {
     "storeNumber": "",
     "slug": "laval"
   },
@@ -228,6 +232,10 @@
     "slug": "marathon-on"
   },
   {
+    "storeNumber": "292",
+    "slug": "marche-central-qc"
+  },
+  {
     "storeNumber": "315",
     "slug": "matane-qc"
   },
@@ -242,6 +250,14 @@
   {
     "storeNumber": "461",
     "slug": "mont-tremblant-qc"
+  },
+  {
+    "storeNumber": "343",
+    "slug": "montreal-bellechasse-qc"
+  },
+  {
+    "storeNumber": "64",
+    "slug": "montreal-cremazie-and-papineau-qc"
   },
   {
     "storeNumber": "267",
@@ -390,6 +406,10 @@
   {
     "storeNumber": "271",
     "slug": "st-jerome-qc"
+  },
+  {
+    "storeNumber": "247",
+    "slug": "st-leonard-qc"
   },
   {
     "storeNumber": "91",
