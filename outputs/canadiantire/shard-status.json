@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2025-11-19T18:39:46.508Z",
+  "generatedAt": "2025-11-19T22:47:27.578Z",
   "stores": [
     {
-      "id": "153",
-      "city": "St. Jean-sur-Richelieu, QC",
+      "id": "274",
+      "city": "Cowansville, QC",
+      "status": "committed",
+      "details": "525 produits"
+    },
+    {
+      "id": "686",
+      "city": "Nicolet, QC",
       "status": "committed",
       "details": "256 produits"
     },
     {
-      "id": "151",
-      "city": "St. Hyacinthe, QC",
+      "id": "422",
+      "city": "Ottawa Orleans, ON",
       "status": "committed",
-      "details": "454 produits"
+      "details": "410 produits"
     },
     {
-      "id": "625",
-      "city": "Casselman, ON",
+      "id": "308",
+      "city": "Trois-Rivieres, QC",
       "status": "committed",
-      "details": "253 produits"
+      "details": "745 produits"
     },
     {
-      "id": "26",
-      "city": "Cornwall, ON",
+      "id": "131",
+      "city": "Shawinigan, QC",
       "status": "committed",
-      "details": "477 produits"
+      "details": "320 produits"
     },
     {
-      "id": "138",
-      "city": "Granby, QC",
+      "id": "109",
+      "city": "Cap-de-la-Madeleine, QC",
       "status": "committed",
-      "details": "461 produits"
+      "details": "580 produits"
     },
     {
-      "id": "623",
-      "city": "Rockland, ON",
+      "id": "297",
+      "city": "Ottawa Gloucester, ON",
       "status": "committed",
-      "details": "469 produits"
+      "details": "643 produits"
     },
     {
-      "id": "15",
-      "city": "Buckingham, QC",
+      "id": "659",
+      "city": "Leitrim, ON",
       "status": "committed",
-      "details": "340 produits"
-    },
-    {
-      "id": "158",
-      "city": "Drummondville, QC",
-      "status": "committed",
-      "details": "748 produits"
+      "details": "552 produits"
     }
   ],
   "failedTwice": [],
