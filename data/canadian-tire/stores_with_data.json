@@ -88,6 +88,10 @@
     "slug": "delson-qc"
   },
   {
+    "storeNumber": "234",
+    "slug": "dollard-des-ormeaux-qc"
+  },
+  {
     "storeNumber": "485",
     "slug": "dufferin-and-finch-auto-ctr-on"
   },
@@ -148,6 +152,10 @@
     "slug": "kingston-township-on"
   },
   {
+    "storeNumber": "149",
+    "slug": "kirkland-qc"
+  },
+  {
     "storeNumber": "",
     "slug": "la-plaine"
   },
@@ -160,8 +168,16 @@
     "slug": "la-sarre-qc"
   },
   {
+    "storeNumber": "262",
+    "slug": "lachute-qc"
+  },
+  {
     "storeNumber": "",
     "slug": "laval"
+  },
+  {
+    "storeNumber": "300",
+    "slug": "laval-bl-le-corbusier-qc"
   },
   {
     "storeNumber": "",
@@ -228,6 +244,10 @@
     "slug": "mont-tremblant-qc"
   },
   {
+    "storeNumber": "267",
+    "slug": "montreal-nord-qc"
+  },
+  {
     "storeNumber": "120",
     "slug": "morrisburg-on"
   },
@@ -290,6 +310,10 @@
   {
     "storeNumber": "697",
     "slug": "richmond-hill-north-on"
+  },
+  {
+    "storeNumber": "454",
+    "slug": "rivieres-des-prairies-qc"
   },
   {
     "storeNumber": "",
@@ -370,6 +394,10 @@
   {
     "storeNumber": "91",
     "slug": "st-marys-on"
+  },
+  {
+    "storeNumber": "257",
+    "slug": "ste-agathe-des-monts-qc"
   },
   {
     "storeNumber": "102",
