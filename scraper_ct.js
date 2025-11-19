@@ -311,9 +311,10 @@ async function extractFromCard(card) {
       .map((node) => textFromEl(node))
       .filter(Boolean);
 
-    let link = null;
+    const primaryAnchor = el.querySelector("a.nl-product-card__no-button.prod-link");
+    let link = primaryAnchor ? primaryAnchor.getAttribute("href") : null;
     const titleAnchor = titleEl ? titleEl.closest("a") : null;
-    if (titleAnchor) link = titleAnchor.getAttribute("href");
+    if (!link && titleAnchor) link = titleAnchor.getAttribute("href");
     if (!link) {
       const any = el.querySelector("a[href*='/p/'], a[href*='/product/']");
       if (any) link = any.getAttribute("href");
@@ -321,6 +322,16 @@ async function extractFromCard(card) {
     if (link && link.startsWith("/")) link = base + link;
 
     const productId = el.getAttribute("data-product-id") || el.getAttribute("data-productid") || null;
+    let sku = null;
+    let skuFormatted = null;
+    if (primaryAnchor) {
+      const href = primaryAnchor.getAttribute("href") || "";
+      const ariaLabelledby = primaryAnchor.getAttribute("aria-labelledby") || "";
+      const skuMatch = href.match(/-([0-9]{7})p\.html/i);
+      const skuFormattedMatch = ariaLabelledby.match(/promolisting-([0-9-]+)/i);
+      if (skuMatch) sku = skuMatch[1];
+      if (skuFormattedMatch) skuFormatted = skuFormattedMatch[1];
+    }
 
     return {
       name: title || null,
@@ -329,6 +340,8 @@ async function extractFromCard(card) {
       badges,
       link: link || null,
       product_id: productId,
+      sku,
+      sku_formatted: skuFormatted,
     };
   }, { base: BASE });
 
@@ -363,6 +376,18 @@ async function scrapeListing(page, { skipGuards = false } = {}) {
         return t ? t.trim() : null;
       };
 
+      const extractSkuData = (anchor) => {
+        if (!anchor) return { sku: null, sku_formatted: null };
+        const href = anchor.getAttribute("href") || "";
+        const ariaLabelledby = anchor.getAttribute("aria-labelledby") || "";
+        const skuMatch = href.match(/-([0-9]{7})p\.html/i);
+        const skuFormattedMatch = ariaLabelledby.match(/promolisting-([0-9-]+)/i);
+        return {
+          sku: skuMatch ? skuMatch[1] : null,
+          sku_formatted: skuFormattedMatch ? skuFormattedMatch[1] : null,
+        };
+      };
+
       return nodes.map((el) => {
         const titleEl = el.querySelector("[id^='title__promolisting-'], .nl-product-card__title");
         const title = textFromEl(titleEl);
@@ -384,9 +409,10 @@ async function scrapeListing(page, { skipGuards = false } = {}) {
           .map((node) => textFromEl(node))
           .filter(Boolean);
 
-        let link = null;
+        const primaryAnchor = el.querySelector("a.nl-product-card__no-button.prod-link");
+        let link = primaryAnchor ? primaryAnchor.getAttribute("href") : null;
         const titleAnchor = titleEl ? titleEl.closest("a") : null;
-        if (titleAnchor) link = titleAnchor.getAttribute("href");
+        if (!link && titleAnchor) link = titleAnchor.getAttribute("href");
         if (!link) {
           const any = el.querySelector("a[href*='/p/'], a[href*='/product/']");
           if (any) link = any.getAttribute("href");
@@ -394,6 +420,7 @@ async function scrapeListing(page, { skipGuards = false } = {}) {
         if (link && link.startsWith("/")) link = base + link;
 
         const productId = el.getAttribute("data-product-id") || el.getAttribute("data-productid") || null;
+        const { sku, sku_formatted } = extractSkuData(primaryAnchor);
 
         return {
           name: title || null,
@@ -406,6 +433,8 @@ async function scrapeListing(page, { skipGuards = false } = {}) {
           badges,
           link: link || null,
           product_id: productId,
+          sku,
+          sku_formatted,
         };
       });
     }, { base: BASE })) || [];
@@ -493,6 +522,8 @@ function createRecordFromCard(card, pageIsClearance) {
     url: card.link || null,
     link: card.link || null,
     product_id: card.product_id || null,
+    sku: card.sku || null,
+    sku_formatted: card.sku_formatted || null,
     availability: card.availability || null,
     badges,
     discount_percent,
@@ -777,6 +808,8 @@ async function main() {
       { id: "image", title: "image" },
       { id: "image_url", title: "image_url" },
       { id: "product_id", title: "product_id" },
+      { id: "sku", title: "sku" },
+      { id: "sku_formatted", title: "sku_formatted" },
       { id: "availability", title: "availability" },
       { id: "badges", title: "badges" },
       { id: "discount_percent", title: "discount_percent" },
