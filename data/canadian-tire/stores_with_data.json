@@ -169,6 +169,10 @@
   },
   {
     "storeNumber": "",
+    "slug": "laval-fabreville-qc"
+  },
+  {
+    "storeNumber": "",
     "slug": "laval-robert-bourassa"
   },
   {
@@ -292,6 +296,10 @@
     "slug": "rosemere"
   },
   {
+    "storeNumber": "",
+    "slug": "rosemere-qc"
+  },
+  {
     "storeNumber": "476",
     "slug": "rothesay-nb"
   },
@@ -326,6 +334,10 @@
   {
     "storeNumber": "649",
     "slug": "st-eustache"
+  },
+  {
+    "storeNumber": "",
+    "slug": "st-eustache-qc"
   },
   {
     "storeNumber": "173",
@@ -366,6 +378,10 @@
   {
     "storeNumber": "445",
     "slug": "sudbury-south-on"
+  },
+  {
+    "storeNumber": "312",
+    "slug": "terrebonne-qc"
   },
   {
     "storeNumber": "110",
