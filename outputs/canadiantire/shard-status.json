@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2025-11-19T02:45:28.338Z",
+  "stores": [
+    {
+      "id": "117",
+      "city": "Verdun, QC",
+      "status": "committed",
+      "details": "952 produits"
+    },
+    {
+      "id": "332",
+      "city": "Boucherville, QC",
+      "status": "committed",
+      "details": "621 produits"
+    },
+    {
+      "id": "256",
+      "city": "Longueuil, QC",
+      "status": "committed",
+      "details": "492 produits"
+    },
+    {
+      "id": "147",
+      "city": "Chateauguay, QC",
+      "status": "committed",
+      "details": "472 produits"
+    },
+    {
+      "id": "157",
+      "city": "Hawkesbury, ON",
+      "status": "committed",
+      "details": "442 produits"
+    },
+    {
+      "id": "190",
+      "city": "Greenfield Park, QC",
+      "status": "committed",
+      "details": "530 produits"
+    },
+    {
+      "id": "200",
+      "city": "Joliette, QC",
+      "status": "committed",
+      "details": "704 produits"
+    },
+    {
+      "id": "396",
+      "city": "Delson, QC",
+      "status": "committed",
+      "details": "613 produits"
+    }
+  ],
+  "failedTwice": [],
+  "retriedAndSucceeded": []
+}
