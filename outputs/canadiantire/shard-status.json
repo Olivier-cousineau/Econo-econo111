@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2025-11-19T08:21:59.498Z",
+  "generatedAt": "2025-11-19T13:38:26.172Z",
   "stores": [
     {
-      "id": "271",
-      "city": "St. Jerome, QC",
+      "id": "262",
+      "city": "Lachute, QC",
       "status": "committed",
-      "details": "2031 produits"
+      "details": "1908 produits"
     },
     {
-      "id": "649",
-      "city": "Blainville, QC",
+      "id": "300",
+      "city": "Laval, Bl. Le Corbusier, QC",
       "status": "committed",
-      "details": "656 produits"
+      "details": "766 produits"
     },
     {
-      "id": "418",
-      "city": "Rosemere, QC",
+      "id": "155",
+      "city": "Laval, Ste-Dorothee, QC",
       "status": "committed",
-      "details": "668 produits"
+      "details": "1287 produits"
     },
     {
-      "id": "641",
-      "city": "La Plaine, QC",
+      "id": "454",
+      "city": "Rivieres des Prairies, QC",
       "status": "committed",
-      "details": "715 produits"
+      "details": "785 produits"
     },
     {
-      "id": "218",
-      "city": "St. Eustache, QC",
+      "id": "267",
+      "city": "Montreal Nord, QC",
       "status": "committed",
-      "details": "1009 produits"
+      "details": "725 produits"
     },
     {
-      "id": "690",
-      "city": "Laval Fabreville, QC",
+      "id": "234",
+      "city": "Dollard des Ormeaux, QC",
       "status": "committed",
-      "details": "802 produits"
+      "details": "540 produits"
     },
     {
-      "id": "312",
-      "city": "Terrebonne, QC",
+      "id": "257",
+      "city": "Ste. Agathe des Monts, QC",
       "status": "committed",
-      "details": "708 produits"
+      "details": "728 produits"
     },
     {
-      "id": "231",
-      "city": "Laval Vimont, QC",
+      "id": "149",
+      "city": "Kirkland, QC",
       "status": "committed",
-      "details": "1017 produits"
+      "details": "449 produits"
     }
   ],
   "failedTwice": [],
