@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2025-11-19T04:18:07.529Z",
+  "generatedAt": "2025-11-19T08:21:59.498Z",
   "stores": [
     {
-      "id": "484",
-      "city": "St. Bruno, QC",
+      "id": "271",
+      "city": "St. Jerome, QC",
       "status": "committed",
-      "details": "534 produits"
+      "details": "2031 produits"
     },
     {
-      "id": "643",
-      "city": "Brossard, QC",
+      "id": "649",
+      "city": "Blainville, QC",
       "status": "committed",
-      "details": "796 produits"
+      "details": "656 produits"
     },
     {
-      "id": "115",
-      "city": "Valleyfield, QC",
+      "id": "418",
+      "city": "Rosemere, QC",
       "status": "committed",
-      "details": "568 produits"
+      "details": "668 produits"
     },
     {
-      "id": "461",
-      "city": "Mont-Tremblant, QC",
+      "id": "641",
+      "city": "La Plaine, QC",
       "status": "committed",
-      "details": "440 produits"
+      "details": "715 produits"
     },
     {
-      "id": "228",
-      "city": "Beloeil, QC",
+      "id": "218",
+      "city": "St. Eustache, QC",
       "status": "committed",
-      "details": "454 produits"
+      "details": "1009 produits"
     },
     {
-      "id": "626",
-      "city": "Chambly, QC",
+      "id": "690",
+      "city": "Laval Fabreville, QC",
       "status": "committed",
-      "details": "1233 produits"
+      "details": "802 produits"
     },
     {
-      "id": "238",
-      "city": "Alexandria, ON",
+      "id": "312",
+      "city": "Terrebonne, QC",
       "status": "committed",
-      "details": "489 produits"
+      "details": "708 produits"
     },
     {
-      "id": "148",
-      "city": "Sorel & Tracy, QC",
+      "id": "231",
+      "city": "Laval Vimont, QC",
       "status": "committed",
-      "details": "440 produits"
+      "details": "1017 produits"
     }
   ],
   "failedTwice": [],
