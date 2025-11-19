@@ -4,6 +4,10 @@
     "slug": "4975-blvd-robert-bourassa"
   },
   {
+    "storeNumber": "238",
+    "slug": "alexandria-on"
+  },
+  {
     "storeNumber": "1",
     "slug": "alliston-on"
   },
@@ -24,6 +28,10 @@
     "slug": "barrhaven-on"
   },
   {
+    "storeNumber": "228",
+    "slug": "beloeil-qc"
+  },
+  {
     "storeNumber": "",
     "slug": "blainville"
   },
@@ -42,6 +50,10 @@
   {
     "storeNumber": "14",
     "slug": "brockville-on"
+  },
+  {
+    "storeNumber": "643",
+    "slug": "brossard-qc"
   },
   {
     "storeNumber": "122",
@@ -302,6 +314,14 @@
   {
     "storeNumber": "98",
     "slug": "smiths-falls-on"
+  },
+  {
+    "storeNumber": "148",
+    "slug": "sorel-and-tracy-qc"
+  },
+  {
+    "storeNumber": "484",
+    "slug": "st-bruno-qc"
   },
   {
     "storeNumber": "649",
