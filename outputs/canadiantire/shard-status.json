@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2025-11-19T15:01:29.307Z",
+  "generatedAt": "2025-11-19T16:35:06.574Z",
   "stores": [
     {
-      "id": "64",
-      "city": "Montreal Cremazie & Papineau, QC",
+      "id": "401",
+      "city": "Cote des Neiges, QC",
       "status": "committed",
-      "details": "602 produits"
+      "details": "439 produits"
     },
     {
-      "id": "235",
-      "city": "Ville St. Laurent, QC",
+      "id": "646",
+      "city": "Vaudreuil, QC",
       "status": "committed",
-      "details": "914 produits"
+      "details": "495 produits"
     },
     {
-      "id": "292",
-      "city": "Marche Central, QC",
+      "id": "222",
+      "city": "Repentigny, QC",
       "status": "committed",
-      "details": "544 produits"
+      "details": "1235 produits"
     },
     {
-      "id": "9",
-      "city": "Langelier, QC",
+      "id": "400",
+      "city": "Montreal Maisonneuve, QC",
       "status": "committed",
-      "details": "926 produits"
+      "details": "288 produits"
     },
     {
-      "id": "247",
-      "city": "St. Leonard, QC",
+      "id": "181",
+      "city": "Ile Perrot, QC",
       "status": "committed",
-      "details": "471 produits"
+      "details": "721 produits"
     },
     {
-      "id": "303",
-      "city": "Pointe aux Trembles, QC",
+      "id": "435",
+      "city": "Montreal Downtown, QC",
       "status": "committed",
-      "details": "287 produits"
+      "details": "159 produits"
     },
     {
-      "id": "928",
-      "city": "Place Versailles, QC",
+      "id": "627",
+      "city": "St. Jacques - Montreal, QC",
       "status": "committed",
-      "details": "465 produits"
+      "details": "1047 produits"
     },
     {
-      "id": "343",
-      "city": "Montreal Bellechasse, QC",
+      "id": "230",
+      "city": "Ville La Salle, QC",
       "status": "committed",
-      "details": "597 produits"
+      "details": "1134 produits"
     }
   ],
   "failedTwice": [],
