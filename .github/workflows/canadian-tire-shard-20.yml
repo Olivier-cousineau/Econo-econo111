@@ -38,6 +38,14 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
+      - name: Sync avec origin/main (CI)
+        run: |
+          echo "🔄 Sync avec origin/main (CI)..."
+          git fetch origin
+          git reset --hard origin/main
+          git clean -fd
+          git status -sb
+
       - name: Run Canadian Tire shard 20/43
         run: |
           set -o pipefail
@@ -57,14 +65,8 @@ jobs:
           GIT_COMMITTER_NAME: github-actions[bot]
           GIT_COMMITTER_EMAIL: github-actions[bot]@users.noreply.github.com
         run: |
-          echo "🔄 Fetch origin..."
-          git fetch origin
-
-          echo "📌 Status before rebase:"
-          git status -sb
-
-          echo "🔁 Rebase on origin/main..."
-          git pull --rebase origin main
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
 
           echo "🚀 Push to origin/main..."
           git push origin HEAD:main

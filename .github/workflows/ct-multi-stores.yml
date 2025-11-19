@@ -18,14 +18,6 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Sync with latest main
-        run: |
-          git fetch origin main
-          if ! git rebase origin/main; then
-            git rebase --abort
-            exit 1
-          fi
-
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -39,6 +31,14 @@ jobs:
 
       - name: Install Playwright browsers (all)
         run: npx playwright install --with-deps
+
+      - name: Sync avec origin/main (CI)
+        run: |
+          echo "🔄 Sync avec origin/main (CI)..."
+          git fetch origin
+          git reset --hard origin/main
+          git clean -fd
+          git status -sb
 
       - name: Run Canadian Tire scraper for this store
         run: |
@@ -65,18 +65,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          echo "🔄 Fetch origin..."
-          git fetch origin
-
-          echo "📌 Status before rebase:"
-          git status -sb
-
-          echo "🔁 Rebase on origin/main..."
-          git pull --rebase origin main
-
           echo "🚀 Push to origin/main..."
           git push origin HEAD:main
-
     strategy:
       fail-fast: false
       matrix:
