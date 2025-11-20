@@ -6,6 +6,7 @@ import { useMemo, useState } from 'react';
 
 interface RawProduct {
   title?: string;
+  name?: string;
   sku?: string;
   product_sku?: string;
   product_id?: string | number | null;
@@ -306,7 +307,7 @@ const StorePage = ({
               <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginTop: 'auto' }}>
                 <button
                   type="button"
-                  onClick={() => compareProduct(product.title ?? '')}
+                  onClick={() => compareProduct(product.title ?? product.name ?? '')}
                   disabled={isComparing}
                   style={{
                     padding: '0.55rem 0.85rem',
