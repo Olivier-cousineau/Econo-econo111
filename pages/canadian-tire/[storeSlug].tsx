@@ -32,6 +32,15 @@ interface StoreProduct extends RawProduct {
   storeSlug: string;
 }
 
+interface CompareResult {
+  store_id?: string;
+  city?: string;
+  price?: string | null;
+  discount?: string | number | null;
+  url?: string | null;
+  score?: number;
+}
+
 const PAGE_SIZE = 48;
 
 const slugToLabel = (slug: string) => {
@@ -148,6 +157,10 @@ const StorePage = ({
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [page, setPage] = useState(1);
   const totalPages = Math.max(1, Math.ceil(products.length / PAGE_SIZE));
+  const [compareResults, setCompareResults] = useState<CompareResult[]>([]);
+  const [compareQuery, setCompareQuery] = useState<string | null>(null);
+  const [compareError, setCompareError] = useState<string | null>(null);
+  const [isComparing, setIsComparing] = useState(false);
 
   const visibleProducts = useMemo(() => {
     const start = (page - 1) * PAGE_SIZE;
@@ -156,6 +169,38 @@ const StorePage = ({
 
   const handlePrev = () => setPage((prev) => Math.max(1, prev - 1));
   const handleNext = () => setPage((prev) => Math.min(totalPages, prev + 1));
+
+  const compareProduct = async (productName: string) => {
+    const trimmed = productName.trim();
+    if (!trimmed) {
+      alert("Impossible de comparer un produit sans nom valide.");
+      return;
+    }
+
+    setCompareQuery(trimmed);
+    setIsComparing(true);
+    setCompareError(null);
+    setCompareResults([]);
+
+    try {
+      const response = await fetch(`/compare?name=${encodeURIComponent(trimmed)}`);
+      if (!response.ok) {
+        throw new Error(`Requête échouée (${response.status})`);
+      }
+      const data = await response.json();
+      const results = Array.isArray(data?.results) ? data.results : [];
+      setCompareResults(results);
+      if (!results.length) {
+        setCompareError(`Aucun autre prix trouvé pour ${trimmed}.`);
+      }
+    } catch (error) {
+      console.error("Erreur lors de la comparaison des prix", error);
+      setCompareError("Une erreur est survenue pendant la comparaison des prix.");
+      alert("Une erreur est survenue pendant la comparaison des prix. Veuillez réessayer.");
+    } finally {
+      setIsComparing(false);
+    }
+  };
 
   return (
     <main style={{ padding: '2rem 1rem', maxWidth: '1200px', margin: '0 auto' }}>
@@ -258,20 +303,102 @@ const StorePage = ({
               {product.availability && (
                 <div style={{ fontSize: '0.85rem', color: '#6b7280' }}>{product.availability}</div>
               )}
-              {product.url && (
-                <a
-                  href={product.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  style={{ color: '#2563eb', textDecoration: 'underline', fontWeight: 500 }}
+              <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginTop: 'auto' }}>
+                <button
+                  type="button"
+                  onClick={() => compareProduct(product.title ?? '')}
+                  disabled={isComparing}
+                  style={{
+                    padding: '0.55rem 0.85rem',
+                    borderRadius: '0.6rem',
+                    border: '1px solid #2563eb',
+                    backgroundColor: isComparing ? '#e5e7eb' : '#2563eb',
+                    color: '#fff',
+                    fontWeight: 600,
+                    cursor: isComparing ? 'not-allowed' : 'pointer',
+                  }}
                 >
-                  View product
-                </a>
-              )}
+                  {isComparing ? 'Comparaison…' : 'Comparer'}
+                </button>
+                {product.url && (
+                  <a
+                    href={product.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      padding: '0.55rem 0.85rem',
+                      borderRadius: '0.6rem',
+                      border: '1px solid #d1d5db',
+                      backgroundColor: '#fff',
+                      color: '#2563eb',
+                      fontWeight: 600,
+                      textDecoration: 'none',
+                    }}
+                  >
+                    Voir
+                  </a>
+                )}
+              </div>
             </article>
           );
         })}
       </section>
+      {compareQuery && (
+        <section
+          id="compare-results"
+          style={{
+            marginTop: '2rem',
+            padding: '1.25rem',
+            border: '1px solid #e5e7eb',
+            borderRadius: '0.75rem',
+            background: '#f9fafb',
+          }}
+        >
+          <h3 style={{ margin: '0 0 0.5rem', fontSize: '1.2rem', fontWeight: 700 }}>
+            Comparaison pour « {compareQuery} »
+          </h3>
+          {compareError && <p style={{ color: '#b91c1c' }}>{compareError}</p>}
+          {!compareError && compareResults.length > 0 && (
+            <div style={{ overflowX: 'auto' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+                <thead>
+                  <tr style={{ textAlign: 'left', borderBottom: '1px solid #d1d5db' }}>
+                    <th style={{ padding: '0.5rem' }}>Store</th>
+                    <th style={{ padding: '0.5rem' }}>Price</th>
+                    <th style={{ padding: '0.5rem' }}>Discount</th>
+                    <th style={{ padding: '0.5rem' }}>City</th>
+                    <th style={{ padding: '0.5rem' }}>Lien</th>
+                    <th style={{ padding: '0.5rem' }}>Score</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {compareResults.map((result, index) => (
+                    <tr key={`${result.store_id}-${index}`} style={{ borderBottom: '1px solid #f3f4f6' }}>
+                      <td style={{ padding: '0.5rem' }}>{result.store_id ?? 'N/A'}</td>
+                      <td style={{ padding: '0.5rem' }}>{result.price ?? 'N/A'}</td>
+                      <td style={{ padding: '0.5rem' }}>{result.discount ?? '—'}</td>
+                      <td style={{ padding: '0.5rem' }}>{result.city ?? '—'}</td>
+                      <td style={{ padding: '0.5rem' }}>
+                        {result.url ? (
+                          <a href={String(result.url)} target="_blank" rel="noreferrer" style={{ color: '#2563eb' }}>
+                            Voir
+                          </a>
+                        ) : (
+                          '—'
+                        )}
+                      </td>
+                      <td style={{ padding: '0.5rem' }}>{typeof result.score === 'number' ? result.score.toFixed(2) : '—'}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </section>
+      )}
     </main>
   );
 };

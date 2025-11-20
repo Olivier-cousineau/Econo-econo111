@@ -1,7 +1,8 @@
 import json
 import os
 from pathlib import Path
-from typing import Dict, Iterable
+import re
+from typing import Dict, Iterable, List, Tuple
 
 from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
@@ -35,6 +36,46 @@ PLAN_CONFIG = {
 }
 
 SUPPORTED_LOCALES = {"da", "de", "en", "es", "fi", "fr", "it", "ja", "nb", "nl", "pl", "pt", "sv"}
+
+
+def _normalize_words(value: str) -> List[str]:
+    cleaned = re.sub(r"[^\w\s]", " ", value.lower())
+    return [part for part in cleaned.split() if part]
+
+
+def _similarity_score(query: str, target: str) -> float:
+    query_words = _normalize_words(query)
+    target_words = _normalize_words(target)
+    if not query_words or not target_words:
+        return 0.0
+    query_set = set(query_words)
+    target_set = set(target_words)
+    common = len(query_set & target_set)
+    denominator = max(len(query_set), len(target_set))
+    return common / denominator if denominator else 0.0
+
+
+def _parse_price(value: object) -> Tuple[float | None, str | None]:
+    if value is None:
+        return None, None
+    if isinstance(value, (int, float)):
+        numeric = float(value)
+        return numeric, f"${numeric:0.2f}"
+    if isinstance(value, str):
+        cleaned = value.strip()
+        if not cleaned:
+            return None, None
+        numeric_str = re.sub(r"[^0-9.,]", "", cleaned)
+        if not numeric_str:
+            return None, cleaned
+        # Remove thousand separators and normalise decimal point
+        numeric_str = numeric_str.replace(",", "")
+        try:
+            numeric = float(numeric_str)
+        except ValueError:
+            return None, cleaned
+        return numeric, cleaned
+    return None, None
 
 
 @app.route("/")
@@ -147,6 +188,104 @@ def get_deals_dataset() -> object:
         return jsonify({"error": str(exc)}), 500
 
     return jsonify(dataset)
+
+
+@app.route("/compare", methods=["GET"])
+def compare_products() -> object:
+    query_name = (request.args.get("name") or "").strip()
+    if not query_name:
+        return jsonify({"error": "Le paramètre 'name' est requis."}), 400
+
+    outputs_root = settings.base_dir / "outputs" / "canadiantire"
+    if not outputs_root.exists() or not outputs_root.is_dir():
+        return jsonify({"results": []})
+
+    results: List[Dict[str, object]] = []
+
+    for store_dir in outputs_root.iterdir():
+        if not store_dir.is_dir():
+            continue
+        data_path = store_dir / "data.json"
+        if not data_path.is_file():
+            continue
+
+        try:
+            raw_content = data_path.read_text(encoding="utf-8")
+            payload = json.loads(raw_content)
+        except (OSError, json.JSONDecodeError):
+            continue
+
+        products = []
+        store_meta: Dict[str, object] = {}
+        if isinstance(payload, dict):
+            products = payload.get("products") if isinstance(payload.get("products"), list) else []
+            store_meta = payload.get("store", {}) if isinstance(payload.get("store"), dict) else {}
+        elif isinstance(payload, list):
+            products = payload
+
+        for product in products:
+            if not isinstance(product, dict):
+                continue
+            product_name = (
+                product.get("name")
+                or product.get("title")
+                or product.get("product_title")
+                or ""
+            )
+            if not product_name:
+                continue
+
+            score = _similarity_score(query_name, str(product_name))
+            if score < 0.65:
+                continue
+
+            store_id = str(
+                product.get("store_id")
+                or store_meta.get("id")
+                or store_dir.name.split("-")[0]
+            )
+            city = (
+                product.get("city")
+                or store_meta.get("city")
+                or ""
+            )
+
+            price_candidates = [
+                product.get("discount_price"),
+                product.get("promo_price"),
+                product.get("liquidation_price"),
+                product.get("sale_price"),
+                product.get("price"),
+            ]
+            price_value = None
+            price_display = None
+            for candidate in price_candidates:
+                price_value, price_display = _parse_price(candidate)
+                if price_value is not None or price_display is not None:
+                    break
+
+            if price_value is None and price_display is None:
+                continue
+
+            results.append(
+                {
+                    "store_id": store_id,
+                    "city": city,
+                    "price": price_display,
+                    "discount": product.get("discount") or product.get("discount_text"),
+                    "url": product.get("url"),
+                    "score": round(score, 3),
+                    "_sort_price": price_value if price_value is not None else float("inf"),
+                }
+            )
+
+    sorted_results = sorted(results, key=lambda item: item.get("_sort_price", float("inf")))
+    payload = []
+    for item in sorted_results[:10]:
+        cleaned = {key: value for key, value in item.items() if key != "_sort_price"}
+        payload.append(cleaned)
+
+    return jsonify({"results": payload})
 
 
 @app.route("/config", methods=["GET"])
