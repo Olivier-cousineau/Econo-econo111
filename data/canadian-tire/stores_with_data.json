@@ -16,6 +16,10 @@
     "slug": "alma-qc"
   },
   {
+    "storeNumber": "4",
+    "slug": "arnprior-on"
+  },
+  {
     "storeNumber": "265",
     "slug": "baie-comeau-qc"
   },
@@ -70,6 +74,10 @@
   {
     "storeNumber": "109",
     "slug": "cap-de-la-madeleine-qc"
+  },
+  {
+    "storeNumber": "18",
+    "slug": "carleton-place-on"
   },
   {
     "storeNumber": "625",
@@ -260,6 +268,10 @@
     "slug": "magog-qc"
   },
   {
+    "storeNumber": "196",
+    "slug": "maniwaki-qc"
+  },
+  {
     "storeNumber": "451",
     "slug": "marathon-on"
   },
@@ -380,6 +392,10 @@
     "slug": "port-hawkesbury-ns"
   },
   {
+    "storeNumber": "85",
+    "slug": "prescott-on"
+  },
+  {
     "storeNumber": "86",
     "slug": "renfrew-on"
   },
@@ -430,6 +446,10 @@
   {
     "storeNumber": "99",
     "slug": "shawville-qc"
+  },
+  {
+    "storeNumber": "348",
+    "slug": "sherbrooke-fleurimont-qc"
   },
   {
     "storeNumber": "96",
