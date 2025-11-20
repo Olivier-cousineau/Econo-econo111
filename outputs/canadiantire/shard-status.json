@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2025-11-19T22:47:27.578Z",
+  "generatedAt": "2025-11-20T07:55:32.535Z",
   "stores": [
     {
-      "id": "274",
-      "city": "Cowansville, QC",
+      "id": "290",
+      "city": "Ottawa Carling Ave, ON",
       "status": "committed",
-      "details": "525 produits"
+      "details": "398 produits"
     },
     {
-      "id": "686",
-      "city": "Nicolet, QC",
+      "id": "442",
+      "city": "Barrhaven, ON",
       "status": "committed",
-      "details": "256 produits"
+      "details": "371 produits"
     },
     {
-      "id": "422",
-      "city": "Ottawa Orleans, ON",
+      "id": "272",
+      "city": "Ottawa Bells Cnrs, ON",
       "status": "committed",
-      "details": "410 produits"
+      "details": "258 produits"
     },
     {
-      "id": "308",
-      "city": "Trois-Rivieres, QC",
+      "id": "227",
+      "city": "Kemptville, ON",
       "status": "committed",
-      "details": "745 produits"
+      "details": "291 produits"
     },
     {
-      "id": "131",
-      "city": "Shawinigan, QC",
+      "id": "240",
+      "city": "Magog, QC",
       "status": "committed",
-      "details": "320 produits"
+      "details": "484 produits"
     },
     {
-      "id": "109",
-      "city": "Cap-de-la-Madeleine, QC",
+      "id": "457",
+      "city": "Kanata, ON",
       "status": "committed",
-      "details": "580 produits"
+      "details": "290 produits"
     },
     {
-      "id": "297",
-      "city": "Ottawa Gloucester, ON",
+      "id": "243",
+      "city": "Victoriaville, QC",
       "status": "committed",
-      "details": "643 produits"
+      "details": "860 produits"
     },
     {
-      "id": "659",
-      "city": "Leitrim, ON",
+      "id": "96",
+      "city": "Sherbrooke, QC",
       "status": "committed",
-      "details": "552 produits"
+      "details": "763 produits"
     }
   ],
   "failedTwice": [],
