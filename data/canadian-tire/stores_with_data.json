@@ -104,6 +104,10 @@
     "slug": "chateauguay-qc"
   },
   {
+    "storeNumber": "268",
+    "slug": "chicoutimi-qc"
+  },
+  {
     "storeNumber": "108",
     "slug": "collingwood-on"
   },
@@ -126,6 +130,10 @@
   {
     "storeNumber": "396",
     "slug": "delson-qc"
+  },
+  {
+    "storeNumber": "284",
+    "slug": "dolbeau-mistassini-qc"
   },
   {
     "storeNumber": "234",
@@ -192,6 +200,10 @@
     "slug": "joliette-qc"
   },
   {
+    "storeNumber": "221",
+    "slug": "jonquiere-qc"
+  },
+  {
     "storeNumber": "457",
     "slug": "kanata-on"
   },
@@ -218,6 +230,14 @@
   {
     "storeNumber": "149",
     "slug": "kirkland-qc"
+  },
+  {
+    "storeNumber": "335",
+    "slug": "la-baie-qc"
+  },
+  {
+    "storeNumber": "306",
+    "slug": "la-malbaie-qc"
   },
   {
     "storeNumber": "",
@@ -430,6 +450,10 @@
   {
     "storeNumber": "80",
     "slug": "perth-on"
+  },
+  {
+    "storeNumber": "660",
+    "slug": "peterborough-north-on"
   },
   {
     "storeNumber": "81",
