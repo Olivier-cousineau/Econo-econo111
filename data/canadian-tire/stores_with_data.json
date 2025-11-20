@@ -40,6 +40,10 @@
     "slug": "beauport-qc"
   },
   {
+    "storeNumber": "7",
+    "slug": "belleville-on"
+  },
+  {
     "storeNumber": "228",
     "slug": "beloeil-qc"
   },
@@ -222,6 +226,10 @@
   {
     "storeNumber": "",
     "slug": "la-plaine-qc"
+  },
+  {
+    "storeNumber": "633",
+    "slug": "la-pocatiere-qc"
   },
   {
     "storeNumber": "233",
@@ -432,6 +440,10 @@
     "slug": "pickering-on"
   },
   {
+    "storeNumber": "82",
+    "slug": "picton-on"
+  },
+  {
     "storeNumber": "928",
     "slug": "place-versailles-qc"
   },
@@ -474,6 +486,10 @@
   {
     "storeNumber": "454",
     "slug": "rivieres-des-prairies-qc"
+  },
+  {
+    "storeNumber": "458",
+    "slug": "roberval-qc"
   },
   {
     "storeNumber": "623",
@@ -618,6 +634,10 @@
   {
     "storeNumber": "273",
     "slug": "toronto-main-and-danforth-on"
+  },
+  {
+    "storeNumber": "112",
+    "slug": "trenton-on"
   },
   {
     "storeNumber": "308",
