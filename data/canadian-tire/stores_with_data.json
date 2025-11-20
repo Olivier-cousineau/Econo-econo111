@@ -16,6 +16,10 @@
     "slug": "alma-qc"
   },
   {
+    "storeNumber": "692",
+    "slug": "ancienne-lorette-qc"
+  },
+  {
     "storeNumber": "4",
     "slug": "arnprior-on"
   },
@@ -116,6 +120,10 @@
     "slug": "dollard-des-ormeaux-qc"
   },
   {
+    "storeNumber": "423",
+    "slug": "donnacona-qc"
+  },
+  {
     "storeNumber": "158",
     "slug": "drummondville-qc"
   },
@@ -130,6 +138,10 @@
   {
     "storeNumber": "35",
     "slug": "fredericton-nb"
+  },
+  {
+    "storeNumber": "37",
+    "slug": "gananoque-on"
   },
   {
     "storeNumber": "138",
@@ -202,6 +214,10 @@
   {
     "storeNumber": "233",
     "slug": "la-sarre-qc"
+  },
+  {
+    "storeNumber": "352",
+    "slug": "la-tuque-qc"
   },
   {
     "storeNumber": "262",
@@ -372,6 +388,10 @@
     "slug": "pembroke-on"
   },
   {
+    "storeNumber": "80",
+    "slug": "perth-on"
+  },
+  {
     "storeNumber": "81",
     "slug": "peterborough-on"
   },
@@ -520,6 +540,10 @@
     "slug": "st-marys-on"
   },
   {
+    "storeNumber": "624",
+    "slug": "st-romuald-qc"
+  },
+  {
     "storeNumber": "257",
     "slug": "ste-agathe-des-monts-qc"
   },
@@ -534,6 +558,10 @@
   {
     "storeNumber": "312",
     "slug": "terrebonne-qc"
+  },
+  {
+    "storeNumber": "156",
+    "slug": "thetford-mines-qc"
   },
   {
     "storeNumber": "110",
