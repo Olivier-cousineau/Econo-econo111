@@ -164,6 +164,10 @@
     "slug": "kanata-on"
   },
   {
+    "storeNumber": "227",
+    "slug": "kemptville-on"
+  },
+  {
     "storeNumber": "694",
     "slug": "kingston-division-st-on"
   },
@@ -252,6 +256,10 @@
     "slug": "longueuil-qc"
   },
   {
+    "storeNumber": "240",
+    "slug": "magog-qc"
+  },
+  {
     "storeNumber": "451",
     "slug": "marathon-on"
   },
@@ -318,6 +326,14 @@
   {
     "storeNumber": "75",
     "slug": "oshawa-mid-on"
+  },
+  {
+    "storeNumber": "272",
+    "slug": "ottawa-bells-cnrs-on"
+  },
+  {
+    "storeNumber": "290",
+    "slug": "ottawa-carling-ave-on"
   },
   {
     "storeNumber": "174",
@@ -414,6 +430,10 @@
   {
     "storeNumber": "99",
     "slug": "shawville-qc"
+  },
+  {
+    "storeNumber": "96",
+    "slug": "sherbrooke-qc"
   },
   {
     "storeNumber": "98",
@@ -522,6 +542,10 @@
   {
     "storeNumber": "117",
     "slug": "verdun-qc"
+  },
+  {
+    "storeNumber": "243",
+    "slug": "victoriaville-qc"
   },
   {
     "storeNumber": "230",
