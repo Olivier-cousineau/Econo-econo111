@@ -220,6 +220,10 @@
     "slug": "la-tuque-qc"
   },
   {
+    "storeNumber": "225",
+    "slug": "lac-megantic-qc"
+  },
+  {
     "storeNumber": "262",
     "slug": "lachute-qc"
   },
@@ -260,12 +264,20 @@
     "slug": "leamington-on"
   },
   {
+    "storeNumber": "405",
+    "slug": "lebourgneuf-qc"
+  },
+  {
     "storeNumber": "659",
     "slug": "leitrim-on"
   },
   {
     "storeNumber": "654",
     "slug": "leslie-and-lake-shore-on"
+  },
+  {
+    "storeNumber": "165",
+    "slug": "levis-qc"
   },
   {
     "storeNumber": "621",
@@ -416,6 +428,18 @@
     "slug": "prescott-on"
   },
   {
+    "storeNumber": "342",
+    "slug": "quebec-les-saules-qc"
+  },
+  {
+    "storeNumber": "245",
+    "slug": "quebec-ste-foy-qc"
+  },
+  {
+    "storeNumber": "101",
+    "slug": "quebec-vanier-qc"
+  },
+  {
     "storeNumber": "86",
     "slug": "renfrew-on"
   },
@@ -546,6 +570,10 @@
   {
     "storeNumber": "257",
     "slug": "ste-agathe-des-monts-qc"
+  },
+  {
+    "storeNumber": "416",
+    "slug": "ste-marie-de-beauce-qc"
   },
   {
     "storeNumber": "102",
