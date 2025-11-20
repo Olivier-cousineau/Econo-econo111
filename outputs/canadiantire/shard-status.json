@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2025-11-20T18:23:38.376Z",
+  "generatedAt": "2025-11-20T21:34:44.980Z",
   "stores": [
     {
-      "id": "184",
-      "city": "Beauport, QC",
+      "id": "5",
+      "city": "Bancroft, ON",
       "status": "committed",
-      "details": "362 produits"
+      "details": "311 produits"
     },
     {
-      "id": "173",
-      "city": "St. Georges, QC",
+      "id": "82",
+      "city": "Picton, ON",
       "status": "committed",
-      "details": "406 produits"
+      "details": "559 produits"
     },
     {
-      "id": "694",
-      "city": "Kingston Division St., ON",
+      "id": "7",
+      "city": "Belleville, ON",
       "status": "committed",
-      "details": "785 produits"
+      "details": "555 produits"
     },
     {
-      "id": "195",
-      "city": "Kingston, ON",
+      "id": "458",
+      "city": "Roberval, QC",
       "status": "committed",
-      "details": "556 produits"
+      "details": "299 produits"
     },
     {
-      "id": "417",
-      "city": "Kingston Township, ON",
+      "id": "112",
+      "city": "Trenton, ON",
       "status": "committed",
-      "details": "306 produits"
+      "details": "387 produits"
     },
     {
-      "id": "253",
-      "city": "Deep River, ON",
+      "id": "17",
+      "city": "Campbellford, ON",
       "status": "committed",
-      "details": "302 produits"
+      "details": "172 produits"
     },
     {
-      "id": "65",
-      "city": "Napanee, ON",
+      "id": "633",
+      "city": "La Pocatiere, QC",
       "status": "committed",
-      "details": "310 produits"
+      "details": "439 produits"
     },
     {
-      "id": "180",
-      "city": "Montmagny, QC",
+      "id": "298",
+      "city": "Alma, QC",
       "status": "committed",
-      "details": "822 produits"
+      "details": "366 produits"
     }
   ],
   "failedTwice": [],
