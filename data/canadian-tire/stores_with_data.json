@@ -36,6 +36,10 @@
     "slug": "barrhaven-on"
   },
   {
+    "storeNumber": "184",
+    "slug": "beauport-qc"
+  },
+  {
     "storeNumber": "228",
     "slug": "beloeil-qc"
   },
@@ -110,6 +114,10 @@
   {
     "storeNumber": "274",
     "slug": "cowansville-qc"
+  },
+  {
+    "storeNumber": "253",
+    "slug": "deep-river-on"
   },
   {
     "storeNumber": "396",
@@ -190,6 +198,10 @@
   {
     "storeNumber": "694",
     "slug": "kingston-division-st-on"
+  },
+  {
+    "storeNumber": "195",
+    "slug": "kingston-on"
   },
   {
     "storeNumber": "209",
@@ -324,6 +336,10 @@
     "slug": "mont-tremblant-qc"
   },
   {
+    "storeNumber": "180",
+    "slug": "montmagny-qc"
+  },
+  {
     "storeNumber": "343",
     "slug": "montreal-bellechasse-qc"
   },
@@ -346,6 +362,10 @@
   {
     "storeNumber": "120",
     "slug": "morrisburg-on"
+  },
+  {
+    "storeNumber": "65",
+    "slug": "napanee-on"
   },
   {
     "storeNumber": "71",
