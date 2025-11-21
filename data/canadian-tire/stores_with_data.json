@@ -184,12 +184,20 @@
     "slug": "drummondville-qc"
   },
   {
+    "storeNumber": "321",
+    "slug": "dufferin-and-407-on"
+  },
+  {
     "storeNumber": "485",
     "slug": "dufferin-and-finch-auto-ctr-on"
   },
   {
     "storeNumber": "93",
     "slug": "edmundston-nb"
+  },
+  {
+    "storeNumber": "214",
+    "slug": "eglinton-and-caledonia-toronto-on"
   },
   {
     "storeNumber": "459",
@@ -356,6 +364,10 @@
     "slug": "laval-vimont-qc"
   },
   {
+    "storeNumber": "19",
+    "slug": "lawrence-and-allen-expwy-on"
+  },
+  {
     "storeNumber": "55",
     "slug": "leamington-on"
   },
@@ -398,6 +410,10 @@
   {
     "storeNumber": "196",
     "slug": "maniwaki-qc"
+  },
+  {
+    "storeNumber": "653",
+    "slug": "maple-on"
   },
   {
     "storeNumber": "451",
@@ -780,8 +796,16 @@
     "slug": "tillsonburg-on"
   },
   {
+    "storeNumber": "600",
+    "slug": "toronto-eaton-centre-on"
+  },
+  {
     "storeNumber": "273",
     "slug": "toronto-main-and-danforth-on"
+  },
+  {
+    "storeNumber": "150",
+    "slug": "toronto-yonge-and-church-on"
   },
   {
     "storeNumber": "112",
