@@ -4,6 +4,10 @@
     "slug": "4975-blvd-robert-bourassa"
   },
   {
+    "storeNumber": "160",
+    "slug": "ajax-on"
+  },
+  {
     "storeNumber": "238",
     "slug": "alexandria-on"
   },
@@ -236,6 +240,10 @@
     "slug": "kemptville-on"
   },
   {
+    "storeNumber": "134",
+    "slug": "keswick-on"
+  },
+  {
     "storeNumber": "694",
     "slug": "kingston-division-st-on"
   },
@@ -442,6 +450,10 @@
   {
     "storeNumber": "73",
     "slug": "orangeville-on"
+  },
+  {
+    "storeNumber": "74",
+    "slug": "orillia-on"
   },
   {
     "storeNumber": "75",
@@ -680,6 +692,10 @@
     "slug": "ste-marie-de-beauce-qc"
   },
   {
+    "storeNumber": "280",
+    "slug": "stouffville-on"
+  },
+  {
     "storeNumber": "102",
     "slug": "sturgeon-falls-on"
   },
@@ -710,6 +726,10 @@
   {
     "storeNumber": "308",
     "slug": "trois-rivieres-qc"
+  },
+  {
+    "storeNumber": "127",
+    "slug": "uxbridge-on"
   },
   {
     "storeNumber": "114",
