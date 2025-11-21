@@ -192,6 +192,10 @@
     "slug": "edmundston-nb"
   },
   {
+    "storeNumber": "459",
+    "slug": "eglinton-and-laird-on"
+  },
+  {
     "storeNumber": "22",
     "slug": "espanola-on"
   },
@@ -604,6 +608,10 @@
     "slug": "richmond-hill-north-on"
   },
   {
+    "storeNumber": "87",
+    "slug": "richmond-hill-on"
+  },
+  {
     "storeNumber": "323",
     "slug": "riviere-du-loup-qc"
   },
@@ -658,6 +666,10 @@
   {
     "storeNumber": "99",
     "slug": "shawville-qc"
+  },
+  {
+    "storeNumber": "192",
+    "slug": "sheppard-ave-on"
   },
   {
     "storeNumber": "348",
@@ -830,5 +842,9 @@
   {
     "storeNumber": "199",
     "slug": "windsor-east-on"
+  },
+  {
+    "storeNumber": "126",
+    "slug": "yonge-and-steeles-on"
   }
 ]
