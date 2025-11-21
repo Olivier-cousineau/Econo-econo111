@@ -16,6 +16,10 @@
     "slug": "alma-qc"
   },
   {
+    "storeNumber": "285",
+    "slug": "amos-qc"
+  },
+  {
     "storeNumber": "692",
     "slug": "ancienne-lorette-qc"
   },
@@ -182,6 +186,10 @@
   {
     "storeNumber": "138",
     "slug": "granby-qc"
+  },
+  {
+    "storeNumber": "62",
+    "slug": "gravenhurst-on"
   },
   {
     "storeNumber": "190",
@@ -424,6 +432,10 @@
     "slug": "nicolet-qc"
   },
   {
+    "storeNumber": "72",
+    "slug": "north-bay-on"
+  },
+  {
     "storeNumber": "424",
     "slug": "oak-winston-churchill-on"
   },
@@ -434,6 +446,10 @@
   {
     "storeNumber": "75",
     "slug": "oshawa-mid-on"
+  },
+  {
+    "storeNumber": "336",
+    "slug": "oshawa-north-on"
   },
   {
     "storeNumber": "272",
@@ -498,6 +514,10 @@
   {
     "storeNumber": "213",
     "slug": "port-hawkesbury-ns"
+  },
+  {
+    "storeNumber": "226",
+    "slug": "port-perry-on"
   },
   {
     "storeNumber": "85",
@@ -722,6 +742,14 @@
   {
     "storeNumber": "251",
     "slug": "waterloo-on"
+  },
+  {
+    "storeNumber": "460",
+    "slug": "whitby-north-on"
+  },
+  {
+    "storeNumber": "187",
+    "slug": "whitby-south-on"
   },
   {
     "storeNumber": "199",
