@@ -52,6 +52,14 @@
     "slug": "barrhaven-on"
   },
   {
+    "storeNumber": "6",
+    "slug": "barrie-on"
+  },
+  {
+    "storeNumber": "444",
+    "slug": "barrie-south-on"
+  },
+  {
     "storeNumber": "184",
     "slug": "beauport-qc"
   },
@@ -400,8 +408,16 @@
     "slug": "markham-east-on"
   },
   {
+    "storeNumber": "164",
+    "slug": "markham-on"
+  },
+  {
     "storeNumber": "315",
     "slug": "matane-qc"
+  },
+  {
+    "storeNumber": "61",
+    "slug": "midland-on"
   },
   {
     "storeNumber": "682",
@@ -446,6 +462,14 @@
   {
     "storeNumber": "65",
     "slug": "napanee-on"
+  },
+  {
+    "storeNumber": "68",
+    "slug": "new-liskeard-on"
+  },
+  {
+    "storeNumber": "69",
+    "slug": "newmarket-on"
   },
   {
     "storeNumber": "71",
@@ -786,6 +810,10 @@
   {
     "storeNumber": "235",
     "slug": "ville-st-laurent-qc"
+  },
+  {
+    "storeNumber": "30",
+    "slug": "warden-and-eglinton-on"
   },
   {
     "storeNumber": "251",
