@@ -6,36 +6,12 @@
   <title>EconoDeal — Italia</title>
   <link rel="stylesheet" href="dist/assets/main.css" />
 </head>
-<body class="overlay-active">
+<body>
   <div class="bg-visuals" aria-hidden="true">
     <div class="bg-grid"></div>
     <div class="bg-orb bg-orb--one"></div>
     <div class="bg-orb bg-orb--two"></div>
     <div class="bg-orb bg-orb--three"></div>
-  </div>
-  <div id="registrationOverlay" role="dialog" aria-modal="true" aria-labelledby="registrationTitle">
-    <div class="registration-card">
-      <button type="button" class="registration-close" data-overlay-dismiss aria-label="Chiudi la finestra di registrazione">
-        <span aria-hidden="true">&times;</span>
-      </button>
-      <h2 id="registrationTitle">Accesso riservato ai membri</h2>
-      <p class="muted" style="margin:0">Unisciti a <strong><span data-client-count>0</span></strong> rivenditori Amazon e cacciatori di offerte, poi sblocca l'intero catalogo.</p>
-      <form id="registrationForm">
-        <div>
-          <label for="fullName">Nome completo</label>
-          <input id="fullName" name="fullName" type="text" placeholder="Inserisci il tuo nome" autocomplete="name" required />
-        </div>
-        <div>
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" placeholder="nome@esempio.com" autocomplete="email" required />
-        </div>
-        <div class="checkbox-row">
-          <input id="regulationCheckbox" name="regulation" type="checkbox" required />
-          <label for="regulationCheckbox" style="margin:0">Confermo di aver letto e accettato le linee guida di utilizzo del sito.</label>
-        </div>
-        <button id="registrationSubmit" type="submit" disabled>Registrati e sblocca l'accesso</button>
-      </form>
-    </div>
   </div>
   <header>
     <div class="container header-layout">
@@ -514,10 +490,10 @@
     }
 
     function hideOverlay(){
+      document.body.classList.remove('overlay-active');
       if(!overlay) return;
       overlay.classList.add('hidden');
       overlay.setAttribute('aria-hidden', 'true');
-      document.body.classList.remove('overlay-active');
     }
 
     function showOverlay(){
