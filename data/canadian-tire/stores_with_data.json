@@ -208,6 +208,10 @@
     "slug": "espanola-on"
   },
   {
+    "storeNumber": "294",
+    "slug": "etobicoke-albion-and-kipling-on"
+  },
+  {
     "storeNumber": "38",
     "slug": "fenelon-falls-on"
   },
@@ -852,8 +856,20 @@
     "slug": "warden-and-eglinton-on"
   },
   {
+    "storeNumber": "652",
+    "slug": "wasaga-beach-on"
+  },
+  {
     "storeNumber": "251",
     "slug": "waterloo-on"
+  },
+  {
+    "storeNumber": "182",
+    "slug": "west-toronto-stockyards-on"
+  },
+  {
+    "storeNumber": "119",
+    "slug": "weston-road-and-401-on"
   },
   {
     "storeNumber": "460",
@@ -866,6 +882,14 @@
   {
     "storeNumber": "199",
     "slug": "windsor-east-on"
+  },
+  {
+    "storeNumber": "237",
+    "slug": "woodbridge-on"
+  },
+  {
+    "storeNumber": "137",
+    "slug": "woodstock-nb"
   },
   {
     "storeNumber": "126",
