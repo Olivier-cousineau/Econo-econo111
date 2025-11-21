@@ -60,6 +60,14 @@
     "slug": "boucherville-qc"
   },
   {
+    "storeNumber": "170",
+    "slug": "bowmanville-on"
+  },
+  {
+    "storeNumber": "206",
+    "slug": "bracebridge-on"
+  },
+  {
     "storeNumber": "446",
     "slug": "bradford-on"
   },
@@ -108,6 +116,10 @@
     "slug": "chicoutimi-qc"
   },
   {
+    "storeNumber": "23",
+    "slug": "cobourg-on"
+  },
+  {
     "storeNumber": "108",
     "slug": "collingwood-on"
   },
@@ -154,6 +166,10 @@
   {
     "storeNumber": "22",
     "slug": "espanola-on"
+  },
+  {
+    "storeNumber": "38",
+    "slug": "fenelon-falls-on"
   },
   {
     "storeNumber": "35",
@@ -322,6 +338,10 @@
   {
     "storeNumber": "621",
     "slug": "liberty-village-on"
+  },
+  {
+    "storeNumber": "56",
+    "slug": "lindsay-on"
   },
   {
     "storeNumber": "208",
@@ -506,6 +526,10 @@
   {
     "storeNumber": "697",
     "slug": "richmond-hill-north-on"
+  },
+  {
+    "storeNumber": "323",
+    "slug": "riviere-du-loup-qc"
   },
   {
     "storeNumber": "454",
