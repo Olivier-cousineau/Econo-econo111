@@ -124,6 +124,10 @@
     "slug": "burlington-fairview-on"
   },
   {
+    "storeNumber": "412",
+    "slug": "burlington-north-on"
+  },
+  {
     "storeNumber": "17",
     "slug": "campbellford-on"
   },
@@ -236,6 +240,10 @@
     "slug": "gananoque-on"
   },
   {
+    "storeNumber": "159",
+    "slug": "georgetown-on"
+  },
+  {
     "storeNumber": "138",
     "slug": "granby-qc"
   },
@@ -246,6 +254,10 @@
   {
     "storeNumber": "190",
     "slug": "greenfield-park-qc"
+  },
+  {
+    "storeNumber": "40",
+    "slug": "grimsby-on"
   },
   {
     "storeNumber": "260",
@@ -306,6 +318,10 @@
   {
     "storeNumber": "417",
     "slug": "kingston-township-on"
+  },
+  {
+    "storeNumber": "52",
+    "slug": "kirkland-lake-on"
   },
   {
     "storeNumber": "149",
@@ -458,6 +474,10 @@
   {
     "storeNumber": "61",
     "slug": "midland-on"
+  },
+  {
+    "storeNumber": "140",
+    "slug": "milton-on"
   },
   {
     "storeNumber": "682",
@@ -622,6 +642,10 @@
   {
     "storeNumber": "303",
     "slug": "pointe-aux-trembles-qc"
+  },
+  {
+    "storeNumber": "128",
+    "slug": "port-colborne-on"
   },
   {
     "storeNumber": "213",
@@ -810,6 +834,10 @@
   {
     "storeNumber": "624",
     "slug": "st-romuald-qc"
+  },
+  {
+    "storeNumber": "232",
+    "slug": "st-stephen-nb"
   },
   {
     "storeNumber": "257",
