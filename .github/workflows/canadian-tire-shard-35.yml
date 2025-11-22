@@ -1,6 +1,8 @@
 name: Canadian Tire - Shard 35 of 43
 
 on:
+  schedule:
+    - cron: "30 19 * * 5"  # Vendredi 14h30 (heure du Québec)
   workflow_dispatch:
 
 concurrency:
