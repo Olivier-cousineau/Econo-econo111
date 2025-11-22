@@ -28,6 +28,10 @@
     "slug": "amos-qc"
   },
   {
+    "storeNumber": "639",
+    "slug": "ancaster-on"
+  },
+  {
     "storeNumber": "692",
     "slug": "ancienne-lorette-qc"
   },
@@ -144,6 +148,10 @@
     "slug": "casselman-on"
   },
   {
+    "storeNumber": "31",
+    "slug": "centre-wellington-on"
+  },
+  {
     "storeNumber": "626",
     "slug": "chambly-qc"
   },
@@ -208,6 +216,14 @@
     "slug": "dufferin-and-finch-auto-ctr-on"
   },
   {
+    "storeNumber": "27",
+    "slug": "dundas-on"
+  },
+  {
+    "storeNumber": "29",
+    "slug": "dunnville-on"
+  },
+  {
     "storeNumber": "93",
     "slug": "edmundston-nb"
   },
@@ -264,6 +280,10 @@
     "slug": "guelph-north-on"
   },
   {
+    "storeNumber": "42",
+    "slug": "guelph-stone-rd-on"
+  },
+  {
     "storeNumber": "129",
     "slug": "hamilton-centre-on"
   },
@@ -282,6 +302,10 @@
   {
     "storeNumber": "177",
     "slug": "hamilton-mtwest-on"
+  },
+  {
+    "storeNumber": "657",
+    "slug": "hanmer-on"
   },
   {
     "storeNumber": "157",
