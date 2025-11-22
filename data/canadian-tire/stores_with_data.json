@@ -228,6 +228,10 @@
     "slug": "delson-qc"
   },
   {
+    "storeNumber": "25",
+    "slug": "digby-ns"
+  },
+  {
     "storeNumber": "284",
     "slug": "dolbeau-mistassini-qc"
   },
@@ -282,6 +286,10 @@
   {
     "storeNumber": "294",
     "slug": "etobicoke-albion-and-kipling-on"
+  },
+  {
+    "storeNumber": "141",
+    "slug": "exeter-on"
   },
   {
     "storeNumber": "38",
@@ -544,8 +552,20 @@
     "slug": "listowel-on"
   },
   {
+    "storeNumber": "494",
+    "slug": "london-auto-centre-on"
+  },
+  {
     "storeNumber": "130",
     "slug": "london-east-on"
+  },
+  {
+    "storeNumber": "425",
+    "slug": "london-north-on"
+  },
+  {
+    "storeNumber": "58",
+    "slug": "london-south-on"
   },
   {
     "storeNumber": "208",
@@ -1020,6 +1040,10 @@
     "slug": "sudbury-south-on"
   },
   {
+    "storeNumber": "106",
+    "slug": "sussex-nb"
+  },
+  {
     "storeNumber": "312",
     "slug": "terrebonne-qc"
   },
@@ -1142,6 +1166,10 @@
   {
     "storeNumber": "124",
     "slug": "woodstock-on"
+  },
+  {
+    "storeNumber": "125",
+    "slug": "yarmouth-ns"
   },
   {
     "storeNumber": "126",
