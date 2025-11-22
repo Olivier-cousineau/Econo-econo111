@@ -132,6 +132,18 @@
     "slug": "burlington-north-on"
   },
   {
+    "storeNumber": "49",
+    "slug": "caledonia-on"
+  },
+  {
+    "storeNumber": "168",
+    "slug": "cambridge-hespeler-on"
+  },
+  {
+    "storeNumber": "36",
+    "slug": "cambridge-on"
+  },
+  {
     "storeNumber": "17",
     "slug": "campbellford-on"
   },
@@ -158,6 +170,10 @@
   {
     "storeNumber": "147",
     "slug": "chateauguay-qc"
+  },
+  {
+    "storeNumber": "244",
+    "slug": "chelmsford-on"
   },
   {
     "storeNumber": "268",
@@ -250,6 +266,10 @@
   {
     "storeNumber": "35",
     "slug": "fredericton-nb"
+  },
+  {
+    "storeNumber": "337",
+    "slug": "fredericton-north-nb"
   },
   {
     "storeNumber": "37",
@@ -568,6 +588,10 @@
     "slug": "morrisburg-on"
   },
   {
+    "storeNumber": "66",
+    "slug": "mount-forest-on"
+  },
+  {
     "storeNumber": "65",
     "slug": "napanee-on"
   },
@@ -642,6 +666,10 @@
   {
     "storeNumber": "422",
     "slug": "ottawa-orleans-on"
+  },
+  {
+    "storeNumber": "77",
+    "slug": "owen-sound-on"
   },
   {
     "storeNumber": "78",
