@@ -96,6 +96,18 @@
     "slug": "bradford-on"
   },
   {
+    "storeNumber": "675",
+    "slug": "brampton-mclaughlin-road-on"
+  },
+  {
+    "storeNumber": "10",
+    "slug": "brampton-shoppers-world-on"
+  },
+  {
+    "storeNumber": "411",
+    "slug": "brampton-trinity-common-on"
+  },
+  {
     "storeNumber": "14",
     "slug": "brockville-on"
   },
@@ -440,12 +452,24 @@
     "slug": "matane-qc"
   },
   {
+    "storeNumber": "169",
+    "slug": "meadowvale-on"
+  },
+  {
     "storeNumber": "61",
     "slug": "midland-on"
   },
   {
     "storeNumber": "682",
     "slug": "minden-on"
+  },
+  {
+    "storeNumber": "497",
+    "slug": "mississauga-heartland-on"
+  },
+  {
+    "storeNumber": "241",
+    "slug": "mississauga-southdown-on"
   },
   {
     "storeNumber": "249",
@@ -510,6 +534,14 @@
   {
     "storeNumber": "424",
     "slug": "oak-winston-churchill-on"
+  },
+  {
+    "storeNumber": "429",
+    "slug": "oakville-north-on"
+  },
+  {
+    "storeNumber": "143",
+    "slug": "oakville-on"
   },
   {
     "storeNumber": "73",
@@ -632,6 +664,10 @@
     "slug": "richmond-hill-on"
   },
   {
+    "storeNumber": "320",
+    "slug": "rimouski-qc"
+  },
+  {
     "storeNumber": "323",
     "slug": "riviere-du-loup-qc"
   },
@@ -710,6 +746,14 @@
   {
     "storeNumber": "484",
     "slug": "st-bruno-qc"
+  },
+  {
+    "storeNumber": "90",
+    "slug": "st-catharines-on"
+  },
+  {
+    "storeNumber": "145",
+    "slug": "st-catharines-s-on"
   },
   {
     "storeNumber": "649",
@@ -862,6 +906,10 @@
   {
     "storeNumber": "251",
     "slug": "waterloo-on"
+  },
+  {
+    "storeNumber": "118",
+    "slug": "welland-on"
   },
   {
     "storeNumber": "182",
