@@ -1,60 +1,55 @@
 {
-  "generatedAt": "2025-11-21T19:58:17.937Z",
+  "generatedAt": "2025-11-22T04:01:51.309Z",
   "stores": [
     {
-      "id": "237",
-      "city": "Woodbridge, ON",
+      "id": "241",
+      "city": "Mississauga Southdown, ON",
       "status": "committed",
-      "details": "543 produits"
+      "details": "474 produits"
     },
     {
-      "id": "182",
-      "city": "West Toronto (Stockyards), ON",
+      "id": "675",
+      "city": "Brampton McLaughlin Road, ON",
       "status": "committed",
-      "details": "370 produits"
+      "details": "703 produits"
     },
     {
-      "id": "119",
-      "city": "Weston Road & 401, ON",
+      "id": "424",
+      "city": "Oak., Winston Churchill, ON",
       "status": "committed",
-      "details": "652 produits"
+      "details": "546 produits"
     },
     {
-      "id": "137",
-      "city": "Woodstock, NB",
+      "id": "233",
+      "city": "La Sarre, QC",
       "status": "committed",
-      "details": "313 produits"
+      "details": "396 produits"
     },
     {
-      "id": "294",
-      "city": "Etobicoke, Albion & Kipling, ON",
+      "id": "118",
+      "city": "Welland, ON",
       "status": "committed",
-      "details": "586 produits"
+      "details": "320 produits"
     },
     {
-      "id": "242",
-      "city": "Rexdale, ON",
-      "status": "failed_twice",
-      "details": "failed twice – accepted"
+      "id": "169",
+      "city": "Meadowvale, ON",
+      "status": "committed",
+      "details": "411 produits"
     },
     {
-      "id": "1",
-      "city": "Alliston, ON",
+      "id": "429",
+      "city": "Oakville North, ON",
       "status": "committed",
-      "details": "580 produits"
+      "details": "721 produits"
     },
     {
-      "id": "652",
-      "city": "Wasaga Beach, ON",
+      "id": "143",
+      "city": "Oakville, ON",
       "status": "committed",
-      "details": "276 produits"
+      "details": "556 produits"
     }
   ],
-  "failedTwice": [
-    {
-      "id": "242",
-      "city": "Rexdale, ON"
-    }
-  ],
+  "failedTwice": [],
   "retriedAndSucceeded": []
 }
