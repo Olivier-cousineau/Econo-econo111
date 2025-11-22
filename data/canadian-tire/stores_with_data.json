@@ -40,6 +40,10 @@
     "slug": "arnprior-on"
   },
   {
+    "storeNumber": "16",
+    "slug": "atholville-nb"
+  },
+  {
     "storeNumber": "189",
     "slug": "aurora-on"
   },
@@ -208,6 +212,10 @@
     "slug": "deep-river-on"
   },
   {
+    "storeNumber": "193",
+    "slug": "delhi-on"
+  },
+  {
     "storeNumber": "396",
     "slug": "delson-qc"
   },
@@ -374,6 +382,10 @@
   {
     "storeNumber": "134",
     "slug": "keswick-on"
+  },
+  {
+    "storeNumber": "51",
+    "slug": "kincardine-on"
   },
   {
     "storeNumber": "694",
@@ -836,6 +848,14 @@
     "slug": "saint-jerome"
   },
   {
+    "storeNumber": "349",
+    "slug": "saint-john-fairville-nb"
+  },
+  {
+    "storeNumber": "254",
+    "slug": "saint-john-westmorland-road-nb"
+  },
+  {
     "storeNumber": "",
     "slug": "sainte-therese"
   },
@@ -964,6 +984,10 @@
     "slug": "stouffville-on"
   },
   {
+    "storeNumber": "103",
+    "slug": "stratford-on"
+  },
+  {
     "storeNumber": "102",
     "slug": "sturgeon-falls-on"
   },
@@ -1090,6 +1114,10 @@
   {
     "storeNumber": "137",
     "slug": "woodstock-nb"
+  },
+  {
+    "storeNumber": "124",
+    "slug": "woodstock-on"
   },
   {
     "storeNumber": "126",
