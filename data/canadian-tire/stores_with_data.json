@@ -112,6 +112,10 @@
     "slug": "brampton-trinity-common-on"
   },
   {
+    "storeNumber": "664",
+    "slug": "brantford-north-on"
+  },
+  {
     "storeNumber": "14",
     "slug": "brockville-on"
   },
@@ -252,6 +256,10 @@
     "slug": "eglinton-and-laird-on"
   },
   {
+    "storeNumber": "616",
+    "slug": "elmira-on"
+  },
+  {
     "storeNumber": "22",
     "slug": "espanola-on"
   },
@@ -328,6 +336,10 @@
     "slug": "hanmer-on"
   },
   {
+    "storeNumber": "46",
+    "slug": "hanover-on"
+  },
+  {
     "storeNumber": "157",
     "slug": "hawkesbury-on"
   },
@@ -386,6 +398,18 @@
   {
     "storeNumber": "149",
     "slug": "kirkland-qc"
+  },
+  {
+    "storeNumber": "139",
+    "slug": "kitchener-east-on"
+  },
+  {
+    "storeNumber": "53",
+    "slug": "kitchener-south-on"
+  },
+  {
+    "storeNumber": "420",
+    "slug": "kitchener-west-on"
   },
   {
     "storeNumber": "335",
