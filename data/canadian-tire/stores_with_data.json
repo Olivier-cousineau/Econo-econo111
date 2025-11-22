@@ -48,6 +48,10 @@
     "slug": "aurora-on"
   },
   {
+    "storeNumber": "142",
+    "slug": "aylmer-on"
+  },
+  {
     "storeNumber": "265",
     "slug": "baie-comeau-qc"
   },
@@ -192,6 +196,10 @@
     "slug": "cobourg-on"
   },
   {
+    "storeNumber": "24",
+    "slug": "cochrane-on"
+  },
+  {
     "storeNumber": "108",
     "slug": "collingwood-on"
   },
@@ -296,6 +304,10 @@
     "slug": "georgetown-on"
   },
   {
+    "storeNumber": "39",
+    "slug": "goderich-on"
+  },
+  {
     "storeNumber": "138",
     "slug": "granby-qc"
   },
@@ -358,6 +370,10 @@
   {
     "storeNumber": "181",
     "slug": "ile-perrot-qc"
+  },
+  {
+    "storeNumber": "48",
+    "slug": "ingersoll-on"
   },
   {
     "storeNumber": "687",
@@ -526,6 +542,10 @@
   {
     "storeNumber": "57",
     "slug": "listowel-on"
+  },
+  {
+    "storeNumber": "130",
+    "slug": "london-east-on"
   },
   {
     "storeNumber": "208",
@@ -1010,6 +1030,10 @@
   {
     "storeNumber": "110",
     "slug": "tillsonburg-on"
+  },
+  {
+    "storeNumber": "111",
+    "slug": "timmins-on"
   },
   {
     "storeNumber": "600",
