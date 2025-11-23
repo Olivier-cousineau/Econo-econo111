@@ -308,6 +308,10 @@
     "slug": "espanola-on"
   },
   {
+    "storeNumber": "172",
+    "slug": "essex-on"
+  },
+  {
     "storeNumber": "294",
     "slug": "etobicoke-albion-and-kipling-on"
   },
@@ -334,6 +338,10 @@
   {
     "storeNumber": "37",
     "slug": "gananoque-on"
+  },
+  {
+    "storeNumber": "456",
+    "slug": "gaspe-qc"
   },
   {
     "storeNumber": "159",
@@ -370,6 +378,10 @@
   {
     "storeNumber": "42",
     "slug": "guelph-stone-rd-on"
+  },
+  {
+    "storeNumber": "289",
+    "slug": "halifax-lwr-sackville-ns"
   },
   {
     "storeNumber": "129",
@@ -956,6 +968,10 @@
     "slug": "sarnia-on"
   },
   {
+    "storeNumber": "95",
+    "slug": "sault-ste-marie-on"
+  },
+  {
     "storeNumber": "427",
     "slug": "scarborough-east-on"
   },
@@ -1120,6 +1136,10 @@
     "slug": "sussex-nb"
   },
   {
+    "storeNumber": "618",
+    "slug": "tantallon-ns"
+  },
+  {
     "storeNumber": "312",
     "slug": "terrebonne-qc"
   },
@@ -1242,6 +1262,10 @@
   {
     "storeNumber": "199",
     "slug": "windsor-east-on"
+  },
+  {
+    "storeNumber": "236",
+    "slug": "windsor-south-on"
   },
   {
     "storeNumber": "237",
