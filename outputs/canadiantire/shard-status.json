@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2025-11-23T16:36:04.186Z",
+  "generatedAt": "2025-11-23T18:02:45.878Z",
   "stores": [
     {
-      "id": "197",
-      "city": "Bolton, ON",
+      "id": "174",
+      "city": "Ottawa East, ON",
       "status": "committed",
-      "details": "634 produits"
+      "details": "343 produits"
     },
     {
-      "id": "219",
-      "city": "Grand Falls, NB",
+      "id": "191",
+      "city": "Gatineau, QC",
       "status": "committed",
-      "details": "345 produits"
+      "details": "453 produits"
     },
     {
-      "id": "70",
-      "city": "The Queensway, ON",
+      "id": "120",
+      "city": "Morrisburg, ON",
       "status": "committed",
-      "details": "723 produits"
+      "details": "259 produits"
     },
     {
-      "id": "152",
-      "city": "Miss. Dixie & Dundas, ON",
+      "id": "210",
+      "city": "Ottawa South, ON",
       "status": "committed",
-      "details": "611 produits"
+      "details": "429 produits"
     },
     {
-      "id": "71",
-      "city": "Niagara Falls North, ON",
+      "id": "176",
+      "city": "Hull, QC",
       "status": "committed",
-      "details": "470 produits"
+      "details": "337 produits"
     },
     {
-      "id": "305",
-      "city": "Brampton Bramalea, ON",
+      "id": "648",
+      "city": "Mont-Laurier, QC",
       "status": "committed",
-      "details": "1204 produits"
+      "details": "361 produits"
     },
     {
-      "id": "162",
-      "city": "St. Catharines N., ON",
+      "id": "258",
+      "city": "Ottawa Merivale, ON",
       "status": "committed",
-      "details": "399 produits"
+      "details": "263 produits"
     },
     {
-      "id": "33",
-      "city": "Fort Erie, ON",
+      "id": "318",
+      "city": "Gatineau Le Plateau, QC",
       "status": "committed",
-      "details": "256 produits"
+      "details": "878 produits"
     }
   ],
   "failedTwice": [],
