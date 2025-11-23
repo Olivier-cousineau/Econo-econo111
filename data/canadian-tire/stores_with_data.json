@@ -376,6 +376,14 @@
     "slug": "gaspe-qc"
   },
   {
+    "storeNumber": "318",
+    "slug": "gatineau-le-plateau-qc"
+  },
+  {
+    "storeNumber": "191",
+    "slug": "gatineau-qc"
+  },
+  {
     "storeNumber": "159",
     "slug": "georgetown-on"
   },
@@ -474,6 +482,10 @@
   {
     "storeNumber": "406",
     "slug": "hearst-on"
+  },
+  {
+    "storeNumber": "176",
+    "slug": "hull-qc"
   },
   {
     "storeNumber": "47",
@@ -760,6 +772,10 @@
     "slug": "moncton-mountain-rd-nb"
   },
   {
+    "storeNumber": "648",
+    "slug": "mont-laurier-qc"
+  },
+  {
     "storeNumber": "461",
     "slug": "mont-tremblant-qc"
   },
@@ -882,6 +898,10 @@
   {
     "storeNumber": "422",
     "slug": "ottawa-orleans-on"
+  },
+  {
+    "storeNumber": "210",
+    "slug": "ottawa-south-on"
   },
   {
     "storeNumber": "77",
