@@ -72,6 +72,10 @@
     "slug": "barrie-south-on"
   },
   {
+    "storeNumber": "11",
+    "slug": "bathurst-nb"
+  },
+  {
     "storeNumber": "184",
     "slug": "beauport-qc"
   },
@@ -276,6 +280,10 @@
     "slug": "eglinton-and-laird-on"
   },
   {
+    "storeNumber": "167",
+    "slug": "elliot-lake-on"
+  },
+  {
     "storeNumber": "616",
     "slug": "elmira-on"
   },
@@ -294,6 +302,10 @@
   {
     "storeNumber": "38",
     "slug": "fenelon-falls-on"
+  },
+  {
+    "storeNumber": "32",
+    "slug": "forest-on"
   },
   {
     "storeNumber": "35",
@@ -622,6 +634,10 @@
   {
     "storeNumber": "682",
     "slug": "minden-on"
+  },
+  {
+    "storeNumber": "136",
+    "slug": "miramichi-nb"
   },
   {
     "storeNumber": "497",
@@ -1012,6 +1028,10 @@
     "slug": "st-stephen-nb"
   },
   {
+    "storeNumber": "92",
+    "slug": "st-thomas-on"
+  },
+  {
     "storeNumber": "257",
     "slug": "ste-agathe-des-monts-qc"
   },
@@ -1026,6 +1046,10 @@
   {
     "storeNumber": "103",
     "slug": "stratford-on"
+  },
+  {
+    "storeNumber": "104",
+    "slug": "strathroy-on"
   },
   {
     "storeNumber": "102",
