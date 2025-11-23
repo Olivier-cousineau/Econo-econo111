@@ -112,6 +112,10 @@
     "slug": "blenheim-on"
   },
   {
+    "storeNumber": "197",
+    "slug": "bolton-on"
+  },
+  {
     "storeNumber": "332",
     "slug": "boucherville-qc"
   },
@@ -126,6 +130,10 @@
   {
     "storeNumber": "446",
     "slug": "bradford-on"
+  },
+  {
+    "storeNumber": "305",
+    "slug": "brampton-bramalea-on"
   },
   {
     "storeNumber": "675",
@@ -348,6 +356,10 @@
     "slug": "forest-on"
   },
   {
+    "storeNumber": "33",
+    "slug": "fort-erie-on"
+  },
+  {
     "storeNumber": "35",
     "slug": "fredericton-nb"
   },
@@ -374,6 +386,10 @@
   {
     "storeNumber": "138",
     "slug": "granby-qc"
+  },
+  {
+    "storeNumber": "219",
+    "slug": "grand-falls-nb"
   },
   {
     "storeNumber": "62",
@@ -722,6 +738,10 @@
   {
     "storeNumber": "136",
     "slug": "miramichi-nb"
+  },
+  {
+    "storeNumber": "152",
+    "slug": "miss-dixie-and-dundas-on"
   },
   {
     "storeNumber": "497",
@@ -1076,6 +1096,10 @@
     "slug": "st-bruno-qc"
   },
   {
+    "storeNumber": "162",
+    "slug": "st-catharines-n-on"
+  },
+  {
     "storeNumber": "90",
     "slug": "st-catharines-on"
   },
@@ -1194,6 +1218,10 @@
   {
     "storeNumber": "312",
     "slug": "terrebonne-qc"
+  },
+  {
+    "storeNumber": "70",
+    "slug": "the-queensway-on"
   },
   {
     "storeNumber": "156",
