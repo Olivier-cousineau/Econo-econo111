@@ -96,6 +96,10 @@
     "slug": "blainville-qc"
   },
   {
+    "storeNumber": "8",
+    "slug": "blenheim-on"
+  },
+  {
     "storeNumber": "332",
     "slug": "boucherville-qc"
   },
@@ -338,6 +342,10 @@
   {
     "storeNumber": "190",
     "slug": "greenfield-park-qc"
+  },
+  {
+    "storeNumber": "261",
+    "slug": "greenwood-ns"
   },
   {
     "storeNumber": "40",
@@ -648,6 +656,10 @@
     "slug": "mississauga-southdown-on"
   },
   {
+    "storeNumber": "63",
+    "slug": "moncton-dieppe-nb"
+  },
+  {
     "storeNumber": "249",
     "slug": "moncton-mountain-rd-nb"
   },
@@ -694,6 +706,10 @@
   {
     "storeNumber": "68",
     "slug": "new-liskeard-on"
+  },
+  {
+    "storeNumber": "54",
+    "slug": "new-minas-ns"
   },
   {
     "storeNumber": "69",
@@ -868,6 +884,10 @@
     "slug": "rimouski-qc"
   },
   {
+    "storeNumber": "691",
+    "slug": "riverview-nb"
+  },
+  {
     "storeNumber": "323",
     "slug": "riviere-du-loup-qc"
   },
@@ -916,6 +936,10 @@
     "slug": "sainte-therese"
   },
   {
+    "storeNumber": "94",
+    "slug": "sarnia-on"
+  },
+  {
     "storeNumber": "427",
     "slug": "scarborough-east-on"
   },
@@ -930,6 +954,10 @@
   {
     "storeNumber": "99",
     "slug": "shawville-qc"
+  },
+  {
+    "storeNumber": "647",
+    "slug": "shediac-nb"
   },
   {
     "storeNumber": "192",
@@ -1094,6 +1122,10 @@
   {
     "storeNumber": "150",
     "slug": "toronto-yonge-and-church-on"
+  },
+  {
+    "storeNumber": "491",
+    "slug": "tracadie-sheila-nb"
   },
   {
     "storeNumber": "112",
