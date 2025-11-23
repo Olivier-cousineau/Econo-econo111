@@ -24,6 +24,10 @@
     "slug": "alma-qc"
   },
   {
+    "storeNumber": "3",
+    "slug": "amherst-ns"
+  },
+  {
     "storeNumber": "285",
     "slug": "amos-qc"
   },
@@ -132,6 +136,10 @@
     "slug": "brantford-north-on"
   },
   {
+    "storeNumber": "13",
+    "slug": "bridgewater-ns"
+  },
+  {
     "storeNumber": "14",
     "slug": "brockville-on"
   },
@@ -190,6 +198,10 @@
   {
     "storeNumber": "147",
     "slug": "chateauguay-qc"
+  },
+  {
+    "storeNumber": "21",
+    "slug": "chatham-on"
   },
   {
     "storeNumber": "244",
@@ -418,6 +430,10 @@
   {
     "storeNumber": "457",
     "slug": "kanata-on"
+  },
+  {
+    "storeNumber": "178",
+    "slug": "kapuskasing-on"
   },
   {
     "storeNumber": "227",
@@ -948,6 +964,10 @@
     "slug": "scarborough-on"
   },
   {
+    "storeNumber": "307",
+    "slug": "sept-iles-qc"
+  },
+  {
     "storeNumber": "131",
     "slug": "shawinigan-qc"
   },
@@ -1092,6 +1112,10 @@
     "slug": "sudbury-south-on"
   },
   {
+    "storeNumber": "132",
+    "slug": "summerside-pei-474-granville-street"
+  },
+  {
     "storeNumber": "106",
     "slug": "sussex-nb"
   },
@@ -1102,6 +1126,10 @@
   {
     "storeNumber": "156",
     "slug": "thetford-mines-qc"
+  },
+  {
+    "storeNumber": "215",
+    "slug": "tilbury-on"
   },
   {
     "storeNumber": "110",
@@ -1166,6 +1194,10 @@
   {
     "storeNumber": "235",
     "slug": "ville-st-laurent-qc"
+  },
+  {
+    "storeNumber": "135",
+    "slug": "wallaceburg-on"
   },
   {
     "storeNumber": "30",
