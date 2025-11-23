@@ -33,6 +33,7 @@
     "watch:css": "shx mkdir -p dist/assets && postcss styles/main.css -o dist/assets/main.css --watch",
     "scrape:canadiantire": "node scripts/run_canadiantire_matrix.js",
     "publish-canadiantire-public": "node scripts/publish_canadiantire_public.js",
-    "convert:bureauengros": "node scripts/convert_bureauengros_locations.js"
+    "convert:bureauengros": "node scripts/convert_bureauengros_locations.js",
+    "scrape:bureauengros-clearance": "node scripts/scrape_bureauengros_clearance.js"
   }
 }
