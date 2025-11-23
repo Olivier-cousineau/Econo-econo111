@@ -28,6 +28,10 @@
     "slug": "amherst-ns"
   },
   {
+    "storeNumber": "281",
+    "slug": "amherstburg-on"
+  },
+  {
     "storeNumber": "285",
     "slug": "amos-qc"
   },
@@ -38,6 +42,10 @@
   {
     "storeNumber": "692",
     "slug": "ancienne-lorette-qc"
+  },
+  {
+    "storeNumber": "2",
+    "slug": "antigonish-ns"
   },
   {
     "storeNumber": "4",
@@ -194,6 +202,10 @@
   {
     "storeNumber": "626",
     "slug": "chambly-qc"
+  },
+  {
+    "storeNumber": "20",
+    "slug": "charlottetown-pei-20-babineau-avenue"
   },
   {
     "storeNumber": "147",
@@ -444,6 +456,10 @@
     "slug": "hawkesbury-on"
   },
   {
+    "storeNumber": "406",
+    "slug": "hearst-on"
+  },
+  {
     "storeNumber": "47",
     "slug": "huntsville-on"
   },
@@ -550,6 +566,10 @@
   {
     "storeNumber": "352",
     "slug": "la-tuque-qc"
+  },
+  {
+    "storeNumber": "901",
+    "slug": "labrador-city-nl"
   },
   {
     "storeNumber": "225",
@@ -758,6 +778,10 @@
   {
     "storeNumber": "65",
     "slug": "napanee-on"
+  },
+  {
+    "storeNumber": "67",
+    "slug": "new-glasgow-ns"
   },
   {
     "storeNumber": "68",
@@ -1212,6 +1236,10 @@
     "slug": "trois-rivieres-qc"
   },
   {
+    "storeNumber": "113",
+    "slug": "truro-ns"
+  },
+  {
     "storeNumber": "127",
     "slug": "uxbridge-on"
   },
@@ -1266,6 +1294,10 @@
   {
     "storeNumber": "674",
     "slug": "waterloo-west-on"
+  },
+  {
+    "storeNumber": "279",
+    "slug": "wawa-on"
   },
   {
     "storeNumber": "118",
