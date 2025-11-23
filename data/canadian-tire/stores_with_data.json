@@ -236,6 +236,10 @@
     "slug": "cowansville-qc"
   },
   {
+    "storeNumber": "41",
+    "slug": "dartmouth-crossing-ns"
+  },
+  {
     "storeNumber": "253",
     "slug": "deep-river-on"
   },
@@ -302,6 +306,10 @@
   {
     "storeNumber": "616",
     "slug": "elmira-on"
+  },
+  {
+    "storeNumber": "619",
+    "slug": "elmsdale-ns"
   },
   {
     "storeNumber": "22",
@@ -380,8 +388,28 @@
     "slug": "guelph-stone-rd-on"
   },
   {
+    "storeNumber": "465",
+    "slug": "halifax-bayers-lake-ns"
+  },
+  {
+    "storeNumber": "224",
+    "slug": "halifax-bedford-ns"
+  },
+  {
+    "storeNumber": "436",
+    "slug": "halifax-cole-harbour-ns"
+  },
+  {
     "storeNumber": "289",
     "slug": "halifax-lwr-sackville-ns"
+  },
+  {
+    "storeNumber": "44",
+    "slug": "halifax-ns"
+  },
+  {
+    "storeNumber": "186",
+    "slug": "halifax-spryfield-ns"
   },
   {
     "storeNumber": "129",
@@ -1266,6 +1294,10 @@
   {
     "storeNumber": "236",
     "slug": "windsor-south-on"
+  },
+  {
+    "storeNumber": "121",
+    "slug": "windsor-university-plaza-on"
   },
   {
     "storeNumber": "237",
