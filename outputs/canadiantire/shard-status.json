@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2025-11-22T22:59:02.208Z",
+  "generatedAt": "2025-11-23T03:45:13.107Z",
   "stores": [
     {
-      "id": "141",
-      "city": "Exeter, ON",
+      "id": "92",
+      "city": "St. Thomas, ON",
       "status": "committed",
-      "details": "363 produits"
+      "details": "255 produits"
     },
     {
-      "id": "494",
-      "city": "London Auto Centre, ON",
+      "id": "136",
+      "city": "Miramichi, NB",
       "status": "committed",
-      "details": "30 produits"
+      "details": "418 produits"
     },
     {
-      "id": "58",
-      "city": "London South, ON",
+      "id": "11",
+      "city": "Bathurst, NB",
       "status": "committed",
-      "details": "644 produits"
+      "details": "92 produits"
     },
     {
-      "id": "106",
-      "city": "Sussex, NB",
+      "id": "167",
+      "city": "Elliot Lake, ON",
       "status": "committed",
-      "details": "285 produits"
+      "details": "321 produits"
     },
     {
-      "id": "25",
-      "city": "Digby, NS",
+      "id": "104",
+      "city": "Strathroy, ON",
       "status": "committed",
-      "details": "176 produits"
+      "details": "519 produits"
     },
     {
-      "id": "125",
-      "city": "Yarmouth, NS",
+      "id": "32",
+      "city": "Forest, ON",
       "status": "committed",
-      "details": "218 produits"
+      "details": "114 produits"
     },
     {
-      "id": "425",
-      "city": "London North, ON",
+      "id": "249",
+      "city": "Moncton Mountain Rd, NB",
       "status": "committed",
-      "details": "265 produits"
+      "details": "344 produits"
     },
     {
-      "id": "208",
-      "city": "London West, ON",
+      "id": "463",
+      "city": "Paspebiac, QC",
       "status": "committed",
-      "details": "436 produits"
+      "details": "669 produits"
     }
   ],
   "failedTwice": [],
