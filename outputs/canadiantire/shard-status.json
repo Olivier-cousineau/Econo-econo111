@@ -1,17 +1,53 @@
 {
-  "generatedAt": "2025-11-23T15:03:21.578Z",
+  "generatedAt": "2025-11-23T16:36:04.186Z",
   "stores": [
     {
-      "id": "213",
-      "city": "Port Hawkesbury, NS",
+      "id": "197",
+      "city": "Bolton, ON",
       "status": "committed",
-      "details": "414 produits"
+      "details": "634 produits"
     },
     {
-      "id": "451",
-      "city": "Marathon, ON",
+      "id": "219",
+      "city": "Grand Falls, NB",
       "status": "committed",
-      "details": "282 produits"
+      "details": "345 produits"
+    },
+    {
+      "id": "70",
+      "city": "The Queensway, ON",
+      "status": "committed",
+      "details": "723 produits"
+    },
+    {
+      "id": "152",
+      "city": "Miss. Dixie & Dundas, ON",
+      "status": "committed",
+      "details": "611 produits"
+    },
+    {
+      "id": "71",
+      "city": "Niagara Falls North, ON",
+      "status": "committed",
+      "details": "470 produits"
+    },
+    {
+      "id": "305",
+      "city": "Brampton Bramalea, ON",
+      "status": "committed",
+      "details": "1204 produits"
+    },
+    {
+      "id": "162",
+      "city": "St. Catharines N., ON",
+      "status": "committed",
+      "details": "399 produits"
+    },
+    {
+      "id": "33",
+      "city": "Fort Erie, ON",
+      "status": "committed",
+      "details": "256 produits"
     }
   ],
   "failedTwice": [],
