@@ -521,11 +521,18 @@
       ];
     }
 
-    function bureauEnGrosBranches(){
+    const BUREAU_EN_GROS_BRANCHES_WITH_DATA = new Set(['saint-jerome']);
+    let bureauEnGrosBranchCache = null;
+
+    function bureauEnGrosFallbackBranches(){
       return baseBranches().map(branch => ({
         ...branch,
-        hasData: branch.slug === 'saint-jerome'
+        hasData: BUREAU_EN_GROS_BRANCHES_WITH_DATA.has(branch.slug)
       }));
+    }
+
+    function bureauEnGrosBranches(){
+      return bureauEnGrosBranchCache || bureauEnGrosFallbackBranches();
     }
       function fullBestBuyBranches(){
         return [
@@ -1044,9 +1051,9 @@
         }
         if(s === 'amazon'){
           if(c === 'canada') return AMAZON_DAILY_PATH;
-          if(!c) return null;
-          return `data/${s}/${c}.json`;
-        }
+      if(!c) return null;
+      return `data/${s}/${c}.json`;
+    }
         if(!c) return null;
         return `data/${s}/${c}.json`;
       }
@@ -1093,6 +1100,47 @@
           store.branches = Array.from(seen.values()).sort((a,b)=>a.label.localeCompare(b.label,'fr'));
         }catch(err){
           console.warn('Impossible de charger les succursales Rona', err);
+      }
+    }
+
+      async function loadBureauEnGrosDirectory(){
+        const store = STORES.find(entry => entry.slug === 'bureauengros');
+        if(!store || bureauEnGrosBranchCache) return;
+        try{
+          const res = await fetchDataJson('data/bureauengros/branches.json');
+          if(!res) return;
+          const json = await res.json();
+          if(!Array.isArray(json)) return;
+          const normalized = json
+            .map(entry => {
+              const city = entry?.city || entry?.name || '';
+              const provincePostal = entry?.provinceAndPostal || '';
+              const province = provincePostal.split(/\s+/)[0] || '';
+              const slug = slugify(city || entry?.address || entry?.id || '');
+              if(!slug) return null;
+              const labelParts = [];
+              if(city) labelParts.push(city);
+              if(province) labelParts.push(province);
+              const label = labelParts.length ? labelParts.join(', ') : (entry?.address || city || 'Succursale');
+              return {
+                label,
+                slug,
+                city: city || entry?.name || '',
+                address: entry?.address,
+                province: province || '',
+                hasData: BUREAU_EN_GROS_BRANCHES_WITH_DATA.has(slug)
+              };
+            })
+            .filter(Boolean);
+          if(!normalized.length) return;
+          bureauEnGrosBranchCache = normalized;
+          store.branches = normalized;
+          if(storeSelect?.value === store.slug){
+            setCityOptions(store.slug, true);
+          }
+          renderStoreAds();
+        }catch(error){
+          console.warn('Bureau en Gros directory load failed', error);
         }
       }
 
@@ -1231,6 +1279,7 @@
       }
 
       await loadRonaDirectory();
+      await loadBureauEnGrosDirectory();
       try{
         const result = await fetchAllDeals();
         allDeals = result.deals;
