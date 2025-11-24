@@ -176,6 +176,10 @@ async function extractProduct(card) {
 
   const discountPercent = computeDiscountPercent(currentPrice, originalPrice);
 
+  if (!originalPrice || !discountPercent || discountPercent <= 50) {
+    return null;
+  }
+
   return {
     title,
     productUrl,
