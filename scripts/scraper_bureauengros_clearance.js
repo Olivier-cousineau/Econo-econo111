@@ -192,6 +192,8 @@ async function main() {
   const isHeadful = process.env.HEADLESS === "false";
   console.log("Playwright mode:", isHeadful ? "headful" : "headless");
 
+  console.log(`Starting Bureau en Gros clearance scrape (max ${maxPages} pages)`);
+
   const browser = await chromium.launch({ headless: isHeadful ? false : true, proxy });
 
   const context = await browser.newContext({
@@ -206,6 +208,7 @@ async function main() {
 
   const PRODUCT_CARD_SELECTOR = "div.product-thumbnail";
   const allProducts = [];
+  let pageCount = 0;
 
   let lastFirstProductKey = null;
 
@@ -245,6 +248,8 @@ async function main() {
       allProducts.push(product);
       await page.waitForTimeout(humanDelay(100, 300));
     }
+
+    pageCount++;
   }
 
   const result = {
@@ -260,7 +265,10 @@ async function main() {
   const outFile = path.join(outDir, "data.json");
   fs.writeFileSync(outFile, JSON.stringify(result, null, 2), "utf-8");
 
-  console.log(JSON.stringify(result, null, 2));
+  console.log(
+    `✅ Bureau en Gros clearance: scraped ${allProducts.length} products across ${pageCount} page(s).`
+  );
+  console.log(`Output saved to ${outFile}`);
 
   await browser.close();
 }
