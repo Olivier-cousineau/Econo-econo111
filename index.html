@@ -2494,9 +2494,14 @@
         if(!Array.isArray(json)) return;
         const normalized = json
           .map(entry => {
-            const city = entry?.city || entry?.name || '';
+            const address = entry?.address || '';
             const provincePostal = entry?.provinceAndPostal || '';
-            const province = provincePostal.split(/\s+/)[0] || '';
+            const parts = address.split(',').map(part => part.trim()).filter(Boolean);
+            const cityFromAddress = parts.length >= 3 ? parts[parts.length - 3] : (parts.length >= 2 ? parts[parts.length - 2] : '');
+            const provinceFromAddress = parts.length >= 2 ? parts[parts.length - 2] : '';
+            const province = (provinceFromAddress && provinceFromAddress.length <= 3) ? provinceFromAddress : (provincePostal.split(/\s+/)[0] || '');
+            const rawCity = entry?.city || entry?.name || '';
+            const city = rawCity && rawCity.length > 3 ? rawCity : (cityFromAddress || rawCity || entry?.name || '');
             const slug = slugify(city || entry?.address || entry?.id || '');
             if(!slug) return null;
             const labelParts = [];
