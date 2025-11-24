@@ -1,0 +1,26 @@
+[
+  {
+    "product_name": "Staples Tapis pour chaise sur plancher dur, 45\" x 53\"",
+    "original_price": "139.99",
+    "discount_price": "89.99",
+    "image_url": "https://www.staples.ca/content/dam/sk/staples-ca/944/59/56/9445956/16146739f1.jpg",
+    "product_link": "https://www.staples.ca/fr/tapis-pour-chaise-sur-plancher-dur-45-x-53-produits_9445956_2-CA_1_20001",
+    "availability": "Ramassage en magasin, Livraison standard"
+  },
+  {
+    "product_name": "Brother HL-L2370DW Imprimante laser monochrome compacte",
+    "original_price": "249.99",
+    "discount_price": "199.99",
+    "image_url": "https://www.staples.ca/content/dam/sk/staples-ca/941/50/17/9415017/1024454061.jpg",
+    "product_link": "https://www.staples.ca/fr/imprimante-laser-monochrome-compacte-avec-r-seau-sans-fil-hl-l2370dw-produits_9415017_2-CA_1_20001",
+    "availability": "Disponible en ligne et en magasin"
+  },
+  {
+    "product_name": "Staples Chaises de bureau Hyken en maille, noir",
+    "original_price": "349.99",
+    "discount_price": "249.99",
+    "image_url": "https://www.staples.ca/content/dam/sk/staples-ca/941/56/91/9415691/1084424741.jpg",
+    "product_link": "https://www.staples.ca/fr/chaise-de-bureau-en-maille-avec-appui-t-te-et-lumbar-adjustable-hyken-noir-produits_9415691_2-CA_1_20001",
+    "availability": "Ramassage en magasin, Livraison expédiée"
+  }
+]
