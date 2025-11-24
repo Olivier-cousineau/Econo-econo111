@@ -257,10 +257,7 @@ async function main() {
   }
 
   const result = {
-    store: "Bureau en Gros - Centre de liquidation",
-    url: BASE_URL,
-    scrapedAt: new Date().toISOString(),
-    count: allProducts.length,
+    generatedAt: new Date().toISOString(),
     products: allProducts,
   };
 
