@@ -214,8 +214,8 @@ async function main() {
     console.log(`Navigating to page ${pageNum}: ${url}`);
 
     await page.goto(url, {
-      waitUntil: "networkidle",
-      timeout: 60000,
+      waitUntil: "domcontentloaded",
+      timeout: 90000,
     });
 
     await page.waitForSelector("body", { state: "attached", timeout: 45000 });

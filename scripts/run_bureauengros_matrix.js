@@ -149,7 +149,7 @@ function runStore(store) {
 }
 
 async function main() {
-  const CONCURRENCY = 4;
+  const CONCURRENCY = 2;
   let hadFailures = false;
 
   for (let i = 0; i < stores.length; i += CONCURRENCY) {
