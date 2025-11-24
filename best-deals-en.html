@@ -514,12 +514,19 @@
           {label:'Laval', slug:'laval', city:'Laval'}
         ];
       }
-      function patrickMorinBranches(){
-        return [
-          {label:'Prévost', slug:'prevost', city:'Prévost'},
-          {label:'Laval', slug:'laval', city:'Laval'}
-        ];
-      }
+    function patrickMorinBranches(){
+      return [
+        {label:'Prévost', slug:'prevost', city:'Prévost'},
+        {label:'Laval', slug:'laval', city:'Laval'}
+      ];
+    }
+
+    function bureauEnGrosBranches(){
+      return baseBranches().map(branch => ({
+        ...branch,
+        hasData: branch.slug === 'saint-jerome'
+      }));
+    }
       function fullBestBuyBranches(){
         return [
           {label:'En ligne (Canada)', slug:'en-ligne', city:'En ligne', hasData:true},
@@ -755,6 +762,7 @@
       {label:'Walmart', slug:'walmart', branches: WALMART_QUEBEC_BRANCHES},
       {label:'Best Buy', slug:'best-buy', branches: fullBestBuyBranches()},
       {label:'Canadian Tire', slug:'canadian-tire', branches: CANADIAN_TIRE_BRANCHES},
+      {label:'Bureau en Gros', slug:'bureauengros', branches: bureauEnGrosBranches()},
       {label:'Patrick Morin', slug:'patrick-morin', branches: patrickMorinBranches()},
       {label:'Home Depot', slug:'home-depot', branches: HOME_DEPOT_CANADA_BRANCHES},
       {label:'Rona', slug:'rona', branches: baseBranches()},
