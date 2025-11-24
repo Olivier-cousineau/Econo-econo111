@@ -26,25 +26,6 @@ const args = minimist(process.argv.slice(2), {
   boolean: ["continue"],
 });
 
-function runCommand(command, args, options = {}) {
-  return new Promise((resolve) => {
-    const child = spawn(command, args, {
-      cwd: repoRoot,
-      stdio: options.stdio ?? "inherit",
-      env: { ...process.env, ...options.env },
-    });
-
-    child.on("close", (code, signal) => {
-      resolve({ code, signal });
-    });
-
-    child.on("error", (error) => {
-      console.error(`❌ Failed to start ${command}:`, error);
-      resolve({ code: 1, error });
-    });
-  });
-}
-
 function parseBooleanArg(value, defaultValue = false) {
   if (value === undefined) return defaultValue;
   if (typeof value === "boolean") return value;
@@ -140,27 +121,54 @@ function formatStoreLabel(store) {
   return store.name || store.city || "(unknown)";
 }
 
-async function main() {
-  let hadFailure = false;
-
-  for (const store of stores) {
+function runStore(store) {
+  return new Promise((resolve, reject) => {
     const storeId = String(store.id ?? "").trim() || "(unknown)";
     console.log(`Scraping Bureau en Gros store ${storeId} – ${formatStoreLabel(store)}`);
 
-    const { code } = await runCommand("node", [scraperScript, "--storeId", storeId]);
+    const child = spawn("node", [scraperScript, "--storeId", storeId], {
+      stdio: "inherit",
+      cwd: repoRoot,
+      env: process.env,
+    });
 
-    if (code !== 0) {
-      const status = code ?? 1;
-      if (continueOnError) {
-        hadFailure = true;
-        console.error(`❌ Failed to scrape store ${storeId} (exit code ${status}), continuing...`);
-        continue;
+    child.on("close", (code) => {
+      if (code === 0) {
+        resolve();
+      } else {
+        console.error(`❌ Failed to scrape store ${storeId} (exit code ${code})`);
+        reject(new Error(`Store ${storeId} failed with code ${code}`));
       }
-      process.exit(status);
+    });
+
+    child.on("error", (error) => {
+      console.error(`❌ Failed to start scraper for store ${storeId}:`, error);
+      reject(error);
+    });
+  });
+}
+
+async function main() {
+  const CONCURRENCY = 4;
+  let hadFailures = false;
+
+  for (let i = 0; i < stores.length; i += CONCURRENCY) {
+    const batch = stores.slice(i, i + CONCURRENCY);
+
+    try {
+      await Promise.all(batch.map(runStore));
+    } catch (error) {
+      console.error(String(error));
+      hadFailures = true;
+      if (!continueOnError) {
+        process.exit(1);
+      }
     }
   }
 
-  process.exit(hadFailure ? 1 : 0);
+  if (hadFailures) {
+    process.exit(1);
+  }
 }
 
 main();
