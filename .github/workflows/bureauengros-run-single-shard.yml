@@ -1,15 +1,10 @@
-name: Bureau en Gros - Run single shard (manual)
+name: Bureau en Gros - Distribute clearance (manual)
 
 on:
   workflow_dispatch:
-    inputs:
-      shard:
-        description: "Shard number (1-40)"
-        required: true
-        default: "1"
 
 jobs:
-  run-single-shard:
+  distribute:
     runs-on: ubuntu-latest
 
     steps:
@@ -27,26 +22,18 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Install Playwright browsers (Chromium)
-        run: npx playwright install --with-deps chromium
+      - name: Distribute clearance data to stores
+        run: node scripts/distribute_bureauengros_clearance.js
 
-      - name: Install Playwright browsers (all)
-        run: npx playwright install --with-deps
-
-      - name: Run Bureau en Gros shard
+      - name: Configure git user
         run: |
-          SHARD="${{ github.event.inputs.shard }}"
-          echo "Running Bureau en Gros shard ${SHARD}/40"
-          node scripts/run_bureauengros_matrix.js \
-            --shards 40 \
-            --shard "${SHARD}" \
-            --continue
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Commit Bureau en Gros outputs
         run: |
-          SHARD="${{ github.event.inputs.shard }}"
           git add outputs/bureauengros || true
-          git commit -m "Update Bureau en Gros data (shard ${SHARD}/40)" || echo "Nothing to commit"
+          git commit -m "Distribute Bureau en Gros clearance data" || echo "Nothing to commit"
 
       - name: Push changes
         env:

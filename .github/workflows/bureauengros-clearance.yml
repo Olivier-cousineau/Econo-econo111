@@ -25,11 +25,11 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps chromium
 
-      - name: Run Bureau en Gros scraper
-        run: npm run scrape:bureauengros
+      - name: Run national clearance scraper
+        run: node scripts/scraper_bureauengros_clearance.js
 
-      - name: Distribute Bureau en Gros outputs
-        run: npm run distribute:bureauengros
+      - name: Distribute clearance outputs to stores
+        run: node scripts/distribute_bureauengros_clearance.js
 
       - name: Configure git user
         run: |
