@@ -1,10 +1,9 @@
-export const getStaticProps = async () => {
-  const fs = await import("fs");
-  const path = await import("path");
+import fs from "fs";
+import path from "path";
 
-  const rootDir = process.cwd();
-  const baseDir = path.join(rootDir, "outputs", "bureauengros");
+const OUTPUT_DIR = path.join(process.cwd(), "outputs", "bureauengros");
 
+async function loadDebugInfo() {
   let dirExists = false;
   let storeFolders = [];
   let sampleFilePath = null;
@@ -12,19 +11,20 @@ export const getStaticProps = async () => {
   let error = null;
 
   try {
-    dirExists = fs.existsSync(baseDir);
+    dirExists = fs.existsSync(OUTPUT_DIR);
+
     if (!dirExists) {
-      error = `Directory not found: ${baseDir}`;
+      error = `Directory not found: ${OUTPUT_DIR}`;
     } else {
-      const entries = fs.readdirSync(baseDir, { withFileTypes: true });
+      const entries = fs.readdirSync(OUTPUT_DIR, { withFileTypes: true });
       storeFolders = entries
-        .filter((e) => e.isDirectory())
-        .map((e) => e.name)
+        .filter((entry) => entry.isDirectory())
+        .map((entry) => entry.name)
         .sort();
 
       if (storeFolders.length > 0) {
         const firstSlug = storeFolders[0];
-        const jsonPath = path.join(baseDir, firstSlug, "data.json");
+        const jsonPath = path.join(OUTPUT_DIR, firstSlug, "data.json");
         sampleFilePath = jsonPath;
 
         if (fs.existsSync(jsonPath)) {
@@ -40,50 +40,44 @@ export const getStaticProps = async () => {
     error = String(err?.message ?? err);
   }
 
-  return {
-    props: {
-      dirExists,
-      storeFolders,
-      sampleFilePath,
-      sampleRaw,
-      error,
-    },
-  };
-};
+  return { dirExists, storeFolders, sampleFilePath, sampleRaw, error };
+}
 
-export default function BureauEnGrosDebugPage(props) {
+export default async function BureauEnGrosDebugPage() {
+  const info = await loadDebugInfo();
+
   return (
     <main style={{ padding: "2rem", maxWidth: 1000, margin: "0 auto" }}>
       <h1>DEBUG – Bureau en Gros outputs</h1>
 
       <p>
-        <strong>Directory exists:</strong> {String(props.dirExists)}
+        <strong>Directory exists:</strong> {String(info.dirExists)}
       </p>
 
       <p>
-        <strong>Store folders found:</strong> {props.storeFolders.length} folder(s)
+        <strong>Store folders found:</strong> {info.storeFolders.length} folder(s)
       </p>
 
-      {props.storeFolders.length > 0 && (
+      {info.storeFolders.length > 0 && (
         <ul>
-          {props.storeFolders.map((slug) => (
+          {info.storeFolders.map((slug) => (
             <li key={slug}>{slug}</li>
           ))}
         </ul>
       )}
 
       <p>
-        <strong>Sample data.json path:</strong> {props.sampleFilePath ?? "none"}
+        <strong>Sample data.json path:</strong> {info.sampleFilePath ?? "none"}
       </p>
 
-      {props.error && (
+      {info.error && (
         <p style={{ color: "red" }}>
-          <strong>Error:</strong> {props.error}
+          <strong>Error:</strong> {info.error}
         </p>
       )}
 
       <h2>Sample data.json raw content</h2>
-      {props.sampleRaw ? (
+      {info.sampleRaw ? (
         <pre
           style={{
             maxHeight: "400px",
@@ -95,7 +89,7 @@ export default function BureauEnGrosDebugPage(props) {
             fontSize: "0.8rem",
           }}
         >
-          {props.sampleRaw}
+          {info.sampleRaw}
         </pre>
       ) : (
         <p>No sampleRaw content loaded.</p>
