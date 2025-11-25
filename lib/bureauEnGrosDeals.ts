@@ -38,6 +38,8 @@ export interface BureauEnGrosStoreData {
 
 const branchesPath = path.join(process.cwd(), 'data', 'bureauengros', 'branches.json');
 const outputsRoot = path.join(process.cwd(), 'outputs', 'bureauengros');
+const outputsRelativeRoot = path.posix.join('outputs', 'bureauengros');
+const repoRawBaseUrl = 'https://raw.githubusercontent.com/Olivier-cousineau/Econo-econo111/main';
 
 function slugify(value: unknown): string {
   if (value === undefined || value === null) return '';
@@ -91,7 +93,35 @@ export async function loadBureauEnGrosBranches(): Promise<BureauEnGrosBranch[]> 
 }
 
 export async function readBureauEnGrosDeals(branchSlug: string): Promise<BureauEnGrosStoreData | null> {
-  const normalizedSlug = branchSlug?.trim();
+  return readBureauEnGrosStoreDeals(branchSlug);
+}
+
+function buildEncodedRepoPath(storeSlug: string) {
+  const segments = [outputsRelativeRoot, storeSlug, 'data.json'];
+  return segments
+    .join('/')
+    .split('/')
+    .map((segment) => encodeURIComponent(segment))
+    .join('/');
+}
+
+async function readFromLocal(dataPath: string) {
+  const raw = await fs.readFile(dataPath, 'utf-8');
+  return JSON.parse(raw);
+}
+
+async function readFromRemote(storeSlug: string) {
+  const encodedPath = buildEncodedRepoPath(storeSlug);
+  const url = `${repoRawBaseUrl}/${encodedPath}`;
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch ${url} (${response.status})`);
+  }
+  return response.json();
+}
+
+export async function readBureauEnGrosStoreDeals(storeSlug: string): Promise<BureauEnGrosStoreData | null> {
+  const normalizedSlug = storeSlug?.trim();
   if (!normalizedSlug) return null;
 
   const branches = await loadBureauEnGrosBranches();
@@ -99,16 +129,26 @@ export async function readBureauEnGrosDeals(branchSlug: string): Promise<BureauE
   if (!branch) return null;
 
   const dataPath = path.join(outputsRoot, normalizedSlug, 'data.json');
-  try {
-    const raw = await fs.readFile(dataPath, 'utf-8');
-    const parsed = JSON.parse(raw);
-    const store = typeof parsed?.store === 'object' && parsed.store ? parsed.store : {};
-    const products = Array.isArray(parsed?.products) ? parsed.products : [];
-    return { store, products, branch };
-  } catch (error) {
-    if (process.env.NODE_ENV !== 'production') {
-      console.error(`Failed to load Bureau en Gros data for ${normalizedSlug}`, error);
+  const loaders = process.env.NODE_ENV === 'production'
+    ? [() => readFromRemote(normalizedSlug), () => readFromLocal(dataPath)]
+    : [() => readFromLocal(dataPath), () => readFromRemote(normalizedSlug)];
+
+  for (const load of loaders) {
+    try {
+      const parsed = await load();
+      const store = typeof parsed?.store === 'object' && parsed.store ? parsed.store : {};
+      const products = Array.isArray(parsed?.products) ? parsed.products : [];
+      return { store, products, branch };
+    } catch (error) {
+      if (process.env.NODE_ENV !== 'production') {
+        console.warn(`Bureau en Gros data load attempt failed for ${normalizedSlug}`, error);
+      }
     }
-    return null;
   }
+
+  if (process.env.NODE_ENV !== 'production') {
+    console.error(`Failed to load Bureau en Gros data for ${normalizedSlug}`);
+  }
+
+  return null;
 }

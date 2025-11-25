@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { readBureauEnGrosDeals } from '../../../../lib/bureauEnGrosDeals';
+import { readBureauEnGrosStoreDeals } from '../../../../lib/bureauEnGrosDeals';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
@@ -8,7 +8,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return;
   }
 
-  const slugParam = Array.isArray(req.query.slug) ? req.query.slug[0] : req.query.slug;
+  const slugParam =
+    Array.isArray(req.query.storeSlug)
+      ? req.query.storeSlug[0]
+      : req.query.storeSlug ?? (Array.isArray(req.query.slug) ? req.query.slug[0] : req.query.slug);
   const slug = typeof slugParam === 'string' ? slugParam.trim() : '';
 
   if (!slug) {
@@ -17,7 +20,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   try {
-    const data = await readBureauEnGrosDeals(slug);
+    const data = await readBureauEnGrosStoreDeals(slug);
     if (!data) {
       res.status(404).json({ error: 'Store not found or unavailable' });
       return;
