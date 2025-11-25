@@ -2229,6 +2229,18 @@
           || slugify(d.store || '') === 'bureau-en-gros';
         return isBureauEnGrosDeal ? true : pct >= min;
       });
+      const isDevEnv = typeof location !== 'undefined' && (location.hostname === 'localhost' || location.hostname === '127.0.0.1');
+      if(isDevEnv){
+        const bureauDealCount = deals.filter(deal => {
+          const retailerSlug = (deal.retailer || '').toLowerCase();
+          return retailerSlug === 'bureauengros'
+            || retailerSlug === 'bureau-en-gros'
+            || slugify(deal.store || '') === 'bureau-en-gros';
+        }).length;
+        console.log('[DEBUG] Total deals loaded:', deals.length);
+        console.log('[DEBUG] Bureau en Gros deals:', bureauDealCount);
+        console.log('[DEBUG] Visible deals after filtering:', filtered.length);
+      }
       if(terms.length){
         filtered.sort((a,b) => {
           const scoreDiff = (b._matchScore ?? 0) - (a._matchScore ?? 0);
