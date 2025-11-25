@@ -1,4 +1,26 @@
-import { readBureauEnGrosStoreDeals } from '../../lib/bureauEnGrosDeals';
+import fs from 'fs';
+import path from 'path';
+
+const ROOT_DIR = process.cwd();
+const BUREAU_EN_GROS_OUTPUT_DIR = path.join(ROOT_DIR, 'outputs', 'bureauengros');
+
+function readBureauEnGrosStoreDeals(storeSlug) {
+  const storeDir = path.join(BUREAU_EN_GROS_OUTPUT_DIR, storeSlug);
+  const jsonPath = path.join(storeDir, 'data.json');
+
+  if (!fs.existsSync(jsonPath)) {
+    return null;
+  }
+
+  try {
+    const raw = fs.readFileSync(jsonPath, 'utf8');
+    const parsed = JSON.parse(raw);
+    return parsed && typeof parsed === 'object' ? parsed : null;
+  } catch (error) {
+    console.error(`Failed to read Bureau en Gros deals for slug: ${storeSlug}`, error);
+    return null;
+  }
+}
 
 function getStoreSlug(query) {
   const slugCandidate = query.storeSlug ?? query.slug ?? query.branchSlug ?? query.branch;
@@ -28,7 +50,7 @@ export default async function handler(req, res) {
     }
 
     try {
-      const data = await readBureauEnGrosStoreDeals(storeSlug);
+      const data = readBureauEnGrosStoreDeals(storeSlug);
       if (!data) {
         res.status(404).json({ error: 'Store not found or unavailable' });
         return;
