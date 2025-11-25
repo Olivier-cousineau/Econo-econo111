@@ -1,8 +1,53 @@
 import Link from "next/link";
-import { getAllBureauEnGrosStores } from "../../lib/bureauEnGrosDeals";
+import { buildBureauEnGrosStore } from "../../lib/bureauEnGrosDeals";
 
 export const getStaticProps = async () => {
-  const stores = getAllBureauEnGrosStores();
+  const fs = await import("fs");
+  const path = await import("path");
+
+  const rootDir = process.cwd();
+  const baseDir = path.join(rootDir, "outputs", "bureauengros");
+
+  let stores = [];
+
+  if (!fs.existsSync(baseDir)) {
+    console.warn("[BureauEnGros] outputs/bureauengros directory not found:", baseDir);
+  } else {
+    const entries = fs.readdirSync(baseDir, { withFileTypes: true });
+
+    stores = entries
+      .filter((entry) => entry.isDirectory())
+      .map((entry) => {
+        const slug = entry.name;
+        const folderPath = path.join(baseDir, slug);
+        const jsonPath = path.join(folderPath, "data.json");
+
+        if (!fs.existsSync(jsonPath)) {
+          return null;
+        }
+
+        let productCount = 0;
+
+        try {
+          const raw = fs.readFileSync(jsonPath, "utf8");
+          const parsed = JSON.parse(raw);
+          if (Array.isArray(parsed)) {
+            productCount = parsed.length;
+          }
+        } catch (error) {
+          console.warn(
+            "[BureauEnGros] Failed to read JSON for store:",
+            slug,
+            jsonPath,
+            error,
+          );
+        }
+
+        return buildBureauEnGrosStore(slug, productCount, jsonPath);
+      })
+      .filter(Boolean)
+      .sort((a, b) => a.id.localeCompare(b.id));
+  }
 
   return {
     props: {
