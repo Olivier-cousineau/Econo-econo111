@@ -2277,8 +2277,8 @@
       const s = store?.slug;
       const c = branch?.slug;
       if(!s) return null;
-      if(s === 'bureauengros'){
-        const bureauSlug = branch?.slug || '';
+      if(store?.group === 'bureauengros' || s === 'bureauengros'){
+        const bureauSlug = branch?.slug || store?.slug || '';
         if(!bureauSlug) return null;
         return `${BUREAU_EN_GROS_OUTPUTS_PATH}/${bureauSlug}/data.json`;
       }
@@ -2435,9 +2435,9 @@
         const res = await fetchDataJson(path);
         if(!res) return [];
         const json = await res.json();
-        const entries = Array.isArray(json)
-          ? json
-          : (json && typeof json === 'object' && Array.isArray(json.products) ? json.products : []);
+        const entries = (json && typeof json === 'object' && Array.isArray(json.products))
+          ? json.products
+          : (Array.isArray(json) ? json : []);
         if(!Array.isArray(entries) || entries.length === 0) return [];
         const normalized = entries.map(item => normalizeDeal(item, storeLabel, branch));
         const needsFallback =

@@ -167,7 +167,7 @@
     </section>
     <section class="section" id="search">
       <h2 style="margin:0 0 10px">Trouver des liquidations pour vos listings Amazon &amp; eBay</h2>
-      <p class="muted">Les fichiers sont chargés depuis <span class="kbd">data/&lt;magasin&gt;/&lt;ville&gt;.json</span> afin de repérer rapidement les opportunités d'arbitrage et d'approvisionnement multicanal.</p>
+      <p class="muted">Les inventaires sont chargés automatiquement depuis les sorties publiques de chaque magasin afin de repérer rapidement les opportunités d'arbitrage et d'approvisionnement multicanal.</p>
 
       <!-- ✅ Les éléments requis existent et leurs IDs correspondent au script -->
       <div class="row" style="gap:12px;align-items:center;flex-wrap:wrap;margin-top:12px">
@@ -2420,8 +2420,8 @@
       const s = store?.slug;
       const c = branch?.slug;
       if(!s) return null;
-      if(s === 'bureauengros'){
-        const bureauSlug = branch?.slug || '';
+      if(store?.group === 'bureauengros' || s === 'bureauengros'){
+        const bureauSlug = branch?.slug || store?.slug || '';
         if(!bureauSlug) return null;
         return `${BUREAU_EN_GROS_OUTPUTS_PATH}/${bureauSlug}/data.json`;
       }
@@ -2578,9 +2578,9 @@
         const res = await fetchDataJson(path);
         if(!res) return [];
         const json = await res.json();
-        const entries = Array.isArray(json)
-          ? json
-          : (json && typeof json === 'object' && Array.isArray(json.products) ? json.products : []);
+        const entries = (json && typeof json === 'object' && Array.isArray(json.products))
+          ? json.products
+          : (Array.isArray(json) ? json : []);
         if(!Array.isArray(entries) || entries.length === 0) return [];
         const normalized = entries.map(item => normalizeDeal(item, storeLabel, branch));
         const needsFallback =

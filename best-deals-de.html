@@ -1044,8 +1044,8 @@
         const s = store?.slug;
         const c = typeof branch === 'object' ? branch?.slug : branch;
         if(!s) return null;
-        if(s === 'bureauengros'){
-          const bureauSlug = branch?.slug || '';
+        if(store?.group === 'bureauengros' || s === 'bureauengros'){
+          const bureauSlug = branch?.slug || store?.slug || '';
           if(!bureauSlug) return null;
           return `${BUREAU_EN_GROS_OUTPUTS_PATH}/${bureauSlug}/data.json`;
         }
@@ -1188,9 +1188,9 @@
             if(Number.isFinite(parsed)) updatedAt = parsed;
           }
           const json = await res.json();
-          const products = Array.isArray(json)
-            ? json
-            : (json && typeof json === 'object' && Array.isArray(json.products) ? json.products : []);
+          const products = (json && typeof json === 'object' && Array.isArray(json.products))
+            ? json.products
+            : (Array.isArray(json) ? json : []);
           if(!Array.isArray(products) || products.length === 0) return {entries:[], updatedAt};
           const entries = products.map(item => normalizeDeal(item, storeLabel, branch));
           const needsFallback =
