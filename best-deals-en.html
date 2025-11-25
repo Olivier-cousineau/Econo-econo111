@@ -1121,8 +1121,8 @@
             const province = (parts[2] || '').split(/\s+/)[0] || '';
             const id = entry?.id ? String(entry.id).trim() : '';
             const providedSlug = typeof entry?.slug === 'string' ? entry.slug.trim() : '';
-            const slugParts = [id, slugify(entry?.name || ''), slugify(city), slugify(province)].filter(Boolean);
-            const slug = providedSlug || slugParts.join('-') || slugify(address || id || '');
+            const nameSlug = slugify(entry?.name || '');
+            const slug = providedSlug || (id && nameSlug ? `${id}-${nameSlug}` : nameSlug || slugify(address || id || ''));
             if(!slug) return null;
             const labelParts = [];
             if(city) labelParts.push(city);
