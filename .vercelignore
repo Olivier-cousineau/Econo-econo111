@@ -1,5 +1,6 @@
 # Ignore bulky generated data to keep deployment payloads small
-outputs/
+outputs/*
+!outputs/bureauengros/**
 logs/
 archive/
 node_modules/

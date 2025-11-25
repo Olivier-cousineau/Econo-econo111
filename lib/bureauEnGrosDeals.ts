@@ -38,9 +38,9 @@ export interface BureauEnGrosBranch {
 }
 
 export interface BureauEnGrosStoreData {
-  store: Record<string, unknown>;
+  store: BureauEnGrosStoreInfo | Record<string, unknown> | null;
   products: BureauEnGrosProduct[];
-  branch?: BureauEnGrosBranch;
+  branch?: BureauEnGrosBranch | null;
 }
 
 // Format « unifié » utilisé par le frontend (à adapter si ton code a déjà un type)
@@ -114,7 +114,7 @@ export async function loadBureauEnGrosBranches(): Promise<BureauEnGrosBranch[]> 
   return branchCache;
 }
 
-export async function readBureauEnGrosDeals(branchSlug: string): Promise<BureauEnGrosStoreData | null> {
+export async function readBureauEnGrosDeals(branchSlug: string): Promise<BureauEnGrosStoreData> {
   return readBureauEnGrosStoreDeals(branchSlug);
 }
 
@@ -151,13 +151,18 @@ function pickNumber(...values: unknown[]): number | null {
   return null;
 }
 
-export async function readBureauEnGrosStoreDeals(storeSlug: string): Promise<BureauEnGrosStoreData | null> {
+export async function readBureauEnGrosStoreDeals(storeSlug: string): Promise<BureauEnGrosStoreData> {
   const normalizedSlug = storeSlug?.trim();
-  if (!normalizedSlug) return null;
+  if (!normalizedSlug) return { store: null, products: [], branch: null };
 
   const branches = await loadBureauEnGrosBranches();
   const branch = branches.find((entry) => entry.slug === normalizedSlug);
-  if (!branch) return null;
+  if (!branch) {
+    if (process.env.NODE_ENV !== 'production') {
+      console.warn(`Unknown Bureau en Gros branch slug: ${normalizedSlug}`);
+    }
+    return { store: null, products: [], branch: null };
+  }
 
   const dataPath = path.join(outputsRoot, normalizedSlug, 'data.json');
   const loaders = process.env.NODE_ENV === 'production'
@@ -181,14 +186,13 @@ export async function readBureauEnGrosStoreDeals(storeSlug: string): Promise<Bur
     console.error(`Failed to load Bureau en Gros data for ${normalizedSlug}`);
   }
 
-  return null;
+  return { store: null, products: [], branch };
 }
 
 export async function readBureauEnGrosDealsBySlug(storeSlug: string): Promise<UnifiedDeal[]> {
   const data = await readBureauEnGrosStoreDeals(storeSlug);
-  if (!data) return [];
 
-  const storeInfo = data.store as BureauEnGrosStoreInfo;
+  const storeInfo = (data.store as BureauEnGrosStoreInfo | null) ?? null;
   const storeId = String(storeInfo?.id ?? data.branch?.id ?? storeSlug ?? '').trim();
   const storeName = (storeInfo?.name ?? data.branch?.name ?? storeInfo?.store ?? data.branch?.store ?? '').trim();
   const storeAddress = (storeInfo?.address ?? data.branch?.address ?? '').trim();
