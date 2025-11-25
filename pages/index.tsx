@@ -38,7 +38,7 @@ const HomePage = ({ stats }: InferGetStaticPropsType<typeof getStaticProps>) => 
 
       <CanadianTireStatsCard stats={stats} />
 
-      <section style={{ display: 'flex', gap: '1rem' }}>
+      <section style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
         <Link
           href="/canadian-tire"
           style={{
@@ -54,6 +54,22 @@ const HomePage = ({ stats }: InferGetStaticPropsType<typeof getStaticProps>) => 
           }}
         >
           Explorer les magasins Canadian Tire
+        </Link>
+        <Link
+          href="/bureau-en-gros"
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '0.85rem 1.5rem',
+            borderRadius: '999px',
+            backgroundColor: '#10b981',
+            color: '#fff',
+            fontWeight: 600,
+            textDecoration: 'none',
+          }}
+        >
+          Explorer les magasins Bureau en Gros
         </Link>
       </section>
     </main>
