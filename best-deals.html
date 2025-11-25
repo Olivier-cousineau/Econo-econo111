@@ -1229,13 +1229,31 @@
         const subset = filter ? allDeals.filter(deal => deal.store === filter) : allDeals;
         const sorted = subset
           .map(deal => ({...deal, discountPct: discount(deal.price, deal.salePrice)}))
-          .filter(deal => deal.discountPct > 0)
+          .filter(deal => {
+            const retailerSlug = (deal.retailer || '').toLowerCase();
+            const isBureauEnGrosDeal = retailerSlug === 'bureauengros'
+              || retailerSlug === 'bureau-en-gros'
+              || slugify(deal.store || '') === 'bureau-en-gros';
+            return isBureauEnGrosDeal ? true : deal.discountPct > 0;
+          })
           .sort((a,b) => {
             if(b.discountPct !== a.discountPct) return b.discountPct - a.discountPct;
             return (a.salePrice ?? Number.POSITIVE_INFINITY) - (b.salePrice ?? Number.POSITIVE_INFINITY);
           });
         filteredDeals = sorted.slice(0, MAX_TOP_DEALS);
         dealCount.textContent = filteredDeals.length.toString();
+        const isDevEnv = typeof location !== 'undefined' && (location.hostname === 'localhost' || location.hostname === '127.0.0.1');
+        if(isDevEnv){
+          const bureauDeals = allDeals.filter(deal => {
+            const retailerSlug = (deal.retailer || '').toLowerCase();
+            return retailerSlug === 'bureauengros'
+              || retailerSlug === 'bureau-en-gros'
+              || slugify(deal.store || '') === 'bureau-en-gros';
+          }).length;
+          console.log('[DEBUG] Total deals loaded:', allDeals.length);
+          console.log('[DEBUG] Bureau en Gros deals:', bureauDeals);
+          console.log('[DEBUG] Visible deals after filtering:', filteredDeals.length);
+        }
         if(filteredDeals.length === 0){
           visibleCount = 0;
           renderVisibleDeals();
