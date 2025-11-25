@@ -20,6 +20,13 @@ export interface BureauEnGrosProduct {
   [key: string]: unknown;
 }
 
+export interface BureauEnGrosStoreInfo {
+  id?: string;
+  name?: string;
+  address?: string;
+  store?: string;
+}
+
 export interface BureauEnGrosBranch {
   id?: string;
   name?: string;
@@ -35,6 +42,21 @@ export interface BureauEnGrosStoreData {
   products: BureauEnGrosProduct[];
   branch?: BureauEnGrosBranch;
 }
+
+// Format « unifié » utilisé par le frontend (à adapter si ton code a déjà un type)
+export type UnifiedDeal = {
+  retailer: 'bureauengros';
+  store_id: string;
+  store_name: string;
+  store_address: string;
+
+  title: string;
+  url: string;
+  price: number;
+  original_price: number | null;
+  discount_percent: number | null;
+  image: string | null;
+};
 
 const branchesPath = path.join(process.cwd(), 'data', 'bureauengros', 'branches.json');
 const outputsRoot = path.join(process.cwd(), 'outputs', 'bureauengros');
@@ -120,6 +142,15 @@ async function readFromRemote(storeSlug: string) {
   return response.json();
 }
 
+function pickNumber(...values: unknown[]): number | null {
+  for (const value of values) {
+    if (typeof value === 'number' && Number.isFinite(value)) {
+      return value;
+    }
+  }
+  return null;
+}
+
 export async function readBureauEnGrosStoreDeals(storeSlug: string): Promise<BureauEnGrosStoreData | null> {
   const normalizedSlug = storeSlug?.trim();
   if (!normalizedSlug) return null;
@@ -151,4 +182,45 @@ export async function readBureauEnGrosStoreDeals(storeSlug: string): Promise<Bur
   }
 
   return null;
+}
+
+export async function readBureauEnGrosDealsBySlug(storeSlug: string): Promise<UnifiedDeal[]> {
+  const data = await readBureauEnGrosStoreDeals(storeSlug);
+  if (!data) return [];
+
+  const storeInfo = data.store as BureauEnGrosStoreInfo;
+  const storeId = String(storeInfo?.id ?? data.branch?.id ?? storeSlug ?? '').trim();
+  const storeName = (storeInfo?.name ?? data.branch?.name ?? storeInfo?.store ?? data.branch?.store ?? '').trim();
+  const storeAddress = (storeInfo?.address ?? data.branch?.address ?? '').trim();
+
+  return data.products.map((product) => {
+    const price = pickNumber(
+      product.currentPrice,
+      product.salePrice,
+      product.discountPrice,
+      product.discount_price,
+      product.price,
+      product.regularPrice,
+      product.originalPrice
+    ) ?? 0;
+
+    const originalPrice = pickNumber(product.originalPrice, product.regularPrice);
+    const discountPercent = typeof product.discountPercent === 'number' && Number.isFinite(product.discountPercent)
+      ? product.discountPercent
+      : null;
+
+    return {
+      retailer: 'bureauengros',
+      store_id: storeId,
+      store_name: storeName,
+      store_address: storeAddress,
+
+      title: product.title ?? '',
+      url: product.productUrl ?? product.url ?? product.link ?? '',
+      price,
+      original_price: originalPrice,
+      discount_percent: discountPercent,
+      image: (product.imageUrl ?? product.image_url ?? product.image ?? null) as string | null,
+    } satisfies UnifiedDeal;
+  });
 }
