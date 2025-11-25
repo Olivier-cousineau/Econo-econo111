@@ -857,7 +857,7 @@
       {label:'Walmart', slug:'walmart', branches: WALMART_QUEBEC_BRANCHES},
       {label:'Best Buy', slug:'best-buy', branches: fullBestBuyBranches()},
       {label:'Canadian Tire', slug:'canadian-tire', branches: CANADIAN_TIRE_BRANCHES},
-      {id:'bureauengros', label:'Bureau en Gros', group:'bureauengros', branches: bureauEnGrosBranches(), slug:'bureauengros'},
+      {id:'bureauengros', label:'Bureau en Gros', name:'Bureau en Gros', retailer:'Bureau en Gros', group:'bureauengros', branches: bureauEnGrosBranches(), slug:'bureauengros'},
       {label:'Patrick Morin', slug:'patrick-morin', branches: patrickMorinBranches()},
       {label:'Home Depot', slug:'home-depot', branches: HOME_DEPOT_CANADA_BRANCHES},
       {label:'Rona', slug:'rona', branches: baseBranches()},
@@ -2366,14 +2366,16 @@
             if(province) labelParts.push(province);
             const label = entry?.name || (labelParts.length ? labelParts.join(', ') : address || 'Succursale');
             return {
-              label,
+            label,
+              name: entry?.name || label,
               slug,
               city: city || entry?.name || '',
               address,
               province: province || '',
               storeNumber: id,
               hasData: true,
-              retailer: 'bureauengros',
+              retailer: 'Bureau en Gros',
+              storeName: 'Bureau en Gros',
               group: 'bureauengros'
             };
           })
@@ -2434,9 +2436,9 @@
         const res = await fetchDataJson(path);
         if(!res) return [];
         const json = await res.json();
-        const entries = (json && typeof json === 'object' && Array.isArray(json.products))
-          ? json.products
-          : (Array.isArray(json) ? json : []);
+        const entries = Array.isArray(json)
+          ? json
+          : (Array.isArray(json?.products) ? json.products : []);
         if(!Array.isArray(entries) || entries.length === 0) return [];
         const normalized = entries.map(item => normalizeDeal(item, storeLabel, branch));
         const needsFallback =
