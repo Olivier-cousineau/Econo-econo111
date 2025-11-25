@@ -1,6 +1,7 @@
-import fs from "fs";
-import path from "path";
 export const getStaticProps = async () => {
+  const fs = await import("fs");
+  const path = await import("path");
+
   const rootDir = process.cwd();
   const baseDir = path.join(rootDir, "outputs", "bureauengros");
 
@@ -60,8 +61,7 @@ export default function BureauEnGrosDebugPage(props) {
       </p>
 
       <p>
-        <strong>Store folders found:</strong>{" "}
-        {props.storeFolders.length} folder(s)
+        <strong>Store folders found:</strong> {props.storeFolders.length} folder(s)
       </p>
 
       {props.storeFolders.length > 0 && (
@@ -73,8 +73,7 @@ export default function BureauEnGrosDebugPage(props) {
       )}
 
       <p>
-        <strong>Sample data.json path:</strong>{" "}
-        {props.sampleFilePath ?? "none"}
+        <strong>Sample data.json path:</strong> {props.sampleFilePath ?? "none"}
       </p>
 
       {props.error && (

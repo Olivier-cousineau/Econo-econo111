@@ -1,20 +1,37 @@
-import fs from "fs";
 import Link from "next/link";
 import {
-  getAllBureauEnGrosStores,
-  getBureauEnGrosStoreBySlug,
+  buildBureauEnGrosStore,
+  filterVisibleBureauEnGrosDeals,
 } from "../../lib/bureauEnGrosDeals";
 
-export const getStaticPaths = async () => ({
-  paths: [],
-  fallback: "blocking",
-});
+export const getStaticPaths = async () => {
+  const fs = await import("fs");
+  const path = await import("path");
+
+  const baseDir = path.join(process.cwd(), "outputs", "bureauengros");
+
+  let slugs = [];
+
+  if (fs.existsSync(baseDir)) {
+    const entries = fs.readdirSync(baseDir, { withFileTypes: true });
+    slugs = entries.filter((entry) => entry.isDirectory()).map((entry) => entry.name);
+  }
+
+  return {
+    paths: slugs.map((slug) => ({ params: { storeSlug: slug } })),
+    fallback: "blocking",
+  };
+};
 
 export const getStaticProps = async (ctx) => {
-  const slug = ctx.params?.storeSlug;
-  const store = getBureauEnGrosStoreBySlug(slug);
+  const fs = await import("fs");
+  const path = await import("path");
 
-  if (!store) {
+  const slug = ctx.params?.storeSlug;
+  const baseDir = path.join(process.cwd(), "outputs", "bureauengros");
+  const jsonPath = path.join(baseDir, slug, "data.json");
+
+  if (!fs.existsSync(jsonPath)) {
     return {
       notFound: true,
     };
@@ -23,7 +40,7 @@ export const getStaticProps = async (ctx) => {
   let deals = [];
 
   try {
-    const raw = fs.readFileSync(store.jsonPath, "utf8");
+    const raw = fs.readFileSync(jsonPath, "utf8");
     const parsed = JSON.parse(raw);
     if (Array.isArray(parsed)) {
       deals = parsed;
@@ -31,29 +48,23 @@ export const getStaticProps = async (ctx) => {
       console.warn(
         "[BureauEnGros] JSON is not an array for store",
         slug,
-        store.jsonPath
+        jsonPath,
       );
     }
   } catch (err) {
     console.error(
       "[BureauEnGros] Failed to read data.json for store",
       slug,
-      store.jsonPath,
-      err
+      jsonPath,
+      err,
     );
   }
 
-  const visibleDeals = deals.filter((d) => {
-    const hasTitle = !!d.title;
-    const hasPrice =
-      d.priceCurrent !== null &&
-      d.priceCurrent !== undefined &&
-      d.priceCurrent !== "";
-    return hasTitle && hasPrice;
-  });
+  const visibleDeals = filterVisibleBureauEnGrosDeals(deals);
+  const store = buildBureauEnGrosStore(slug, deals.length, jsonPath);
 
   console.log(
-    `[DEBUG] Bureau en Gros store ${slug}: total deals = ${deals.length}, visible = ${visibleDeals.length}`
+    `[DEBUG] Bureau en Gros store ${slug}: total deals = ${deals.length}, visible = ${visibleDeals.length}`,
   );
 
   return {
