@@ -734,7 +734,7 @@
       ];
     }
 
-    const BUREAU_EN_GROS_OUTPUTS_PATH = 'outputs/bureauengros';
+    const BUREAU_EN_GROS_DEALS_API = 'api/bureau-en-gros/deals';
     let bureauEnGrosBranchCache = null;
 
     function bureauEnGrosFallbackBranches(){
@@ -2423,7 +2423,8 @@
       if(store?.group === 'bureauengros' || s === 'bureauengros'){
         const bureauSlug = branch?.slug || store?.slug || '';
         if(!bureauSlug) return null;
-        return `${BUREAU_EN_GROS_OUTPUTS_PATH}/${bureauSlug}/data.json`;
+        const encoded = encodeURIComponent(bureauSlug);
+        return `${BUREAU_EN_GROS_DEALS_API}?slug=${encoded}`;
       }
       if(s === 'best-buy'){
         return BEST_BUY_AGGREGATE_PATH;
