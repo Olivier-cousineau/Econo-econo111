@@ -7,8 +7,9 @@ import slugify from "slugify";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const MASTER_PATH = path.join(__dirname, "..", "outputs", "bureauengros", "clearance.json");
-const BRANCHES_PATH = path.join(__dirname, "..", "data", "bureauengros", "branches.json");
+const repoRoot = path.join(__dirname, "..");
+const MASTER_PATH = path.join(repoRoot, "outputs", "bureauengros", "clearance", "data.json");
+const BRANCHES_PATH = path.join(repoRoot, "data", "bureauengros", "branches.json");
 
 function ensureFile(filePath, label) {
   if (!fs.existsSync(filePath)) {
@@ -55,7 +56,13 @@ function writeStoreOutput(store, products) {
 }
 
 function main() {
-  ensureFile(MASTER_PATH, "national clearance data");
+  if (!fs.existsSync(MASTER_PATH)) {
+    console.warn(
+      `⚠️ No national clearance data found at ${MASTER_PATH}, nothing to distribute.`
+    );
+    process.exit(0);
+  }
+
   ensureFile(BRANCHES_PATH, "branches.json");
 
   const master = readJson(MASTER_PATH, "national clearance data");
