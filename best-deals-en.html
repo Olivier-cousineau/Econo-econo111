@@ -522,7 +522,7 @@
       ];
     }
 
-    const BUREAU_EN_GROS_CLEARANCE_PATH = 'outputs/bureauengros/clearance.json';
+    const BUREAU_EN_GROS_OUTPUTS_PATH = 'outputs/bureauengros';
     let bureauEnGrosBranchCache = null;
 
     function bureauEnGrosFallbackBranches(){
@@ -767,7 +767,7 @@
       {label:'Walmart', slug:'walmart', branches: WALMART_QUEBEC_BRANCHES},
       {label:'Best Buy', slug:'best-buy', branches: fullBestBuyBranches()},
       {label:'Canadian Tire', slug:'canadian-tire', branches: CANADIAN_TIRE_BRANCHES},
-      {label:'Bureau en Gros', slug:'bureauengros', branches: bureauEnGrosBranches()},
+      {id:'bureauengros', label:'Bureau en Gros', group:'bureauengros', slug:'bureauengros', branches: bureauEnGrosBranches()},
       {label:'Patrick Morin', slug:'patrick-morin', branches: patrickMorinBranches()},
       {label:'Home Depot', slug:'home-depot', branches: HOME_DEPOT_CANADA_BRANCHES},
       {label:'Rona', slug:'rona', branches: baseBranches()},
@@ -1044,7 +1044,9 @@
         const c = typeof branch === 'object' ? branch?.slug : branch;
         if(!s) return null;
         if(s === 'bureauengros'){
-          return BUREAU_EN_GROS_CLEARANCE_PATH;
+          const bureauSlug = branch?.slug || '';
+          if(!bureauSlug) return null;
+          return `${BUREAU_EN_GROS_OUTPUTS_PATH}/${bureauSlug}/data.json`;
         }
         if(s === 'best-buy'){
           return BEST_BUY_AGGREGATE_PATH;
@@ -1111,29 +1113,33 @@
           if(!res) return;
           const json = await res.json();
           if(!Array.isArray(json)) return;
-          const normalized = json
-            .map(entry => {
-              const address = entry?.address || '';
-              const parts = address.split(',').map(part => part.trim()).filter(Boolean);
-              const city = parts[1] || '';
-              const province = (parts[2] || '').split(/\s+/)[0] || '';
-              const id = entry?.id ? String(entry.id).trim() : '';
-              const slugParts = [id, slugify(city), slugify(province)].filter(Boolean);
-              const slug = slugParts.join('-') || slugify(entry?.name || address || id || '');
-              if(!slug) return null;
-              const labelParts = [];
-              if(city) labelParts.push(city);
-              if(province) labelParts.push(province);
-              const label = labelParts.length ? labelParts.join(', ') : (entry?.name || address || 'Succursale');
-              return {
-                label,
-                slug,
-                city: city || entry?.name || '',
-                address,
-                province: province || '',
-                hasData: true
-              };
-            })
+        const normalized = json
+          .map(entry => {
+            const address = entry?.address || '';
+            const parts = address.split(',').map(part => part.trim()).filter(Boolean);
+            const city = parts[1] || '';
+            const province = (parts[2] || '').split(/\s+/)[0] || '';
+            const id = entry?.id ? String(entry.id).trim() : '';
+            const providedSlug = typeof entry?.slug === 'string' ? entry.slug.trim() : '';
+            const slugParts = [id, slugify(entry?.name || ''), slugify(city), slugify(province)].filter(Boolean);
+            const slug = providedSlug || slugParts.join('-') || slugify(address || id || '');
+            if(!slug) return null;
+            const labelParts = [];
+            if(city) labelParts.push(city);
+            if(province) labelParts.push(province);
+            const label = entry?.name || (labelParts.length ? labelParts.join(', ') : address || 'Succursale');
+            return {
+              label,
+              slug,
+              city: city || entry?.name || '',
+              address,
+              province: province || '',
+              storeNumber: id,
+              hasData: true,
+              retailer: 'bureauengros',
+              group: 'bureauengros'
+            };
+          })
             .filter(Boolean)
             .sort((a,b)=>a.label.localeCompare(b.label,'fr'));
           if(!normalized.length) return;
@@ -1181,8 +1187,11 @@
             if(Number.isFinite(parsed)) updatedAt = parsed;
           }
           const json = await res.json();
-          if(!Array.isArray(json)) return {entries:[], updatedAt};
-          const entries = json.map(item => normalizeDeal(item, storeLabel, branch));
+          const products = Array.isArray(json)
+            ? json
+            : (json && typeof json === 'object' && Array.isArray(json.products) ? json.products : []);
+          if(!Array.isArray(products) || products.length === 0) return {entries:[], updatedAt};
+          const entries = products.map(item => normalizeDeal(item, storeLabel, branch));
           const needsFallback =
             (entries.length === 0 || entries.every(deal => !hasRealImage(deal))) && path === AMAZON_DAILY_PATH;
           if(needsFallback){
@@ -1241,16 +1250,8 @@
         const tasks = [];
         for(const store of STORES){
           const branches = store.branches ?? [];
-          if(store.slug === 'bureauengros'){
-            const branchContexts = [{label:'National clearance', slug:'bureauengros-national', city:'Canada'}];
-            const nationalPath = filePathFor(store, branchContexts[0]);
-            for(const branch of branchContexts){
-              if(!branchHasDeals(store, branch)) continue;
-              if(nationalPath) tasks.push({store, branch, path: nationalPath, cacheKey: nationalPath});
-            }
-            continue;
-          }
           for(const branch of branches){
+            if(store.slug === 'bureauengros' && !branch?.slug) continue;
             if(!branchHasDeals(store, branch)) continue;
             const path = filePathFor(store, branch);
             if(path) tasks.push({store, branch, path, cacheKey: path});

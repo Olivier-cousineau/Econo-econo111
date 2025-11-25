@@ -610,7 +610,7 @@
       ];
     }
 
-    const BUREAU_EN_GROS_CLEARANCE_PATH = 'outputs/bureauengros/clearance.json';
+    const BUREAU_EN_GROS_OUTPUTS_PATH = 'outputs/bureauengros';
     let bureauEnGrosBranchCache = null;
 
     function bureauEnGrosFallbackBranches(){
@@ -857,7 +857,7 @@
       {label:'Walmart', slug:'walmart', branches: WALMART_QUEBEC_BRANCHES},
       {label:'Best Buy', slug:'best-buy', branches: fullBestBuyBranches()},
       {label:'Canadian Tire', slug:'canadian-tire', branches: CANADIAN_TIRE_BRANCHES},
-      {id:'bureauengros', label:'Bureau en Gros', group:'office', branches: bureauEnGrosBranches(), slug:'bureauengros'},
+      {id:'bureauengros', label:'Bureau en Gros', group:'bureauengros', branches: bureauEnGrosBranches(), slug:'bureauengros'},
       {label:'Patrick Morin', slug:'patrick-morin', branches: patrickMorinBranches()},
       {label:'Home Depot', slug:'home-depot', branches: HOME_DEPOT_CANADA_BRANCHES},
       {label:'Rona', slug:'rona', branches: baseBranches()},
@@ -2279,7 +2279,9 @@
       const c = branch?.slug;
       if(!s) return null;
       if(s === 'bureauengros'){
-        return BUREAU_EN_GROS_CLEARANCE_PATH;
+        const bureauSlug = branch?.slug || '';
+        if(!bureauSlug) return null;
+        return `${BUREAU_EN_GROS_OUTPUTS_PATH}/${bureauSlug}/data.json`;
       }
       if(s === 'best-buy'){
         return BEST_BUY_AGGREGATE_PATH;
@@ -2357,20 +2359,24 @@
             const city = parts[1] || '';
             const province = (parts[2] || '').split(/\s+/)[0] || '';
             const id = entry?.id ? String(entry.id).trim() : '';
-            const slugParts = [id, slugify(city), slugify(province)].filter(Boolean);
-            const slug = slugParts.join('-') || slugify(entry?.name || address || id || '');
+            const providedSlug = typeof entry?.slug === 'string' ? entry.slug.trim() : '';
+            const slugParts = [id, slugify(entry?.name || ''), slugify(city), slugify(province)].filter(Boolean);
+            const slug = providedSlug || slugParts.join('-') || slugify(address || id || '');
             if(!slug) return null;
             const labelParts = [];
             if(city) labelParts.push(city);
             if(province) labelParts.push(province);
-            const label = labelParts.length ? labelParts.join(', ') : (entry?.name || address || 'Succursale');
+            const label = entry?.name || (labelParts.length ? labelParts.join(', ') : address || 'Succursale');
             return {
               label,
               slug,
               city: city || entry?.name || '',
               address,
               province: province || '',
-              hasData: true
+              storeNumber: id,
+              hasData: true,
+              retailer: 'bureauengros',
+              group: 'bureauengros'
             };
           })
           .filter(Boolean)
@@ -2430,8 +2436,11 @@
         const res = await fetchDataJson(path);
         if(!res) return [];
         const json = await res.json();
-        if(!Array.isArray(json)) return [];
-        const normalized = json.map(item => normalizeDeal(item, storeLabel, branch));
+        const entries = Array.isArray(json)
+          ? json
+          : (json && typeof json === 'object' && Array.isArray(json.products) ? json.products : []);
+        if(!Array.isArray(entries) || entries.length === 0) return [];
+        const normalized = entries.map(item => normalizeDeal(item, storeLabel, branch));
         const needsFallback =
           (normalized.length === 0 || normalized.every(deal => !hasRealImage(deal))) && path === AMAZON_DAILY_PATH;
         if(needsFallback){
@@ -2473,21 +2482,8 @@
           }
           branches = store.branches ?? [];
         }
-        if(store.slug === 'bureauengros'){
-          const branchContexts = branchFilter
-            ? branches
-            : [{label:'National clearance', slug:'bureauengros-national', city:'Canada'}];
-          const nationalPath = filePathFor(store, branchContexts[0]);
-          for(const branch of branchContexts){
-            if(!branchHasDeals(store, branch)) continue;
-            if(nationalPath){
-              const cacheKey = branchFilter ? `${nationalPath}|${branch?.slug || branch?.label || 'branch'}` : nationalPath;
-              tasks.push({store, branch, path: nationalPath, cacheKey});
-            }
-          }
-          continue;
-        }
         for(const branch of branches){
+          if(store.slug === 'bureauengros' && !branch?.slug) continue;
           if(!branchHasDeals(store, branch)) continue;
           const path = filePathFor(store, branch);
           if(path) tasks.push({store, branch, path, cacheKey: path});
