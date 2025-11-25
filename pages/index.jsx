@@ -1,17 +1,15 @@
 import Link from 'next/link';
-import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { CanadianTireStatsCard } from '../components/CanadianTireStatsCard';
-import { readCanadianTireStats, type CanadianTireStats } from '../lib/canadianTireStats';
+import { readCanadianTireStats } from '../lib/canadianTireStats';
 
-export const getStaticProps: GetStaticProps<{ stats: CanadianTireStats }> = async () => {
+export const getStaticProps = async () => {
   const stats = await readCanadianTireStats();
   return {
     props: { stats },
     revalidate: 300,
   };
 };
-
-const HomePage = ({ stats }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const HomePage = ({ stats }) => {
   return (
     <main style={{ padding: '2rem 1rem', maxWidth: '900px', margin: '0 auto' }}>
       <header style={{ marginBottom: '2rem' }}>

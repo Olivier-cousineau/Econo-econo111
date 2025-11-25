@@ -1,14 +1,9 @@
 import React from 'react';
-import type { CanadianTireStats } from '../lib/canadianTireStats';
 
-interface CanadianTireStatsCardProps {
-  stats: CanadianTireStats;
-}
-
-const formatNumber = (value: number | undefined) =>
+const formatNumber = (value) =>
   new Intl.NumberFormat('fr-CA').format(Number.isFinite(value ?? 0) ? Number(value) : 0);
 
-export const CanadianTireStatsCard: React.FC<CanadianTireStatsCardProps> = ({ stats }) => {
+export const CanadianTireStatsCard = ({ stats }) => {
   const totalProductsLabel = formatNumber(stats.totalProducts ?? 0);
   const totalStoresLabel = formatNumber(stats.totalStores ?? 0);
 

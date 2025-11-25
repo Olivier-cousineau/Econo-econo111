@@ -1,24 +1,14 @@
 import fs from "fs";
 import path from "path";
-import { GetStaticProps } from "next";
-
-type Props = {
-  dirExists: boolean;
-  storeFolders: string[];
-  sampleFilePath: string | null;
-  sampleRaw: string | null;
-  error?: string | null;
-};
-
-export const getStaticProps: GetStaticProps<Props> = async () => {
+export const getStaticProps = async () => {
   const rootDir = process.cwd();
   const baseDir = path.join(rootDir, "outputs", "bureauengros");
 
   let dirExists = false;
-  let storeFolders: string[] = [];
-  let sampleFilePath: string | null = null;
-  let sampleRaw: string | null = null;
-  let error: string | null = null;
+  let storeFolders = [];
+  let sampleFilePath = null;
+  let sampleRaw = null;
+  let error = null;
 
   try {
     dirExists = fs.existsSync(baseDir);
@@ -45,7 +35,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
         error = "No subfolders found under outputs/bureauengros.";
       }
     }
-  } catch (err: any) {
+  } catch (err) {
     error = String(err?.message ?? err);
   }
 
@@ -60,7 +50,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   };
 };
 
-export default function BureauEnGrosDebugPage(props: Props) {
+export default function BureauEnGrosDebugPage(props) {
   return (
     <main style={{ padding: "2rem", maxWidth: 1000, margin: "0 auto" }}>
       <h1>DEBUG – Bureau en Gros outputs</h1>

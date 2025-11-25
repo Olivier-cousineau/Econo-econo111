@@ -1,19 +1,10 @@
 import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
-import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { CanadianTireStatsCard } from '../../components/CanadianTireStatsCard';
-import { readCanadianTireStats, type CanadianTireStats } from '../../lib/canadianTireStats';
+import { readCanadianTireStats } from '../../lib/canadianTireStats';
 
-interface StoreSummary {
-  storeSlug: string;
-  storeId: string;
-  city: string;
-  productCount: number;
-  label: string;
-}
-
-const slugToLabel = (slug: string) => {
+const slugToLabel = (slug) => {
   const [storeIdFromSlug, ...citySegments] = slug.split('-');
   const citySlug = citySegments.join('-');
   const cityLabel = citySlug ? citySlug.replace(/-/g, ' ') : 'Unknown';
@@ -25,12 +16,9 @@ const slugToLabel = (slug: string) => {
   };
 };
 
-export const getStaticProps: GetStaticProps<{
-  stores: StoreSummary[];
-  stats: CanadianTireStats;
-}> = async () => {
+export const getStaticProps = async () => {
   const outputsRoot = path.join(process.cwd(), 'outputs', 'canadiantire');
-  let dirEntries: fs.Dirent[] = [];
+  let dirEntries = [];
 
   try {
     dirEntries = await fs.promises.readdir(outputsRoot, { withFileTypes: true });
@@ -42,7 +30,7 @@ export const getStaticProps: GetStaticProps<{
     };
   }
 
-  const stores: StoreSummary[] = [];
+  const stores = [];
 
   for (const entry of dirEntries) {
     if (!entry.isDirectory()) {
@@ -84,10 +72,7 @@ export const getStaticProps: GetStaticProps<{
   };
 };
 
-const CanadianTireIndexPage = ({
-  stores,
-  stats,
-}: InferGetStaticPropsType<typeof getStaticProps>) => {
+const CanadianTireIndexPage = ({ stores, stats }) => {
   return (
     <main style={{ padding: '2rem 1rem', maxWidth: '1100px', margin: '0 auto' }}>
       <header style={{ marginBottom: '2rem' }}>

@@ -1,13 +1,12 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
 import { readBureauEnGrosStoreDeals } from '../../lib/bureauEnGrosDeals';
 
-function getStoreSlug(query: NextApiRequest['query']): string {
+function getStoreSlug(query) {
   const slugCandidate = query.storeSlug ?? query.slug ?? query.branchSlug ?? query.branch;
   const slug = Array.isArray(slugCandidate) ? slugCandidate[0] : slugCandidate;
   return typeof slug === 'string' ? slug.trim() : '';
 }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req, res) {
   if (req.method !== 'GET') {
     res.setHeader('Allow', 'GET');
     res.status(405).json({ error: 'Method not allowed' });

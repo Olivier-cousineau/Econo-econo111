@@ -1,15 +1,7 @@
 import Link from "next/link";
-import { GetStaticProps } from "next";
-import {
-  getAllBureauEnGrosStores,
-  BureauEnGrosStore,
-} from "../../lib/bureauEnGrosDeals";
+import { getAllBureauEnGrosStores } from "../../lib/bureauEnGrosDeals";
 
-type Props = {
-  stores: BureauEnGrosStore[];
-};
-
-export const getStaticProps: GetStaticProps<Props> = async () => {
+export const getStaticProps = async () => {
   const stores = getAllBureauEnGrosStores();
 
   return {
@@ -19,7 +11,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   };
 };
 
-export default function BureauEnGrosIndexPage({ stores }: Props) {
+export default function BureauEnGrosIndexPage({ stores }) {
   return (
     <main style={{ padding: "2rem", maxWidth: 900, margin: "0 auto" }}>
       <h1>Bureau en Gros – Liquidations</h1>

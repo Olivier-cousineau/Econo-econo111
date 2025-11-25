@@ -1,7 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
 import { readBureauEnGrosStoreDeals } from '../../../lib/bureauEnGrosDeals';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req, res) {
   const storeSlug = String(req.query.storeSlug || req.query.store || req.query.slug || '');
 
   if (!storeSlug) {
