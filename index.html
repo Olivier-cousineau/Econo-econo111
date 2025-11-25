@@ -1228,15 +1228,18 @@
     function buildDataFetchUrls(path){
       if(!path) return [];
       if(/^https?:\/\//i.test(path)) return [path];
-      const normalized = path.replace(/^\.?\//, '').replace(/^\/+/, '');
+      const [rawPath, query = ''] = path.split('?');
+      const normalized = rawPath.replace(/^\.?\//, '').replace(/^\/+/, '');
       const encoded = normalized.split('/').map(segment => encodeURIComponent(segment)).join('/');
+      const withQuery = (value) => query ? `${value}?${query}` : value;
       const urls = [];
       if(DATA_REMOTE_BASE){
-        urls.push(`${DATA_REMOTE_BASE}/${encoded}`);
+        urls.push(withQuery(`${DATA_REMOTE_BASE}/${encoded}`));
       }
       const original = path;
       if(!urls.includes(original)) urls.push(original);
-      if(normalized !== original && !urls.includes(normalized)) urls.push(normalized);
+      const normalizedWithQuery = withQuery(normalized);
+      if(normalizedWithQuery !== original && !urls.includes(normalizedWithQuery)) urls.push(normalizedWithQuery);
       return urls;
     }
 
@@ -2424,7 +2427,7 @@
         const bureauSlug = branch?.slug || store?.slug || '';
         if(!bureauSlug) return null;
         const encoded = encodeURIComponent(bureauSlug);
-        return `${BUREAU_EN_GROS_DEALS_API}?slug=${encoded}`;
+        return `${BUREAU_EN_GROS_DEALS_API}?storeSlug=${encoded}`;
       }
       if(s === 'best-buy'){
         return BEST_BUY_AGGREGATE_PATH;
