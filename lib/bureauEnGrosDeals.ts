@@ -13,6 +13,7 @@ export interface BureauEnGrosProduct {
   originalPrice?: number;
   currentPrice?: number;
   salePrice?: number;
+  discountPercent?: number;
   discount_price?: number;
   discountPrice?: number;
   productUrl?: string;
