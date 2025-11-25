@@ -176,7 +176,7 @@ async function extractProduct(card) {
 
   const discountPercent = computeDiscountPercent(currentPrice, originalPrice);
 
-  if (!originalPrice || !discountPercent || discountPercent <= 50) {
+  if (!title || !productUrl || !Number.isFinite(currentPrice)) {
     return null;
   }
 
