@@ -1,5 +1,10 @@
 {
-  "generatedAt": "2025-11-25T02:38:44.339Z",
+  "store": {
+    "id": "10",
+    "name": "Bureau en Gros – Greater Sudbury, ON",
+    "address": "747 Notre Dame Avenue, Greater Sudbury, ON, P3A 2T2",
+    "store": "Bureau en Gros"
+  },
   "products": [
     {
       "title": "Post-It - Feuillets éclair super collants pour distributeurs entièrement faits de papier recyclé - collection Oasis - 3\" x 3\", 420 feuilles",

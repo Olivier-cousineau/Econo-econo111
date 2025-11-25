@@ -1,5 +1,10 @@
 {
-  "generatedAt": "2025-11-25T02:38:44.339Z",
+  "store": {
+    "id": "59",
+    "name": "Bureau en Gros – Bldg. No.1, Ancaster",
+    "address": "1015 Golf Links Road, Bldg. No.1, Ancaster, ON, L9K 1L6",
+    "store": "Bureau en Gros"
+  },
   "products": [
     {
       "title": "Post-It - Feuillets éclair super collants pour distributeurs entièrement faits de papier recyclé - collection Oasis - 3\" x 3\", 420 feuilles",

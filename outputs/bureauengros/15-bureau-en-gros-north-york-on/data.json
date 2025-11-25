@@ -1,5 +1,10 @@
 {
-  "generatedAt": "2025-11-25T02:38:44.339Z",
+  "store": {
+    "id": "15",
+    "name": "Bureau en Gros – North York, ON",
+    "address": "3150 Dufferin Street, North York, ON, M6A 2T1",
+    "store": "Bureau en Gros"
+  },
   "products": [
     {
       "title": "Post-It - Feuillets éclair super collants pour distributeurs entièrement faits de papier recyclé - collection Oasis - 3\" x 3\", 420 feuilles",

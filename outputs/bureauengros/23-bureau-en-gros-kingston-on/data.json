@@ -1,5 +1,10 @@
 {
-  "generatedAt": "2025-11-25T02:38:44.339Z",
+  "store": {
+    "id": "23",
+    "name": "Bureau en Gros – Kingston, ON",
+    "address": "105 Queen Street, Kingston, ON, K7K 1A5",
+    "store": "Bureau en Gros"
+  },
   "products": [
     {
       "title": "Post-It - Feuillets éclair super collants pour distributeurs entièrement faits de papier recyclé - collection Oasis - 3\" x 3\", 420 feuilles",

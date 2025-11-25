@@ -1,5 +1,10 @@
 {
-  "generatedAt": "2025-11-25T02:38:44.339Z",
+  "store": {
+    "id": "220",
+    "name": "Bureau en Gros – Unit 5004, Sorel-Tracy",
+    "address": "450 Boulevard Poliquin, Unit 5004, Sorel-Tracy, QC, J3P 7R5",
+    "store": "Bureau en Gros"
+  },
   "products": [
     {
       "title": "Post-It - Feuillets éclair super collants pour distributeurs entièrement faits de papier recyclé - collection Oasis - 3\" x 3\", 420 feuilles",

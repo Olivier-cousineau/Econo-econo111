@@ -1,5 +1,10 @@
 {
-  "generatedAt": "2025-11-25T02:38:44.339Z",
+  "store": {
+    "id": "451",
+    "name": "Bureau en Gros – Quebec City, QC",
+    "address": "102-4605 Boulevard de l'Auvergne, Quebec City, QC, G2C 1H7",
+    "store": "Bureau en Gros"
+  },
   "products": [
     {
       "title": "Post-It - Feuillets éclair super collants pour distributeurs entièrement faits de papier recyclé - collection Oasis - 3\" x 3\", 420 feuilles",
