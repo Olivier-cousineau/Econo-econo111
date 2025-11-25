@@ -2,16 +2,17 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { readBureauEnGrosStoreDeals } from '../../../lib/bureauEnGrosDeals';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { slug } = req.query;
+  const storeSlug = String(req.query.storeSlug || req.query.store || req.query.slug || '');
 
-  if (!slug || typeof slug !== 'string') {
-    return res.status(400).json({ error: 'Missing slug' });
+  if (!storeSlug) {
+    return res.status(400).json({ error: 'Missing storeSlug' });
   }
 
   try {
-    const data = await readBureauEnGrosStoreDeals(slug);
+    const data = await readBureauEnGrosStoreDeals(storeSlug);
+    res.setHeader('Cache-Control', 's-maxage=300, stale-while-revalidate');
     res.status(200).json({
-      store: data.store,
+      store: data.store ?? null,
       products: Array.isArray(data.products) ? data.products : [],
     });
   } catch (error) {
