@@ -54,7 +54,6 @@ async function extractProducts(page) {
     const discountPercent = computeDiscountPercent(originalPrice, salePrice);
 
     if (!title || !productUrl || !salePrice || !originalPrice) continue;
-    if (!Number.isFinite(discountPercent) || discountPercent < 50) continue;
 
     products.push({
       retailer: 'Bureau en Gros',

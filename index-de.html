@@ -2043,6 +2043,7 @@
         price: finalRegular,
         salePrice: finalSale,
         store: item.store ?? storeLabel,
+        retailer: item.retailer ?? slugify(storeLabel),
         city: cityDisplay,
         branch: branchLabel ?? cityLabel,
         branchSlug,
@@ -2223,7 +2224,11 @@
           d._matchScore = 0;
         }
         d._discountPct = pct;
-        return pct >= min;
+        const retailerSlug = (d.retailer || '').toLowerCase();
+        const isBureauEnGrosDeal = retailerSlug === 'bureauengros'
+          || retailerSlug === 'bureau-en-gros'
+          || slugify(d.store || '') === 'bureau-en-gros';
+        return isBureauEnGrosDeal ? true : pct >= min;
       });
       if(terms.length){
         filtered.sort((a,b) => {
