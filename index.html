@@ -734,16 +734,11 @@
       ];
     }
 
-    const BUREAU_EN_GROS_BRANCHES_WITH_DATA = new Set(['124-laval-qc','164-saint-jerome-qc','324-toronto-on']);
-    const BUREAU_EN_GROS_SAMPLE_BRANCHES = [
-      {label:'Laval, QC', slug:'124-laval-qc', city:'Laval', province:'QC', hasData:true},
-      {label:'Saint-Jérôme, QC', slug:'164-saint-jerome-qc', city:'Saint-Jérôme', province:'QC', hasData:true},
-      {label:'Toronto, ON', slug:'324-toronto-on', city:'Toronto', province:'ON', hasData:true}
-    ];
+    const BUREAU_EN_GROS_CLEARANCE_PATH = 'outputs/bureauengros/clearance/data.json';
     let bureauEnGrosBranchCache = null;
 
     function bureauEnGrosFallbackBranches(){
-      return BUREAU_EN_GROS_SAMPLE_BRANCHES;
+      return [];
     }
 
     function bureauEnGrosBranches(){
@@ -2426,8 +2421,7 @@
       const c = branch?.slug;
       if(!s) return null;
       if(s === 'bureauengros'){
-        if(!c) return null;
-        return `outputs/bureauengros/${c}/data.json`;
+        return BUREAU_EN_GROS_CLEARANCE_PATH;
       }
       if(s === 'best-buy'){
         return BEST_BUY_AGGREGATE_PATH;
@@ -2500,27 +2494,29 @@
         if(!Array.isArray(json)) return;
         const normalized = json
           .map(entry => {
-            const city = entry?.city || entry?.name || entry?.store || '';
-            const province = entry?.province || '';
+            const address = entry?.address || '';
+            const parts = address.split(',').map(part => part.trim()).filter(Boolean);
+            const city = parts[1] || '';
+            const province = (parts[2] || '').split(/\s+/)[0] || '';
             const id = entry?.id ? String(entry.id).trim() : '';
-            const slugSource = [city, province].filter(Boolean).join(' ').trim() || entry?.address || id || entry?.name || '';
-            const citySlug = slugify(slugSource || '');
-            const slug = id && citySlug ? `${id}-${citySlug}` : citySlug;
+            const slugParts = [id, slugify(city), slugify(province)].filter(Boolean);
+            const slug = slugParts.join('-') || slugify(entry?.name || address || id || '');
             if(!slug) return null;
             const labelParts = [];
             if(city) labelParts.push(city);
             if(province) labelParts.push(province);
-            const label = labelParts.length ? labelParts.join(', ') : (entry?.address || city || 'Succursale');
+            const label = labelParts.length ? labelParts.join(', ') : (entry?.name || address || 'Succursale');
             return {
               label,
               slug,
               city: city || entry?.name || '',
-              address: entry?.address,
+              address,
               province: province || '',
               hasData: true
             };
           })
-          .filter(Boolean);
+          .filter(Boolean)
+          .sort((a,b)=>a.label.localeCompare(b.label,'fr'));
         if(!normalized.length) return;
         bureauEnGrosBranchCache = normalized;
         store.branches = normalized;

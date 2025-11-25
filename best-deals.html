@@ -522,14 +522,11 @@
       ];
     }
 
-    const BUREAU_EN_GROS_BRANCHES_WITH_DATA = new Set(['saint-jerome']);
+    const BUREAU_EN_GROS_CLEARANCE_PATH = 'outputs/bureauengros/clearance/data.json';
     let bureauEnGrosBranchCache = null;
 
     function bureauEnGrosFallbackBranches(){
-      return baseBranches().map(branch => ({
-        ...branch,
-        hasData: BUREAU_EN_GROS_BRANCHES_WITH_DATA.has(branch.slug)
-      }));
+      return [];
     }
 
     function bureauEnGrosBranches(){
@@ -1047,6 +1044,9 @@
         const s = store?.slug;
         const c = typeof branch === 'object' ? branch?.slug : branch;
         if(!s) return null;
+        if(s === 'bureauengros'){
+          return BUREAU_EN_GROS_CLEARANCE_PATH;
+        }
         if(s === 'best-buy'){
           return BEST_BUY_AGGREGATE_PATH;
         }
@@ -1114,25 +1114,29 @@
         if(!Array.isArray(json)) return;
         const normalized = json
           .map(entry => {
-            const city = entry?.city || entry?.name || '';
-            const provincePostal = entry?.provinceAndPostal || '';
-            const province = provincePostal.split(/\s+/)[0] || '';
-            const slug = slugify(city || entry?.address || entry?.id || '');
+            const address = entry?.address || '';
+            const parts = address.split(',').map(part => part.trim()).filter(Boolean);
+            const city = parts[1] || '';
+            const province = (parts[2] || '').split(/\s+/)[0] || '';
+            const id = entry?.id ? String(entry.id).trim() : '';
+            const slugParts = [id, slugify(city), slugify(province)].filter(Boolean);
+            const slug = slugParts.join('-') || slugify(entry?.name || address || id || '');
             if(!slug) return null;
             const labelParts = [];
             if(city) labelParts.push(city);
             if(province) labelParts.push(province);
-            const label = labelParts.length ? labelParts.join(', ') : (entry?.address || city || 'Succursale');
+            const label = labelParts.length ? labelParts.join(', ') : (entry?.name || address || 'Succursale');
             return {
               label,
               slug,
               city: city || entry?.name || '',
-              address: entry?.address,
+              address,
               province: province || '',
-              hasData: BUREAU_EN_GROS_BRANCHES_WITH_DATA.has(slug)
+              hasData: true
             };
           })
-          .filter(Boolean);
+          .filter(Boolean)
+          .sort((a,b)=>a.label.localeCompare(b.label,'fr'));
         if(!normalized.length) return;
         bureauEnGrosBranchCache = normalized;
         store.branches = normalized;
