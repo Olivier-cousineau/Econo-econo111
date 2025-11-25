@@ -1047,7 +1047,7 @@
         if(store?.group === 'bureauengros' || s === 'bureauengros'){
           const bureauSlug = branch?.slug || store?.slug || '';
           if(!bureauSlug) return null;
-          return `${BUREAU_EN_GROS_OUTPUTS_PATH}/${bureauSlug}/data.json`;
+          return `/api/bureau-en-gros/deals?slug=${bureauSlug}`;
         }
         if(s === 'best-buy'){
           return BEST_BUY_AGGREGATE_PATH;
