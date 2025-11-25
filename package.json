@@ -34,7 +34,7 @@
     "scrape:canadiantire": "node scripts/run_canadiantire_matrix.js",
     "publish-canadiantire-public": "node scripts/publish_canadiantire_public.js",
     "convert:bureauengros": "node scripts/convert_bureauengros_locations.js",
-    "scrape:bureauengros": "node scripts/scraper_bureauengros_clearance.js",
+    "scrape:bureauengros": "node scripts/run_bureauengros_clearance.js",
     "distribute:bureauengros": "node scripts/distribute_bureauengros_clearance.js"
   }
 }

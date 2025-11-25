@@ -7,7 +7,7 @@ import slugify from "slugify";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const MASTER_PATH = path.join(__dirname, "..", "outputs", "bureauengros", "clearance", "data.json");
+const MASTER_PATH = path.join(__dirname, "..", "outputs", "bureauengros", "clearance.json");
 const BRANCHES_PATH = path.join(__dirname, "..", "data", "bureauengros", "branches.json");
 
 function ensureFile(filePath, label) {
@@ -66,7 +66,7 @@ function main() {
     process.exit(1);
   }
 
-  const products = Array.isArray(master?.products) ? master.products : [];
+  const products = Array.isArray(master) ? master : Array.isArray(master?.products) ? master.products : [];
   if (!products.length) {
     console.warn("⚠️ No products found in national clearance data; outputs will be empty.");
   }

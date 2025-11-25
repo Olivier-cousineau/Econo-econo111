@@ -522,7 +522,7 @@
       ];
     }
 
-    const BUREAU_EN_GROS_CLEARANCE_PATH = 'outputs/bureauengros/clearance/data.json';
+    const BUREAU_EN_GROS_CLEARANCE_PATH = 'outputs/bureauengros/clearance.json';
     let bureauEnGrosBranchCache = null;
 
     function bureauEnGrosFallbackBranches(){
@@ -1241,18 +1241,28 @@
         const tasks = [];
         for(const store of STORES){
           const branches = store.branches ?? [];
+          if(store.slug === 'bureauengros'){
+            const branchContexts = [{label:'National clearance', slug:'bureauengros-national', city:'Canada'}];
+            const nationalPath = filePathFor(store, branchContexts[0]);
+            for(const branch of branchContexts){
+              if(!branchHasDeals(store, branch)) continue;
+              if(nationalPath) tasks.push({store, branch, path: nationalPath, cacheKey: nationalPath});
+            }
+            continue;
+          }
           for(const branch of branches){
             if(!branchHasDeals(store, branch)) continue;
             const path = filePathFor(store, branch);
-            if(path) tasks.push({store, branch, path});
+            if(path) tasks.push({store, branch, path, cacheKey: path});
           }
         }
         const seen = new Set();
         const aggregated = [];
         let latestUpdated = 0;
         for(const task of tasks){
-          if(seen.has(task.path)) continue;
-          seen.add(task.path);
+          const key = task.cacheKey || task.path;
+          if(seen.has(key)) continue;
+          seen.add(key);
           const {entries, updatedAt} = await fetchOne(task.path, task.store.label, task.branch);
           for(const entry of entries){ aggregated.push(entry); }
           if(updatedAt && updatedAt > latestUpdated){ latestUpdated = updatedAt; }
