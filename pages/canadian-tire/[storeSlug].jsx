@@ -1,40 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
-import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next';
 import { useMemo, useState } from 'react';
-
-interface RawProduct {
-  title?: string;
-  sku?: string;
-  product_sku?: string;
-  product_id?: string | number | null;
-  url?: string;
-  image?: string;
-  price?: number;
-  sale_price?: number | null;
-  regular_price?: number | null;
-  price_raw?: string;
-  sale_price_raw?: string | null;
-  regular_price_raw?: string | null;
-  liquidation?: boolean;
-  liquidation_price?: number | null;
-  liquidation_price_raw?: string | null;
-  availability?: string | null;
-  store_id?: string;
-  city?: string;
-  [key: string]: unknown;
-}
-
-interface StoreProduct extends RawProduct {
-  storeId: string;
-  city: string;
-  storeSlug: string;
-}
 
 const PAGE_SIZE = 48;
 
-const slugToLabel = (slug: string) => {
+const slugToLabel = (slug) => {
   const [storeIdFromSlug, ...citySegments] = slug.split('-');
   const citySlug = citySegments.join('-');
   const cityLabel = citySlug ? citySlug.replace(/-/g, ' ') : 'Unknown';
@@ -42,33 +13,9 @@ const slugToLabel = (slug: string) => {
   return { storeId, city: cityLabel };
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const outputsRoot = path.join(process.cwd(), 'outputs', 'canadiantire');
-  let dirEntries: fs.Dirent[] = [];
+export const getStaticPaths = async () => ({ paths: [], fallback: 'blocking' });
 
-  try {
-    dirEntries = await fs.promises.readdir(outputsRoot, { withFileTypes: true });
-  } catch (error) {
-    console.error('Unable to read outputs/canadiantire directory for paths', error);
-    return { paths: [], fallback: 'blocking' };
-  }
-
-  const paths = dirEntries
-    .filter((entry) => entry.isDirectory())
-    .map((entry) => ({ params: { storeSlug: entry.name } }));
-
-  return {
-    paths,
-    fallback: 'blocking',
-  };
-};
-
-export const getStaticProps: GetStaticProps<{
-  products: StoreProduct[];
-  storeId: string;
-  city: string;
-  storeSlug: string;
-}> = async ({ params }) => {
+export const getStaticProps = async ({ params }) => {
   const storeSlug = typeof params?.storeSlug === 'string' ? params.storeSlug : '';
   if (!storeSlug) {
     return { notFound: true };
@@ -79,7 +26,7 @@ export const getStaticProps: GetStaticProps<{
     return { notFound: true };
   }
 
-  let fileContents: string;
+  let fileContents;
   try {
     fileContents = await fs.promises.readFile(dataPath, 'utf-8');
   } catch (error) {
@@ -87,7 +34,7 @@ export const getStaticProps: GetStaticProps<{
     return { notFound: true };
   }
 
-  let parsed: unknown;
+  let parsed;
   try {
     parsed = JSON.parse(fileContents);
   } catch (error) {
@@ -95,13 +42,13 @@ export const getStaticProps: GetStaticProps<{
     return { notFound: true };
   }
 
-  const rawProducts: RawProduct[] = Array.isArray(parsed) ? parsed : [];
+  const rawProducts = Array.isArray(parsed) ? parsed : [];
   if (rawProducts.length === 0) {
     return { notFound: true };
   }
 
   const { storeId, city } = slugToLabel(storeSlug);
-  const products: StoreProduct[] = rawProducts.map((product, index) => ({
+  const products = rawProducts.map((product, index) => ({
     ...product,
     storeId: String(product.store_id ?? storeId),
     city: String(product.city ?? city),
@@ -120,7 +67,7 @@ export const getStaticProps: GetStaticProps<{
   };
 };
 
-const formatCurrency = (value?: number | null, fallbackRaw?: string | null) => {
+const formatCurrency = (value, fallbackRaw) => {
   if (typeof value === 'number') {
     return new Intl.NumberFormat('en-CA', { style: 'currency', currency: 'CAD' }).format(value);
   }
@@ -130,7 +77,7 @@ const formatCurrency = (value?: number | null, fallbackRaw?: string | null) => {
   return 'N/A';
 };
 
-const computeDiscount = (product: RawProduct) => {
+const computeDiscount = (product) => {
   const regular = product.regular_price ?? product.price ?? null;
   const liquidation = product.liquidation_price ?? product.sale_price ?? null;
   if (typeof regular === 'number' && typeof liquidation === 'number' && regular > 0) {
@@ -140,12 +87,7 @@ const computeDiscount = (product: RawProduct) => {
   return null;
 };
 
-const StorePage = ({
-  products,
-  storeId,
-  city,
-  storeSlug,
-}: InferGetStaticPropsType<typeof getStaticProps>) => {
+const StorePage = ({ products, storeId, city, storeSlug }) => {
   const [page, setPage] = useState(1);
   const totalPages = Math.max(1, Math.ceil(products.length / PAGE_SIZE));
 

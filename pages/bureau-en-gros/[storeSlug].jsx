@@ -1,42 +1,17 @@
 import fs from "fs";
-import { GetStaticPaths, GetStaticProps } from "next";
 import Link from "next/link";
 import {
   getAllBureauEnGrosStores,
   getBureauEnGrosStoreBySlug,
-  BureauEnGrosStore,
 } from "../../lib/bureauEnGrosDeals";
 
-type Deal = {
-  title?: string;
-  priceCurrent?: number | string;
-  priceOriginal?: number | string;
-  discountPercent?: number;
-  imageUrl?: string;
-  url?: string;
-  [key: string]: any;
-};
+export const getStaticPaths = async () => ({
+  paths: [],
+  fallback: "blocking",
+});
 
-type Props = {
-  store: BureauEnGrosStore;
-  deals: Deal[];
-};
-
-export const getStaticPaths: GetStaticPaths = async () => {
-  const stores = getAllBureauEnGrosStores();
-
-  const paths = stores.map((store) => ({
-    params: { storeSlug: store.slug },
-  }));
-
-  return {
-    paths,
-    fallback: false,
-  };
-};
-
-export const getStaticProps: GetStaticProps<Props> = async (ctx) => {
-  const slug = ctx.params?.storeSlug as string;
+export const getStaticProps = async (ctx) => {
+  const slug = ctx.params?.storeSlug;
   const store = getBureauEnGrosStoreBySlug(slug);
 
   if (!store) {
@@ -45,7 +20,7 @@ export const getStaticProps: GetStaticProps<Props> = async (ctx) => {
     };
   }
 
-  let deals: Deal[] = [];
+  let deals = [];
 
   try {
     const raw = fs.readFileSync(store.jsonPath, "utf8");
@@ -89,7 +64,7 @@ export const getStaticProps: GetStaticProps<Props> = async (ctx) => {
   };
 };
 
-export default function BureauEnGrosStorePage({ store, deals }: Props) {
+export default function BureauEnGrosStorePage({ store, deals }) {
   return (
     <main style={{ padding: "2rem", maxWidth: 1000, margin: "0 auto" }}>
       <p>
