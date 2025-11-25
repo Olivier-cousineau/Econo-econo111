@@ -2575,6 +2575,23 @@
       }
     }
 
+    function normalizeBureauEnGrosItem(item){
+      if(!item || typeof item !== 'object') return item;
+      const productUrl = item.productUrl ?? item.url ?? item.link;
+      const image = item.image ?? item.imageUrl ?? item.image_url;
+      return {
+        ...item,
+        url: productUrl ?? item.url ?? item.link,
+        link: productUrl ?? item.link ?? item.url,
+        image,
+        image_url: item.image_url ?? image,
+        imageUrl: item.imageUrl ?? image,
+        regularPrice: item.regularPrice ?? item.originalPrice ?? item.price,
+        salePrice: item.salePrice ?? item.currentPrice ?? item.price,
+        price: item.price ?? item.originalPrice ?? item.currentPrice
+      };
+    }
+
     async function fetchOne(path, storeLabel, branch){
       try{
         const res = await fetchDataJson(path);
@@ -2584,7 +2601,10 @@
           ? json
           : (Array.isArray(json?.products) ? json.products : []);
         if(!Array.isArray(entries) || entries.length === 0) return [];
-        const normalized = entries.map(item => normalizeDeal(item, storeLabel, branch));
+        const prepared = storeLabel === 'Bureau en Gros'
+          ? entries.map(normalizeBureauEnGrosItem)
+          : entries;
+        const normalized = prepared.map(item => normalizeDeal(item, storeLabel, branch));
         const needsFallback =
           (normalized.length === 0 || normalized.every(deal => !hasRealImage(deal))) && path === AMAZON_DAILY_PATH;
         if(needsFallback){
