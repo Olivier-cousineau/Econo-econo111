@@ -1,81 +1,57 @@
+import fs from "fs";
+import path from "path";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import {
   buildBureauEnGrosStore,
   filterVisibleBureauEnGrosDeals,
-} from "../../lib/bureauEnGrosDeals";
+} from "../../../lib/bureauEnGrosDeals";
 
-export const getStaticPaths = async () => {
-  const fs = await import("fs");
-  const path = await import("path");
+const OUTPUT_DIR = path.join(process.cwd(), "outputs", "bureauengros");
 
-  const baseDir = path.join(process.cwd(), "outputs", "bureauengros");
-
-  let slugs = [];
-
-  if (fs.existsSync(baseDir)) {
-    const entries = fs.readdirSync(baseDir, { withFileTypes: true });
-    slugs = entries.filter((entry) => entry.isDirectory()).map((entry) => entry.name);
+function readStoreSlugs() {
+  if (!fs.existsSync(OUTPUT_DIR)) {
+    return [];
   }
 
-  return {
-    paths: slugs.map((slug) => ({ params: { storeSlug: slug } })),
-    fallback: "blocking",
-  };
-};
+  const entries = fs.readdirSync(OUTPUT_DIR, { withFileTypes: true });
+  return entries.filter((entry) => entry.isDirectory()).map((entry) => entry.name);
+}
 
-export const getStaticProps = async (ctx) => {
-  const fs = await import("fs");
-  const path = await import("path");
+export async function generateStaticParams() {
+  const slugs = readStoreSlugs();
 
-  const slug = ctx.params?.storeSlug;
-  const baseDir = path.join(process.cwd(), "outputs", "bureauengros");
-  const jsonPath = path.join(baseDir, slug, "data.json");
+  return slugs.map((slug) => ({ storeSlug: slug }));
+}
+
+function readStoreDeals(storeSlug) {
+  const jsonPath = path.join(OUTPUT_DIR, storeSlug, "data.json");
 
   if (!fs.existsSync(jsonPath)) {
-    return {
-      notFound: true,
-    };
+    return { jsonPath, deals: null };
   }
-
-  let deals = [];
 
   try {
     const raw = fs.readFileSync(jsonPath, "utf8");
     const parsed = JSON.parse(raw);
-    if (Array.isArray(parsed)) {
-      deals = parsed;
-    } else {
-      console.warn(
-        "[BureauEnGros] JSON is not an array for store",
-        slug,
-        jsonPath,
-      );
-    }
-  } catch (err) {
-    console.error(
-      "[BureauEnGros] Failed to read data.json for store",
-      slug,
-      jsonPath,
-      err,
-    );
+    return { jsonPath, deals: Array.isArray(parsed) ? parsed : null };
+  } catch (error) {
+    console.error("[BureauEnGros] Failed to read data.json for store", storeSlug, jsonPath, error);
+    return { jsonPath, deals: null };
+  }
+}
+
+export default async function BureauEnGrosStorePage({ params }) {
+  const slug = params.storeSlug;
+  const { jsonPath, deals } = readStoreDeals(slug);
+
+  if (!deals) {
+    notFound();
   }
 
   const visibleDeals = filterVisibleBureauEnGrosDeals(deals);
   const store = buildBureauEnGrosStore(slug, deals.length, jsonPath);
 
-  console.log(
-    `[DEBUG] Bureau en Gros store ${slug}: total deals = ${deals.length}, visible = ${visibleDeals.length}`,
-  );
-
-  return {
-    props: {
-      store,
-      deals: visibleDeals,
-    },
-  };
-};
-
-export default function BureauEnGrosStorePage({ store, deals }) {
   return (
     <main style={{ padding: "2rem", maxWidth: 1000, margin: "0 auto" }}>
       <p>
@@ -87,14 +63,13 @@ export default function BureauEnGrosStorePage({ store, deals }) {
         Fichier : <code>{store.jsonPath}</code>
       </p>
       <p>
-        Nombre de produits affichés : <strong>{deals.length}</strong>
+        Nombre de produits affichés : <strong>{visibleDeals.length}</strong>
       </p>
 
-      {deals.length === 0 && (
+      {visibleDeals.length === 0 && (
         <p>
-          Aucun produit valide trouvé dans ce fichier. Vérifie que le data.json
-          contient bien un tableau d&apos;objets avec au moins
-          <code>title</code> et <code>priceCurrent</code>.
+          Aucun produit valide trouvé dans ce fichier. Vérifie que le data.json contient bien un
+          tableau d&apos;objets avec au moins <code>title</code> et <code>priceCurrent</code>.
         </p>
       )}
 
@@ -106,7 +81,7 @@ export default function BureauEnGrosStorePage({ store, deals }) {
           marginTop: "1rem",
         }}
       >
-        {deals.map((deal, idx) => (
+        {visibleDeals.map((deal, idx) => (
           <article
             key={idx}
             style={{
@@ -135,9 +110,7 @@ export default function BureauEnGrosStorePage({ store, deals }) {
             {deal.priceOriginal && (
               <p>
                 <strong>Prix original : </strong>
-                <span style={{ textDecoration: "line-through" }}>
-                  {deal.priceOriginal}
-                </span>
+                <span style={{ textDecoration: "line-through" }}>{deal.priceOriginal}</span>
               </p>
             )}
             {typeof deal.discountPercent === "number" && (
@@ -148,7 +121,19 @@ export default function BureauEnGrosStorePage({ store, deals }) {
             )}
             {deal.url && (
               <p>
-                <a href={deal.url} target="_blank" rel="noreferrer">
+                <a
+                  href={deal.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{
+                    display: "inline-block",
+                    padding: "0.5rem 0.75rem",
+                    background: "#2563eb",
+                    color: "#fff",
+                    borderRadius: 6,
+                    textDecoration: "none",
+                  }}
+                >
                   Voir le produit
                 </a>
               </p>
