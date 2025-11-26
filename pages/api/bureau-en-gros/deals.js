@@ -1,49 +1,45 @@
-import fs from 'fs';
-import path from 'path';
+// pages/api/bureau-en-gros/deals.js
 
-const ROOT_DIR = process.cwd();
-const BUREAU_EN_GROS_OUTPUT_DIR = path.join(ROOT_DIR, 'outputs', 'bureauengros');
+import fs from "fs";
+import path from "path";
 
-function readBureauEnGrosStoreDeals(storeSlug) {
-  const storeDir = path.join(BUREAU_EN_GROS_OUTPUT_DIR, storeSlug);
-  const jsonPath = path.join(storeDir, 'data.json');
-
-  if (!fs.existsSync(jsonPath)) {
-    return null;
-  }
-
+export default function handler(req, res) {
   try {
-    const raw = fs.readFileSync(jsonPath, 'utf8');
-    const parsed = JSON.parse(raw);
-    return parsed && typeof parsed === 'object' ? parsed : null;
-  } catch (error) {
-    console.error(`Failed to read Bureau en Gros deals for slug: ${storeSlug}`, error);
-    return null;
-  }
-}
+    const { storeSlug } = req.query;
 
-export default async function handler(req, res) {
-  const storeSlug = String(req.query.storeSlug || req.query.store || req.query.slug || '');
-
-  if (!storeSlug) {
-    return res.status(400).json({ error: 'Missing storeSlug' });
-  }
-
-  try {
-    const data = readBureauEnGrosStoreDeals(storeSlug);
-
-    if (!data) {
-      res.status(404).json({ error: 'Store not found or unavailable' });
-      return;
+    if (!storeSlug) {
+      return res
+        .status(400)
+        .json({ error: "Missing required query param: storeSlug" });
     }
 
-    res.setHeader('Cache-Control', 's-maxage=300, stale-while-revalidate');
-    res.status(200).json({
-      store: data.store ?? null,
-      products: Array.isArray(data.products) ? data.products : [],
+    // IMPORTANT : dossier réel sur le repo
+    // /outputs/bureauengros/<store-slug>/data.json
+    const baseDir = path.join(process.cwd(), "outputs", "bureauengros");
+    const jsonPath = path.join(baseDir, storeSlug, "data.json");
+
+    if (!fs.existsSync(jsonPath)) {
+      return res.status(404).json({
+        error: "Store JSON file not found",
+        jsonPath,
+      });
+    }
+
+    const raw = fs.readFileSync(jsonPath, "utf8");
+    const deals = JSON.parse(raw);
+
+    // Tu peux ajouter des filtres ici si tu veux (minDiscount, search, etc.)
+    // Pour l’instant, on renvoie tout tel quel pour vérifier que ça marche.
+    return res.status(200).json({
+      storeSlug,
+      count: Array.isArray(deals) ? deals.length : 0,
+      deals,
     });
-  } catch (error) {
-    console.error('Failed to load Bureau en Gros deals via dedicated API', error);
-    res.status(500).json({ error: 'Unable to load store data' });
+  } catch (err) {
+    console.error("[BUREAU-EN-GROS API ERROR]", err);
+    return res.status(500).json({
+      error: "Internal server error",
+      message: err.message,
+    });
   }
 }
