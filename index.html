@@ -2440,7 +2440,8 @@
       const s = store?.slug;
       const c = branch?.slug;
       if(!s) return null;
-      if(store?.group === 'bureauengros' || s === 'bureauengros'){
+      const normalizedGroup = store?.group === 'bureau-en-gros' ? 'bureauengros' : store?.group;
+      if(normalizedGroup === 'bureauengros' || s === 'bureauengros' || s === 'bureau-en-gros'){
         const bureauSlug = branch?.slug || store?.slug || '';
         if(!bureauSlug) return null;
         const encoded = encodeURIComponent(bureauSlug);
