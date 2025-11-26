@@ -5,22 +5,24 @@ import path from "path";
 
 export default function handler(req, res) {
   try {
-    const { storeSlug } = req.query;
+    // On accepte ?store=... ou ?storeSlug=...
+    const slug = req.query.store || req.query.storeSlug;
 
-    if (!storeSlug) {
-      return res
-        .status(400)
-        .json({ error: "Missing required query param: storeSlug" });
+    if (!slug) {
+      return res.status(400).json({
+        error: "Missing required query param: 'store' (or 'storeSlug')",
+      });
     }
 
-    // IMPORTANT : dossier réel sur le repo
-    // /outputs/bureauengros/<store-slug>/data.json
+    // Dossier réel dans le repo :
+    // outputs/bureauengros/<slug>/data.json
     const baseDir = path.join(process.cwd(), "outputs", "bureauengros");
-    const jsonPath = path.join(baseDir, storeSlug, "data.json");
+    const jsonPath = path.join(baseDir, slug, "data.json");
 
     if (!fs.existsSync(jsonPath)) {
       return res.status(404).json({
         error: "Store JSON file not found",
+        slug,
         jsonPath,
       });
     }
@@ -28,10 +30,8 @@ export default function handler(req, res) {
     const raw = fs.readFileSync(jsonPath, "utf8");
     const deals = JSON.parse(raw);
 
-    // Tu peux ajouter des filtres ici si tu veux (minDiscount, search, etc.)
-    // Pour l’instant, on renvoie tout tel quel pour vérifier que ça marche.
     return res.status(200).json({
-      storeSlug,
+      store: slug,
       count: Array.isArray(deals) ? deals.length : 0,
       deals,
     });
