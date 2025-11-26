@@ -1,4 +1,14 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/bureau-en-gros",
+      "destination": "/"
+    },
+    {
+      "source": "/bureau-en-gros/",
+      "destination": "/"
+    }
+  ]
 }
