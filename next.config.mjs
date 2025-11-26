@@ -3,7 +3,7 @@ const nextConfig = {
     return [
       {
         source: "/bureau-en-gros",
-        destination: "/bureau-en-gros",
+        destination: "/",
       },
     ];
   },
