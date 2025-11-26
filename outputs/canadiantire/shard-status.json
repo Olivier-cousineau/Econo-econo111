@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2025-11-23T18:02:45.878Z",
+  "generatedAt": "2025-11-26T08:18:13.641Z",
   "stores": [
     {
-      "id": "174",
-      "city": "Ottawa East, ON",
+      "id": "271",
+      "city": "St. Jerome, QC",
       "status": "committed",
-      "details": "343 produits"
+      "details": "2009 produits"
     },
     {
-      "id": "191",
-      "city": "Gatineau, QC",
+      "id": "649",
+      "city": "Blainville, QC",
       "status": "committed",
-      "details": "453 produits"
+      "details": "652 produits"
     },
     {
-      "id": "120",
-      "city": "Morrisburg, ON",
+      "id": "418",
+      "city": "Rosemere, QC",
       "status": "committed",
-      "details": "259 produits"
+      "details": "646 produits"
     },
     {
-      "id": "210",
-      "city": "Ottawa South, ON",
+      "id": "641",
+      "city": "La Plaine, QC",
       "status": "committed",
-      "details": "429 produits"
+      "details": "702 produits"
     },
     {
-      "id": "176",
-      "city": "Hull, QC",
+      "id": "218",
+      "city": "St. Eustache, QC",
       "status": "committed",
-      "details": "337 produits"
+      "details": "993 produits"
     },
     {
-      "id": "648",
-      "city": "Mont-Laurier, QC",
+      "id": "690",
+      "city": "Laval Fabreville, QC",
       "status": "committed",
-      "details": "361 produits"
+      "details": "799 produits"
     },
     {
-      "id": "258",
-      "city": "Ottawa Merivale, ON",
+      "id": "312",
+      "city": "Terrebonne, QC",
       "status": "committed",
-      "details": "263 produits"
+      "details": "704 produits"
     },
     {
-      "id": "318",
-      "city": "Gatineau Le Plateau, QC",
+      "id": "231",
+      "city": "Laval Vimont, QC",
       "status": "committed",
-      "details": "878 produits"
+      "details": "938 produits"
     }
   ],
   "failedTwice": [],
