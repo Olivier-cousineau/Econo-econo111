@@ -1047,7 +1047,8 @@
         const s = store?.slug;
         const c = typeof branch === 'object' ? branch?.slug : branch;
         if(!s) return null;
-        if(store?.group === 'bureauengros' || s === 'bureauengros'){
+        const normalizedGroup = store?.group === 'bureau-en-gros' ? 'bureauengros' : store?.group;
+        if(normalizedGroup === 'bureauengros' || s === 'bureauengros' || s === 'bureau-en-gros'){
           const bureauSlug = branch?.slug || store?.slug || '';
           if(!bureauSlug) return null;
           return `/api/bureau-en-gros/deals?storeSlug=${encodeURIComponent(bureauSlug)}`;
