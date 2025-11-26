@@ -8,8 +8,19 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const repoRoot = path.join(__dirname, "..");
-const MASTER_PATH = path.join(repoRoot, "outputs", "bureauengros", "clearance", "data.json");
-const BRANCHES_PATH = path.join(repoRoot, "data", "bureauengros", "branches.json");
+const MASTER_PATH = path.join(
+  repoRoot,
+  "outputs",
+  "bureauengros",
+  "clearance",
+  "data.json",
+);
+const BRANCHES_PATH = path.join(
+  repoRoot,
+  "data",
+  "bureauengros",
+  "branches.json",
+);
 
 function ensureFile(filePath, label) {
   if (!fs.existsSync(filePath)) {
@@ -29,7 +40,7 @@ function readJson(filePath, label) {
 }
 
 function slugifyStore(store) {
-  const nameSource = store?.name || store?.city || store?.store || "store";
+  const nameSource = store?.name ?? "store";
   const slugName = slugify(nameSource, { lower: true, strict: true });
   const idPart = String(store?.id ?? "").trim();
   return idPart ? `${idPart}-${slugName}` : slugName;
@@ -41,7 +52,7 @@ function writeStoreOutput(store, products) {
     "..",
     "outputs",
     "bureauengros",
-    slugifyStore(store)
+    slugifyStore(store),
   );
   fs.mkdirSync(folder, { recursive: true });
 
@@ -52,13 +63,15 @@ function writeStoreOutput(store, products) {
 
   const outputPath = path.join(folder, "data.json");
   fs.writeFileSync(outputPath, JSON.stringify(payload, null, 2), "utf8");
-  console.log(`📝 Wrote ${products.length} clearance products for ${store?.name || store?.city || "store"} to ${outputPath}`);
+  console.log(
+    `📝 Wrote ${products.length} clearance products for ${store?.name || "store"} to ${outputPath}`,
+  );
 }
 
 function main() {
   if (!fs.existsSync(MASTER_PATH)) {
     console.warn(
-      `⚠️ No national clearance data found at ${MASTER_PATH}, nothing to distribute.`
+      `⚠️ No national clearance data found at ${MASTER_PATH}, nothing to distribute.`,
     );
     process.exit(0);
   }
@@ -73,9 +86,15 @@ function main() {
     process.exit(1);
   }
 
-  const products = Array.isArray(master) ? master : Array.isArray(master?.products) ? master.products : [];
+  const products = Array.isArray(master)
+    ? master
+    : Array.isArray(master?.products)
+      ? master.products
+      : [];
   if (!products.length) {
-    console.warn("⚠️ No products found in national clearance data; outputs will be empty.");
+    console.warn(
+      "⚠️ No products found in national clearance data; outputs will be empty.",
+    );
   }
 
   branches.forEach((store) => {
