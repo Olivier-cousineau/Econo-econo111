@@ -4,146 +4,195 @@ import fs from "fs";
 import path from "path";
 
 export async function getStaticProps() {
-  const filePath = path.join(
-    process.cwd(),
-    "outputs",
-    "bureauengros",
-    "102-bureau-en-gros-welland-on",
-    "data.json"
-  );
+  const baseDir = path.join(process.cwd(), "outputs", "bureauengros");
 
-  const raw = await fs.readFile(filePath, "utf-8");
-  const parsed = JSON.parse(raw);
+  // Si jamais le dossier n'existe pas encore
+  if (!fs.existsSync(baseDir)) {
+    console.warn("⚠️ outputs/bureauengros n'existe pas encore");
+    return {
+      props: {
+        stores: [],
+      },
+      revalidate: 300,
+    };
+  }
+
+  // On liste tous les éléments dans outputs/bureauengros
+  const entries = fs.readdirSync(baseDir, { withFileTypes: true });
+
+  const stores = [];
+
+  for (const entry of entries) {
+    // On ne veut que les dossiers (les magasins)
+    if (!entry.isDirectory()) continue;
+
+    const slug = entry.name; // ex: "102-bureau-en-gros-welland-on"
+    const filePath = path.join(baseDir, slug, "data.json");
+
+    try {
+      const raw = fs.readFileSync(filePath, "utf-8");
+      const json = JSON.parse(raw);
+
+      const storeMeta = json.store || {};
+      const products = Array.isArray(json.products) ? json.products : [];
+
+      stores.push({
+        slug,
+        store: {
+          id: storeMeta.id || null,
+          name: storeMeta.name || slug,
+          address: storeMeta.address || "",
+        },
+        products,
+      });
+    } catch (err) {
+      if (err.code === "ENOENT") {
+        console.warn("⚠️ Fichier manquant pour Bureau en Gros :", slug);
+        // On ignore ce magasin au lieu de casser le build
+        continue;
+      }
+      console.error("Erreur en lisant le magasin Bureau en Gros :", slug, err);
+      // on continue quand même avec les autres magasins
+      continue;
+    }
+  }
+
+  // On trie les magasins par nom pour une belle présentation
+  stores.sort((a, b) => {
+    return (a.store.name || "").localeCompare(b.store.name || "");
+  });
 
   return {
     props: {
-      store: parsed.store ?? null,
-      products: parsed.products ?? [],
+      stores,
     },
+    revalidate: 300, // re-build toutes les 5 minutes
   };
 }
 
-export default function BureauEnGrosPage({ store, products }) {
+export default function BureauEnGrosPage({ stores }) {
   return (
-    <main style={{ padding: "2rem", maxWidth: 1200, margin: "0 auto" }}>
-      <header style={{ marginBottom: "1.5rem" }}>
-        <p style={{ color: "#666", margin: 0 }}>Liquidations</p>
-        <h1 style={{ margin: "0.25rem 0" }}>{store?.name ?? "Bureau en Gros"}</h1>
-        {store?.address && <p style={{ margin: 0 }}>{store.address}</p>}
-        <p style={{ margin: "0.5rem 0 0", color: "#666" }}>
-          {products.length} article{products.length > 1 ? "s" : ""} en liquidation
-          à cette succursale.
-        </p>
-      </header>
+    <main style={{ maxWidth: "1200px", margin: "0 auto", padding: "2rem 1rem" }}>
+      <h1 style={{ fontSize: "2rem", fontWeight: "700", marginBottom: "0.5rem" }}>
+        Liquidations Bureau en Gros
+      </h1>
+      <p style={{ marginBottom: "1.5rem" }}>
+        Magasins suivis : <strong>{stores?.length || 0}</strong>
+      </p>
 
-      <section
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))",
-          gap: "1rem",
-        }}
-      >
-        {products.map((product) => (
-          <article
-            key={product.productUrl}
+      {(!stores || stores.length === 0) && (
+        <p>Aucun magasin disponible pour le moment.</p>
+      )}
+
+      {stores.map((store) => (
+        <section
+          key={store.slug}
+          style={{
+            marginTop: "2rem",
+            paddingTop: "1.5rem",
+            borderTop: "1px solid #e5e5e5",
+          }}
+        >
+          <h2 style={{ fontSize: "1.3rem", fontWeight: "600", marginBottom: "0.25rem" }}>
+            {store.store?.name || store.slug}
+          </h2>
+          {store.store?.address && (
+            <p style={{ marginBottom: "0.5rem", color: "#555" }}>{store.store.address}</p>
+          )}
+          <p style={{ marginBottom: "0.75rem" }}>
+            Produits en liquidation : <strong>{store.products.length}</strong>
+          </p>
+
+          <div
             style={{
-              border: "1px solid #e5e7eb",
-              borderRadius: 12,
-              padding: "1rem",
-              background: "#fff",
-              boxShadow: "0 4px 8px rgba(0,0,0,0.04)",
-              display: "flex",
-              flexDirection: "column",
-              gap: "0.5rem",
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+              gap: "1rem",
+              marginTop: "0.5rem",
             }}
           >
-            {product.imageUrl && (
-              <div
+            {store.products.map((product, index) => (
+              <article
+                key={`${store.slug}-${index}`}
                 style={{
-                  width: "100%",
-                  paddingTop: "65%",
-                  position: "relative",
-                  overflow: "hidden",
-                  borderRadius: 8,
-                  background: "#f9fafb",
+                  border: "1px solid #e5e5e5",
+                  borderRadius: "8px",
+                  padding: "0.75rem",
+                  background: "#fff",
                 }}
               >
-                <img
-                  src={product.imageUrl}
-                  alt={product.title}
-                  style={{
-                    position: "absolute",
-                    inset: 0,
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "contain",
-                  }}
-                />
-              </div>
-            )}
+                {product.imageUrl && (
+                  <div style={{ marginBottom: "0.5rem" }}>
+                    <img
+                      src={product.imageUrl}
+                      alt={product.title || ""}
+                      style={{
+                        width: "100%",
+                        height: "160px",
+                        objectFit: "contain",
+                      }}
+                    />
+                  </div>
+                )}
 
-            <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
-              <h2 style={{ fontSize: "1rem", margin: 0, lineHeight: 1.4 }}>
-                {product.title}
-              </h2>
-              {product.discountPercent != null && (
-                <span
+                <h3
                   style={{
-                    alignSelf: "flex-start",
-                    background: "#dcfce7",
-                    color: "#166534",
-                    fontWeight: 600,
-                    borderRadius: 6,
-                    padding: "0.15rem 0.5rem",
-                    fontSize: "0.9rem",
+                    fontSize: "0.95rem",
+                    fontWeight: "600",
+                    marginBottom: "0.25rem",
                   }}
                 >
-                  -{product.discountPercent}%
-                </span>
-              )}
-              <p style={{ margin: 0, fontSize: "0.95rem" }}>
-                <strong style={{ fontSize: "1.1rem" }}>
-                  {product.currentPrice != null
-                    ? `${product.currentPrice.toFixed(2)} $`
-                    : "Prix non disponible"}
-                </strong>
-                {product.originalPrice && (
-                  <span
+                  {product.title}
+                </h3>
+
+                <div style={{ fontSize: "0.9rem", marginBottom: "0.25rem" }}>
+                  {product.currentPrice != null && (
+                    <div>
+                      Prix actuel :{" "}
+                      <strong>
+                        {product.currentPrice}
+                        $
+                      </strong>
+                    </div>
+                  )}
+
+                  {product.originalPrice != null && (
+                    <div
+                      style={{
+                        textDecoration: "line-through",
+                        opacity: 0.7,
+                      }}
+                    >
+                      Prix original : {product.originalPrice}$
+                    </div>
+                  )}
+
+                  {product.discountPercent != null && (
+                    <div>
+                      Rabais : <strong>{product.discountPercent}%</strong>
+                    </div>
+                  )}
+                </div>
+
+                {product.productUrl && (
+                  <a
+                    href={product.productUrl}
+                    target="_blank"
+                    rel="noreferrer"
                     style={{
-                      marginLeft: 8,
-                      color: "#6b7280",
-                      textDecoration: "line-through",
+                      display: "inline-block",
+                      marginTop: "0.5rem",
+                      fontSize: "0.85rem",
                     }}
                   >
-                    {product.originalPrice.toFixed(2)} $
-                  </span>
+                    Voir le produit
+                  </a>
                 )}
-              </p>
-            </div>
-
-            <a
-              href={product.productUrl}
-              style={{
-                marginTop: "auto",
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: 8,
-                padding: "0.55rem 0.85rem",
-                borderRadius: 8,
-                background: "#111827",
-                color: "#fff",
-                textDecoration: "none",
-                fontWeight: 600,
-              }}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Voir le produit
-            </a>
-          </article>
-        ))}
-      </section>
+              </article>
+            ))}
+          </div>
+        </section>
+      ))}
     </main>
   );
 }
