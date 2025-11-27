@@ -1,61 +1,58 @@
-import fs from 'fs';
-import path from 'path';
+// lib/bureauEngros.ts
+import branches from '../data/bureauengros/branches.json';
 
-const ROOT_DIR = process.cwd();
+type Branch = {
+  id: string;
+  name: string;
+  address?: string;
+  store?: string;
+};
 
-// 🔹 Single source file for ALL Bureau en Gros locations
-const BUREAU_EN_GROS_SOURCE_FILE = path.join(
-  ROOT_DIR,
-  'data',
-  'bureauengros',
-  'saint-jerome.json'
-);
+export type BureauEnGrosStore = {
+  id: string;
+  slug: string;
+  name: string;
+  city: string;
+  address: string;
+  store?: string;
+};
 
-// 🔹 Directory that contains all Bureau en Gros store folders
-const BUREAU_EN_GROS_OUTPUT_DIR = path.join(
-  ROOT_DIR,
-  'outputs',
-  'bureauengros'
-);
-
-export function listBureauEnGrosStoreSlugs(): string[] {
-  if (!fs.existsSync(BUREAU_EN_GROS_OUTPUT_DIR)) {
-    console.warn('Bureau en Gros output dir does not exist:', BUREAU_EN_GROS_OUTPUT_DIR);
-    return [];
-  }
-
-  return fs
-    .readdirSync(BUREAU_EN_GROS_OUTPUT_DIR, { withFileTypes: true })
-    .filter((entry) => entry.isDirectory())
-    .map((entry) => entry.name);
+function slugify(value: string): string {
+  return value
+    .normalize('NFD')
+    .replace(/\p{Diacritic}/gu, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
 }
 
-// 🔹 Always return the same deals for all stores (based on saint-jerome.json)
+function branchToStore(branch: Branch): BureauEnGrosStore {
+  const cityLabel = branch.name.split('–')[1]?.trim() ?? branch.name;
+  const slug = `${branch.id}-${slugify(branch.name)}`;
+
+  return {
+    id: branch.id,
+    slug,
+    name: branch.name,
+    city: cityLabel,
+    address: branch.address ?? '',
+    store: branch.store,
+  };
+}
+
+const BUREAU_EN_GROS_STORES: BureauEnGrosStore[] = (branches as Branch[]).map(
+  branchToStore,
+);
+
+export function getBureauEnGrosStores(): BureauEnGrosStore[] {
+  return BUREAU_EN_GROS_STORES;
+}
+
+export function listBureauEnGrosStoreSlugs(): string[] {
+  return BUREAU_EN_GROS_STORES.map((store) => store.slug);
+}
+
+// For now: no deals in this repo
 export function readBureauEnGrosDealsForAllStores(): any[] {
-  if (!fs.existsSync(BUREAU_EN_GROS_SOURCE_FILE)) {
-    console.error('❌ Source file for Bureau en Gros not found:', BUREAU_EN_GROS_SOURCE_FILE);
-    return [];
-  }
-
-  try {
-    const raw = fs.readFileSync(BUREAU_EN_GROS_SOURCE_FILE, 'utf8');
-    const parsed = JSON.parse(raw);
-
-    if (Array.isArray(parsed)) {
-      return parsed;
-    }
-
-    if (parsed && Array.isArray((parsed as any).products)) {
-      return (parsed as any).products;
-    }
-
-    if (parsed && Array.isArray((parsed as any).items)) {
-      return (parsed as any).items;
-    }
-
-    return [];
-  } catch (error) {
-    console.error('Failed to read Bureau en Gros JSON from saint-jerome.json', error);
-    return [];
-  }
+  return [];
 }
