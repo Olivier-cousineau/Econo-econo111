@@ -1,6 +1,6 @@
 // pages/bureau-en-gros.jsx
 
-import fs from "fs/promises";
+import fs from "fs";
 import path from "path";
 
 export async function getStaticProps() {
