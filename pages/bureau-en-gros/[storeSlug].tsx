@@ -1,6 +1,9 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
-import { listBureauEnGrosStoreSlugs, readBureauEnGrosDeals } from '../../lib/bureauEngros';
+import {
+  listBureauEnGrosStoreSlugs,
+  readBureauEnGrosDealsForAllStores,
+} from '../../lib/bureauEngros';
 
 type Deal = {
   name?: string;
@@ -22,8 +25,7 @@ type Props = {
 };
 
 function formatStoreLabel(slug: string): string {
-  // Example slug: 124-bureau-en-gros-saint-jerome-qc
-  // We just show it as-is for now, or you can prettify it
+  // Example: 124-bureau-en-gros-saint-jerome-qc
   return slug.replace(/-/g, ' ');
 }
 
@@ -39,11 +41,11 @@ export default function BureauEnGrosStorePage({ storeSlug, deals }: Props) {
       <main className="max-w-5xl mx-auto px-4 py-8">
         <h1 className="text-2xl font-bold mb-2">{title}</h1>
         <p className="text-sm text-gray-600 mb-6">
-          {count} produits en liquidation pour ce magasin.
+          {count} produits en liquidation (mêmes données que Saint-Jérôme pour le moment).
         </p>
 
         {count === 0 ? (
-          <p>Aucune liquidation trouvée pour ce magasin pour le moment.</p>
+          <p>Aucune liquidation trouvée pour le moment.</p>
         ) : (
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {deals.map((deal, index) => {
@@ -107,9 +109,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
   const storeSlug = params?.storeSlug as string;
 
-  const deals = readBureauEnGrosDeals(storeSlug);
+  // 🔹 Ignore the slug for the data: always read from saint-jerome.json
+  const deals = readBureauEnGrosDealsForAllStores();
 
-  if (!deals) {
+  if (!deals || deals.length === 0) {
     return {
       notFound: true,
     };
@@ -120,6 +123,6 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
       storeSlug,
       deals,
     },
-    revalidate: 300, // 5 minutes
+    revalidate: 300,
   };
 };
