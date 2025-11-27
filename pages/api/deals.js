@@ -1,8 +1,8 @@
 // pages/api/deals/bureau-en-gros/index.js
 
-import dealsHandler from "../deals";
+import dealsHandler from "../../deals";
 
-// On réutilise exactement la même logique que /api/deals,
+// On réutilise la même logique que /api/deals,
 // mais on force juste retailer = "bureau-en-gros" si non fourni.
 export default function handler(req, res) {
   if (!req.query.retailer) {
