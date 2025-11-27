@@ -1,8 +1,10 @@
 // pages/bureau-en-gros.jsx
 
-import fs from "fs";
-import path from "path";
 import Link from "next/link";
+import {
+  listBureauEnGrosStoreSlugs,
+  readBureauEnGrosDealsForAllStores,
+} from "../lib/bureauEngros";
 
 const slugToLabel = (slug) => {
   const [storeIdFromSlug, ...citySegments] = slug.split("-");
@@ -17,65 +19,30 @@ const slugToLabel = (slug) => {
 };
 
 export const getStaticProps = async () => {
-  // 🔥 IMPORTANT : bon dossier de sortie pour Bureau en Gros
-  const outputsRoot = path.join(process.cwd(), "outputs", "bureauengros");
-  let dirEntries = [];
+  const storeSlugs = listBureauEnGrosStoreSlugs();
+  const deals = readBureauEnGrosDealsForAllStores();
+  const productCount = deals.length;
 
-  try {
-    dirEntries = await fs.promises.readdir(outputsRoot, {
-      withFileTypes: true,
-    });
-  } catch (error) {
-    console.error("Unable to read outputs/bureauengros directory", error);
+  const stores = storeSlugs.map((slug) => {
+    const { storeId, city, label } = slugToLabel(slug);
     return {
-      props: { stores: [] },
-      revalidate: 300,
+      storeSlug: slug,
+      storeId,
+      city,
+      label,
+      productCount,
     };
-  }
-
-  const stores = [];
-
-  for (const entry of dirEntries) {
-    if (!entry.isDirectory()) continue;
-
-    const dataPath = path.join(outputsRoot, entry.name, "data.json");
-    if (!fs.existsSync(dataPath)) {
-      // on ignore silencieusement les magasins sans fichier
-      continue;
-    }
-
-    try {
-      const fileContents = await fs.promises.readFile(dataPath, "utf-8");
-      const parsed = JSON.parse(fileContents);
-      const products = Array.isArray(parsed) ? parsed : [];
-      if (products.length === 0) continue;
-
-      const { storeId, city, label } = slugToLabel(entry.name);
-      stores.push({
-        storeSlug: entry.name,
-        storeId,
-        city,
-        label,
-        productCount: products.length,
-      });
-    } catch (error) {
-      console.warn(
-        `Skipping ${entry.name} because data.json is invalid or unreadable`,
-        error
-      );
-      continue;
-    }
-  }
+  });
 
   stores.sort((a, b) => a.label.localeCompare(b.label));
 
   return {
-    props: { stores },
+    props: { stores, productCount },
     revalidate: 300,
   };
 };
 
-const BureauEnGrosIndexPage = ({ stores }) => {
+const BureauEnGrosIndexPage = ({ stores, productCount }) => {
   return (
     <main style={{ padding: "2rem 1rem", maxWidth: "1100px", margin: "0 auto" }}>
       <header style={{ marginBottom: "2rem" }}>
@@ -83,17 +50,18 @@ const BureauEnGrosIndexPage = ({ stores }) => {
           Bureau en Gros – Produits en liquidation
         </h1>
         <p style={{ marginTop: "0.5rem", color: "#4b5563" }}>
-          Sélectionne un magasin ci-dessous pour voir les produits en liquidation
-          disponibles à cet endroit. Les produits sont chargés seulement quand tu
-          ouvres une page de magasin.
+          Sélectionne un magasin ci-dessous pour voir les produits en liquidation.
+          Toutes les pages de magasins affichent temporairement les mêmes données (Saint-Jérôme).
         </p>
       </header>
 
       {stores.length === 0 ? (
         <p>
-          Aucun magasin Bureau en Gros n’a encore de données dans les outputs.
-          Vérifie que le scraper a bien écrit dans <code>outputs/bureauengros</code>.
+          Aucun magasin Bureau en Gros n’est encore listé. Ajoute des dossiers dans
+          <code> outputs/bureauengros </code> pour les générer.
         </p>
+      ) : productCount === 0 ? (
+        <p>Aucune liquidation trouvée dans le fichier source Saint-Jérôme.</p>
       ) : (
         <section
           style={{
