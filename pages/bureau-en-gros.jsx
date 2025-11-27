@@ -12,10 +12,9 @@ export async function getStaticProps() {
     const entries = fs.readdirSync(baseDir, { withFileTypes: true });
 
     for (const entry of entries) {
-      // On ne garde que les dossiers (un dossier = un magasin)
-      if (!entry.isDirectory()) continue;
+      if (!entry.isDirectory()) continue; // un dossier = un magasin
 
-      const slug = entry.name; // ex: "102-bureau-en-gros-welland-on"
+      const slug = entry.name;
       const filePath = path.join(baseDir, slug, "data.json");
 
       try {
@@ -23,11 +22,14 @@ export async function getStaticProps() {
         const json = JSON.parse(raw);
 
         const storeMeta = json.store || {};
-        let products = json.products || json.items || json.data || [];
+        const products = Array.isArray(json.products) ? json.products : [];
 
-        if (!Array.isArray(products)) {
-          products = [];
-        }
+        console.log(
+          "[Bureau en Gros] magasin:",
+          slug,
+          "- produits:",
+          products.length
+        );
 
         stores.push({
           slug,
@@ -36,19 +38,13 @@ export async function getStaticProps() {
             name: storeMeta.name ?? slug,
             address: storeMeta.address ?? "",
           },
-          products: products.map((p) => ({
-            title: p.title ?? "",
-            productUrl: p.productUrl ?? p.url ?? "",
-            imageUrl: p.imageUrl ?? p.image ?? "",
-            currentPrice: p.currentPrice ?? p.price ?? null,
-            originalPrice: p.originalPrice ?? p.oldPrice ?? null,
-            discountPercent: p.discountPercent ?? p.discount ?? null,
-          })),
+          // ⚠️ on envoie les produits tels quels
+          products,
         });
       } catch (err) {
         if (err.code === "ENOENT") {
           console.warn("⚠️ Fichier manquant pour Bureau en Gros :", slug);
-          continue; // on ignore ce magasin
+          continue;
         }
         console.error("Erreur en lisant", slug, err);
         continue;
@@ -59,7 +55,7 @@ export async function getStaticProps() {
     stores = [];
   }
 
-  // Nettoyage pour être sûr que Next accepte les props
+  // Nettoyage pour Next (sérialisable)
   const serializableStores = JSON.parse(JSON.stringify(stores));
 
   return {
