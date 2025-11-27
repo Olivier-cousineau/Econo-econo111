@@ -1,36 +1,33 @@
+// pages/bureau-en-gros/[storeSlug].tsx
+
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 import {
+  getBureauEnGrosStores,
   listBureauEnGrosStoreSlugs,
-  readBureauEnGrosDealsForAllStores,
 } from '../../lib/bureauEngros';
 
 type Deal = {
-  name?: string;
-  title?: string;
-  productName?: string;
-  price?: number | string;
-  currentPrice?: number | string;
-  salePrice?: number | string;
-  image?: string;
-  imageUrl?: string;
-  url?: string;
-  link?: string;
   [key: string]: any;
 };
 
 type Props = {
   storeSlug: string;
+  storeName?: string;
   deals: Deal[];
 };
 
 function formatStoreLabel(slug: string): string {
-  // Example: 124-bureau-en-gros-saint-jerome-qc
   return slug.replace(/-/g, ' ');
 }
 
-export default function BureauEnGrosStorePage({ storeSlug, deals }: Props) {
-  const title = `Liquidations Bureau en Gros – ${formatStoreLabel(storeSlug)}`;
+export default function BureauEnGrosStorePage({
+  storeSlug,
+  storeName,
+  deals,
+}: Props) {
+  const formattedStore = storeName || formatStoreLabel(storeSlug);
+  const title = `Liquidations Bureau en Gros – ${formattedStore}`;
   const count = deals?.length ?? 0;
 
   return (
@@ -41,51 +38,15 @@ export default function BureauEnGrosStorePage({ storeSlug, deals }: Props) {
       <main className="max-w-5xl mx-auto px-4 py-8">
         <h1 className="text-2xl font-bold mb-2">{title}</h1>
         <p className="text-sm text-gray-600 mb-6">
-          {count} produits en liquidation (mêmes données que Saint-Jérôme pour le moment).
+          Les liquidations Bureau en Gros ne sont pas encore disponibles ici. Elles
+          seront ajoutées prochainement.
         </p>
 
         {count === 0 ? (
-          <p>Aucune liquidation trouvée pour le moment.</p>
+          <p>Bureau en Gros clearance deals are not available yet.</p>
         ) : (
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {deals.map((deal, index) => {
-              const displayName =
-                deal.name || deal.title || deal.productName || 'Produit sans nom';
-              const price =
-                deal.salePrice ?? deal.currentPrice ?? deal.price ?? 'Prix non disponible';
-              const image = deal.image || deal.imageUrl;
-              const href = deal.url || deal.link || '#';
-
-              return (
-                <article
-                  key={index}
-                  className="border rounded-lg p-3 flex flex-col gap-2 bg-white shadow-sm"
-                >
-                  {image && (
-                    <div className="w-full h-40 bg-gray-100 flex items-center justify-center overflow-hidden rounded">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src={image}
-                        alt={displayName}
-                        className="object-contain max-h-full"
-                      />
-                    </div>
-                  )}
-                  <h2 className="font-semibold text-sm line-clamp-2">{displayName}</h2>
-                  <div className="text-sm font-bold">{price}</div>
-                  {href !== '#' && (
-                    <a
-                      href={href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs text-blue-600 hover:underline mt-auto"
-                    >
-                      Voir sur Bureau en Gros
-                    </a>
-                  )}
-                </article>
-              );
-            })}
+            {/* Future rendering of deals when they are available */}
           </div>
         )}
       </main>
@@ -108,19 +69,14 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
   const storeSlug = params?.storeSlug as string;
+  const store = getBureauEnGrosStores().find((entry) => entry.slug === storeSlug);
 
-  // 🔹 Ignore the slug for the data: always read from saint-jerome.json
-  const deals = readBureauEnGrosDealsForAllStores();
-
-  if (!deals || deals.length === 0) {
-    return {
-      notFound: true,
-    };
-  }
+  const deals: Deal[] = [];
 
   return {
     props: {
       storeSlug,
+      storeName: store?.name,
       deals,
     },
     revalidate: 300,
