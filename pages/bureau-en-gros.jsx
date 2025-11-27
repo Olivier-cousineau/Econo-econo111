@@ -2,233 +2,150 @@
 
 import fs from "fs";
 import path from "path";
+import Link from "next/link";
 
-export async function getStaticProps() {
-  const baseDir = path.join(process.cwd(), "outputs", "bureauengros");
+const slugToLabel = (slug) => {
+  const [storeIdFromSlug, ...citySegments] = slug.split("-");
+  const citySlug = citySegments.join("-");
+  const cityLabel = citySlug ? citySlug.replace(/-/g, " ") : "Unknown";
+  const storeId = storeIdFromSlug ?? slug;
+  return {
+    storeId,
+    city: cityLabel,
+    label: `${storeId} – ${cityLabel}`,
+  };
+};
 
-  let stores = [];
+export const getStaticProps = async () => {
+  // 🔥 IMPORTANT : bon dossier de sortie pour Bureau en Gros
+  const outputsRoot = path.join(process.cwd(), "outputs", "bureauengros");
+  let dirEntries = [];
 
   try {
-    const entries = fs.readdirSync(baseDir, { withFileTypes: true });
-
-    for (const entry of entries) {
-      if (!entry.isDirectory()) continue; // un dossier = un magasin
-
-      const slug = entry.name;
-      const filePath = path.join(baseDir, slug, "data.json");
-
-      try {
-        const raw = fs.readFileSync(filePath, "utf-8");
-        const json = JSON.parse(raw);
-
-        const storeMeta = json.store || {};
-        const products = Array.isArray(json.products) ? json.products : [];
-
-        console.log(
-          "[Bureau en Gros] magasin:",
-          slug,
-          "- produits:",
-          products.length
-        );
-
-        stores.push({
-          slug,
-          store: {
-            id: storeMeta.id ?? null,
-            name: storeMeta.name ?? slug,
-            address: storeMeta.address ?? "",
-          },
-          // ⚠️ on envoie les produits tels quels
-          products,
-        });
-      } catch (err) {
-        if (err.code === "ENOENT") {
-          console.warn("⚠️ Fichier manquant pour Bureau en Gros :", slug);
-          continue;
-        }
-        console.error("Erreur en lisant", slug, err);
-        continue;
-      }
-    }
-  } catch (e) {
-    console.error("Erreur en listant outputs/bureauengros :", e);
-    stores = [];
+    dirEntries = await fs.promises.readdir(outputsRoot, {
+      withFileTypes: true,
+    });
+  } catch (error) {
+    console.error("Unable to read outputs/bureauengros directory", error);
+    return {
+      props: { stores: [] },
+      revalidate: 300,
+    };
   }
 
-  // Nettoyage pour Next (sérialisable)
-  const serializableStores = JSON.parse(JSON.stringify(stores));
+  const stores = [];
+
+  for (const entry of dirEntries) {
+    if (!entry.isDirectory()) continue;
+
+    const dataPath = path.join(outputsRoot, entry.name, "data.json");
+    if (!fs.existsSync(dataPath)) {
+      // on ignore silencieusement les magasins sans fichier
+      continue;
+    }
+
+    try {
+      const fileContents = await fs.promises.readFile(dataPath, "utf-8");
+      const parsed = JSON.parse(fileContents);
+      const products = Array.isArray(parsed) ? parsed : [];
+      if (products.length === 0) continue;
+
+      const { storeId, city, label } = slugToLabel(entry.name);
+      stores.push({
+        storeSlug: entry.name,
+        storeId,
+        city,
+        label,
+        productCount: products.length,
+      });
+    } catch (error) {
+      console.warn(
+        `Skipping ${entry.name} because data.json is invalid or unreadable`,
+        error
+      );
+      continue;
+    }
+  }
+
+  stores.sort((a, b) => a.label.localeCompare(b.label));
 
   return {
-    props: {
-      stores: serializableStores,
-    },
+    props: { stores },
     revalidate: 300,
   };
-}
+};
 
-export default function BureauEnGrosPage({ stores }) {
-  const countStores = stores?.length ?? 0;
-
+const BureauEnGrosIndexPage = ({ stores }) => {
   return (
-    <main
-      style={{
-        maxWidth: "1200px",
-        margin: "0 auto",
-        padding: "2rem 1rem",
-        fontFamily: "system-ui, -apple-system, BlinkMacSystemFont, sans-serif",
-      }}
-    >
-      <h1
-        style={{
-          fontSize: "2rem",
-          fontWeight: "700",
-          marginBottom: "0.5rem",
-        }}
-      >
-        Liquidations Bureau en Gros
-      </h1>
+    <main style={{ padding: "2rem 1rem", maxWidth: "1100px", margin: "0 auto" }}>
+      <header style={{ marginBottom: "2rem" }}>
+        <h1 style={{ fontSize: "2rem", fontWeight: 700 }}>
+          Bureau en Gros – Produits en liquidation
+        </h1>
+        <p style={{ marginTop: "0.5rem", color: "#4b5563" }}>
+          Sélectionne un magasin ci-dessous pour voir les produits en liquidation
+          disponibles à cet endroit. Les produits sont chargés seulement quand tu
+          ouvres une page de magasin.
+        </p>
+      </header>
 
-      <p style={{ marginBottom: "1.5rem" }}>
-        Magasins suivis : <strong>{countStores}</strong>
-      </p>
-
-      {countStores === 0 && (
-        <p>Aucune donnée de liquidation n&apos;a été trouvée pour le moment.</p>
-      )}
-
-      {stores.map((store) => (
+      {stores.length === 0 ? (
+        <p>
+          Aucun magasin Bureau en Gros n’a encore de données dans les outputs.
+          Vérifie que le scraper a bien écrit dans <code>outputs/bureauengros</code>.
+        </p>
+      ) : (
         <section
-          key={store.slug}
           style={{
-            marginTop: "2rem",
-            paddingTop: "1.5rem",
-            borderTop: "1px solid #e5e5e5",
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))",
+            gap: "1.25rem",
           }}
         >
-          <h2
-            style={{
-              fontSize: "1.3rem",
-              fontWeight: "600",
-              marginBottom: "0.25rem",
-            }}
-          >
-            {store.store?.name || store.slug}
-          </h2>
-
-          {store.store?.address && (
-            <p style={{ marginBottom: "0.5rem", color: "#555" }}>
-              {store.store.address}
-            </p>
-          )}
-
-          <p style={{ marginBottom: "0.75rem" }}>
-            Produits en liquidation :{" "}
-            <strong>{store.products?.length ?? 0}</strong>
-          </p>
-
-          {(!store.products || store.products.length === 0) && (
-            <p style={{ fontSize: "0.9rem", color: "#777" }}>
-              Aucun produit en liquidation trouvé pour ce magasin.
-            </p>
-          )}
-
-          {store.products && store.products.length > 0 && (
-            <div
+          {stores.map((store) => (
+            <article
+              key={store.storeSlug}
               style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-                gap: "1rem",
-                marginTop: "0.5rem",
+                border: "1px solid #e5e7eb",
+                borderRadius: "0.75rem",
+                padding: "1.25rem",
+                background: "#fff",
+                boxShadow: "0 1px 2px rgba(0,0,0,0.06)",
+                display: "flex",
+                flexDirection: "column",
+                gap: "0.5rem",
               }}
             >
-              {store.products.map((product, index) => (
-                <article
-                  key={`${store.slug}-${index}`}
-                  style={{
-                    border: "1px solid #e5e5e5",
-                    borderRadius: "8px",
-                    padding: "0.75rem",
-                    background: "#fff",
-                  }}
-                >
-                  {product.imageUrl && (
-                    <div style={{ marginBottom: "0.5rem" }}>
-                      <img
-                        src={product.imageUrl}
-                        alt={product.title || ""}
-                        style={{
-                          width: "100%",
-                          height: "160px",
-                          objectFit: "contain",
-                        }}
-                      />
-                    </div>
-                  )}
-
-                  <h3
-                    style={{
-                      fontSize: "0.95rem",
-                      fontWeight: "600",
-                      marginBottom: "0.25rem",
-                    }}
-                  >
-                    {product.title}
-                  </h3>
-
-                  <div
-                    style={{
-                      fontSize: "0.9rem",
-                      marginBottom: "0.25rem",
-                    }}
-                  >
-                    {product.currentPrice != null && (
-                      <div>
-                        Prix actuel :{" "}
-                        <strong>
-                          {product.currentPrice}
-                          $
-                        </strong>
-                      </div>
-                    )}
-
-                    {product.originalPrice != null && (
-                      <div
-                        style={{
-                          textDecoration: "line-through",
-                          opacity: 0.7,
-                        }}
-                      >
-                        Prix original : {product.originalPrice}$
-                      </div>
-                    )}
-
-                    {product.discountPercent != null && (
-                      <div>
-                        Rabais : <strong>{product.discountPercent}%</strong>
-                      </div>
-                    )}
-                  </div>
-
-                  {product.productUrl && (
-                    <a
-                      href={product.productUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      style={{
-                        display: "inline-block",
-                        marginTop: "0.5rem",
-                        fontSize: "0.85rem",
-                      }}
-                    >
-                      Voir le produit
-                    </a>
-                  )}
-                </article>
-              ))}
-            </div>
-          )}
+              <div style={{ fontSize: "0.9rem", color: "#6b7280" }}>
+                Magasin #{store.storeId}
+              </div>
+              <h2 style={{ fontSize: "1.2rem", fontWeight: 600 }}>{store.city}</h2>
+              <div style={{ fontSize: "0.95rem", color: "#1f2937" }}>
+                {store.productCount.toLocaleString()} produits en liquidation
+              </div>
+              <Link
+                href={`/bureau-en-gros/${store.storeSlug}`}
+                style={{
+                  marginTop: "auto",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  padding: "0.65rem 1rem",
+                  borderRadius: "999px",
+                  backgroundColor: "#2563eb",
+                  color: "#fff",
+                  fontWeight: 600,
+                  textDecoration: "none",
+                }}
+              >
+                Voir les produits
+              </Link>
+            </article>
+          ))}
         </section>
-      ))}
+      )}
     </main>
   );
-}
+};
+
+export default BureauEnGrosIndexPage;
