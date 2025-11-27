@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2025-11-27T18:22:47.170Z",
+  "generatedAt": "2025-11-27T21:31:25.876Z",
   "stores": [
     {
-      "id": "184",
-      "city": "Beauport, QC",
+      "id": "5",
+      "city": "Bancroft, ON",
+      "status": "committed",
+      "details": "236 produits"
+    },
+    {
+      "id": "82",
+      "city": "Picton, ON",
+      "status": "committed",
+      "details": "408 produits"
+    },
+    {
+      "id": "7",
+      "city": "Belleville, ON",
+      "status": "committed",
+      "details": "450 produits"
+    },
+    {
+      "id": "458",
+      "city": "Roberval, QC",
+      "status": "committed",
+      "details": "247 produits"
+    },
+    {
+      "id": "112",
+      "city": "Trenton, ON",
+      "status": "committed",
+      "details": "272 produits"
+    },
+    {
+      "id": "17",
+      "city": "Campbellford, ON",
+      "status": "committed",
+      "details": "149 produits"
+    },
+    {
+      "id": "633",
+      "city": "La Pocatiere, QC",
+      "status": "committed",
+      "details": "339 produits"
+    },
+    {
+      "id": "298",
+      "city": "Alma, QC",
       "status": "committed",
       "details": "267 produits"
-    },
-    {
-      "id": "173",
-      "city": "St. Georges, QC",
-      "status": "committed",
-      "details": "281 produits"
-    },
-    {
-      "id": "694",
-      "city": "Kingston Division St., ON",
-      "status": "committed",
-      "details": "477 produits"
-    },
-    {
-      "id": "195",
-      "city": "Kingston, ON",
-      "status": "committed",
-      "details": "382 produits"
-    },
-    {
-      "id": "417",
-      "city": "Kingston Township, ON",
-      "status": "committed",
-      "details": "208 produits"
-    },
-    {
-      "id": "253",
-      "city": "Deep River, ON",
-      "status": "committed",
-      "details": "188 produits"
-    },
-    {
-      "id": "65",
-      "city": "Napanee, ON",
-      "status": "committed",
-      "details": "177 produits"
-    },
-    {
-      "id": "180",
-      "city": "Montmagny, QC",
-      "status": "committed",
-      "details": "490 produits"
     }
   ],
   "failedTwice": [],
