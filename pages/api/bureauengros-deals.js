@@ -1,4 +1,3 @@
-// pages/api/bureauengros-deals.js
 import fs from "fs";
 import path from "path";
 
@@ -26,9 +25,6 @@ function getStoreSlug(query) {
   return typeof slugCandidate === "string" ? slugCandidate.trim() : "";
 }
 
-/**
- * Lit un magasin : /outputs/bureauengros/<storeSlug>/data.json
- */
 function readStoreDeals(storeSlug) {
   const filePath = path.join(
     process.cwd(),
@@ -52,9 +48,6 @@ function readStoreDeals(storeSlug) {
   }
 }
 
-/**
- * Liste tous les magasins Bureau en Gros à partir de /outputs/bureauengros/
- */
 function readAllStoresDeals() {
   const rootDir = path.join(process.cwd(), "outputs", "bureauengros");
 
@@ -98,7 +91,6 @@ export default function handler(req, res) {
 
   const storeSlug = getStoreSlug(req.query);
 
-  // 1) SANS storeSlug → renvoie la liste des magasins + count
   if (!storeSlug) {
     const stores = readAllStoresDeals();
     return res.status(200).json({
@@ -109,7 +101,6 @@ export default function handler(req, res) {
     });
   }
 
-  // 2) AVEC storeSlug → renvoie les produits du magasin
   const data = readStoreDeals(storeSlug);
   if (!data) {
     return res.status(404).json({
