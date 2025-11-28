@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2025-11-28T17:41:11.542Z",
+  "generatedAt": "2025-11-28T22:36:39.180Z",
   "stores": [
     {
-      "id": "321",
-      "city": "Dufferin & 407, ON",
+      "id": "197",
+      "city": "Bolton, ON",
       "status": "committed",
-      "details": "459 produits"
+      "details": "482 produits"
     },
     {
-      "id": "150",
-      "city": "Toronto, Yonge & Church, ON",
-      "status": "committed",
-      "details": "415 produits"
-    },
-    {
-      "id": "485",
-      "city": "Dufferin & Finch Auto Ctr, ON",
-      "status": "committed",
-      "details": "56 produits"
-    },
-    {
-      "id": "600",
-      "city": "Toronto Eaton Centre, ON",
-      "status": "committed",
-      "details": "478 produits"
-    },
-    {
-      "id": "19",
-      "city": "Lawrence & Allen Expwy, ON",
+      "id": "219",
+      "city": "Grand Falls, NB",
       "status": "committed",
       "details": "275 produits"
     },
     {
-      "id": "653",
-      "city": "Maple, ON",
+      "id": "70",
+      "city": "The Queensway, ON",
       "status": "committed",
-      "details": "261 produits"
+      "details": "494 produits"
     },
     {
-      "id": "621",
-      "city": "Liberty Village, ON",
+      "id": "152",
+      "city": "Miss. Dixie & Dundas, ON",
       "status": "committed",
-      "details": "444 produits"
+      "details": "408 produits"
     },
     {
-      "id": "214",
-      "city": "Eglinton & Caledonia, Toronto, ON",
+      "id": "71",
+      "city": "Niagara Falls North, ON",
       "status": "committed",
-      "details": "308 produits"
+      "details": "369 produits"
+    },
+    {
+      "id": "305",
+      "city": "Brampton Bramalea, ON",
+      "status": "committed",
+      "details": "853 produits"
+    },
+    {
+      "id": "162",
+      "city": "St. Catharines N., ON",
+      "status": "committed",
+      "details": "275 produits"
+    },
+    {
+      "id": "33",
+      "city": "Fort Erie, ON",
+      "status": "committed",
+      "details": "207 produits"
     }
   ],
   "failedTwice": [],
