@@ -6,7 +6,7 @@ import {
   getBureauEnGrosStoreBySlug,
   BureauEnGrosDeal,
 } from "../../lib/bureauEngros";
-import { readBureauEnGrosDealsForStore } from "../../lib/bureauEnGrosDeals";
+import { fetchBureauEnGrosDealsFromPublic } from "../../lib/bureauEnGrosPublicDeals";
 
 type Props = {
   storeSlug: string;
@@ -16,6 +16,7 @@ type Props = {
 
 type BureauEnGrosStoreData = {
   products?: BureauEnGrosDeal[];
+  count?: number;
 };
 
 function formatPrice(value: unknown): string {
@@ -48,9 +49,8 @@ export default function BureauEnGrosStorePage({
       setError(null);
 
       try {
-        const data: BureauEnGrosStoreData = await readBureauEnGrosDealsForStore(
-          storeSlug
-        );
+        const data: BureauEnGrosStoreData =
+          await fetchBureauEnGrosDealsFromPublic(storeSlug);
         if (!isMounted) return;
 
         const products = Array.isArray(data.products) ? data.products : [];
