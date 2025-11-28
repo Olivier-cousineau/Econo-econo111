@@ -1,7 +1,7 @@
 // pages/api/deals.js
 import {
   getBureauEnGrosStores,
-  listBureauEnGrosStoreSlugs,
+  readBureauEnGrosDealsForAllStores,
 } from '../../lib/bureauEngros';
 
 function normalizeQueryParam(value) {
@@ -50,18 +50,17 @@ export default async function handler(req, res) {
     }
 
     try {
-      const storeSlugs = listBureauEnGrosStoreSlugs();
+      const stores = getBureauEnGrosStores();
+      const exists = stores.some((store) => store.slug === storeSlug);
 
-      if (storeSlugs.length > 0 && !storeSlugs.includes(storeSlug)) {
+      if (!exists) {
         res
           .status(404)
           .json({ error: 'Store not found or unavailable', storeSlug });
         return;
       }
 
-      const storeMetadata = getBureauEnGrosStores().find(
-        (store) => store.slug === storeSlug,
-      );
+      const storeMetadata = stores.find((store) => store.slug === storeSlug);
 
       const products = [];
 
