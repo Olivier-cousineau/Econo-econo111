@@ -1,17 +1,21 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
+import { useEffect, useState } from "react";
 import {
   getBureauEnGrosStores,
   getBureauEnGrosStoreBySlug,
-  readBureauEnGrosDealsForStore,
   BureauEnGrosDeal,
 } from "../../lib/bureauEngros";
+import { readBureauEnGrosDealsForStore } from "../../lib/bureauEnGrosDeals";
 
 type Props = {
   storeSlug: string;
   storeName: string;
   address?: string;
-  deals: BureauEnGrosDeal[];
+};
+
+type BureauEnGrosStoreData = {
+  products?: BureauEnGrosDeal[];
 };
 
 function formatPrice(value: unknown): string {
@@ -28,10 +32,47 @@ export default function BureauEnGrosStorePage({
   storeSlug,
   storeName,
   address,
-  deals,
 }: Props) {
-  const count = deals?.length ?? 0;
+  const [deals, setDeals] = useState<BureauEnGrosDeal[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  const count = deals.length;
   const title = `Liquidations Bureau en Gros – ${storeName}`;
+
+  useEffect(() => {
+    let isMounted = true;
+
+    async function loadStoreDeals() {
+      setIsLoading(true);
+      setError(null);
+
+      try {
+        const data: BureauEnGrosStoreData = await readBureauEnGrosDealsForStore(
+          storeSlug
+        );
+        if (!isMounted) return;
+
+        const products = Array.isArray(data.products) ? data.products : [];
+        setDeals(products);
+      } catch (err) {
+        if (!isMounted) return;
+        console.error("Failed to load Bureau en Gros deals", err);
+        setError("Impossible de charger les données de ce magasin.");
+        setDeals([]);
+      } finally {
+        if (isMounted) {
+          setIsLoading(false);
+        }
+      }
+    }
+
+    loadStoreDeals();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [storeSlug]);
 
   return (
     <>
@@ -46,10 +87,16 @@ export default function BureauEnGrosStorePage({
           </p>
         )}
         <p className="text-sm text-gray-600 mb-6">
-          {count} produit(s) en liquidation pour ce magasin.
+          {isLoading
+            ? "Chargement des produits en liquidation..."
+            : `${count} produit(s) en liquidation pour ce magasin.`}
         </p>
 
-        {count === 0 ? (
+        {error && (
+          <p className="text-red-600 text-sm mb-4">{error}</p>
+        )}
+
+        {!error && count === 0 && !isLoading ? (
           <p>Aucune liquidation trouvée pour le moment.</p>
         ) : (
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -138,14 +185,11 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
     return { notFound: true };
   }
 
-  const deals = readBureauEnGrosDealsForStore(storeSlug);
-
   return {
     props: {
       storeSlug,
       storeName: store.name,
       address: store.address,
-      deals,
     },
     revalidate: 300,
   };
