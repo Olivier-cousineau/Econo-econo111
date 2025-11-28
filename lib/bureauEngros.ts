@@ -51,7 +51,8 @@ type StoreFile = {
 function slugify(value: string): string {
   return value
     .normalize("NFD")
-    .replace(/\p{Diacritic}/gu, "")
+    // Remove diacritic marks (accents) – compatible with older JS targets
+    .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)/g, "");
