@@ -3,13 +3,10 @@ import path from "path";
 import branches from "../data/bureauengros/branches.json";
 
 const ROOT_DIR = process.cwd();
-
-// 🔹 Fichier source unique : Saint-Jérôme
-const BUREAU_EN_GROS_SOURCE_FILE = path.join(
+const BUREAU_EN_GROS_OUTPUTS_ROOT = path.join(
   ROOT_DIR,
-  "data",
-  "bureauengros",
-  "saint-jerome.json"
+  "outputs",
+  "bureauengros"
 );
 
 type Branch = {
@@ -44,15 +41,19 @@ export type BureauEnGrosDeal = {
 };
 
 type SourceFileShape = {
+  storeId?: string;
+  storeName?: string;
+  sourceStore?: string;
+  scrapedAt?: string;
+  url?: string;
+  count?: number;
+  products?: BureauEnGrosDeal[];
   store?: {
     id?: string;
     name?: string;
     address?: string;
     store?: string;
   };
-  url?: string;
-  count?: number;
-  products?: BureauEnGrosDeal[];
 };
 
 /**
@@ -86,6 +87,25 @@ const BUREAU_EN_GROS_STORES: BureauEnGrosStore[] = (branches as Branch[]).map(
   branchToStore
 );
 
+function getBureauEnGrosStoreFilePath(storeSlug: string): string {
+  return path.join(BUREAU_EN_GROS_OUTPUTS_ROOT, storeSlug, "data.json");
+}
+
+function getDefaultBureauEnGrosStoreSlug(): string | null {
+  if (fs.existsSync(BUREAU_EN_GROS_OUTPUTS_ROOT)) {
+    const entries = fs.readdirSync(BUREAU_EN_GROS_OUTPUTS_ROOT, {
+      withFileTypes: true,
+    });
+
+    const firstDir = entries.find((entry) => entry.isDirectory());
+    if (firstDir) {
+      return firstDir.name;
+    }
+  }
+
+  return BUREAU_EN_GROS_STORES[0]?.slug ?? null;
+}
+
 export function getBureauEnGrosStores(): BureauEnGrosStore[] {
   return BUREAU_EN_GROS_STORES;
 }
@@ -96,41 +116,62 @@ export function getBureauEnGrosStoreBySlug(
   return BUREAU_EN_GROS_STORES.find((s) => s.slug === slug);
 }
 
+export function listBureauEnGrosStoreSlugs(): string[] {
+  return BUREAU_EN_GROS_STORES.map((store) => store.slug);
+}
+
 /**
- * Lit le fichier saint-jerome.json et renvoie la liste de produits.
+ * Lit le fichier de données pour un magasin Bureau en Gros spécifique.
+ * Les fichiers sont générés par le scraper et déposés dans
+ * outputs/bureauengros/<storeSlug>/data.json.
  */
-export function readBureauEnGrosDealsForAllStores(): BureauEnGrosDeal[] {
-  if (!fs.existsSync(BUREAU_EN_GROS_SOURCE_FILE)) {
-    console.error("Bureau en Gros source file not found:", BUREAU_EN_GROS_SOURCE_FILE);
-    return [];
+export function readBureauEnGrosStoreData(
+  storeSlug: string
+): SourceFileShape | null {
+  const storeFilePath = getBureauEnGrosStoreFilePath(storeSlug);
+
+  if (!fs.existsSync(storeFilePath)) {
+    return null;
   }
 
   try {
-    const raw = fs.readFileSync(BUREAU_EN_GROS_SOURCE_FILE, "utf8");
-    const parsed = JSON.parse(raw) as SourceFileShape | BureauEnGrosDeal[];
+    const raw = fs.readFileSync(storeFilePath, "utf8");
+    const parsed = JSON.parse(raw) as SourceFileShape;
 
-    // format: { store: {...}, products: [...] }
-    if (!Array.isArray(parsed) && Array.isArray(parsed.products)) {
-      return parsed.products;
+    if (!parsed.products || !Array.isArray(parsed.products)) {
+      parsed.products = [];
     }
 
-    // format: [ {...}, {...} ]
-    if (Array.isArray(parsed)) {
-      return parsed;
+    if (typeof parsed.count !== "number") {
+      parsed.count = parsed.products.length;
     }
 
-    return [];
+    return parsed;
   } catch (err) {
-    console.error("Failed to read Bureau en Gros deals JSON:", err);
-    return [];
+    console.error("Failed to read Bureau en Gros store file:", storeFilePath, err);
+    return null;
   }
 }
 
 /**
- * Pour l’instant: même deals pour tous les magasins.
+ * Lit les deals depuis le fichier outputs/bureauengros/<storeSlug>/data.json.
+ * Si aucun magasin n'est précisé, on utilise le premier magasin disponible
+ * pour rester compatible avec l'ancien comportement "global".
  */
-export function readBureauEnGrosDealsForStore(
-  _storeSlug: string
+export function readBureauEnGrosDealsForAllStores(
+  storeSlug?: string
 ): BureauEnGrosDeal[] {
-  return readBureauEnGrosDealsForAllStores();
+  const slug = storeSlug ?? getDefaultBureauEnGrosStoreSlug();
+  if (!slug) {
+    return [];
+  }
+
+  const storeData = readBureauEnGrosStoreData(slug);
+  return storeData?.products ?? [];
+}
+
+export function readBureauEnGrosDealsForStore(
+  storeSlug: string
+): BureauEnGrosDeal[] {
+  return readBureauEnGrosDealsForAllStores(storeSlug);
 }
