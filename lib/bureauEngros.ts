@@ -4,6 +4,14 @@ import branches from "../data/bureauengros/branches.json";
 
 const ROOT_DIR = process.cwd();
 
+// 🔹 Fichier source unique : Saint-Jérôme
+const BUREAU_EN_GROS_SOURCE_FILE = path.join(
+  ROOT_DIR,
+  "data",
+  "bureauengros",
+  "saint-jerome.json"
+);
+
 type Branch = {
   id: string;
   name: string;
@@ -35,23 +43,25 @@ export type BureauEnGrosDeal = {
   [key: string]: any;
 };
 
-type StoreFile = {
+type SourceFileShape = {
   store?: {
     id?: string;
     name?: string;
     address?: string;
     store?: string;
   };
+  url?: string;
+  count?: number;
   products?: BureauEnGrosDeal[];
 };
 
 /**
- * Slugify helper – must match the scraper convention
+ * Slug helper – compatible ES5 (pas de \p{Diacritic})
  */
 function slugify(value: string): string {
   return value
     .normalize("NFD")
-    // Remove diacritic marks (accents) – compatible with older JS targets
+    // remove accents
     .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
@@ -87,43 +97,40 @@ export function getBureauEnGrosStoreBySlug(
 }
 
 /**
- * Read a single store JSON: outputs/bureauengros/<storeSlug>/data.json
+ * Lit le fichier saint-jerome.json et renvoie la liste de produits.
  */
-export function readBureauEnGrosDealsForStore(
-  storeSlug: string
-): BureauEnGrosDeal[] {
-  const jsonPath = path.join(
-    ROOT_DIR,
-    "outputs",
-    "bureauengros",
-    storeSlug,
-    "data.json"
-  );
-
-  if (!fs.existsSync(jsonPath)) {
+export function readBureauEnGrosDealsForAllStores(): BureauEnGrosDeal[] {
+  if (!fs.existsSync(BUREAU_EN_GROS_SOURCE_FILE)) {
+    console.error("Bureau en Gros source file not found:", BUREAU_EN_GROS_SOURCE_FILE);
     return [];
   }
 
   try {
-    const raw = fs.readFileSync(jsonPath, "utf8");
-    const parsed = JSON.parse(raw) as StoreFile | BureauEnGrosDeal[];
+    const raw = fs.readFileSync(BUREAU_EN_GROS_SOURCE_FILE, "utf8");
+    const parsed = JSON.parse(raw) as SourceFileShape | BureauEnGrosDeal[];
 
-    // Old / current format: { store: {...}, products: [...] }
+    // format: { store: {...}, products: [...] }
     if (!Array.isArray(parsed) && Array.isArray(parsed.products)) {
       return parsed.products;
     }
 
-    // Fallback: if JSON is directly an array of products
+    // format: [ {...}, {...} ]
     if (Array.isArray(parsed)) {
       return parsed;
     }
 
     return [];
   } catch (err) {
-    console.error(
-      `Failed to read Bureau en Gros deals for store ${storeSlug}`,
-      err
-    );
+    console.error("Failed to read Bureau en Gros deals JSON:", err);
     return [];
   }
+}
+
+/**
+ * Pour l’instant: même deals pour tous les magasins.
+ */
+export function readBureauEnGrosDealsForStore(
+  _storeSlug: string
+): BureauEnGrosDeal[] {
+  return readBureauEnGrosDealsForAllStores();
 }
