@@ -1051,7 +1051,8 @@
         if(normalizedGroup === 'bureauengros' || s === 'bureauengros' || s === 'bureau-en-gros'){
           const bureauSlug = branch?.slug || store?.slug || '';
           if(!bureauSlug) return null;
-          return `/api/bureau-en-gros/deals?storeSlug=${encodeURIComponent(bureauSlug)}`;
+          const encodedSlug = encodeURIComponent(bureauSlug);
+          return `/bureauengros/${encodedSlug}/data.json`;
         }
         if(s === 'best-buy'){
           return BEST_BUY_AGGREGATE_PATH;
