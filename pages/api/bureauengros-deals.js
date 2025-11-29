@@ -77,6 +77,7 @@ function readAllStoresDeals() {
       url: data.url ?? null,
       scrapedAt: data.scrapedAt ?? null,
       count,
+      products,
     });
   }
 
