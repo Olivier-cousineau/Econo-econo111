@@ -463,6 +463,8 @@
   // === Safe initialisation ===
   document.addEventListener('DOMContentLoaded', async () => {
     const overlay = document.getElementById('registrationOverlay');
+    const menuToggle = document.getElementById('menuToggle');
+    const headerMenu = document.getElementById('headerMenu');
     const form = document.getElementById('registrationForm');
     const submitBtn = document.getElementById('registrationSubmit');
     const regulationCheckbox = document.getElementById('regulationCheckbox');
@@ -496,6 +498,37 @@
       const now = new Date();
       siteDateTimeElement.textContent = siteDateTimeFormatter.format(now);
       siteDateTimeElement.setAttribute('datetime', now.toISOString());
+    }
+
+    function setMenuVisibility(visible){
+      if(!headerMenu || !menuToggle) return;
+      if(visible){
+        headerMenu.hidden = false;
+        menuToggle.setAttribute('aria-expanded', 'true');
+        requestAnimationFrame(() => headerMenu.classList.add('is-visible'));
+      }else{
+        headerMenu.classList.remove('is-visible');
+        headerMenu.hidden = true;
+        menuToggle.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    if(menuToggle && headerMenu){
+      menuToggle.addEventListener('click', () => {
+        const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        setMenuVisibility(!isExpanded);
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if(event.key === 'Escape'){ setMenuVisibility(false); }
+      });
+
+      document.addEventListener('click', (event) => {
+        const target = event.target;
+        if(!target) return;
+        if(headerMenu.contains(target) || menuToggle.contains(target)) return;
+        setMenuVisibility(false);
+      });
     }
 
     if(siteDateTimeElement && siteDateTimeFormatter){
