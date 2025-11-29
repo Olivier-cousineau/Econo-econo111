@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import branches from "../data/bureauengros/branches.json";
+import branches from "../data/bureauengros/stores.json";
 
 const ROOT_DIR = process.cwd();
 const BUREAU_EN_GROS_OUTPUTS_ROOT = path.join(
