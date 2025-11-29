@@ -1,5 +1,7 @@
-import fs from "fs";
-import path from "path";
+import {
+  listAvailableBureauEnGrosStoreSlugs,
+  readBureauEnGrosStoreData,
+} from "../../lib/server/bureauEnGrosData";
 
 function normalizeQueryParam(value) {
   if (Array.isArray(value)) {
@@ -25,65 +27,6 @@ function getStoreSlug(query) {
   return typeof slugCandidate === "string" ? slugCandidate.trim() : "";
 }
 
-function readStoreDeals(storeSlug) {
-  const filePath = path.join(
-    process.cwd(),
-    "outputs",
-    "bureauengros",
-    storeSlug,
-    "data.json"
-  );
-
-  if (!fs.existsSync(filePath)) {
-    return null;
-  }
-
-  try {
-    const raw = fs.readFileSync(filePath, "utf8");
-    const parsed = JSON.parse(raw);
-    return parsed && typeof parsed === "object" ? parsed : null;
-  } catch (err) {
-    console.error(`Failed to read Bureau en Gros deals for ${storeSlug}`, err);
-    return null;
-  }
-}
-
-function readAllStoresDeals() {
-  const rootDir = path.join(process.cwd(), "outputs", "bureauengros");
-
-  if (!fs.existsSync(rootDir)) {
-    return [];
-  }
-
-  const entries = fs.readdirSync(rootDir, { withFileTypes: true });
-  const stores = [];
-
-  for (const entry of entries) {
-    if (!entry.isDirectory()) continue;
-
-    const storeSlug = entry.name;
-    const data = readStoreDeals(storeSlug);
-    if (!data) continue;
-
-    const products = Array.isArray(data.products) ? data.products : [];
-    const count =
-      typeof data.count === "number" ? data.count : products.length;
-
-    stores.push({
-      storeSlug,
-      storeId: data.storeId ?? null,
-      storeName: data.storeName ?? null,
-      sourceStore: data.sourceStore ?? null,
-      url: data.url ?? null,
-      scrapedAt: data.scrapedAt ?? null,
-      count,
-      products,
-    });
-  }
-
-  return stores;
-}
-
 export default function handler(req, res) {
   if (req.method !== "GET") {
     res.setHeader("Allow", "GET");
@@ -93,32 +36,50 @@ export default function handler(req, res) {
   const storeSlug = getStoreSlug(req.query);
 
   if (!storeSlug) {
-    const stores = readAllStoresDeals();
+    const slugs = listAvailableBureauEnGrosStoreSlugs();
+    const stores = slugs
+      .map((slug) => ({ slug, data: readBureauEnGrosStoreData(slug) }))
+      .filter(({ data }) => Boolean(data))
+      .map(({ slug, data }) => {
+        const products = Array.isArray(data.products) ? data.products : [];
+        const count = typeof data.count === "number" ? data.count : products.length;
+
+        return {
+          storeSlug: data.store?.slug ?? slug,
+          storeId: data.storeId ?? data.store?.id ?? null,
+          storeName: data.storeName ?? data.store?.name ?? null,
+          sourceStore: data.sourceStore ?? null,
+          url: data.url ?? null,
+          scrapedAt: data.scrapedAt ?? null,
+          count,
+          products,
+        };
+      });
+
     return res.status(200).json({
       ok: true,
-      chain: "bureauengros",
+      chain: "bureau-en-gros",
       mode: "all-stores",
       stores,
     });
   }
 
-  const data = readStoreDeals(storeSlug);
+  const data = readBureauEnGrosStoreData(storeSlug);
   if (!data) {
     return res.status(404).json({
       ok: false,
       error: "STORE_NOT_FOUND",
-      chain: "bureauengros",
+      chain: "bureau-en-gros",
       storeSlug,
     });
   }
 
   const products = Array.isArray(data.products) ? data.products : [];
-  const count =
-    typeof data.count === "number" ? data.count : products.length;
+  const count = typeof data.count === "number" ? data.count : products.length;
 
   return res.status(200).json({
     ok: true,
-    chain: "bureauengros",
+    chain: "bureau-en-gros",
     mode: "single-store",
     storeSlug,
     storeId: data.storeId ?? null,

@@ -1,5 +1,5 @@
 // pages/api/deals.js
-import { readBureauEnGrosStoreData } from "../../lib/bureauEngros";
+import { readBureauEnGrosStoreData } from "../../lib/server/bureauEnGrosData";
 
 /**
  * Normalizes query parameters that may arrive as string or array.
@@ -38,7 +38,7 @@ function formatStoreLabel(slug) {
 
 /**
  * API route serving clearance deals.
- * Supports Bureau en Gros data stored under outputs/bureauengros/<storeSlug>/data.json.
+ * Supports Bureau en Gros data stored under public/bureau-en-gros/<storeSlug>/data.json.
  */
 export default async function handler(req, res) {
   if (req.method !== "GET") {
@@ -77,7 +77,7 @@ export default async function handler(req, res) {
 
       res.status(200).json({
         ok: true,
-        chain: "bureauengros",
+        chain: "bureau-en-gros",
         storeSlug,
         count: typeof storeData.count === "number" ? storeData.count : products.length,
         storeId: storeData.storeId ?? storeData.store?.id ?? "",
