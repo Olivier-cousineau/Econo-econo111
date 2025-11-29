@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2025-11-29T11:24:21.606Z",
+  "generatedAt": "2025-11-29T18:14:34.522Z",
   "stores": [
     {
-      "id": "77",
-      "city": "Owen Sound, ON",
+      "id": "16",
+      "city": "Atholville, NB",
       "status": "committed",
-      "details": "598 produits"
+      "details": "334 produits"
     },
     {
-      "id": "244",
-      "city": "Chelmsford, ON",
+      "id": "193",
+      "city": "Delhi, ON",
       "status": "committed",
-      "details": "702 produits"
+      "details": "164 produits"
     },
     {
-      "id": "49",
-      "city": "Caledonia, ON",
+      "id": "124",
+      "city": "Woodstock, ON",
       "status": "committed",
-      "details": "324 produits"
+      "details": "728 produits"
     },
     {
-      "id": "168",
-      "city": "Cambridge Hespeler, ON",
+      "id": "103",
+      "city": "Stratford, ON",
       "status": "committed",
-      "details": "428 produits"
+      "details": "283 produits"
     },
     {
-      "id": "36",
-      "city": "Cambridge, ON",
+      "id": "349",
+      "city": "Saint John Fairville, NB",
       "status": "committed",
-      "details": "554 produits"
+      "details": "163 produits"
     },
     {
-      "id": "35",
-      "city": "Fredericton, NB",
+      "id": "254",
+      "city": "Saint John - Westmorland Road, NB",
       "status": "committed",
-      "details": "627 produits"
+      "details": "247 produits"
     },
     {
-      "id": "66",
-      "city": "Mount Forest, ON",
+      "id": "476",
+      "city": "Rothesay, NB",
       "status": "committed",
-      "details": "525 produits"
+      "details": "181 produits"
     },
     {
-      "id": "337",
-      "city": "Fredericton North, NB",
+      "id": "51",
+      "city": "Kincardine, ON",
       "status": "committed",
-      "details": "582 produits"
+      "details": "296 produits"
     }
   ],
   "failedTwice": [],
