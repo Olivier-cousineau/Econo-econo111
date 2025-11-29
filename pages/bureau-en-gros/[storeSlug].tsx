@@ -1,196 +1,152 @@
-import { GetStaticPaths, GetStaticProps } from "next";
-import Head from "next/head";
-import { useEffect, useState } from "react";
-import {
-  getBureauEnGrosStores,
-  getBureauEnGrosStoreBySlug,
-  BureauEnGrosDeal,
-} from "../../lib/bureauEngros";
-import { readBureauEnGrosDealsForStore } from "../../lib/bureauEnGrosDeals";
+// pages/bureau-en-gros/[storeSlug].tsx
+import fs from "fs";
+import path from "path";
+import Link from "next/link";
 
-type Props = {
-  storeSlug: string;
-  storeName: string;
-  address?: string;
-};
+const ROOT_DIR = process.cwd();
+const BUREAU_PUBLIC_DIR = path.join(ROOT_DIR, "public", "bureauengros");
 
-type BureauEnGrosStoreData = {
-  products?: BureauEnGrosDeal[];
-};
+// Lit le fichier JSON d'un magasin (coté serveur seulement)
+function readStoreDeals(storeSlug: string) {
+  const filePath = path.join(BUREAU_PUBLIC_DIR, storeSlug, "data.json");
 
-function formatPrice(value: unknown): string {
-  if (typeof value === "number") {
-    return `${value.toFixed(2)} $`;
+  if (!fs.existsSync(filePath)) {
+    return null;
   }
-  if (typeof value === "string" && value.trim() !== "") {
-    return value;
-  }
-  return "Prix non disponible";
+
+  const raw = fs.readFileSync(filePath, "utf8");
+  return JSON.parse(raw);
 }
 
-export default function BureauEnGrosStorePage({
-  storeSlug,
-  storeName,
-  address,
-}: Props) {
-  const [deals, setDeals] = useState<BureauEnGrosDeal[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+export async function getStaticPaths() {
+  const entries = fs.readdirSync(BUREAU_PUBLIC_DIR, { withFileTypes: true });
 
-  const count = deals.length;
-  const title = `Liquidations Bureau en Gros – ${storeName}`;
-
-  useEffect(() => {
-    let isMounted = true;
-
-    async function loadStoreDeals() {
-      setIsLoading(true);
-      setError(null);
-
-      try {
-        const data: BureauEnGrosStoreData = await readBureauEnGrosDealsForStore(
-          storeSlug
-        );
-        if (!isMounted) return;
-
-        const products = Array.isArray(data.products) ? data.products : [];
-        setDeals(products);
-      } catch (err) {
-        if (!isMounted) return;
-        console.error("Failed to load Bureau en Gros deals", err);
-        setError("Impossible de charger les données de ce magasin.");
-        setDeals([]);
-      } finally {
-        if (isMounted) {
-          setIsLoading(false);
-        }
-      }
-    }
-
-    loadStoreDeals();
-
-    return () => {
-      isMounted = false;
-    };
-  }, [storeSlug]);
-
-  return (
-    <>
-      <Head>
-        <title>{title}</title>
-      </Head>
-      <main className="max-w-5xl mx-auto px-4 py-8">
-        <h1 className="text-2xl font-bold mb-1">{title}</h1>
-        {address && (
-          <p className="text-sm text-gray-500 mb-1">
-            Adresse : <span>{address}</span>
-          </p>
-        )}
-        <p className="text-sm text-gray-600 mb-6">
-          {isLoading
-            ? "Chargement des produits en liquidation..."
-            : `${count} produit(s) en liquidation pour ce magasin.`}
-        </p>
-
-        {error && (
-          <p className="text-red-600 text-sm mb-4">{error}</p>
-        )}
-
-        {!error && count === 0 && !isLoading ? (
-          <p>Aucune liquidation trouvée pour le moment.</p>
-        ) : (
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {deals.map((deal, index) => {
-              const name =
-                deal.title || deal.name || deal.productName || "Produit sans nom";
-
-              const image = (deal as any).imageUrl || (deal as any).image;
-              const href = deal.productUrl || (deal as any).url || (deal as any).link || "#";
-
-              const currentPrice = formatPrice(deal.currentPrice);
-              const originalPrice = formatPrice(deal.originalPrice);
-              const discount =
-                typeof deal.discountPercent === "number"
-                  ? `${deal.discountPercent}%`
-                  : null;
-
-              return (
-                <article
-                  key={index}
-                  className="border rounded-lg p-3 flex flex-col gap-2 bg-white shadow-sm"
-                >
-                  {image && (
-                    <div className="w-full h-40 bg-gray-100 flex items-center justify-center overflow-hidden rounded">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src={image}
-                        alt={name}
-                        className="object-contain max-h-full"
-                      />
-                    </div>
-                  )}
-
-                  <h2 className="font-semibold text-sm line-clamp-2">{name}</h2>
-
-                  <div className="text-sm">
-                    <div className="font-semibold">{currentPrice}</div>
-                    <div className="text-gray-500 line-through text-xs">
-                      {originalPrice}
-                    </div>
-                    {discount && (
-                      <div className="text-xs text-green-600 font-semibold">
-                        -{discount}
-                      </div>
-                    )}
-                  </div>
-
-                  {href !== "#" && (
-                    <a
-                      href={href}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="mt-auto text-xs text-blue-600 hover:underline"
-                    >
-                      Voir le produit sur Bureau en Gros
-                    </a>
-                  )}
-                </article>
-              );
-            })}
-          </div>
-        )}
-      </main>
-    </>
-  );
-}
-
-export const getStaticPaths: GetStaticPaths = async () => {
-  const stores = getBureauEnGrosStores();
-
-  const paths = stores.map((store) => ({
-    params: { storeSlug: store.slug },
-  }));
+  const paths = entries
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => ({
+      params: { storeSlug: entry.name },
+    }));
 
   return {
     paths,
-    fallback: "blocking",
+    fallback: false,
   };
-};
+}
 
-export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
-  const storeSlug = params?.storeSlug as string;
-  const store = getBureauEnGrosStoreBySlug(storeSlug);
+export async function getStaticProps({ params }: { params: { storeSlug: string } }) {
+  const storeSlug = params.storeSlug;
+  const deals = readStoreDeals(storeSlug);
 
-  if (!store) {
-    return { notFound: true };
-  }
+  // fallback de sécurité si jamais le fichier n'existe pas
+  const safeDeals =
+    deals && typeof deals === "object"
+      ? deals
+      : {
+          storeId: storeSlug,
+          storeName: storeSlug.replace(/-/g, " "),
+          url: "",
+          scrapedAt: null,
+          count: 0,
+          products: [],
+        };
 
   return {
     props: {
       storeSlug,
-      storeName: store.name,
-      address: store.address,
+      deals: safeDeals,
     },
-    revalidate: 300,
+    // ISR: on rafraîchit toutes les 15 minutes
+    revalidate: 900,
   };
+}
+
+type Product = {
+  title: string;
+  productUrl: string;
+  currentPrice?: number | null;
+  originalPrice?: number | null;
+  discountPercent?: number | null;
+  imageUrl?: string | null;
 };
+
+export default function BureauEnGrosStorePage({
+  storeSlug,
+  deals,
+}: {
+  storeSlug: string;
+  deals: {
+    storeName?: string;
+    count?: number;
+    products: Product[];
+  };
+}) {
+  const products = deals.products || [];
+  const title =
+    deals.storeName || storeSlug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+  const total = deals.count ?? products.length;
+
+  return (
+    <main className="max-w-6xl mx-auto px-4 py-6">
+      <h1 className="text-2xl font-bold mb-2">Bureau en Gros – {title}</h1>
+
+      <p className="mb-4 text-sm text-gray-600">
+        {total} articles en liquidation (tous les rabais, pas seulement -50%).
+      </p>
+
+      <Link href="/bureau-en-gros" className="text-sm underline mb-4 inline-block">
+        ← Retour à la liste des magasins
+      </Link>
+
+      {products.length === 0 && (
+        <p className="mt-4">Aucune liquidation trouvée pour ce magasin.</p>
+      )}
+
+      <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {products.map((p, idx) => (
+          <article
+            key={`${p.productUrl}-${idx}`}
+            className="border rounded-lg p-3 flex flex-col bg-white shadow-sm"
+          >
+            {p.imageUrl && (
+              <img
+                src={p.imageUrl}
+                alt={p.title}
+                className="w-full h-40 object-contain mb-2"
+                loading="lazy"
+              />
+            )}
+
+            <h2 className="font-semibold mb-1 text-sm line-clamp-3">{p.title}</h2>
+
+            {typeof p.currentPrice === "number" && (
+              <p className="font-bold text-base mt-1">
+                {p.currentPrice.toFixed(2)} $
+                {typeof p.originalPrice === "number" &&
+                  p.originalPrice > p.currentPrice && (
+                    <span className="ml-2 line-through text-xs text-gray-500">
+                      {p.originalPrice.toFixed(2)} $
+                    </span>
+                  )}
+              </p>
+            )}
+
+            {typeof p.discountPercent === "number" && (
+              <p className="text-xs text-green-700 font-semibold mt-1">
+                -{p.discountPercent}% de rabais
+              </p>
+            )}
+
+            <a
+              href={p.productUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-auto text-sm text-blue-600 underline pt-2"
+            >
+              Voir sur Bureau en Gros
+            </a>
+          </article>
+        ))}
+      </div>
+    </main>
+  );
+}
