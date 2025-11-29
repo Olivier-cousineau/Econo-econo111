@@ -1,10 +1,9 @@
 // scripts/generate_bureauengros_outputs_from_saint_jerome.js
-// Génère un dossier outputs/bureauengros/<slug>/data.json
-// pour chaque magasin dans data/bureauengros/stores.json,
-// en copiant les liquidations de saint-jerome.json.
+// Génère outputs/bureauengros/<slug>/data.json pour chaque magasin
+// en copiant les liquidations de data/bureauengros/saint-jerome.json
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
 const ROOT_DIR = process.cwd();
 
@@ -54,8 +53,11 @@ function main() {
     process.exit(1);
   }
 
-  const stores = JSON.parse(fs.readFileSync(STORES_PATH, 'utf8'));
-  const masterData = JSON.parse(fs.readFileSync(MASTER_STORE_PATH, 'utf8'));
+  const storesRaw = fs.readFileSync(STORES_PATH, 'utf8');
+  const stores = JSON.parse(storesRaw);
+
+  const masterRaw = fs.readFileSync(MASTER_STORE_PATH, 'utf8');
+  const masterData = JSON.parse(masterRaw);
 
   console.log(`✅ ${stores.length} magasins trouvés dans stores.json`);
   console.log('📍 Magasin maître: saint-jerome.json');
