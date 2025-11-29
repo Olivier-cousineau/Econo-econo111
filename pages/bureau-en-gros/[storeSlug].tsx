@@ -4,12 +4,27 @@ import path from "path";
 import Link from "next/link";
 
 const ROOT_DIR = process.cwd();
-const BUREAU_PUBLIC_DIR = path.join(ROOT_DIR, "public", "bureauengros");
+const PUBLIC_DIR = path.join(ROOT_DIR, "public");
 
-// Lit le fichier JSON d'un magasin (coté serveur seulement)
+function getBureauRootDir() {
+  const candidates = ["bureauengros", "bureau-en-gros"];
+
+  for (const name of candidates) {
+    const fullPath = path.join(PUBLIC_DIR, name);
+    if (fs.existsSync(fullPath)) {
+      return fullPath;
+    }
+  }
+
+  // Aucun dossier trouvé
+  return null;
+}
+
 function readStoreDeals(storeSlug: string) {
-  const filePath = path.join(BUREAU_PUBLIC_DIR, storeSlug, "data.json");
+  const rootDir = getBureauRootDir();
+  if (!rootDir) return null;
 
+  const filePath = path.join(rootDir, storeSlug, "data.json");
   if (!fs.existsSync(filePath)) {
     return null;
   }
@@ -19,7 +34,18 @@ function readStoreDeals(storeSlug: string) {
 }
 
 export async function getStaticPaths() {
-  const entries = fs.readdirSync(BUREAU_PUBLIC_DIR, { withFileTypes: true });
+  const rootDir = getBureauRootDir();
+
+  // Si aucun dossier bureauengros / bureau-en-gros n'existe,
+  // on ne génère aucun path, mais le build NE plante PAS.
+  if (!rootDir) {
+    return {
+      paths: [],
+      fallback: false,
+    };
+  }
+
+  const entries = fs.readdirSync(rootDir, { withFileTypes: true });
 
   const paths = entries
     .filter((entry) => entry.isDirectory())
@@ -37,7 +63,6 @@ export async function getStaticProps({ params }: { params: { storeSlug: string }
   const storeSlug = params.storeSlug;
   const deals = readStoreDeals(storeSlug);
 
-  // fallback de sécurité si jamais le fichier n'existe pas
   const safeDeals =
     deals && typeof deals === "object"
       ? deals
@@ -55,7 +80,6 @@ export async function getStaticProps({ params }: { params: { storeSlug: string }
       storeSlug,
       deals: safeDeals,
     },
-    // ISR: on rafraîchit toutes les 15 minutes
     revalidate: 900,
   };
 }
@@ -90,7 +114,7 @@ export default function BureauEnGrosStorePage({
       <h1 className="text-2xl font-bold mb-2">Bureau en Gros – {title}</h1>
 
       <p className="mb-4 text-sm text-gray-600">
-        {total} articles en liquidation (tous les rabais, pas seulement -50%).
+        {total} articles en liquidation (tous les rabais).
       </p>
 
       <Link href="/bureau-en-gros" className="text-sm underline mb-4 inline-block">
