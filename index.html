@@ -2512,7 +2512,7 @@
       const store = STORES.find(entry => entry.slug === 'bureauengros');
       if(!store || bureauEnGrosBranchCache) return;
       try{
-        const res = await fetchDataJson('data/bureauengros/branches.json');
+        const res = await fetchDataJson('data/bureauengros/stores.json');
         if(!res) return;
         const json = await res.json();
         if(!Array.isArray(json)) return;
