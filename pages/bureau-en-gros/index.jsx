@@ -1,10 +1,8 @@
 // pages/bureau-en-gros/index.jsx
 
 import Link from "next/link";
-import {
-  getBureauEnGrosStores,
-  readBureauEnGrosDealsForStore,
-} from "../../lib/bureauEngros";
+import { getBureauEnGrosStores } from "../../lib/bureauEngros";
+import { readBureauEnGrosDealsForStore } from "../../lib/server/bureauEnGrosData";
 
 export const getStaticProps = async () => {
   const stores = getBureauEnGrosStores().map((store) => {
