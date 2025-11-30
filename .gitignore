@@ -2,3 +2,14 @@
 __pycache__/
 *.pyc
 node_modules/
+
+# Ignore everything in outputs
+outputs/*
+
+# Except Bureau en Gros
+!outputs/bureauengros/
+
+# Ignore heavy folders
+logs/
+archive/
+node_modules/
