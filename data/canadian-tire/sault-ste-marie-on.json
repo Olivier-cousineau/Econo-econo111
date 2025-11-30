@@ -1,17 +1,5 @@
 [
   {
-    "title": "Latex liquide de qualité professionnelle, transparent, 1 oz, accessoire de costume à porter pour l'Halloween",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/party-city-seasonal/party-city-halloween-harvest/8510073/pc-liquid-latex-2aee23e7-3cfd-4588-94e2-cfff43827dec-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 5.99,
-    "salePrice": 2.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/latex-liquide-de-qualite-professionnelle-transparent-1-oz-accessoire-de-costume-a-porter-pour-l-halloween-8510073p.html",
-    "sku": "8510073",
-    "availability": ""
-  },
-  {
     "title": "Liquide de préparation Evans, 1 gal",
     "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0293102/evans-prep-fluid-1gal-5e8adf31-ac7c-40e9-9306-c6aa92e46670-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 49.99,
@@ -21,7 +9,7 @@
     "branch": "Sault Ste. Marie, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/liquide-de-preparation-evans-1-gal-0293102p.html",
     "sku": "0293102",
-    "availability": "Il n’en reste que 4 #029-3102-4"
+    "availability": "Il n’en reste que 2 #029-3102-4"
   },
   {
     "title": "Robinet de lavabo de salle de bains central Danze Ellison à double poignée et à tirette de vidage, trou unique, 4 po, chrome",
@@ -45,7 +33,7 @@
     "branch": "Sault Ste. Marie, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/montre-intelligente-apexfit-e02l-avec-ecran-tactile-0356234p.html",
     "sku": "0356234",
-    "availability": "91 En Stock#035-6234-6"
+    "availability": "78 En Stock#035-6234-6"
   },
   {
     "title": "Rallonge d'extérieur à 1 prise NOMA, calibre 16/2, 24 pi 11 po",
@@ -72,18 +60,6 @@
     "availability": "Il n’en reste que 1 #063-3486-6"
   },
   {
-    "title": "Robinet de lavabo de salle de bains central Danze Kenzie Trough à poignée simple et à tirette de vidage, trou unique, 4 po, nickel brossé",
-    "image": "https://media-www.canadiantire.ca/product/fixing/plumbing/faucets-fixtures/0639840/danze-kenzie-trough-brushed-nickel-1-handle-lavatory-faucet-fdfffad0-e525-486e-96da-3301baf4b5f5.png?im=whresize&wid=200&hei=200",
-    "price": 159.99,
-    "salePrice": 79.99,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/robinet-de-lavabo-de-salle-de-bains-central-danze-kenzie-trough-a-poignee-simple-et-a-tirette-de-vidage-trou-unique-4-po-nickel-brosse-0639840p.html",
-    "sku": "0639840",
-    "availability": "Il n’en reste que 1 #063-9840-6"
-  },
-  {
     "title": "Table de tennis de table Eastpoint Sports Hyper Pong à 4 voies",
     "image": "https://media-www.canadiantire.ca/product/playing/team-sports-and-golf/indoor-games/1841557/hyper-pong-4-way-table-tennis-table-7332a1c5-f5ae-40ab-b598-b1b9c28c81d3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 299.99,
@@ -93,19 +69,7 @@
     "branch": "Sault Ste. Marie, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/table-de-tennis-de-table-eastpoint-sports-hyper-pong-a-4-voies-1841557p.html",
     "sku": "1841557",
-    "availability": "8 En Stock#184-1557-2"
-  },
-  {
-    "title": "Piquets d'abri en acier ShelterLogic, paq. 4",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-shelters-and-car-covers/0371619/shelter-spikes-8d66848e-144e-4bfa-97d6-9a751c539008.png?im=whresize&wid=200&hei=200",
-    "price": 66.99,
-    "salePrice": 29.89,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/piquets-d-abri-en-acier-shelterlogic-paq-4-0371619p.html",
-    "sku": "0371619",
-    "availability": "37 En Stock#037-1619-8"
+    "availability": "Il n’en reste que 7 #184-1557-2"
   },
   {
     "title": "Carreaux muraux autoadhésifs peler et coller pour cuisine et salle de bain Smart Tiles, Penny Nora",
@@ -120,6 +84,18 @@
     "availability": "Il n’en reste que 5 #070-2248-2"
   },
   {
+    "title": "Piquets d'abri en acier ShelterLogic, paq. 4",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-shelters-and-car-covers/0371619/shelter-spikes-8d66848e-144e-4bfa-97d6-9a751c539008.png?im=whresize&wid=200&hei=200",
+    "price": 66.99,
+    "salePrice": 29.89,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/piquets-d-abri-en-acier-shelterlogic-paq-4-0371619p.html",
+    "sku": "0371619",
+    "availability": "34 En Stock#037-1619-8"
+  },
+  {
     "title": "Rouleaux de bonbons Rocket, acidulé, multicolores, 1 kg, paq. 132, friandises pour l'Halloween",
     "image": "https://media-www.canadiantire.ca/product/living/food-drink/seasonal-confectionery/1517385/rockets-candy-rolls-pack-1-kg-1e2039d9-4d4f-4ef7-8138-efd4dce1d212-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 12.99,
@@ -129,55 +105,7 @@
     "branch": "Sault Ste. Marie, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/rouleaux-de-bonbons-rocket-acidule-multicolores-1-kg-paq-132-friandises-pour-l-halloween-1517385p.html",
     "sku": "1517385",
-    "availability": "33 En Stock#151-7385-2"
-  },
-  {
-    "title": "Mini Skittles et Starburts variés, multicolore, 825 g, paq. 70, friandises pour l'Halloween",
-    "image": "https://media-www.canadiantire.ca/product/living/food-drink/seasonal-confectionery/1514410/skittles-and-starbrust-candy-70-count-a611ce41-cf86-4b05-8dac-aeba0c04348a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 15.99,
-    "salePrice": 7.99,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/mini-skittles-et-starburts-varies-multicolore-825-g-paq-70-friandises-pour-l-halloween-1514410p.html",
-    "sku": "1514410",
-    "availability": "Il n’en reste que 6 #151-4410-0"
-  },
-  {
-    "title": "Trousse de biscuits au chocolat Oreo pour l'Halloween, paq. 8",
-    "image": "https://media-www.canadiantire.ca/product/living/food-drink/seasonal-confectionery/1519548/oreo-halloween-cookie-kit-311-g-50d5ca04-2e55-4c48-bb65-b06699cbe2be-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 9.99,
-    "salePrice": 4.99,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-biscuits-au-chocolat-oreo-pour-l-halloween-paq-8-1519548p.html",
-    "sku": "1519548",
-    "availability": "9 En Stock#151-9548-4"
-  },
-  {
-    "title": "Webcaméra Sylvania SWCM230 1080p, noir",
-    "image": "https://media-www.canadiantire.ca/product/living/electronics/home-communications/0691921/sylvania-1080p-webcam-swcm230-a8eab816-dbf4-411f-a774-01f0d4d976f7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 49.99,
-    "salePrice": 14.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/webcamera-sylvania-swcm230-1080p-noir-0691921p.html",
-    "sku": "0691921",
-    "availability": "10 En Stock#069-1921-0"
-  },
-  {
-    "title": "Costume robe rouge/bleue Wonder Woman avec accessoires pour Halloween/fêtes, choix de tailles",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/party-city-seasonal/party-city-halloween-and-fall-decor/8510130/pc-wonder-woman-adult-small-878e4f5d-470d-4da0-a729-92cf765dcb07-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 59.99,
-    "salePrice": 19.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/costume-robe-rouge-bleue-wonder-woman-avec-accessoires-pour-halloween-fetes-choix-de-tailles-8510130p.html",
-    "sku": "8510130",
-    "availability": ""
+    "availability": "23 En Stock#151-7385-2"
   },
   {
     "title": "Barres de chocolat au lait Hershey's Harry Potter, paq. 21",
@@ -192,6 +120,18 @@
     "availability": "Il n’en reste que 1 #151-9551-4"
   },
   {
+    "title": "Webcaméra Sylvania SWCM230 1080p, noir",
+    "image": "https://media-www.canadiantire.ca/product/living/electronics/home-communications/0691921/sylvania-1080p-webcam-swcm230-a8eab816-dbf4-411f-a774-01f0d4d976f7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 49.99,
+    "salePrice": 14.93,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/webcamera-sylvania-swcm230-1080p-noir-0691921p.html",
+    "sku": "0691921",
+    "availability": "10 En Stock#069-1921-0"
+  },
+  {
     "title": "Système d'organisation latéral de la lessive Type A Linear, blanc",
     "image": "https://media-www.canadiantire.ca/product/living/home-organization/laundry/2420004/type-a-side-unit-laundry-organization-system-44db3078-e2d8-4d52-bd8b-2f44f616a61e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 99.99,
@@ -202,42 +142,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/systeme-d-organisation-lateral-de-la-lessive-type-a-linear-blanc-2420004p.html",
     "sku": "2420004",
     "availability": "21 En Stock#242-0004-6"
-  },
-  {
-    "title": "Maynards – Mini baies suédoises, poissons suédois, bonbons surs pour enfants, pêches duveteuses, couleurs variées, 562 g, paq. 45 friandises pour l'Halloween",
-    "image": "https://media-www.canadiantire.ca/product/living/food-drink/seasonal-confectionery/0513235/maynyards-wine-gums-45-count-c194d75b-458e-4e55-9106-44fc34aa7d27-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 12.99,
-    "salePrice": 6.49,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/maynards-mini-baies-suedoises-poissons-suedois-bonbons-surs-pour-enfants-peches-duveteuses-couleurs-variees-562-g-paq-45-friandises-pour-l-halloween-0513235p.html",
-    "sku": "0513235",
-    "availability": "Il n’en reste que 6 #051-3235-2"
-  },
-  {
-    "title": "Support pour casque de jeu ENHANCE 3-en-1 à DEL avec souris élastique, noir",
-    "image": "https://media-www.canadiantire.ca/product/living/electronics/home-entertainment-accessories/0451209/enhance-3-in-1-headset-stand-f2dc419e-3102-43c4-92b0-df3bbcae9b3f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 49.99,
-    "salePrice": 14.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/support-pour-casque-de-jeu-enhance-3-en-1-a-del-avec-souris-elastique-noir-0451209p.html",
-    "sku": "0451209",
-    "availability": "Il n’en reste que 4 #045-1209-4"
-  },
-  {
-    "title": "Assortiment de mini Skittles et Starburst, couleurs variées, 554 g, paq. 45, friandises pour l'Halloween",
-    "image": "https://media-www.canadiantire.ca/product/living/food-drink/seasonal-confectionery/0513986/wrigley-s-skittles-starburst-halloween-candy-45-ct-b91983cc-47c0-428e-a4af-58d4cc9fa3f4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 12.99,
-    "salePrice": 6.49,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/assortiment-de-mini-skittles-et-starburst-couleurs-variees-554-g-paq-45-friandises-pour-l-halloween-0513986p.html",
-    "sku": "0513986",
-    "availability": "48 En Stock#051-3986-4"
   },
   {
     "title": "Bouquets de ballons en aluminium satiné étoile/rond licorne Believe in Unicorns, rose/blanc, paq. 5, gonflement à l'hélium et ruban inclus, pour fête d'anniversaire",
@@ -252,18 +156,6 @@
     "availability": "0 En Stock#842-4566-6"
   },
   {
-    "title": "Forets pour perceuse-tournevis plaqués au titane Mastercraft, paq. 304",
-    "image": "https://media-www.canadiantire.ca/product/fixing/tools/power-tool-accessories/0542375/mastercraft-304-piece-drill-drive-bit-set-18bc491c-53ad-4527-bd4f-af93162fffb3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 199.99,
-    "salePrice": 99.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/forets-pour-perceuse-tournevis-plaques-au-titane-mastercraft-paq-304-0542375p.html",
-    "sku": "0542375",
-    "availability": "Il n’en reste que 1 #054-2375-8"
-  },
-  {
     "title": "Miroir pour mise en forme ProForm Vue avec écran tactile capacitif, technologie iFit",
     "image": "https://media-www.canadiantire.ca/product/playing/exercise/exercise-equipment/1840978/proform-vue-fitness-mirror-a393fb91-aa15-4e8e-a746-5003f9e3798b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 1999.99,
@@ -276,6 +168,18 @@
     "availability": "Il n’en reste que 2 #184-0978-6"
   },
   {
+    "title": "Assortiment de mini Skittles et Starburst, couleurs variées, 554 g, paq. 45, friandises pour l'Halloween",
+    "image": "https://media-www.canadiantire.ca/product/living/food-drink/seasonal-confectionery/0513986/wrigley-s-skittles-starburst-halloween-candy-45-ct-b91983cc-47c0-428e-a4af-58d4cc9fa3f4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 12.99,
+    "salePrice": 6.49,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/assortiment-de-mini-skittles-et-starburst-couleurs-variees-554-g-paq-45-friandises-pour-l-halloween-0513986p.html",
+    "sku": "0513986",
+    "availability": "Il n’en reste que 3 #051-3986-4"
+  },
+  {
     "title": "Câbles 4K HDMI SkyWire, 6 pi, paq. 3",
     "image": "https://media-www.canadiantire.ca/product/living/electronics/home-entertainment-accessories/0452883/skywire-6-hdmi-3-pack-a7cc2a8b-a6dd-4b7f-a49f-ba2461250cb5.png?im=whresize&wid=200&hei=200",
     "price": 29.99,
@@ -285,19 +189,55 @@
     "branch": "Sault Ste. Marie, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/cables-4k-hdmi-skywire-6-pi-paq-3-0452883p.html",
     "sku": "0452883",
-    "availability": "22 En Stock#045-2883-0"
+    "availability": "21 En Stock#045-2883-0"
   },
   {
-    "title": "Chocolats et friandises sans arachides Hershey’s, paq. 50",
-    "image": "https://media-www.canadiantire.ca/product/living/food-drink/seasonal-confectionery/1519489/hershey-s-peanut-free-candy-50-count-2d0496b4-ab34-43fa-821f-e63d1a1bc049-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "title": "Maynards – Mini baies suédoises, poissons suédois, bonbons surs pour enfants, pêches duveteuses, couleurs variées, 562 g, paq. 45 friandises pour l'Halloween",
+    "image": "https://media-www.canadiantire.ca/product/living/food-drink/seasonal-confectionery/0513235/maynyards-wine-gums-45-count-c194d75b-458e-4e55-9106-44fc34aa7d27-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 12.99,
     "salePrice": 6.49,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/chocolats-et-friandises-sans-arachides-hershey-s-paq-50-1519489p.html",
-    "sku": "1519489",
-    "availability": ""
+    "url": "https://www.canadiantire.ca/fr/pdp/maynards-mini-baies-suedoises-poissons-suedois-bonbons-surs-pour-enfants-peches-duveteuses-couleurs-variees-562-g-paq-45-friandises-pour-l-halloween-0513235p.html",
+    "sku": "0513235",
+    "availability": "Il n’en reste que 2 #051-3235-2"
+  },
+  {
+    "title": "Forets pour perceuse-tournevis plaqués au titane Mastercraft, paq. 304",
+    "image": "https://media-www.canadiantire.ca/product/fixing/tools/power-tool-accessories/0542375/mastercraft-304-piece-drill-drive-bit-set-18bc491c-53ad-4527-bd4f-af93162fffb3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 199.99,
+    "salePrice": 99.93,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/forets-pour-perceuse-tournevis-plaques-au-titane-mastercraft-paq-304-0542375p.html",
+    "sku": "0542375",
+    "availability": "Il n’en reste que 1 #054-2375-8"
+  },
+  {
+    "title": "Support pour casque de jeu ENHANCE 3-en-1 à DEL avec souris élastique, noir",
+    "image": "https://media-www.canadiantire.ca/product/living/electronics/home-entertainment-accessories/0451209/enhance-3-in-1-headset-stand-f2dc419e-3102-43c4-92b0-df3bbcae9b3f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 49.99,
+    "salePrice": 14.93,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/support-pour-casque-de-jeu-enhance-3-en-1-a-del-avec-souris-elastique-noir-0451209p.html",
+    "sku": "0451209",
+    "availability": "Il n’en reste que 4 #045-1209-4"
+  },
+  {
+    "title": "Ampoules à filament à DEL à intensité variable à culot E26 NOMA B10, blanc chaud, 40 W",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/light-bulbs/0529611/noma-40w-b10-warm-white-led-bulbs-2-pack-d8ccbe5a-899c-490e-b5f8-348c1c9af633-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 10.99,
+    "salePrice": 4.93,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ampoules-a-filament-a-del-a-intensite-variable-a-culot-e26-noma-b10-blanc-chaud-40-w-0529611p.html",
+    "sku": "0529611",
+    "availability": "1574 En Stock#052-9611-8"
   },
   {
     "title": "Système d'organisation de la lessive Type A Linear à 1 unité, blanc",
@@ -312,78 +252,6 @@
     "availability": "Il n’en reste que 7 #242-0003-8"
   },
   {
-    "title": "Mini couteaux à fromage en acier inoxydable avec poignée en bois CANVAS, noir/argenté, paq. 5, pour Noël/Action de grâces/réveillon/fête d'anniversaire",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/dining-and-entertaining/1426175/canvas-cheese-board-5-pc-b53902e7-7c9d-4468-864c-49be2d9f4e62-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 19.99,
-    "salePrice": 6.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/mini-couteaux-a-fromage-en-acier-inoxydable-avec-poignee-en-bois-canvas-noir-argente-paq-5-pour-noel-action-de-graces-reveillon-fete-d-anniversaire-1426175p.html",
-    "sku": "1426175",
-    "availability": "Il n’en reste que 2 #142-6175-0"
-  },
-  {
-    "title": "Sonnette avec caméra vidéo Wi-Fi Arlo, noir",
-    "image": "https://media-www.canadiantire.ca/product/fixing/hardware/home-safety/0463297/arlo-wi-fi-video-doorbell-d2a3ca31-3e68-4bbf-9f97-c4260407affc-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 199.99,
-    "salePrice": 99.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/sonnette-avec-camera-video-wi-fi-arlo-noir-0463297p.html",
-    "sku": "0463297",
-    "availability": "Il n’en reste que 7 #046-3297-8"
-  },
-  {
-    "title": "Haut-parleur de douche Bluetooth portatif sans fil résistant à l'eau Proscan, avec microphone intégré",
-    "image": "https://media-www.canadiantire.ca/product/automotive/electronics/home-electronics/0442263/proscan-shower-speaker-7ea5c125-a064-4967-96cb-f3d56c014f96-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 19.99,
-    "salePrice": 9.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/haut-parleur-de-douche-bluetooth-portatif-sans-fil-resistant-a-l-eau-proscan-avec-microphone-integre-0442263p.html",
-    "sku": "0442263",
-    "availability": "Il n’en reste que 4 #044-2263-8"
-  },
-  {
-    "title": "Couvercles de remplacement Quattro Stagioni pour pots Mason réguliers, paq. 2",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/canning/1426449/quattro-stagioni-2pk-regular-mouth-1pc-lids-14f48e30-b03d-432d-abc0-8a06969d1133-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 3.29,
-    "salePrice": 1.43,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/couvercles-de-remplacement-quattro-stagioni-pour-pots-mason-reguliers-paq-2-1426449p.html",
-    "sku": "1426449",
-    "availability": "97 En Stock#142-6449-0"
-  },
-  {
-    "title": "Ampoules à filament à DEL à intensité variable à culot E26 NOMA B10, blanc chaud, 40 W",
-    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/light-bulbs/0529611/noma-40w-b10-warm-white-led-bulbs-2-pack-d8ccbe5a-899c-490e-b5f8-348c1c9af633-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 10.99,
-    "salePrice": 4.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/ampoules-a-filament-a-del-a-intensite-variable-a-culot-e26-noma-b10-blanc-chaud-40-w-0529611p.html",
-    "sku": "0529611",
-    "availability": "1576 En Stock#052-9611-8"
-  },
-  {
-    "title": "Costume DC Batman pour enfants, combinaison rembourrée noire avec cape et masque, choix de tailles",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/party-city-seasonal/party-city-halloween-and-fall-decor/8510105/pc-batman-with-muscles-kids-small-ba613870-b815-4ba3-80da-3b0fea21b29a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 39.99,
-    "salePrice": 4.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/costume-dc-batman-pour-enfants-combinaison-rembourree-noire-avec-cape-et-masque-choix-de-tailles-8510105p.html",
-    "sku": "8510105",
-    "availability": ""
-  },
-  {
     "title": "Voitures en métal moulé à rétrofriction 1:43 Maisto Fresh Metal Power Racer, choix varié",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/toys-games/1501760/fresh-metal-power-racers-1-43-scale-asst-9d17b1d5-7b4c-42b9-9fec-c9fdc47763bb-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 10.99,
@@ -394,54 +262,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/voitures-en-metal-moule-a-retrofriction-1-43-maisto-fresh-metal-power-racer-choix-varie-1501760p.html",
     "sku": "1501760",
     "availability": "28 En Stock#150-1760-6"
-  },
-  {
-    "title": "Costume Disney Marvel Spider-Man Peter Parker, hommes, combinaison bleu/rouge avec masque, tailles variées",
-    "image": "https://media-www.canadiantire.ca/product/automotive/party-city-seasonal/party-city-halloween-costumes/8510126/884-adult-spiderman-costume-adult-large-5-4-5-10--37afe673-cc21-4703-8c7f-041dba451892-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 69.99,
-    "salePrice": 19.99,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/costume-disney-marvel-spider-man-peter-parker-hommes-combinaison-bleu-rouge-avec-masque-tailles-variees-8510126p.html",
-    "sku": "8510126",
-    "availability": ""
-  },
-  {
-    "title": "Robinet de cuisine à bec rétractable et à poignée simple Peerless Xander, chrome",
-    "image": "https://media-www.canadiantire.ca/product/fixing/plumbing/faucets-fixtures/0639993/peerless-xander-pullout-kitchen-faucet-chrome-cf63af55-f929-4075-a6d7-55a554a6d23e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 219.99,
-    "salePrice": 89.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/robinet-de-cuisine-a-bec-retractable-et-a-poignee-simple-peerless-xander-chrome-0639993p.html",
-    "sku": "0639993",
-    "availability": "Il n’en reste que 3 #063-9993-2"
-  },
-  {
-    "title": "Lampe de travail à capteur MotoMaster, 100 lumens, lumière chaude",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0373186/motomaster-puck-light-with-motion-sensor-e3d65ec1-7acc-4592-bf18-d3b1678340ab-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 19.99,
-    "salePrice": 9.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/lampe-de-travail-a-capteur-motomaster-100-lumens-lumiere-chaude-0373186p.html",
-    "sku": "0373186",
-    "availability": "15 En Stock#037-3186-4"
-  },
-  {
-    "title": "Lampe de travail portative MotoMaster, compatible avec PWR POD",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0374637/motomaster-handheld-work-light-pwr-pod-compatible-ef54d54f-abb0-4e4f-9a16-d626977fc6ac-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 49.99,
-    "salePrice": 24.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/lampe-de-travail-portative-motomaster-compatible-avec-pwr-pod-0374637p.html",
-    "sku": "0374637",
-    "availability": "Il n’en reste que 1 #037-4637-6"
   },
   {
     "title": "Pompe à dépression pour conservation et entreposage des aliments avec bouchon Fresh & Save de Zwilling, blanc",
@@ -456,6 +276,54 @@
     "availability": "Il n’en reste que 1 #043-0336-0"
   },
   {
+    "title": "Sonnette avec caméra vidéo Wi-Fi Arlo, noir",
+    "image": "https://media-www.canadiantire.ca/product/fixing/hardware/home-safety/0463297/arlo-wi-fi-video-doorbell-d2a3ca31-3e68-4bbf-9f97-c4260407affc-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 199.99,
+    "salePrice": 99.93,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/sonnette-avec-camera-video-wi-fi-arlo-noir-0463297p.html",
+    "sku": "0463297",
+    "availability": "Il n’en reste que 7 #046-3297-8"
+  },
+  {
+    "title": "Fauteuil poire moelleux vache des Highlands pour enfant",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/preschool-toys-activities/1501108/beastie-bag-highland-cow-e86ca3b2-3082-419f-8841-d687fb0940d6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 69.99,
+    "salePrice": 31.93,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/fauteuil-poire-moelleux-vache-des-highlands-pour-enfant-1501108p.html",
+    "sku": "1501108",
+    "availability": "Il n’en reste que 1 #150-1108-2"
+  },
+  {
+    "title": "Haut-parleur de douche Bluetooth portatif sans fil résistant à l'eau Proscan, avec microphone intégré",
+    "image": "https://media-www.canadiantire.ca/product/automotive/electronics/home-electronics/0442263/proscan-shower-speaker-7ea5c125-a064-4967-96cb-f3d56c014f96-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/haut-parleur-de-douche-bluetooth-portatif-sans-fil-resistant-a-l-eau-proscan-avec-microphone-integre-0442263p.html",
+    "sku": "0442263",
+    "availability": "Il n’en reste que 4 #044-2263-8"
+  },
+  {
+    "title": "Contenants pour aliments en verre résistant à la chaleur et sous vide Fresh & Save de Zwilling, 3 pièces",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430339/zwilling-glass-food-storage-3pc-ab7d13af-cca1-462f-8887-38847c8a7835-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 119.99,
+    "salePrice": 54.93,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/contenants-pour-aliments-en-verre-resistant-a-la-chaleur-et-sous-vide-fresh-save-de-zwilling-3-pieces-0430339p.html",
+    "sku": "0430339",
+    "availability": "Il n’en reste que 4 #043-0339-4"
+  },
+  {
     "title": "Lustre doré à 10 lampes CANVAS Marlene, or brossé",
     "image": "https://media-www.canadiantire.ca/product/living/home-decor/lighting/1522611/canvas-wilton-chandelier-e74d26bf-c6d4-4a18-a36d-c8dcdb26b92e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 249.99,
@@ -466,6 +334,54 @@
     "url": "https://www.canadiantire.ca/fr/pdp/lustre-dore-a-10-lampes-canvas-marlene-or-brosse-1522611p.html",
     "sku": "1522611",
     "availability": "Il n’en reste que 1 #152-2611-2"
+  },
+  {
+    "title": "Mini couteaux à fromage en acier inoxydable avec poignée en bois CANVAS, noir/argenté, paq. 5, pour Noël/Action de grâces/réveillon/fête d'anniversaire",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/dining-and-entertaining/1426175/canvas-cheese-board-5-pc-b53902e7-7c9d-4468-864c-49be2d9f4e62-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 6.93,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/mini-couteaux-a-fromage-en-acier-inoxydable-avec-poignee-en-bois-canvas-noir-argente-paq-5-pour-noel-action-de-graces-reveillon-fete-d-anniversaire-1426175p.html",
+    "sku": "1426175",
+    "availability": "Il n’en reste que 2 #142-6175-0"
+  },
+  {
+    "title": "Couvercles de remplacement Quattro Stagioni pour pots Mason réguliers, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/canning/1426449/quattro-stagioni-2pk-regular-mouth-1pc-lids-14f48e30-b03d-432d-abc0-8a06969d1133-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 3.29,
+    "salePrice": 1.43,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/couvercles-de-remplacement-quattro-stagioni-pour-pots-mason-reguliers-paq-2-1426449p.html",
+    "sku": "1426449",
+    "availability": "96 En Stock#142-6449-0"
+  },
+  {
+    "title": "Lampe de travail à capteur MotoMaster, 100 lumens, lumière chaude",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0373186/motomaster-puck-light-with-motion-sensor-e3d65ec1-7acc-4592-bf18-d3b1678340ab-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/lampe-de-travail-a-capteur-motomaster-100-lumens-lumiere-chaude-0373186p.html",
+    "sku": "0373186",
+    "availability": "13 En Stock#037-3186-4"
+  },
+  {
+    "title": "Robinet de cuisine à bec rétractable et à poignée simple Peerless Xander, chrome",
+    "image": "https://media-www.canadiantire.ca/product/fixing/plumbing/faucets-fixtures/0639993/peerless-xander-pullout-kitchen-faucet-chrome-cf63af55-f929-4075-a6d7-55a554a6d23e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 219.99,
+    "salePrice": 89.93,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/robinet-de-cuisine-a-bec-retractable-et-a-poignee-simple-peerless-xander-chrome-0639993p.html",
+    "sku": "0639993",
+    "availability": "Il n’en reste que 3 #063-9993-2"
   },
   {
     "title": "Système d'organisation de la lessive Type A Linear à 2 unités, blanc",
@@ -480,6 +396,18 @@
     "availability": "Il n’en reste que 2 #242-0002-0"
   },
   {
+    "title": "Lampe de travail portative MotoMaster, compatible avec PWR POD",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0374637/motomaster-handheld-work-light-pwr-pod-compatible-ef54d54f-abb0-4e4f-9a16-d626977fc6ac-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 49.99,
+    "salePrice": 24.93,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/lampe-de-travail-portative-motomaster-compatible-avec-pwr-pod-0374637p.html",
+    "sku": "0374637",
+    "availability": "Il n’en reste que 1 #037-4637-6"
+  },
+  {
     "title": "Chaussures tout-aller à enfiler légères Excalibur Outbound pour femmes, gris/rose",
     "image": "https://media-www.canadiantire.ca/product/playing/footwear-apparel/summer-footwear-apparel/1871412/outbound-women-s-athleisure-sandal-print-w5-c4da8071-df7b-43d9-93b2-9e7c9a03fc00-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 29.99,
@@ -492,16 +420,76 @@
     "availability": ""
   },
   {
-    "title": "Contenants pour aliments en verre résistant à la chaleur et sous vide Fresh & Save de Zwilling, 3 pièces",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430339/zwilling-glass-food-storage-3pc-ab7d13af-cca1-462f-8887-38847c8a7835-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 119.99,
-    "salePrice": 54.93,
+    "title": "Costume robe rouge/bleue Wonder Woman avec accessoires pour Halloween/fêtes, choix de tailles",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/party-city-seasonal/party-city-halloween-and-fall-decor/8510130/pc-wonder-woman-adult-small-878e4f5d-470d-4da0-a729-92cf765dcb07-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 59.99,
+    "salePrice": 19.93,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/contenants-pour-aliments-en-verre-resistant-a-la-chaleur-et-sous-vide-fresh-save-de-zwilling-3-pieces-0430339p.html",
-    "sku": "0430339",
-    "availability": "Il n’en reste que 4 #043-0339-4"
+    "url": "https://www.canadiantire.ca/fr/pdp/costume-robe-rouge-bleue-wonder-woman-avec-accessoires-pour-halloween-fetes-choix-de-tailles-8510130p.html",
+    "sku": "8510130",
+    "availability": ""
+  },
+  {
+    "title": "Île flottante gonflable licorne pour fête avec glacière pour 5 personnes, arc-en-ciel",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-water-fun/0797173/unicorn-party-island-eb79d32c-2fc2-4265-a0bc-d9ad9f490225-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 199.99,
+    "salePrice": 99.93,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ile-flottante-gonflable-licorne-pour-fete-avec-glaciere-pour-5-personnes-arc-en-ciel-0797173p.html",
+    "sku": "0797173",
+    "availability": "Il n’en reste que 1 #079-7173-0"
+  },
+  {
+    "title": "Canapé d'extérieur/de jardin CANVAS Jasper en aluminium et en osier résistant aux intempéries, coussins résistants à l'eau et aux rayons UV",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/1880274/canvas-jasper-couch-03b491ef-13a4-414d-adfc-189c90374e2d.png?im=whresize&wid=200&hei=200",
+    "price": 999.99,
+    "salePrice": 424.93,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/canape-d-exterieur-de-jardin-canvas-jasper-en-aluminium-et-en-osier-resistant-aux-intemperies-coussins-resistants-a-l-eau-et-aux-rayons-uv-1880274p.html",
+    "sku": "1880274",
+    "availability": "Il n’en reste que 2 #188-0274-2"
+  },
+  {
+    "title": "Bouquet de ballons en aluminium étoile/carré rond Nintendo Super Mario Bros, bleu/rouge, paq. 5, gonflement à l'hélium et ruban inclus, pour fête d'anniversaire",
+    "image": "https://media-www.canadiantire.ca/product/automotive/party-city-everyday/party-city-balloons-accessories/8424571/bqt-blln-fl-mario-bros-0cb0d966-feba-44ff-bc4b-ab807097e8ba-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 33.99,
+    "salePrice": 16.93,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/bouquet-de-ballons-en-aluminium-etoile-carre-rond-nintendo-super-mario-bros-bleu-rouge-paq-5-gonflement-a-l-helium-et-ruban-inclus-pour-fete-d-anniversaire-8424571p.html",
+    "sku": "8424571",
+    "availability": ""
+  },
+  {
+    "title": "Support de bac de recyclage en métal galvanisé pour utilisation avec les bacs de recyclage de 59 L à 90 L",
+    "image": "https://media-www.canadiantire.ca/product/living/cleaning/refuse-containers/1426700/recycling-bin-cradle-9cf84ce3-f2d4-472c-9e0d-e5cf5699e77d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 7.93,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/support-de-bac-de-recyclage-en-metal-galvanise-pour-utilisation-avec-les-bacs-de-recyclage-de-59-l-a-90-l-1426700p.html",
+    "sku": "1426700",
+    "availability": "12 En Stock#142-6700-0"
+  },
+  {
+    "title": "Costume Disney Marvel Spider-Man Peter Parker, hommes, combinaison bleu/rouge avec masque, tailles variées",
+    "image": "https://media-www.canadiantire.ca/product/automotive/party-city-seasonal/party-city-halloween-costumes/8510126/884-adult-spiderman-costume-adult-large-5-4-5-10--37afe673-cc21-4703-8c7f-041dba451892-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 69.99,
+    "salePrice": 19.99,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/costume-disney-marvel-spider-man-peter-parker-hommes-combinaison-bleu-rouge-avec-masque-tailles-variees-8510126p.html",
+    "sku": "8510126",
+    "availability": ""
   },
   {
     "title": "Manteau en molleton à glissière pour hommes Outbound Passage",
@@ -528,76 +516,16 @@
     "availability": "Il n’en reste que 1 #046-8023-0"
   },
   {
-    "title": "Ballon en aluminium satiné camion Nickelodeon Blaze et les Monster Machines, rouge/bleu, 34 po, gonflement à l'hélium et ruban inclus, pour fête d'anniversaire",
-    "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8424551/blln-fl-supershape-blaze-be636251-5995-4004-b100-9f6aacb27b58-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 19.99,
-    "salePrice": 6.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/ballon-en-aluminium-satine-camion-nickelodeon-blaze-et-les-monster-machines-rouge-bleu-34-po-gonflement-a-l-helium-et-ruban-inclus-pour-fete-d-anniversaire-8424551p.html",
-    "sku": "8424551",
-    "availability": "Il n’en reste que 2 #842-4551-0"
-  },
-  {
-    "title": "Support de bac de recyclage en métal galvanisé pour utilisation avec les bacs de recyclage de 59 L à 90 L",
-    "image": "https://media-www.canadiantire.ca/product/living/cleaning/refuse-containers/1426700/recycling-bin-cradle-9cf84ce3-f2d4-472c-9e0d-e5cf5699e77d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 19.99,
-    "salePrice": 7.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/support-de-bac-de-recyclage-en-metal-galvanise-pour-utilisation-avec-les-bacs-de-recyclage-de-59-l-a-90-l-1426700p.html",
-    "sku": "1426700",
-    "availability": "12 En Stock#142-6700-0"
-  },
-  {
-    "title": "Fauteuil poire moelleux vache des Highlands pour enfant",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/preschool-toys-activities/1501108/beastie-bag-highland-cow-e86ca3b2-3082-419f-8841-d687fb0940d6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 69.99,
-    "salePrice": 31.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/fauteuil-poire-moelleux-vache-des-highlands-pour-enfant-1501108p.html",
-    "sku": "1501108",
-    "availability": "Il n’en reste que 1 #150-1108-2"
-  },
-  {
-    "title": "Ampoule à DEL intelligente Wi-Fi Globe Electric, base PAR20 E26, 500 lumens, lumière blanche accordable, intensité réglable",
-    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/light-bulbs/0529735/globe-par20-led-smart-bulb-0ff9b751-3f17-4df4-8906-aa1058a52810-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 19.99,
-    "salePrice": 9.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/ampoule-a-del-intelligente-wi-fi-globe-electric-base-par20-e26-500-lumens-lumiere-blanche-accordable-intensite-reglable-0529735p.html",
-    "sku": "0529735",
-    "availability": "Il n’en reste que 5 #052-9735-4"
-  },
-  {
-    "title": "Enduit caoutchouté amovible Protect Dip, fini à effets spéciaux",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-body-repair/0479353/chameleon-blue-protect-dip-8656d580-0bf8-4282-aa7f-96146c33d7e5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 19.99,
-    "salePrice": 9.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/enduit-caoutchoute-amovible-protect-dip-fini-a-effets-speciaux-0477967p.html",
-    "sku": "0477967",
-    "availability": ""
-  },
-  {
-    "title": "Fisher-Price Twinkle & Cuddle - Nuage apaisant pour bébé, bilingue, 0 mois et plus",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/child-travel-safety/0464891/fisher-price-twinkle-cuddle-cloud-soother-22e4e6b0-6710-429d-9853-1e128edacfcf-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "title": "Cours en ligne prépayé et carte d’accès pour examen d’embarcation de plaisance BOATsmart!MD",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790093/boat-smart-pcoc-prepaid-exam-card-e896fc16-08f3-4431-94b3-4b27b2160728-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 39.99,
-    "salePrice": 19.99,
+    "salePrice": 12.93,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/fisher-price-twinkle-cuddle-nuage-apaisant-pour-bebe-bilingue-0-mois-et-plus-0464891p.html",
-    "sku": "0464891",
-    "availability": "Il n’en reste que 1 #046-4891-6"
+    "url": "https://www.canadiantire.ca/fr/pdp/cours-en-ligne-prepaye-et-carte-d-acces-pour-examen-d-embarcation-de-plaisance-boatsmart-md-0790093p.html",
+    "sku": "0790093",
+    "availability": ""
   },
   {
     "title": "Robinet d'évier à bec rétractable et à poignée simple Peerless Xander, acier inoxydable",
@@ -612,64 +540,16 @@
     "availability": "Il n’en reste que 2 #063-9994-0"
   },
   {
-    "title": "Canapé d'extérieur/de jardin CANVAS Jasper en aluminium et en osier résistant aux intempéries, coussins résistants à l'eau et aux rayons UV",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/1880274/canvas-jasper-couch-03b491ef-13a4-414d-adfc-189c90374e2d.png?im=whresize&wid=200&hei=200",
-    "price": 999.99,
-    "salePrice": 424.93,
+    "title": "Enduit caoutchouté amovible Protect Dip, fini à effets spéciaux",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-body-repair/0479353/chameleon-blue-protect-dip-8656d580-0bf8-4282-aa7f-96146c33d7e5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 9.93,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/canape-d-exterieur-de-jardin-canvas-jasper-en-aluminium-et-en-osier-resistant-aux-intemperies-coussins-resistants-a-l-eau-et-aux-rayons-uv-1880274p.html",
-    "sku": "1880274",
-    "availability": "Il n’en reste que 2 #188-0274-2"
-  },
-  {
-    "title": "Jeu de clés à cliquet de paume et douilles MAXIMUM, paq. 40, SAE/métrique, CRV, placage nickel/chrome",
-    "image": "https://media-www.canadiantire.ca/product/fixing/tools/sockets-wrenches/0580293/maximum-40pc-3-8d-palm-ratchet-and-socket-set-dd8d7e3c-a93b-4504-bef6-84379d7970db-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 84.99,
-    "salePrice": 34.99,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/jeu-de-cles-a-cliquet-de-paume-et-douilles-maximum-paq-40-sae-metrique-crv-placage-nickel-chrome-0580293p.html",
-    "sku": "0580293",
-    "availability": "Il n’en reste que 4 #058-0293-6"
-  },
-  {
-    "title": "Cours en ligne prépayé et carte d’accès pour examen d’embarcation de plaisance BOATsmart!MD",
-    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790093/boat-smart-pcoc-prepaid-exam-card-e896fc16-08f3-4431-94b3-4b27b2160728-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 39.99,
-    "salePrice": 12.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/cours-en-ligne-prepaye-et-carte-d-acces-pour-examen-d-embarcation-de-plaisance-boatsmart-md-0790093p.html",
-    "sku": "0790093",
+    "url": "https://www.canadiantire.ca/fr/pdp/enduit-caoutchoute-amovible-protect-dip-fini-a-effets-speciaux-0477967p.html",
+    "sku": "0477967",
     "availability": ""
-  },
-  {
-    "title": "Guêtres Huntshield McKay No Fly Zone, gris",
-    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-apparel-footwear/3751420/mckay-no-fly-zone-gaiters-l-xl-grey-176157f2-d9d5-495f-84bb-50f778af40aa-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 59.99,
-    "salePrice": 26.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/guetres-huntshield-mckay-no-fly-zone-gris-3751419p.html",
-    "sku": "3751419",
-    "availability": ""
-  },
-  {
-    "title": "Figurine interactive acolyte Rêve Disney Wish, 3 ans et plus",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/toys-games/1501716/disney-wish-feature-sidekick-0866a880-8247-47a4-8a47-aed31a7cd26e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 22.99,
-    "salePrice": 10.43,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/figurine-interactive-acolyte-reve-disney-wish-3-ans-et-plus-1501716p.html",
-    "sku": "1501716",
-    "availability": "Il n’en reste que 1 #150-1716-4"
   },
   {
     "title": "Moule et préparation de pain au romarin Emeril Lagasse",
@@ -684,64 +564,16 @@
     "availability": ""
   },
   {
-    "title": "Amplificateur céramique Silverwax, 500 ml",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-chemicals/0390796/silverwax-ceramic-series-suit-up-500ml-2dd4ea0b-71f1-44ac-aad3-be2cd3f5eac2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 49.99,
-    "salePrice": 23.93,
+    "title": "Ampoule à DEL intelligente Wi-Fi Globe Electric, base PAR20 E26, 500 lumens, lumière blanche accordable, intensité réglable",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/light-bulbs/0529735/globe-par20-led-smart-bulb-0ff9b751-3f17-4df4-8906-aa1058a52810-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 9.93,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/amplificateur-ceramique-silverwax-500-ml-0390796p.html",
-    "sku": "0390796",
-    "availability": "22 En Stock#039-0796-6"
-  },
-  {
-    "title": "Contenant à gâteries Petco Reddy en acier inoxydable, 8,5 tasses",
-    "image": "https://media-www.canadiantire.ca/product/living/pet-care/pet-accessories/1426903/reddy-stainless-steel-treat-jar-8-5-cups-e60d6c22-a42f-4965-81f5-e428b62dec8e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 32.99,
-    "salePrice": 14.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/contenant-a-gateries-petco-reddy-en-acier-inoxydable-8-5-tasses-1426903p.html",
-    "sku": "1426903",
-    "availability": "Il n’en reste que 7 #142-6903-8"
-  },
-  {
-    "title": "Modèle de voiture de course en métal moulé 1:43 Formule 1 Red Bull Maisto, voiture 2023 de Max Verstappen",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/toys-games/1501758/formula-1-race-1-43-red-bull-932e9a84-ecd8-4bdd-85b1-e3d4587fbf7f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 14.99,
-    "salePrice": 6.43,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/modele-de-voiture-de-course-en-metal-moule-1-43-formule-1-red-bull-maisto-voiture-2023-de-max-verstappen-1501758p.html",
-    "sku": "1501758",
-    "availability": ""
-  },
-  {
-    "title": "Nike - Bande de résistance moyenne, noir",
-    "image": "https://media-www.canadiantire.ca/product/playing/exercise/exercise-accessories/1841089/nike-resistance-band-medium-black-62585c11-4608-45e5-8b6e-8818b3d7a2b1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 30.99,
-    "salePrice": 14.99,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/nike-bande-de-resistance-moyenne-noir-1841089p.html",
-    "sku": "1841089",
-    "availability": "18 En Stock#184-1089-6"
-  },
-  {
-    "title": "Attractif Tink's E-Scent",
-    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-accessories/1759115/tinks-e-scent-797f16ba-6cf8-4715-965a-9bd897d1d389-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 45.99,
-    "salePrice": 22.43,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/attractif-tink-s-e-scent-1759115p.html",
-    "sku": "1759115",
-    "availability": "Il n’en reste que 3 #175-9115-8"
+    "url": "https://www.canadiantire.ca/fr/pdp/ampoule-a-del-intelligente-wi-fi-globe-electric-base-par20-e26-500-lumens-lumiere-blanche-accordable-intensite-reglable-0529735p.html",
+    "sku": "0529735",
+    "availability": "Il n’en reste que 4 #052-9735-4"
   },
   {
     "title": "Trousse de connexion de batterie de radiateurs Remington, Black & Decker/Porter Cable",
@@ -756,28 +588,112 @@
     "availability": "Il n’en reste que 2 #076-6329-4"
   },
   {
-    "title": "Caméra de recul type S à montage flexible avec écran de 5 po",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-electronics/0350183/type-s-flex-mount-5-backup-camera-c6057e28-17ee-48d8-bc9e-1cc2ee79c1f3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 299.99,
-    "salePrice": 149.93,
+    "title": "Nike - Bande de résistance moyenne, noir",
+    "image": "https://media-www.canadiantire.ca/product/playing/exercise/exercise-accessories/1841089/nike-resistance-band-medium-black-62585c11-4608-45e5-8b6e-8818b3d7a2b1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 30.99,
+    "salePrice": 14.99,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/camera-de-recul-type-s-a-montage-flexible-avec-ecran-de-5-po-0350183p.html",
-    "sku": "0350183",
-    "availability": "Il n’en reste que 1 #035-0183-2"
+    "url": "https://www.canadiantire.ca/fr/pdp/nike-bande-de-resistance-moyenne-noir-1841089p.html",
+    "sku": "1841089",
+    "availability": "18 En Stock#184-1089-6"
   },
   {
-    "title": "Enduit caoutchouté amovible Protect Dip, fluorescent",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-body-repair/0479352/glow-in-the-dark-green-protect-dip-c23a1cf4-4b42-40f0-bc05-bbc8aee5d85c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 21.99,
-    "salePrice": 9.93,
+    "title": "Contenant à gâteries Petco Reddy en acier inoxydable, 8,5 tasses",
+    "image": "https://media-www.canadiantire.ca/product/living/pet-care/pet-accessories/1426903/reddy-stainless-steel-treat-jar-8-5-cups-e60d6c22-a42f-4965-81f5-e428b62dec8e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 32.99,
+    "salePrice": 14.93,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/enduit-caoutchoute-amovible-protect-dip-fluorescent-0479351p.html",
-    "sku": "0479351",
+    "url": "https://www.canadiantire.ca/fr/pdp/contenant-a-gateries-petco-reddy-en-acier-inoxydable-8-5-tasses-1426903p.html",
+    "sku": "1426903",
+    "availability": "Il n’en reste que 4 #142-6903-8"
+  },
+  {
+    "title": "Guêtres Huntshield McKay No Fly Zone, gris",
+    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-apparel-footwear/3751420/mckay-no-fly-zone-gaiters-l-xl-grey-176157f2-d9d5-495f-84bb-50f778af40aa-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 59.99,
+    "salePrice": 26.93,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/guetres-huntshield-mckay-no-fly-zone-gris-3751419p.html",
+    "sku": "3751419",
     "availability": ""
+  },
+  {
+    "title": "Attractif Tink's E-Scent",
+    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-accessories/1759115/tinks-e-scent-797f16ba-6cf8-4715-965a-9bd897d1d389-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 45.99,
+    "salePrice": 22.43,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/attractif-tink-s-e-scent-1759115p.html",
+    "sku": "1759115",
+    "availability": "Il n’en reste que 1 #175-9115-8"
+  },
+  {
+    "title": "Amplificateur céramique Silverwax, 500 ml",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-chemicals/0390796/silverwax-ceramic-series-suit-up-500ml-2dd4ea0b-71f1-44ac-aad3-be2cd3f5eac2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 49.99,
+    "salePrice": 23.93,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/amplificateur-ceramique-silverwax-500-ml-0390796p.html",
+    "sku": "0390796",
+    "availability": "22 En Stock#039-0796-6"
+  },
+  {
+    "title": "Carte d'accès au manuel automobile en ligne Haynes pour 1 véhicule",
+    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-shop-equipment-supplies/0259519/eac56-online-manual-access-card-0f5b88c3-4db2-47c7-acf9-90bceb786c2e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 34.99,
+    "salePrice": 3.93,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/carte-d-acces-au-manuel-automobile-en-ligne-haynes-pour-1-vehicule-0259519p.html",
+    "sku": "0259519",
+    "availability": "Il n’en reste que 3 #025-9519-6"
+  },
+  {
+    "title": "Jeu de clés à cliquet de paume et douilles MAXIMUM, paq. 40, SAE/métrique, CRV, placage nickel/chrome",
+    "image": "https://media-www.canadiantire.ca/product/fixing/tools/sockets-wrenches/0580293/maximum-40pc-3-8d-palm-ratchet-and-socket-set-dd8d7e3c-a93b-4504-bef6-84379d7970db-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 84.99,
+    "salePrice": 34.99,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/jeu-de-cles-a-cliquet-de-paume-et-douilles-maximum-paq-40-sae-metrique-crv-placage-nickel-chrome-0580293p.html",
+    "sku": "0580293",
+    "availability": "Il n’en reste que 5 #058-0293-6"
+  },
+  {
+    "title": "Adaptateur de perceuse Mastercraft, 1/4 po",
+    "image": "https://media-www.canadiantire.ca/product/fixing/tools/power-tool-accessories/0547433/adaptor-1-4-x-1-4-for-54-7431-flat-wheel-f9c27e34-fc4a-428c-b5fd-f3d7d874240c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 8.99,
+    "salePrice": 3.93,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/adaptateur-de-perceuse-mastercraft-1-4-po-0547433p.html",
+    "sku": "0547433",
+    "availability": "Il n’en reste que 3 #054-7433-0"
+  },
+  {
+    "title": "Figurine interactive acolyte Rêve Disney Wish, 3 ans et plus",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/toys-games/1501716/disney-wish-feature-sidekick-0866a880-8247-47a4-8a47-aed31a7cd26e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 22.99,
+    "salePrice": 10.43,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/figurine-interactive-acolyte-reve-disney-wish-3-ans-et-plus-1501716p.html",
+    "sku": "1501716",
+    "availability": "Il n’en reste que 1 #150-1716-4"
   },
   {
     "title": "Tampon pour filtre à eau de rechange pour humidificateur pour toute la maison BestAir A12W-PDQ-6 pour humidificateurs Aprilaire, blanc, paq. 1",
@@ -804,30 +720,6 @@
     "availability": "17 En Stock#085-2364-0"
   },
   {
-    "title": "Base de lunette de visée à montage supérieur Weaver 48025, no 25, paq. 2",
-    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-equipment/0762143/weaver-top-mount-base-browning-lever-action-25-black-c4abb10a-def0-43b4-84d4-15c5cbd35756-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 6.99,
-    "salePrice": 3.49,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/base-de-lunette-de-visee-a-montage-superieur-weaver-48025-no-25-paq-2-0762143p.html",
-    "sku": "0762143",
-    "availability": "Il n’en reste que 3 #076-2143-8"
-  },
-  {
-    "title": "Lame de rechange pour tondeuse Yardworks, 14 po",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/outdoor-tools/tractor-lawn-mower-snowthrower-parts/0601762/yardworks-14-replacement-blade-25a2cda8-fbe1-4a2e-add8-94a2dd9b8be9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 19.99,
-    "salePrice": 9.43,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/lame-de-rechange-pour-tondeuse-yardworks-14-po-0601762p.html",
-    "sku": "0601762",
-    "availability": "Il n’en reste que 2 #060-1762-6"
-  },
-  {
     "title": "Surprise dans la capsule Disney Doorables Micro Motion, série 1, figurine jouet pour enfants, 5 ans et plus",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/toys-games/1501734/disney-doorables-micro-motion-1370c4e5-7756-4f7e-92d1-3c3f341b375e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 14.99,
@@ -840,27 +732,27 @@
     "availability": ""
   },
   {
-    "title": "Base supérieure en aluminium pour lunette de visée Weaver 48502, no 46M, paq. 2",
-    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-equipment/0762233/weaver-top-mount-base-sav-110-stvns-110e-win-53-54-46m-blac-72f4c7f6-a478-42f5-af09-457317277900-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 5.99,
-    "salePrice": 2.99,
+    "title": "Base de lunette de visée à montage supérieur Weaver 48025, no 25, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-equipment/0762143/weaver-top-mount-base-browning-lever-action-25-black-c4abb10a-def0-43b4-84d4-15c5cbd35756-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 6.99,
+    "salePrice": 3.49,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/base-superieure-en-aluminium-pour-lunette-de-visee-weaver-48502-no-46m-paq-2-0762233p.html",
-    "sku": "0762233",
-    "availability": "Il n’en reste que 4 #076-2233-4"
+    "url": "https://www.canadiantire.ca/fr/pdp/base-de-lunette-de-visee-a-montage-superieur-weaver-48025-no-25-paq-2-0762143p.html",
+    "sku": "0762143",
+    "availability": "Il n’en reste que 3 #076-2143-8"
   },
   {
-    "title": "Ballon en aluminium satiné, point d'interrogation, choix de couleurs, 16 po, gonflé d'air, pour anniversaire/remise de diplômes/fête prénatale/mariage de finissants",
-    "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8424327/blln-air-filled-symbl-gld-0355ff74-96ca-45ad-8f1c-f38e0d425abf-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 2.99,
-    "salePrice": 0.43,
+    "title": "Plombs sphériques Water Gremlin, sac, paq. 40",
+    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/1784387/water-gremlin-bagged-round-shot-size-b-64caf299-5849-4ec4-96e0-40ea0907bd59-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 4.99,
+    "salePrice": 1.99,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/ballon-en-aluminium-satine-point-d-interrogation-choix-de-couleurs-16-po-gonfle-d-air-pour-anniversaire-remise-de-diplomes-fete-prenatale-mariage-de-finissants-8424326p.html",
-    "sku": "8424326",
+    "url": "https://www.canadiantire.ca/fr/pdp/plombs-spheriques-water-gremlin-sac-paq-40-1784386p.html",
+    "sku": "1784386",
     "availability": ""
   },
   {
@@ -876,28 +768,52 @@
     "availability": "Il n’en reste que 1 #076-2152-6"
   },
   {
-    "title": "Support de jardinière For Living, oiseau, 8 po, multicolore",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0597804/for-living-bird-pot-stakes-a069abd0-e4e0-43de-b79e-0a99d9ba9615-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 4.49,
-    "salePrice": 2.23,
+    "title": "Caméra de recul type S à montage flexible avec écran de 5 po",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-electronics/0350183/type-s-flex-mount-5-backup-camera-c6057e28-17ee-48d8-bc9e-1cc2ee79c1f3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 299.99,
+    "salePrice": 149.93,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/support-de-jardiniere-for-living-oiseau-8-po-multicolore-0597804p.html",
-    "sku": "0597804",
-    "availability": "19 En Stock#059-7804-8"
+    "url": "https://www.canadiantire.ca/fr/pdp/camera-de-recul-type-s-a-montage-flexible-avec-ecran-de-5-po-0350183p.html",
+    "sku": "0350183",
+    "availability": "Il n’en reste que 1 #035-0183-2"
   },
   {
-    "title": "Ballon en aluminium satiné rond licorne Believe in Unicorns, rose/vert, 18 po, ruban et gonflage hélium compris, pour fête d'anniversaire",
-    "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8424104/419-sd-fl-blln-fl-magicl-uncrn-48aa829d-fc9c-482a-8c8b-1a48a98885e6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 6.99,
-    "salePrice": 0.93,
+    "title": "SIMONIZ Dash & Trim Duster Refill, Duster Pad, Duster Cleaning, Quick Auto Multi-Purpose Interior Dusting Pad Refills, 10-pk",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-tools/0397038/simoniz-quick-clean-duster-refills-10pc-1df34883-9fa2-43b0-9906-8582c5c6c599-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 5.49,
+    "salePrice": 1,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/ballon-en-aluminium-satine-rond-licorne-believe-in-unicorns-rose-vert-18-po-ruban-et-gonflage-helium-compris-pour-fete-d-anniversaire-8424104p.html",
-    "sku": "8424104",
-    "availability": "8 En Stock#842-4104-6"
+    "url": "https://www.canadiantire.ca/fr/pdp/simoniz-dash-trim-duster-refill-duster-pad-duster-cleaning-quick-auto-multi-purpose-interior-dusting-pad-refills-10-pk-0397038p.html",
+    "sku": "0397038",
+    "availability": "45 En Stock#039-7038-0"
+  },
+  {
+    "title": "Lame de rechange pour tondeuse Yardworks, 14 po",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/outdoor-tools/tractor-lawn-mower-snowthrower-parts/0601762/yardworks-14-replacement-blade-25a2cda8-fbe1-4a2e-add8-94a2dd9b8be9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 9.43,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/lame-de-rechange-pour-tondeuse-yardworks-14-po-0601762p.html",
+    "sku": "0601762",
+    "availability": "Il n’en reste que 2 #060-1762-6"
+  },
+  {
+    "title": "Brosse de nettoyage pour canon de fusil Hoppe's Tornado Hunting, calibre 12 et 20",
+    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-accessories/1754409/hoppe-s-tornado-brush-12ga-shotgun-1b10bafd-5ae3-48bf-9d47-b64f32ee72a2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 6.99,
+    "salePrice": 3.43,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/brosse-de-nettoyage-pour-canon-de-fusil-hoppe-s-tornado-hunting-calibre-12-et-20-1754409p.html",
+    "sku": "1754409",
+    "availability": "Il n’en reste que 1 #175-4409-0"
   },
   {
     "title": "Base de lunette de visée à montage supérieur Weaver 48108, no 402, paq. 1",
@@ -912,40 +828,52 @@
     "availability": "Il n’en reste que 1 #076-2160-6"
   },
   {
-    "title": "Bouquet de ballons en aluminium étoile/carré rond Nintendo Super Mario Bros, bleu/rouge, paq. 5, gonflement à l'hélium et ruban inclus, pour fête d'anniversaire",
-    "image": "https://media-www.canadiantire.ca/product/automotive/party-city-everyday/party-city-balloons-accessories/8424571/bqt-blln-fl-mario-bros-0cb0d966-feba-44ff-bc4b-ab807097e8ba-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "title": "Base supérieure en aluminium pour lunette de visée Weaver 48502, no 46M, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-equipment/0762233/weaver-top-mount-base-sav-110-stvns-110e-win-53-54-46m-blac-72f4c7f6-a478-42f5-af09-457317277900-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 5.99,
+    "salePrice": 2.99,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/base-superieure-en-aluminium-pour-lunette-de-visee-weaver-48502-no-46m-paq-2-0762233p.html",
+    "sku": "0762233",
+    "availability": "Il n’en reste que 4 #076-2233-4"
+  },
+  {
+    "title": "Nike - Bande de résistance forte résistance, noir",
+    "image": "https://media-www.canadiantire.ca/product/playing/exercise/exercise-accessories/1841087/nike-resistance-band-heavy-black-d723b56d-9b10-45e4-a7a4-e5a3a5672417-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 33.99,
-    "salePrice": 16.93,
+    "salePrice": 14.99,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/bouquet-de-ballons-en-aluminium-etoile-carre-rond-nintendo-super-mario-bros-bleu-rouge-paq-5-gonflement-a-l-helium-et-ruban-inclus-pour-fete-d-anniversaire-8424571p.html",
-    "sku": "8424571",
-    "availability": ""
+    "url": "https://www.canadiantire.ca/fr/pdp/nike-bande-de-resistance-forte-resistance-noir-1841087p.html",
+    "sku": "1841087",
+    "availability": "10 En Stock#184-1087-0"
   },
   {
-    "title": "Nettoyant nautique pour écran, 230 mL",
-    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790328/marine-display-cleaner-f2601da5-df42-4d33-9177-1be27b9b3298-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 19.99,
-    "salePrice": 7.99,
+    "title": "Sonnette vidéo sans fil Arlo Essential, blanc",
+    "image": "https://media-www.canadiantire.ca/product/fixing/hardware/home-safety/0463422/arlo-wire-free-video-doorbell-a867ca93-b196-43b2-9c2a-ae015ba1f9dc-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 269.99,
+    "salePrice": 129.93,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-nautique-pour-ecran-230-ml-0790328p.html",
-    "sku": "0790328",
-    "availability": "Il n’en reste que 5 #079-0328-6"
+    "url": "https://www.canadiantire.ca/fr/pdp/sonnette-video-sans-fil-arlo-essential-blanc-0463422p.html",
+    "sku": "0463422",
+    "availability": "Il n’en reste que 1 #046-3422-0"
   },
   {
-    "title": "Leurre Savage Gear Smash Tail, brochet, 6 3/4 po",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/1784786/savage-gear-pike-smash-tail-bait-6-3-4-1-1-3oz-loon-pike-c69797d0-76ea-439c-bc10-69f24e83eab5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 28.99,
-    "salePrice": 12.99,
+    "title": "Support de jardinière For Living, oiseau, 8 po, multicolore",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0597804/for-living-bird-pot-stakes-a069abd0-e4e0-43de-b79e-0a99d9ba9615-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 4.49,
+    "salePrice": 2.23,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/leurre-savage-gear-smash-tail-brochet-6-3-4-po-1784784p.html",
-    "sku": "1784784",
-    "availability": ""
+    "url": "https://www.canadiantire.ca/fr/pdp/support-de-jardiniere-for-living-oiseau-8-po-multicolore-0597804p.html",
+    "sku": "0597804",
+    "availability": "19 En Stock#059-7804-8"
   },
   {
     "title": "Base de lunette de visée à montage supérieur Weaver 48035, no 35, paq. 2",
@@ -960,28 +888,16 @@
     "availability": "Il n’en reste que 7 #076-2145-4"
   },
   {
-    "title": "Couteaux polyvalents et Tao Bar Yukon Gear, paq. 2",
-    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-equipment/3750548/combo-pack-of-multi-knife-and-tao-bar-blister-pack--c972b52e-bbb3-420a-b23e-6a7a6608f651-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 39.99,
-    "salePrice": 18.73,
+    "title": "Ballon en aluminium satiné, perluète, choix de couleurs, 11 x 14 po, gonflé d'air, pour anniversaire/remise de diplômes/fête prénatale/mariage de finissants",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8423768/gld-blln-a-f-a-1427563c-4a8c-40a9-80e5-738dea6ac968-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 2.99,
+    "salePrice": 0.43,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/couteaux-polyvalents-et-tao-bar-yukon-gear-paq-2-3750548p.html",
-    "sku": "3750548",
-    "availability": "Il n’en reste que 3 #375-0548-6"
-  },
-  {
-    "title": "Carte d'accès au manuel automobile en ligne Haynes pour 1 véhicule",
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-shop-equipment-supplies/0259519/eac56-online-manual-access-card-0f5b88c3-4db2-47c7-acf9-90bceb786c2e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 34.99,
-    "salePrice": 3.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/carte-d-acces-au-manuel-automobile-en-ligne-haynes-pour-1-vehicule-0259519p.html",
-    "sku": "0259519",
-    "availability": "Il n’en reste que 3 #025-9519-6"
+    "url": "https://www.canadiantire.ca/fr/pdp/ballon-en-aluminium-satine-perluete-choix-de-couleurs-11-x-14-po-gonfle-d-air-pour-anniversaire-remise-de-diplomes-fete-prenatale-mariage-de-finissants-8423768p.html",
+    "sku": "8423768",
+    "availability": ""
   },
   {
     "title": "Leurres luminescents crapets pour pêche blanche HT, variés,",
@@ -996,40 +912,16 @@
     "availability": "Il n’en reste que 1 #077-8515-6"
   },
   {
-    "title": "Bulbes de fleur Crocosmia Lucifer Bulbs Are Easy, nécessite peu d'entretien",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/gardening/dormant-goods/1592210/crocosmia-lucifer-bulb-b70091c1-8ac4-460a-87f8-9f756b23dc1b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 9.99,
-    "salePrice": 3.39,
+    "title": "Enduit caoutchouté amovible Protect Dip, fluorescent",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-body-repair/0479352/glow-in-the-dark-green-protect-dip-c23a1cf4-4b42-40f0-bc05-bbc8aee5d85c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 21.99,
+    "salePrice": 9.93,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/bulbes-de-fleur-crocosmia-lucifer-bulbs-are-easy-necessite-peu-d-entretien-1592210p.html",
-    "sku": "1592210",
-    "availability": "Il n’en reste que 1 #159-2210-2"
-  },
-  {
-    "title": "Adaptateur de perceuse Mastercraft, 1/4 po",
-    "image": "https://media-www.canadiantire.ca/product/fixing/tools/power-tool-accessories/0547433/adaptor-1-4-x-1-4-for-54-7431-flat-wheel-f9c27e34-fc4a-428c-b5fd-f3d7d874240c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 8.99,
-    "salePrice": 3.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/adaptateur-de-perceuse-mastercraft-1-4-po-0547433p.html",
-    "sku": "0547433",
-    "availability": "Il n’en reste que 4 #054-7433-0"
-  },
-  {
-    "title": "SIMONIZ Dash & Trim Duster Refill, Duster Pad, Duster Cleaning, Quick Auto Multi-Purpose Interior Dusting Pad Refills, 10-pk",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-tools/0397038/simoniz-quick-clean-duster-refills-10pc-1df34883-9fa2-43b0-9906-8582c5c6c599-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 5.49,
-    "salePrice": 1,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/simoniz-dash-trim-duster-refill-duster-pad-duster-cleaning-quick-auto-multi-purpose-interior-dusting-pad-refills-10-pk-0397038p.html",
-    "sku": "0397038",
-    "availability": "49 En Stock#039-7038-0"
+    "url": "https://www.canadiantire.ca/fr/pdp/enduit-caoutchoute-amovible-protect-dip-fluorescent-0479351p.html",
+    "sku": "0479351",
+    "availability": ""
   },
   {
     "title": "Boule de lave requin Goofy Foot, pour l'intérieur et l'extérieur, 3 ans et plus",
@@ -1056,16 +948,28 @@
     "availability": "Il n’en reste que 1 #025-9002-4"
   },
   {
-    "title": "Filtre élite pour réduction des allergènes 3M Filtrete, vie saine, MPR 2200, 20 x 25 x 1 po",
-    "image": "https://media-www.canadiantire.ca/product/fixing/home-environment/home-air-quality-accessories/0643543/20x25x1-3m-filtrete-elite-2200mpr-filter-3142ffb4-af1a-4724-9446-31ca912e1e6c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 37.99,
-    "salePrice": 17.93,
+    "title": "Couteaux polyvalents et Tao Bar Yukon Gear, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-equipment/3750548/combo-pack-of-multi-knife-and-tao-bar-blister-pack--c972b52e-bbb3-420a-b23e-6a7a6608f651-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 39.99,
+    "salePrice": 18.73,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/filtre-elite-pour-reduction-des-allergenes-3m-filtrete-vie-saine-mpr-2200-20-x-25-x-1-po-0643543p.html",
-    "sku": "0643543",
-    "availability": "Il n’en reste que 1 #064-3543-8"
+    "url": "https://www.canadiantire.ca/fr/pdp/couteaux-polyvalents-et-tao-bar-yukon-gear-paq-2-3750548p.html",
+    "sku": "3750548",
+    "availability": "Il n’en reste que 3 #375-0548-6"
+  },
+  {
+    "title": "Casque éclatant Krash 3D pour jeunes",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/winter-recreation/0820216/3d-dazzle-youth-snow-helmet-2b1576ce-b05d-4c4e-b48a-278eb76ae030.png?im=whresize&wid=200&hei=200",
+    "price": 47.99,
+    "salePrice": 23.99,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/casque-eclatant-krash-3d-pour-jeunes-0820216p.html",
+    "sku": "0820216",
+    "availability": "15 En Stock#082-0216-2"
   },
   {
     "title": "Sauce piquante Grenade, 215 mL",
@@ -1077,6 +981,18 @@
     "branch": "Sault Ste. Marie, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/sauce-piquante-grenade-215-ml-1516691p.html",
     "sku": "1516691",
+    "availability": ""
+  },
+  {
+    "title": "Ballon en aluminium satiné lettres Baby, choix de couleurs, 26 x 9 po, gonflé d'air, pour fête prénatale/dévoilement du sexe",
+    "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8420834/mini-gld-air-filled-blln-baby-a7f25de3-18c4-450f-a09f-1e612cb39e36-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 8.99,
+    "salePrice": 1.93,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ballon-en-aluminium-satine-lettres-baby-choix-de-couleurs-26-x-9-po-gonfle-d-air-pour-fete-prenatale-devoilement-du-sexe-8420829p.html",
+    "sku": "8420829",
     "availability": ""
   },
   {
@@ -1104,28 +1020,16 @@
     "availability": "Il n’en reste que 4 #854-4428-8"
   },
   {
-    "title": "Casque éclatant Krash 3D pour jeunes",
-    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/winter-recreation/0820216/3d-dazzle-youth-snow-helmet-2b1576ce-b05d-4c4e-b48a-278eb76ae030.png?im=whresize&wid=200&hei=200",
-    "price": 47.99,
-    "salePrice": 23.99,
+    "title": "Sacs de rechange pour aspirateur HEPA Oreck, type 1C, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/living/cleaning/vacuums-and-floorcare/0437838/vac-oreck-type-1c-hepa-bag-2pack-c6414b50-1508-434b-ae1a-2b797883aa18-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 26.99,
+    "salePrice": 0.93,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/casque-eclatant-krash-3d-pour-jeunes-0820216p.html",
-    "sku": "0820216",
-    "availability": "15 En Stock#082-0216-2"
-  },
-  {
-    "title": "Brosse de nettoyage pour canon de fusil Hoppe's Tornado Hunting, calibre 12 et 20",
-    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-accessories/1754409/hoppe-s-tornado-brush-12ga-shotgun-1b10bafd-5ae3-48bf-9d47-b64f32ee72a2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 6.99,
-    "salePrice": 3.43,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/brosse-de-nettoyage-pour-canon-de-fusil-hoppe-s-tornado-hunting-calibre-12-et-20-1754409p.html",
-    "sku": "1754409",
-    "availability": "Il n’en reste que 2 #175-4409-0"
+    "url": "https://www.canadiantire.ca/fr/pdp/sacs-de-rechange-pour-aspirateur-hepa-oreck-type-1c-paq-2-0437838p.html",
+    "sku": "0437838",
+    "availability": "41 En Stock#043-7838-4"
   },
   {
     "title": "Ballon en aluminium satiné lettres It's A, choix de couleurs, 20 x 9 po, gonflé d'air, pour fête prénatale/dévoilement du sexe",
@@ -1140,42 +1044,6 @@
     "availability": ""
   },
   {
-    "title": "Valise extensible pivotante recyclée Swiss Alps, 24 po",
-    "image": "https://media-www.canadiantire.ca/product/playing/camping/backpacks-luggage-accessories/0766327/swiss-alps-recycled-expandable-spinner-24-inch-25f49d0f-8dad-4f31-a4c3-051f7f518121-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 199.99,
-    "salePrice": 94.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/valise-extensible-pivotante-recyclee-swiss-alps-24-po-0766327p.html",
-    "sku": "0766327",
-    "availability": "Il n’en reste que 2 #076-6327-8"
-  },
-  {
-    "title": "Nike - Bande de résistance forte résistance, noir",
-    "image": "https://media-www.canadiantire.ca/product/playing/exercise/exercise-accessories/1841087/nike-resistance-band-heavy-black-d723b56d-9b10-45e4-a7a4-e5a3a5672417-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 33.99,
-    "salePrice": 14.99,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/nike-bande-de-resistance-forte-resistance-noir-1841087p.html",
-    "sku": "1841087",
-    "availability": "11 En Stock#184-1087-0"
-  },
-  {
-    "title": "Manuel de réparation automobile Haynes, Chrysler Dodge et Eagle 1993 à 1997, 25025",
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-shop-equipment-supplies/0259340/25025-chrysler-lh-series-93-97-b01d550f-a7d8-4947-b1c5-64814ad0d785-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 32.99,
-    "salePrice": 1.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/manuel-de-reparation-automobile-haynes-chrysler-dodge-et-eagle-1993-a-1997-25025-0259340p.html",
-    "sku": "0259340",
-    "availability": "Il n’en reste que 1 #025-9340-8"
-  },
-  {
     "title": "Brosse à manchette en nylon pour doublure de caisse Sure Seal Dominion",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-body-repair/0479976/bedliner-nylon-scuff-brush-fb1198af-02e4-4e78-9992-2116f42c874b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 39.99,
@@ -1188,52 +1056,64 @@
     "availability": "Il n’en reste que 6 #047-9976-4"
   },
   {
-    "title": "Couvercle de cheminée 3/4 po avec filet DuraVent SS, 7 x 7 po/9 x 9 po, acier inoxydable",
-    "image": "https://media-www.canadiantire.ca/product/fixing/home-environment/winter-climate-control/0641927/chim-cap-ss-3-4-7-x-7-9-x-9--31d1e250-26da-4ae0-8fbd-397db9f90e3c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 154.99,
-    "salePrice": 59.93,
+    "title": "Valise extensible pivotante recyclée Swiss Alps, 24 po",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/backpacks-luggage-accessories/0766327/swiss-alps-recycled-expandable-spinner-24-inch-25f49d0f-8dad-4f31-a4c3-051f7f518121-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 199.99,
+    "salePrice": 94.93,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/couvercle-de-cheminee-3-4-po-avec-filet-duravent-ss-7-x-7-po-9-x-9-po-acier-inoxydable-0641927p.html",
-    "sku": "0641927",
-    "availability": "Il n’en reste que 2 #064-1927-8"
+    "url": "https://www.canadiantire.ca/fr/pdp/valise-extensible-pivotante-recyclee-swiss-alps-24-po-0766327p.html",
+    "sku": "0766327",
+    "availability": "Il n’en reste que 2 #076-6327-8"
   },
   {
-    "title": "Ballon en aluminium satiné lettres Baby, choix de couleurs, 26 x 9 po, gonflé d'air, pour fête prénatale/dévoilement du sexe",
-    "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8420834/mini-gld-air-filled-blln-baby-a7f25de3-18c4-450f-a09f-1e612cb39e36-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 8.99,
-    "salePrice": 1.93,
+    "title": "Filtre élite pour réduction des allergènes 3M Filtrete, vie saine, MPR 2200, 20 x 25 x 1 po",
+    "image": "https://media-www.canadiantire.ca/product/fixing/home-environment/home-air-quality-accessories/0643543/20x25x1-3m-filtrete-elite-2200mpr-filter-3142ffb4-af1a-4724-9446-31ca912e1e6c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 37.99,
+    "salePrice": 17.93,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/ballon-en-aluminium-satine-lettres-baby-choix-de-couleurs-26-x-9-po-gonfle-d-air-pour-fete-prenatale-devoilement-du-sexe-8420829p.html",
-    "sku": "8420829",
+    "url": "https://www.canadiantire.ca/fr/pdp/filtre-elite-pour-reduction-des-allergenes-3m-filtrete-vie-saine-mpr-2200-20-x-25-x-1-po-0643543p.html",
+    "sku": "0643543",
+    "availability": "Il n’en reste que 1 #064-3543-8"
+  },
+  {
+    "title": "Gouttes d'eau à saveur de baies sauvages Ninja Thirsti Energy, 60 mL",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0432015/thirsti-wild-berry-syrup-4a0cf6f2-bbc9-4b8b-9e59-5be86ed470e7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 9.99,
+    "salePrice": 4.93,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/gouttes-d-eau-a-saveur-de-baies-sauvages-ninja-thirsti-energy-60-ml-0432015p.html",
+    "sku": "0432015",
     "availability": ""
   },
   {
-    "title": "Sacs de rechange pour aspirateur HEPA Oreck, type 1C, paq. 2",
-    "image": "https://media-www.canadiantire.ca/product/living/cleaning/vacuums-and-floorcare/0437838/vac-oreck-type-1c-hepa-bag-2pack-c6414b50-1508-434b-ae1a-2b797883aa18-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 26.99,
-    "salePrice": 0.93,
+    "title": "Ballon en aluminium satiné, point d'interrogation, choix de couleurs, 16 po, gonflé d'air, pour anniversaire/remise de diplômes/fête prénatale/mariage de finissants",
+    "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8424327/blln-air-filled-symbl-gld-0355ff74-96ca-45ad-8f1c-f38e0d425abf-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 2.99,
+    "salePrice": 0.43,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/sacs-de-rechange-pour-aspirateur-hepa-oreck-type-1c-paq-2-0437838p.html",
-    "sku": "0437838",
-    "availability": "43 En Stock#043-7838-4"
+    "url": "https://www.canadiantire.ca/fr/pdp/ballon-en-aluminium-satine-point-d-interrogation-choix-de-couleurs-16-po-gonfle-d-air-pour-anniversaire-remise-de-diplomes-fete-prenatale-mariage-de-finissants-8424326p.html",
+    "sku": "8424326",
+    "availability": ""
   },
   {
-    "title": "Hameçon à large écartement Xcalibur Sickle",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0784256/matzuo-wide-gap-sickle-hook-size-2-0-f39d6d77-c773-465a-bd14-f3b7eeeebbb3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 5.49,
-    "salePrice": 2.43,
+    "title": "Bulbes de fleur Crocosmia Lucifer Bulbs Are Easy, nécessite peu d'entretien",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/gardening/dormant-goods/1592210/crocosmia-lucifer-bulb-b70091c1-8ac4-460a-87f8-9f756b23dc1b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 9.99,
+    "salePrice": 3.39,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/hamecon-a-large-ecartement-xcalibur-sickle-0784256p.html",
-    "sku": "0784256",
-    "availability": ""
+    "url": "https://www.canadiantire.ca/fr/pdp/bulbes-de-fleur-crocosmia-lucifer-bulbs-are-easy-necessite-peu-d-entretien-1592210p.html",
+    "sku": "1592210",
+    "availability": "Il n’en reste que 1 #159-2210-2"
   },
   {
     "title": "Guide de tuyau mural en plastique Gardena",
@@ -1248,28 +1128,40 @@
     "availability": "Il n’en reste que 1 #059-0805-8"
   },
   {
-    "title": "Range-tout en filet pour siège avant AutoTrends",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0373152/autotrends-front-seat-storage-net-192a3a86-0886-4663-8baf-3052d0c62767-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 17.99,
-    "salePrice": 7.99,
+    "title": "Ballon en aluminium satiné rond et étoiles Happy New Year, or/noir, 30 po, gonflement à l'hélium et ruban inclus, pour veille du jour de l'An",
+    "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8431628/new-years-infused-balloon-3e7aa255-c21b-4b6f-abe0-030a23cf237c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 5.93,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/range-tout-en-filet-pour-siege-avant-autotrends-0373152p.html",
-    "sku": "0373152",
-    "availability": "26 En Stock#037-3152-4"
+    "url": "https://www.canadiantire.ca/fr/pdp/ballon-en-aluminium-satine-rond-et-etoiles-happy-new-year-or-noir-30-po-gonflement-a-l-helium-et-ruban-inclus-pour-veille-du-jour-de-l-an-8431628p.html",
+    "sku": "8431628",
+    "availability": "11 En Stock#843-1628-6"
   },
   {
-    "title": "Panneau de commutation intelligent sans fil de TYPE S",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0373239/types-smart-wireless-controller-283e0384-6558-405a-8b56-00da861bf4dc-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 59.99,
-    "salePrice": 24.93,
+    "title": "Couvercle de cheminée 3/4 po avec filet DuraVent SS, 7 x 7 po/9 x 9 po, acier inoxydable",
+    "image": "https://media-www.canadiantire.ca/product/fixing/home-environment/winter-climate-control/0641927/chim-cap-ss-3-4-7-x-7-9-x-9--31d1e250-26da-4ae0-8fbd-397db9f90e3c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 154.99,
+    "salePrice": 59.93,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/panneau-de-commutation-intelligent-sans-fil-de-type-s-0373239p.html",
-    "sku": "0373239",
-    "availability": "Il n’en reste que 5 #037-3239-0"
+    "url": "https://www.canadiantire.ca/fr/pdp/couvercle-de-cheminee-3-4-po-avec-filet-duravent-ss-7-x-7-po-9-x-9-po-acier-inoxydable-0641927p.html",
+    "sku": "0641927",
+    "availability": "Il n’en reste que 2 #064-1927-8"
+  },
+  {
+    "title": "Ballon en aluminium satiné rond licorne Believe in Unicorns, rose/vert, 18 po, ruban et gonflage hélium compris, pour fête d'anniversaire",
+    "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8424104/419-sd-fl-blln-fl-magicl-uncrn-48aa829d-fc9c-482a-8c8b-1a48a98885e6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 6.99,
+    "salePrice": 0.93,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ballon-en-aluminium-satine-rond-licorne-believe-in-unicorns-rose-vert-18-po-ruban-et-gonflage-helium-compris-pour-fete-d-anniversaire-8424104p.html",
+    "sku": "8424104",
+    "availability": "Il n’en reste que 7 #842-4104-6"
   },
   {
     "title": "Ballon en aluminium satiné, perluète, choix de couleurs, 11 x 14 po, gonflé d'air, pour anniversaire/remise de diplômes/fête prénatale/mariage de finissants",
@@ -1281,30 +1173,6 @@
     "branch": "Sault Ste. Marie, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/ballon-en-aluminium-satine-perluete-choix-de-couleurs-11-x-14-po-gonfle-d-air-pour-anniversaire-remise-de-diplomes-fete-prenatale-mariage-de-finissants-8423770p.html",
     "sku": "8423770",
-    "availability": ""
-  },
-  {
-    "title": "Leurre rigide Rapala Rap-V Blade, 2 1/2 po",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0772662/rapala-rap-v-blade-2-5-chrome-tiger-ab85a78e-9ef3-417e-b471-10ef1b234a02-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 15.99,
-    "salePrice": 7.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/leurre-rigide-rapala-rap-v-blade-2-1-2-po-0772662p.html",
-    "sku": "0772662",
-    "availability": ""
-  },
-  {
-    "title": "Ballon en aluminium satiné rond Happy New Year, or/noir, 18 po, ruban et gonflage hélium compris, pour veille du jour de l'An",
-    "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8432237/new-years-vintage-satin-balloon-f8a27cab-cc51-403a-991b-b33f5ac7afa2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 6.99,
-    "salePrice": 1.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/ballon-en-aluminium-satine-rond-happy-new-year-or-noir-18-po-ruban-et-gonflage-helium-compris-pour-veille-du-jour-de-l-an-8432237p.html",
-    "sku": "8432237",
     "availability": ""
   },
   {
@@ -1320,6 +1188,42 @@
     "availability": "Il n’en reste que 2 #076-2149-6"
   },
   {
+    "title": "Hameçon à large écartement Xcalibur Sickle",
+    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0784256/matzuo-wide-gap-sickle-hook-size-2-0-f39d6d77-c773-465a-bd14-f3b7eeeebbb3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 5.49,
+    "salePrice": 2.43,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/hamecon-a-large-ecartement-xcalibur-sickle-0784256p.html",
+    "sku": "0784256",
+    "availability": ""
+  },
+  {
+    "title": "Panneau de commutation intelligent sans fil de TYPE S",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0373239/types-smart-wireless-controller-283e0384-6558-405a-8b56-00da861bf4dc-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 59.99,
+    "salePrice": 24.93,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/panneau-de-commutation-intelligent-sans-fil-de-type-s-0373239p.html",
+    "sku": "0373239",
+    "availability": "Il n’en reste que 5 #037-3239-0"
+  },
+  {
+    "title": "Leurre rigide Rapala Rap-V Blade, 2 1/2 po",
+    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0772662/rapala-rap-v-blade-2-5-chrome-tiger-ab85a78e-9ef3-417e-b471-10ef1b234a02-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 15.99,
+    "salePrice": 7.93,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/leurre-rigide-rapala-rap-v-blade-2-1-2-po-0772662p.html",
+    "sku": "0772662",
+    "availability": ""
+  },
+  {
     "title": "Coussin pour barre Ergofit Harbinger, rouge",
     "image": "https://media-www.canadiantire.ca/product/playing/exercise/exercise-accessories/1840715/harbinger-ergofit-bar-pad-46a6c9ec-4d2f-4cf8-b8ae-653f1e0bb469-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 29.99,
@@ -1332,64 +1236,16 @@
     "availability": "9 En Stock#184-0715-2"
   },
   {
-    "title": "Base supérieure en aluminium Weaver, no 98",
-    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-equipment/0762159/weaver-top-mount-base-rem-700-98-black-eeb12c8e-d8c1-4be4-abe1-4662b6aa39e4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 29.99,
-    "salePrice": 14.99,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/base-superieure-en-aluminium-weaver-no-98-0762159p.html",
-    "sku": "0762159",
-    "availability": "Il n’en reste que 1 #076-2159-2"
-  },
-  {
-    "title": "Gouttes d'eau à saveur de baies sauvages Ninja Thirsti Energy, 60 mL",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0432015/thirsti-wild-berry-syrup-4a0cf6f2-bbc9-4b8b-9e59-5be86ed470e7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "title": "Base supérieure en aluminium pour lunette de visée Weaver 48435, no 418M, paq. 1",
+    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-equipment/0762212/weaver-top-mount-base-cva-traditions-418m-black-43a30ef9-8a13-481a-8f5f-350e06061227-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 9.99,
-    "salePrice": 4.93,
+    "salePrice": 4.99,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/gouttes-d-eau-a-saveur-de-baies-sauvages-ninja-thirsti-energy-60-ml-0432015p.html",
-    "sku": "0432015",
+    "url": "https://www.canadiantire.ca/fr/pdp/base-superieure-en-aluminium-pour-lunette-de-visee-weaver-48435-no-418m-paq-1-0762212p.html",
+    "sku": "0762212",
     "availability": ""
-  },
-  {
-    "title": "Base de lunette de visée à montage supérieur Weaver 48045, no 45, paq. 2",
-    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-equipment/0762147/weaver-top-mount-base-browning-bolt-act-marlin-455-45-blk-3369d8e6-f679-48a8-aeec-afea680be6c6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 7.99,
-    "salePrice": 3.99,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/base-de-lunette-de-visee-a-montage-superieur-weaver-48045-no-45-paq-2-0762147p.html",
-    "sku": "0762147",
-    "availability": "Il n’en reste que 2 #076-2147-0"
-  },
-  {
-    "title": "Ballon en aluminium satiné rond et étoiles Happy New Year, or/noir, 30 po, gonflement à l'hélium et ruban inclus, pour veille du jour de l'An",
-    "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8431628/new-years-infused-balloon-3e7aa255-c21b-4b6f-abe0-030a23cf237c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 19.99,
-    "salePrice": 5.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/ballon-en-aluminium-satine-rond-et-etoiles-happy-new-year-or-noir-30-po-gonflement-a-l-helium-et-ruban-inclus-pour-veille-du-jour-de-l-an-8431628p.html",
-    "sku": "8431628",
-    "availability": "11 En Stock#843-1628-6"
-  },
-  {
-    "title": "Lame de rechange pour tondeuse sans fil, 10 po, paq. 2",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/outdoor-tools/tractor-lawn-mower-snowthrower-parts/0601759/cordless-lawn-mower-replacement-10-in-blades-2-pk-e4747caf-aa13-44de-bbdb-8226f2ab5c70-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 19.99,
-    "salePrice": 9.43,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/lame-de-rechange-pour-tondeuse-sans-fil-10-po-paq-2-0601759p.html",
-    "sku": "0601759",
-    "availability": "Il n’en reste que 7 #060-1759-6"
   },
   {
     "title": "Pistolet à eau Super Soker NERF Torrent, 8 oz, 6 ans et plus",
@@ -1404,18 +1260,6 @@
     "availability": "Il n’en reste que 1 #050-8711-0"
   },
   {
-    "title": "Prise de rechange femelle 50A pour VR Camco PowerGrip",
-    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0401978/camco-powergrip-female-adaptor-50a-e7c6a225-8c08-48e5-8c06-87ddb1582b29-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 49.99,
-    "salePrice": 24.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/prise-de-rechange-femelle-50a-pour-vr-camco-powergrip-0401978p.html",
-    "sku": "0401978",
-    "availability": "Il n’en reste que 2 #040-1978-2"
-  },
-  {
     "title": "Assiettes rondes Achievement is Key, 7 po",
     "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-seasonal/party-city-micro-season-decor/8549449/9-achievement-is-key-round-plate-7c4a3b05-486d-48bb-a2c8-0ed6de0d0c7c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 9.99,
@@ -1426,6 +1270,78 @@
     "url": "https://www.canadiantire.ca/fr/pdp/assiettes-rondes-achievement-is-key-7-po-8549450p.html",
     "sku": "8549450",
     "availability": "13 En Stock#854-9450-2"
+  },
+  {
+    "title": "Garde-boues avant et arrière personnalisés Husky Liners 58136 pour camion Dodge Ram avec élargisseur d’ailes d’origine, 2019 à 2020, paquet de 4",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0370764/2019-20-dodge-ram-with-oem-flares-d0b2a276-f55a-46a2-9d83-f147979c601b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 119.99,
+    "salePrice": 59.93,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/garde-boues-avant-et-arriere-personnalises-husky-liners-58136-pour-camion-dodge-ram-avec-elargisseur-d-ailes-d-origine-2019-a-2020-paquet-de-4-0370764p.html",
+    "sku": "0370764",
+    "availability": "Il n’en reste que 1 #037-0764-6"
+  },
+  {
+    "title": "Manuel automobile Haynes, 64200",
+    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-shop-equipment-supplies/0259373/64200-merc-villager-nissan-quest-93-01-f8e52fa9-aafa-41ed-87be-893ccbba67e2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 32.99,
+    "salePrice": 0.93,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/manuel-automobile-haynes-64200-0259373p.html",
+    "sku": "0259373",
+    "availability": "Il n’en reste que 2 #025-9373-0"
+  },
+  {
+    "title": "Range-tout en filet pour siège avant AutoTrends",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0373152/autotrends-front-seat-storage-net-192a3a86-0886-4663-8baf-3052d0c62767-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 17.99,
+    "salePrice": 7.99,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/range-tout-en-filet-pour-siege-avant-autotrends-0373152p.html",
+    "sku": "0373152",
+    "availability": "26 En Stock#037-3152-4"
+  },
+  {
+    "title": "Ballon en aluminium satiné rond Happy New Year, or/noir, 18 po, ruban et gonflage hélium compris, pour veille du jour de l'An",
+    "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8432237/new-years-vintage-satin-balloon-f8a27cab-cc51-403a-991b-b33f5ac7afa2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 6.99,
+    "salePrice": 1.93,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ballon-en-aluminium-satine-rond-happy-new-year-or-noir-18-po-ruban-et-gonflage-helium-compris-pour-veille-du-jour-de-l-an-8432237p.html",
+    "sku": "8432237",
+    "availability": ""
+  },
+  {
+    "title": "Leurre Savage Gear Smash Tail, brochet, 6 3/4 po",
+    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/1784786/savage-gear-pike-smash-tail-bait-6-3-4-1-1-3oz-loon-pike-c69797d0-76ea-439c-bc10-69f24e83eab5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 28.99,
+    "salePrice": 12.99,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/leurre-savage-gear-smash-tail-brochet-6-3-4-po-1784784p.html",
+    "sku": "1784784",
+    "availability": ""
+  },
+  {
+    "title": "Prise de rechange femelle 50A pour VR Camco PowerGrip",
+    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0401978/camco-powergrip-female-adaptor-50a-e7c6a225-8c08-48e5-8c06-87ddb1582b29-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 49.99,
+    "salePrice": 24.93,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/prise-de-rechange-femelle-50a-pour-vr-camco-powergrip-0401978p.html",
+    "sku": "0401978",
+    "availability": "Il n’en reste que 2 #040-1978-2"
   },
   {
     "title": "Adaptateur de surface Stelpro RWFSAW série RWF, blanc",
@@ -1452,54 +1368,6 @@
     "availability": "Il n’en reste que 2 #040-1846-6"
   },
   {
-    "title": "Garde-boues avant et arrière personnalisés Husky Liners 58136 pour camion Dodge Ram avec élargisseur d’ailes d’origine, 2019 à 2020, paquet de 4",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0370764/2019-20-dodge-ram-with-oem-flares-d0b2a276-f55a-46a2-9d83-f147979c601b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 119.99,
-    "salePrice": 59.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/garde-boues-avant-et-arriere-personnalises-husky-liners-58136-pour-camion-dodge-ram-avec-elargisseur-d-ailes-d-origine-2019-a-2020-paquet-de-4-0370764p.html",
-    "sku": "0370764",
-    "availability": "Il n’en reste que 1 #037-0764-6"
-  },
-  {
-    "title": "Connecteur de remorque rond à 4 pôles Hopkins",
-    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/1407221/hopkins-4-round-set-trailer-wiring-77a1e197-e206-4232-9176-a19d1fa566cd-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 25.99,
-    "salePrice": 10.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/connecteur-de-remorque-rond-a-4-poles-hopkins-1407221p.html",
-    "sku": "1407221",
-    "availability": "14 En Stock#140-7221-8"
-  },
-  {
-    "title": "Ensemble de déchiquetage pour tondeuse à siège Troy-Bilt, pour table de coupe de 30 po, pour les modèles 2013 et suivants",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/outdoor-tools/ope-parts-accessories/0601896/mulch-kit-for-60-1815-2013-df867366-45f1-45a1-a819-295742e2fa00-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 37.99,
-    "salePrice": 14.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/ensemble-de-dechiquetage-pour-tondeuse-a-siege-troy-bilt-pour-table-de-coupe-de-30-po-pour-les-modeles-2013-et-suivants-0601896p.html",
-    "sku": "0601896",
-    "availability": "Il n’en reste que 1 #060-1896-8"
-  },
-  {
-    "title": "Peinture de retouche Scratch Fix All-in-1, SAUGE antique PERLÉE (1B2)",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-body-repair/0475157/scratch-fix-toyota-antique-sage-pearl-all-in-1-b2292936-861d-4ec9-85a2-d9a873718867.png?im=whresize&wid=200&hei=200",
-    "price": 28.99,
-    "salePrice": 9.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/peinture-de-retouche-scratch-fix-all-in-1-sauge-antique-perlee-1b2-0475157p.html",
-    "sku": "0475157",
-    "availability": "Il n’en reste que 2 #047-5157-8"
-  },
-  {
     "title": "Trousse de câblage pour connecteur métallique à 4 broches plates à 6 broches rondes Hopkins",
     "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/1407233/hopkins-4-flat-to-6-round-wiring-kit-metal--aa93cdea-5675-459b-93bd-96d163c5de2a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 44.99,
@@ -1510,54 +1378,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-cablage-pour-connecteur-metallique-a-4-broches-plates-a-6-broches-rondes-hopkins-1407233p.html",
     "sku": "1407233",
     "availability": "Il n’en reste que 6 #140-7233-0"
-  },
-  {
-    "title": "Casque de vélo Supercycle Pursuit, adulte, magenta",
-    "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycle-accessories/0730538/supercycle-pursuit-adult-magenta-bfe2cf2f-8559-41ed-a405-2080985b4fb2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 42.99,
-    "salePrice": 19.99,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/casque-de-velo-supercycle-pursuit-adulte-magenta-0730538p.html",
-    "sku": "0730538",
-    "availability": "Il n’en reste que 1 #073-0538-8"
-  },
-  {
-    "title": "Base supérieure pour lunette de visée Weaver 48503, no 47M, paq. 2",
-    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-equipment/0762234/weaver-top-mount-base-mrln-mr7-win-70-a-bolt-47m-black-2dfe433d-9c51-4ff9-a16d-e091582fc591-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 7.99,
-    "salePrice": 3.99,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/base-superieure-pour-lunette-de-visee-weaver-48503-no-47m-paq-2-0762234p.html",
-    "sku": "0762234",
-    "availability": "Il n’en reste que 2 #076-2234-2"
-  },
-  {
-    "title": "Manuel automobile Haynes, 64200",
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-shop-equipment-supplies/0259373/64200-merc-villager-nissan-quest-93-01-f8e52fa9-aafa-41ed-87be-893ccbba67e2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 32.99,
-    "salePrice": 0.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/manuel-automobile-haynes-64200-0259373p.html",
-    "sku": "0259373",
-    "availability": "Il n’en reste que 2 #025-9373-0"
-  },
-  {
-    "title": "Ballon en aluminium satiné, perluète, choix de couleurs, 11 x 14 po, gonflé d'air, pour anniversaire/remise de diplômes/fête prénatale/mariage de finissants",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8423768/gld-blln-a-f-a-1427563c-4a8c-40a9-80e5-738dea6ac968-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 2.99,
-    "salePrice": 0.43,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/ballon-en-aluminium-satine-perluete-choix-de-couleurs-11-x-14-po-gonfle-d-air-pour-anniversaire-remise-de-diplomes-fete-prenatale-mariage-de-finissants-8423768p.html",
-    "sku": "8423768",
-    "availability": ""
   },
   {
     "title": "Tête de dandinette Strike King Mr. Crappie, 1/32 oz",
@@ -1572,16 +1392,40 @@
     "availability": ""
   },
   {
-    "title": "Leurre Rapala RipStop, 12",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/1783964/rapala-ripstop-12-albino-shiner-2309412a-1b9f-4eff-83a4-171a74e72a35-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 18.99,
-    "salePrice": 9.49,
+    "title": "Connecteur de remorque rond à 4 pôles Hopkins",
+    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/1407221/hopkins-4-round-set-trailer-wiring-77a1e197-e206-4232-9176-a19d1fa566cd-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 25.99,
+    "salePrice": 10.93,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/leurre-rapala-ripstop-12-1783964p.html",
-    "sku": "1783964",
-    "availability": ""
+    "url": "https://www.canadiantire.ca/fr/pdp/connecteur-de-remorque-rond-a-4-poles-hopkins-1407221p.html",
+    "sku": "1407221",
+    "availability": "14 En Stock#140-7221-8"
+  },
+  {
+    "title": "Base supérieure en aluminium Weaver, no 98",
+    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-equipment/0762159/weaver-top-mount-base-rem-700-98-black-eeb12c8e-d8c1-4be4-abe1-4662b6aa39e4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 29.99,
+    "salePrice": 14.99,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/base-superieure-en-aluminium-weaver-no-98-0762159p.html",
+    "sku": "0762159",
+    "availability": "Il n’en reste que 1 #076-2159-2"
+  },
+  {
+    "title": "Casque de vélo Supercycle Pursuit, adulte, magenta",
+    "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycle-accessories/0730538/supercycle-pursuit-adult-magenta-bfe2cf2f-8559-41ed-a405-2080985b4fb2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 42.99,
+    "salePrice": 19.99,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/casque-de-velo-supercycle-pursuit-adulte-magenta-0730538p.html",
+    "sku": "0730538",
+    "availability": "Il n’en reste que 1 #073-0538-8"
   },
   {
     "title": "Base supérieure en aluminium pour lunette de visée Weaver, no 410",
@@ -1596,16 +1440,28 @@
     "availability": "Il n’en reste que 1 #076-2236-8"
   },
   {
-    "title": "Ballon en aluminium satiné rond arc-en-ciel prismatique 100, blanc/argent, 18 po, gonflement à l'hélium et ruban inclus, pour fête d'anniversaire",
-    "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8424538/blln-std-heres-to-your-bday100-1b223b98-9b4a-4d5e-b828-2437ef28d5c3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 6.99,
-    "salePrice": 0.93,
+    "title": "Base de lunette de visée à montage supérieur Weaver 48045, no 45, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-equipment/0762147/weaver-top-mount-base-browning-bolt-act-marlin-455-45-blk-3369d8e6-f679-48a8-aeec-afea680be6c6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 7.99,
+    "salePrice": 3.99,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/ballon-en-aluminium-satine-rond-arc-en-ciel-prismatique-100-blanc-argent-18-po-gonflement-a-l-helium-et-ruban-inclus-pour-fete-d-anniversaire-8424538p.html",
-    "sku": "8424538",
-    "availability": "13 En Stock#842-4538-4"
+    "url": "https://www.canadiantire.ca/fr/pdp/base-de-lunette-de-visee-a-montage-superieur-weaver-48045-no-45-paq-2-0762147p.html",
+    "sku": "0762147",
+    "availability": "Il n’en reste que 2 #076-2147-0"
+  },
+  {
+    "title": "Ensemble de déchiquetage pour tondeuse à siège Troy-Bilt, pour table de coupe de 30 po, pour les modèles 2013 et suivants",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/outdoor-tools/ope-parts-accessories/0601896/mulch-kit-for-60-1815-2013-df867366-45f1-45a1-a819-295742e2fa00-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 37.99,
+    "salePrice": 14.93,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ensemble-de-dechiquetage-pour-tondeuse-a-siege-troy-bilt-pour-table-de-coupe-de-30-po-pour-les-modeles-2013-et-suivants-0601896p.html",
+    "sku": "0601896",
+    "availability": "Il n’en reste que 1 #060-1896-8"
   },
   {
     "title": "Connecteur rond 6 pôles en métal côté véhicule Hopkins Towing Solution Endurance",
@@ -1620,16 +1476,76 @@
     "availability": "Il n’en reste que 2 #040-9680-0"
   },
   {
-    "title": "Manuel de réparation automobile Haynes, Ford Windstar 1995 à 2003, 36097",
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-shop-equipment-supplies/0259364/36097-ford-windstar-95-03-22354f0b-5968-408a-a8e9-68225648bf4e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 32.99,
+    "title": "Peinture de retouche Scratch Fix All-in-1, SAUGE antique PERLÉE (1B2)",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-body-repair/0475157/scratch-fix-toyota-antique-sage-pearl-all-in-1-b2292936-861d-4ec9-85a2-d9a873718867.png?im=whresize&wid=200&hei=200",
+    "price": 28.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/peinture-de-retouche-scratch-fix-all-in-1-sauge-antique-perlee-1b2-0475157p.html",
+    "sku": "0475157",
+    "availability": "Il n’en reste que 2 #047-5157-8"
+  },
+  {
+    "title": "Lame de rechange pour tondeuse sans fil, 10 po, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/outdoor-tools/tractor-lawn-mower-snowthrower-parts/0601759/cordless-lawn-mower-replacement-10-in-blades-2-pk-e4747caf-aa13-44de-bbdb-8226f2ab5c70-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 9.43,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/lame-de-rechange-pour-tondeuse-sans-fil-10-po-paq-2-0601759p.html",
+    "sku": "0601759",
+    "availability": "Il n’en reste que 7 #060-1759-6"
+  },
+  {
+    "title": "Base supérieure pour lunette de visée Weaver 48503, no 47M, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-equipment/0762234/weaver-top-mount-base-mrln-mr7-win-70-a-bolt-47m-black-2dfe433d-9c51-4ff9-a16d-e091582fc591-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 7.99,
+    "salePrice": 3.99,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/base-superieure-pour-lunette-de-visee-weaver-48503-no-47m-paq-2-0762234p.html",
+    "sku": "0762234",
+    "availability": "Il n’en reste que 2 #076-2234-2"
+  },
+  {
+    "title": "Leurre Rapala RipStop, 12",
+    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/1783964/rapala-ripstop-12-albino-shiner-2309412a-1b9f-4eff-83a4-171a74e72a35-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 18.99,
+    "salePrice": 9.49,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/leurre-rapala-ripstop-12-1783964p.html",
+    "sku": "1783964",
+    "availability": ""
+  },
+  {
+    "title": "Ballon en aluminium satiné rond arc-en-ciel prismatique 100, blanc/argent, 18 po, gonflement à l'hélium et ruban inclus, pour fête d'anniversaire",
+    "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8424538/blln-std-heres-to-your-bday100-1b223b98-9b4a-4d5e-b828-2437ef28d5c3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 6.99,
     "salePrice": 0.93,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/manuel-de-reparation-automobile-haynes-ford-windstar-1995-a-2003-36097-0259364p.html",
-    "sku": "0259364",
-    "availability": "Il n’en reste que 2 #025-9364-2"
+    "url": "https://www.canadiantire.ca/fr/pdp/ballon-en-aluminium-satine-rond-arc-en-ciel-prismatique-100-blanc-argent-18-po-gonflement-a-l-helium-et-ruban-inclus-pour-fete-d-anniversaire-8424538p.html",
+    "sku": "8424538",
+    "availability": "13 En Stock#842-4538-4"
+  },
+  {
+    "title": "Manuel de réparation automobile Haynes, Chrysler Dodge et Eagle 1993 à 1997, 25025",
+    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-shop-equipment-supplies/0259340/25025-chrysler-lh-series-93-97-b01d550f-a7d8-4947-b1c5-64814ad0d785-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 32.99,
+    "salePrice": 1.93,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/manuel-de-reparation-automobile-haynes-chrysler-dodge-et-eagle-1993-a-1997-25025-0259340p.html",
+    "sku": "0259340",
+    "availability": "Il n’en reste que 1 #025-9340-8"
   },
   {
     "title": "Serviettes pour boissons Achievement is Key",
@@ -1644,6 +1560,18 @@
     "availability": "18 En Stock#854-9454-4"
   },
   {
+    "title": "Manuel de réparation automobile Haynes, Ford Windstar 1995 à 2003, 36097",
+    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-shop-equipment-supplies/0259364/36097-ford-windstar-95-03-22354f0b-5968-408a-a8e9-68225648bf4e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 32.99,
+    "salePrice": 0.93,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/manuel-de-reparation-automobile-haynes-ford-windstar-1995-a-2003-36097-0259364p.html",
+    "sku": "0259364",
+    "availability": "Il n’en reste que 2 #025-9364-2"
+  },
+  {
     "title": "Collier pour chat/chien, Daisy",
     "image": "https://media-www.canadiantire.ca/product/living/pet-care/pet-accessories/1427568/perri-s-pet-leash-daisy-6ft-dc5b66d4-2ccb-40e8-83fd-f905f9f3b9e6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 14.99,
@@ -1654,41 +1582,5 @@
     "url": "https://www.canadiantire.ca/fr/pdp/collier-pour-chat-chien-daisy-1427568p.html",
     "sku": "1427568",
     "availability": "Il n’en reste que 2 #142-7568-0"
-  },
-  {
-    "title": "Assiettes rondes Congrats Grad à confettis, remise des diplômes, 10 po, paq. 20",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/party-city-seasonal/party-city-micro-season-decor/8549947/follow-your-dream-10-round-plate-4ed5245f-5619-44e5-b1b9-b52bf61f79b0-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 9.99,
-    "salePrice": 3.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/assiettes-rondes-congrats-grad-a-confettis-remise-des-diplomes-10-po-paq-20-8549947p.html",
-    "sku": "8549947",
-    "availability": "Il n’en reste que 5 #854-9947-2"
-  },
-  {
-    "title": "Porte-essuie-tout vertical en métal Type A Linéaire avec base lestée pour comptoir de cuisine, blanc",
-    "image": "https://media-www.canadiantire.ca/product/living/home-organization/kitchen-organization/1425517/type-a-linear-paper-towel-holder-70d62080-95d2-4362-b327-bcea4c7acc11-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 19.99,
-    "salePrice": 9.89,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/porte-essuie-tout-vertical-en-metal-type-a-lineaire-avec-base-lestee-pour-comptoir-de-cuisine-blanc-1425517p.html",
-    "sku": "1425517",
-    "availability": "72 En Stock#142-5517-4"
-  },
-  {
-    "title": "Plaque en étain RIVERS EDGE « Welcome Park it and Stay Awhile », 12 x 17 po",
-    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-accessories/1759887/park-it-tin-sign-564d6ff2-d6c5-4bc9-8a9f-0d0e084d7da1.png?im=whresize&wid=200&hei=200",
-    "price": 14.99,
-    "salePrice": 7.49,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/plaque-en-etain-rivers-edge-welcome-park-it-and-stay-awhile-12-x-17-po-1759887p.html",
-    "sku": "1759887",
-    "availability": "Il n’en reste que 1 #175-9887-0"
   }
 ]
