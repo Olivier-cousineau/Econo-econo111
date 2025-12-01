@@ -1,27 +1,29 @@
-
 [
   {
-    "product_name": "Staples Tapis pour chaise sur plancher dur, 45\" x 53\"",
-    "original_price": "139.99",
-    "discount_price": "89.99",
-    "image_url": "https://www.staples.ca/content/dam/sk/staples-ca/944/59/56/9445956/16146739f1.jpg",
-    "product_link": "https://www.staples.ca/fr/tapis-pour-chaise-sur-plancher-dur-45-x-53-produits_9445956_2-CA_1_20001",
+    "title": "Staples Tapis pour chaise sur plancher dur, 45\" x 53\"",
+    "productUrl": "https://www.staples.ca/fr/tapis-pour-chaise-sur-plancher-dur-45-x-53-produits_9445956_2-CA_1_20001",
+    "imageUrl": "https://www.staples.ca/content/dam/sk/staples-ca/944/59/56/9445956/16146739f1.jpg",
+    "originalPrice": 139.99,
+    "currentPrice": 89.99,
+    "discountPercent": 36,
     "availability": "Ramassage en magasin, Livraison standard"
   },
   {
-    "product_name": "Brother HL-L2370DW Imprimante laser monochrome compacte",
-    "original_price": "249.99",
-    "discount_price": "199.99",
-    "image_url": "https://www.staples.ca/content/dam/sk/staples-ca/941/50/17/9415017/1024454061.jpg",
-    "product_link": "https://www.staples.ca/fr/imprimante-laser-monochrome-compacte-avec-r-seau-sans-fil-hl-l2370dw-produits_9415017_2-CA_1_20001",
+    "title": "Brother HL-L2370DW Imprimante laser monochrome compacte",
+    "productUrl": "https://www.staples.ca/fr/imprimante-laser-monochrome-compacte-avec-r-seau-sans-fil-hl-l2370dw-produits_2740405_2-CA_1_20001",
+    "imageUrl": "https://www.staples.ca/content/dam/sk/staples-ca/941/50/17/9415017/1024454061.jpg",
+    "originalPrice": 249.99,
+    "currentPrice": 199.99,
+    "discountPercent": 20,
     "availability": "Disponible en ligne et en magasin"
   },
   {
-    "product_name": "Staples Chaises de bureau Hyken en maille, noir",
-    "original_price": "349.99",
-    "discount_price": "249.99",
-    "image_url": "https://www.staples.ca/content/dam/sk/staples-ca/941/56/91/9415691/1084424741.jpg",
-    "product_link": "https://www.staples.ca/fr/chaise-de-bureau-en-maille-avec-appui-t-te-et-lumbar-adjustable-hyken-noir-produits_9415691_2-CA_1_20001",
-    "availability": "Ramassage en magasin, Livraison expédiée"
+    "title": "Staples Chaise de bureau ergonomique",
+    "productUrl": "https://www.staples.ca/fr/chaise-de-bureau-ergonomique-produits_1234567_2-CA_1_20001",
+    "imageUrl": "https://www.staples.ca/content/dam/sk/staples-ca/123/45/67/1234567/chaise.jpg",
+    "originalPrice": 399.99,
+    "currentPrice": 199.99,
+    "discountPercent": 50,
+    "availability": "Ramassage en magasin"
   }
 ]
