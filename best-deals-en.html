@@ -6,8 +6,8 @@
   <title>EconoDeal — Top deals</title>
   <link rel="stylesheet" href="dist/assets/main.css" />
 </head>
-<body class="overlay-active">
-  <div id="registrationOverlay" role="dialog" aria-modal="true" aria-labelledby="registrationTitle">
+<body>
+  <div id="registrationOverlay" class="hidden" role="dialog" aria-modal="true" aria-labelledby="registrationTitle" aria-hidden="true">
     <div class="registration-card">
       <button type="button" class="registration-close" data-overlay-dismiss aria-label="Close the registration dialog">
         <span aria-hidden="true">&times;</span>
@@ -435,8 +435,12 @@
       updateClientCountDisplays();
       const alreadyRegistered = safeGet('econodealClientRegistered') === 'true';
       const overlayDismissed = safeGet(OVERLAY_DISMISSED_KEY) === 'true';
-      if(alreadyRegistered || overlayDismissed){ hideOverlay(); }
-      else{ showOverlay(); }
+      const params = new URLSearchParams(window.location.search || '');
+      const overlayRequested = ['register','inscription','registro','anmeldung','iscrizione']
+        .some(key => params.get(key) === '1');
+      const shouldShowOverlay = overlayRequested && !(alreadyRegistered || overlayDismissed);
+      if(shouldShowOverlay){ showOverlay(); }
+      else{ hideOverlay(); }
       if(submitBtn && regulationCheckbox){
         submitBtn.disabled = !regulationCheckbox.checked;
         regulationCheckbox.addEventListener('change', () => { submitBtn.disabled = !regulationCheckbox.checked; });
