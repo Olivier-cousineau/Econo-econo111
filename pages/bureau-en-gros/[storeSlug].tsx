@@ -23,8 +23,8 @@ type StorePageProps = {
 
 const BUREAU_ROOT = path.join(process.cwd(), "public", "bureauengros");
 
+// 🔹 Pour l’instant on ne build que Saint-Jérôme
 export const getStaticPaths: GetStaticPaths = async () => {
-  // 🔹 Pour l’instant on génère SEULEMENT Saint-Jérôme
   const storeSlugs = ["124-bureau-en-gros-saint-jerome-qc"];
 
   const paths = storeSlugs.map((slug) => ({
@@ -33,9 +33,31 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: false, // 404 pour tout le reste (normal pour l’instant)
+    fallback: false,
   };
 };
+
+function parsePrice(raw: unknown): number | null {
+  if (raw == null) return null;
+  const s = String(raw)
+    .replace(/[^\d.,-]/g, "")
+    .replace(",", ".");
+  const n = parseFloat(s);
+  return Number.isNaN(n) ? null : n;
+}
+
+function computeDiscount(currentPrice: number | null, originalPrice: number | null): number | null {
+  if (
+    currentPrice == null ||
+    originalPrice == null ||
+    currentPrice <= 0 ||
+    originalPrice <= 0 ||
+    currentPrice >= originalPrice
+  ) {
+    return null;
+  }
+  return Math.round(((originalPrice - currentPrice) / originalPrice) * 100);
+}
 
 export const getStaticProps: GetStaticProps<StorePageProps> = async (context) => {
   const storeSlug = context.params?.storeSlug;
@@ -53,13 +75,64 @@ export const getStaticProps: GetStaticProps<StorePageProps> = async (context) =>
   const raw = fs.readFileSync(jsonPath, "utf-8");
   const parsed = JSON.parse(raw);
 
+  // 🔹 Cas 1 : ton fichier est une LISTE d’objets (format actuel)
+  let productsSource: any[] = [];
+  let storeName = "Bureau en Gros – Saint-Jérôme, QC";
+  let storeId = 124;
+  let sourceStore = "Saint-Jérôme";
+
+  if (Array.isArray(parsed)) {
+    productsSource = parsed;
+  } else if (parsed && typeof parsed === "object" && Array.isArray(parsed.products)) {
+    // 🔹 Cas 2 : plus tard, si tu utilises un objet { storeId, storeName, products: [...] }
+    productsSource = parsed.products;
+    storeName = parsed.storeName ?? storeName;
+    storeId = parsed.storeId ?? storeId;
+    sourceStore = parsed.sourceStore ?? sourceStore;
+  }
+
+  const products: Product[] = productsSource.map((item, index) => {
+    const title =
+      item.title ||
+      item.product_name ||
+      `Produit #${index + 1}`;
+
+    const productUrl = item.productUrl || item.product_link || "";
+
+    const currentPrice =
+      typeof item.currentPrice === "number"
+        ? item.currentPrice
+        : parsePrice(item.discount_price ?? item.current_price);
+
+    const originalPrice =
+      typeof item.originalPrice === "number"
+        ? item.originalPrice
+        : parsePrice(item.original_price ?? item.regular_price);
+
+    const discountPercent =
+      typeof item.discountPercent === "number"
+        ? item.discountPercent
+        : computeDiscount(currentPrice, originalPrice);
+
+    const imageUrl = item.imageUrl || item.image_url || null;
+
+    return {
+      title,
+      productUrl,
+      currentPrice,
+      originalPrice,
+      discountPercent,
+      imageUrl,
+    };
+  });
+
   return {
     props: {
-      storeId: parsed.storeId ?? 0,
-      storeName: parsed.storeName ?? "Bureau en Gros",
-      sourceStore: parsed.sourceStore ?? "",
-      count: parsed.count ?? 0,
-      products: parsed.products ?? [],
+      storeId,
+      storeName,
+      sourceStore,
+      count: products.length,
+      products,
       storeSlug,
     },
     revalidate: 300, // 5 minutes
