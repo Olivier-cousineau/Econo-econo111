@@ -2143,9 +2143,30 @@
     }
 
     function normalizeDeal(item, storeLabel, branch){
-      const branchLabel = typeof branch === 'object' && branch ? branch.label : branch;
-      const branchSlug = typeof branch === 'object' && branch && branch.slug ? branch.slug : slugify(branchLabel || item.city || storeLabel);
-      const cityLabel = typeof branch === 'object' && branch && branch.city ? branch.city : firstDefined(item.city, branchLabel, storeLabel);
+      const branchLabel = firstDefined(
+        item.branch,
+        item.branchName,
+        typeof branch === 'object' && branch ? branch.label : branch
+      );
+      const rawCity = firstDefined(
+        item.city,
+        item.location,
+        typeof branch === 'object' && branch ? branch.city : undefined,
+        branchLabel,
+        storeLabel
+      );
+      const branchSlug = slugify(
+        firstDefined(
+          item.branchSlug,
+          item.branch_slug,
+          item.branch,
+          rawCity,
+          typeof branch === 'object' && branch ? branch.slug : undefined,
+          branchLabel,
+          storeLabel
+        )
+      );
+      const cityLabel = rawCity;
       const citySlug = slugify(cityLabel);
       const {regular: finalRegular, sale: finalSale} = resolvePrices(item);
 
@@ -2416,8 +2437,12 @@
             || retailerSlug === 'bureau-en-gros'
             || slugify(deal.store || '') === 'bureau-en-gros';
         }).length;
+        const sportingLifeDeals = deals.filter(deal => slugify(deal.store || '') === 'sporting-life');
+        const sportingLifeLavalDeals = sportingLifeDeals.filter(deal => deal.branchSlug === 'laval' || deal.citySlug === 'laval');
         console.log('[DEBUG] Total deals loaded:', deals.length);
         console.log('[DEBUG] Bureau en Gros deals:', bureauDealCount);
+        console.log('[DEBUG] Sporting Life deals loaded:', sportingLifeDeals.length);
+        console.log('[DEBUG] Sporting Life Laval deals:', sportingLifeLavalDeals.length);
         console.log('[DEBUG] Visible deals after filtering:', filtered.length);
       }
       if(terms.length){
@@ -2487,6 +2512,9 @@
         if(c === 'canada') return AMAZON_DAILY_PATH;
         if(!c) return null;
         return `data/${s}/${c}.json`;
+      }
+      if(s === 'sporting-life'){
+        return 'data/sporting-life/liquidation.json';
       }
       if(!c) return null;
       return `data/${s}/${c}.json`;
