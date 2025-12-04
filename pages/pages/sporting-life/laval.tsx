@@ -24,11 +24,11 @@ export const getStaticProps: GetStaticProps<SportingLifeLavalPageProps> = async 
     process.cwd(),
     "data",
     "sporting-life",
-    "laval.json"
+    "liquidation.json"
   );
 
   if (!fs.existsSync(filePath)) {
-    console.warn("[Sporting Life] laval.json not found at", filePath);
+    console.warn("[Sporting Life] liquidation.json not found at", filePath);
     return {
       props: {
         products: [],
@@ -88,7 +88,7 @@ const SportingLifeLavalPage = ({
           <div className="rounded-lg border border-dashed border-slate-300 bg-white p-8 text-center text-slate-500">
             Aucune liquidation trouvée pour le moment. Vérifie que le fichier{" "}
             <code className="rounded bg-slate-100 px-1 py-0.5 text-xs">
-              data/sporting-life/laval.json
+              data/sporting-life/liquidation.json
             </code>{" "}
             existe et contient des produits.
           </div>
