@@ -1066,6 +1066,7 @@
     const PLACEHOLDER_IMAGE = 'https://via.placeholder.com/400x300?text=Liquidation';
     const AMAZON_DAILY_PATH = 'data/amazon_ca_daily.json';
     const AMAZON_FALLBACK_PATH = 'data/amazon/canada.json';
+    const SPORTING_LIFE_DATA_PATH = '/data/sporting-life/liquidation.json';
     const DEFAULT_REMOTE_DATA_BASE = 'https://raw.githubusercontent.com/Olivier-cousineau/Econo-econo111/main';
 
     function detectRemoteDataBase(){
@@ -1991,6 +1992,20 @@
       const citySlug = slugify(cityLabel);
       const {regular: finalRegular, sale: finalSale} = resolvePrices(item);
 
+      const canonicalStoreName = firstDefined(
+        storeLabel,
+        item.store,
+        item.storeName,
+        item.store_name
+      );
+      const storeSlug = slugify(firstDefined(
+        item.storeSlug,
+        item.store_slug,
+        canonicalStoreName,
+        item.store,
+        item.retailer
+      ));
+
       const brand = firstDefined(
         item['product-tile__brand'],
         item.brand,
@@ -2062,8 +2077,9 @@
         image,
         price: finalRegular,
         salePrice: finalSale,
-        store: item.store ?? storeLabel,
-        retailer: item.retailer ?? slugify(storeLabel),
+        store: canonicalStoreName || storeLabel,
+        storeSlug,
+        retailer: item.retailer ?? slugify(canonicalStoreName || storeLabel),
         city: cityDisplay,
         branch: branchLabel ?? cityLabel,
         branchSlug,
@@ -2330,7 +2346,7 @@
         return `data/${s}/${c}.json`;
       }
       if(s === 'sporting-life'){
-        return 'data/sporting-life/liquidation.json';
+        return SPORTING_LIFE_DATA_PATH;
       }
       if(!c) return null;
       return `data/${s}/${c}.json`;
@@ -2478,12 +2494,48 @@
       try{
         const res = await fetchDataJson(path);
         if(!res) return [];
+        const isSportingLife = slugify(storeLabel) === 'sporting-life' || isSportingLifePath(path);
         const json = await res.json();
         const entries = Array.isArray(json)
           ? json
           : (Array.isArray(json?.products) ? json.products : []);
+        if(isSportingLife){
+          console.log('[Sporting Life] Parsed JSON entries:', Array.isArray(entries) ? entries.length : 0);
+        }
         if(!Array.isArray(entries) || entries.length === 0) return [];
+        if(isSportingLife){
+          const sportingEntries = entries.filter(item => slugify(firstDefined(
+            item?.storeSlug,
+            item?.store_slug,
+            storeLabel,
+            item?.store,
+            item?.retailer
+          )) === 'sporting-life');
+          const sportingLavalEntries = sportingEntries.filter(item => {
+            const branchValue = firstDefined(
+              item?.branchSlug,
+              item?.branch_slug,
+              item?.branch,
+              item?.city,
+              item?.location,
+              branch?.slug,
+              branch?.label,
+              branch
+            );
+            const branchSlugValue = slugify(branchValue);
+            const citySlugValue = slugify(firstDefined(item?.city, item?.location, branchValue));
+            const storeText = typeof item?.store === 'string' ? item.store : '';
+            return branchSlugValue === 'laval'
+              || citySlugValue === 'laval'
+              || /\blaval\b/i.test(storeText);
+          });
+          console.log('[Sporting Life] Sporting Life-only items:', sportingEntries.length);
+          console.log('[Sporting Life] Sporting Life Laval items:', sportingLavalEntries.length);
+        }
         const normalized = entries.map(item => normalizeDeal(item, storeLabel, branch));
+        if(isSportingLife){
+          console.log('[Sporting Life] Normalized deals ready:', normalized.length);
+        }
         const needsFallback =
           (normalized.length === 0 || normalized.every(deal => !hasRealImage(deal))) && path === AMAZON_DAILY_PATH;
         if(needsFallback){
