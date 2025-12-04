@@ -781,6 +781,7 @@
       const PLACEHOLDER_IMAGE = 'https://via.placeholder.com/400x300?text=Liquidation';
       const AMAZON_DAILY_PATH = 'data/amazon_ca_daily.json';
       const AMAZON_FALLBACK_PATH = 'data/amazon/canada.json';
+    const SPORTING_LIFE_DATA_PATH = '/data/sporting-life/liquidation.json';
       const BEST_BUY_AGGREGATE_PATH = 'data/best-buy/liquidations.json';
 
       function slugify(value){
@@ -981,14 +982,30 @@
         const cityLabel = rawCity;
         const citySlug = slugify(cityLabel);
         const {regular: finalRegular, sale: finalSale} = resolvePrices(item);
+
+        const canonicalStoreName = firstDefined(
+          storeLabel,
+          item.store,
+          item.storeName,
+          item.store_name
+        );
+        const storeSlug = slugify(firstDefined(
+          item.storeSlug,
+          item.store_slug,
+          canonicalStoreName,
+          item.store,
+          item.retailer
+        ));
         return {
           title: firstDefined(item['product-tile__title'], item.title, item.name, item.product_name, item.productName, 'Article en liquidation'),
           image: resolveImage(item),
           price: finalRegular,
           salePrice: finalSale,
-          store: item.store ?? storeLabel,
+          store: canonicalStoreName || storeLabel,
+          storeSlug,
           city: item.city ?? cityLabel,
           branch: branchLabel ?? cityLabel,
+          retailer: item.retailer ?? slugify(canonicalStoreName || storeLabel),
           branchSlug,
           citySlug,
           url: firstDefined(item['product-tile__image-link href'], item['button href'], item.url, item.link, item.product_link, item.productLink, '#')
@@ -1084,7 +1101,7 @@
           return `data/${s}/${c}.json`;
         }
         if(s === 'sporting-life'){
-          return 'data/sporting-life/liquidation.json';
+          return SPORTING_LIFE_DATA_PATH;
         }
         if(!c) return null;
         return `data/${s}/${c}.json`;
@@ -1208,42 +1225,81 @@
         }
       }
 
-      async function fetchOne(path, storeLabel, branch){
-        try{
-          const res = await fetchDataJson(path);
-          if(!res) return {entries:[], updatedAt:null};
-          let updatedAt = null;
-          const lastModified = res.headers?.get?.('Last-Modified');
-          if(lastModified){
-            const parsed = Date.parse(lastModified);
-            if(Number.isFinite(parsed)) updatedAt = parsed;
-          }
-          const json = await res.json();
-          const products = Array.isArray(json)
-            ? json
-            : (Array.isArray(json?.products) ? json.products : []);
-          if(!Array.isArray(products) || products.length === 0) return {entries:[], updatedAt};
-          const entries = products.map(item => normalizeDeal(item, storeLabel, branch));
-          const needsFallback =
-            (entries.length === 0 || entries.every(deal => !hasRealImage(deal))) && path === AMAZON_DAILY_PATH;
-          if(needsFallback){
-            const fallback = await fetchAmazonFallback(storeLabel, branch);
-            if(fallback.entries.length && fallback.entries.some(hasRealImage)){
-              const fallbackUpdated = fallback.updatedAt;
-              const mergedUpdated =
-                fallbackUpdated && updatedAt ? Math.max(updatedAt, fallbackUpdated) : (fallbackUpdated ?? updatedAt);
-              return {entries: fallback.entries, updatedAt: mergedUpdated ?? null};
-            }
-          }
-          return {
-            entries,
-            updatedAt
-          };
-        }catch(error){
-          console.warn('fetch fail', path, error);
-          return {entries:[], updatedAt:null};
-        }
+
+
+async function fetchOne(path, storeLabel, branch){
+  try{
+    const res = await fetchDataJson(path);
+    if(!res) return {entries:[], updatedAt:null};
+    let updatedAt = null;
+    const lastModified = res.headers?.get?.('Last-Modified');
+    if(lastModified){
+      const parsed = Date.parse(lastModified);
+      if(Number.isFinite(parsed)) updatedAt = parsed;
+    }
+    const isSportingLife = slugify(storeLabel) === 'sporting-life' || isSportingLifePath(path);
+    const json = await res.json();
+    const products = Array.isArray(json)
+      ? json
+      : (Array.isArray(json?.products) ? json.products : []);
+    if(isSportingLife){
+      console.log('[Sporting Life] Parsed JSON entries:', Array.isArray(products) ? products.length : 0);
+    }
+    if(!Array.isArray(products) || products.length === 0) return {entries:[], updatedAt};
+    if(isSportingLife){
+      const sportingEntries = products.filter(item => slugify(firstDefined(
+        item?.storeSlug,
+        item?.store_slug,
+        storeLabel,
+        item?.store,
+        item?.retailer
+      )) === 'sporting-life');
+      const sportingLavalEntries = sportingEntries.filter(item => {
+        const branchValue = firstDefined(
+          item?.branchSlug,
+          item?.branch_slug,
+          item?.branch,
+          item?.city,
+          item?.location,
+          branch?.slug,
+          branch?.label,
+          branch
+        );
+        const branchSlugValue = slugify(branchValue);
+        const citySlugValue = slugify(firstDefined(item?.city, item?.location, branchValue));
+        const storeText = typeof item?.store === 'string' ? item.store : '';
+        return branchSlugValue === 'laval'
+          || citySlugValue === 'laval'
+          || /\blaval\b/i.test(storeText);
+      });
+      console.log('[Sporting Life] Sporting Life-only items:', sportingEntries.length);
+      console.log('[Sporting Life] Sporting Life Laval items:', sportingLavalEntries.length);
+    }
+    const entries = products.map(item => normalizeDeal(item, storeLabel, branch));
+    if(isSportingLife){
+      console.log('[Sporting Life] Normalized deals ready:', entries.length);
+    }
+    const needsFallback =
+      (entries.length === 0 || entries.every(deal => !hasRealImage(deal))) && path === AMAZON_DAILY_PATH;
+    if(needsFallback){
+      const fallback = await fetchAmazonFallback(storeLabel, branch);
+      if(fallback.entries.length && fallback.entries.some(hasRealImage)){
+        const fallbackUpdated = fallback.updatedAt;
+        const mergedUpdated =
+          fallbackUpdated && updatedAt ? Math.max(updatedAt, fallbackUpdated) : (fallbackUpdated ?? updatedAt);
+        return {entries: fallback.entries, updatedAt: mergedUpdated ?? null};
       }
+    }
+    return {
+      entries,
+      updatedAt
+    };
+  }catch(error){
+    console.warn('fetch fail', path, error);
+    return {entries:[], updatedAt:null};
+  }
+}
+
 
       let allDeals = [];
       let filteredDeals = [];
@@ -1252,14 +1308,14 @@
       function render(options = {}){
         const {resetVisible = false} = options;
         const filter = storeFilter.value;
-        const subset = filter ? allDeals.filter(deal => deal.store === filter) : allDeals;
+        const subset = filter ? allDeals.filter(deal => slugify(deal.storeSlug || deal.store || '') === filter) : allDeals;
         const sorted = subset
           .map(deal => ({...deal, discountPct: discount(deal.price, deal.salePrice)}))
           .filter(deal => {
             const retailerSlug = (deal.retailer || '').toLowerCase();
             const isBureauEnGrosDeal = retailerSlug === 'bureauengros'
               || retailerSlug === 'bureau-en-gros'
-              || slugify(deal.store || '') === 'bureau-en-gros';
+              || slugify(deal.storeSlug || deal.store || '') === 'bureau-en-gros';
             return isBureauEnGrosDeal ? true : deal.discountPct > 0;
           })
           .sort((a,b) => {
@@ -1274,7 +1330,7 @@
             const retailerSlug = (deal.retailer || '').toLowerCase();
             return retailerSlug === 'bureauengros'
               || retailerSlug === 'bureau-en-gros'
-              || slugify(deal.store || '') === 'bureau-en-gros';
+              || slugify(deal.storeSlug || deal.store || '') === 'bureau-en-gros';
           }).length;
           console.log('[DEBUG] Total deals loaded:', allDeals.length);
           console.log('[DEBUG] Bureau en Gros deals:', bureauDeals);
@@ -1324,7 +1380,7 @@
       function populateStoreFilter(){
         const options = ['<option value="">All retailers</option>'];
         for(const store of STORES){
-          options.push(`<option value="${store.label}">${store.label}</option>`);
+          options.push(`<option value="${store.slug}">${store.label}</option>`);
         }
         storeFilter.innerHTML = options.join('');
       }
