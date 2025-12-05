@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2025-12-05T04:45:50.383Z",
+  "generatedAt": "2025-12-05T07:54:42.432Z",
   "stores": [
     {
-      "id": "72",
-      "city": "North Bay, ON",
+      "id": "74",
+      "city": "Orillia, ON",
       "status": "committed",
-      "details": "430 produits"
+      "details": "892 produits"
     },
     {
-      "id": "62",
-      "city": "Gravenhurst, ON",
+      "id": "127",
+      "city": "Uxbridge, ON",
       "status": "committed",
-      "details": "374 produits"
+      "details": "489 produits"
     },
     {
-      "id": "226",
-      "city": "Port Perry, ON",
+      "id": "160",
+      "city": "Ajax, ON",
       "status": "committed",
-      "details": "333 produits"
+      "details": "592 produits"
     },
     {
-      "id": "336",
-      "city": "Oshawa North, ON",
+      "id": "324",
+      "city": "Pickering, ON",
       "status": "committed",
-      "details": "627 produits"
+      "details": "760 produits"
     },
     {
-      "id": "75",
-      "city": "Oshawa Mid, ON",
+      "id": "102",
+      "city": "Sturgeon Falls, ON",
       "status": "committed",
-      "details": "501 produits"
+      "details": "432 produits"
     },
     {
-      "id": "285",
-      "city": "Amos, QC",
+      "id": "134",
+      "city": "Keswick, ON",
       "status": "committed",
-      "details": "447 produits"
+      "details": "567 produits"
     },
     {
-      "id": "460",
-      "city": "Whitby North, ON",
+      "id": "427",
+      "city": "Scarborough East, ON",
       "status": "committed",
-      "details": "506 produits"
+      "details": "441 produits"
     },
     {
-      "id": "187",
-      "city": "Whitby South, ON",
+      "id": "280",
+      "city": "Stouffville, ON",
       "status": "committed",
-      "details": "566 produits"
+      "details": "585 produits"
     }
   ],
   "failedTwice": [],
