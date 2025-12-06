@@ -1,4 +1,4 @@
-import { readBestBuyClearanceDeals } from "../../../lib/bestbuyClearance";
+import { readBestBuyDeals } from "../../../lib/bestbuy";
 
 export default function handler(req, res) {
   if (req.method !== "GET") {
@@ -6,7 +6,7 @@ export default function handler(req, res) {
     return;
   }
 
-  const deals = readBestBuyClearanceDeals();
+  const deals = readBestBuyDeals();
 
   res.status(200).json({
     ok: true,

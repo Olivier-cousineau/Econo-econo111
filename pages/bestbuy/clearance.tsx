@@ -1,53 +1,32 @@
-import fs from "fs";
 import Link from "next/link";
-import path from "path";
 import { useEffect, useState } from "react";
 import { GetStaticProps } from "next";
+import { Deal, readBestBuyDeals } from "../../lib/bestbuy";
 
-export const getStaticProps: GetStaticProps = async () => {
-  const filePath = path.join(
-    process.cwd(),
-    "outputs",
-    "bestbuy",
-    "clearance.json"
-  );
-
-  let products = [];
-
-  try {
-    if (fs.existsSync(filePath)) {
-      const raw = fs.readFileSync(filePath, "utf8");
-      const parsed = JSON.parse(raw);
-
-      if (Array.isArray(parsed)) {
-        products = parsed;
-      } else if (Array.isArray(parsed.products)) {
-        products = parsed.products;
-      }
-    } else {
-      console.warn("[BestBuy] clearance.json introuvable pendant le build Vercel.");
-    }
-  } catch (err) {
-    console.error("[BestBuy] Erreur lors de la lecture clearance.json:", err);
-  }
-
-  return {
-    props: {
-      products,
-    },
-    revalidate: 60 * 30, // Régénère toutes les 30 minutes
-  };
+type Props = {
+  deals: Deal[];
 };
 
-function formatPrice(value) {
+const formatPrice = (value: number | null) => {
   if (typeof value === "number" && Number.isFinite(value)) {
     return `$${value.toFixed(2)}`;
   }
   return "Prix non disponible";
-}
+};
 
-const BestBuyClearancePage = ({ products: initialProducts }) => {
-  const [deals, setDeals] = useState(initialProducts ?? []);
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const deals = readBestBuyDeals();
+
+  return {
+    props: {
+      deals,
+    },
+    revalidate: 60 * 60, // 1h si tu veux
+  };
+};
+
+const BestBuyClearancePage = ({ deals: initialDeals }: Props) => {
+  const [deals, setDeals] = useState<Deal[]>(initialDeals ?? []);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -137,9 +116,9 @@ const BestBuyClearancePage = ({ products: initialProducts }) => {
             gap: "1.25rem",
           }}
         >
-          {deals.map((deal, index) => (
+          {deals.map((deal) => (
             <article
-              key={`${deal.url}-${index}`}
+              key={deal.id}
               style={{
                 border: "1px solid #e5e7eb",
                 borderRadius: "0.75rem",
@@ -155,16 +134,16 @@ const BestBuyClearancePage = ({ products: initialProducts }) => {
                 {deal.title}
               </h2>
               <p style={{ color: "#2563eb", fontWeight: 600 }}>
-                {formatPrice(deal.price)}
+                {formatPrice(deal.currentPrice)}
               </p>
               <p style={{ fontSize: "0.9rem", color: "#6b7280" }}>
                 Liquidation en ligne – visible pour toutes les succursales Best
                 Buy.
               </p>
               <div style={{ marginTop: "auto" }}>
-                {deal.url ? (
+                {deal.productUrl ? (
                   <a
-                    href={deal.url}
+                    href={deal.productUrl}
                     target="_blank"
                     rel="noreferrer"
                     style={{
