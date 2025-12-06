@@ -1,13 +1,41 @@
+import fs from "fs";
 import Link from "next/link";
+import path from "path";
 import { useEffect, useState } from "react";
-import { readBestBuyClearanceDeals } from "../../lib/bestbuyClearance";
+import { GetStaticProps } from "next";
 
-export const getStaticProps = async () => {
-  const deals = readBestBuyClearanceDeals();
+export const getStaticProps: GetStaticProps = async () => {
+  const filePath = path.join(
+    process.cwd(),
+    "outputs",
+    "bestbuy",
+    "clearance.json"
+  );
+
+  let products = [];
+
+  try {
+    if (fs.existsSync(filePath)) {
+      const raw = fs.readFileSync(filePath, "utf8");
+      const parsed = JSON.parse(raw);
+
+      if (Array.isArray(parsed)) {
+        products = parsed;
+      } else if (Array.isArray(parsed.products)) {
+        products = parsed.products;
+      }
+    } else {
+      console.warn("[BestBuy] clearance.json introuvable pendant le build Vercel.");
+    }
+  } catch (err) {
+    console.error("[BestBuy] Erreur lors de la lecture clearance.json:", err);
+  }
 
   return {
-    props: { deals },
-    revalidate: 300,
+    props: {
+      products,
+    },
+    revalidate: 60 * 30, // Régénère toutes les 30 minutes
   };
 };
 
@@ -18,8 +46,8 @@ function formatPrice(value) {
   return "Prix non disponible";
 }
 
-const BestBuyClearancePage = ({ deals: initialDeals }) => {
-  const [deals, setDeals] = useState(initialDeals ?? []);
+const BestBuyClearancePage = ({ products: initialProducts }) => {
+  const [deals, setDeals] = useState(initialProducts ?? []);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
 
