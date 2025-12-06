@@ -1243,6 +1243,7 @@
     const AMAZON_DAILY_PATH = 'data/amazon_ca_daily.json';
     const AMAZON_FALLBACK_PATH = 'data/amazon/canada.json';
     const SPORTING_LIFE_DATA_PATH = '/data/sporting-life/liquidation.json';
+    const BESTBUY_JSON_URL = 'outputs/bestbuy/clearance.json';
     const DEFAULT_REMOTE_DATA_BASE = 'https://raw.githubusercontent.com/Olivier-cousineau/Econo-econo111/main';
 
     function detectRemoteDataBase(){
@@ -2527,7 +2528,7 @@
       return getStoreBySlug(identifier) || STORES.find(store => store.label === identifier);
     }
 
-    const BEST_BUY_AGGREGATE_PATH = 'data/best-buy/liquidations.json';
+    const BEST_BUY_AGGREGATE_PATH = BESTBUY_JSON_URL;
 
     function filePathFor(store, branch){
       const s = store?.slug;
@@ -2693,6 +2694,43 @@
       }
     }
 
+    async function loadBestBuyDealsFromJson(){
+      try{
+        const resp = await fetch(BESTBUY_JSON_URL, { cache: 'no-store' });
+        if(!resp.ok){
+          console.warn('[BestBuy] HTTP error', resp.status);
+          return [];
+        }
+        const raw = await resp.json();
+
+        return Array.isArray(raw)
+          ? raw.map((item, index) => {
+              const priceNumber = typeof item.price === 'number'
+                ? item.price
+                : parseFloat(String(item.price)
+                  .replace(/[^0-9.,]/g, '')
+                  .replace(',', '.'));
+
+              return {
+                id: `bestbuy-${index}`,
+                store: 'bestbuy',
+                title: item.title,
+                productUrl: item.url,
+                currentPrice: Number.isFinite(priceNumber) ? priceNumber : null,
+                originalPrice: null,
+                discountPercent: null,
+                imageUrl: null,
+                city: 'En ligne (Canada)',
+                branchId: null,
+              };
+            })
+          : [];
+      }catch(err){
+        console.error('[BestBuy] Failed to load clearance.json', err);
+        return [];
+      }
+    }
+
     function normalizeBureauEnGrosItem(item){
       if(!item || typeof item !== 'object') return item;
       const productUrl = item.productUrl ?? item.url ?? item.link;
@@ -2713,6 +2751,20 @@
 
     async function fetchOne(path, storeLabel, branch){
       try{
+        if(path === BESTBUY_JSON_URL){
+          const deals = await loadBestBuyDealsFromJson();
+          return deals.map((item, index) => normalizeDeal({
+            ...item,
+            store: storeLabel,
+            storeSlug: 'best-buy',
+            branch: item.branchId || item.city || branch?.label || branch,
+            url: item.productUrl || item.url,
+            price: item.originalPrice ?? item.price ?? item.currentPrice,
+            salePrice: item.currentPrice ?? item.price ?? item.originalPrice,
+            id: item.id ?? `bestbuy-${index}`
+          }, storeLabel, branch));
+        }
+
         const res = await fetchDataJson(path);
         if(!res) return [];
         const isSportingLife = slugify(storeLabel) === 'sporting-life' || isSportingLifePath(path);
