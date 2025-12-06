@@ -2733,7 +2733,7 @@
             productUrl: item.url,
             currentPrice: Number.isFinite(priceNumber) ? priceNumber : null,
             originalPrice: null,
-            discountPercent: null,
+            discountPercent: 0, // Best Buy : on considère 0 % par défaut
             imageUrl: null,
             // Pour l’instant, on ne filtre pas par ville/branche pour Best Buy
             city: null,
@@ -3137,8 +3137,11 @@
         if (!deal.postalPrefix.startsWith(postalPrefix)) return false;
       }
 
-      if (minDiscount > 0 && deal.discountPercent != null) {
-        if (deal.discountPercent < minDiscount) return false;
+      if (minDiscount > 0) {
+        const dealDiscount =
+          typeof deal.discountPercent === "number" ? deal.discountPercent : 0;
+
+        if (dealDiscount < minDiscount) return false;
       }
 
       if (search) {
