@@ -72,7 +72,7 @@ const BestBuyClearancePage = ({ deals: initialDeals }) => {
             fontSize: "0.85rem",
           }}
         >
-          Best Buy Canada
+          Best Buy
         </p>
         <h1 style={{ fontSize: "2.25rem", fontWeight: 700 }}>
           Produits en liquidation disponibles à travers tous les magasins Best Buy
