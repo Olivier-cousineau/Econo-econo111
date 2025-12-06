@@ -1243,7 +1243,7 @@
     const AMAZON_DAILY_PATH = 'data/amazon_ca_daily.json';
     const AMAZON_FALLBACK_PATH = 'data/amazon/canada.json';
     const SPORTING_LIFE_DATA_PATH = '/data/sporting-life/liquidation.json';
-    const BESTBUY_JSON_URL = 'outputs/bestbuy/clearance.json';
+    const BESTBUY_JSON_URL = './outputs/bestbuy/clearance.json';
     const DEFAULT_REMOTE_DATA_BASE = 'https://raw.githubusercontent.com/Olivier-cousineau/Econo-econo111/main';
 
     function detectRemoteDataBase(){
@@ -2436,8 +2436,10 @@
       const filtered = deals.filter(d => {
         const pct = discount(d.price,d.salePrice);
         const storeSlug = slugify(d.storeSlug || d.store || '');
-        if(s && storeSlug !== s) return false;
-        if(c && d.branchSlug !== c && d.citySlug !== c) return false;
+        const filterStoreSlug = slugify(s || '');
+        const isBestBuy = storeSlug === 'best-buy' || storeSlug === 'bestbuy';
+        if(filterStoreSlug && storeSlug !== filterStoreSlug && !(filterStoreSlug === 'bestbuy' && storeSlug === 'best-buy')) return false;
+        if(!isBestBuy && c && d.branchSlug !== c && d.citySlug !== c) return false;
         const tokens = ensureSearchTokens(d);
         if(terms.length && !terms.every(term => tokens.some(token => token.startsWith(term)))) return false;
         if(terms.length){
@@ -2694,41 +2696,92 @@
       }
     }
 
-    async function loadBestBuyDealsFromJson(){
-      try{
-        const resp = await fetch(BESTBUY_JSON_URL, { cache: 'no-store' });
-        if(!resp.ok){
-          console.warn('[BestBuy] HTTP error', resp.status);
+    async function loadBestBuyDealsFromJson() {
+      const devError = document.getElementById("devError");
+      try {
+        const resp = await fetch(BESTBUY_JSON_URL, { cache: "no-store" });
+        if (!resp.ok) {
+          const msg = `[BestBuy] HTTP error ${resp.status} en lisant ${BESTBUY_JSON_URL}`;
+          console.warn(msg);
+          if (devError) devError.textContent = msg;
           return [];
         }
-        const raw = await resp.json();
 
-        return Array.isArray(raw)
-          ? raw.map((item, index) => {
-              const priceNumber = typeof item.price === 'number'
-                ? item.price
-                : parseFloat(String(item.price)
-                  .replace(/[^0-9.,]/g, '')
-                  .replace(',', '.'));
+        const raw = await resp.json(); // tableau de { title, url, price, price_raw }
+        if (!Array.isArray(raw) || raw.length === 0) {
+          const msg = "[BestBuy] clearance.json chargé mais vide ou invalide";
+          console.warn(msg);
+          if (devError) devError.textContent = msg;
+          return [];
+        }
 
-              return {
-                id: `bestbuy-${index}`,
-                store: 'bestbuy',
-                title: item.title,
-                productUrl: item.url,
-                currentPrice: Number.isFinite(priceNumber) ? priceNumber : null,
-                originalPrice: null,
-                discountPercent: null,
-                imageUrl: null,
-                city: 'En ligne (Canada)',
-                branchId: null,
-              };
-            })
-          : [];
-      }catch(err){
-        console.error('[BestBuy] Failed to load clearance.json', err);
+        const deals = raw.map((item, index) => {
+          const priceNumber =
+            typeof item.price === "number"
+              ? item.price
+              : parseFloat(
+                  String(item.price)
+                    .replace(/[^0-9.,]/g, "")
+                    .replace(",", ".")
+                );
+
+          return {
+            id: `bestbuy-${index}`,
+            store: "bestbuy",
+            title: item.title,
+            productUrl: item.url,
+            currentPrice: Number.isFinite(priceNumber) ? priceNumber : null,
+            originalPrice: null,
+            discountPercent: null,
+            imageUrl: null,
+            // Pour l’instant, on ne filtre pas par ville/branche pour Best Buy
+            city: null,
+            branchId: null,
+          };
+        });
+
+        console.log("[BestBuy] deals chargés :", deals.length);
+        if (devError) devError.textContent = `[BestBuy] ${deals.length} deals chargés`;
+        return deals;
+      } catch (err) {
+        const msg = `[BestBuy] Erreur de chargement de clearance.json : ${err}`;
+        console.error(msg);
+        if (devError) devError.textContent = msg;
         return [];
       }
+    }
+
+    async function loadDealsForStoreSlug(storeSlug){
+      const store = getStoreByIdentifier(storeSlug);
+      if(!store) return [];
+      const seen = new Set();
+      const collected = [];
+      for(const branch of store.branches ?? []){
+        if(!branchHasDeals(store, branch)) continue;
+        const path = filePathFor(store, branch);
+        if(!path || seen.has(path)) continue;
+        seen.add(path);
+        const deals = await fetchOne(path, store.label, branch);
+        collected.push(...deals);
+      }
+      return collected;
+    }
+
+    const loadCanadianTireDeals = () => loadDealsForStoreSlug('canadian-tire');
+    const loadBureauEnGrosDeals = () => loadDealsForStoreSlug('bureauengros');
+
+    async function loadAllDeals() {
+      const [bestBuyDeals, canadianTireDeals, bureauEnGrosDeals] = await Promise.all([
+        loadBestBuyDealsFromJson(),
+        loadCanadianTireDeals(),
+        loadBureauEnGrosDeals(),
+      ]);
+
+      return [
+        ...bestBuyDeals,
+        ...canadianTireDeals,
+        ...bureauEnGrosDeals,
+      ];
     }
 
     function normalizeBureauEnGrosItem(item){
@@ -2948,7 +3001,7 @@
   }
 
   async function loadBestBuyClearance() {
-    const url = "outputs/bestbuy/clearance.json";
+    const url = "./outputs/bestbuy/clearance.json";
     try {
       const res = await fetch(url, { cache: "no-store" });
       if (!res.ok) {
