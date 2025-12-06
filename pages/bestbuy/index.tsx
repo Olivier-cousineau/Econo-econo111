@@ -1,49 +1,20 @@
 // pages/bestbuy/index.tsx
-import fs from "fs";
-import path from "path";
 import { GetStaticProps } from "next";
-
-type BestBuyProduct = {
-  sku?: string;
-  title?: string;
-  productUrl?: string;
-  currentPrice?: number | null;
-  originalPrice?: number | null;
-  discountPercent?: number | null;
-  imageUrl?: string | null;
-  category?: string | null;
-  brand?: string | null;
-};
+import { Deal, readBestBuyDeals } from "../../lib/bestbuy";
 
 type BestBuyPageProps = {
-  products: BestBuyProduct[];
+  products: Deal[];
+};
+
+const formatPrice = (value: number | null) => {
+  if (typeof value === "number" && Number.isFinite(value)) {
+    return `${value.toFixed(2)} $`;
+  }
+  return "Prix non disponible";
 };
 
 export const getStaticProps: GetStaticProps<BestBuyPageProps> = async () => {
-  const filePath = path.join(
-    process.cwd(),
-    "outputs",
-    "bestbuy",
-    "clearance.json"
-  );
-
-  let products: BestBuyProduct[] = [];
-
-  if (fs.existsSync(filePath)) {
-    const raw = fs.readFileSync(filePath, "utf8");
-    try {
-      const parsed = JSON.parse(raw);
-      if (Array.isArray(parsed)) {
-        products = parsed;
-      } else if (Array.isArray(parsed.products)) {
-        products = parsed.products;
-      }
-    } catch (e) {
-      console.error("Erreur parsing BestBuy clearance.json:", e);
-    }
-  } else {
-    console.warn("BestBuy clearance file not found:", filePath);
-  }
+  const products = readBestBuyDeals();
 
   return {
     props: {
@@ -62,8 +33,8 @@ export default function BestBuyPage({ products }: BestBuyPageProps) {
           Liquidations Best Buy – EconoDeal
         </h1>
         <p className="mb-6 text-sm text-slate-300">
-          Source&nbsp;: <code>outputs/bestbuy/clearance.json</code> –{" "}
-          {products.length} produits en liquidation.
+          Source&nbsp;: <code>outputs/bestbuy/clearance.json</code> – {products.length}{" "}
+          produits en liquidation.
         </p>
 
         {products.length === 0 ? (
@@ -74,51 +45,20 @@ export default function BestBuyPage({ products }: BestBuyPageProps) {
           </p>
         ) : (
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {products.map((p, index) => (
+            {products.map((p) => (
               <article
-                key={p.sku ?? index}
+                key={p.id}
                 className="bg-slate-900 border border-slate-800 rounded-xl p-4 flex flex-col"
               >
-                {p.imageUrl && (
-                  <div className="mb-3">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={p.imageUrl}
-                      alt={p.title ?? "BestBuy product"}
-                      className="w-full h-40 object-contain"
-                    />
-                  </div>
-                )}
-
-                <h2 className="font-semibold text-sm mb-1 line-clamp-2">
-                  {p.title ?? "Produit BestBuy"}
+                <h2 className="font-semibold text-sm mb-2 line-clamp-2">
+                  {p.title}
                 </h2>
-
-                <p className="text-xs text-slate-400 mb-1">
-                  {p.brand && <span>Marque : {p.brand}</span>}
-                  {p.category && (
-                    <span className="block">Catégorie : {p.category}</span>
-                  )}
-                  {p.sku && <span>SKU : {p.sku}</span>}
-                </p>
 
                 <div className="mt-auto">
                   <div className="flex items-baseline gap-2 mb-2">
-                    {p.currentPrice != null && (
-                      <span className="text-lg font-bold text-emerald-400">
-                        {p.currentPrice.toFixed(2)} $
-                      </span>
-                    )}
-                    {p.originalPrice != null && (
-                      <span className="text-xs line-through text-slate-500">
-                        {p.originalPrice.toFixed(2)} $
-                      </span>
-                    )}
-                    {p.discountPercent != null && (
-                      <span className="text-xs font-semibold text-rose-400">
-                        -{p.discountPercent.toFixed(0)} %
-                      </span>
-                    )}
+                    <span className="text-lg font-bold text-emerald-400">
+                      {formatPrice(p.currentPrice)}
+                    </span>
                   </div>
 
                   {p.productUrl && (
