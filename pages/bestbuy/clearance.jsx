@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { readBestBuyClearanceDeals } from "../../lib/bestbuyClearance";
 
 export const getStaticProps = async () => {
@@ -17,7 +18,48 @@ function formatPrice(value) {
   return "Prix non disponible";
 }
 
-const BestBuyClearancePage = ({ deals }) => {
+const BestBuyClearancePage = ({ deals: initialDeals }) => {
+  const [deals, setDeals] = useState(initialDeals ?? []);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    let isMounted = true;
+
+    const fetchLatestDeals = async () => {
+      try {
+        setIsLoading(true);
+        const response = await fetch("/api/bestbuy/clearance");
+
+        if (!response.ok) {
+          throw new Error("Impossible de récupérer les données de liquidation");
+        }
+
+        const payload = await response.json();
+
+        if (isMounted && Array.isArray(payload.deals)) {
+          setDeals(payload.deals);
+        }
+      } catch (err) {
+        if (isMounted) {
+          setError(
+            "Une erreur est survenue lors du chargement des offres de liquidation."
+          );
+        }
+      } finally {
+        if (isMounted) {
+          setIsLoading(false);
+        }
+      }
+    };
+
+    fetchLatestDeals();
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
   return (
     <main style={{ padding: "2rem 1rem", maxWidth: "1100px", margin: "0 auto" }}>
       <header style={{ marginBottom: "2rem" }}>
@@ -47,7 +89,17 @@ const BestBuyClearancePage = ({ deals }) => {
         </div>
       </header>
 
-      {deals.length === 0 ? (
+      {isLoading && (
+        <p style={{ color: "#2563eb", marginBottom: "1rem" }}>
+          Chargement des liquidations Best Buy en cours…
+        </p>
+      )}
+
+      {error && (
+        <p style={{ color: "#b91c1c", marginBottom: "1rem" }}>{error}</p>
+      )}
+
+      {deals.length === 0 && !isLoading ? (
         <p>Aucune offre de liquidation n’a été trouvée pour le moment.</p>
       ) : (
         <section
