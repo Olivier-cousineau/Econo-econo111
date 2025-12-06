@@ -38,6 +38,8 @@ const HomePage = ({ stats }) => {
 
       <p style={{ marginTop: '1.5rem', marginBottom: '1rem' }}>
         <Link href="/bureau-en-gros">Voir les liquidations Bureau en Gros</Link>
+        <br />
+        <Link href="/bestbuy/clearance">Voir les liquidations Best Buy</Link>
       </p>
 
       <section style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
@@ -72,6 +74,22 @@ const HomePage = ({ stats }) => {
           }}
         >
           Explorer les magasins Bureau en Gros
+        </Link>
+        <Link
+          href="/bestbuy/clearance"
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '0.85rem 1.5rem',
+            borderRadius: '999px',
+            backgroundColor: '#f59e0b',
+            color: '#111827',
+            fontWeight: 600,
+            textDecoration: 'none',
+          }}
+        >
+          Voir les liquidations Best Buy
         </Link>
       </section>
     </main>
