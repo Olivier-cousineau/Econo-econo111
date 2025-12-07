@@ -3,6 +3,22 @@
   "cleanUrls": true,
   "rewrites": [
     {
+      "source": "/data/best-buy/liquidations.json",
+      "destination": "/public/bestbuy/clearance.json"
+    },
+    {
+      "source": "/best-deals",
+      "destination": "/best-deals.html"
+    },
+    {
+      "source": "/best-deals-en",
+      "destination": "/best-deals-en.html"
+    },
+    {
+      "source": "/best-deals-fr",
+      "destination": "/best-deals.html"
+    },
+    {
       "source": "/bureau-en-gros",
       "destination": "/"
     },
