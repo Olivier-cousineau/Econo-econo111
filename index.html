@@ -3202,5 +3202,135 @@
 })();
 </script>
 
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const storeSelect   = document.getElementById('storeSelect');
+  const searchInput   = document.getElementById('searchInput');
+  const discountRange = document.getElementById('discountRange');
+  const resultCount   = document.getElementById('resultCount');
+  const cardsContainer = document.getElementById('cards');
+  const devError      = document.getElementById('devError');
+
+  if (!storeSelect || !cardsContainer) return;
+
+  let bestBuyDealsCache = null;
+
+  async function loadBestBuyDeals() {
+    if (bestBuyDealsCache) return bestBuyDealsCache;
+
+    try {
+      // Chemin public vers le JSON Best Buy généré par le workflow
+      const resp = await fetch('/outputs/bestbuy/clearance.json', { cache: 'no-store' });
+      if (!resp.ok) throw new Error('HTTP ' + resp.status);
+
+      const raw = await resp.json();
+
+      bestBuyDealsCache = raw.map((item, index) => {
+        const priceNumber =
+          typeof item.price === 'number'
+            ? item.price
+            : parseFloat(
+                String(item.price)
+                  .replace(/[^0-9.,]/g, '')
+                  .replace(',', '.')
+              );
+
+        return {
+          id: 'bestbuy-' + index,
+          title: item.title ?? '',
+          url: item.url ?? '#',
+          price: Number.isFinite(priceNumber) ? priceNumber : null,
+          // Pour l’instant, on ne connaît pas le rabais exact, donc 0 %
+          discountPercent: 0,
+        };
+      });
+
+      console.log('[BestBuy-inline] deals chargés :', bestBuyDealsCache.length);
+      if (devError) {
+        devError.textContent = `[BestBuy] ${bestBuyDealsCache.length} deals chargés depuis clearance.json`;
+      }
+    } catch (err) {
+      console.error('[BestBuy-inline] Erreur de chargement clearance.json', err);
+      bestBuyDealsCache = [];
+      if (devError) {
+        devError.textContent = '[BestBuy] Erreur : ' + err.message;
+      }
+    }
+
+    return bestBuyDealsCache;
+  }
+
+  function isBestBuySelected() {
+    if (!storeSelect) return false;
+    const label = storeSelect.options[storeSelect.selectedIndex]?.textContent || '';
+    const value = storeSelect.value || '';
+    return /best\s*buy/i.test(label) || /bestbuy/i.test(value);
+  }
+
+  function applyFilters(deals) {
+    const q = (searchInput?.value || '').trim().toLowerCase();
+    const minDiscount = Number(discountRange?.value || '0');
+
+    return deals.filter(d => {
+      if (q && !d.title.toLowerCase().includes(q)) return false;
+      if (minDiscount > 0 && (d.discountPercent || 0) < minDiscount) return false;
+      return true;
+    });
+  }
+
+  function renderBestBuyCards(deals) {
+    cardsContainer.innerHTML = '';
+
+    if (!deals.length) {
+      resultCount.textContent = '0';
+      return;
+    }
+
+    deals.forEach(d => {
+      const card = document.createElement('article');
+      card.className = 'deal-card';
+
+      card.innerHTML = `
+        <a class="deal-card-link" href="${d.url}" target="_blank" rel="noopener">
+          <div class="deal-card-header">
+            <span class="deal-store">Best Buy</span>
+            <span class="deal-discount">${d.discountPercent || 0}% Rabais</span>
+          </div>
+          <h4 class="deal-title">${d.title}</h4>
+          <div class="deal-price">
+            ${d.price != null ? `<span class="deal-price-current">${d.price.toFixed(2)} $</span>` : ''}
+          </div>
+        </a>
+      `;
+
+      cardsContainer.appendChild(card);
+    });
+
+    resultCount.textContent = String(deals.length);
+  }
+
+  async function refreshBestBuyIfNeeded(event) {
+    if (!isBestBuySelected()) {
+      // Pour les autres magasins, on laisse le code existant faire son travail
+      return;
+    }
+
+    // On bloque la propagation pour éviter que la logique existante écrase ces résultats
+    if (event) event.stopImmediatePropagation();
+
+    const allDeals = await loadBestBuyDeals();
+    const filtered = applyFilters(allDeals);
+    renderBestBuyCards(filtered);
+  }
+
+  // Intercepter le changement de magasin avant les autres listeners
+  storeSelect.addEventListener('change', refreshBestBuyIfNeeded, true);
+
+  // Rafraîchir Best Buy quand on tape ou qu’on bouge le slider
+  if (searchInput)   searchInput.addEventListener('input',  refreshBestBuyIfNeeded);
+  if (discountRange) discountRange.addEventListener('input', refreshBestBuyIfNeeded);
+});
+</script>
+
 </body>
 </html>
