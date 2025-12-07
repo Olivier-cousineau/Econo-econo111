@@ -21,7 +21,7 @@ export type Deal = {
   branchId: string | null;
 };
 
-const BESTBUY_JSON_PATH = path.join(
+const BESTBUY_JSON_PATH = path.resolve(
   process.cwd(),
   "outputs",
   "bestbuy",
@@ -29,31 +29,63 @@ const BESTBUY_JSON_PATH = path.join(
 );
 
 export function readBestBuyDeals(): Deal[] {
-  if (!fs.existsSync(BESTBUY_JSON_PATH)) {
-    console.warn("[BestBuy] clearance.json not found:", BESTBUY_JSON_PATH);
+  try {
+    if (!fs.existsSync(BESTBUY_JSON_PATH)) {
+      console.warn("[BestBuy] clearance.json not found:", BESTBUY_JSON_PATH);
+      return [];
+    }
+
+    const raw = fs.readFileSync(BESTBUY_JSON_PATH, "utf8");
+
+    if (!raw.trim()) {
+      console.warn("[BestBuy] clearance.json is empty:", BESTBUY_JSON_PATH);
+      return [];
+    }
+
+    let data: BestBuyRawProduct[];
+    try {
+      data = JSON.parse(raw);
+    } catch (error) {
+      console.warn(
+        "[BestBuy] Invalid JSON while reading:",
+        BESTBUY_JSON_PATH,
+        error
+      );
+      return [];
+    }
+
+    if (!Array.isArray(data) || data.length === 0) {
+      console.warn("[BestBuy] clearance.json is empty or invalid:", BESTBUY_JSON_PATH);
+      return [];
+    }
+
+    return data.map((item, index) => {
+      const priceNumber =
+        typeof item.price === "number"
+          ? item.price
+          : parseFloat(
+              item.price.replace(/[^0-9.,]/g, "").replace(",", ".")
+            );
+
+      return {
+        id: `bestbuy-${index}`,
+        store: "bestbuy",
+        title: item.title,
+        productUrl: item.url,
+        currentPrice: Number.isFinite(priceNumber) ? priceNumber : null,
+        originalPrice: null,
+        discountPercent: null, // on pourra calculer le rabais plus tard si on scrape le prix original
+        imageUrl: null, // à remplir quand le scraper aura les images
+        city: null,
+        branchId: null,
+      };
+    });
+  } catch (error) {
+    console.warn(
+      "[BestBuy] Unexpected error while reading clearance.json at",
+      BESTBUY_JSON_PATH,
+      error
+    );
     return [];
   }
-
-  const raw = fs.readFileSync(BESTBUY_JSON_PATH, "utf8");
-  const data = JSON.parse(raw) as BestBuyRawProduct[];
-
-  return data.map((item, index) => {
-    const priceNumber =
-      typeof item.price === "number"
-        ? item.price
-        : parseFloat(item.price.replace(/[^0-9.,]/g, "").replace(",", "."));
-
-    return {
-      id: `bestbuy-${index}`,
-      store: "bestbuy",
-      title: item.title,
-      productUrl: item.url,
-      currentPrice: Number.isFinite(priceNumber) ? priceNumber : null,
-      originalPrice: null,
-      discountPercent: null, // on pourra calculer le rabais plus tard si on scrape le prix original
-      imageUrl: null,        // à remplir quand le scraper aura les images
-      city: null,
-      branchId: null,
-    };
-  });
 }
