@@ -3236,7 +3236,7 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
       // IMPORTANT : chemin relatif, sans "/" au début,
       // pour servir le fichier statique sur Vercel.
-      const resp = await fetch('outputs/bestbuy/clearance.json', { cache: 'no-store' });
+      const resp = await fetch('bestbuy/clearance.json', { cache: 'no-store' });
       if (!resp.ok) throw new Error('HTTP ' + resp.status);
 
       const raw = await resp.json();
