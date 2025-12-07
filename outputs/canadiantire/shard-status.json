@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2025-12-07T03:43:48.276Z",
+  "generatedAt": "2025-12-07T05:45:49.845Z",
   "stores": [
     {
-      "id": "92",
-      "city": "St. Thomas, ON",
+      "id": "178",
+      "city": "Kapuskasing, ON",
       "status": "committed",
-      "details": "324 produits"
+      "details": "373 produits"
     },
     {
-      "id": "136",
-      "city": "Miramichi, NB",
+      "id": "307",
+      "city": "Sept-Iles, QC",
       "status": "committed",
-      "details": "465 produits"
+      "details": "705 produits"
     },
     {
-      "id": "11",
-      "city": "Bathurst, NB",
+      "id": "21",
+      "city": "Chatham, ON",
       "status": "committed",
-      "details": "117 produits"
+      "details": "422 produits"
     },
     {
-      "id": "167",
-      "city": "Elliot Lake, ON",
+      "id": "135",
+      "city": "Wallaceburg, ON",
       "status": "committed",
-      "details": "358 produits"
+      "details": "444 produits"
     },
     {
-      "id": "104",
-      "city": "Strathroy, ON",
+      "id": "13",
+      "city": "Bridgewater, NS",
       "status": "committed",
-      "details": "566 produits"
+      "details": "710 produits"
     },
     {
-      "id": "32",
-      "city": "Forest, ON",
+      "id": "3",
+      "city": "Amherst, NS",
       "status": "committed",
-      "details": "142 produits"
+      "details": "96 produits"
     },
     {
-      "id": "249",
-      "city": "Moncton Mountain Rd, NB",
+      "id": "215",
+      "city": "Tilbury, ON",
       "status": "committed",
-      "details": "380 produits"
+      "details": "240 produits"
     },
     {
-      "id": "463",
-      "city": "Paspebiac, QC",
+      "id": "132",
+      "city": "Summerside, PEI 474 Granville Street",
       "status": "committed",
-      "details": "691 produits"
+      "details": "313 produits"
     }
   ],
   "failedTwice": [],
