@@ -1,16 +1,20 @@
-import { NextApiRequest, NextApiResponse } from "next";
+import type { NextApiRequest, NextApiResponse } from "next";
 import { readBestBuyDeals } from "../../lib/bestbuy";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "GET") {
-    res.status(405).json({ error: "Method not allowed" });
-    return;
+  try {
+    const deals = readBestBuyDeals();
+
+    res.status(200).json({
+      ok: true,
+      count: deals.length,
+      sample: deals.slice(0, 5),
+    });
+  } catch (error: any) {
+    console.error("[BestBuy debug] Failed to load deals:", error);
+    res.status(500).json({
+      ok: false,
+      error: error?.message ?? "Unknown error",
+    });
   }
-
-  const deals = readBestBuyDeals();
-
-  res.status(200).json({
-    count: deals.length,
-    sample: deals.slice(0, 5),
-  });
 }
