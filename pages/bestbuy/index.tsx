@@ -1,5 +1,7 @@
 // pages/bestbuy/index.tsx
+import { useEffect, useState } from "react";
 import { GetStaticProps } from "next";
+import Link from "next/link";
 import { Deal, readBestBuyDeals } from "../../lib/bestbuy";
 
 type BestBuyPageProps = {
@@ -25,17 +27,65 @@ export const getStaticProps: GetStaticProps<BestBuyPageProps> = async () => {
   };
 };
 
-export default function BestBuyPage({ products }: BestBuyPageProps) {
+export default function BestBuyPage({ products: initialProducts }: BestBuyPageProps) {
+  const [products, setProducts] = useState<Deal[]>(initialProducts ?? []);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    let isMounted = true;
+
+    const fetchLatestDeals = async () => {
+      try {
+        setIsLoading(true);
+        const response = await fetch("/api/bestbuy/clearance");
+
+        if (!response.ok) {
+          throw new Error("Impossible de récupérer les liquidations Best Buy");
+        }
+
+        const payload = await response.json();
+
+        if (isMounted && Array.isArray(payload.deals)) {
+          setProducts(payload.deals);
+        }
+      } catch (err) {
+        if (isMounted) {
+          setError(
+            "Une erreur est survenue lors du chargement des offres de liquidation Best Buy."
+          );
+        }
+      } finally {
+        if (isMounted) {
+          setIsLoading(false);
+        }
+      }
+    };
+
+    fetchLatestDeals();
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
   return (
     <main className="min-h-screen bg-slate-950 text-slate-100">
       <section className="max-w-6xl mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-4">
           Liquidations Best Buy – EconoDeal
         </h1>
-        <p className="mb-6 text-sm text-slate-300">
+        <p className="mb-4 text-sm text-slate-300">
           Source&nbsp;: <code>outputs/bestbuy/clearance.json</code> – {products.length}{" "}
-          produits en liquidation.
+          produits en liquidation en ligne.
         </p>
+        <div className="flex items-center gap-4 text-sm mb-6">
+          {isLoading && <span className="text-emerald-300">Mise à jour…</span>}
+          {error && <span className="text-red-400">{error}</span>}
+          <Link href="/" className="text-emerald-300 hover:text-emerald-200">
+            ← Retour à l’accueil
+          </Link>
+        </div>
 
         {products.length === 0 ? (
           <p className="text-red-400">
