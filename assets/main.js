@@ -1973,7 +1973,10 @@
       const terms = query ? query.split(' ') : [];
       const min = parseInt(range.value,10);
       const filtered = deals.filter(d => {
-        const pct = discount(d.price,d.salePrice);
+        const pctSource = Number.isFinite(d.discountPercent)
+          ? d.discountPercent
+          : discount(d.price,d.salePrice);
+        const pct = Number.isFinite(pctSource) ? Math.max(pctSource, 0) : 0;
         const storeSlug = slugify(d.storeSlug || d.store || '');
         const filterStoreSlug = slugify(s || '');
         const isBestBuy = storeSlug === 'best-buy' || storeSlug === 'bestbuy';
@@ -2316,23 +2319,32 @@
         loadBureauEnGrosDeals(),
       ]);
 
-      const normalizedBestBuy = bestBuyDeals.map((deal) => {
+      const normalizedBestBuy = bestBuyDeals.map((deal, index) => {
         const storeSlug = 'best-buy';
-        const branchSlug = deal.branchId ? slugify(deal.branchId) : '';
-        const citySlug = deal.city ? slugify(deal.city) : '';
-        const price = deal.originalPrice ?? deal.currentPrice ?? null;
-        const salePrice = deal.currentPrice ?? deal.originalPrice ?? null;
+        const cityLabel = (deal.city ?? '').toString().trim() || 'En ligne (Canada)';
+        const citySlug = slugify(cityLabel);
+        const branchSlug = deal.branchId ? slugify(deal.branchId) : citySlug || storeSlug;
+        const parsedCurrent = toNumber(deal.currentPrice ?? deal.price);
+        const parsedOriginal = toNumber(deal.originalPrice);
+        const price = parsedOriginal ?? parsedCurrent ?? null;
+        const salePrice = parsedCurrent ?? parsedOriginal ?? null;
+        const discountPercent = Number.isFinite(deal.discountPercent)
+          ? Math.max(Number(deal.discountPercent), 0)
+          : 0;
 
         return {
           ...deal,
+          id: deal.id ?? `bestbuy-${index}`,
           store: deal.store || 'Best Buy',
           storeSlug,
-          retailer: deal.store || 'bestbuy',
-          branch: deal.city,
-          branchSlug: branchSlug || citySlug || storeSlug,
+          retailer: 'bestbuy',
+          branch: cityLabel,
+          branchSlug,
+          city: cityLabel,
           citySlug,
           price,
           salePrice,
+          discountPercent,
           url: deal.productUrl || deal.url,
           image: deal.imageUrl || PLACEHOLDER_IMAGE,
         };
