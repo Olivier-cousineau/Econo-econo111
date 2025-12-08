@@ -1,9 +1,6 @@
-# Ignore bulky generated data to keep deployment payloads small
-outputs/*
-!outputs/bureauengros/**
-!outputs/canadiantire/**
-!outputs/bestbuy/**
-
+# Ignore seulement ce qui est inutile
 logs/
 archive/
 node_modules/
+
+# NE PAS ignorer outputs/
