@@ -1,99 +1,77 @@
+// lib/server/bureauEnGrosData.js
 import fs from "fs";
 import path from "path";
-import {
-  BureauEnGrosDeal,
-  getDefaultBureauEnGrosStoreSlug,
-  listBureauEnGrosStoreSlugs,
-} from "../bureauEngros";
-
-type SourceFileShape = {
-  storeId?: string;
-  storeName?: string;
-  sourceStore?: string;
-  scrapedAt?: string;
-  url?: string;
-  count?: number;
-  products?: BureauEnGrosDeal[];
-  store?: {
-    id?: string;
-    name?: string;
-    address?: string;
-    store?: string;
-  };
-};
 
 const ROOT_DIR = process.cwd();
-const BUREAU_EN_GROS_PUBLIC_ROOT = path.join(
+const BUREAU_EN_GROS_OUTPUT_DIR = path.join(
   ROOT_DIR,
-  "public",
-  "bureau-en-gros"
+  "outputs",
+  "bureauengros"
 );
 
-function getBureauEnGrosStoreFilePath(storeSlug: string): string {
-  return path.join(BUREAU_EN_GROS_PUBLIC_ROOT, storeSlug, "data.json");
+/**
+ * Retourne la liste des slugs disponibles, par ex.:
+ * ["124-bureau-en-gros-saint-jerome-qc", "308-bureau-en-gros-boisbriand-qc", ...]
+ */
+export function listAvailableBureauEnGrosStoreSlugs() {
+  if (!fs.existsSync(BUREAU_EN_GROS_OUTPUT_DIR)) {
+    return [];
+  }
+
+  const entries = fs.readdirSync(BUREAU_EN_GROS_OUTPUT_DIR, {
+    withFileTypes: true,
+  });
+
+  return entries
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => entry.name)
+    .sort();
 }
 
-export function readBureauEnGrosStoreData(
-  storeSlug: string
-): SourceFileShape | null {
-  const storeFilePath = getBureauEnGrosStoreFilePath(storeSlug);
+/**
+ * Lit le fichier outputs/bureauengros/<slug>/data.json
+ * et renvoie un objet normalisé.
+ */
+export function readBureauEnGrosStoreData(storeSlug) {
+  if (!storeSlug) return null;
 
-  if (!fs.existsSync(storeFilePath)) {
+  const storeDir = path.join(BUREAU_EN_GROS_OUTPUT_DIR, storeSlug);
+  const jsonPath = path.join(storeDir, "data.json");
+
+  if (!fs.existsSync(jsonPath)) {
+    // pas de fichier = pas de magasin
     return null;
   }
 
   try {
-    const raw = fs.readFileSync(storeFilePath, "utf8");
-    const parsed = JSON.parse(raw) as SourceFileShape;
+    const raw = fs.readFileSync(jsonPath, "utf8");
+    const parsed = JSON.parse(raw);
 
-    if (!parsed.products || !Array.isArray(parsed.products)) {
-      parsed.products = [];
+    if (!parsed || typeof parsed !== "object") {
+      return null;
     }
 
-    if (typeof parsed.count !== "number") {
-      parsed.count = parsed.products.length;
+    // Si jamais le JSON est directement un tableau de produits
+    if (Array.isArray(parsed)) {
+      return {
+        storeSlug,
+        storeId: null,
+        storeName: null,
+        sourceStore: "bureau-en-gros",
+        url: null,
+        scrapedAt: null,
+        count: parsed.length,
+        products: parsed,
+      };
     }
 
+    // Si le JSON a déjà la bonne structure (products, store, etc.), on le renvoie tel quel
     return parsed;
-  } catch (err) {
+  } catch (error) {
     console.error(
-      "Failed to read Bureau en Gros store file:",
-      storeFilePath,
-      err
+      `Failed to read Bureau en Gros store data for slug: ${storeSlug}`,
+      error
     );
     return null;
   }
-}
-
-export function readBureauEnGrosDealsForAllStores(
-  storeSlug?: string
-): BureauEnGrosDeal[] {
-  const slug = storeSlug ?? getDefaultBureauEnGrosStoreSlug();
-  if (!slug) {
-    return [];
-  }
-
-  const storeData = readBureauEnGrosStoreData(slug);
-  return storeData?.products ?? [];
-}
-
-export function readBureauEnGrosDealsForStore(
-  storeSlug: string
-): BureauEnGrosDeal[] {
-  return readBureauEnGrosDealsForAllStores(storeSlug);
-}
-
-export function listAvailableBureauEnGrosStoreSlugs(): string[] {
-  const explicitSlugs = listBureauEnGrosStoreSlugs();
-
-  if (!fs.existsSync(BUREAU_EN_GROS_PUBLIC_ROOT)) {
-    return explicitSlugs;
-  }
-
-  const directories = fs
-    .readdirSync(BUREAU_EN_GROS_PUBLIC_ROOT, { withFileTypes: true })
-    .filter((entry) => entry.isDirectory())
-    .map((entry) => entry.name);
-
-  return Array.from(new Set([...directories, ...explicitSlugs]));
 }
