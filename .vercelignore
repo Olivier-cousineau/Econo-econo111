@@ -1,11 +1,4 @@
-# Réduire drastiquement la taille du déploiement Vercel
-
-# On ignore tous les outputs générés (scrapers)
 outputs/
-
-# On ignore les logs et archives internes
 logs/
 archive/
-
-# Par sécurité, on ignore node_modules du repo
 node_modules/
