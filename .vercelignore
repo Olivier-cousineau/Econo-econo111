@@ -1,6 +1,8 @@
-# Ignore seulement ce qui est inutile
+# On ignore outputs par défaut…
+outputs/*
+# …sauf Canadian Tire
+!outputs/canadiantire/**
+
 logs/
 archive/
 node_modules/
-
-# NE PAS ignorer outputs/
