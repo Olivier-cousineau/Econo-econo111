@@ -1,8 +1,13 @@
-# On ignore outputs par défaut…
+# On ignore tous les outputs par défaut
 outputs/*
-# …sauf Canadian Tire
-!outputs/canadiantire/**
 
+# …mais on GARDE les chaînes utilisées par le site
+!outputs/canadiantire/**
+!outputs/bureauengros/**
+!outputs/bestbuy/**
+!outputs/sportinglife/**
+
+# On ignore ce qui est inutile pour le déploiement
 logs/
 archive/
 node_modules/
