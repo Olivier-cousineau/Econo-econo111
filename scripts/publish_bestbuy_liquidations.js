@@ -11,6 +11,10 @@ const repoRoot = path.join(__dirname, "..");
 const SOURCE_PATH = path.join(repoRoot, "data", "bestbuy_liquidation.json");
 const OUTPUT_DIR = path.join(repoRoot, "outputs", "bestbuy");
 const OUTPUT_PATH = path.join(OUTPUT_DIR, "clearance.json");
+const PUBLIC_BESTBUY_DIR = path.join(repoRoot, "public", "bestbuy");
+const PUBLIC_OUTPUTS_DIR = path.join(repoRoot, "public", "outputs", "bestbuy");
+const PUBLIC_BESTBUY_PATH = path.join(PUBLIC_BESTBUY_DIR, "clearance.json");
+const PUBLIC_OUTPUTS_PATH = path.join(PUBLIC_OUTPUTS_DIR, "clearance.json");
 
 function readSource() {
   if (!fs.existsSync(SOURCE_PATH)) {
@@ -85,11 +89,20 @@ function main() {
   }
 
   fs.mkdirSync(OUTPUT_DIR, { recursive: true });
-  fs.writeFileSync(OUTPUT_PATH, JSON.stringify(normalized, null, 2));
+  fs.mkdirSync(PUBLIC_BESTBUY_DIR, { recursive: true });
+  fs.mkdirSync(PUBLIC_OUTPUTS_DIR, { recursive: true });
+
+  const payload = JSON.stringify(normalized, null, 2);
+
+  fs.writeFileSync(OUTPUT_PATH, payload);
+  fs.writeFileSync(PUBLIC_BESTBUY_PATH, payload);
+  fs.writeFileSync(PUBLIC_OUTPUTS_PATH, payload);
 
   console.log(
     `✅ ${normalized.length} produits publiés dans outputs/bestbuy/clearance.json`
   );
+  console.log(`✅ Copie disponible sous public/bestbuy/clearance.json`);
+  console.log(`✅ Copie disponible sous public/outputs/bestbuy/clearance.json`);
 }
 
 main();

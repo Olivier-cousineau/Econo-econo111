@@ -35,10 +35,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "prebuild": "node scripts/sync_bestbuy_clearance_to_public.js",
     "build:css": "shx mkdir -p dist/assets && cross-env NODE_ENV=production postcss styles/main.css -o dist/assets/main.css",
     "watch:css": "shx mkdir -p dist/assets && postcss styles/main.css -o dist/assets/main.css --watch",
     "scrape:canadiantire": "node scripts/run_canadiantire_matrix.js",
     "publish-canadiantire-public": "node scripts/publish_canadiantire_public.js",
-    "sync:bureauengros": "node scripts/sync_bureau_en_gros_to_public.js"
+    "sync:bureauengros": "node scripts/sync_bureau_en_gros_to_public.js",
+    "sync:bestbuy": "node scripts/sync_bestbuy_clearance_to_public.js"
   }
 }
