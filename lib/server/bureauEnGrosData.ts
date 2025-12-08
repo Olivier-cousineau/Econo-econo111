@@ -51,7 +51,7 @@ export function readBureauEnGrosStoreData(storeSlug) {
       return null;
     }
 
-    // Si jamais le JSON est directement un tableau de produits
+    // Si le JSON est directement un tableau de produits
     if (Array.isArray(parsed)) {
       return {
         storeSlug,
