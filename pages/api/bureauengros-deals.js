@@ -66,11 +66,19 @@ export default function handler(req, res) {
 
   const data = readBureauEnGrosStoreData(storeSlug);
   if (!data) {
-    return res.status(404).json({
+    return res.status(200).json({
       ok: false,
       error: "STORE_NOT_FOUND",
       chain: "bureau-en-gros",
+      mode: "single-store",
       storeSlug,
+      storeId: null,
+      storeName: null,
+      sourceStore: null,
+      url: null,
+      scrapedAt: null,
+      count: 0,
+      products: [],
     });
   }
 
