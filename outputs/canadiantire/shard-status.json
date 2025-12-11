@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2025-12-11T08:02:31.085Z",
+  "generatedAt": "2025-12-11T09:56:39.907Z",
   "stores": [
     {
-      "id": "290",
-      "city": "Ottawa Carling Ave, ON",
+      "id": "196",
+      "city": "Maniwaki, QC",
       "status": "committed",
-      "details": "478 produits"
+      "details": "879 produits"
     },
     {
-      "id": "442",
-      "city": "Barrhaven, ON",
+      "id": "85",
+      "city": "Prescott, ON",
       "status": "committed",
-      "details": "458 produits"
+      "details": "561 produits"
     },
     {
-      "id": "272",
-      "city": "Ottawa Bells Cnrs, ON",
+      "id": "348",
+      "city": "Sherbrooke Fleurimont, QC",
       "status": "committed",
-      "details": "302 produits"
+      "details": "462 produits"
     },
     {
-      "id": "227",
-      "city": "Kemptville, ON",
+      "id": "18",
+      "city": "Carleton Place, ON",
       "status": "committed",
-      "details": "316 produits"
+      "details": "459 produits"
     },
     {
-      "id": "240",
-      "city": "Magog, QC",
+      "id": "14",
+      "city": "Brockville, ON",
       "status": "committed",
-      "details": "542 produits"
+      "details": "811 produits"
     },
     {
-      "id": "457",
-      "city": "Kanata, ON",
+      "id": "98",
+      "city": "Smiths Falls, ON",
       "status": "committed",
-      "details": "375 produits"
+      "details": "521 produits"
     },
     {
-      "id": "243",
-      "city": "Victoriaville, QC",
+      "id": "4",
+      "city": "Arnprior, ON",
       "status": "committed",
-      "details": "920 produits"
+      "details": "372 produits"
     },
     {
-      "id": "96",
-      "city": "Sherbrooke, QC",
+      "id": "99",
+      "city": "Shawville, QC",
       "status": "committed",
-      "details": "797 produits"
+      "details": "412 produits"
     }
   ],
   "failedTwice": [],
