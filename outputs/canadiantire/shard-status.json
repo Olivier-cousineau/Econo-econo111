@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2025-12-12T11:27:44.428Z",
+  "generatedAt": "2025-12-12T12:51:06.888Z",
   "stores": [
     {
-      "id": "399",
-      "city": "Markham East, ON",
+      "id": "69",
+      "city": "Newmarket, ON",
       "status": "committed",
-      "details": "1130 produits"
+      "details": "637 produits"
     },
     {
-      "id": "93",
-      "city": "Edmundston, NB",
+      "id": "209",
+      "city": "Kingston Rd, ON",
       "status": "committed",
-      "details": "925 produits"
+      "details": "460 produits"
     },
     {
-      "id": "687",
-      "city": "Innisfil, ON",
+      "id": "164",
+      "city": "Markham, ON",
       "status": "committed",
-      "details": "473 produits"
+      "details": "1194 produits"
     },
     {
-      "id": "175",
-      "city": "Scarborough, ON",
+      "id": "6",
+      "city": "Barrie, ON",
       "status": "committed",
-      "details": "983 produits"
+      "details": "491 produits"
     },
     {
-      "id": "89",
-      "city": "Rouyn, QC",
+      "id": "68",
+      "city": "New Liskeard, ON",
       "status": "committed",
-      "details": "808 produits"
+      "details": "336 produits"
     },
     {
-      "id": "78",
-      "city": "Parry Sound, ON",
+      "id": "444",
+      "city": "Barrie South, ON",
       "status": "committed",
-      "details": "588 produits"
+      "details": "585 produits"
     },
     {
-      "id": "264",
-      "city": "Agincourt, ON",
+      "id": "30",
+      "city": "Warden & Eglinton, ON",
       "status": "committed",
-      "details": "938 produits"
+      "details": "577 produits"
     },
     {
-      "id": "189",
-      "city": "Aurora, ON",
+      "id": "61",
+      "city": "Midland, ON",
       "status": "committed",
-      "details": "556 produits"
+      "details": "620 produits"
     }
   ],
   "failedTwice": [],
