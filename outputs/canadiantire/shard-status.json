@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2025-12-13T14:16:12.266Z",
+  "generatedAt": "2025-12-13T15:42:57.528Z",
   "stores": [
     {
-      "id": "139",
-      "city": "Kitchener East, ON",
+      "id": "674",
+      "city": "Waterloo West, ON",
       "status": "committed",
-      "details": "777 produits"
+      "details": "647 produits"
     },
     {
-      "id": "616",
-      "city": "Elmira, ON",
+      "id": "309",
+      "city": "Oromocto, NB",
       "status": "committed",
-      "details": "675 produits"
+      "details": "400 produits"
     },
     {
-      "id": "53",
-      "city": "Kitchener South, ON",
+      "id": "43",
+      "city": "Paris, ON",
       "status": "committed",
-      "details": "598 produits"
+      "details": "298 produits"
     },
     {
-      "id": "664",
-      "city": "Brantford North, ON",
+      "id": "315",
+      "city": "Matane, QC",
       "status": "committed",
-      "details": "432 produits"
+      "details": "735 produits"
     },
     {
-      "id": "265",
-      "city": "Baie-Comeau, QC",
+      "id": "57",
+      "city": "Listowel, ON",
       "status": "committed",
-      "details": "302 produits"
+      "details": "431 produits"
     },
     {
-      "id": "251",
-      "city": "Waterloo, ON",
+      "id": "97",
+      "city": "Simcoe, ON",
       "status": "committed",
-      "details": "660 produits"
+      "details": "326 produits"
     },
     {
-      "id": "420",
-      "city": "Kitchener West, ON",
+      "id": "269",
+      "city": "Port Elgin, ON",
       "status": "committed",
-      "details": "723 produits"
+      "details": "423 produits"
     },
     {
-      "id": "46",
-      "city": "Hanover, ON",
+      "id": "22",
+      "city": "Espanola, ON",
       "status": "committed",
-      "details": "713 produits"
+      "details": "298 produits"
     }
   ],
   "failedTwice": [],
