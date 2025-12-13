@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2025-12-13T15:42:57.528Z",
+  "generatedAt": "2025-12-13T20:48:57.007Z",
   "stores": [
     {
-      "id": "674",
-      "city": "Waterloo West, ON",
+      "id": "48",
+      "city": "Ingersoll, ON",
       "status": "committed",
-      "details": "647 produits"
+      "details": "154 produits"
     },
     {
-      "id": "309",
-      "city": "Oromocto, NB",
+      "id": "110",
+      "city": "Tillsonburg, ON",
       "status": "committed",
-      "details": "400 produits"
+      "details": "254 produits"
     },
     {
-      "id": "43",
-      "city": "Paris, ON",
+      "id": "91",
+      "city": "St. Marys, ON",
       "status": "committed",
-      "details": "298 produits"
+      "details": "167 produits"
     },
     {
-      "id": "315",
-      "city": "Matane, QC",
+      "id": "111",
+      "city": "Timmins, ON",
       "status": "committed",
-      "details": "735 produits"
+      "details": "782 produits"
     },
     {
-      "id": "57",
-      "city": "Listowel, ON",
-      "status": "committed",
-      "details": "431 produits"
-    },
-    {
-      "id": "97",
-      "city": "Simcoe, ON",
-      "status": "committed",
-      "details": "326 produits"
-    },
-    {
-      "id": "269",
-      "city": "Port Elgin, ON",
+      "id": "24",
+      "city": "Cochrane, ON",
       "status": "committed",
       "details": "423 produits"
     },
     {
-      "id": "22",
-      "city": "Espanola, ON",
+      "id": "130",
+      "city": "London East, ON",
       "status": "committed",
-      "details": "298 produits"
+      "details": "239 produits"
+    },
+    {
+      "id": "142",
+      "city": "Aylmer, ON",
+      "status": "committed",
+      "details": "259 produits"
+    },
+    {
+      "id": "39",
+      "city": "Goderich, ON",
+      "status": "committed",
+      "details": "255 produits"
     }
   ],
   "failedTwice": [],
