@@ -1,55 +1,72 @@
 {
-  "generatedAt": "2025-12-19T05:27:47.263Z",
+  "generatedAt": "2025-12-19T07:10:20.583Z",
   "stores": [
     {
-      "id": "72",
-      "city": "North Bay, ON",
+      "id": "74",
+      "city": "Orillia, ON",
       "status": "committed",
-      "details": "64 produits"
+      "details": "0 produits (after retry)"
     },
     {
-      "id": "62",
-      "city": "Gravenhurst, ON",
+      "id": "127",
+      "city": "Uxbridge, ON",
       "status": "committed",
-      "details": "71 produits"
+      "details": "1 produits (after retry)"
     },
     {
-      "id": "226",
-      "city": "Port Perry, ON",
+      "id": "160",
+      "city": "Ajax, ON",
       "status": "committed",
-      "details": "74 produits"
+      "details": "2 produits (after retry)"
     },
     {
-      "id": "336",
-      "city": "Oshawa North, ON",
+      "id": "324",
+      "city": "Pickering, ON",
       "status": "committed",
-      "details": "119 produits"
+      "details": "4 produits (after retry)"
     },
     {
-      "id": "75",
-      "city": "Oshawa Mid, ON",
+      "id": "102",
+      "city": "Sturgeon Falls, ON",
       "status": "committed",
-      "details": "99 produits"
+      "details": "2 produits"
     },
     {
-      "id": "285",
-      "city": "Amos, QC",
+      "id": "134",
+      "city": "Keswick, ON",
       "status": "committed",
-      "details": "99 produits"
+      "details": "1 produits"
     },
     {
-      "id": "460",
-      "city": "Whitby North, ON",
+      "id": "427",
+      "city": "Scarborough East, ON",
       "status": "committed",
-      "details": "74 produits"
+      "details": "2 produits"
     },
     {
-      "id": "187",
-      "city": "Whitby South, ON",
+      "id": "280",
+      "city": "Stouffville, ON",
       "status": "committed",
-      "details": "83 produits"
+      "details": "1 produits"
     }
   ],
   "failedTwice": [],
-  "retriedAndSucceeded": []
+  "retriedAndSucceeded": [
+    {
+      "id": "127",
+      "city": "Uxbridge, ON"
+    },
+    {
+      "id": "324",
+      "city": "Pickering, ON"
+    },
+    {
+      "id": "160",
+      "city": "Ajax, ON"
+    },
+    {
+      "id": "74",
+      "city": "Orillia, ON"
+    }
+  ]
 }
