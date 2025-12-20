@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2025-12-20T05:48:03.254Z",
+  "generatedAt": "2025-12-20T08:28:03.533Z",
   "stores": [
     {
-      "id": "122",
-      "city": "Burlington Fairview, ON",
-      "status": "committed",
-      "details": "5 produits"
-    },
-    {
-      "id": "154",
-      "city": "Hamilton East, ON",
-      "status": "committed",
-      "details": "5 produits"
-    },
-    {
-      "id": "129",
-      "city": "Hamilton Centre, ON",
-      "status": "committed",
-      "details": "5 produits"
-    },
-    {
-      "id": "278",
-      "city": "Sudbury North, ON",
+      "id": "177",
+      "city": "Hamilton Mt.West, ON",
       "status": "committed",
       "details": "6 produits"
     },
     {
-      "id": "220",
-      "city": "Waterdown, ON",
+      "id": "657",
+      "city": "Hanmer, ON",
+      "status": "committed",
+      "details": "3 produits"
+    },
+    {
+      "id": "27",
+      "city": "Dundas, ON",
+      "status": "committed",
+      "details": "5 produits"
+    },
+    {
+      "id": "29",
+      "city": "Dunnville, ON",
+      "status": "committed",
+      "details": "3 produits"
+    },
+    {
+      "id": "42",
+      "city": "Guelph Stone Rd, ON",
       "status": "committed",
       "details": "4 produits"
     },
     {
-      "id": "45",
-      "city": "Hamilton Main, ON",
-      "status": "committed",
-      "details": "11 produits"
-    },
-    {
-      "id": "194",
-      "city": "Hamilton Mt.East, ON",
-      "status": "committed",
-      "details": "4 produits"
-    },
-    {
-      "id": "445",
-      "city": "Sudbury South, ON",
+      "id": "31",
+      "city": "Centre Wellington, ON",
       "status": "committed",
       "details": "1 produits"
+    },
+    {
+      "id": "260",
+      "city": "Guelph North, ON",
+      "status": "committed",
+      "details": "3 produits"
+    },
+    {
+      "id": "639",
+      "city": "Ancaster, ON",
+      "status": "committed",
+      "details": "7 produits"
     }
   ],
   "failedTwice": [],
