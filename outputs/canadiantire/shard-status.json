@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2025-12-25T20:46:09.607Z",
+  "generatedAt": "2025-12-25T22:22:39.662Z",
   "stores": [
     {
-      "id": "5",
-      "city": "Bancroft, ON",
+      "id": "306",
+      "city": "La Malbaie, QC",
+      "status": "committed",
+      "details": "10 produits"
+    },
+    {
+      "id": "221",
+      "city": "Jonquiere, QC",
+      "status": "committed",
+      "details": "9 produits"
+    },
+    {
+      "id": "268",
+      "city": "Chicoutimi, QC",
       "status": "committed",
       "details": "3 produits"
     },
     {
-      "id": "82",
-      "city": "Picton, ON",
-      "status": "committed",
-      "details": "3 produits"
-    },
-    {
-      "id": "7",
-      "city": "Belleville, ON",
-      "status": "committed",
-      "details": "3 produits"
-    },
-    {
-      "id": "458",
-      "city": "Roberval, QC",
+      "id": "335",
+      "city": "La Baie, QC",
       "status": "committed",
       "details": "4 produits"
     },
     {
-      "id": "112",
-      "city": "Trenton, ON",
+      "id": "284",
+      "city": "Dolbeau-Mistassini, QC",
+      "status": "committed",
+      "details": "4 produits"
+    },
+    {
+      "id": "660",
+      "city": "Peterborough North, ON",
       "status": "committed",
       "details": "2 produits"
     },
     {
-      "id": "17",
-      "city": "Campbellford, ON",
+      "id": "81",
+      "city": "Peterborough, ON",
+      "status": "committed",
+      "details": "4 produits"
+    },
+    {
+      "id": "682",
+      "city": "Minden, ON",
       "status": "committed",
       "details": "3 produits"
-    },
-    {
-      "id": "633",
-      "city": "La Pocatiere, QC",
-      "status": "committed",
-      "details": "6 produits"
-    },
-    {
-      "id": "298",
-      "city": "Alma, QC",
-      "status": "committed",
-      "details": "1 produits"
     }
   ],
   "failedTwice": [],
