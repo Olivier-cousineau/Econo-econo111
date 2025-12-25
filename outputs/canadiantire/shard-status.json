@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2025-12-25T08:55:31.163Z",
+  "generatedAt": "2025-12-25T11:23:29.460Z",
   "stores": [
     {
-      "id": "196",
-      "city": "Maniwaki, QC",
-      "status": "committed",
-      "details": "10 produits"
-    },
-    {
-      "id": "85",
-      "city": "Prescott, ON",
-      "status": "committed",
-      "details": "2 produits"
-    },
-    {
-      "id": "348",
-      "city": "Sherbrooke Fleurimont, QC",
-      "status": "committed",
-      "details": "3 produits"
-    },
-    {
-      "id": "18",
-      "city": "Carleton Place, ON",
-      "status": "committed",
-      "details": "4 produits"
-    },
-    {
-      "id": "14",
-      "city": "Brockville, ON",
-      "status": "committed",
-      "details": "3 produits"
-    },
-    {
-      "id": "98",
-      "city": "Smiths Falls, ON",
-      "status": "committed",
-      "details": "2 produits"
-    },
-    {
-      "id": "4",
-      "city": "Arnprior, ON",
-      "status": "committed",
-      "details": "4 produits"
-    },
-    {
-      "id": "99",
-      "city": "Shawville, QC",
+      "id": "423",
+      "city": "Donnacona, QC",
       "status": "committed",
       "details": "5 produits"
+    },
+    {
+      "id": "80",
+      "city": "Perth, ON",
+      "status": "committed",
+      "details": "6 produits"
+    },
+    {
+      "id": "352",
+      "city": "La Tuque, QC",
+      "status": "committed",
+      "details": "3 produits"
+    },
+    {
+      "id": "86",
+      "city": "Renfrew, ON",
+      "status": "committed",
+      "details": "2 produits"
+    },
+    {
+      "id": "156",
+      "city": "Thetford Mines, QC",
+      "status": "committed",
+      "details": "2 produits"
+    },
+    {
+      "id": "692",
+      "city": "Ancienne Lorette, QC",
+      "status": "committed",
+      "details": "2 produits"
+    },
+    {
+      "id": "37",
+      "city": "Gananoque, ON",
+      "status": "committed",
+      "details": "2 produits"
+    },
+    {
+      "id": "624",
+      "city": "St. Romuald, QC",
+      "status": "committed",
+      "details": "3 produits"
     }
   ],
   "failedTwice": [],
