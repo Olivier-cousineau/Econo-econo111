@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2025-12-25T11:23:29.460Z",
+  "generatedAt": "2025-12-25T14:28:13.984Z",
   "stores": [
     {
-      "id": "423",
-      "city": "Donnacona, QC",
+      "id": "342",
+      "city": "Quebec Les Saules, QC",
+      "status": "committed",
+      "details": "7 produits"
+    },
+    {
+      "id": "245",
+      "city": "Quebec Ste. Foy, QC",
+      "status": "committed",
+      "details": "3 produits"
+    },
+    {
+      "id": "79",
+      "city": "Pembroke, ON",
+      "status": "committed",
+      "details": "0 produits"
+    },
+    {
+      "id": "405",
+      "city": "Lebourgneuf, QC",
+      "status": "committed",
+      "details": "7 produits"
+    },
+    {
+      "id": "101",
+      "city": "Quebec Vanier, QC",
+      "status": "committed",
+      "details": "4 produits"
+    },
+    {
+      "id": "416",
+      "city": "Ste. Marie De Beauce, QC",
       "status": "committed",
       "details": "5 produits"
     },
     {
-      "id": "80",
-      "city": "Perth, ON",
+      "id": "225",
+      "city": "Lac Megantic, QC",
       "status": "committed",
-      "details": "6 produits"
+      "details": "4 produits"
     },
     {
-      "id": "352",
-      "city": "La Tuque, QC",
+      "id": "165",
+      "city": "Levis, QC",
       "status": "committed",
-      "details": "3 produits"
-    },
-    {
-      "id": "86",
-      "city": "Renfrew, ON",
-      "status": "committed",
-      "details": "2 produits"
-    },
-    {
-      "id": "156",
-      "city": "Thetford Mines, QC",
-      "status": "committed",
-      "details": "2 produits"
-    },
-    {
-      "id": "692",
-      "city": "Ancienne Lorette, QC",
-      "status": "committed",
-      "details": "2 produits"
-    },
-    {
-      "id": "37",
-      "city": "Gananoque, ON",
-      "status": "committed",
-      "details": "2 produits"
-    },
-    {
-      "id": "624",
-      "city": "St. Romuald, QC",
-      "status": "committed",
-      "details": "3 produits"
+      "details": "4 produits"
     }
   ],
   "failedTwice": [],
