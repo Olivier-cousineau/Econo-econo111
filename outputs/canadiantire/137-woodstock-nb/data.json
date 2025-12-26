@@ -14,7 +14,7 @@
     "product_id": null,
     "sku": "0430335",
     "sku_formatted": "043-0335-2",
-    "availability": "12 En Stock#043-0335-2",
+    "availability": "9 En Stock#043-0335-2",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -56,34 +56,5 @@
     "regular_price_raw": "29,99 $Était   et+ prix était à partir de 29,99 $",
     "price_sale_clean": "14,93",
     "price_original_clean": "29,99"
-  },
-  {
-    "store_id": "137",
-    "city": "Woodstock, NB",
-    "name": "Écumoire Lagostina en acier inoxydable avec tête en nylon",
-    "title": "Écumoire Lagostina en acier inoxydable avec tête en nylon",
-    "price": 5.93,
-    "price_raw": "5,93 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-tools-thermometers/1420795/lagostina-skimmer-with-nylon-head-ac31e0f6-cc00-45c8-bda9-1e55178a585d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-tools-thermometers/1420795/lagostina-skimmer-with-nylon-head-ac31e0f6-cc00-45c8-bda9-1e55178a585d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/ecumoire-lagostina-en-acier-inoxydable-avec-tete-en-nylon-1420795p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/ecumoire-lagostina-en-acier-inoxydable-avec-tete-en-nylon-1420795p.html",
-    "product_id": null,
-    "sku": "1420795",
-    "sku_formatted": "142-0795-0",
-    "availability": "Il n’en reste que 3 #142-0795-0",
-    "badges": [
-      "Liquidation◊Mieux notés"
-    ],
-    "discount_percent": 65.1,
-    "liquidation_price": 5.93,
-    "liquidation_price_raw": "5,93 $",
-    "sale_price": 5.93,
-    "sale_price_raw": "5,93 $",
-    "regular_price": 16.99,
-    "regular_price_raw": "Était±  16,99 $prix était 16,99 $",
-    "price_sale_clean": "5,93",
-    "price_original_clean": "16,99"
   }
 ]
