@@ -1,5 +1,29 @@
 [
   {
+    "title": "Luge rapide H2O Spider avec direction et freins",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/winter-recreation/0821088/spider-snow-bike-e7a5d494-3744-4104-9151-337a07902637-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 99.99,
+    "salePrice": 39.93,
+    "store": "Canadian Tire",
+    "city": "Agincourt, ON",
+    "branch": "Agincourt, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/luge-rapide-h2o-spider-avec-direction-et-freins-0821088p.html",
+    "sku": "0821088",
+    "availability": "Il n’en reste que 2 #082-1088-0"
+  },
+  {
+    "title": "Batterie de cuisine en cuivre Lagostina Artiste-Clad allant au four, paq. 12",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/cookware/1422641/lagostina-12-piece-copper-hand-hammered-cookware-set-8efd56aa-f4d9-43a3-830a-345e63def203-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 599.99,
+    "salePrice": 299.93,
+    "store": "Canadian Tire",
+    "city": "Agincourt, ON",
+    "branch": "Agincourt, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/batterie-de-cuisine-en-cuivre-lagostina-artiste-clad-allant-au-four-paq-12-1422641p.html",
+    "sku": "1422641",
+    "availability": "Il n’en reste que 1 #142-2641-4"
+  },
+  {
     "title": "Joint d’étanchéité Permatex 59705 Ultra Copper, température maximale, 147 mL",
     "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0383831/permatex-ultra-copper-gasket-maker-f2db9a34-74fc-43c9-8c35-a1598bde05d2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 18.99,
@@ -9,7 +33,43 @@
     "branch": "Agincourt, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/joint-d-etancheite-permatex-59705-ultra-copper-temperature-maximale-147-ml-0383831p.html",
     "sku": "0383831",
-    "availability": "12 En Stock#038-3831-6"
+    "availability": "13 En Stock#038-3831-6"
+  },
+  {
+    "title": "Peinture en aérosol toute surface Rust-Oleum Specialty, laque, 312 g",
+    "image": "https://media-www.canadiantire.ca/product/fixing/paint/paints/0482395/specialty-lacquer-clear-312g-1c0cce3e-31bd-4ba3-99cb-67cfe9f88aac-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 15.99,
+    "salePrice": 7.93,
+    "store": "Canadian Tire",
+    "city": "Agincourt, ON",
+    "branch": "Agincourt, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/peinture-en-aerosol-toute-surface-rust-oleum-specialty-laque-312-g-0482525p.html",
+    "sku": "0482525",
+    "availability": ""
+  },
+  {
+    "title": "Nettoyant nautique pour écran, 230 mL",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790328/marine-display-cleaner-f2601da5-df42-4d33-9177-1be27b9b3298-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 6.79,
+    "store": "Canadian Tire",
+    "city": "Agincourt, ON",
+    "branch": "Agincourt, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-nautique-pour-ecran-230-ml-0790328p.html",
+    "sku": "0790328",
+    "availability": "Il n’en reste que 1 #079-0328-6"
+  },
+  {
+    "title": "Ciment pour silencieux/mastic à système d’échappement VersaChem Spider Patch 90336, 170 g",
+    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0383750/spider-patch-muffler-cement-170g-8dfad7dd-d497-4fbe-bad1-eb09adfca903-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 7.99,
+    "salePrice": 2.93,
+    "store": "Canadian Tire",
+    "city": "Agincourt, ON",
+    "branch": "Agincourt, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ciment-pour-silencieux-mastic-a-systeme-d-echappement-versachem-spider-patch-90336-170-g-0383750p.html",
+    "sku": "0383750",
+    "availability": "Il n’en reste que 4 #038-3750-8"
   },
   {
     "title": "Savon moussant pour les mains Softsoap avec pompe, parfum Tangerine Treat, 258 mL",
