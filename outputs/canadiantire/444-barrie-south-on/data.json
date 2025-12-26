@@ -1,1 +1,31 @@
-[]
+[
+  {
+    "store_id": "444",
+    "city": "Barrie South, ON",
+    "name": "Trousse de départ pour conservation et entreposage d'aliments Fresh & Save de Zwilling avec pompe à dépression portative",
+    "title": "Trousse de départ pour conservation et entreposage d'aliments Fresh & Save de Zwilling avec pompe à dépression portative",
+    "price": 59.99,
+    "price_raw": "59,99 $",
+    "liquidation": true,
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430335/zwilling-food-storage-starter-kit-8pc-ee27a980-a5f6-4ca9-860b-310987524806-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430335/zwilling-food-storage-starter-kit-8pc-ee27a980-a5f6-4ca9-860b-310987524806-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-depart-pour-conservation-et-entreposage-d-aliments-fresh-save-de-zwilling-avec-pompe-a-depression-portative-0430335p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/trousse-de-depart-pour-conservation-et-entreposage-d-aliments-fresh-save-de-zwilling-avec-pompe-a-depression-portative-0430335p.html",
+    "product_id": null,
+    "sku": "0430335",
+    "sku_formatted": "043-0335-2",
+    "availability": "Il n’en reste que 5 #043-0335-2",
+    "badges": [
+      "Liquidation◊Mieux notés"
+    ],
+    "discount_percent": 68.42,
+    "liquidation_price": 59.99,
+    "liquidation_price_raw": "59,99 $",
+    "sale_price": 59.99,
+    "sale_price_raw": "59,99 $",
+    "regular_price": 189.99,
+    "regular_price_raw": "Était±  189,99 $prix était 189,99 $",
+    "price_sale_clean": "59,99",
+    "price_original_clean": "189,99"
+  }
+]
