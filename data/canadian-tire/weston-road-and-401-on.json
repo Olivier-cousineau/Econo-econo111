@@ -9,7 +9,7 @@
     "branch": "Weston Road & 401, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-depart-pour-conservation-et-entreposage-d-aliments-fresh-save-de-zwilling-avec-pompe-a-depression-portative-0430335p.html",
     "sku": "0430335",
-    "availability": "125 En Stock#043-0335-2"
+    "availability": "121 En Stock#043-0335-2"
   },
   {
     "title": "Luge rapide H2O Spider avec direction et freins",
@@ -34,5 +34,53 @@
     "url": "https://www.canadiantire.ca/fr/pdp/batterie-de-cuisine-en-cuivre-lagostina-artiste-clad-allant-au-four-paq-12-1422641p.html",
     "sku": "1422641",
     "availability": "Il n’en reste que 1 #142-2641-4"
+  },
+  {
+    "title": "Scellant élastomère pour réparation de toit Rust-Oleum LeakSeal, calfeutrant étanche, blanc, 300 mL",
+    "image": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641565/white-elastomeric-roof-repair-300ml-0f78804c-5fd4-4fdb-a840-df3fda845224.png?im=whresize&wid=200&hei=200",
+    "price": 20.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Weston Road & 401, ON",
+    "branch": "Weston Road & 401, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/scellant-elastomere-pour-reparation-de-toit-rust-oleum-leakseal-calfeutrant-etanche-blanc-300-ml-0641565p.html",
+    "sku": "0641565",
+    "availability": "Il n’en reste que 2 #064-1565-8"
+  },
+  {
+    "title": "Bâton de mastic époxy en aluminium Star Brite pour les réparations d’urgence et permanentes, 113 g",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790148/starbrite-epoxy-aluminum-putty-stick-118ml-fffecaec-d627-4cdb-a375-93be85255f00-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 21.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Weston Road & 401, ON",
+    "branch": "Weston Road & 401, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/baton-de-mastic-epoxy-en-aluminium-star-brite-pour-les-reparations-d-urgence-et-permanentes-113-g-0790148p.html",
+    "sku": "0790148",
+    "availability": "Il n’en reste que 2 #079-0148-4"
+  },
+  {
+    "title": "Écumoire en nylon Heritage",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-tools-thermometers/1423753/heritage-skimmer-1484a680-71a8-486b-80f2-bdc6a4e05421-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 9.99,
+    "salePrice": 3.93,
+    "store": "Canadian Tire",
+    "city": "Weston Road & 401, ON",
+    "branch": "Weston Road & 401, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ecumoire-en-nylon-heritage-1423753p.html",
+    "sku": "1423753",
+    "availability": "Il n’en reste que 2 #142-3753-2"
+  },
+  {
+    "title": "Trousse de rechange de contrôle d’humidité EmZone, paq. 3, 450 g",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790302/moisture-control-refill-kit-450g-x3-7af80d3b-df36-4731-ac66-cd8f16cc35ba.png?im=whresize&wid=200&hei=200",
+    "price": 16.99,
+    "salePrice": 2.93,
+    "store": "Canadian Tire",
+    "city": "Weston Road & 401, ON",
+    "branch": "Weston Road & 401, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-rechange-de-controle-d-humidite-emzone-paq-3-450-g-0790302p.html",
+    "sku": "0790302",
+    "availability": "Il n’en reste que 2 #079-0302-6"
   }
 ]
