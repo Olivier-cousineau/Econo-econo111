@@ -118,35 +118,6 @@
   {
     "store_id": "294",
     "city": "Etobicoke, Albion & Kipling, ON",
-    "name": "Lubrifiant à pellicule sèche antiadhésif DuPont, bouteille à presser, 120 mL (4 oz)",
-    "title": "Lubrifiant à pellicule sèche antiadhésif DuPont, bouteille à presser, 120 mL (4 oz)",
-    "price": 2.93,
-    "price_raw": "2,93 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0387817/dupont-non-stick-4oz-squeeze-486595e9-13b3-42a0-9c33-1d91f9ff2266-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0387817/dupont-non-stick-4oz-squeeze-486595e9-13b3-42a0-9c33-1d91f9ff2266-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/lubrifiant-a-pellicule-seche-antiadhesif-dupont-bouteille-a-presser-120-ml-4-oz-0387817p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/lubrifiant-a-pellicule-seche-antiadhesif-dupont-bouteille-a-presser-120-ml-4-oz-0387817p.html",
-    "product_id": null,
-    "sku": "0387817",
-    "sku_formatted": "038-7817-8",
-    "availability": "Il n’en reste que 2 #038-7817-8",
-    "badges": [
-      "Liquidation◊Mieux notés"
-    ],
-    "discount_percent": 69.13,
-    "liquidation_price": 2.93,
-    "liquidation_price_raw": "2,93 $",
-    "sale_price": 2.93,
-    "sale_price_raw": "2,93 $",
-    "regular_price": 9.49,
-    "regular_price_raw": "Était±  9,49 $prix était 9,49 $",
-    "price_sale_clean": "2,93",
-    "price_original_clean": "9,49"
-  },
-  {
-    "store_id": "294",
-    "city": "Etobicoke, Albion & Kipling, ON",
     "name": "Scellant élastomère pour réparation de toit Rust-Oleum LeakSeal, calfeutrant étanche, blanc, 300 mL",
     "title": "Scellant élastomère pour réparation de toit Rust-Oleum LeakSeal, calfeutrant étanche, blanc, 300 mL",
     "price": 9.93,
@@ -172,5 +143,34 @@
     "regular_price_raw": "Était±  20,99 $prix était 20,99 $",
     "price_sale_clean": "9,93",
     "price_original_clean": "20,99"
+  },
+  {
+    "store_id": "294",
+    "city": "Etobicoke, Albion & Kipling, ON",
+    "name": "Nettoyant pour coque de bateau Triton, transparent, 950 mL",
+    "title": "Nettoyant pour coque de bateau Triton, transparent, 950 mL",
+    "price": 4.93,
+    "price_raw": "4,93 $",
+    "liquidation": true,
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790179/triton-hull-cleaner-0-6c596bdd-e82e-4f7c-a2ab-2c60d197b41b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790179/triton-hull-cleaner-0-6c596bdd-e82e-4f7c-a2ab-2c60d197b41b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-pour-coque-de-bateau-triton-transparent-950-ml-0790179p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/nettoyant-pour-coque-de-bateau-triton-transparent-950-ml-0790179p.html",
+    "product_id": null,
+    "sku": "0790179",
+    "sku_formatted": "079-0179-0",
+    "availability": null,
+    "badges": [
+      "Liquidation◊"
+    ],
+    "discount_percent": 80.27,
+    "liquidation_price": 4.93,
+    "liquidation_price_raw": "4,93 $",
+    "sale_price": 4.93,
+    "sale_price_raw": "4,93 $",
+    "regular_price": 24.99,
+    "regular_price_raw": "Était±  24,99 $prix était 24,99 $",
+    "price_sale_clean": "4,93",
+    "price_original_clean": "24,99"
   }
 ]
