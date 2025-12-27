@@ -176,35 +176,6 @@
   {
     "store_id": "315",
     "city": "Matane, QC",
-    "name": "Lubrifiant à pellicule sèche antiadhésif DuPont, bouteille à presser, 120 mL (4 oz)",
-    "title": "Lubrifiant à pellicule sèche antiadhésif DuPont, bouteille à presser, 120 mL (4 oz)",
-    "price": 2.93,
-    "price_raw": "2,93 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0387817/dupont-non-stick-4oz-squeeze-486595e9-13b3-42a0-9c33-1d91f9ff2266-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0387817/dupont-non-stick-4oz-squeeze-486595e9-13b3-42a0-9c33-1d91f9ff2266-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/lubrifiant-a-pellicule-seche-antiadhesif-dupont-bouteille-a-presser-120-ml-4-oz-0387817p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/lubrifiant-a-pellicule-seche-antiadhesif-dupont-bouteille-a-presser-120-ml-4-oz-0387817p.html",
-    "product_id": null,
-    "sku": "0387817",
-    "sku_formatted": "038-7817-8",
-    "availability": "Il n’en reste que 1 #038-7817-8",
-    "badges": [
-      "Liquidation◊Mieux notés"
-    ],
-    "discount_percent": 69.13,
-    "liquidation_price": 2.93,
-    "liquidation_price_raw": "2,93 $",
-    "sale_price": 2.93,
-    "sale_price_raw": "2,93 $",
-    "regular_price": 9.49,
-    "regular_price_raw": "Était±  9,49 $prix était 9,49 $",
-    "price_sale_clean": "2,93",
-    "price_original_clean": "9,49"
-  },
-  {
-    "store_id": "315",
-    "city": "Matane, QC",
     "name": "Scellant pour gouttière/revêtement Rust-Oleum LeakSeal, toutes saisons, réparation de surface, blanc, 300 mL",
     "title": "Scellant pour gouttière/revêtement Rust-Oleum LeakSeal, toutes saisons, réparation de surface, blanc, 300 mL",
     "price": 9.93,
@@ -259,5 +230,34 @@
     "regular_price_raw": "Était±  11,99 $prix était 11,99 $",
     "price_sale_clean": "4,93",
     "price_original_clean": "11,99"
+  },
+  {
+    "store_id": "315",
+    "city": "Matane, QC",
+    "name": "Nettoyant en vaporisateur pour bateau Boat-D-Funk, 32 oz",
+    "title": "Nettoyant en vaporisateur pour bateau Boat-D-Funk, 32 oz",
+    "price": 6.93,
+    "price_raw": "6,93 $",
+    "liquidation": true,
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790329/boat-d-funk-58f6ea2f-3cc5-4d18-9641-0cb92e5bc506-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790329/boat-d-funk-58f6ea2f-3cc5-4d18-9641-0cb92e5bc506-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-en-vaporisateur-pour-bateau-boat-d-funk-32-oz-0790329p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/nettoyant-en-vaporisateur-pour-bateau-boat-d-funk-32-oz-0790329p.html",
+    "product_id": null,
+    "sku": "0790329",
+    "sku_formatted": "079-0329-4",
+    "availability": null,
+    "badges": [
+      "Liquidation◊Mieux notés"
+    ],
+    "discount_percent": 56.66,
+    "liquidation_price": 6.93,
+    "liquidation_price_raw": "6,93 $",
+    "sale_price": 6.93,
+    "sale_price_raw": "6,93 $",
+    "regular_price": 15.99,
+    "regular_price_raw": "Était±  15,99 $prix était 15,99 $",
+    "price_sale_clean": "6,93",
+    "price_original_clean": "15,99"
   }
 ]
