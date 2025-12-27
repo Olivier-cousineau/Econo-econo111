@@ -14,7 +14,7 @@
     "product_id": null,
     "sku": "0430335",
     "sku_formatted": "043-0335-2",
-    "availability": "19 En Stock#043-0335-2",
+    "availability": "16 En Stock#043-0335-2",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -43,7 +43,7 @@
     "product_id": null,
     "sku": "0821088",
     "sku_formatted": "082-1088-0",
-    "availability": "33 En Stock#082-1088-0",
+    "availability": "31 En Stock#082-1088-0",
     "badges": [
       "Liquidation◊Exclusivité"
     ],
@@ -72,7 +72,7 @@
     "product_id": null,
     "sku": "1422641",
     "sku_formatted": "142-2641-4",
-    "availability": "Il n’en reste que 2 #142-2641-4",
+    "availability": "Il n’en reste que 1 #142-2641-4",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -114,63 +114,5 @@
     "regular_price_raw": "Était±  49,99 $prix était 49,99 $",
     "price_sale_clean": "12,93",
     "price_original_clean": "49,99"
-  },
-  {
-    "store_id": "177",
-    "city": "Hamilton Mt.West, ON",
-    "name": "Nettoyant et super-rinçage pour radiateur Rislone Hy-per Cool, 473 mL",
-    "title": "Nettoyant et super-rinçage pour radiateur Rislone Hy-per Cool, 473 mL",
-    "price": 3.93,
-    "price_raw": "3,93 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0388036/rislone-hy-per-cool-super-flush-cleaner-473ml-e56a661d-1174-4251-877c-63f92965d663-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0388036/rislone-hy-per-cool-super-flush-cleaner-473ml-e56a661d-1174-4251-877c-63f92965d663-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-et-super-rincage-pour-radiateur-rislone-hy-per-cool-473-ml-0388036p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/nettoyant-et-super-rincage-pour-radiateur-rislone-hy-per-cool-473-ml-0388036p.html",
-    "product_id": null,
-    "sku": "0388036",
-    "sku_formatted": "038-8036-0",
-    "availability": null,
-    "badges": [
-      "Liquidation◊Mieux notés"
-    ],
-    "discount_percent": 60.66,
-    "liquidation_price": 3.93,
-    "liquidation_price_raw": "3,93 $",
-    "sale_price": 3.93,
-    "sale_price_raw": "3,93 $",
-    "regular_price": 9.99,
-    "regular_price_raw": "Était±  9,99 $prix était 9,99 $",
-    "price_sale_clean": "3,93",
-    "price_original_clean": "9,99"
-  },
-  {
-    "store_id": "177",
-    "city": "Hamilton Mt.West, ON",
-    "name": "Scellant pour gouttière/revêtement Rust-Oleum LeakSeal, toutes saisons, réparation de surface, blanc, 300 mL",
-    "title": "Scellant pour gouttière/revêtement Rust-Oleum LeakSeal, toutes saisons, réparation de surface, blanc, 300 mL",
-    "price": 9.93,
-    "price_raw": "9,93 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641577/leakseal-gutter-and-siding-white-300ml-5dde50d2-eb94-4077-9029-dea17929b073.png?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641577/leakseal-gutter-and-siding-white-300ml-5dde50d2-eb94-4077-9029-dea17929b073.png?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/scellant-pour-gouttiere-revetement-rust-oleum-leakseal-toutes-saisons-reparation-de-surface-blanc-300-ml-0641577p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/scellant-pour-gouttiere-revetement-rust-oleum-leakseal-toutes-saisons-reparation-de-surface-blanc-300-ml-0641577p.html",
-    "product_id": null,
-    "sku": "0641577",
-    "sku_formatted": "064-1577-0",
-    "availability": null,
-    "badges": [
-      "Liquidation◊Mieux notés"
-    ],
-    "discount_percent": 52.69,
-    "liquidation_price": 9.93,
-    "liquidation_price_raw": "9,93 $",
-    "sale_price": 9.93,
-    "sale_price_raw": "9,93 $",
-    "regular_price": 20.99,
-    "regular_price_raw": "Était±  20,99 $prix était 20,99 $",
-    "price_sale_clean": "9,93",
-    "price_original_clean": "20,99"
   }
 ]
