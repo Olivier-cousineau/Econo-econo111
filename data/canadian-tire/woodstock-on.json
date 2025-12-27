@@ -1,17 +1,5 @@
 [
   {
-    "title": "Trousse de départ pour conservation et entreposage d'aliments Fresh & Save de Zwilling avec pompe à dépression portative",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430335/zwilling-food-storage-starter-kit-8pc-ee27a980-a5f6-4ca9-860b-310987524806-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 189.99,
-    "salePrice": 49.93,
-    "store": "Canadian Tire",
-    "city": "Woodstock, ON",
-    "branch": "Woodstock, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-depart-pour-conservation-et-entreposage-d-aliments-fresh-save-de-zwilling-avec-pompe-a-depression-portative-0430335p.html",
-    "sku": "0430335",
-    "availability": "Il n’en reste que 5 #043-0335-2"
-  },
-  {
     "title": "Luge rapide H2O Spider avec direction et freins",
     "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/winter-recreation/0821088/spider-snow-bike-e7a5d494-3744-4104-9151-337a07902637-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 99.99,
@@ -21,7 +9,7 @@
     "branch": "Woodstock, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/luge-rapide-h2o-spider-avec-direction-et-freins-0821088p.html",
     "sku": "0821088",
-    "availability": "Il n’en reste que 5 #082-1088-0"
+    "availability": "Il n’en reste que 3 #082-1088-0"
   },
   {
     "title": "Batterie de cuisine en cuivre Lagostina Artiste-Clad allant au four, paq. 12",
@@ -33,7 +21,7 @@
     "branch": "Woodstock, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/batterie-de-cuisine-en-cuivre-lagostina-artiste-clad-allant-au-four-paq-12-1422641p.html",
     "sku": "1422641",
-    "availability": "Il n’en reste que 5 #142-2641-4"
+    "availability": "Il n’en reste que 4 #142-2641-4"
   },
   {
     "title": "Liquide de préparation Evans, 1 gal",
@@ -46,6 +34,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/liquide-de-preparation-evans-1-gal-0293102p.html",
     "sku": "0293102",
     "availability": "Il n’en reste que 3 #029-3102-4"
+  },
+  {
+    "title": "Tasses et cuillères à mesurer MASTER Chef en plastique, paq. 8",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-tools-thermometers/1423764/master-chef-measuring-cups-spoons-set-49dd4e11-9c3b-4ead-bd34-e73789f33af1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 12.99,
+    "salePrice": 4.93,
+    "store": "Canadian Tire",
+    "city": "Woodstock, ON",
+    "branch": "Woodstock, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tasses-et-cuilleres-a-mesurer-master-chef-en-plastique-paq-8-1423764p.html",
+    "sku": "1423764",
+    "availability": "120 En Stock#142-3764-6"
   },
   {
     "title": "Écumoire en nylon Heritage",
