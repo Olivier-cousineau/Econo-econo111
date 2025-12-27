@@ -9,7 +9,7 @@
     "branch": "Hamilton Mt.West, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-depart-pour-conservation-et-entreposage-d-aliments-fresh-save-de-zwilling-avec-pompe-a-depression-portative-0430335p.html",
     "sku": "0430335",
-    "availability": "19 En Stock#043-0335-2"
+    "availability": "16 En Stock#043-0335-2"
   },
   {
     "title": "Luge rapide H2O Spider avec direction et freins",
@@ -21,7 +21,7 @@
     "branch": "Hamilton Mt.West, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/luge-rapide-h2o-spider-avec-direction-et-freins-0821088p.html",
     "sku": "0821088",
-    "availability": "33 En Stock#082-1088-0"
+    "availability": "31 En Stock#082-1088-0"
   },
   {
     "title": "Batterie de cuisine en cuivre Lagostina Artiste-Clad allant au four, paq. 12",
@@ -33,7 +33,7 @@
     "branch": "Hamilton Mt.West, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/batterie-de-cuisine-en-cuivre-lagostina-artiste-clad-allant-au-four-paq-12-1422641p.html",
     "sku": "1422641",
-    "availability": "Il n’en reste que 2 #142-2641-4"
+    "availability": "Il n’en reste que 1 #142-2641-4"
   },
   {
     "title": "Liquide de préparation Evans, 1 gal",
@@ -46,29 +46,5 @@
     "url": "https://www.canadiantire.ca/fr/pdp/liquide-de-preparation-evans-1-gal-0293102p.html",
     "sku": "0293102",
     "availability": "Il n’en reste que 2 #029-3102-4"
-  },
-  {
-    "title": "Nettoyant et super-rinçage pour radiateur Rislone Hy-per Cool, 473 mL",
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0388036/rislone-hy-per-cool-super-flush-cleaner-473ml-e56a661d-1174-4251-877c-63f92965d663-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 9.99,
-    "salePrice": 3.93,
-    "store": "Canadian Tire",
-    "city": "Hamilton Mt.West, ON",
-    "branch": "Hamilton Mt.West, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-et-super-rincage-pour-radiateur-rislone-hy-per-cool-473-ml-0388036p.html",
-    "sku": "0388036",
-    "availability": ""
-  },
-  {
-    "title": "Scellant pour gouttière/revêtement Rust-Oleum LeakSeal, toutes saisons, réparation de surface, blanc, 300 mL",
-    "image": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641577/leakseal-gutter-and-siding-white-300ml-5dde50d2-eb94-4077-9029-dea17929b073.png?im=whresize&wid=200&hei=200",
-    "price": 20.99,
-    "salePrice": 9.93,
-    "store": "Canadian Tire",
-    "city": "Hamilton Mt.West, ON",
-    "branch": "Hamilton Mt.West, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/scellant-pour-gouttiere-revetement-rust-oleum-leakseal-toutes-saisons-reparation-de-surface-blanc-300-ml-0641577p.html",
-    "sku": "0641577",
-    "availability": ""
   }
 ]
