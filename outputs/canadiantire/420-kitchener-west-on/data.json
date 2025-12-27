@@ -14,7 +14,7 @@
     "product_id": null,
     "sku": "0430335",
     "sku_formatted": "043-0335-2",
-    "availability": "17 En Stock#043-0335-2",
+    "availability": "Il n’en reste que 7 #043-0335-2",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -31,35 +31,6 @@
   {
     "store_id": "420",
     "city": "Kitchener West, ON",
-    "name": "Luge rapide H2O Spider avec direction et freins",
-    "title": "Luge rapide H2O Spider avec direction et freins",
-    "price": 39.93,
-    "price_raw": "39,93 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/winter-recreation/0821088/spider-snow-bike-e7a5d494-3744-4104-9151-337a07902637-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/winter-recreation/0821088/spider-snow-bike-e7a5d494-3744-4104-9151-337a07902637-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/luge-rapide-h2o-spider-avec-direction-et-freins-0821088p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/luge-rapide-h2o-spider-avec-direction-et-freins-0821088p.html",
-    "product_id": null,
-    "sku": "0821088",
-    "sku_formatted": "082-1088-0",
-    "availability": "Il n’en reste que 3 #082-1088-0",
-    "badges": [
-      "Liquidation◊Exclusivité"
-    ],
-    "discount_percent": 60.07,
-    "liquidation_price": 39.93,
-    "liquidation_price_raw": "39,93 $",
-    "sale_price": 39.93,
-    "sale_price_raw": "39,93 $",
-    "regular_price": 99.99,
-    "regular_price_raw": "Était±  99,99 $prix était 99,99 $",
-    "price_sale_clean": "39,93",
-    "price_original_clean": "99,99"
-  },
-  {
-    "store_id": "420",
-    "city": "Kitchener West, ON",
     "name": "Batterie de cuisine en cuivre Lagostina Artiste-Clad allant au four, paq. 12",
     "title": "Batterie de cuisine en cuivre Lagostina Artiste-Clad allant au four, paq. 12",
     "price": 299.98,
@@ -72,7 +43,7 @@
     "product_id": null,
     "sku": "1422641",
     "sku_formatted": "142-2641-4",
-    "availability": "8 En Stock#142-2641-4",
+    "availability": "Il n’en reste que 7 #142-2641-4",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -101,7 +72,7 @@
     "product_id": null,
     "sku": "0293102",
     "sku_formatted": "029-3102-4",
-    "availability": "Il n’en reste que 2 #029-3102-4",
+    "availability": "Il n’en reste que 1 #029-3102-4",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -172,34 +143,5 @@
     "regular_price_raw": "Était±  3,99 $prix était 3,99 $",
     "price_sale_clean": "1,93",
     "price_original_clean": "3,99"
-  },
-  {
-    "store_id": "420",
-    "city": "Kitchener West, ON",
-    "name": "Holland Secret Micro 5-0-2, formule en 3 parties",
-    "title": "Holland Secret Micro 5-0-2, formule en 3 parties",
-    "price": 8.93,
-    "price_raw": "8,93 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/gardening/gardening-plant-accessories/1590295/future-harvest-holland-secret-micro-5-0-2-3-part-formula-054d02d1-04af-4976-901d-343b750191d7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/seasonal-gardening/gardening/gardening-plant-accessories/1590295/future-harvest-holland-secret-micro-5-0-2-3-part-formula-054d02d1-04af-4976-901d-343b750191d7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/holland-secret-micro-5-0-2-formule-en-3-parties-1590295p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/holland-secret-micro-5-0-2-formule-en-3-parties-1590295p.html",
-    "product_id": null,
-    "sku": "1590295",
-    "sku_formatted": "159-0295-2",
-    "availability": "10 En Stock#159-0295-2",
-    "badges": [
-      "Liquidation◊Mieux notés"
-    ],
-    "discount_percent": 64.27,
-    "liquidation_price": 8.93,
-    "liquidation_price_raw": "8,93 $",
-    "sale_price": 8.93,
-    "sale_price_raw": "8,93 $",
-    "regular_price": 24.99,
-    "regular_price_raw": "Était±  24,99 $prix était 24,99 $",
-    "price_sale_clean": "8,93",
-    "price_original_clean": "24,99"
   }
 ]
