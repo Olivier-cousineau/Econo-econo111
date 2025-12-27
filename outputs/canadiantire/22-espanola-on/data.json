@@ -2,6 +2,35 @@
   {
     "store_id": "22",
     "city": "Espanola, ON",
+    "name": "Trousse de départ pour conservation et entreposage d'aliments Fresh & Save de Zwilling avec pompe à dépression portative",
+    "title": "Trousse de départ pour conservation et entreposage d'aliments Fresh & Save de Zwilling avec pompe à dépression portative",
+    "price": 86.71,
+    "price_raw": "86,71 $",
+    "liquidation": true,
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430335/zwilling-food-storage-starter-kit-8pc-ee27a980-a5f6-4ca9-860b-310987524806-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430335/zwilling-food-storage-starter-kit-8pc-ee27a980-a5f6-4ca9-860b-310987524806-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-depart-pour-conservation-et-entreposage-d-aliments-fresh-save-de-zwilling-avec-pompe-a-depression-portative-0430335p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/trousse-de-depart-pour-conservation-et-entreposage-d-aliments-fresh-save-de-zwilling-avec-pompe-a-depression-portative-0430335p.html",
+    "product_id": null,
+    "sku": "0430335",
+    "sku_formatted": "043-0335-2",
+    "availability": "Il n’en reste que 2 #043-0335-2",
+    "badges": [
+      "Liquidation◊Mieux notés"
+    ],
+    "discount_percent": 54.36,
+    "liquidation_price": 86.71,
+    "liquidation_price_raw": "86,71 $",
+    "sale_price": 86.71,
+    "sale_price_raw": "86,71 $",
+    "regular_price": 189.99,
+    "regular_price_raw": "Était±  189,99 $prix était 189,99 $",
+    "price_sale_clean": "86,71",
+    "price_original_clean": "189,99"
+  },
+  {
+    "store_id": "22",
+    "city": "Espanola, ON",
     "name": "Liquide de refroidissement haute performance sans eau Evans, 1 gal",
     "title": "Liquide de refroidissement haute performance sans eau Evans, 1 gal",
     "price": 29.92,
@@ -56,5 +85,34 @@
     "regular_price_raw": "Était±  49,99 $prix était 49,99 $",
     "price_sale_clean": "19,92",
     "price_original_clean": "49,99"
+  },
+  {
+    "store_id": "22",
+    "city": "Espanola, ON",
+    "name": "Cire pour bateau 3M Perfect It Gelcoat, 473 ml",
+    "title": "Cire pour bateau 3M Perfect It Gelcoat, 473 ml",
+    "price": 19.33,
+    "price_raw": "19,33 $",
+    "liquidation": true,
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790316/3m-perfect-it-gelcoat-boat-wax-473ml-423b80a3-850b-4771-af0c-68811d2f6d4d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790316/3m-perfect-it-gelcoat-boat-wax-473ml-423b80a3-850b-4771-af0c-68811d2f6d4d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/cire-pour-bateau-3m-perfect-it-gelcoat-473-ml-0790316p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/cire-pour-bateau-3m-perfect-it-gelcoat-473-ml-0790316p.html",
+    "product_id": null,
+    "sku": "0790316",
+    "sku_formatted": "079-0316-4",
+    "availability": "Il n’en reste que 1 #079-0316-4",
+    "badges": [
+      "Liquidation◊"
+    ],
+    "discount_percent": 51.66,
+    "liquidation_price": 19.33,
+    "liquidation_price_raw": "19,33 $",
+    "sale_price": 19.33,
+    "sale_price_raw": "19,33 $",
+    "regular_price": 39.99,
+    "regular_price_raw": "Était±  39,99 $prix était 39,99 $",
+    "price_sale_clean": "19,33",
+    "price_original_clean": "39,99"
   }
 ]
