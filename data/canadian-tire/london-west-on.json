@@ -3,13 +3,13 @@
     "title": "Luge rapide H2O Spider avec direction et freins",
     "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/winter-recreation/0821088/spider-snow-bike-e7a5d494-3744-4104-9151-337a07902637-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 99.99,
-    "salePrice": 39.93,
+    "salePrice": 34.97,
     "store": "Canadian Tire",
     "city": "London West, ON",
     "branch": "London West, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/luge-rapide-h2o-spider-avec-direction-et-freins-0821088p.html",
     "sku": "0821088",
-    "availability": "Il n’en reste que 6 #082-1088-0"
+    "availability": "Il n’en reste que 2 #082-1088-0"
   },
   {
     "title": "Antigel/liquide de refroidissement prémélangé 50/50 STP sports motorisés, 1,89 L",
@@ -22,29 +22,5 @@
     "url": "https://www.canadiantire.ca/fr/pdp/antigel-liquide-de-refroidissement-premelange-50-50-stp-sports-motorises-1-89-l-0278199p.html",
     "sku": "0278199",
     "availability": "Il n’en reste que 3 #027-8199-8"
-  },
-  {
-    "title": "Bouche-toit incolore Rust-Oleum LeakSeal, intérieur/extérieur, scellant résistant à l'eau et aux intempéries, 300 mL",
-    "image": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641563/clear-roof-patch-300-ml-5689166a-6a3e-49a3-afcd-8d0f43d632bf-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 19.99,
-    "salePrice": 3.97,
-    "store": "Canadian Tire",
-    "city": "London West, ON",
-    "branch": "London West, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/bouche-toit-incolore-rust-oleum-leakseal-interieur-exterieur-scellant-resistant-a-l-eau-et-aux-intemperies-300-ml-0641563p.html",
-    "sku": "0641563",
-    "availability": "Il n’en reste que 1 #064-1563-2"
-  },
-  {
-    "title": "Engrais biologique pour plantes persistantes Mr. Green",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/gardening/lawn-plant-care/0592426/mr-green-evergreen-a9ca2442-05db-4f27-a080-ffdad04f71bb-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 10.99,
-    "salePrice": 2.97,
-    "store": "Canadian Tire",
-    "city": "London West, ON",
-    "branch": "London West, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/engrais-biologique-pour-plantes-persistantes-mr-green-0592426p.html",
-    "sku": "0592426",
-    "availability": "Il n’en reste que 6 #059-2426-8"
   }
 ]

@@ -1,17 +1,5 @@
 [
   {
-    "title": "Trousse de départ pour conservation et entreposage d'aliments Fresh & Save de Zwilling avec pompe à dépression portative",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430335/zwilling-food-storage-starter-kit-8pc-ee27a980-a5f6-4ca9-860b-310987524806-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 189.99,
-    "salePrice": 49.93,
-    "store": "Canadian Tire",
-    "city": "London South, ON",
-    "branch": "London South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-depart-pour-conservation-et-entreposage-d-aliments-fresh-save-de-zwilling-avec-pompe-a-depression-portative-0430335p.html",
-    "sku": "0430335",
-    "availability": "Il n’en reste que 3 #043-0335-2"
-  },
-  {
     "title": "Luge rapide H2O Spider avec direction et freins",
     "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/winter-recreation/0821088/spider-snow-bike-e7a5d494-3744-4104-9151-337a07902637-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 99.99,
@@ -21,7 +9,7 @@
     "branch": "London South, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/luge-rapide-h2o-spider-avec-direction-et-freins-0821088p.html",
     "sku": "0821088",
-    "availability": "Il n’en reste que 5 #082-1088-0"
+    "availability": "Il n’en reste que 2 #082-1088-0"
   },
   {
     "title": "Batterie de cuisine en cuivre Lagostina Artiste-Clad allant au four, paq. 12",
@@ -48,18 +36,6 @@
     "availability": "Il n’en reste que 4 #029-3102-4"
   },
   {
-    "title": "Lubrifiant tout usage Blaster PB-50 Pro-Grade, 311 g",
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0380403/blaster-pb-50-1d02ccb0-e88f-4c0a-867a-191dac4c27b7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 11.49,
-    "salePrice": 4.93,
-    "store": "Canadian Tire",
-    "city": "London South, ON",
-    "branch": "London South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/lubrifiant-tout-usage-blaster-pb-50-pro-grade-311-g-0380403p.html",
-    "sku": "0380403",
-    "availability": ""
-  },
-  {
     "title": "Écumoire Lagostina en acier inoxydable avec tête en nylon",
     "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-tools-thermometers/1420795/lagostina-skimmer-with-nylon-head-ac31e0f6-cc00-45c8-bda9-1e55178a585d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 16.99,
@@ -81,6 +57,18 @@
     "branch": "London South, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/passoire-en-plastique-t-fal-1-94-l-1421334p.html",
     "sku": "1421334",
+    "availability": ""
+  },
+  {
+    "title": "Nettoyant anti-marque pour pont de bateau Triton, transparent, 950 mL",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790180/triton-deck-cleaner-d9eb8f73-eacb-4842-a243-47d0a3819b3e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 4.93,
+    "store": "Canadian Tire",
+    "city": "London South, ON",
+    "branch": "London South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-anti-marque-pour-pont-de-bateau-triton-transparent-950-ml-0790180p.html",
+    "sku": "0790180",
     "availability": ""
   }
 ]
