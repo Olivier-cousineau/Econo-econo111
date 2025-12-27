@@ -72,18 +72,6 @@
     "availability": "Il n’en reste que 1 #064-1571-2"
   },
   {
-    "title": "Lubrifiant à pellicule sèche antiadhésif DuPont, bouteille à presser, 120 mL (4 oz)",
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0387817/dupont-non-stick-4oz-squeeze-486595e9-13b3-42a0-9c33-1d91f9ff2266-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 9.49,
-    "salePrice": 2.93,
-    "store": "Canadian Tire",
-    "city": "Matane, QC",
-    "branch": "Matane, QC",
-    "url": "https://www.canadiantire.ca/fr/pdp/lubrifiant-a-pellicule-seche-antiadhesif-dupont-bouteille-a-presser-120-ml-4-oz-0387817p.html",
-    "sku": "0387817",
-    "availability": "Il n’en reste que 1 #038-7817-8"
-  },
-  {
     "title": "Scellant pour gouttière/revêtement Rust-Oleum LeakSeal, toutes saisons, réparation de surface, blanc, 300 mL",
     "image": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641577/leakseal-gutter-and-siding-white-300ml-5dde50d2-eb94-4077-9029-dea17929b073.png?im=whresize&wid=200&hei=200",
     "price": 20.99,
@@ -106,5 +94,17 @@
     "url": "https://www.canadiantire.ca/fr/pdp/passoire-en-plastique-t-fal-1-94-l-1421334p.html",
     "sku": "1421334",
     "availability": "Il n’en reste que 1 #142-1334-2"
+  },
+  {
+    "title": "Nettoyant en vaporisateur pour bateau Boat-D-Funk, 32 oz",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790329/boat-d-funk-58f6ea2f-3cc5-4d18-9641-0cb92e5bc506-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 15.99,
+    "salePrice": 6.93,
+    "store": "Canadian Tire",
+    "city": "Matane, QC",
+    "branch": "Matane, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-en-vaporisateur-pour-bateau-boat-d-funk-32-oz-0790329p.html",
+    "sku": "0790329",
+    "availability": ""
   }
 ]

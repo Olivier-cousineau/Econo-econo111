@@ -1,5 +1,17 @@
 [
   {
+    "title": "Trousse de départ pour conservation et entreposage d'aliments Fresh & Save de Zwilling avec pompe à dépression portative",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430335/zwilling-food-storage-starter-kit-8pc-ee27a980-a5f6-4ca9-860b-310987524806-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 189.99,
+    "salePrice": 86.71,
+    "store": "Canadian Tire",
+    "city": "Espanola, ON",
+    "branch": "Espanola, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-depart-pour-conservation-et-entreposage-d-aliments-fresh-save-de-zwilling-avec-pompe-a-depression-portative-0430335p.html",
+    "sku": "0430335",
+    "availability": "Il n’en reste que 2 #043-0335-2"
+  },
+  {
     "title": "Liquide de refroidissement haute performance sans eau Evans, 1 gal",
     "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0293101/evans-high-performance-waterless-coolant-1gal-6a1734c6-1411-4245-8dc1-b1ccca48c952-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 79.99,
@@ -22,5 +34,17 @@
     "url": "https://www.canadiantire.ca/fr/pdp/liquide-de-preparation-evans-1-gal-0293102p.html",
     "sku": "0293102",
     "availability": "Il n’en reste que 5 #029-3102-4"
+  },
+  {
+    "title": "Cire pour bateau 3M Perfect It Gelcoat, 473 ml",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790316/3m-perfect-it-gelcoat-boat-wax-473ml-423b80a3-850b-4771-af0c-68811d2f6d4d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 39.99,
+    "salePrice": 19.33,
+    "store": "Canadian Tire",
+    "city": "Espanola, ON",
+    "branch": "Espanola, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/cire-pour-bateau-3m-perfect-it-gelcoat-473-ml-0790316p.html",
+    "sku": "0790316",
+    "availability": "Il n’en reste que 1 #079-0316-4"
   }
 ]
