@@ -1,17 +1,5 @@
 [
   {
-    "title": "Trousse de départ pour conservation et entreposage d'aliments Fresh & Save de Zwilling avec pompe à dépression portative",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430335/zwilling-food-storage-starter-kit-8pc-ee27a980-a5f6-4ca9-860b-310987524806-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 189.99,
-    "salePrice": 49.93,
-    "store": "Canadian Tire",
-    "city": "Brampton McLaughlin Road, ON",
-    "branch": "Brampton McLaughlin Road, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-depart-pour-conservation-et-entreposage-d-aliments-fresh-save-de-zwilling-avec-pompe-a-depression-portative-0430335p.html",
-    "sku": "0430335",
-    "availability": "Il n’en reste que 6 #043-0335-2"
-  },
-  {
     "title": "Luge rapide H2O Spider avec direction et freins",
     "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/winter-recreation/0821088/spider-snow-bike-e7a5d494-3744-4104-9151-337a07902637-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 99.99,
@@ -72,6 +60,42 @@
     "availability": ""
   },
   {
+    "title": "Scellant pour gouttière/revêtement Rust-Oleum LeakSeal, toutes saisons, réparation de surface, blanc, 300 mL",
+    "image": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641577/leakseal-gutter-and-siding-white-300ml-5dde50d2-eb94-4077-9029-dea17929b073.png?im=whresize&wid=200&hei=200",
+    "price": 20.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Brampton McLaughlin Road, ON",
+    "branch": "Brampton McLaughlin Road, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/scellant-pour-gouttiere-revetement-rust-oleum-leakseal-toutes-saisons-reparation-de-surface-blanc-300-ml-0641577p.html",
+    "sku": "0641577",
+    "availability": "Il n’en reste que 3 #064-1577-0"
+  },
+  {
+    "title": "Scellant élastomère pour réparation de toit Rust-Oleum LeakSeal, calfeutrant étanche, blanc, 300 mL",
+    "image": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641565/white-elastomeric-roof-repair-300ml-0f78804c-5fd4-4fdb-a840-df3fda845224.png?im=whresize&wid=200&hei=200",
+    "price": 20.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Brampton McLaughlin Road, ON",
+    "branch": "Brampton McLaughlin Road, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/scellant-elastomere-pour-reparation-de-toit-rust-oleum-leakseal-calfeutrant-etanche-blanc-300-ml-0641565p.html",
+    "sku": "0641565",
+    "availability": "13 En Stock#064-1565-8"
+  },
+  {
+    "title": "Bâton de mastic époxy en aluminium Star Brite pour les réparations d’urgence et permanentes, 113 g",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790148/starbrite-epoxy-aluminum-putty-stick-118ml-fffecaec-d627-4cdb-a375-93be85255f00-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 21.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Brampton McLaughlin Road, ON",
+    "branch": "Brampton McLaughlin Road, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/baton-de-mastic-epoxy-en-aluminium-star-brite-pour-les-reparations-d-urgence-et-permanentes-113-g-0790148p.html",
+    "sku": "0790148",
+    "availability": "Il n’en reste que 3 #079-0148-4"
+  },
+  {
     "title": "Savon moussant pour les mains avec pompe Live Clean, parfums variés, 400 mL",
     "image": "https://media-www.canadiantire.ca/product/living/home-essentials/laundry-hand-dish-cleaning-solutions/1531451/live-clean-foaming-hand-wash-cherry-400ml-6b60d65f-31b8-41f6-913a-c0513a6c0baf-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 6.29,
@@ -82,5 +106,41 @@
     "url": "https://www.canadiantire.ca/fr/pdp/savon-moussant-pour-les-mains-avec-pompe-live-clean-parfums-varies-400-ml-1531449p.html",
     "sku": "1531449",
     "availability": ""
+  },
+  {
+    "title": "Nettoyant en vaporisateur pour bateau Boat-D-Funk, 32 oz",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790329/boat-d-funk-58f6ea2f-3cc5-4d18-9641-0cb92e5bc506-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 15.99,
+    "salePrice": 6.93,
+    "store": "Canadian Tire",
+    "city": "Brampton McLaughlin Road, ON",
+    "branch": "Brampton McLaughlin Road, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-en-vaporisateur-pour-bateau-boat-d-funk-32-oz-0790329p.html",
+    "sku": "0790329",
+    "availability": "Il n’en reste que 6 #079-0329-4"
+  },
+  {
+    "title": "Nettoyant pour traînées noires de bateau Triton, transparent, 950 mL",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790182/triton-black-streak-remover-dd690654-10fb-48c5-933c-64bacf3f88b2.png?im=whresize&wid=200&hei=200",
+    "price": 17.99,
+    "salePrice": 1.93,
+    "store": "Canadian Tire",
+    "city": "Brampton McLaughlin Road, ON",
+    "branch": "Brampton McLaughlin Road, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-pour-trainees-noires-de-bateau-triton-transparent-950-ml-0790182p.html",
+    "sku": "0790182",
+    "availability": "Il n’en reste que 4 #079-0182-0"
+  },
+  {
+    "title": "Nettoyant anti-marque pour pont de bateau Triton, transparent, 950 mL",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790180/triton-deck-cleaner-d9eb8f73-eacb-4842-a243-47d0a3819b3e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 4.93,
+    "store": "Canadian Tire",
+    "city": "Brampton McLaughlin Road, ON",
+    "branch": "Brampton McLaughlin Road, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-anti-marque-pour-pont-de-bateau-triton-transparent-950-ml-0790180p.html",
+    "sku": "0790180",
+    "availability": "Il n’en reste que 5 #079-0180-4"
   }
 ]
