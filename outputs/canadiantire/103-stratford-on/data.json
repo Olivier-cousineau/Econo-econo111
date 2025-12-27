@@ -14,7 +14,7 @@
     "product_id": null,
     "sku": "0430335",
     "sku_formatted": "043-0335-2",
-    "availability": "10 En Stock#043-0335-2",
+    "availability": "Il n’en reste que 2 #043-0335-2",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -85,35 +85,6 @@
     "regular_price_raw": "Était±  16,99 $prix était 16,99 $",
     "price_sale_clean": "1,99",
     "price_original_clean": "16,99"
-  },
-  {
-    "store_id": "103",
-    "city": "Stratford, ON",
-    "name": "Super lubrifiant iniflammable Liquid Wrench, 311 g",
-    "title": "Super lubrifiant iniflammable Liquid Wrench, 311 g",
-    "price": 4.93,
-    "price_raw": "4,93 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0381516/liquid-wrench-super-lubricant-with-cerflon-1ec14604-f7c0-419e-b5a2-f3aa61dbb9dd-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0381516/liquid-wrench-super-lubricant-with-cerflon-1ec14604-f7c0-419e-b5a2-f3aa61dbb9dd-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/super-lubrifiant-iniflammable-liquid-wrench-311-g-0381516p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/super-lubrifiant-iniflammable-liquid-wrench-311-g-0381516p.html",
-    "product_id": null,
-    "sku": "0381516",
-    "sku_formatted": "038-1516-0",
-    "availability": "Il n’en reste que 2 #038-1516-0",
-    "badges": [
-      "Liquidation◊Mieux notés"
-    ],
-    "discount_percent": 50.65,
-    "liquidation_price": 4.93,
-    "liquidation_price_raw": "4,93 $",
-    "sale_price": 4.93,
-    "sale_price_raw": "4,93 $",
-    "regular_price": 9.99,
-    "regular_price_raw": "Était±  9,99 $prix était 9,99 $",
-    "price_sale_clean": "4,93",
-    "price_original_clean": "9,99"
   },
   {
     "store_id": "103",
