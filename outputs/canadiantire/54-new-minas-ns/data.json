@@ -14,7 +14,7 @@
     "product_id": null,
     "sku": "0430335",
     "sku_formatted": "043-0335-2",
-    "availability": "Il n’en reste que 4 #043-0335-2",
+    "availability": "Il n’en reste que 3 #043-0335-2",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -114,5 +114,34 @@
     "regular_price_raw": "29,99 $Était   et+ prix était à partir de 29,99 $",
     "price_sale_clean": "14,93",
     "price_original_clean": "29,99"
+  },
+  {
+    "store_id": "54",
+    "city": "New Minas, NS",
+    "name": "Passoire en plastique T-Fal avec grillage métallique, acier inoxydable, 6 po",
+    "title": "Passoire en plastique T-Fal avec grillage métallique, acier inoxydable, 6 po",
+    "price": 4.93,
+    "price_raw": "4,93 $",
+    "liquidation": true,
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-tools-thermometers/1421353/t-fal-6-strainer-a5ecafb2-014f-4c2a-bbe1-227313aca623-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-tools-thermometers/1421353/t-fal-6-strainer-a5ecafb2-014f-4c2a-bbe1-227313aca623-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/passoire-en-plastique-t-fal-avec-grillage-metallique-acier-inoxydable-6-po-1421353p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/passoire-en-plastique-t-fal-avec-grillage-metallique-acier-inoxydable-6-po-1421353p.html",
+    "product_id": null,
+    "sku": "1421353",
+    "sku_formatted": "142-1353-6",
+    "availability": "Il n’en reste que 1 #142-1353-6",
+    "badges": [
+      "Liquidation◊Mieux notés"
+    ],
+    "discount_percent": 55.14,
+    "liquidation_price": 4.93,
+    "liquidation_price_raw": "4,93 $",
+    "sale_price": 4.93,
+    "sale_price_raw": "4,93 $",
+    "regular_price": 10.99,
+    "regular_price_raw": "Était±  10,99 $prix était 10,99 $",
+    "price_sale_clean": "4,93",
+    "price_original_clean": "10,99"
   }
 ]
