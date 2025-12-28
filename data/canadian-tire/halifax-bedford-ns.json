@@ -1,17 +1,5 @@
 [
   {
-    "title": "Trousse de départ pour conservation et entreposage d'aliments Fresh & Save de Zwilling avec pompe à dépression portative",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430335/zwilling-food-storage-starter-kit-8pc-ee27a980-a5f6-4ca9-860b-310987524806-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 189.99,
-    "salePrice": 49.93,
-    "store": "Canadian Tire",
-    "city": "Halifax - Bedford, NS",
-    "branch": "Halifax - Bedford, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-depart-pour-conservation-et-entreposage-d-aliments-fresh-save-de-zwilling-avec-pompe-a-depression-portative-0430335p.html",
-    "sku": "0430335",
-    "availability": "Il n’en reste que 1 #043-0335-2"
-  },
-  {
     "title": "Luge rapide H2O Spider avec direction et freins",
     "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/winter-recreation/0821088/spider-snow-bike-e7a5d494-3744-4104-9151-337a07902637-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 99.99,
@@ -21,7 +9,7 @@
     "branch": "Halifax - Bedford, NS",
     "url": "https://www.canadiantire.ca/fr/pdp/luge-rapide-h2o-spider-avec-direction-et-freins-0821088p.html",
     "sku": "0821088",
-    "availability": "8 En Stock#082-1088-0"
+    "availability": "Il n’en reste que 1 #082-1088-0"
   },
   {
     "title": "Liquide de préparation Evans, 1 gal",
@@ -58,53 +46,5 @@
     "url": "https://www.canadiantire.ca/fr/pdp/joint-d-etancheite-instantane-permatex-the-right-stuff-rouge-147-ml-0382534p.html",
     "sku": "0382534",
     "availability": "Il n’en reste que 3 #038-2534-0"
-  },
-  {
-    "title": "Peinture en aérosol toute surface Rust-Oleum Specialty, laque, 312 g",
-    "image": "https://media-www.canadiantire.ca/product/fixing/paint/paints/0482395/specialty-lacquer-clear-312g-1c0cce3e-31bd-4ba3-99cb-67cfe9f88aac-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 15.99,
-    "salePrice": 7.93,
-    "store": "Canadian Tire",
-    "city": "Halifax - Bedford, NS",
-    "branch": "Halifax - Bedford, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/peinture-en-aerosol-toute-surface-rust-oleum-specialty-laque-312-g-0482525p.html",
-    "sku": "0482525",
-    "availability": ""
-  },
-  {
-    "title": "Peinture en aérosol toute surface camouflage Rust-Oleum Specialty, ultra mat, 340 g",
-    "image": "https://media-www.canadiantire.ca/product/fixing/paint/paints/0482280/camouflage-spray-army-green-7055e8cf-9565-40c0-bfd8-d27b9966f775-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 18.99,
-    "salePrice": 9.49,
-    "store": "Canadian Tire",
-    "city": "Halifax - Bedford, NS",
-    "branch": "Halifax - Bedford, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/peinture-en-aerosol-toute-surface-camouflage-rust-oleum-specialty-ultra-mat-340-g-0482280p.html",
-    "sku": "0482280",
-    "availability": ""
-  },
-  {
-    "title": "Bouche-toit incolore Rust-Oleum LeakSeal, intérieur/extérieur, scellant résistant à l'eau et aux intempéries, 946 mL",
-    "image": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641570/clear-roof-patch-946-ml-104767ac-428b-4e84-90b8-2619ef352249-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 48.99,
-    "salePrice": 24.49,
-    "store": "Canadian Tire",
-    "city": "Halifax - Bedford, NS",
-    "branch": "Halifax - Bedford, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/bouche-toit-incolore-rust-oleum-leakseal-interieur-exterieur-scellant-resistant-a-l-eau-et-aux-intemperies-946-ml-0641570p.html",
-    "sku": "0641570",
-    "availability": "Il n’en reste que 2 #064-1570-4"
-  },
-  {
-    "title": "Écumoire Lagostina en acier inoxydable avec tête en nylon",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-tools-thermometers/1420795/lagostina-skimmer-with-nylon-head-ac31e0f6-cc00-45c8-bda9-1e55178a585d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 16.99,
-    "salePrice": 7.93,
-    "store": "Canadian Tire",
-    "city": "Halifax - Bedford, NS",
-    "branch": "Halifax - Bedford, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/ecumoire-lagostina-en-acier-inoxydable-avec-tete-en-nylon-1420795p.html",
-    "sku": "1420795",
-    "availability": "Il n’en reste que 2 #142-0795-0"
   }
 ]
