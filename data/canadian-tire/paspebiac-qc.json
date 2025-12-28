@@ -9,31 +9,7 @@
     "branch": "Paspebiac, QC",
     "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-depart-pour-conservation-et-entreposage-d-aliments-fresh-save-de-zwilling-avec-pompe-a-depression-portative-0430335p.html",
     "sku": "0430335",
-    "availability": "20 En Stock#043-0335-2"
-  },
-  {
-    "title": "Joint d’étanchéité Permatex 59705 Ultra Copper, température maximale, 147 mL",
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0383831/permatex-ultra-copper-gasket-maker-f2db9a34-74fc-43c9-8c35-a1598bde05d2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 18.99,
-    "salePrice": 6.93,
-    "store": "Canadian Tire",
-    "city": "Paspebiac, QC",
-    "branch": "Paspebiac, QC",
-    "url": "https://www.canadiantire.ca/fr/pdp/joint-d-etancheite-permatex-59705-ultra-copper-temperature-maximale-147-ml-0383831p.html",
-    "sku": "0383831",
-    "availability": "Il n’en reste que 2 #038-3831-6"
-  },
-  {
-    "title": "Lubrifiant à pellicule sèche antiadhésif DuPont, bouteille à presser, 120 mL (4 oz)",
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0387817/dupont-non-stick-4oz-squeeze-486595e9-13b3-42a0-9c33-1d91f9ff2266-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 9.49,
-    "salePrice": 2.93,
-    "store": "Canadian Tire",
-    "city": "Paspebiac, QC",
-    "branch": "Paspebiac, QC",
-    "url": "https://www.canadiantire.ca/fr/pdp/lubrifiant-a-pellicule-seche-antiadhesif-dupont-bouteille-a-presser-120-ml-4-oz-0387817p.html",
-    "sku": "0387817",
-    "availability": ""
+    "availability": "18 En Stock#043-0335-2"
   },
   {
     "title": "Scellant élastomère pour réparation de toit Rust-Oleum LeakSeal, calfeutrant étanche, blanc, 300 mL",
@@ -58,5 +34,29 @@
     "url": "https://www.canadiantire.ca/fr/pdp/ecumoire-en-nylon-heritage-1423753p.html",
     "sku": "1423753",
     "availability": "Il n’en reste que 3 #142-3753-2"
+  },
+  {
+    "title": "Savon moussant pour les mains Method avec pompe, parfum thé vert et aloès, 300 mL",
+    "image": "https://media-www.canadiantire.ca/product/living/home-essentials/laundry-hand-dish-cleaning-solutions/0534246/method-handwash-foaminggreentea-aloe-300ml-6d897f4a-6b36-4023-8b65-a306d6961b85-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 5.99,
+    "salePrice": 1.5,
+    "store": "Canadian Tire",
+    "city": "Paspebiac, QC",
+    "branch": "Paspebiac, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/savon-moussant-pour-les-mains-method-avec-pompe-parfum-the-vert-et-aloes-300-ml-0534246p.html",
+    "sku": "0534246",
+    "availability": "Il n’en reste que 1 #053-4246-6"
+  },
+  {
+    "title": "Nettoyant pour moisissure de bateau Triton, transparent, 950 mL",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790183/triton-mildew-rmvr-5436fc01-e399-4c72-8dd6-e1986c6c7a97-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 17.99,
+    "salePrice": 1.93,
+    "store": "Canadian Tire",
+    "city": "Paspebiac, QC",
+    "branch": "Paspebiac, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-pour-moisissure-de-bateau-triton-transparent-950-ml-0790183p.html",
+    "sku": "0790183",
+    "availability": ""
   }
 ]
