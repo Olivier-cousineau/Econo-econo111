@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2025-12-28T05:01:39.736Z",
+  "generatedAt": "2025-12-28T07:43:54.512Z",
   "stores": [
     {
-      "id": "178",
-      "city": "Kapuskasing, ON",
-      "status": "skipped",
-      "details": "nothing to commit"
-    },
-    {
-      "id": "307",
-      "city": "Sept-Iles, QC",
-      "status": "skipped",
-      "details": "nothing to commit"
-    },
-    {
-      "id": "21",
-      "city": "Chatham, ON",
+      "id": "456",
+      "city": "Gaspe, QC",
       "status": "committed",
       "details": "3 produits"
     },
     {
-      "id": "135",
-      "city": "Wallaceburg, ON",
+      "id": "95",
+      "city": "Sault Ste. Marie, ON",
+      "status": "skipped",
+      "details": "nothing to commit"
+    },
+    {
+      "id": "618",
+      "city": "Tantallon, NS",
+      "status": "committed",
+      "details": "4 produits"
+    },
+    {
+      "id": "55",
+      "city": "Leamington, ON",
+      "status": "committed",
+      "details": "2 produits"
+    },
+    {
+      "id": "199",
+      "city": "Windsor East, ON",
+      "status": "skipped",
+      "details": "nothing to commit"
+    },
+    {
+      "id": "172",
+      "city": "Essex, ON",
+      "status": "committed",
+      "details": "2 produits"
+    },
+    {
+      "id": "289",
+      "city": "Halifax - Lwr. Sackville, NS",
       "status": "committed",
       "details": "3 produits"
     },
     {
-      "id": "13",
-      "city": "Bridgewater, NS",
+      "id": "236",
+      "city": "Windsor South, ON",
       "status": "committed",
-      "details": "2 produits"
-    },
-    {
-      "id": "3",
-      "city": "Amherst, NS",
-      "status": "committed",
-      "details": "1 produits"
-    },
-    {
-      "id": "215",
-      "city": "Tilbury, ON",
-      "status": "committed",
-      "details": "2 produits"
-    },
-    {
-      "id": "132",
-      "city": "Summerside, PEI 474 Granville Street",
-      "status": "committed",
-      "details": "1 produits"
+      "details": "4 produits"
     }
   ],
   "failedTwice": [],
