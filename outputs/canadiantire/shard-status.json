@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2025-12-28T10:28:42.206Z",
+  "generatedAt": "2025-12-28T13:10:05.267Z",
   "stores": [
     {
-      "id": "224",
-      "city": "Halifax - Bedford, NS",
-      "status": "committed",
-      "details": "4 produits"
-    },
-    {
-      "id": "465",
-      "city": "Halifax - Bayers Lake, NS",
-      "status": "committed",
-      "details": "4 produits"
-    },
-    {
-      "id": "121",
-      "city": "Windsor University Plaza, ON",
+      "id": "113",
+      "city": "Truro, NS",
       "status": "committed",
       "details": "2 produits"
     },
     {
-      "id": "186",
-      "city": "Halifax - Spryfield, NS",
-      "status": "committed",
-      "details": "1 produits"
-    },
-    {
-      "id": "619",
-      "city": "Elmsdale, NS",
-      "status": "committed",
-      "details": "2 produits"
-    },
-    {
-      "id": "44",
-      "city": "Halifax, NS",
-      "status": "committed",
-      "details": "11 produits"
-    },
-    {
-      "id": "41",
-      "city": "Dartmouth Crossing, NS",
+      "id": "281",
+      "city": "Amherstburg, ON",
       "status": "committed",
       "details": "3 produits"
     },
     {
-      "id": "436",
-      "city": "Halifax - Cole Harbour, NS",
+      "id": "20",
+      "city": "Charlottetown, PEI 20 Babineau Avenue",
+      "status": "committed",
+      "details": "6 produits"
+    },
+    {
+      "id": "406",
+      "city": "Hearst, ON",
       "status": "skipped",
       "details": "nothing to commit"
+    },
+    {
+      "id": "279",
+      "city": "Wawa, ON",
+      "status": "committed",
+      "details": "1 produits"
+    },
+    {
+      "id": "67",
+      "city": "New Glasgow, NS",
+      "status": "committed",
+      "details": "2 produits"
+    },
+    {
+      "id": "2",
+      "city": "Antigonish, NS",
+      "status": "committed",
+      "details": "5 produits"
+    },
+    {
+      "id": "901",
+      "city": "Labrador City, NL",
+      "status": "committed",
+      "details": "4 produits"
     }
   ],
   "failedTwice": [],
