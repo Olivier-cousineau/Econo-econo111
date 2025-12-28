@@ -9,7 +9,7 @@
     "branch": "Windsor South, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-depart-pour-conservation-et-entreposage-d-aliments-fresh-save-de-zwilling-avec-pompe-a-depression-portative-0430335p.html",
     "sku": "0430335",
-    "availability": "Il n’en reste que 7 #043-0335-2"
+    "availability": "Il n’en reste que 1 #043-0335-2"
   },
   {
     "title": "Liquide de préparation Evans, 1 gal",
@@ -22,5 +22,29 @@
     "url": "https://www.canadiantire.ca/fr/pdp/liquide-de-preparation-evans-1-gal-0293102p.html",
     "sku": "0293102",
     "availability": "Il n’en reste que 3 #029-3102-4"
+  },
+  {
+    "title": "Bols de cuisine empilables MASTER Chef en plastique, paq. 8",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/bakeware-baking-prep/1424985/masterchef-8-piece-bake-prep-set-3e85a64e-f1ef-47d2-8117-bf07641c9608-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 32.99,
+    "salePrice": 12.93,
+    "store": "Canadian Tire",
+    "city": "Windsor South, ON",
+    "branch": "Windsor South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/bols-de-cuisine-empilables-master-chef-en-plastique-paq-8-1424985p.html",
+    "sku": "1424985",
+    "availability": "Il n’en reste que 1 #142-4985-4"
+  },
+  {
+    "title": "Savon à mains en gel Mrs. Meyer’s avec pompe, parfums variés, 370 mL",
+    "image": "https://media-www.canadiantire.ca/product/living/home-essentials/laundry-hand-dish-cleaning-solutions/1530444/mrs-meyer-s-hand-soap-lavender--631a1efb-fee8-4978-b118-caf7a6ba572b.png?im=whresize&wid=200&hei=200",
+    "price": 7.49,
+    "salePrice": 3.74,
+    "store": "Canadian Tire",
+    "city": "Windsor South, ON",
+    "branch": "Windsor South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/savon-a-mains-en-gel-mrs-meyer-s-avec-pompe-parfums-varies-370-ml-1530438p.html",
+    "sku": "1530438",
+    "availability": ""
   }
 ]
