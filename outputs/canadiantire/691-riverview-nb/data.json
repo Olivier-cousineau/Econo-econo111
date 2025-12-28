@@ -14,7 +14,7 @@
     "product_id": null,
     "sku": "0430335",
     "sku_formatted": "043-0335-2",
-    "availability": "10 En Stock#043-0335-2",
+    "availability": "Il n’en reste que 6 #043-0335-2",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -72,7 +72,7 @@
     "product_id": null,
     "sku": "1422641",
     "sku_formatted": "142-2641-4",
-    "availability": "20 En Stock#142-2641-4",
+    "availability": "15 En Stock#142-2641-4",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -114,63 +114,5 @@
     "regular_price_raw": "29,99 $Était   et+ prix était à partir de 29,99 $",
     "price_sale_clean": "14,93",
     "price_original_clean": "29,99"
-  },
-  {
-    "store_id": "691",
-    "city": "Riverview, NB",
-    "name": "Lubrifiant silicone DuPont Home, sécuritaire pour les surfaces automobiles ou marines, bouteille à presser, 120 mL (4 oz)",
-    "title": "Lubrifiant silicone DuPont Home, sécuritaire pour les surfaces automobiles ou marines, bouteille à presser, 120 mL (4 oz)",
-    "price": 3.93,
-    "price_raw": "3,93 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0387816/dupont-silicone-4oz-squeeze-c8ac129d-9de8-486f-b0f2-c50cd5346e24-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0387816/dupont-silicone-4oz-squeeze-c8ac129d-9de8-486f-b0f2-c50cd5346e24-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/lubrifiant-silicone-dupont-home-securitaire-pour-les-surfaces-automobiles-ou-marines-bouteille-a-presser-120-ml-4-oz-0387816p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/lubrifiant-silicone-dupont-home-securitaire-pour-les-surfaces-automobiles-ou-marines-bouteille-a-presser-120-ml-4-oz-0387816p.html",
-    "product_id": null,
-    "sku": "0387816",
-    "sku_formatted": "038-7816-0",
-    "availability": "Il n’en reste que 7 #038-7816-0",
-    "badges": [
-      "Liquidation◊Exclusivité"
-    ],
-    "discount_percent": 64.24,
-    "liquidation_price": 3.93,
-    "liquidation_price_raw": "3,93 $",
-    "sale_price": 3.93,
-    "sale_price_raw": "3,93 $",
-    "regular_price": 10.99,
-    "regular_price_raw": "Était±  10,99 $prix était 10,99 $",
-    "price_sale_clean": "3,93",
-    "price_original_clean": "10,99"
-  },
-  {
-    "store_id": "691",
-    "city": "Riverview, NB",
-    "name": "Lubrifiant tout usage Blaster PB-50 Pro-Grade, 311 g",
-    "title": "Lubrifiant tout usage Blaster PB-50 Pro-Grade, 311 g",
-    "price": 4.93,
-    "price_raw": "4,93 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0380403/blaster-pb-50-1d02ccb0-e88f-4c0a-867a-191dac4c27b7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0380403/blaster-pb-50-1d02ccb0-e88f-4c0a-867a-191dac4c27b7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/lubrifiant-tout-usage-blaster-pb-50-pro-grade-311-g-0380403p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/lubrifiant-tout-usage-blaster-pb-50-pro-grade-311-g-0380403p.html",
-    "product_id": null,
-    "sku": "0380403",
-    "sku_formatted": "038-0403-4",
-    "availability": "Il n’en reste que 5 #038-0403-4",
-    "badges": [
-      "Liquidation◊Mieux notés"
-    ],
-    "discount_percent": 57.09,
-    "liquidation_price": 4.93,
-    "liquidation_price_raw": "4,93 $",
-    "sale_price": 4.93,
-    "sale_price_raw": "4,93 $",
-    "regular_price": 11.49,
-    "regular_price_raw": "Était±  11,49 $prix était 11,49 $",
-    "price_sale_clean": "4,93",
-    "price_original_clean": "11,49"
   }
 ]
