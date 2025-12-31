@@ -9,7 +9,7 @@
     "branch": "La Plaine, QC",
     "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-depart-pour-conservation-et-entreposage-d-aliments-fresh-save-de-zwilling-avec-pompe-a-depression-portative-0430335p.html",
     "sku": "0430335",
-    "availability": "25 En Stock#043-0335-2"
+    "availability": "19 En Stock#043-0335-2"
   },
   {
     "title": "Batterie de cuisine en cuivre Lagostina Artiste-Clad allant au four, paq. 12",
@@ -22,5 +22,29 @@
     "url": "https://www.canadiantire.ca/fr/pdp/batterie-de-cuisine-en-cuivre-lagostina-artiste-clad-allant-au-four-paq-12-1422641p.html",
     "sku": "1422641",
     "availability": ""
+  },
+  {
+    "title": "Nettoyant nautique pour écran, 230 mL",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790328/marine-display-cleaner-f2601da5-df42-4d33-9177-1be27b9b3298-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 6.79,
+    "store": "Canadian Tire",
+    "city": "La Plaine, QC",
+    "branch": "La Plaine, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-nautique-pour-ecran-230-ml-0790328p.html",
+    "sku": "0790328",
+    "availability": "11 En Stock#079-0328-6"
+  },
+  {
+    "title": "Nettoyant pour la cuisine VIM Refill Eco-Pack Power & Shine, 70 mL",
+    "image": "https://media-www.canadiantire.ca/product/living/cleaning/household-cleaning-solutions/1531492/vim-refill-eco-pack-power-shine-kitchen-70ml-6678f100-f210-47a3-ad52-1e74ce7039ae-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 3.99,
+    "salePrice": 1.93,
+    "store": "Canadian Tire",
+    "city": "La Plaine, QC",
+    "branch": "La Plaine, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-pour-la-cuisine-vim-refill-eco-pack-power-shine-70-ml-1531492p.html",
+    "sku": "1531492",
+    "availability": "36 En Stock#153-1492-8"
   }
 ]
