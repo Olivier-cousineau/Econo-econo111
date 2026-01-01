@@ -9,7 +9,7 @@
     "branch": "Jonquiere, QC",
     "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-depart-pour-conservation-et-entreposage-d-aliments-fresh-save-de-zwilling-avec-pompe-a-depression-portative-0430335p.html",
     "sku": "0430335",
-    "availability": "64 En Stock#043-0335-2"
+    "availability": "56 En Stock#043-0335-2"
   },
   {
     "title": "Luge rapide H2O Spider avec direction et freins",
@@ -21,7 +21,7 @@
     "branch": "Jonquiere, QC",
     "url": "https://www.canadiantire.ca/fr/pdp/luge-rapide-h2o-spider-avec-direction-et-freins-0821088p.html",
     "sku": "0821088",
-    "availability": "15 En Stock#082-1088-0"
+    "availability": "14 En Stock#082-1088-0"
   },
   {
     "title": "Batterie de cuisine en cuivre Lagostina Artiste-Clad allant au four, paq. 12",
@@ -82,29 +82,5 @@
     "url": "https://www.canadiantire.ca/fr/pdp/scellant-permatex-high-tack-spray-a-gasket-99ma-vaporisateur-255-g-0382511p.html",
     "sku": "0382511",
     "availability": "Il n’en reste que 1 #038-2511-4"
-  },
-  {
-    "title": "Nettoyant de cale de bateau Triton, 950 mL",
-    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790139/triton-bilge-cleaner-9c25cf87-1580-4000-87b6-6b03fb0b7aaf.png?im=whresize&wid=200&hei=200",
-    "price": 16.99,
-    "salePrice": 1.93,
-    "store": "Canadian Tire",
-    "city": "Jonquiere, QC",
-    "branch": "Jonquiere, QC",
-    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-de-cale-de-bateau-triton-950-ml-0790139p.html",
-    "sku": "0790139",
-    "availability": ""
-  },
-  {
-    "title": "Nettoyant pour vinyle et cuir de bateau Triton, 950 mL",
-    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790184/triton-vinyl-leather-cleaner-23f32285-0e63-4046-bef7-2120a7382ff5.png?im=whresize&wid=200&hei=200",
-    "price": 24.99,
-    "salePrice": 5.93,
-    "store": "Canadian Tire",
-    "city": "Jonquiere, QC",
-    "branch": "Jonquiere, QC",
-    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-pour-vinyle-et-cuir-de-bateau-triton-950-ml-0790184p.html",
-    "sku": "0790184",
-    "availability": ""
   }
 ]

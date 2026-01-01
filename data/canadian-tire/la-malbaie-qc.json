@@ -21,7 +21,7 @@
     "branch": "La Malbaie, QC",
     "url": "https://www.canadiantire.ca/fr/pdp/luge-rapide-h2o-spider-avec-direction-et-freins-0821088p.html",
     "sku": "0821088",
-    "availability": "Il n’en reste que 2 #082-1088-0"
+    "availability": "Il n’en reste que 1 #082-1088-0"
   },
   {
     "title": "Batterie de cuisine en cuivre Lagostina Artiste-Clad allant au four, paq. 12",
@@ -34,42 +34,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/batterie-de-cuisine-en-cuivre-lagostina-artiste-clad-allant-au-four-paq-12-1422641p.html",
     "sku": "1422641",
     "availability": "Il n’en reste que 1 #142-2641-4"
-  },
-  {
-    "title": "Liquide de préparation Evans, 1 gal",
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0293102/evans-prep-fluid-1gal-5e8adf31-ac7c-40e9-9306-c6aa92e46670-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 49.99,
-    "salePrice": 12.93,
-    "store": "Canadian Tire",
-    "city": "La Malbaie, QC",
-    "branch": "La Malbaie, QC",
-    "url": "https://www.canadiantire.ca/fr/pdp/liquide-de-preparation-evans-1-gal-0293102p.html",
-    "sku": "0293102",
-    "availability": "Il n’en reste que 4 #029-3102-4"
-  },
-  {
-    "title": "Joint d’étanchéité Permatex 59705 Ultra Copper, température maximale, 147 mL",
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0383831/permatex-ultra-copper-gasket-maker-f2db9a34-74fc-43c9-8c35-a1598bde05d2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 18.99,
-    "salePrice": 6.93,
-    "store": "Canadian Tire",
-    "city": "La Malbaie, QC",
-    "branch": "La Malbaie, QC",
-    "url": "https://www.canadiantire.ca/fr/pdp/joint-d-etancheite-permatex-59705-ultra-copper-temperature-maximale-147-ml-0383831p.html",
-    "sku": "0383831",
-    "availability": "Il n’en reste que 2 #038-3831-6"
-  },
-  {
-    "title": "Bols de cuisine empilables MASTER Chef en plastique, paq. 8",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/bakeware-baking-prep/1424985/masterchef-8-piece-bake-prep-set-3e85a64e-f1ef-47d2-8117-bf07641c9608-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 32.99,
-    "salePrice": 12.93,
-    "store": "Canadian Tire",
-    "city": "La Malbaie, QC",
-    "branch": "La Malbaie, QC",
-    "url": "https://www.canadiantire.ca/fr/pdp/bols-de-cuisine-empilables-master-chef-en-plastique-paq-8-1424985p.html",
-    "sku": "1424985",
-    "availability": "Il n’en reste que 1 #142-4985-4"
   },
   {
     "title": "Peinture d'intérieur en aérosol toute surface Rust-Oleum Accents, texture de pierre, 340 g",
@@ -94,6 +58,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/bouche-toit-incolore-rust-oleum-leakseal-interieur-exterieur-scellant-resistant-a-l-eau-et-aux-intemperies-3-78-l-0641571p.html",
     "sku": "0641571",
     "availability": "Il n’en reste que 4 #064-1571-2"
+  },
+  {
+    "title": "Pectine Bernardin sans sucre pour confiture à congeler, 45 g",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/canning/0422575/sugar-free-freezer-jam-pectin-76166fc9-82d4-418b-bdf2-a8b7f0bd3fc9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 3.99,
+    "salePrice": 0.93,
+    "store": "Canadian Tire",
+    "city": "La Malbaie, QC",
+    "branch": "La Malbaie, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/pectine-bernardin-sans-sucre-pour-confiture-a-congeler-45-g-0422575p.html",
+    "sku": "0422575",
+    "availability": ""
   },
   {
     "title": "Passoire en plastique T-Fal avec grillage métallique, acier inoxydable, 6 po",
