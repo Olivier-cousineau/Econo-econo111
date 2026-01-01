@@ -9,7 +9,7 @@
     "branch": "Maniwaki, QC",
     "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-depart-pour-conservation-et-entreposage-d-aliments-fresh-save-de-zwilling-avec-pompe-a-depression-portative-0430335p.html",
     "sku": "0430335",
-    "availability": "Il n’en reste que 7 #043-0335-2"
+    "availability": "Il n’en reste que 4 #043-0335-2"
   },
   {
     "title": "Nettoyant pour vitres et plastiques Rain-X X-treme Clean, 355 ml",
@@ -21,18 +21,6 @@
     "branch": "Maniwaki, QC",
     "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-pour-vitres-et-plastiques-rain-x-x-treme-clean-355-ml-0384123p.html",
     "sku": "0384123",
-    "availability": ""
-  },
-  {
-    "title": "Savon à mains en gel Method avec pompe, parfums variés, 354 mL",
-    "image": "https://media-www.canadiantire.ca/product/living/home-essentials/laundry-hand-dish-cleaning-solutions/0532669/method-gel-hand-wash-grapefruit-354ml-c1dd5583-0306-44b3-bf84-f1fcba79d027-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 4.49,
-    "salePrice": 2.03,
-    "store": "Canadian Tire",
-    "city": "Maniwaki, QC",
-    "branch": "Maniwaki, QC",
-    "url": "https://www.canadiantire.ca/fr/pdp/savon-a-mains-en-gel-method-avec-pompe-parfums-varies-354-ml-1530236p.html",
-    "sku": "1530236",
     "availability": ""
   },
   {
@@ -48,6 +36,18 @@
     "availability": "Il n’en reste que 1 #038-8036-0"
   },
   {
+    "title": "Savon à mains en gel Method avec pompe, parfums variés, 354 mL",
+    "image": "https://media-www.canadiantire.ca/product/living/home-essentials/laundry-hand-dish-cleaning-solutions/0532669/method-gel-hand-wash-grapefruit-354ml-c1dd5583-0306-44b3-bf84-f1fcba79d027-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 4.49,
+    "salePrice": 2.03,
+    "store": "Canadian Tire",
+    "city": "Maniwaki, QC",
+    "branch": "Maniwaki, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/savon-a-mains-en-gel-method-avec-pompe-parfums-varies-354-ml-1530236p.html",
+    "sku": "1530236",
+    "availability": ""
+  },
+  {
     "title": "Peinture d'intérieur en aérosol toute surface Rust-Oleum Accents, texture de pierre, 340 g",
     "image": "https://media-www.canadiantire.ca/product/fixing/paint/paints/0482380/stone-spray-paint-black-granite-f8538694-ebde-401f-94c6-57b81bcebc2e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 29.99,
@@ -60,18 +60,6 @@
     "availability": ""
   },
   {
-    "title": "Aérosol réfléchissant non permanent Albedo100, incolore, 130 g",
-    "image": "https://media-www.canadiantire.ca/product/fixing/paint/paints/0482250/albedo-100-non-permanent-clear-reflective-spray-textiles-5f4c70e3-3a99-46bf-ba98-24b081e74339.png?im=whresize&wid=200&hei=200",
-    "price": 24.99,
-    "salePrice": 1.93,
-    "store": "Canadian Tire",
-    "city": "Maniwaki, QC",
-    "branch": "Maniwaki, QC",
-    "url": "https://www.canadiantire.ca/fr/pdp/aerosol-reflechissant-non-permanent-albedo100-incolore-130-g-0482250p.html",
-    "sku": "0482250",
-    "availability": "Il n’en reste que 3 #048-2250-0"
-  },
-  {
     "title": "Écumoire Lagostina en acier inoxydable avec tête en nylon",
     "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-tools-thermometers/1420795/lagostina-skimmer-with-nylon-head-ac31e0f6-cc00-45c8-bda9-1e55178a585d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 16.99,
@@ -82,6 +70,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/ecumoire-lagostina-en-acier-inoxydable-avec-tete-en-nylon-1420795p.html",
     "sku": "1420795",
     "availability": "Il n’en reste que 1 #142-0795-0"
+  },
+  {
+    "title": "Aérosol réfléchissant non permanent Albedo100, incolore, 130 g",
+    "image": "https://media-www.canadiantire.ca/product/fixing/paint/paints/0482250/albedo-100-non-permanent-clear-reflective-spray-textiles-5f4c70e3-3a99-46bf-ba98-24b081e74339.png?im=whresize&wid=200&hei=200",
+    "price": 24.99,
+    "salePrice": 1.93,
+    "store": "Canadian Tire",
+    "city": "Maniwaki, QC",
+    "branch": "Maniwaki, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/aerosol-reflechissant-non-permanent-albedo100-incolore-130-g-0482250p.html",
+    "sku": "0482250",
+    "availability": "Il n’en reste que 3 #048-2250-0"
   },
   {
     "title": "Additif Hy-Per Lube Quick Heat, 473 ml",
