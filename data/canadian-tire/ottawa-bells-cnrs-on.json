@@ -1,5 +1,17 @@
 [
   {
+    "title": "Trousse de départ pour conservation et entreposage d'aliments Fresh & Save de Zwilling avec pompe à dépression portative",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430335/zwilling-food-storage-starter-kit-8pc-ee27a980-a5f6-4ca9-860b-310987524806-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 189.99,
+    "salePrice": 49.98,
+    "store": "Canadian Tire",
+    "city": "Ottawa Bells Cnrs, ON",
+    "branch": "Ottawa Bells Cnrs, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-depart-pour-conservation-et-entreposage-d-aliments-fresh-save-de-zwilling-avec-pompe-a-depression-portative-0430335p.html",
+    "sku": "0430335",
+    "availability": "Il n’en reste que 3 #043-0335-2"
+  },
+  {
     "title": "Luge rapide H2O Spider avec direction et freins",
     "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/winter-recreation/0821088/spider-snow-bike-e7a5d494-3744-4104-9151-337a07902637-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 99.99,
@@ -9,7 +21,7 @@
     "branch": "Ottawa Bells Cnrs, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/luge-rapide-h2o-spider-avec-direction-et-freins-0821088p.html",
     "sku": "0821088",
-    "availability": "Il n’en reste que 3 #082-1088-0"
+    "availability": "Il n’en reste que 1 #082-1088-0"
   },
   {
     "title": "Batterie de cuisine en cuivre Lagostina Artiste-Clad allant au four, paq. 12",
@@ -48,18 +60,6 @@
     "availability": "Il n’en reste que 5 #038-2534-0"
   },
   {
-    "title": "Scellant élastomère pour réparation de toit Rust-Oleum LeakSeal, calfeutrant étanche, blanc, 300 mL",
-    "image": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641565/white-elastomeric-roof-repair-300ml-0f78804c-5fd4-4fdb-a840-df3fda845224.png?im=whresize&wid=200&hei=200",
-    "price": 20.99,
-    "salePrice": 9.93,
-    "store": "Canadian Tire",
-    "city": "Ottawa Bells Cnrs, ON",
-    "branch": "Ottawa Bells Cnrs, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/scellant-elastomere-pour-reparation-de-toit-rust-oleum-leakseal-calfeutrant-etanche-blanc-300-ml-0641565p.html",
-    "sku": "0641565",
-    "availability": "Il n’en reste que 2 #064-1565-8"
-  },
-  {
     "title": "Écumoire Lagostina en acier inoxydable avec tête en nylon",
     "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-tools-thermometers/1420795/lagostina-skimmer-with-nylon-head-ac31e0f6-cc00-45c8-bda9-1e55178a585d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 16.99,
@@ -70,5 +70,17 @@
     "url": "https://www.canadiantire.ca/fr/pdp/ecumoire-lagostina-en-acier-inoxydable-avec-tete-en-nylon-1420795p.html",
     "sku": "1420795",
     "availability": "Il n’en reste que 1 #142-0795-0"
+  },
+  {
+    "title": "Scellant élastomère pour réparation de toit Rust-Oleum LeakSeal, calfeutrant étanche, blanc, 300 mL",
+    "image": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641565/white-elastomeric-roof-repair-300ml-0f78804c-5fd4-4fdb-a840-df3fda845224.png?im=whresize&wid=200&hei=200",
+    "price": 20.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Ottawa Bells Cnrs, ON",
+    "branch": "Ottawa Bells Cnrs, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/scellant-elastomere-pour-reparation-de-toit-rust-oleum-leakseal-calfeutrant-etanche-blanc-300-ml-0641565p.html",
+    "sku": "0641565",
+    "availability": "Il n’en reste que 2 #064-1565-8"
   }
 ]

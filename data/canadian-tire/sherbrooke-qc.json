@@ -9,7 +9,7 @@
     "branch": "Sherbrooke, QC",
     "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-depart-pour-conservation-et-entreposage-d-aliments-fresh-save-de-zwilling-avec-pompe-a-depression-portative-0430335p.html",
     "sku": "0430335",
-    "availability": "Il n’en reste que 4 #043-0335-2"
+    "availability": "Il n’en reste que 3 #043-0335-2"
   },
   {
     "title": "Luge rapide H2O Spider avec direction et freins",
@@ -21,7 +21,7 @@
     "branch": "Sherbrooke, QC",
     "url": "https://www.canadiantire.ca/fr/pdp/luge-rapide-h2o-spider-avec-direction-et-freins-0821088p.html",
     "sku": "0821088",
-    "availability": "197 En Stock#082-1088-0"
+    "availability": "192 En Stock#082-1088-0"
   },
   {
     "title": "Bols de cuisine empilables MASTER Chef en plastique, paq. 8",
@@ -33,7 +33,7 @@
     "branch": "Sherbrooke, QC",
     "url": "https://www.canadiantire.ca/fr/pdp/bols-de-cuisine-empilables-master-chef-en-plastique-paq-8-1424985p.html",
     "sku": "1424985",
-    "availability": "275 En Stock#142-4985-4"
+    "availability": "269 En Stock#142-4985-4"
   },
   {
     "title": "Peinture en aérosol toute surface Rust-Oleum Specialty, laque, 312 g",
@@ -46,29 +46,5 @@
     "url": "https://www.canadiantire.ca/fr/pdp/peinture-en-aerosol-toute-surface-rust-oleum-specialty-laque-312-g-0482525p.html",
     "sku": "0482525",
     "availability": ""
-  },
-  {
-    "title": "Scellant pour gouttière/revêtement Rust-Oleum LeakSeal, toutes saisons, réparation de surface, blanc, 300 mL",
-    "image": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641577/leakseal-gutter-and-siding-white-300ml-5dde50d2-eb94-4077-9029-dea17929b073.png?im=whresize&wid=200&hei=200",
-    "price": 20.99,
-    "salePrice": 9.93,
-    "store": "Canadian Tire",
-    "city": "Sherbrooke, QC",
-    "branch": "Sherbrooke, QC",
-    "url": "https://www.canadiantire.ca/fr/pdp/scellant-pour-gouttiere-revetement-rust-oleum-leakseal-toutes-saisons-reparation-de-surface-blanc-300-ml-0641577p.html",
-    "sku": "0641577",
-    "availability": ""
-  },
-  {
-    "title": "Scellant élastomère pour réparation de toit Rust-Oleum LeakSeal, calfeutrant étanche, blanc, 300 mL",
-    "image": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641565/white-elastomeric-roof-repair-300ml-0f78804c-5fd4-4fdb-a840-df3fda845224.png?im=whresize&wid=200&hei=200",
-    "price": 20.99,
-    "salePrice": 9.93,
-    "store": "Canadian Tire",
-    "city": "Sherbrooke, QC",
-    "branch": "Sherbrooke, QC",
-    "url": "https://www.canadiantire.ca/fr/pdp/scellant-elastomere-pour-reparation-de-toit-rust-oleum-leakseal-calfeutrant-etanche-blanc-300-ml-0641565p.html",
-    "sku": "0641565",
-    "availability": "Il n’en reste que 1 #064-1565-8"
   }
 ]
