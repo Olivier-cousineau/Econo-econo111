@@ -85,5 +85,34 @@
     "regular_price_raw": "Était±  18,99 $prix était 18,99 $",
     "price_sale_clean": "6,93",
     "price_original_clean": "18,99"
+  },
+  {
+    "store_id": "14",
+    "city": "Brockville, ON",
+    "name": "Bols de cuisine empilables MASTER Chef en plastique, paq. 8",
+    "title": "Bols de cuisine empilables MASTER Chef en plastique, paq. 8",
+    "price": 12.93,
+    "price_raw": "12,93 $",
+    "liquidation": true,
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/bakeware-baking-prep/1424985/masterchef-8-piece-bake-prep-set-3e85a64e-f1ef-47d2-8117-bf07641c9608-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/living/kitchen/bakeware-baking-prep/1424985/masterchef-8-piece-bake-prep-set-3e85a64e-f1ef-47d2-8117-bf07641c9608-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/bols-de-cuisine-empilables-master-chef-en-plastique-paq-8-1424985p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/bols-de-cuisine-empilables-master-chef-en-plastique-paq-8-1424985p.html",
+    "product_id": null,
+    "sku": "1424985",
+    "sku_formatted": "142-4985-4",
+    "availability": "Il n’en reste que 5 #142-4985-4",
+    "badges": [
+      "Liquidation◊Mieux notés"
+    ],
+    "discount_percent": 60.81,
+    "liquidation_price": 12.93,
+    "liquidation_price_raw": "12,93 $",
+    "sale_price": 12.93,
+    "sale_price_raw": "12,93 $",
+    "regular_price": 32.99,
+    "regular_price_raw": "Était±  32,99 $prix était 32,99 $",
+    "price_sale_clean": "12,93",
+    "price_original_clean": "32,99"
   }
 ]
