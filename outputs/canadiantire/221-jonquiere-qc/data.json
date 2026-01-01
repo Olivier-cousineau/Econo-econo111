@@ -14,7 +14,7 @@
     "product_id": null,
     "sku": "0430335",
     "sku_formatted": "043-0335-2",
-    "availability": "64 En Stock#043-0335-2",
+    "availability": "56 En Stock#043-0335-2",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -43,7 +43,7 @@
     "product_id": null,
     "sku": "0821088",
     "sku_formatted": "082-1088-0",
-    "availability": "15 En Stock#082-1088-0",
+    "availability": "14 En Stock#082-1088-0",
     "badges": [
       "Liquidation◊Exclusivité"
     ],
@@ -201,63 +201,5 @@
     "regular_price_raw": "Était±  14,99 $prix était 14,99 $",
     "price_sale_clean": "6,93",
     "price_original_clean": "14,99"
-  },
-  {
-    "store_id": "221",
-    "city": "Jonquiere, QC",
-    "name": "Nettoyant de cale de bateau Triton, 950 mL",
-    "title": "Nettoyant de cale de bateau Triton, 950 mL",
-    "price": 1.93,
-    "price_raw": "1,93 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790139/triton-bilge-cleaner-9c25cf87-1580-4000-87b6-6b03fb0b7aaf.png?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790139/triton-bilge-cleaner-9c25cf87-1580-4000-87b6-6b03fb0b7aaf.png?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-de-cale-de-bateau-triton-950-ml-0790139p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/nettoyant-de-cale-de-bateau-triton-950-ml-0790139p.html",
-    "product_id": null,
-    "sku": "0790139",
-    "sku_formatted": "079-0139-6",
-    "availability": null,
-    "badges": [
-      "Liquidation◊"
-    ],
-    "discount_percent": 88.64,
-    "liquidation_price": 1.93,
-    "liquidation_price_raw": "1,93 $",
-    "sale_price": 1.93,
-    "sale_price_raw": "1,93 $",
-    "regular_price": 16.99,
-    "regular_price_raw": "Était±  16,99 $prix était 16,99 $",
-    "price_sale_clean": "1,93",
-    "price_original_clean": "16,99"
-  },
-  {
-    "store_id": "221",
-    "city": "Jonquiere, QC",
-    "name": "Nettoyant pour vinyle et cuir de bateau Triton, 950 mL",
-    "title": "Nettoyant pour vinyle et cuir de bateau Triton, 950 mL",
-    "price": 5.93,
-    "price_raw": "5,93 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790184/triton-vinyl-leather-cleaner-23f32285-0e63-4046-bef7-2120a7382ff5.png?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790184/triton-vinyl-leather-cleaner-23f32285-0e63-4046-bef7-2120a7382ff5.png?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-pour-vinyle-et-cuir-de-bateau-triton-950-ml-0790184p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/nettoyant-pour-vinyle-et-cuir-de-bateau-triton-950-ml-0790184p.html",
-    "product_id": null,
-    "sku": "0790184",
-    "sku_formatted": "079-0184-6",
-    "availability": null,
-    "badges": [
-      "Liquidation◊"
-    ],
-    "discount_percent": 76.27,
-    "liquidation_price": 5.93,
-    "liquidation_price_raw": "5,93 $",
-    "sale_price": 5.93,
-    "sale_price_raw": "5,93 $",
-    "regular_price": 24.99,
-    "regular_price_raw": "Était±  24,99 $prix était 24,99 $",
-    "price_sale_clean": "5,93",
-    "price_original_clean": "24,99"
   }
 ]
