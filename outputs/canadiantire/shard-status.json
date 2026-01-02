@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-01-01T22:23:01.766Z",
+  "generatedAt": "2026-01-02T02:31:31.129Z",
   "stores": [
     {
-      "id": "306",
-      "city": "La Malbaie, QC",
-      "status": "committed",
-      "details": "8 produits"
-    },
-    {
-      "id": "221",
-      "city": "Jonquiere, QC",
-      "status": "committed",
-      "details": "7 produits"
-    },
-    {
-      "id": "268",
-      "city": "Chicoutimi, QC",
-      "status": "committed",
-      "details": "3 produits"
-    },
-    {
-      "id": "335",
-      "city": "La Baie, QC",
-      "status": "committed",
-      "details": "10 produits"
-    },
-    {
-      "id": "284",
-      "city": "Dolbeau-Mistassini, QC",
-      "status": "committed",
-      "details": "3 produits"
-    },
-    {
-      "id": "660",
-      "city": "Peterborough North, ON",
+      "id": "23",
+      "city": "Cobourg, ON",
       "status": "committed",
       "details": "1 produits"
     },
     {
-      "id": "81",
-      "city": "Peterborough, ON",
+      "id": "114",
+      "city": "Val d'Or, QC",
       "status": "committed",
-      "details": "5 produits"
+      "details": "3 produits"
     },
     {
-      "id": "682",
-      "city": "Minden, ON",
-      "status": "skipped",
-      "details": "nothing to commit"
+      "id": "38",
+      "city": "Fenelon Falls, ON",
+      "status": "committed",
+      "details": "4 produits"
+    },
+    {
+      "id": "56",
+      "city": "Lindsay, ON",
+      "status": "committed",
+      "details": "4 produits"
+    },
+    {
+      "id": "323",
+      "city": "Riviere du Loup, QC",
+      "status": "committed",
+      "details": "3 produits"
+    },
+    {
+      "id": "47",
+      "city": "Huntsville, ON",
+      "status": "committed",
+      "details": "1 produits"
+    },
+    {
+      "id": "206",
+      "city": "Bracebridge, ON",
+      "status": "committed",
+      "details": "2 produits"
+    },
+    {
+      "id": "170",
+      "city": "Bowmanville, ON",
+      "status": "committed",
+      "details": "5 produits"
     }
   ],
   "failedTwice": [],
