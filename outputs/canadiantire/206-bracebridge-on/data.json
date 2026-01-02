@@ -56,34 +56,5 @@
     "regular_price_raw": "29,99 $Était   et+ prix était à partir de 29,99 $",
     "price_sale_clean": "14,93",
     "price_original_clean": "29,99"
-  },
-  {
-    "store_id": "206",
-    "city": "Bracebridge, ON",
-    "name": "Scellant élastomère pour réparation de toit Rust-Oleum LeakSeal, calfeutrant étanche, blanc, 300 mL",
-    "title": "Scellant élastomère pour réparation de toit Rust-Oleum LeakSeal, calfeutrant étanche, blanc, 300 mL",
-    "price": 9.93,
-    "price_raw": "9,93 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641565/white-elastomeric-roof-repair-300ml-0f78804c-5fd4-4fdb-a840-df3fda845224.png?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641565/white-elastomeric-roof-repair-300ml-0f78804c-5fd4-4fdb-a840-df3fda845224.png?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/scellant-elastomere-pour-reparation-de-toit-rust-oleum-leakseal-calfeutrant-etanche-blanc-300-ml-0641565p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/scellant-elastomere-pour-reparation-de-toit-rust-oleum-leakseal-calfeutrant-etanche-blanc-300-ml-0641565p.html",
-    "product_id": null,
-    "sku": "0641565",
-    "sku_formatted": "064-1565-8",
-    "availability": "Il n’en reste que 1 #064-1565-8",
-    "badges": [
-      "Liquidation◊Mieux notés"
-    ],
-    "discount_percent": 52.69,
-    "liquidation_price": 9.93,
-    "liquidation_price_raw": "9,93 $",
-    "sale_price": 9.93,
-    "sale_price_raw": "9,93 $",
-    "regular_price": 20.99,
-    "regular_price_raw": "Était±  20,99 $prix était 20,99 $",
-    "price_sale_clean": "9,93",
-    "price_original_clean": "20,99"
   }
 ]
