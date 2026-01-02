@@ -1,51 +1,51 @@
 {
-  "generatedAt": "2026-01-02T16:15:37.289Z",
+  "generatedAt": "2026-01-02T17:55:20.456Z",
   "stores": [
     {
-      "id": "446",
-      "city": "Bradford, ON",
+      "id": "321",
+      "city": "Dufferin & 407, ON",
       "status": "committed",
-      "details": "145 produits"
+      "details": "142 produits"
     },
     {
-      "id": "697",
-      "city": "Richmond Hill North, ON",
+      "id": "150",
+      "city": "Toronto, Yonge & Church, ON",
+      "status": "committed",
+      "details": "125 produits"
+    },
+    {
+      "id": "485",
+      "city": "Dufferin & Finch Auto Ctr, ON",
+      "status": "committed",
+      "details": "42 produits"
+    },
+    {
+      "id": "600",
+      "city": "Toronto Eaton Centre, ON",
+      "status": "committed",
+      "details": "143 produits"
+    },
+    {
+      "id": "19",
+      "city": "Lawrence & Allen Expwy, ON",
+      "status": "committed",
+      "details": "93 produits"
+    },
+    {
+      "id": "653",
+      "city": "Maple, ON",
+      "status": "committed",
+      "details": "103 produits"
+    },
+    {
+      "id": "621",
+      "city": "Liberty Village, ON",
       "status": "committed",
       "details": "160 produits"
     },
     {
-      "id": "87",
-      "city": "Richmond Hill, ON",
-      "status": "committed",
-      "details": "134 produits"
-    },
-    {
-      "id": "273",
-      "city": "Toronto Main & Danforth, ON",
-      "status": "committed",
-      "details": "88 produits"
-    },
-    {
-      "id": "192",
-      "city": "Sheppard Ave., ON",
-      "status": "committed",
-      "details": "170 produits"
-    },
-    {
-      "id": "126",
-      "city": "Yonge & Steeles, ON",
-      "status": "committed",
-      "details": "227 produits"
-    },
-    {
-      "id": "459",
-      "city": "Eglinton & Laird, ON",
-      "status": "committed",
-      "details": "109 produits"
-    },
-    {
-      "id": "654",
-      "city": "Leslie & Lake Shore, ON",
+      "id": "214",
+      "city": "Eglinton & Caledonia, Toronto, ON",
       "status": "committed",
       "details": "104 produits"
     }
