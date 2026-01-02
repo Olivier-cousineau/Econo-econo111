@@ -24,18 +24,6 @@
     "availability": "Il n’en reste que 3 #029-3102-4"
   },
   {
-    "title": "Bols de cuisine empilables MASTER Chef en plastique, paq. 8",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/bakeware-baking-prep/1424985/masterchef-8-piece-bake-prep-set-3e85a64e-f1ef-47d2-8117-bf07641c9608-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 32.99,
-    "salePrice": 12.93,
-    "store": "Canadian Tire",
-    "city": "Amos, QC",
-    "branch": "Amos, QC",
-    "url": "https://www.canadiantire.ca/fr/pdp/bols-de-cuisine-empilables-master-chef-en-plastique-paq-8-1424985p.html",
-    "sku": "1424985",
-    "availability": "Il n’en reste que 1 #142-4985-4"
-  },
-  {
     "title": "Nettoyant et super-rinçage pour radiateur Rislone Hy-per Cool, 473 mL",
     "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0388036/rislone-hy-per-cool-super-flush-cleaner-473ml-e56a661d-1174-4251-877c-63f92965d663-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 9.99,
@@ -46,6 +34,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-et-super-rincage-pour-radiateur-rislone-hy-per-cool-473-ml-0388036p.html",
     "sku": "0388036",
     "availability": ""
+  },
+  {
+    "title": "Bols de cuisine empilables MASTER Chef en plastique, paq. 8",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/bakeware-baking-prep/1424985/masterchef-8-piece-bake-prep-set-3e85a64e-f1ef-47d2-8117-bf07641c9608-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 32.99,
+    "salePrice": 12.93,
+    "store": "Canadian Tire",
+    "city": "Amos, QC",
+    "branch": "Amos, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/bols-de-cuisine-empilables-master-chef-en-plastique-paq-8-1424985p.html",
+    "sku": "1424985",
+    "availability": "Il n’en reste que 1 #142-4985-4"
   },
   {
     "title": "Peinture d'intérieur en aérosol toute surface Rust-Oleum Accents, texture de pierre, 340 g",
