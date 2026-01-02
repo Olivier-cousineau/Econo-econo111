@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-01-02T12:52:04.108Z",
+  "generatedAt": "2026-01-02T16:15:37.289Z",
   "stores": [
     {
-      "id": "69",
-      "city": "Newmarket, ON",
+      "id": "446",
+      "city": "Bradford, ON",
       "status": "committed",
-      "details": "188 produits"
+      "details": "145 produits"
     },
     {
-      "id": "209",
-      "city": "Kingston Rd, ON",
+      "id": "697",
+      "city": "Richmond Hill North, ON",
       "status": "committed",
-      "details": "177 produits"
+      "details": "160 produits"
     },
     {
-      "id": "164",
-      "city": "Markham, ON",
-      "status": "committed",
-      "details": "230 produits"
-    },
-    {
-      "id": "6",
-      "city": "Barrie, ON",
-      "status": "committed",
-      "details": "137 produits"
-    },
-    {
-      "id": "68",
-      "city": "New Liskeard, ON",
-      "status": "committed",
-      "details": "68 produits"
-    },
-    {
-      "id": "444",
-      "city": "Barrie South, ON",
-      "status": "committed",
-      "details": "115 produits"
-    },
-    {
-      "id": "30",
-      "city": "Warden & Eglinton, ON",
-      "status": "committed",
-      "details": "133 produits"
-    },
-    {
-      "id": "61",
-      "city": "Midland, ON",
+      "id": "87",
+      "city": "Richmond Hill, ON",
       "status": "committed",
       "details": "134 produits"
+    },
+    {
+      "id": "273",
+      "city": "Toronto Main & Danforth, ON",
+      "status": "committed",
+      "details": "88 produits"
+    },
+    {
+      "id": "192",
+      "city": "Sheppard Ave., ON",
+      "status": "committed",
+      "details": "170 produits"
+    },
+    {
+      "id": "126",
+      "city": "Yonge & Steeles, ON",
+      "status": "committed",
+      "details": "227 produits"
+    },
+    {
+      "id": "459",
+      "city": "Eglinton & Laird, ON",
+      "status": "committed",
+      "details": "109 produits"
+    },
+    {
+      "id": "654",
+      "city": "Leslie & Lake Shore, ON",
+      "status": "committed",
+      "details": "104 produits"
     }
   ],
   "failedTwice": [],
