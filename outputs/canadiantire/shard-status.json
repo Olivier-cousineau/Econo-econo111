@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-01-02T22:46:44.452Z",
+  "generatedAt": "2026-01-03T00:44:51.875Z",
   "stores": [
     {
-      "id": "197",
-      "city": "Bolton, ON",
-      "status": "committed",
-      "details": "140 produits"
-    },
-    {
-      "id": "219",
-      "city": "Grand Falls, NB",
-      "status": "committed",
-      "details": "88 produits"
-    },
-    {
-      "id": "70",
-      "city": "The Queensway, ON",
-      "status": "committed",
-      "details": "146 produits"
-    },
-    {
-      "id": "152",
-      "city": "Miss. Dixie & Dundas, ON",
-      "status": "committed",
-      "details": "123 produits"
-    },
-    {
-      "id": "71",
-      "city": "Niagara Falls North, ON",
+      "id": "145",
+      "city": "St. Catharines S., ON",
       "status": "committed",
       "details": "114 produits"
     },
     {
-      "id": "305",
-      "city": "Brampton Bramalea, ON",
+      "id": "411",
+      "city": "Brampton Trinity Common, ON",
       "status": "committed",
-      "details": "248 produits"
+      "details": "166 produits"
     },
     {
-      "id": "162",
-      "city": "St. Catharines N., ON",
+      "id": "346",
+      "city": "Miss.Mavis & Dundas, ON",
       "status": "committed",
-      "details": "100 produits"
+      "details": "114 produits"
     },
     {
-      "id": "33",
-      "city": "Fort Erie, ON",
+      "id": "108",
+      "city": "Collingwood, ON",
       "status": "committed",
-      "details": "92 produits"
+      "details": "58 produits"
+    },
+    {
+      "id": "90",
+      "city": "St. Catharines, ON",
+      "status": "committed",
+      "details": "130 produits"
+    },
+    {
+      "id": "320",
+      "city": "Rimouski, QC",
+      "status": "committed",
+      "details": "162 produits"
+    },
+    {
+      "id": "10",
+      "city": "Brampton Shoppers World, ON",
+      "status": "committed",
+      "details": "129 produits"
+    },
+    {
+      "id": "497",
+      "city": "Mississauga Heartland, ON",
+      "status": "committed",
+      "details": "136 produits"
     }
   ],
   "failedTwice": [],
