@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-01-04T08:54:10.469Z",
+  "generatedAt": "2026-01-04T11:34:13.180Z",
   "stores": [
     {
-      "id": "456",
-      "city": "Gaspe, QC",
+      "id": "224",
+      "city": "Halifax - Bedford, NS",
       "status": "committed",
-      "details": "107 produits"
+      "details": "173 produits"
     },
     {
-      "id": "95",
-      "city": "Sault Ste. Marie, ON",
-      "status": "committed",
-      "details": "55 produits"
-    },
-    {
-      "id": "618",
-      "city": "Tantallon, NS",
-      "status": "committed",
-      "details": "84 produits"
-    },
-    {
-      "id": "55",
-      "city": "Leamington, ON",
-      "status": "committed",
-      "details": "82 produits"
-    },
-    {
-      "id": "199",
-      "city": "Windsor East, ON",
+      "id": "465",
+      "city": "Halifax - Bayers Lake, NS",
       "status": "committed",
       "details": "90 produits"
     },
     {
-      "id": "172",
-      "city": "Essex, ON",
+      "id": "121",
+      "city": "Windsor University Plaza, ON",
       "status": "committed",
-      "details": "115 produits"
+      "details": "160 produits"
     },
     {
-      "id": "289",
-      "city": "Halifax - Lwr. Sackville, NS",
+      "id": "186",
+      "city": "Halifax - Spryfield, NS",
       "status": "committed",
-      "details": "87 produits"
+      "details": "101 produits"
     },
     {
-      "id": "236",
-      "city": "Windsor South, ON",
+      "id": "619",
+      "city": "Elmsdale, NS",
       "status": "committed",
-      "details": "171 produits"
+      "details": "35 produits"
+    },
+    {
+      "id": "44",
+      "city": "Halifax, NS",
+      "status": "committed",
+      "details": "140 produits"
+    },
+    {
+      "id": "41",
+      "city": "Dartmouth Crossing, NS",
+      "status": "committed",
+      "details": "54 produits"
+    },
+    {
+      "id": "436",
+      "city": "Halifax - Cole Harbour, NS",
+      "status": "committed",
+      "details": "68 produits"
     }
   ],
   "failedTwice": [],
