@@ -9,7 +9,7 @@
     "branch": "St. Eustache, QC",
     "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-depart-pour-conservation-et-entreposage-d-aliments-fresh-save-de-zwilling-avec-pompe-a-depression-portative-0430335p.html",
     "sku": "0430335",
-    "availability": "33 En Stock#043-0335-2"
+    "availability": "29 En Stock#043-0335-2"
   },
   {
     "title": "Luge rapide H2O Spider avec direction et freins",
@@ -21,7 +21,7 @@
     "branch": "St. Eustache, QC",
     "url": "https://www.canadiantire.ca/fr/pdp/luge-rapide-h2o-spider-avec-direction-et-freins-0821088p.html",
     "sku": "0821088",
-    "availability": "Il n’en reste que 6 #082-1088-0"
+    "availability": "Il n’en reste que 5 #082-1088-0"
   },
   {
     "title": "Liquide de refroidissement haute performance sans eau Evans, 1 gal",
@@ -46,5 +46,17 @@
     "url": "https://www.canadiantire.ca/fr/pdp/liquide-de-preparation-evans-1-gal-0293102p.html",
     "sku": "0293102",
     "availability": "Il n’en reste que 1 #029-3102-4"
+  },
+  {
+    "title": "Lubrifiant silicone DuPont Home, sécuritaire pour les surfaces automobiles ou marines, bouteille à presser, 120 mL (4 oz)",
+    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0387816/dupont-silicone-4oz-squeeze-c8ac129d-9de8-486f-b0f2-c50cd5346e24-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 10.99,
+    "salePrice": 3.93,
+    "store": "Canadian Tire",
+    "city": "St. Eustache, QC",
+    "branch": "St. Eustache, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/lubrifiant-silicone-dupont-home-securitaire-pour-les-surfaces-automobiles-ou-marines-bouteille-a-presser-120-ml-4-oz-0387816p.html",
+    "sku": "0387816",
+    "availability": ""
   }
 ]
