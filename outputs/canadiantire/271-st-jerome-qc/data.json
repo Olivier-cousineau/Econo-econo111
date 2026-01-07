@@ -14,7 +14,7 @@
     "product_id": null,
     "sku": "0430335",
     "sku_formatted": "043-0335-2",
-    "availability": "59 En Stock#043-0335-2",
+    "availability": "53 En Stock#043-0335-2",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -43,7 +43,7 @@
     "product_id": null,
     "sku": "0821088",
     "sku_formatted": "082-1088-0",
-    "availability": "589 En Stock#082-1088-0",
+    "availability": "562 En Stock#082-1088-0",
     "badges": [
       "Liquidation◊Exclusivité"
     ],
@@ -72,7 +72,7 @@
     "product_id": null,
     "sku": "1422641",
     "sku_formatted": "142-2641-4",
-    "availability": "Il n’en reste que 2 #142-2641-4",
+    "availability": "Il n’en reste que 3 #142-2641-4",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -85,35 +85,6 @@
     "regular_price_raw": "Était±  599,99 $prix était 599,99 $",
     "price_sale_clean": "299,93",
     "price_original_clean": "599,99"
-  },
-  {
-    "store_id": "271",
-    "city": "St. Jerome, QC",
-    "name": "Crépines en maille MASTER Chef, paq. 3",
-    "title": "Crépines en maille MASTER Chef, paq. 3",
-    "price": 7.93,
-    "price_raw": "7,93 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-tools-thermometers/1429394/masterchef-3-piece-mesh-strainer-set-55868b94-2ef7-4941-9bc2-fef46c55d576-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-tools-thermometers/1429394/masterchef-3-piece-mesh-strainer-set-55868b94-2ef7-4941-9bc2-fef46c55d576-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/crepines-en-maille-master-chef-paq-3-1429394p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/crepines-en-maille-master-chef-paq-3-1429394p.html",
-    "product_id": null,
-    "sku": "1429394",
-    "sku_formatted": "142-9394-0",
-    "availability": "27 En Stock#142-9394-0",
-    "badges": [
-      "Liquidation◊Mieux notés"
-    ],
-    "discount_percent": 55.92,
-    "liquidation_price": 7.93,
-    "liquidation_price_raw": "7,93 $",
-    "sale_price": 7.93,
-    "sale_price_raw": "7,93 $",
-    "regular_price": 17.99,
-    "regular_price_raw": "Était±  17,99 $prix était 17,99 $",
-    "price_sale_clean": "7,93",
-    "price_original_clean": "17,99"
   },
   {
     "store_id": "271",
@@ -143,34 +114,5 @@
     "regular_price_raw": "Était±  49,99 $prix était 49,99 $",
     "price_sale_clean": "5,93",
     "price_original_clean": "49,99"
-  },
-  {
-    "store_id": "271",
-    "city": "St. Jerome, QC",
-    "name": "Scellant Permatex High Tack Spray-A-Gasket 99MA, vaporisateur, 255 g",
-    "title": "Scellant Permatex High Tack Spray-A-Gasket 99MA, vaporisateur, 255 g",
-    "price": 6.93,
-    "price_raw": "6,93 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0382511/high-tack-gasket-sealant-1ebe6623-1ded-4c05-8d99-df6f7a68b449-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0382511/high-tack-gasket-sealant-1ebe6623-1ded-4c05-8d99-df6f7a68b449-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/scellant-permatex-high-tack-spray-a-gasket-99ma-vaporisateur-255-g-0382511p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/scellant-permatex-high-tack-spray-a-gasket-99ma-vaporisateur-255-g-0382511p.html",
-    "product_id": null,
-    "sku": "0382511",
-    "sku_formatted": "038-2511-4",
-    "availability": "Il n’en reste que 5 #038-2511-4",
-    "badges": [
-      "Liquidation◊Mieux notés"
-    ],
-    "discount_percent": 53.77,
-    "liquidation_price": 6.93,
-    "liquidation_price_raw": "6,93 $",
-    "sale_price": 6.93,
-    "sale_price_raw": "6,93 $",
-    "regular_price": 14.99,
-    "regular_price_raw": "Était±  14,99 $prix était 14,99 $",
-    "price_sale_clean": "6,93",
-    "price_original_clean": "14,99"
   }
 ]
