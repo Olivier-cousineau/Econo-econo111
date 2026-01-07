@@ -14,7 +14,7 @@
     "product_id": null,
     "sku": "0430335",
     "sku_formatted": "043-0335-2",
-    "availability": "10 En Stock#043-0335-2",
+    "availability": "Il n’en reste que 7 #043-0335-2",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -43,7 +43,7 @@
     "product_id": null,
     "sku": "0821088",
     "sku_formatted": "082-1088-0",
-    "availability": "21 En Stock#082-1088-0",
+    "availability": "18 En Stock#082-1088-0",
     "badges": [
       "Liquidation◊Exclusivité"
     ],
@@ -114,34 +114,5 @@
     "regular_price_raw": "Était±  32,99 $prix était 32,99 $",
     "price_sale_clean": "14,97",
     "price_original_clean": "32,99"
-  },
-  {
-    "store_id": "649",
-    "city": "Blainville, QC",
-    "name": "Scellant élastomère pour réparation de toit Rust-Oleum LeakSeal, calfeutrant étanche, blanc, 300 mL",
-    "title": "Scellant élastomère pour réparation de toit Rust-Oleum LeakSeal, calfeutrant étanche, blanc, 300 mL",
-    "price": 9.93,
-    "price_raw": "9,93 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641565/white-elastomeric-roof-repair-300ml-0f78804c-5fd4-4fdb-a840-df3fda845224.png?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641565/white-elastomeric-roof-repair-300ml-0f78804c-5fd4-4fdb-a840-df3fda845224.png?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/scellant-elastomere-pour-reparation-de-toit-rust-oleum-leakseal-calfeutrant-etanche-blanc-300-ml-0641565p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/scellant-elastomere-pour-reparation-de-toit-rust-oleum-leakseal-calfeutrant-etanche-blanc-300-ml-0641565p.html",
-    "product_id": null,
-    "sku": "0641565",
-    "sku_formatted": "064-1565-8",
-    "availability": "Il n’en reste que 5 #064-1565-8",
-    "badges": [
-      "Liquidation◊Mieux notés"
-    ],
-    "discount_percent": 52.69,
-    "liquidation_price": 9.93,
-    "liquidation_price_raw": "9,93 $",
-    "sale_price": 9.93,
-    "sale_price_raw": "9,93 $",
-    "regular_price": 20.99,
-    "regular_price_raw": "Était±  20,99 $prix était 20,99 $",
-    "price_sale_clean": "9,93",
-    "price_original_clean": "20,99"
   }
 ]
