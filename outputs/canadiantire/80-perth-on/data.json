@@ -14,7 +14,7 @@
     "product_id": null,
     "sku": "0430335",
     "sku_formatted": "043-0335-2",
-    "availability": "12 En Stock#043-0335-2",
+    "availability": "11 En Stock#043-0335-2",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -143,34 +143,5 @@
     "regular_price_raw": "Était±  29,99 $prix était 29,99 $",
     "price_sale_clean": "10,93",
     "price_original_clean": "29,99"
-  },
-  {
-    "store_id": "80",
-    "city": "Perth, ON",
-    "name": "Additif Hy-Per Lube Quick Heat, 473 ml",
-    "title": "Additif Hy-Per Lube Quick Heat, 473 ml",
-    "price": 5,
-    "price_raw": "5,00 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0380875/hy-per-lube-quick-heat-473ml-fd412ab8-a5e5-4509-b7d8-cbc5237e5956.png?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0380875/hy-per-lube-quick-heat-473ml-fd412ab8-a5e5-4509-b7d8-cbc5237e5956.png?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/additif-hy-per-lube-quick-heat-473-ml-0380875p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/additif-hy-per-lube-quick-heat-473-ml-0380875p.html",
-    "product_id": null,
-    "sku": "0380875",
-    "sku_formatted": "038-0875-0",
-    "availability": "Il n’en reste que 2 #038-0875-0",
-    "badges": [
-      "Liquidation◊"
-    ],
-    "discount_percent": 64.26,
-    "liquidation_price": 5,
-    "liquidation_price_raw": "5,00 $",
-    "sale_price": 5,
-    "sale_price_raw": "5,00 $",
-    "regular_price": 13.99,
-    "regular_price_raw": "Était±  13,99 $prix était 13,99 $",
-    "price_sale_clean": "5,00",
-    "price_original_clean": "13,99"
   }
 ]
