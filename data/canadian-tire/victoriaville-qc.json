@@ -9,7 +9,7 @@
     "branch": "Victoriaville, QC",
     "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-depart-pour-conservation-et-entreposage-d-aliments-fresh-save-de-zwilling-avec-pompe-a-depression-portative-0430335p.html",
     "sku": "0430335",
-    "availability": "38 En Stock#043-0335-2"
+    "availability": "33 En Stock#043-0335-2"
   },
   {
     "title": "Liquide de préparation Evans, 1 gal",
@@ -72,15 +72,39 @@
     "availability": ""
   },
   {
-    "title": "Nettoyant nautique pour écran, 230 mL",
-    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790328/marine-display-cleaner-f2601da5-df42-4d33-9177-1be27b9b3298-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 19.99,
-    "salePrice": 6.79,
+    "title": "Engrais pour fruits et plantes étape 2 Root Farm, 1-4-7, 473 mL",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/gardening/lawn-plant-care/1590133/root-farm-part-2-fruit-and-flower-nutrient-473ml-2b822be4-a58d-4d89-a2e3-6ac40f018839-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 16.99,
+    "salePrice": 2.99,
     "store": "Canadian Tire",
     "city": "Victoriaville, QC",
     "branch": "Victoriaville, QC",
-    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-nautique-pour-ecran-230-ml-0790328p.html",
-    "sku": "0790328",
-    "availability": "Il n’en reste que 6 #079-0328-6"
+    "url": "https://www.canadiantire.ca/fr/pdp/engrais-pour-fruits-et-plantes-etape-2-root-farm-1-4-7-473-ml-1590133p.html",
+    "sku": "1590133",
+    "availability": "93 En Stock#159-0133-8"
+  },
+  {
+    "title": "Savon moussant pour les mains avec pompe Live Clean, parfums variés, 400 mL",
+    "image": "https://media-www.canadiantire.ca/product/living/home-essentials/laundry-hand-dish-cleaning-solutions/1531451/live-clean-foaming-hand-wash-cherry-400ml-6b60d65f-31b8-41f6-913a-c0513a6c0baf-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 6.29,
+    "salePrice": 2.93,
+    "store": "Canadian Tire",
+    "city": "Victoriaville, QC",
+    "branch": "Victoriaville, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/savon-moussant-pour-les-mains-avec-pompe-live-clean-parfums-varies-400-ml-1531449p.html",
+    "sku": "1531449",
+    "availability": ""
+  },
+  {
+    "title": "Holland Secret Micro 5-0-2, formule en 3 parties",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/gardening/gardening-plant-accessories/1590295/future-harvest-holland-secret-micro-5-0-2-3-part-formula-054d02d1-04af-4976-901d-343b750191d7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 24.99,
+    "salePrice": 4.99,
+    "store": "Canadian Tire",
+    "city": "Victoriaville, QC",
+    "branch": "Victoriaville, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/holland-secret-micro-5-0-2-formule-en-3-parties-1590295p.html",
+    "sku": "1590295",
+    "availability": "61 En Stock#159-0295-2"
   }
 ]
