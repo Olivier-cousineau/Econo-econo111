@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-01-08T08:59:28.932Z",
+  "generatedAt": "2026-01-08T11:26:51.578Z",
   "stores": [
     {
-      "id": "196",
-      "city": "Maniwaki, QC",
+      "id": "423",
+      "city": "Donnacona, QC",
+      "status": "committed",
+      "details": "8 produits"
+    },
+    {
+      "id": "80",
+      "city": "Perth, ON",
       "status": "committed",
       "details": "5 produits"
     },
     {
-      "id": "85",
-      "city": "Prescott, ON",
+      "id": "352",
+      "city": "La Tuque, QC",
+      "status": "committed",
+      "details": "3 produits"
+    },
+    {
+      "id": "86",
+      "city": "Renfrew, ON",
       "status": "committed",
       "details": "2 produits"
     },
     {
-      "id": "348",
-      "city": "Sherbrooke Fleurimont, QC",
+      "id": "156",
+      "city": "Thetford Mines, QC",
+      "status": "committed",
+      "details": "2 produits"
+    },
+    {
+      "id": "692",
+      "city": "Ancienne Lorette, QC",
       "status": "committed",
       "details": "3 produits"
     },
     {
-      "id": "18",
-      "city": "Carleton Place, ON",
+      "id": "37",
+      "city": "Gananoque, ON",
+      "status": "skipped",
+      "details": "nothing to commit"
+    },
+    {
+      "id": "624",
+      "city": "St. Romuald, QC",
       "status": "committed",
       "details": "3 produits"
-    },
-    {
-      "id": "14",
-      "city": "Brockville, ON",
-      "status": "committed",
-      "details": "5 produits"
-    },
-    {
-      "id": "98",
-      "city": "Smiths Falls, ON",
-      "status": "committed",
-      "details": "3 produits"
-    },
-    {
-      "id": "4",
-      "city": "Arnprior, ON",
-      "status": "committed",
-      "details": "3 produits"
-    },
-    {
-      "id": "99",
-      "city": "Shawville, QC",
-      "status": "committed",
-      "details": "4 produits"
     }
   ],
   "failedTwice": [],
