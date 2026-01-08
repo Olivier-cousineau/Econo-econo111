@@ -14,7 +14,7 @@
     "product_id": null,
     "sku": "0430335",
     "sku_formatted": "043-0335-2",
-    "availability": "9 En Stock#043-0335-2",
+    "availability": "Il n’en reste que 7 #043-0335-2",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -56,5 +56,34 @@
     "regular_price_raw": "Était±  49,99 $prix était 49,99 $",
     "price_sale_clean": "12,93",
     "price_original_clean": "49,99"
+  },
+  {
+    "store_id": "98",
+    "city": "Smiths Falls, ON",
+    "name": "Bouche-toit incolore Rust-Oleum LeakSeal, intérieur/extérieur, scellant résistant à l'eau et aux intempéries, 946 mL",
+    "title": "Bouche-toit incolore Rust-Oleum LeakSeal, intérieur/extérieur, scellant résistant à l'eau et aux intempéries, 946 mL",
+    "price": 19.93,
+    "price_raw": "19,93 $",
+    "liquidation": true,
+    "image": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641570/clear-roof-patch-946-ml-104767ac-428b-4e84-90b8-2619ef352249-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641570/clear-roof-patch-946-ml-104767ac-428b-4e84-90b8-2619ef352249-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/bouche-toit-incolore-rust-oleum-leakseal-interieur-exterieur-scellant-resistant-a-l-eau-et-aux-intemperies-946-ml-0641570p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/bouche-toit-incolore-rust-oleum-leakseal-interieur-exterieur-scellant-resistant-a-l-eau-et-aux-intemperies-946-ml-0641570p.html",
+    "product_id": null,
+    "sku": "0641570",
+    "sku_formatted": "064-1570-4",
+    "availability": "Il n’en reste que 1 #064-1570-4",
+    "badges": [
+      "Liquidation◊"
+    ],
+    "discount_percent": 59.32,
+    "liquidation_price": 19.93,
+    "liquidation_price_raw": "19,93 $",
+    "sale_price": 19.93,
+    "sale_price_raw": "19,93 $",
+    "regular_price": 48.99,
+    "regular_price_raw": "Était±  48,99 $prix était 48,99 $",
+    "price_sale_clean": "19,93",
+    "price_original_clean": "48,99"
   }
 ]
