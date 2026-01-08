@@ -21,7 +21,7 @@
     "branch": "Montmagny, QC",
     "url": "https://www.canadiantire.ca/fr/pdp/luge-rapide-h2o-spider-avec-direction-et-freins-0821088p.html",
     "sku": "0821088",
-    "availability": "94 En Stock#082-1088-0"
+    "availability": "80 En Stock#082-1088-0"
   },
   {
     "title": "Batterie de cuisine en cuivre Lagostina Artiste-Clad allant au four, paq. 12",
@@ -34,6 +34,66 @@
     "url": "https://www.canadiantire.ca/fr/pdp/batterie-de-cuisine-en-cuivre-lagostina-artiste-clad-allant-au-four-paq-12-1422641p.html",
     "sku": "1422641",
     "availability": "Il n’en reste que 2 #142-2641-4"
+  },
+  {
+    "title": "Bols de cuisine empilables MASTER Chef en plastique, paq. 8",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/bakeware-baking-prep/1424985/masterchef-8-piece-bake-prep-set-3e85a64e-f1ef-47d2-8117-bf07641c9608-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 32.99,
+    "salePrice": 14.95,
+    "store": "Canadian Tire",
+    "city": "Montmagny, QC",
+    "branch": "Montmagny, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/bols-de-cuisine-empilables-master-chef-en-plastique-paq-8-1424985p.html",
+    "sku": "1424985",
+    "availability": "439 En Stock#142-4985-4"
+  },
+  {
+    "title": "Tasses et cuillères à mesurer MASTER Chef en acier inoxydable, paq. 8",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-tools-thermometers/1429341/masterchef-8-piece-stacking-measuring-cup-and-spoons-set-08f5ccd2-9073-4ef8-9d88-6db4d0858a9e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 9.99,
+    "salePrice": 4.95,
+    "store": "Canadian Tire",
+    "city": "Montmagny, QC",
+    "branch": "Montmagny, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/tasses-et-cuilleres-a-mesurer-master-chef-en-acier-inoxydable-paq-8-1429341p.html",
+    "sku": "1429341",
+    "availability": "201 En Stock#142-9341-6"
+  },
+  {
+    "title": "Peinture d'intérieur en aérosol toute surface Rust-Oleum Accents, texture de pierre, 340 g",
+    "image": "https://media-www.canadiantire.ca/product/fixing/paint/paints/0482380/stone-spray-paint-black-granite-f8538694-ebde-401f-94c6-57b81bcebc2e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 29.99,
+    "salePrice": 14.93,
+    "store": "Canadian Tire",
+    "city": "Montmagny, QC",
+    "branch": "Montmagny, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/peinture-d-interieur-en-aerosol-toute-surface-rust-oleum-accents-texture-de-pierre-340-g-0482380p.html",
+    "sku": "0482380",
+    "availability": ""
+  },
+  {
+    "title": "Bouche-toit incolore Rust-Oleum LeakSeal, intérieur/extérieur, scellant résistant à l'eau et aux intempéries, 3,78 L",
+    "image": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641571/clear-roof-patch-3-78-l-9c267c49-4660-47a8-a847-4a51ff8a9844-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 139.99,
+    "salePrice": 39.95,
+    "store": "Canadian Tire",
+    "city": "Montmagny, QC",
+    "branch": "Montmagny, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/bouche-toit-incolore-rust-oleum-leakseal-interieur-exterieur-scellant-resistant-a-l-eau-et-aux-intemperies-3-78-l-0641571p.html",
+    "sku": "0641571",
+    "availability": "70 En Stock#064-1571-2"
+  },
+  {
+    "title": "Scellant pour gouttière/revêtement Rust-Oleum LeakSeal, toutes saisons, réparation de surface, blanc, 300 mL",
+    "image": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641577/leakseal-gutter-and-siding-white-300ml-5dde50d2-eb94-4077-9029-dea17929b073.png?im=whresize&wid=200&hei=200",
+    "price": 20.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Montmagny, QC",
+    "branch": "Montmagny, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/scellant-pour-gouttiere-revetement-rust-oleum-leakseal-toutes-saisons-reparation-de-surface-blanc-300-ml-0641577p.html",
+    "sku": "0641577",
+    "availability": "Il n’en reste que 2 #064-1577-0"
   },
   {
     "title": "Scellant élastomère pour réparation de toit Rust-Oleum LeakSeal, calfeutrant étanche, blanc, 300 mL",
