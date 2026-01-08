@@ -1,17 +1,5 @@
 [
   {
-    "title": "Trousse de départ pour conservation et entreposage d'aliments Fresh & Save de Zwilling avec pompe à dépression portative",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430335/zwilling-food-storage-starter-kit-8pc-ee27a980-a5f6-4ca9-860b-310987524806-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 189.99,
-    "salePrice": 49.93,
-    "store": "Canadian Tire",
-    "city": "Quebec Vanier, QC",
-    "branch": "Quebec Vanier, QC",
-    "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-depart-pour-conservation-et-entreposage-d-aliments-fresh-save-de-zwilling-avec-pompe-a-depression-portative-0430335p.html",
-    "sku": "0430335",
-    "availability": "Il n’en reste que 2 #043-0335-2"
-  },
-  {
     "title": "Luge rapide H2O Spider avec direction et freins",
     "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/winter-recreation/0821088/spider-snow-bike-e7a5d494-3744-4104-9151-337a07902637-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 99.99,
@@ -21,7 +9,7 @@
     "branch": "Quebec Vanier, QC",
     "url": "https://www.canadiantire.ca/fr/pdp/luge-rapide-h2o-spider-avec-direction-et-freins-0821088p.html",
     "sku": "0821088",
-    "availability": "14 En Stock#082-1088-0"
+    "availability": "Il n’en reste que 2 #082-1088-0"
   },
   {
     "title": "Batterie de cuisine en cuivre Lagostina Artiste-Clad allant au four, paq. 12",
@@ -33,7 +21,7 @@
     "branch": "Quebec Vanier, QC",
     "url": "https://www.canadiantire.ca/fr/pdp/batterie-de-cuisine-en-cuivre-lagostina-artiste-clad-allant-au-four-paq-12-1422641p.html",
     "sku": "1422641",
-    "availability": "Il n’en reste que 3 #142-2641-4"
+    "availability": "Il n’en reste que 2 #142-2641-4"
   },
   {
     "title": "Liquide de préparation Evans, 1 gal",
@@ -46,5 +34,17 @@
     "url": "https://www.canadiantire.ca/fr/pdp/liquide-de-preparation-evans-1-gal-0293102p.html",
     "sku": "0293102",
     "availability": "Il n’en reste que 2 #029-3102-4"
+  },
+  {
+    "title": "Savon à mains liquide avec pompe Sapadilla, parfums variés, 350 mL",
+    "image": "https://media-www.canadiantire.ca/product/living/home-essentials/laundry-hand-dish-cleaning-solutions/1531482/sapadilla-hand-soap-grapefruit-and-bergmot-350ml-a31addb3-c55a-46e0-b232-42680e295c4f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 8.99,
+    "salePrice": 3.93,
+    "store": "Canadian Tire",
+    "city": "Quebec Vanier, QC",
+    "branch": "Quebec Vanier, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/savon-a-mains-liquide-avec-pompe-sapadilla-parfums-varies-350-ml-1531482p.html",
+    "sku": "1531482",
+    "availability": ""
   }
 ]
