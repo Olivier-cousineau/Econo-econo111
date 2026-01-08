@@ -27,5 +27,34 @@
     "regular_price_raw": "Était±  32,99 $prix était 32,99 $",
     "price_sale_clean": "12,93",
     "price_original_clean": "32,99"
+  },
+  {
+    "store_id": "245",
+    "city": "Quebec Ste. Foy, QC",
+    "name": "Chlorateur solaire de grosse piscine hors terre et creusée GAME Suculent Garden",
+    "title": "Chlorateur solaire de grosse piscine hors terre et creusée GAME Suculent Garden",
+    "price": 3,
+    "price_raw": "3,00 $",
+    "liquidation": true,
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-maintenance/0813908/succulent-garden-solar-chlorinator-404f2831-01e3-4c26-80b2-a2a2b995e543-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-maintenance/0813908/succulent-garden-solar-chlorinator-404f2831-01e3-4c26-80b2-a2a2b995e543-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/chlorateur-solaire-de-grosse-piscine-hors-terre-et-creusee-game-suculent-garden-0813908p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/chlorateur-solaire-de-grosse-piscine-hors-terre-et-creusee-game-suculent-garden-0813908p.html",
+    "product_id": null,
+    "sku": "0813908",
+    "sku_formatted": "081-3908-0",
+    "availability": "Il n’en reste que 1 #081-3908-0",
+    "badges": [
+      "Liquidation◊"
+    ],
+    "discount_percent": 93.33,
+    "liquidation_price": 3,
+    "liquidation_price_raw": "3,00 $",
+    "sale_price": 3,
+    "sale_price_raw": "3,00 $",
+    "regular_price": 44.99,
+    "regular_price_raw": "Était±  44,99 $prix était 44,99 $",
+    "price_sale_clean": "3,00",
+    "price_original_clean": "44,99"
   }
 ]
