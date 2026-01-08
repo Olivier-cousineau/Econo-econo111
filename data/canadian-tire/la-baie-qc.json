@@ -24,18 +24,6 @@
     "availability": "Il n’en reste que 1 #142-2641-4"
   },
   {
-    "title": "Savon à vaisselle liquide Palmolive, parfums variés, 828 mL",
-    "image": "https://media-www.canadiantire.ca/product/living/home-essentials/laundry-hand-dish-cleaning-solutions/1531820/palmolive-essential-clean-salt-and-citrus-828ml-2d0c8643-4d1d-493c-bc55-701102a2cae6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 3.49,
-    "salePrice": 1.43,
-    "store": "Canadian Tire",
-    "city": "La Baie, QC",
-    "branch": "La Baie, QC",
-    "url": "https://www.canadiantire.ca/fr/pdp/savon-a-vaisselle-liquide-palmolive-parfums-varies-828-ml-1530938p.html",
-    "sku": "1530938",
-    "availability": ""
-  },
-  {
     "title": "Savon liquide pour les mains Mrs. Meyer's, 370 mL",
     "image": "https://media-www.canadiantire.ca/product/living/home-essentials/laundry-hand-dish-cleaning-solutions/1531079/mrs-meyer-s-clean-day-hand-soap-iowa-pine-370ml-a2062a82-30e9-4319-9dce-581787f9b82f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 6.99,
@@ -72,6 +60,18 @@
     "availability": ""
   },
   {
+    "title": "Lubrifiant à pellicule sèche antiadhésif DuPont, bouteille à presser, 120 mL (4 oz)",
+    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0387817/dupont-non-stick-4oz-squeeze-486595e9-13b3-42a0-9c33-1d91f9ff2266-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 9.49,
+    "salePrice": 2.93,
+    "store": "Canadian Tire",
+    "city": "La Baie, QC",
+    "branch": "La Baie, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/lubrifiant-a-pellicule-seche-antiadhesif-dupont-bouteille-a-presser-120-ml-4-oz-0387817p.html",
+    "sku": "0387817",
+    "availability": "Il n’en reste que 7 #038-7817-8"
+  },
+  {
     "title": "Scellant élastomère pour réparation de toit Rust-Oleum LeakSeal, calfeutrant étanche, blanc, 300 mL",
     "image": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641565/white-elastomeric-roof-repair-300ml-0f78804c-5fd4-4fdb-a840-df3fda845224.png?im=whresize&wid=200&hei=200",
     "price": 20.99,
@@ -106,17 +106,5 @@
     "url": "https://www.canadiantire.ca/fr/pdp/pectine-bernardin-sans-sucre-pour-confiture-a-congeler-45-g-0422575p.html",
     "sku": "0422575",
     "availability": "Il n’en reste que 4 #042-2575-0"
-  },
-  {
-    "title": "Nettoyant pour moisissure de bateau Triton, transparent, 950 mL",
-    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790183/triton-mildew-rmvr-5436fc01-e399-4c72-8dd6-e1986c6c7a97-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 17.99,
-    "salePrice": 0.93,
-    "store": "Canadian Tire",
-    "city": "La Baie, QC",
-    "branch": "La Baie, QC",
-    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-pour-moisissure-de-bateau-triton-transparent-950-ml-0790183p.html",
-    "sku": "0790183",
-    "availability": ""
   }
 ]
