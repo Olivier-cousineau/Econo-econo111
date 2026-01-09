@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-01-09T14:31:34.449Z",
+  "generatedAt": "2026-01-09T16:37:43.952Z",
   "stores": [
     {
-      "id": "446",
-      "city": "Bradford, ON",
-      "status": "committed",
-      "details": "4 produits"
-    },
-    {
-      "id": "697",
-      "city": "Richmond Hill North, ON",
-      "status": "committed",
-      "details": "8 produits"
-    },
-    {
-      "id": "87",
-      "city": "Richmond Hill, ON",
-      "status": "committed",
-      "details": "7 produits"
-    },
-    {
-      "id": "273",
-      "city": "Toronto Main & Danforth, ON",
-      "status": "committed",
-      "details": "4 produits"
-    },
-    {
-      "id": "192",
-      "city": "Sheppard Ave., ON",
+      "id": "321",
+      "city": "Dufferin & 407, ON",
       "status": "committed",
       "details": "5 produits"
     },
     {
-      "id": "126",
-      "city": "Yonge & Steeles, ON",
+      "id": "150",
+      "city": "Toronto, Yonge & Church, ON",
       "status": "committed",
       "details": "10 produits"
     },
     {
-      "id": "459",
-      "city": "Eglinton & Laird, ON",
+      "id": "485",
+      "city": "Dufferin & Finch Auto Ctr, ON",
+      "status": "committed",
+      "details": "2 produits"
+    },
+    {
+      "id": "600",
+      "city": "Toronto Eaton Centre, ON",
       "status": "committed",
       "details": "5 produits"
     },
     {
-      "id": "654",
-      "city": "Leslie & Lake Shore, ON",
+      "id": "19",
+      "city": "Lawrence & Allen Expwy, ON",
       "status": "committed",
-      "details": "11 produits"
+      "details": "5 produits"
+    },
+    {
+      "id": "653",
+      "city": "Maple, ON",
+      "status": "committed",
+      "details": "5 produits"
+    },
+    {
+      "id": "621",
+      "city": "Liberty Village, ON",
+      "status": "committed",
+      "details": "9 produits"
+    },
+    {
+      "id": "214",
+      "city": "Eglinton & Caledonia, Toronto, ON",
+      "status": "committed",
+      "details": "3 produits"
     }
   ],
   "failedTwice": [],
