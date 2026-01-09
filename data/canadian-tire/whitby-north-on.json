@@ -1,5 +1,17 @@
 [
   {
+    "title": "Luge rapide H2O Spider avec direction et freins",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/winter-recreation/0821088/spider-snow-bike-e7a5d494-3744-4104-9151-337a07902637-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 99.99,
+    "salePrice": 39.93,
+    "store": "Canadian Tire",
+    "city": "Whitby North, ON",
+    "branch": "Whitby North, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/luge-rapide-h2o-spider-avec-direction-et-freins-0821088p.html",
+    "sku": "0821088",
+    "availability": "Il n’en reste que 1 #082-1088-0"
+  },
+  {
     "title": "Batterie de cuisine en cuivre Lagostina Artiste-Clad allant au four, paq. 12",
     "image": "https://media-www.canadiantire.ca/product/living/kitchen/cookware/1422641/lagostina-12-piece-copper-hand-hammered-cookware-set-8efd56aa-f4d9-43a3-830a-345e63def203-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 599.99,
@@ -9,7 +21,7 @@
     "branch": "Whitby North, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/batterie-de-cuisine-en-cuivre-lagostina-artiste-clad-allant-au-four-paq-12-1422641p.html",
     "sku": "1422641",
-    "availability": "Il n’en reste que 3 #142-2641-4"
+    "availability": "Il n’en reste que 2 #142-2641-4"
   },
   {
     "title": "Liquide de préparation Evans, 1 gal",
@@ -36,15 +48,27 @@
     "availability": ""
   },
   {
-    "title": "Écumoire Lagostina en acier inoxydable avec tête en nylon",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-tools-thermometers/1420795/lagostina-skimmer-with-nylon-head-ac31e0f6-cc00-45c8-bda9-1e55178a585d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 16.99,
-    "salePrice": 7.93,
+    "title": "Tasses et cuillères à mesurer MASTER Chef en plastique, paq. 8",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-tools-thermometers/1423764/master-chef-measuring-cups-spoons-set-49dd4e11-9c3b-4ead-bd34-e73789f33af1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 12.99,
+    "salePrice": 4.93,
     "store": "Canadian Tire",
     "city": "Whitby North, ON",
     "branch": "Whitby North, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/ecumoire-lagostina-en-acier-inoxydable-avec-tete-en-nylon-1420795p.html",
-    "sku": "1420795",
-    "availability": "Il n’en reste que 1 #142-0795-0"
+    "url": "https://www.canadiantire.ca/fr/pdp/tasses-et-cuilleres-a-mesurer-master-chef-en-plastique-paq-8-1423764p.html",
+    "sku": "1423764",
+    "availability": "Il n’en reste que 1 #142-3764-6"
+  },
+  {
+    "title": "Scellant pour gouttière/revêtement Rust-Oleum LeakSeal, toutes saisons, réparation de surface, blanc, 300 mL",
+    "image": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641577/leakseal-gutter-and-siding-white-300ml-5dde50d2-eb94-4077-9029-dea17929b073.png?im=whresize&wid=200&hei=200",
+    "price": 20.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Whitby North, ON",
+    "branch": "Whitby North, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/scellant-pour-gouttiere-revetement-rust-oleum-leakseal-toutes-saisons-reparation-de-surface-blanc-300-ml-0641577p.html",
+    "sku": "0641577",
+    "availability": "Il n’en reste que 1 #064-1577-0"
   }
 ]

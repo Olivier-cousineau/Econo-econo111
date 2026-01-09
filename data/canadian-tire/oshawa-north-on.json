@@ -1,17 +1,5 @@
 [
   {
-    "title": "Trousse de départ pour conservation et entreposage d'aliments Fresh & Save de Zwilling avec pompe à dépression portative",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430335/zwilling-food-storage-starter-kit-8pc-ee27a980-a5f6-4ca9-860b-310987524806-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 189.99,
-    "salePrice": 49.93,
-    "store": "Canadian Tire",
-    "city": "Oshawa North, ON",
-    "branch": "Oshawa North, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-depart-pour-conservation-et-entreposage-d-aliments-fresh-save-de-zwilling-avec-pompe-a-depression-portative-0430335p.html",
-    "sku": "0430335",
-    "availability": "Il n’en reste que 2 #043-0335-2"
-  },
-  {
     "title": "Luge rapide H2O Spider avec direction et freins",
     "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/winter-recreation/0821088/spider-snow-bike-e7a5d494-3744-4104-9151-337a07902637-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 99.99,
@@ -22,6 +10,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/luge-rapide-h2o-spider-avec-direction-et-freins-0821088p.html",
     "sku": "0821088",
     "availability": "Il n’en reste que 4 #082-1088-0"
+  },
+  {
+    "title": "Batterie de cuisine en cuivre Lagostina Artiste-Clad allant au four, paq. 12",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/cookware/1422641/lagostina-12-piece-copper-hand-hammered-cookware-set-8efd56aa-f4d9-43a3-830a-345e63def203-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 599.99,
+    "salePrice": 299.93,
+    "store": "Canadian Tire",
+    "city": "Oshawa North, ON",
+    "branch": "Oshawa North, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/batterie-de-cuisine-en-cuivre-lagostina-artiste-clad-allant-au-four-paq-12-1422641p.html",
+    "sku": "1422641",
+    "availability": "Il n’en reste que 1 #142-2641-4"
   },
   {
     "title": "Liquide de préparation Evans, 1 gal",
@@ -60,15 +60,15 @@
     "availability": ""
   },
   {
-    "title": "Bâton de mastic époxy en aluminium Star Brite pour les réparations d’urgence et permanentes, 113 g",
-    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790148/starbrite-epoxy-aluminum-putty-stick-118ml-fffecaec-d627-4cdb-a375-93be85255f00-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 21.99,
-    "salePrice": 9.93,
+    "title": "Lubrifiant WD-40 Specialist Spray & Stay en gel, formule antigoutte, 283 g",
+    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0388091/wd-40-specialist-gel-6d3ab4bd-7119-46f2-b013-337e4fd4d66a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 18.99,
+    "salePrice": 6.93,
     "store": "Canadian Tire",
     "city": "Oshawa North, ON",
     "branch": "Oshawa North, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/baton-de-mastic-epoxy-en-aluminium-star-brite-pour-les-reparations-d-urgence-et-permanentes-113-g-0790148p.html",
-    "sku": "0790148",
+    "url": "https://www.canadiantire.ca/fr/pdp/lubrifiant-wd-40-specialist-spray-stay-en-gel-formule-antigoutte-283-g-0388091p.html",
+    "sku": "0388091",
     "availability": ""
   },
   {
@@ -81,6 +81,18 @@
     "branch": "Oshawa North, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/recharge-de-savon-a-mains-moussant-method-parfum-d-eau-douce-828-ml-0530968p.html",
     "sku": "0530968",
+    "availability": ""
+  },
+  {
+    "title": "Pectine Bernardin sans sucre pour confiture à congeler, 45 g",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/canning/0422575/sugar-free-freezer-jam-pectin-76166fc9-82d4-418b-bdf2-a8b7f0bd3fc9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 3.99,
+    "salePrice": 0.93,
+    "store": "Canadian Tire",
+    "city": "Oshawa North, ON",
+    "branch": "Oshawa North, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/pectine-bernardin-sans-sucre-pour-confiture-a-congeler-45-g-0422575p.html",
+    "sku": "0422575",
     "availability": ""
   }
 ]
