@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-01-08T22:24:16.987Z",
+  "generatedAt": "2026-01-09T03:53:46.143Z",
   "stores": [
     {
-      "id": "306",
-      "city": "La Malbaie, QC",
-      "status": "committed",
-      "details": "3 produits"
-    },
-    {
-      "id": "221",
-      "city": "Jonquiere, QC",
-      "status": "committed",
-      "details": "5 produits"
-    },
-    {
-      "id": "268",
-      "city": "Chicoutimi, QC",
-      "status": "committed",
-      "details": "3 produits"
-    },
-    {
-      "id": "335",
-      "city": "La Baie, QC",
-      "status": "committed",
-      "details": "9 produits"
-    },
-    {
-      "id": "284",
-      "city": "Dolbeau-Mistassini, QC",
-      "status": "skipped",
-      "details": "nothing to commit"
-    },
-    {
-      "id": "660",
-      "city": "Peterborough North, ON",
+      "id": "72",
+      "city": "North Bay, ON",
       "status": "committed",
       "details": "1 produits"
     },
     {
-      "id": "81",
-      "city": "Peterborough, ON",
+      "id": "62",
+      "city": "Gravenhurst, ON",
       "status": "committed",
-      "details": "3 produits"
+      "details": "4 produits"
     },
     {
-      "id": "682",
-      "city": "Minden, ON",
+      "id": "226",
+      "city": "Port Perry, ON",
       "status": "committed",
-      "details": "2 produits"
+      "details": "5 produits"
+    },
+    {
+      "id": "336",
+      "city": "Oshawa North, ON",
+      "status": "committed",
+      "details": "8 produits"
+    },
+    {
+      "id": "75",
+      "city": "Oshawa Mid, ON",
+      "status": "committed",
+      "details": "1 produits"
+    },
+    {
+      "id": "285",
+      "city": "Amos, QC",
+      "status": "skipped",
+      "details": "nothing to commit"
+    },
+    {
+      "id": "460",
+      "city": "Whitby North, ON",
+      "status": "committed",
+      "details": "6 produits"
+    },
+    {
+      "id": "187",
+      "city": "Whitby South, ON",
+      "status": "committed",
+      "details": "5 produits"
     }
   ],
   "failedTwice": [],
