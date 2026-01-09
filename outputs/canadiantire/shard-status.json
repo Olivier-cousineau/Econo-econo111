@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-01-09T08:50:52.840Z",
+  "generatedAt": "2026-01-09T11:21:42.504Z",
   "stores": [
     {
-      "id": "399",
-      "city": "Markham East, ON",
-      "status": "committed",
-      "details": "4 produits"
-    },
-    {
-      "id": "93",
-      "city": "Edmundston, NB",
-      "status": "committed",
-      "details": "7 produits"
-    },
-    {
-      "id": "687",
-      "city": "Innisfil, ON",
-      "status": "committed",
-      "details": "4 produits"
-    },
-    {
-      "id": "175",
-      "city": "Scarborough, ON",
-      "status": "committed",
-      "details": "7 produits"
-    },
-    {
-      "id": "89",
-      "city": "Rouyn, QC",
-      "status": "committed",
-      "details": "2 produits"
-    },
-    {
-      "id": "78",
-      "city": "Parry Sound, ON",
+      "id": "69",
+      "city": "Newmarket, ON",
       "status": "committed",
       "details": "6 produits"
     },
     {
-      "id": "264",
-      "city": "Agincourt, ON",
+      "id": "209",
+      "city": "Kingston Rd, ON",
+      "status": "committed",
+      "details": "5 produits"
+    },
+    {
+      "id": "164",
+      "city": "Markham, ON",
+      "status": "committed",
+      "details": "9 produits"
+    },
+    {
+      "id": "6",
+      "city": "Barrie, ON",
       "status": "committed",
       "details": "4 produits"
     },
     {
-      "id": "189",
-      "city": "Aurora, ON",
+      "id": "68",
+      "city": "New Liskeard, ON",
       "status": "committed",
-      "details": "5 produits"
+      "details": "2 produits"
+    },
+    {
+      "id": "444",
+      "city": "Barrie South, ON",
+      "status": "committed",
+      "details": "4 produits"
+    },
+    {
+      "id": "30",
+      "city": "Warden & Eglinton, ON",
+      "status": "committed",
+      "details": "7 produits"
+    },
+    {
+      "id": "61",
+      "city": "Midland, ON",
+      "status": "committed",
+      "details": "2 produits"
     }
   ],
   "failedTwice": [],
