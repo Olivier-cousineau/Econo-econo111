@@ -2,35 +2,6 @@
   {
     "store_id": "129",
     "city": "Hamilton Centre, ON",
-    "name": "Batterie de cuisine en cuivre Lagostina Artiste-Clad allant au four, paq. 12",
-    "title": "Batterie de cuisine en cuivre Lagostina Artiste-Clad allant au four, paq. 12",
-    "price": 299.93,
-    "price_raw": "299,93 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/cookware/1422641/lagostina-12-piece-copper-hand-hammered-cookware-set-8efd56aa-f4d9-43a3-830a-345e63def203-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/living/kitchen/cookware/1422641/lagostina-12-piece-copper-hand-hammered-cookware-set-8efd56aa-f4d9-43a3-830a-345e63def203-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/batterie-de-cuisine-en-cuivre-lagostina-artiste-clad-allant-au-four-paq-12-1422641p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/batterie-de-cuisine-en-cuivre-lagostina-artiste-clad-allant-au-four-paq-12-1422641p.html",
-    "product_id": null,
-    "sku": "1422641",
-    "sku_formatted": "142-2641-4",
-    "availability": "Il n’en reste que 2 #142-2641-4",
-    "badges": [
-      "Liquidation◊Mieux notés"
-    ],
-    "discount_percent": 50.01,
-    "liquidation_price": 299.93,
-    "liquidation_price_raw": "299,93 $",
-    "sale_price": 299.93,
-    "sale_price_raw": "299,93 $",
-    "regular_price": 599.99,
-    "regular_price_raw": "Était±  599,99 $prix était 599,99 $",
-    "price_sale_clean": "299,93",
-    "price_original_clean": "599,99"
-  },
-  {
-    "store_id": "129",
-    "city": "Hamilton Centre, ON",
     "name": "Liquide de préparation Evans, 1 gal",
     "title": "Liquide de préparation Evans, 1 gal",
     "price": 12.93,
@@ -85,34 +56,5 @@
     "regular_price_raw": "29,99 $Était   et+ prix était à partir de 29,99 $",
     "price_sale_clean": "14,93",
     "price_original_clean": "29,99"
-  },
-  {
-    "store_id": "129",
-    "city": "Hamilton Centre, ON",
-    "name": "Passoire en plastique T-Fal avec grillage métallique, acier inoxydable, 6 po",
-    "title": "Passoire en plastique T-Fal avec grillage métallique, acier inoxydable, 6 po",
-    "price": 4.93,
-    "price_raw": "4,93 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-tools-thermometers/1421353/t-fal-6-strainer-a5ecafb2-014f-4c2a-bbe1-227313aca623-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-tools-thermometers/1421353/t-fal-6-strainer-a5ecafb2-014f-4c2a-bbe1-227313aca623-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/passoire-en-plastique-t-fal-avec-grillage-metallique-acier-inoxydable-6-po-1421353p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/passoire-en-plastique-t-fal-avec-grillage-metallique-acier-inoxydable-6-po-1421353p.html",
-    "product_id": null,
-    "sku": "1421353",
-    "sku_formatted": "142-1353-6",
-    "availability": "Il n’en reste que 1 #142-1353-6",
-    "badges": [
-      "Liquidation◊Mieux notés"
-    ],
-    "discount_percent": 55.14,
-    "liquidation_price": 4.93,
-    "liquidation_price_raw": "4,93 $",
-    "sale_price": 4.93,
-    "sale_price_raw": "4,93 $",
-    "regular_price": 10.99,
-    "regular_price_raw": "Était±  10,99 $prix était 10,99 $",
-    "price_sale_clean": "4,93",
-    "price_original_clean": "10,99"
   }
 ]
