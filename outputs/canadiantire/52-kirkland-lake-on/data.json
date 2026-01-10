@@ -56,34 +56,5 @@
     "regular_price_raw": "18,99 $Était   et+ prix était à partir de 18,99 $",
     "price_sale_clean": "6,45",
     "price_original_clean": "18,99"
-  },
-  {
-    "store_id": "52",
-    "city": "Kirkland Lake, ON",
-    "name": "Pectine classique Bernardin pour confitures et gelées faciles, 57 g",
-    "title": "Pectine classique Bernardin pour confitures et gelées faciles, 57 g",
-    "price": 1.01,
-    "price_raw": "1,01 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/canning/0422578/fruit-pectin-bernardin-02e97ad0-1a51-4f99-baac-4f05838f040d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/living/kitchen/canning/0422578/fruit-pectin-bernardin-02e97ad0-1a51-4f99-baac-4f05838f040d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/pectine-classique-bernardin-pour-confitures-et-gelees-faciles-57-g-0422578p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/pectine-classique-bernardin-pour-confitures-et-gelees-faciles-57-g-0422578p.html",
-    "product_id": null,
-    "sku": "0422578",
-    "sku_formatted": "042-2578-4",
-    "availability": "Il n’en reste que 1 #042-2578-4",
-    "badges": [
-      "Liquidation◊Mieux notés"
-    ],
-    "discount_percent": 66.22,
-    "liquidation_price": 1.01,
-    "liquidation_price_raw": "1,01 $",
-    "sale_price": 1.01,
-    "sale_price_raw": "1,01 $",
-    "regular_price": 2.99,
-    "regular_price_raw": "Était±  2,99 $prix était 2,99 $",
-    "price_sale_clean": "1,01",
-    "price_original_clean": "2,99"
   }
 ]
