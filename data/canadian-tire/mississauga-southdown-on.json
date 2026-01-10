@@ -1,17 +1,5 @@
 [
   {
-    "title": "Luge rapide H2O Spider avec direction et freins",
-    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/winter-recreation/0821088/spider-snow-bike-e7a5d494-3744-4104-9151-337a07902637-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 99.99,
-    "salePrice": 29.93,
-    "store": "Canadian Tire",
-    "city": "Mississauga Southdown, ON",
-    "branch": "Mississauga Southdown, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/luge-rapide-h2o-spider-avec-direction-et-freins-0821088p.html",
-    "sku": "0821088",
-    "availability": "Il n’en reste que 1 #082-1088-0"
-  },
-  {
     "title": "Joint d’étanchéité Permatex 59705 Ultra Copper, température maximale, 147 mL",
     "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0383831/permatex-ultra-copper-gasket-maker-f2db9a34-74fc-43c9-8c35-a1598bde05d2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 18.99,
@@ -58,17 +46,5 @@
     "url": "https://www.canadiantire.ca/fr/pdp/pectine-bernardin-sans-sucre-pour-confiture-a-congeler-45-g-0422575p.html",
     "sku": "0422575",
     "availability": ""
-  },
-  {
-    "title": "Passoire en plastique T-Fal, 1,94 L",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-tools-thermometers/1421334/t-fal-3-quart-plastic-colander-b606b82d-1873-4ff2-abcc-e7e7c03a5165-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 11.99,
-    "salePrice": 4.93,
-    "store": "Canadian Tire",
-    "city": "Mississauga Southdown, ON",
-    "branch": "Mississauga Southdown, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/passoire-en-plastique-t-fal-1-94-l-1421334p.html",
-    "sku": "1421334",
-    "availability": "32 En Stock#142-1334-2"
   }
 ]
