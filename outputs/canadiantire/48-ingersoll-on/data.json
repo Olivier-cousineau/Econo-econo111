@@ -56,5 +56,34 @@
     "regular_price_raw": "Était±  32,99 $prix était 32,99 $",
     "price_sale_clean": "12,93",
     "price_original_clean": "32,99"
+  },
+  {
+    "store_id": "48",
+    "city": "Ingersoll, ON",
+    "name": "Tasses et cuillères à mesurer MASTER Chef en plastique, paq. 8",
+    "title": "Tasses et cuillères à mesurer MASTER Chef en plastique, paq. 8",
+    "price": 4.93,
+    "price_raw": "4,93 $",
+    "liquidation": true,
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-tools-thermometers/1423764/master-chef-measuring-cups-spoons-set-49dd4e11-9c3b-4ead-bd34-e73789f33af1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-tools-thermometers/1423764/master-chef-measuring-cups-spoons-set-49dd4e11-9c3b-4ead-bd34-e73789f33af1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/tasses-et-cuilleres-a-mesurer-master-chef-en-plastique-paq-8-1423764p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/tasses-et-cuilleres-a-mesurer-master-chef-en-plastique-paq-8-1423764p.html",
+    "product_id": null,
+    "sku": "1423764",
+    "sku_formatted": "142-3764-6",
+    "availability": "8 En Stock#142-3764-6",
+    "badges": [
+      "Liquidation◊Mieux notés"
+    ],
+    "discount_percent": 62.05,
+    "liquidation_price": 4.93,
+    "liquidation_price_raw": "4,93 $",
+    "sale_price": 4.93,
+    "sale_price_raw": "4,93 $",
+    "regular_price": 12.99,
+    "regular_price_raw": "Était±  12,99 $prix était 12,99 $",
+    "price_sale_clean": "4,93",
+    "price_original_clean": "12,99"
   }
 ]
