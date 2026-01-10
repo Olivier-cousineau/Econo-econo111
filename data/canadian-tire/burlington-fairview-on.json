@@ -1,17 +1,5 @@
 [
   {
-    "title": "Trousse de départ pour conservation et entreposage d'aliments Fresh & Save de Zwilling avec pompe à dépression portative",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430335/zwilling-food-storage-starter-kit-8pc-ee27a980-a5f6-4ca9-860b-310987524806-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 189.99,
-    "salePrice": 49.93,
-    "store": "Canadian Tire",
-    "city": "Burlington Fairview, ON",
-    "branch": "Burlington Fairview, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-depart-pour-conservation-et-entreposage-d-aliments-fresh-save-de-zwilling-avec-pompe-a-depression-portative-0430335p.html",
-    "sku": "0430335",
-    "availability": "Il n’en reste que 2 #043-0335-2"
-  },
-  {
     "title": "Luge rapide H2O Spider avec direction et freins",
     "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/winter-recreation/0821088/spider-snow-bike-e7a5d494-3744-4104-9151-337a07902637-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 99.99,
@@ -21,19 +9,7 @@
     "branch": "Burlington Fairview, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/luge-rapide-h2o-spider-avec-direction-et-freins-0821088p.html",
     "sku": "0821088",
-    "availability": "13 En Stock#082-1088-0"
-  },
-  {
-    "title": "Batterie de cuisine en cuivre Lagostina Artiste-Clad allant au four, paq. 12",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/cookware/1422641/lagostina-12-piece-copper-hand-hammered-cookware-set-8efd56aa-f4d9-43a3-830a-345e63def203-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 599.99,
-    "salePrice": 299.98,
-    "store": "Canadian Tire",
-    "city": "Burlington Fairview, ON",
-    "branch": "Burlington Fairview, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/batterie-de-cuisine-en-cuivre-lagostina-artiste-clad-allant-au-four-paq-12-1422641p.html",
-    "sku": "1422641",
-    "availability": "51 En Stock#142-2641-4"
+    "availability": "12 En Stock#082-1088-0"
   },
   {
     "title": "Liquide de préparation Evans, 1 gal",
@@ -51,12 +27,24 @@
     "title": "Bols de cuisine empilables MASTER Chef en plastique, paq. 8",
     "image": "https://media-www.canadiantire.ca/product/living/kitchen/bakeware-baking-prep/1424985/masterchef-8-piece-bake-prep-set-3e85a64e-f1ef-47d2-8117-bf07641c9608-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 32.99,
-    "salePrice": 10.98,
+    "salePrice": 11.98,
     "store": "Canadian Tire",
     "city": "Burlington Fairview, ON",
     "branch": "Burlington Fairview, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/bols-de-cuisine-empilables-master-chef-en-plastique-paq-8-1424985p.html",
     "sku": "1424985",
-    "availability": "49 En Stock#142-4985-4"
+    "availability": "47 En Stock#142-4985-4"
+  },
+  {
+    "title": "Nutriments d’engrais étape 3 Holland Secret Grow, 2-1-7",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/gardening/gardening-plant-accessories/1590293/future-harvest-holland-secret-grow-2-1-7-3-part-formula-5ed07a0b-5c4c-44ac-9e0b-db051782067c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 6.43,
+    "store": "Canadian Tire",
+    "city": "Burlington Fairview, ON",
+    "branch": "Burlington Fairview, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/nutriments-d-engrais-etape-3-holland-secret-grow-2-1-7-1590293p.html",
+    "sku": "1590293",
+    "availability": ""
   }
 ]

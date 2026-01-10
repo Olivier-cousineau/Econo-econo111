@@ -1,17 +1,5 @@
 [
   {
-    "title": "Trousse de départ pour conservation et entreposage d'aliments Fresh & Save de Zwilling avec pompe à dépression portative",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430335/zwilling-food-storage-starter-kit-8pc-ee27a980-a5f6-4ca9-860b-310987524806-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 189.99,
-    "salePrice": 49.93,
-    "store": "Canadian Tire",
-    "city": "Hamilton Main, ON",
-    "branch": "Hamilton Main, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-depart-pour-conservation-et-entreposage-d-aliments-fresh-save-de-zwilling-avec-pompe-a-depression-portative-0430335p.html",
-    "sku": "0430335",
-    "availability": "Il n’en reste que 2 #043-0335-2"
-  },
-  {
     "title": "Luge rapide H2O Spider avec direction et freins",
     "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/winter-recreation/0821088/spider-snow-bike-e7a5d494-3744-4104-9151-337a07902637-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 99.99,
@@ -36,51 +24,15 @@
     "availability": "Il n’en reste que 1 #142-2641-4"
   },
   {
-    "title": "Époxy pour soudeuse en plastique Permatex, noir, 25 mL",
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0383850/permatex-black-plastic-welder-epoxy-25ml-1ba1cd75-d972-41e1-a8be-aece3c5ec580-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 9.99,
+    "title": "Super liquide de refroidissement Hy-Per Lube pour moteur au diesel, 532 mL",
+    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0380876/hy-per-lube-diesel-super-coolant-473ml-700c85a7-1297-4fed-a610-320bf25accd7.png?im=whresize&wid=200&hei=200",
+    "price": 16.99,
     "salePrice": 3.93,
     "store": "Canadian Tire",
     "city": "Hamilton Main, ON",
     "branch": "Hamilton Main, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/epoxy-pour-soudeuse-en-plastique-permatex-noir-25-ml-0383850p.html",
-    "sku": "0383850",
+    "url": "https://www.canadiantire.ca/fr/pdp/super-liquide-de-refroidissement-hy-per-lube-pour-moteur-au-diesel-532-ml-0380876p.html",
+    "sku": "0380876",
     "availability": ""
-  },
-  {
-    "title": "Ciment pour silencieux/mastic à système d’échappement VersaChem Spider Patch 90336, 170 g",
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0383750/spider-patch-muffler-cement-170g-8dfad7dd-d497-4fbe-bad1-eb09adfca903-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 7.99,
-    "salePrice": 2.93,
-    "store": "Canadian Tire",
-    "city": "Hamilton Main, ON",
-    "branch": "Hamilton Main, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/ciment-pour-silencieux-mastic-a-systeme-d-echappement-versachem-spider-patch-90336-170-g-0383750p.html",
-    "sku": "0383750",
-    "availability": ""
-  },
-  {
-    "title": "Nettoyant pour la cuisine VIM Refill Eco-Pack Power & Shine, 70 mL",
-    "image": "https://media-www.canadiantire.ca/product/living/cleaning/household-cleaning-solutions/1531492/vim-refill-eco-pack-power-shine-kitchen-70ml-6678f100-f210-47a3-ad52-1e74ce7039ae-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 3.99,
-    "salePrice": 1.93,
-    "store": "Canadian Tire",
-    "city": "Hamilton Main, ON",
-    "branch": "Hamilton Main, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-pour-la-cuisine-vim-refill-eco-pack-power-shine-70-ml-1531492p.html",
-    "sku": "1531492",
-    "availability": ""
-  },
-  {
-    "title": "Nettoyant pour bateau hautement moussant Triton, transparent, 950 mL",
-    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790181/triton-boat-wash-bde49c89-bb13-400a-a567-cd4e30d9370a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 19.99,
-    "salePrice": 4.93,
-    "store": "Canadian Tire",
-    "city": "Hamilton Main, ON",
-    "branch": "Hamilton Main, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-pour-bateau-hautement-moussant-triton-transparent-950-ml-0790181p.html",
-    "sku": "0790181",
-    "availability": "Il n’en reste que 2 #079-0181-2"
   }
 ]
