@@ -72,7 +72,7 @@
     "product_id": null,
     "sku": "0383831",
     "sku_formatted": "038-3831-6",
-    "availability": "Il n’en reste que 4 #038-3831-6",
+    "availability": "Il n’en reste que 3 #038-3831-6",
     "badges": [
       "Liquidation◊"
     ],
@@ -91,8 +91,8 @@
     "city": "Brockville, ON",
     "name": "Bols de cuisine empilables MASTER Chef en plastique, paq. 8",
     "title": "Bols de cuisine empilables MASTER Chef en plastique, paq. 8",
-    "price": 12.93,
-    "price_raw": "12,93 $",
+    "price": 11.21,
+    "price_raw": "11,21 $",
     "liquidation": true,
     "image": "https://media-www.canadiantire.ca/product/living/kitchen/bakeware-baking-prep/1424985/masterchef-8-piece-bake-prep-set-3e85a64e-f1ef-47d2-8117-bf07641c9608-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "image_url": "https://media-www.canadiantire.ca/product/living/kitchen/bakeware-baking-prep/1424985/masterchef-8-piece-bake-prep-set-3e85a64e-f1ef-47d2-8117-bf07641c9608-jpgrendition.jpg?im=whresize&wid=200&hei=200",
@@ -105,14 +105,14 @@
     "badges": [
       "Liquidation◊Mieux notés"
     ],
-    "discount_percent": 60.81,
-    "liquidation_price": 12.93,
-    "liquidation_price_raw": "12,93 $",
-    "sale_price": 12.93,
-    "sale_price_raw": "12,93 $",
+    "discount_percent": 66.02,
+    "liquidation_price": 11.21,
+    "liquidation_price_raw": "11,21 $",
+    "sale_price": 11.21,
+    "sale_price_raw": "11,21 $",
     "regular_price": 32.99,
     "regular_price_raw": "Était±  32,99 $prix était 32,99 $",
-    "price_sale_clean": "12,93",
+    "price_sale_clean": "11,21",
     "price_original_clean": "32,99"
   },
   {
@@ -143,5 +143,34 @@
     "regular_price_raw": "29,99 $Était   et+ prix était à partir de 29,99 $",
     "price_sale_clean": "14,93",
     "price_original_clean": "29,99"
+  },
+  {
+    "store_id": "14",
+    "city": "Brockville, ON",
+    "name": "Bouche-toit incolore Rust-Oleum LeakSeal, intérieur/extérieur, scellant résistant à l'eau et aux intempéries, 300 mL",
+    "title": "Bouche-toit incolore Rust-Oleum LeakSeal, intérieur/extérieur, scellant résistant à l'eau et aux intempéries, 300 mL",
+    "price": 9.99,
+    "price_raw": "9,99 $",
+    "liquidation": true,
+    "image": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641563/clear-roof-patch-300-ml-5689166a-6a3e-49a3-afcd-8d0f43d632bf-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641563/clear-roof-patch-300-ml-5689166a-6a3e-49a3-afcd-8d0f43d632bf-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/bouche-toit-incolore-rust-oleum-leakseal-interieur-exterieur-scellant-resistant-a-l-eau-et-aux-intemperies-300-ml-0641563p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/bouche-toit-incolore-rust-oleum-leakseal-interieur-exterieur-scellant-resistant-a-l-eau-et-aux-intemperies-300-ml-0641563p.html",
+    "product_id": null,
+    "sku": "0641563",
+    "sku_formatted": "064-1563-2",
+    "availability": "12 En Stock#064-1563-2",
+    "badges": [
+      "Liquidation◊"
+    ],
+    "discount_percent": 50.03,
+    "liquidation_price": 9.99,
+    "liquidation_price_raw": "9,99 $",
+    "sale_price": 9.99,
+    "sale_price_raw": "9,99 $",
+    "regular_price": 19.99,
+    "regular_price_raw": "Était±  19,99 $prix était 19,99 $",
+    "price_sale_clean": "9,99",
+    "price_original_clean": "19,99"
   }
 ]
