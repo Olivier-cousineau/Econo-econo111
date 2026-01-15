@@ -9,7 +9,7 @@
     "branch": "Jonquiere, QC",
     "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-depart-pour-conservation-et-entreposage-d-aliments-fresh-save-de-zwilling-avec-pompe-a-depression-portative-0430335p.html",
     "sku": "0430335",
-    "availability": "54 En Stock#043-0335-2"
+    "availability": "53 En Stock#043-0335-2"
   },
   {
     "title": "Luge rapide H2O Spider avec direction et freins",
@@ -22,18 +22,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/luge-rapide-h2o-spider-avec-direction-et-freins-0821088p.html",
     "sku": "0821088",
     "availability": "12 En Stock#082-1088-0"
-  },
-  {
-    "title": "Batterie de cuisine en cuivre Lagostina Artiste-Clad allant au four, paq. 12",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/cookware/1422641/lagostina-12-piece-copper-hand-hammered-cookware-set-8efd56aa-f4d9-43a3-830a-345e63def203-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 599.99,
-    "salePrice": 299.93,
-    "store": "Canadian Tire",
-    "city": "Jonquiere, QC",
-    "branch": "Jonquiere, QC",
-    "url": "https://www.canadiantire.ca/fr/pdp/batterie-de-cuisine-en-cuivre-lagostina-artiste-clad-allant-au-four-paq-12-1422641p.html",
-    "sku": "1422641",
-    "availability": "Il n’en reste que 1 #142-2641-4"
   },
   {
     "title": "Liquide de refroidissement haute performance sans eau Evans, 1 gal",
@@ -58,5 +46,65 @@
     "url": "https://www.canadiantire.ca/fr/pdp/liquide-de-preparation-evans-1-gal-0293102p.html",
     "sku": "0293102",
     "availability": "Il n’en reste que 3 #029-3102-4"
+  },
+  {
+    "title": "Peinture en aérosol toute surface Rust-Oleum Specialty, laque, 312 g",
+    "image": "https://media-www.canadiantire.ca/product/fixing/paint/paints/0482395/specialty-lacquer-clear-312g-1c0cce3e-31bd-4ba3-99cb-67cfe9f88aac-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 15.99,
+    "salePrice": 7.93,
+    "store": "Canadian Tire",
+    "city": "Jonquiere, QC",
+    "branch": "Jonquiere, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/peinture-en-aerosol-toute-surface-rust-oleum-specialty-laque-312-g-0482525p.html",
+    "sku": "0482525",
+    "availability": ""
+  },
+  {
+    "title": "Scellant Permatex High Tack Spray-A-Gasket 99MA, vaporisateur, 255 g",
+    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0382511/high-tack-gasket-sealant-1ebe6623-1ded-4c05-8d99-df6f7a68b449-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 14.99,
+    "salePrice": 4.93,
+    "store": "Canadian Tire",
+    "city": "Jonquiere, QC",
+    "branch": "Jonquiere, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/scellant-permatex-high-tack-spray-a-gasket-99ma-vaporisateur-255-g-0382511p.html",
+    "sku": "0382511",
+    "availability": "Il n’en reste que 1 #038-2511-4"
+  },
+  {
+    "title": "Ciment pour silencieux/mastic à système d’échappement VersaChem Spider Patch 90336, 170 g",
+    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0383750/spider-patch-muffler-cement-170g-8dfad7dd-d497-4fbe-bad1-eb09adfca903-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 7.99,
+    "salePrice": 2.93,
+    "store": "Canadian Tire",
+    "city": "Jonquiere, QC",
+    "branch": "Jonquiere, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/ciment-pour-silencieux-mastic-a-systeme-d-echappement-versachem-spider-patch-90336-170-g-0383750p.html",
+    "sku": "0383750",
+    "availability": "Il n’en reste que 1 #038-3750-8"
+  },
+  {
+    "title": "Nettoyant pour vinyle et cuir de bateau Triton, 950 mL",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790184/triton-vinyl-leather-cleaner-23f32285-0e63-4046-bef7-2120a7382ff5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 24.99,
+    "salePrice": 5.93,
+    "store": "Canadian Tire",
+    "city": "Jonquiere, QC",
+    "branch": "Jonquiere, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-pour-vinyle-et-cuir-de-bateau-triton-950-ml-0790184p.html",
+    "sku": "0790184",
+    "availability": ""
+  },
+  {
+    "title": "Nettoyant de cale de bateau Triton, 950 mL",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790139/triton-bilge-cleaner-9c25cf87-1580-4000-87b6-6b03fb0b7aaf-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 16.99,
+    "salePrice": 1.93,
+    "store": "Canadian Tire",
+    "city": "Jonquiere, QC",
+    "branch": "Jonquiere, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-de-cale-de-bateau-triton-950-ml-0790139p.html",
+    "sku": "0790139",
+    "availability": ""
   }
 ]
