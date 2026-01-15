@@ -15,7 +15,7 @@
     "title": "Nettoyant et super-rinçage pour radiateur Rislone Hy-per Cool, 473 mL",
     "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0388036/rislone-hy-per-cool-super-flush-cleaner-473ml-e56a661d-1174-4251-877c-63f92965d663-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 9.99,
-    "salePrice": 3.93,
+    "salePrice": 2.93,
     "store": "Canadian Tire",
     "city": "Maniwaki, QC",
     "branch": "Maniwaki, QC",
@@ -48,6 +48,18 @@
     "availability": ""
   },
   {
+    "title": "Aérosol réfléchissant non permanent Albedo100, incolore, 130 g",
+    "image": "https://media-www.canadiantire.ca/product/fixing/paint/paints/0482250/albedo-100-non-permanent-clear-reflective-spray-textiles-5f4c70e3-3a99-46bf-ba98-24b081e74339.png?im=whresize&wid=200&hei=200",
+    "price": 24.99,
+    "salePrice": 1.93,
+    "store": "Canadian Tire",
+    "city": "Maniwaki, QC",
+    "branch": "Maniwaki, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/aerosol-reflechissant-non-permanent-albedo100-incolore-130-g-0482250p.html",
+    "sku": "0482250",
+    "availability": "Il n’en reste que 3 #048-2250-0"
+  },
+  {
     "title": "Additif Hy-Per Lube Quick Heat, 473 ml",
     "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0380875/hy-per-lube-quick-heat-473ml-fd412ab8-a5e5-4509-b7d8-cbc5237e5956.png?im=whresize&wid=200&hei=200",
     "price": 13.99,
@@ -58,5 +70,29 @@
     "url": "https://www.canadiantire.ca/fr/pdp/additif-hy-per-lube-quick-heat-473-ml-0380875p.html",
     "sku": "0380875",
     "availability": "Il n’en reste que 7 #038-0875-0"
+  },
+  {
+    "title": "Nettoyant pour traînées noires de bateau Triton, transparent, 950 mL",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790182/triton-black-streak-remover-dd690654-10fb-48c5-933c-64bacf3f88b2.png?im=whresize&wid=200&hei=200",
+    "price": 17.99,
+    "salePrice": 1.93,
+    "store": "Canadian Tire",
+    "city": "Maniwaki, QC",
+    "branch": "Maniwaki, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-pour-trainees-noires-de-bateau-triton-transparent-950-ml-0790182p.html",
+    "sku": "0790182",
+    "availability": ""
+  },
+  {
+    "title": "Nettoyant pour bateau hautement moussant Triton, transparent, 950 mL",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790181/triton-boat-wash-bde49c89-bb13-400a-a567-cd4e30d9370a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 4.93,
+    "store": "Canadian Tire",
+    "city": "Maniwaki, QC",
+    "branch": "Maniwaki, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-pour-bateau-hautement-moussant-triton-transparent-950-ml-0790181p.html",
+    "sku": "0790181",
+    "availability": "Il n’en reste que 1 #079-0181-2"
   }
 ]
