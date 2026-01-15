@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-01-14T06:22:11.072Z",
+  "generatedAt": "2026-01-15T06:46:34.787Z",
   "stores": [
     {
-      "id": "271",
-      "city": "St. Jerome, QC",
+      "id": "290",
+      "city": "Ottawa Carling Ave, ON",
       "status": "committed",
       "details": "4 produits"
     },
     {
-      "id": "649",
-      "city": "Blainville, QC",
-      "status": "committed",
-      "details": "5 produits"
-    },
-    {
-      "id": "418",
-      "city": "Rosemere, QC",
-      "status": "committed",
-      "details": "5 produits"
-    },
-    {
-      "id": "641",
-      "city": "La Plaine, QC",
-      "status": "committed",
-      "details": "5 produits"
-    },
-    {
-      "id": "218",
-      "city": "St. Eustache, QC",
-      "status": "committed",
-      "details": "5 produits"
-    },
-    {
-      "id": "690",
-      "city": "Laval Fabreville, QC",
-      "status": "committed",
-      "details": "7 produits"
-    },
-    {
-      "id": "312",
-      "city": "Terrebonne, QC",
-      "status": "committed",
-      "details": "6 produits"
-    },
-    {
-      "id": "231",
-      "city": "Laval Vimont, QC",
+      "id": "442",
+      "city": "Barrhaven, ON",
       "status": "committed",
       "details": "4 produits"
+    },
+    {
+      "id": "272",
+      "city": "Ottawa Bells Cnrs, ON",
+      "status": "committed",
+      "details": "3 produits"
+    },
+    {
+      "id": "227",
+      "city": "Kemptville, ON",
+      "status": "committed",
+      "details": "2 produits"
+    },
+    {
+      "id": "240",
+      "city": "Magog, QC",
+      "status": "committed",
+      "details": "4 produits"
+    },
+    {
+      "id": "457",
+      "city": "Kanata, ON",
+      "status": "committed",
+      "details": "4 produits"
+    },
+    {
+      "id": "243",
+      "city": "Victoriaville, QC",
+      "status": "committed",
+      "details": "5 produits"
+    },
+    {
+      "id": "96",
+      "city": "Sherbrooke, QC",
+      "status": "committed",
+      "details": "2 produits"
     }
   ],
   "failedTwice": [],
