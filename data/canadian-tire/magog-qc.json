@@ -21,7 +21,7 @@
     "branch": "Magog, QC",
     "url": "https://www.canadiantire.ca/fr/pdp/luge-rapide-h2o-spider-avec-direction-et-freins-0821088p.html",
     "sku": "0821088",
-    "availability": "Il n’en reste que 4 #082-1088-0"
+    "availability": "Il n’en reste que 2 #082-1088-0"
   },
   {
     "title": "Bols de cuisine empilables MASTER Chef en plastique, paq. 8",
@@ -34,5 +34,17 @@
     "url": "https://www.canadiantire.ca/fr/pdp/bols-de-cuisine-empilables-master-chef-en-plastique-paq-8-1424985p.html",
     "sku": "1424985",
     "availability": "8 En Stock#142-4985-4"
+  },
+  {
+    "title": "Peinture en aérosol toute surface Rust-Oleum Specialty, laque, 312 g",
+    "image": "https://media-www.canadiantire.ca/product/fixing/paint/paints/0482395/specialty-lacquer-clear-312g-1c0cce3e-31bd-4ba3-99cb-67cfe9f88aac-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 15.99,
+    "salePrice": 7.93,
+    "store": "Canadian Tire",
+    "city": "Magog, QC",
+    "branch": "Magog, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/peinture-en-aerosol-toute-surface-rust-oleum-specialty-laque-312-g-0482525p.html",
+    "sku": "0482525",
+    "availability": ""
   }
 ]
