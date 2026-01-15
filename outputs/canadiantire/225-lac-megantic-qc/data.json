@@ -85,5 +85,34 @@
     "regular_price_raw": "Était±  32,99 $prix était 32,99 $",
     "price_sale_clean": "12,93",
     "price_original_clean": "32,99"
+  },
+  {
+    "store_id": "225",
+    "city": "Lac Megantic, QC",
+    "name": "Bouche-toit incolore Rust-Oleum LeakSeal, intérieur/extérieur, scellant résistant à l'eau et aux intempéries, 3,78 L",
+    "title": "Bouche-toit incolore Rust-Oleum LeakSeal, intérieur/extérieur, scellant résistant à l'eau et aux intempéries, 3,78 L",
+    "price": 44.96,
+    "price_raw": "44,96 $",
+    "liquidation": true,
+    "image": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641571/clear-roof-patch-3-78-l-9c267c49-4660-47a8-a847-4a51ff8a9844-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641571/clear-roof-patch-3-78-l-9c267c49-4660-47a8-a847-4a51ff8a9844-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/bouche-toit-incolore-rust-oleum-leakseal-interieur-exterieur-scellant-resistant-a-l-eau-et-aux-intemperies-3-78-l-0641571p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/bouche-toit-incolore-rust-oleum-leakseal-interieur-exterieur-scellant-resistant-a-l-eau-et-aux-intemperies-3-78-l-0641571p.html",
+    "product_id": null,
+    "sku": "0641571",
+    "sku_formatted": "064-1571-2",
+    "availability": "14 En Stock#064-1571-2",
+    "badges": [
+      "Liquidation◊"
+    ],
+    "discount_percent": 67.88,
+    "liquidation_price": 44.96,
+    "liquidation_price_raw": "44,96 $",
+    "sale_price": 44.96,
+    "sale_price_raw": "44,96 $",
+    "regular_price": 139.99,
+    "regular_price_raw": "Était±  139,99 $prix était 139,99 $",
+    "price_sale_clean": "44,96",
+    "price_original_clean": "139,99"
   }
 ]
