@@ -1,17 +1,5 @@
 [
   {
-    "title": "Luge rapide H2O Spider avec direction et freins",
-    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/winter-recreation/0821088/spider-snow-bike-e7a5d494-3744-4104-9151-337a07902637-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 99.99,
-    "salePrice": 39.93,
-    "store": "Canadian Tire",
-    "city": "Kingston Division St., ON",
-    "branch": "Kingston Division St., ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/luge-rapide-h2o-spider-avec-direction-et-freins-0821088p.html",
-    "sku": "0821088",
-    "availability": "Il n’en reste que 3 #082-1088-0"
-  },
-  {
     "title": "Liquide de refroidissement haute performance sans eau Evans, 1 gal",
     "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0293101/evans-high-performance-waterless-coolant-1gal-6a1734c6-1411-4245-8dc1-b1ccca48c952-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 79.99,
@@ -21,7 +9,7 @@
     "branch": "Kingston Division St., ON",
     "url": "https://www.canadiantire.ca/fr/pdp/liquide-de-refroidissement-haute-performance-sans-eau-evans-1-gal-0293101p.html",
     "sku": "0293101",
-    "availability": "Il n’en reste que 2 #029-3101-6"
+    "availability": "Il n’en reste que 1 #029-3101-6"
   },
   {
     "title": "Liquide de préparation Evans, 1 gal",
@@ -36,18 +24,6 @@
     "availability": "Il n’en reste que 4 #029-3102-4"
   },
   {
-    "title": "Savon à vaisselle liquide Old Dutch, parfums variés, 740 mL",
-    "image": "https://media-www.canadiantire.ca/product/living/home-essentials/laundry-hand-dish-cleaning-solutions/1530418/old-dutch-liquid-dish-detergent-degreaser-740ml-2c136003-f89e-43ed-ab9b-7cd0db4275d0-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 2.49,
-    "salePrice": 1.24,
-    "store": "Canadian Tire",
-    "city": "Kingston Division St., ON",
-    "branch": "Kingston Division St., ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/savon-a-vaisselle-liquide-old-dutch-parfums-varies-740-ml-1530417p.html",
-    "sku": "1530417",
-    "availability": ""
-  },
-  {
     "title": "Peinture d'intérieur en aérosol toute surface Rust-Oleum Accents, texture de pierre, 340 g",
     "image": "https://media-www.canadiantire.ca/product/fixing/paint/paints/0482380/stone-spray-paint-black-granite-f8538694-ebde-401f-94c6-57b81bcebc2e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 29.99,
@@ -60,18 +36,6 @@
     "availability": ""
   },
   {
-    "title": "Lubrifiant à pellicule sèche antiadhésif DuPont, bouteille à presser, 120 mL (4 oz)",
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0387817/dupont-non-stick-4oz-squeeze-486595e9-13b3-42a0-9c33-1d91f9ff2266-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 9.49,
-    "salePrice": 2.93,
-    "store": "Canadian Tire",
-    "city": "Kingston Division St., ON",
-    "branch": "Kingston Division St., ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/lubrifiant-a-pellicule-seche-antiadhesif-dupont-bouteille-a-presser-120-ml-4-oz-0387817p.html",
-    "sku": "0387817",
-    "availability": "9 En Stock#038-7817-8"
-  },
-  {
     "title": "Lubrifiant silicone DuPont Home, sécuritaire pour les surfaces automobiles ou marines, bouteille à presser, 120 mL (4 oz)",
     "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0387816/dupont-silicone-4oz-squeeze-c8ac129d-9de8-486f-b0f2-c50cd5346e24-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 10.99,
@@ -82,17 +46,5 @@
     "url": "https://www.canadiantire.ca/fr/pdp/lubrifiant-silicone-dupont-home-securitaire-pour-les-surfaces-automobiles-ou-marines-bouteille-a-presser-120-ml-4-oz-0387816p.html",
     "sku": "0387816",
     "availability": ""
-  },
-  {
-    "title": "Additif Hy-Per Lube Quick Heat, 473 ml",
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0380875/hy-per-lube-quick-heat-473ml-fd412ab8-a5e5-4509-b7d8-cbc5237e5956.png?im=whresize&wid=200&hei=200",
-    "price": 13.99,
-    "salePrice": 6.99,
-    "store": "Canadian Tire",
-    "city": "Kingston Division St., ON",
-    "branch": "Kingston Division St., ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/additif-hy-per-lube-quick-heat-473-ml-0380875p.html",
-    "sku": "0380875",
-    "availability": "Il n’en reste que 1 #038-0875-0"
   }
 ]
