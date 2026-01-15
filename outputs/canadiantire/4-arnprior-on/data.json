@@ -85,5 +85,34 @@
     "regular_price_raw": "Était±  32,99 $prix était 32,99 $",
     "price_sale_clean": "12,93",
     "price_original_clean": "32,99"
+  },
+  {
+    "store_id": "4",
+    "city": "Arnprior, ON",
+    "name": "Nettoyant nautique pour écran, 230 mL",
+    "title": "Nettoyant nautique pour écran, 230 mL",
+    "price": 7.99,
+    "price_raw": "7,99 $",
+    "liquidation": true,
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790328/marine-display-cleaner-f2601da5-df42-4d33-9177-1be27b9b3298-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790328/marine-display-cleaner-f2601da5-df42-4d33-9177-1be27b9b3298-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-nautique-pour-ecran-230-ml-0790328p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/nettoyant-nautique-pour-ecran-230-ml-0790328p.html",
+    "product_id": null,
+    "sku": "0790328",
+    "sku_formatted": "079-0328-6",
+    "availability": "Il n’en reste que 1 #079-0328-6",
+    "badges": [
+      "Liquidation◊Mieux notés"
+    ],
+    "discount_percent": 60.03,
+    "liquidation_price": 7.99,
+    "liquidation_price_raw": "7,99 $",
+    "sale_price": 7.99,
+    "sale_price_raw": "7,99 $",
+    "regular_price": 19.99,
+    "regular_price_raw": "Était±  19,99 $prix était 19,99 $",
+    "price_sale_clean": "7,99",
+    "price_original_clean": "19,99"
   }
 ]
