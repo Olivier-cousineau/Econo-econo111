@@ -9,7 +9,7 @@
     "branch": "Stouffville, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/luge-rapide-h2o-spider-avec-direction-et-freins-0821088p.html",
     "sku": "0821088",
-    "availability": "Il n’en reste que 5 #082-1088-0"
+    "availability": "Il n’en reste que 4 #082-1088-0"
   },
   {
     "title": "Batterie de cuisine en cuivre Lagostina Artiste-Clad allant au four, paq. 12",
@@ -34,5 +34,29 @@
     "url": "https://www.canadiantire.ca/fr/pdp/peinture-d-interieur-en-aerosol-toute-surface-rust-oleum-accents-texture-de-pierre-340-g-0482380p.html",
     "sku": "0482380",
     "availability": ""
+  },
+  {
+    "title": "Nettoyant nautique pour écran, 230 mL",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790328/marine-display-cleaner-f2601da5-df42-4d33-9177-1be27b9b3298-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 6.79,
+    "store": "Canadian Tire",
+    "city": "Stouffville, ON",
+    "branch": "Stouffville, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-nautique-pour-ecran-230-ml-0790328p.html",
+    "sku": "0790328",
+    "availability": "Il n’en reste que 1 #079-0328-6"
+  },
+  {
+    "title": "Chlorateur solaire de grosse piscine hors terre et creusée GAME Suculent Garden",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-maintenance/0813908/succulent-garden-solar-chlorinator-404f2831-01e3-4c26-80b2-a2a2b995e543-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 44.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Stouffville, ON",
+    "branch": "Stouffville, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/chlorateur-solaire-de-grosse-piscine-hors-terre-et-creusee-game-suculent-garden-0813908p.html",
+    "sku": "0813908",
+    "availability": "8 En Stock#081-3908-0"
   }
 ]
