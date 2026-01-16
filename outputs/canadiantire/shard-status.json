@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-01-16T14:30:40.042Z",
+  "generatedAt": "2026-01-16T16:38:27.834Z",
   "stores": [
     {
-      "id": "446",
-      "city": "Bradford, ON",
-      "status": "committed",
-      "details": "2 produits"
-    },
-    {
-      "id": "697",
-      "city": "Richmond Hill North, ON",
-      "status": "committed",
-      "details": "6 produits"
-    },
-    {
-      "id": "87",
-      "city": "Richmond Hill, ON",
-      "status": "committed",
-      "details": "6 produits"
-    },
-    {
-      "id": "273",
-      "city": "Toronto Main & Danforth, ON",
-      "status": "committed",
-      "details": "3 produits"
-    },
-    {
-      "id": "192",
-      "city": "Sheppard Ave., ON",
-      "status": "committed",
-      "details": "5 produits"
-    },
-    {
-      "id": "126",
-      "city": "Yonge & Steeles, ON",
-      "status": "committed",
-      "details": "5 produits"
-    },
-    {
-      "id": "459",
-      "city": "Eglinton & Laird, ON",
-      "status": "committed",
-      "details": "6 produits"
-    },
-    {
-      "id": "654",
-      "city": "Leslie & Lake Shore, ON",
+      "id": "321",
+      "city": "Dufferin & 407, ON",
       "status": "committed",
       "details": "7 produits"
+    },
+    {
+      "id": "150",
+      "city": "Toronto, Yonge & Church, ON",
+      "status": "committed",
+      "details": "8 produits"
+    },
+    {
+      "id": "485",
+      "city": "Dufferin & Finch Auto Ctr, ON",
+      "status": "skipped",
+      "details": "nothing to commit"
+    },
+    {
+      "id": "600",
+      "city": "Toronto Eaton Centre, ON",
+      "status": "committed",
+      "details": "9 produits"
+    },
+    {
+      "id": "19",
+      "city": "Lawrence & Allen Expwy, ON",
+      "status": "committed",
+      "details": "7 produits"
+    },
+    {
+      "id": "653",
+      "city": "Maple, ON",
+      "status": "committed",
+      "details": "6 produits"
+    },
+    {
+      "id": "621",
+      "city": "Liberty Village, ON",
+      "status": "committed",
+      "details": "8 produits"
+    },
+    {
+      "id": "214",
+      "city": "Eglinton & Caledonia, Toronto, ON",
+      "status": "committed",
+      "details": "2 produits"
     }
   ],
   "failedTwice": [],
