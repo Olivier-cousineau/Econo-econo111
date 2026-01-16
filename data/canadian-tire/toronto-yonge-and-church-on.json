@@ -9,7 +9,7 @@
     "branch": "Toronto, Yonge & Church, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/luge-rapide-h2o-spider-avec-direction-et-freins-0821088p.html",
     "sku": "0821088",
-    "availability": "Il n’en reste que 7 #082-1088-0"
+    "availability": "Il n’en reste que 5 #082-1088-0"
   },
   {
     "title": "Savon à mains liquide avec pompe Sapadilla, parfums variés, 350 mL",
@@ -45,7 +45,7 @@
     "branch": "Toronto, Yonge & Church, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/bols-de-cuisine-empilables-master-chef-en-plastique-paq-8-1424985p.html",
     "sku": "1424985",
-    "availability": "36 En Stock#142-4985-4"
+    "availability": "35 En Stock#142-4985-4"
   },
   {
     "title": "Peinture en aérosol toute surface Rust-Oleum Specialty, laque, 312 g",
@@ -94,29 +94,5 @@
     "url": "https://www.canadiantire.ca/fr/pdp/chlorateur-solaire-de-grosse-piscine-hors-terre-et-creusee-game-suculent-garden-0813908p.html",
     "sku": "0813908",
     "availability": "Il n’en reste que 6 #081-3908-0"
-  },
-  {
-    "title": "Pectine Bernardin sans sucre pour confiture à congeler, 45 g",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/canning/0422575/sugar-free-freezer-jam-pectin-76166fc9-82d4-418b-bdf2-a8b7f0bd3fc9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 3.99,
-    "salePrice": 0.93,
-    "store": "Canadian Tire",
-    "city": "Toronto, Yonge & Church, ON",
-    "branch": "Toronto, Yonge & Church, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/pectine-bernardin-sans-sucre-pour-confiture-a-congeler-45-g-0422575p.html",
-    "sku": "0422575",
-    "availability": ""
-  },
-  {
-    "title": "Holland Secret Micro 5-0-2, formule en 3 parties",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/gardening/gardening-plant-accessories/1590295/future-harvest-holland-secret-micro-5-0-2-3-part-formula-054d02d1-04af-4976-901d-343b750191d7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 24.99,
-    "salePrice": 8.93,
-    "store": "Canadian Tire",
-    "city": "Toronto, Yonge & Church, ON",
-    "branch": "Toronto, Yonge & Church, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/holland-secret-micro-5-0-2-formule-en-3-parties-1590295p.html",
-    "sku": "1590295",
-    "availability": ""
   }
 ]
