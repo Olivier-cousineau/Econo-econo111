@@ -56,34 +56,5 @@
     "regular_price_raw": "Était±  599,99 $prix était 599,99 $",
     "price_sale_clean": "299,93",
     "price_original_clean": "599,99"
-  },
-  {
-    "store_id": "33",
-    "city": "Fort Erie, ON",
-    "name": "Liquide de refroidissement antigel prémélangé 50/50 Certified, 3,78 L",
-    "title": "Liquide de refroidissement antigel prémélangé 50/50 Certified, 3,78 L",
-    "price": 9.49,
-    "price_raw": "9,49 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0293037/certified-premixed-coolant-3-78l-decd3101-66f0-44de-b8ea-fa4ff2952a31-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0293037/certified-premixed-coolant-3-78l-decd3101-66f0-44de-b8ea-fa4ff2952a31-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/liquide-de-refroidissement-antigel-premelange-50-50-certified-3-78-l-0293037p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/liquide-de-refroidissement-antigel-premelange-50-50-certified-3-78-l-0293037p.html",
-    "product_id": null,
-    "sku": "0293037",
-    "sku_formatted": "029-3037-0",
-    "availability": "Il n’en reste que 1 #029-3037-0",
-    "badges": [
-      "Liquidation◊Mieux notés"
-    ],
-    "discount_percent": 50.03,
-    "liquidation_price": 9.49,
-    "liquidation_price_raw": "9,49 $",
-    "sale_price": 9.49,
-    "sale_price_raw": "9,49 $",
-    "regular_price": 18.99,
-    "regular_price_raw": "Était±  18,99 $prix était 18,99 $",
-    "price_sale_clean": "9,49",
-    "price_original_clean": "18,99"
   }
 ]
