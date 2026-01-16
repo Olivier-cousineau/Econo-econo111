@@ -14,7 +14,7 @@
     "product_id": null,
     "sku": "0821088",
     "sku_formatted": "082-1088-0",
-    "availability": "Il n’en reste que 7 #082-1088-0",
+    "availability": "Il n’en reste que 5 #082-1088-0",
     "badges": [
       "Liquidation◊Exclusivité"
     ],
@@ -101,7 +101,7 @@
     "product_id": null,
     "sku": "1424985",
     "sku_formatted": "142-4985-4",
-    "availability": "36 En Stock#142-4985-4",
+    "availability": "35 En Stock#142-4985-4",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -230,63 +230,5 @@
     "regular_price_raw": "Était±  44,99 $prix était 44,99 $",
     "price_sale_clean": "8,93",
     "price_original_clean": "44,99"
-  },
-  {
-    "store_id": "150",
-    "city": "Toronto, Yonge & Church, ON",
-    "name": "Pectine Bernardin sans sucre pour confiture à congeler, 45 g",
-    "title": "Pectine Bernardin sans sucre pour confiture à congeler, 45 g",
-    "price": 0.93,
-    "price_raw": "0,93 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/canning/0422575/sugar-free-freezer-jam-pectin-76166fc9-82d4-418b-bdf2-a8b7f0bd3fc9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/living/kitchen/canning/0422575/sugar-free-freezer-jam-pectin-76166fc9-82d4-418b-bdf2-a8b7f0bd3fc9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/pectine-bernardin-sans-sucre-pour-confiture-a-congeler-45-g-0422575p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/pectine-bernardin-sans-sucre-pour-confiture-a-congeler-45-g-0422575p.html",
-    "product_id": null,
-    "sku": "0422575",
-    "sku_formatted": "042-2575-0",
-    "availability": null,
-    "badges": [
-      "Liquidation◊Mieux notés"
-    ],
-    "discount_percent": 76.69,
-    "liquidation_price": 0.93,
-    "liquidation_price_raw": "0,93 $",
-    "sale_price": 0.93,
-    "sale_price_raw": "0,93 $",
-    "regular_price": 3.99,
-    "regular_price_raw": "Était±  3,99 $prix était 3,99 $",
-    "price_sale_clean": "0,93",
-    "price_original_clean": "3,99"
-  },
-  {
-    "store_id": "150",
-    "city": "Toronto, Yonge & Church, ON",
-    "name": "Holland Secret Micro 5-0-2, formule en 3 parties",
-    "title": "Holland Secret Micro 5-0-2, formule en 3 parties",
-    "price": 8.93,
-    "price_raw": "8,93 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/gardening/gardening-plant-accessories/1590295/future-harvest-holland-secret-micro-5-0-2-3-part-formula-054d02d1-04af-4976-901d-343b750191d7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/seasonal-gardening/gardening/gardening-plant-accessories/1590295/future-harvest-holland-secret-micro-5-0-2-3-part-formula-054d02d1-04af-4976-901d-343b750191d7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/holland-secret-micro-5-0-2-formule-en-3-parties-1590295p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/holland-secret-micro-5-0-2-formule-en-3-parties-1590295p.html",
-    "product_id": null,
-    "sku": "1590295",
-    "sku_formatted": "159-0295-2",
-    "availability": null,
-    "badges": [
-      "Liquidation◊Mieux notés"
-    ],
-    "discount_percent": 64.27,
-    "liquidation_price": 8.93,
-    "liquidation_price_raw": "8,93 $",
-    "sale_price": 8.93,
-    "sale_price_raw": "8,93 $",
-    "regular_price": 24.99,
-    "regular_price_raw": "Était±  24,99 $prix était 24,99 $",
-    "price_sale_clean": "8,93",
-    "price_original_clean": "24,99"
   }
 ]
