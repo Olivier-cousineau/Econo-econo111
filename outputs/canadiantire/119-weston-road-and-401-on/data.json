@@ -14,7 +14,7 @@
     "product_id": null,
     "sku": "0430335",
     "sku_formatted": "043-0335-2",
-    "availability": "118 En Stock#043-0335-2",
+    "availability": "117 En Stock#043-0335-2",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -114,5 +114,63 @@
     "regular_price_raw": "Était±  20,99 $prix était 20,99 $",
     "price_sale_clean": "9,93",
     "price_original_clean": "20,99"
+  },
+  {
+    "store_id": "119",
+    "city": "Weston Road & 401, ON",
+    "name": "Bâton de mastic époxy en aluminium Star Brite pour les réparations d’urgence et permanentes, 113 g",
+    "title": "Bâton de mastic époxy en aluminium Star Brite pour les réparations d’urgence et permanentes, 113 g",
+    "price": 9.93,
+    "price_raw": "9,93 $",
+    "liquidation": true,
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790148/starbrite-epoxy-aluminum-putty-stick-118ml-fffecaec-d627-4cdb-a375-93be85255f00-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790148/starbrite-epoxy-aluminum-putty-stick-118ml-fffecaec-d627-4cdb-a375-93be85255f00-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/baton-de-mastic-epoxy-en-aluminium-star-brite-pour-les-reparations-d-urgence-et-permanentes-113-g-0790148p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/baton-de-mastic-epoxy-en-aluminium-star-brite-pour-les-reparations-d-urgence-et-permanentes-113-g-0790148p.html",
+    "product_id": null,
+    "sku": "0790148",
+    "sku_formatted": "079-0148-4",
+    "availability": "Il n’en reste que 2 #079-0148-4",
+    "badges": [
+      "Liquidation◊"
+    ],
+    "discount_percent": 54.84,
+    "liquidation_price": 9.93,
+    "liquidation_price_raw": "9,93 $",
+    "sale_price": 9.93,
+    "sale_price_raw": "9,93 $",
+    "regular_price": 21.99,
+    "regular_price_raw": "Était±  21,99 $prix était 21,99 $",
+    "price_sale_clean": "9,93",
+    "price_original_clean": "21,99"
+  },
+  {
+    "store_id": "119",
+    "city": "Weston Road & 401, ON",
+    "name": "Trousse de rechange de contrôle d’humidité EmZone, paq. 3, 450 g",
+    "title": "Trousse de rechange de contrôle d’humidité EmZone, paq. 3, 450 g",
+    "price": 2.93,
+    "price_raw": "2,93 $",
+    "liquidation": true,
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790302/moisture-control-refill-kit-450g-x3-7af80d3b-df36-4731-ac66-cd8f16cc35ba-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790302/moisture-control-refill-kit-450g-x3-7af80d3b-df36-4731-ac66-cd8f16cc35ba-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-rechange-de-controle-d-humidite-emzone-paq-3-450-g-0790302p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/trousse-de-rechange-de-controle-d-humidite-emzone-paq-3-450-g-0790302p.html",
+    "product_id": null,
+    "sku": "0790302",
+    "sku_formatted": "079-0302-6",
+    "availability": "Il n’en reste que 2 #079-0302-6",
+    "badges": [
+      "Liquidation◊Mieux notés"
+    ],
+    "discount_percent": 82.75,
+    "liquidation_price": 2.93,
+    "liquidation_price_raw": "2,93 $",
+    "sale_price": 2.93,
+    "sale_price_raw": "2,93 $",
+    "regular_price": 16.99,
+    "regular_price_raw": "Était±  16,99 $prix était 16,99 $",
+    "price_sale_clean": "2,93",
+    "price_original_clean": "16,99"
   }
 ]
