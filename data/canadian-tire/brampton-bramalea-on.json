@@ -9,7 +9,7 @@
     "branch": "Brampton Bramalea, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/luge-rapide-h2o-spider-avec-direction-et-freins-0821088p.html",
     "sku": "0821088",
-    "availability": "Il n’en reste que 3 #082-1088-0"
+    "availability": "Il n’en reste que 2 #082-1088-0"
   },
   {
     "title": "Liquide de refroidissement sans eau pour véhicules de sports motorisés Evans, 1/2 gal",
@@ -22,6 +22,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/liquide-de-refroidissement-sans-eau-pour-vehicules-de-sports-motorises-evans-1-2-gal-0293100p.html",
     "sku": "0293100",
     "availability": ""
+  },
+  {
+    "title": "Liquide de refroidissement antigel concentré robuste pour parcs mixtes Turbo Power, 3,78 L",
+    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0293086/turbo-power-mixed-fleet-conc-coolant-3-78l-af44380f-1ae9-4976-b4f0-18ce037a5554-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 29.99,
+    "salePrice": 14.93,
+    "store": "Canadian Tire",
+    "city": "Brampton Bramalea, ON",
+    "branch": "Brampton Bramalea, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/liquide-de-refroidissement-antigel-concentre-robuste-pour-parcs-mixtes-turbo-power-3-78-l-0293086p.html",
+    "sku": "0293086",
+    "availability": "Il n’en reste que 1 #029-3086-2"
   },
   {
     "title": "Scellant élastomère pour réparation de toit Rust-Oleum LeakSeal, calfeutrant étanche, blanc, 300 mL",
@@ -48,27 +60,15 @@
     "availability": "Il n’en reste que 7 #142-3764-6"
   },
   {
-    "title": "Engrais de base tout-usage Root Farm étape 2, 2-3-7, 473 mL",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/gardening/lawn-plant-care/1590131/root-farm-part-1-base-nutrient-473ml-8bd064ac-40d0-4c18-a158-e1bbc6140108-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 13.99,
-    "salePrice": 3,
+    "title": "Bâton de mastic époxy en aluminium Star Brite pour les réparations d’urgence et permanentes, 113 g",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790148/starbrite-epoxy-aluminum-putty-stick-118ml-fffecaec-d627-4cdb-a375-93be85255f00-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 21.99,
+    "salePrice": 9.93,
     "store": "Canadian Tire",
     "city": "Brampton Bramalea, ON",
     "branch": "Brampton Bramalea, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/engrais-de-base-tout-usage-root-farm-etape-2-2-3-7-473-ml-1590132p.html",
-    "sku": "1590132",
-    "availability": ""
-  },
-  {
-    "title": "Aérosol réfléchissant non permanent Albedo100, incolore, 130 g",
-    "image": "https://media-www.canadiantire.ca/product/fixing/paint/paints/0482250/albedo-100-non-permanent-clear-reflective-spray-textiles-5f4c70e3-3a99-46bf-ba98-24b081e74339.png?im=whresize&wid=200&hei=200",
-    "price": 24.99,
-    "salePrice": 1.93,
-    "store": "Canadian Tire",
-    "city": "Brampton Bramalea, ON",
-    "branch": "Brampton Bramalea, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/aerosol-reflechissant-non-permanent-albedo100-incolore-130-g-0482250p.html",
-    "sku": "0482250",
-    "availability": "Il n’en reste que 1 #048-2250-0"
+    "url": "https://www.canadiantire.ca/fr/pdp/baton-de-mastic-epoxy-en-aluminium-star-brite-pour-les-reparations-d-urgence-et-permanentes-113-g-0790148p.html",
+    "sku": "0790148",
+    "availability": "Il n’en reste que 1 #079-0148-4"
   }
 ]
