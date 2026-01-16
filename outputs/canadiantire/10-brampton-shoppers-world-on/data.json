@@ -14,7 +14,7 @@
     "product_id": null,
     "sku": "0821088",
     "sku_formatted": "082-1088-0",
-    "availability": "Il n’en reste que 4 #082-1088-0",
+    "availability": "Il n’en reste que 3 #082-1088-0",
     "badges": [
       "Liquidation◊Exclusivité"
     ],
@@ -56,6 +56,35 @@
     "regular_price_raw": "Était±  599,99 $prix était 599,99 $",
     "price_sale_clean": "299,93",
     "price_original_clean": "599,99"
+  },
+  {
+    "store_id": "10",
+    "city": "Brampton Shoppers World, ON",
+    "name": "Joint d’étanchéité Permatex 59705 Ultra Copper, température maximale, 147 mL",
+    "title": "Joint d’étanchéité Permatex 59705 Ultra Copper, température maximale, 147 mL",
+    "price": 6.93,
+    "price_raw": "6,93 $",
+    "liquidation": true,
+    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0383831/permatex-ultra-copper-gasket-maker-f2db9a34-74fc-43c9-8c35-a1598bde05d2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0383831/permatex-ultra-copper-gasket-maker-f2db9a34-74fc-43c9-8c35-a1598bde05d2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/joint-d-etancheite-permatex-59705-ultra-copper-temperature-maximale-147-ml-0383831p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/joint-d-etancheite-permatex-59705-ultra-copper-temperature-maximale-147-ml-0383831p.html",
+    "product_id": null,
+    "sku": "0383831",
+    "sku_formatted": "038-3831-6",
+    "availability": null,
+    "badges": [
+      "Liquidation◊"
+    ],
+    "discount_percent": 63.51,
+    "liquidation_price": 6.93,
+    "liquidation_price_raw": "6,93 $",
+    "sale_price": 6.93,
+    "sale_price_raw": "6,93 $",
+    "regular_price": 18.99,
+    "regular_price_raw": "Était±  18,99 $prix était 18,99 $",
+    "price_sale_clean": "6,93",
+    "price_original_clean": "18,99"
   },
   {
     "store_id": "10",
