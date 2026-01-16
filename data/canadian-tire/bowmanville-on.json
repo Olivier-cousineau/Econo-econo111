@@ -9,7 +9,7 @@
     "branch": "Bowmanville, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-depart-pour-conservation-et-entreposage-d-aliments-fresh-save-de-zwilling-avec-pompe-a-depression-portative-0430335p.html",
     "sku": "0430335",
-    "availability": "19 En Stock#043-0335-2"
+    "availability": "13 En Stock#043-0335-2"
   },
   {
     "title": "Luge rapide H2O Spider avec direction et freins",
@@ -21,7 +21,7 @@
     "branch": "Bowmanville, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/luge-rapide-h2o-spider-avec-direction-et-freins-0821088p.html",
     "sku": "0821088",
-    "availability": "29 En Stock#082-1088-0"
+    "availability": "26 En Stock#082-1088-0"
   },
   {
     "title": "Batterie de cuisine en cuivre Lagostina Artiste-Clad allant au four, paq. 12",
@@ -58,5 +58,17 @@
     "url": "https://www.canadiantire.ca/fr/pdp/joint-d-etancheite-permatex-59705-ultra-copper-temperature-maximale-147-ml-0383831p.html",
     "sku": "0383831",
     "availability": "Il n’en reste que 1 #038-3831-6"
+  },
+  {
+    "title": "Nettoyant nautique pour écran, 230 mL",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790328/marine-display-cleaner-f2601da5-df42-4d33-9177-1be27b9b3298-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 6.93,
+    "store": "Canadian Tire",
+    "city": "Bowmanville, ON",
+    "branch": "Bowmanville, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-nautique-pour-ecran-230-ml-0790328p.html",
+    "sku": "0790328",
+    "availability": "9 En Stock#079-0328-6"
   }
 ]
