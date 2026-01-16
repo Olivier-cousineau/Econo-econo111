@@ -14,7 +14,7 @@
     "product_id": null,
     "sku": "0430335",
     "sku_formatted": "043-0335-2",
-    "availability": "11 En Stock#043-0335-2",
+    "availability": "8 En Stock#043-0335-2",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -85,34 +85,5 @@
     "regular_price_raw": "Était±  32,99 $prix était 32,99 $",
     "price_sale_clean": "14,99",
     "price_original_clean": "32,99"
-  },
-  {
-    "store_id": "444",
-    "city": "Barrie South, ON",
-    "name": "Engrais de base Root Farm étape 1, 4-0-1, 473 mL",
-    "title": "Engrais de base Root Farm étape 1, 4-0-1, 473 mL",
-    "price": 6.93,
-    "price_raw": "6,93 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/gardening/lawn-plant-care/1590131/root-farm-part-1-base-nutrient-473ml-8bd064ac-40d0-4c18-a158-e1bbc6140108-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/seasonal-gardening/gardening/lawn-plant-care/1590131/root-farm-part-1-base-nutrient-473ml-8bd064ac-40d0-4c18-a158-e1bbc6140108-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/engrais-de-base-root-farm-etape-1-4-0-1-473-ml-1590131p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/engrais-de-base-root-farm-etape-1-4-0-1-473-ml-1590131p.html",
-    "product_id": null,
-    "sku": "1590131",
-    "sku_formatted": "159-0131-2",
-    "availability": "Il n’en reste que 7 #159-0131-2",
-    "badges": [
-      "Liquidation◊Mieux notés"
-    ],
-    "discount_percent": 59.21,
-    "liquidation_price": 6.93,
-    "liquidation_price_raw": "6,93 $",
-    "sale_price": 6.93,
-    "sale_price_raw": "6,93 $",
-    "regular_price": 16.99,
-    "regular_price_raw": "Était±  16,99 $prix était 16,99 $",
-    "price_sale_clean": "6,93",
-    "price_original_clean": "16,99"
   }
 ]
