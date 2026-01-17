@@ -14,7 +14,7 @@
     "product_id": null,
     "sku": "1422641",
     "sku_formatted": "142-2641-4",
-    "availability": "Il n’en reste que 7 #142-2641-4",
+    "availability": "Il n’en reste que 6 #142-2641-4",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -101,7 +101,7 @@
     "product_id": null,
     "sku": "1531492",
     "sku_formatted": "153-1492-8",
-    "availability": "185 En Stock#153-1492-8",
+    "availability": "177 En Stock#153-1492-8",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -114,34 +114,5 @@
     "regular_price_raw": "Était±  3,99 $prix était 3,99 $",
     "price_sale_clean": "1,93",
     "price_original_clean": "3,99"
-  },
-  {
-    "store_id": "420",
-    "city": "Kitchener West, ON",
-    "name": "Holland Secret Micro 5-0-2, formule en 3 parties",
-    "title": "Holland Secret Micro 5-0-2, formule en 3 parties",
-    "price": 9.93,
-    "price_raw": "9,93 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/gardening/gardening-plant-accessories/1590295/future-harvest-holland-secret-micro-5-0-2-3-part-formula-054d02d1-04af-4976-901d-343b750191d7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/seasonal-gardening/gardening/gardening-plant-accessories/1590295/future-harvest-holland-secret-micro-5-0-2-3-part-formula-054d02d1-04af-4976-901d-343b750191d7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/holland-secret-micro-5-0-2-formule-en-3-parties-1590295p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/holland-secret-micro-5-0-2-formule-en-3-parties-1590295p.html",
-    "product_id": null,
-    "sku": "1590295",
-    "sku_formatted": "159-0295-2",
-    "availability": "10 En Stock#159-0295-2",
-    "badges": [
-      "Liquidation◊Mieux notés"
-    ],
-    "discount_percent": 60.26,
-    "liquidation_price": 9.93,
-    "liquidation_price_raw": "9,93 $",
-    "sale_price": 9.93,
-    "sale_price_raw": "9,93 $",
-    "regular_price": 24.99,
-    "regular_price_raw": "Était±  24,99 $prix était 24,99 $",
-    "price_sale_clean": "9,93",
-    "price_original_clean": "24,99"
   }
 ]
