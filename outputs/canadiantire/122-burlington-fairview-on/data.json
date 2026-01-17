@@ -14,7 +14,7 @@
     "product_id": null,
     "sku": "0821088",
     "sku_formatted": "082-1088-0",
-    "availability": "12 En Stock#082-1088-0",
+    "availability": "11 En Stock#082-1088-0",
     "badges": [
       "Liquidation◊Exclusivité"
     ],
@@ -72,7 +72,7 @@
     "product_id": null,
     "sku": "1424985",
     "sku_formatted": "142-4985-4",
-    "availability": "47 En Stock#142-4985-4",
+    "availability": "46 En Stock#142-4985-4",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -89,30 +89,30 @@
   {
     "store_id": "122",
     "city": "Burlington Fairview, ON",
-    "name": "Nutriments d’engrais étape 3 Holland Secret Grow, 2-1-7",
-    "title": "Nutriments d’engrais étape 3 Holland Secret Grow, 2-1-7",
-    "price": 6.43,
-    "price_raw": "6,43 $",
+    "name": "Nettoyant nautique pour écran, 230 mL",
+    "title": "Nettoyant nautique pour écran, 230 mL",
+    "price": 9.93,
+    "price_raw": "9,93 $",
     "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/gardening/gardening-plant-accessories/1590293/future-harvest-holland-secret-grow-2-1-7-3-part-formula-5ed07a0b-5c4c-44ac-9e0b-db051782067c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/seasonal-gardening/gardening/gardening-plant-accessories/1590293/future-harvest-holland-secret-grow-2-1-7-3-part-formula-5ed07a0b-5c4c-44ac-9e0b-db051782067c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/nutriments-d-engrais-etape-3-holland-secret-grow-2-1-7-1590293p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/nutriments-d-engrais-etape-3-holland-secret-grow-2-1-7-1590293p.html",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790328/marine-display-cleaner-f2601da5-df42-4d33-9177-1be27b9b3298-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790328/marine-display-cleaner-f2601da5-df42-4d33-9177-1be27b9b3298-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-nautique-pour-ecran-230-ml-0790328p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/nettoyant-nautique-pour-ecran-230-ml-0790328p.html",
     "product_id": null,
-    "sku": "1590293",
-    "sku_formatted": "159-0293-6",
-    "availability": null,
+    "sku": "0790328",
+    "sku_formatted": "079-0328-6",
+    "availability": "Il n’en reste que 6 #079-0328-6",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
-    "discount_percent": 67.83,
-    "liquidation_price": 6.43,
-    "liquidation_price_raw": "6,43 $",
-    "sale_price": 6.43,
-    "sale_price_raw": "6,43 $",
+    "discount_percent": 50.33,
+    "liquidation_price": 9.93,
+    "liquidation_price_raw": "9,93 $",
+    "sale_price": 9.93,
+    "sale_price_raw": "9,93 $",
     "regular_price": 19.99,
     "regular_price_raw": "Était±  19,99 $prix était 19,99 $",
-    "price_sale_clean": "6,43",
+    "price_sale_clean": "9,93",
     "price_original_clean": "19,99"
   }
 ]
