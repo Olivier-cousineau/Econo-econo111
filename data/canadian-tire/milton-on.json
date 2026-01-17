@@ -9,7 +9,7 @@
     "branch": "Milton, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/luge-rapide-h2o-spider-avec-direction-et-freins-0821088p.html",
     "sku": "0821088",
-    "availability": "Il n’en reste que 7 #082-1088-0"
+    "availability": "Il n’en reste que 6 #082-1088-0"
   },
   {
     "title": "Liquide de préparation Evans, 1 gal",
@@ -33,7 +33,7 @@
     "branch": "Milton, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/bols-de-cuisine-empilables-master-chef-en-plastique-paq-8-1424985p.html",
     "sku": "1424985",
-    "availability": "Il n’en reste que 2 #142-4985-4"
+    "availability": "Il n’en reste que 1 #142-4985-4"
   },
   {
     "title": "Peinture d'intérieur en aérosol toute surface Rust-Oleum Accents, texture de pierre, 340 g",
@@ -58,5 +58,17 @@
     "url": "https://www.canadiantire.ca/fr/pdp/scellant-elastomere-pour-reparation-de-toit-rust-oleum-leakseal-calfeutrant-etanche-blanc-300-ml-0641565p.html",
     "sku": "0641565",
     "availability": "Il n’en reste que 1 #064-1565-8"
+  },
+  {
+    "title": "Huile à usages multiples avec burette 3 en 1 longue durée, 88 mL",
+    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0387807/wd-40-3-in-1-household-oil-88ml-a5d8e689-f5d8-4a04-b268-cf6e3fb32b55-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 7.99,
+    "salePrice": 3.93,
+    "store": "Canadian Tire",
+    "city": "Milton, ON",
+    "branch": "Milton, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/huile-a-usages-multiples-avec-burette-3-en-1-longue-duree-88-ml-0387807p.html",
+    "sku": "0387807",
+    "availability": "Il n’en reste que 2 #038-7807-2"
   }
 ]
