@@ -14,7 +14,7 @@
     "product_id": null,
     "sku": "0430335",
     "sku_formatted": "043-0335-2",
-    "availability": "Il n’en reste que 7 #043-0335-2",
+    "availability": "Il n’en reste que 5 #043-0335-2",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -89,31 +89,31 @@
   {
     "store_id": "53",
     "city": "Kitchener South, ON",
-    "name": "Nettoyant nautique pour écran, 230 mL",
-    "title": "Nettoyant nautique pour écran, 230 mL",
-    "price": 9.99,
-    "price_raw": "9,99 $",
+    "name": "Joint d’étanchéité Permatex 59705 Ultra Copper, température maximale, 147 mL",
+    "title": "Joint d’étanchéité Permatex 59705 Ultra Copper, température maximale, 147 mL",
+    "price": 6.93,
+    "price_raw": "6,93 $",
     "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790328/marine-display-cleaner-f2601da5-df42-4d33-9177-1be27b9b3298-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790328/marine-display-cleaner-f2601da5-df42-4d33-9177-1be27b9b3298-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-nautique-pour-ecran-230-ml-0790328p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/nettoyant-nautique-pour-ecran-230-ml-0790328p.html",
+    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0383831/permatex-ultra-copper-gasket-maker-f2db9a34-74fc-43c9-8c35-a1598bde05d2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0383831/permatex-ultra-copper-gasket-maker-f2db9a34-74fc-43c9-8c35-a1598bde05d2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/joint-d-etancheite-permatex-59705-ultra-copper-temperature-maximale-147-ml-0383831p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/joint-d-etancheite-permatex-59705-ultra-copper-temperature-maximale-147-ml-0383831p.html",
     "product_id": null,
-    "sku": "0790328",
-    "sku_formatted": "079-0328-6",
-    "availability": "Il n’en reste que 4 #079-0328-6",
+    "sku": "0383831",
+    "sku_formatted": "038-3831-6",
+    "availability": "Il n’en reste que 3 #038-3831-6",
     "badges": [
-      "Liquidation◊Mieux notés"
+      "Liquidation◊"
     ],
-    "discount_percent": 50.03,
-    "liquidation_price": 9.99,
-    "liquidation_price_raw": "9,99 $",
-    "sale_price": 9.99,
-    "sale_price_raw": "9,99 $",
-    "regular_price": 19.99,
-    "regular_price_raw": "Était±  19,99 $prix était 19,99 $",
-    "price_sale_clean": "9,99",
-    "price_original_clean": "19,99"
+    "discount_percent": 63.51,
+    "liquidation_price": 6.93,
+    "liquidation_price_raw": "6,93 $",
+    "sale_price": 6.93,
+    "sale_price_raw": "6,93 $",
+    "regular_price": 18.99,
+    "regular_price_raw": "Était±  18,99 $prix était 18,99 $",
+    "price_sale_clean": "6,93",
+    "price_original_clean": "18,99"
   },
   {
     "store_id": "53",
@@ -159,7 +159,7 @@
     "product_id": null,
     "sku": "1423764",
     "sku_formatted": "142-3764-6",
-    "availability": "27 En Stock#142-3764-6",
+    "availability": "26 En Stock#142-3764-6",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
