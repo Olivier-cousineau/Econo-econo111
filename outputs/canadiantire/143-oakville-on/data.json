@@ -14,7 +14,7 @@
     "product_id": null,
     "sku": "0821088",
     "sku_formatted": "082-1088-0",
-    "availability": "14 En Stock#082-1088-0",
+    "availability": "13 En Stock#082-1088-0",
     "badges": [
       "Liquidation◊Exclusivité"
     ],
@@ -114,5 +114,63 @@
     "regular_price_raw": "Était±  31,99 $prix était 31,99 $",
     "price_sale_clean": "7,93",
     "price_original_clean": "31,99"
+  },
+  {
+    "store_id": "143",
+    "city": "Oakville, ON",
+    "name": "Scellant élastomère pour réparation de toit Rust-Oleum LeakSeal, calfeutrant étanche, blanc, 300 mL",
+    "title": "Scellant élastomère pour réparation de toit Rust-Oleum LeakSeal, calfeutrant étanche, blanc, 300 mL",
+    "price": 9.93,
+    "price_raw": "9,93 $",
+    "liquidation": true,
+    "image": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641565/white-elastomeric-roof-repair-300ml-0f78804c-5fd4-4fdb-a840-df3fda845224.png?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641565/white-elastomeric-roof-repair-300ml-0f78804c-5fd4-4fdb-a840-df3fda845224.png?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/scellant-elastomere-pour-reparation-de-toit-rust-oleum-leakseal-calfeutrant-etanche-blanc-300-ml-0641565p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/scellant-elastomere-pour-reparation-de-toit-rust-oleum-leakseal-calfeutrant-etanche-blanc-300-ml-0641565p.html",
+    "product_id": null,
+    "sku": "0641565",
+    "sku_formatted": "064-1565-8",
+    "availability": "10 En Stock#064-1565-8",
+    "badges": [
+      "Liquidation◊Mieux notés"
+    ],
+    "discount_percent": 52.69,
+    "liquidation_price": 9.93,
+    "liquidation_price_raw": "9,93 $",
+    "sale_price": 9.93,
+    "sale_price_raw": "9,93 $",
+    "regular_price": 20.99,
+    "regular_price_raw": "Était±  20,99 $prix était 20,99 $",
+    "price_sale_clean": "9,93",
+    "price_original_clean": "20,99"
+  },
+  {
+    "store_id": "143",
+    "city": "Oakville, ON",
+    "name": "Scellant pour joint de culasse BlueDevil, 946 ml",
+    "title": "Scellant pour joint de culasse BlueDevil, 946 ml",
+    "price": 29.93,
+    "price_raw": "29,93 $",
+    "liquidation": true,
+    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0388097/bluedevil-head-gasket-sealer-4b37c9f7-bc3d-4bc5-b44c-fec6ded8099a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0388097/bluedevil-head-gasket-sealer-4b37c9f7-bc3d-4bc5-b44c-fec6ded8099a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/scellant-pour-joint-de-culasse-bluedevil-946-ml-0388097p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/scellant-pour-joint-de-culasse-bluedevil-946-ml-0388097p.html",
+    "product_id": null,
+    "sku": "0388097",
+    "sku_formatted": "038-8097-4",
+    "availability": "Il n’en reste que 2 #038-8097-4",
+    "badges": [
+      "Liquidation◊"
+    ],
+    "discount_percent": 56.62,
+    "liquidation_price": 29.93,
+    "liquidation_price_raw": "29,93 $",
+    "sale_price": 29.93,
+    "sale_price_raw": "29,93 $",
+    "regular_price": 68.99,
+    "regular_price_raw": "Était±  68,99 $prix était 68,99 $",
+    "price_sale_clean": "29,93",
+    "price_original_clean": "68,99"
   }
 ]
