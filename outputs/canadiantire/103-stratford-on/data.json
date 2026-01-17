@@ -43,7 +43,7 @@
     "product_id": null,
     "sku": "1422641",
     "sku_formatted": "142-2641-4",
-    "availability": "Il n’en reste que 2 #142-2641-4",
+    "availability": "Il n’en reste que 1 #142-2641-4",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -56,63 +56,5 @@
     "regular_price_raw": "Était±  599,99 $prix était 599,99 $",
     "price_sale_clean": "299,93",
     "price_original_clean": "599,99"
-  },
-  {
-    "store_id": "103",
-    "city": "Stratford, ON",
-    "name": "Super liquide de refroidissement Hy-Per Lube pour moteur au diesel, 532 mL",
-    "title": "Super liquide de refroidissement Hy-Per Lube pour moteur au diesel, 532 mL",
-    "price": 1.99,
-    "price_raw": "1,99 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0380876/hy-per-lube-diesel-super-coolant-473ml-700c85a7-1297-4fed-a610-320bf25accd7.png?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0380876/hy-per-lube-diesel-super-coolant-473ml-700c85a7-1297-4fed-a610-320bf25accd7.png?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/super-liquide-de-refroidissement-hy-per-lube-pour-moteur-au-diesel-532-ml-0380876p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/super-liquide-de-refroidissement-hy-per-lube-pour-moteur-au-diesel-532-ml-0380876p.html",
-    "product_id": null,
-    "sku": "0380876",
-    "sku_formatted": "038-0876-8",
-    "availability": "Il n’en reste que 1 #038-0876-8",
-    "badges": [
-      "Liquidation◊"
-    ],
-    "discount_percent": 88.29,
-    "liquidation_price": 1.99,
-    "liquidation_price_raw": "1,99 $",
-    "sale_price": 1.99,
-    "sale_price_raw": "1,99 $",
-    "regular_price": 16.99,
-    "regular_price_raw": "Était±  16,99 $prix était 16,99 $",
-    "price_sale_clean": "1,99",
-    "price_original_clean": "16,99"
-  },
-  {
-    "store_id": "103",
-    "city": "Stratford, ON",
-    "name": "Super lubrifiant iniflammable Liquid Wrench, 311 g",
-    "title": "Super lubrifiant iniflammable Liquid Wrench, 311 g",
-    "price": 4.93,
-    "price_raw": "4,93 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0381516/liquid-wrench-super-lubricant-with-cerflon-1ec14604-f7c0-419e-b5a2-f3aa61dbb9dd-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0381516/liquid-wrench-super-lubricant-with-cerflon-1ec14604-f7c0-419e-b5a2-f3aa61dbb9dd-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/super-lubrifiant-iniflammable-liquid-wrench-311-g-0381516p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/super-lubrifiant-iniflammable-liquid-wrench-311-g-0381516p.html",
-    "product_id": null,
-    "sku": "0381516",
-    "sku_formatted": "038-1516-0",
-    "availability": "Il n’en reste que 1 #038-1516-0",
-    "badges": [
-      "Liquidation◊Mieux notés"
-    ],
-    "discount_percent": 50.65,
-    "liquidation_price": 4.93,
-    "liquidation_price_raw": "4,93 $",
-    "sale_price": 4.93,
-    "sale_price_raw": "4,93 $",
-    "regular_price": 9.99,
-    "regular_price_raw": "Était±  9,99 $prix était 9,99 $",
-    "price_sale_clean": "4,93",
-    "price_original_clean": "9,99"
   }
 ]
