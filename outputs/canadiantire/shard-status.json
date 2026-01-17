@@ -1,55 +1,60 @@
 {
-  "generatedAt": "2026-01-17T08:29:16.788Z",
+  "generatedAt": "2026-01-17T10:24:41.959Z",
   "stores": [
     {
-      "id": "177",
-      "city": "Hamilton Mt.West, ON",
-      "status": "committed",
-      "details": "4 produits"
-    },
-    {
-      "id": "657",
-      "city": "Hanmer, ON",
-      "status": "committed",
-      "details": "2 produits"
-    },
-    {
-      "id": "27",
-      "city": "Dundas, ON",
+      "id": "77",
+      "city": "Owen Sound, ON",
       "status": "committed",
       "details": "3 produits"
     },
     {
-      "id": "29",
-      "city": "Dunnville, ON",
+      "id": "244",
+      "city": "Chelmsford, ON",
       "status": "skipped",
       "details": "nothing to commit"
     },
     {
-      "id": "42",
-      "city": "Guelph Stone Rd, ON",
-      "status": "committed",
-      "details": "2 produits"
+      "id": "49",
+      "city": "Caledonia, ON",
+      "status": "skipped",
+      "details": "nothing to commit"
     },
     {
-      "id": "31",
-      "city": "Centre Wellington, ON",
+      "id": "168",
+      "city": "Cambridge Hespeler, ON",
       "status": "committed",
-      "details": "4 produits"
+      "details": "4 produits (after retry)"
     },
     {
-      "id": "260",
-      "city": "Guelph North, ON",
+      "id": "36",
+      "city": "Cambridge, ON",
       "status": "committed",
-      "details": "4 produits"
+      "details": "7 produits"
     },
     {
-      "id": "639",
-      "city": "Ancaster, ON",
+      "id": "35",
+      "city": "Fredericton, NB",
       "status": "committed",
-      "details": "4 produits"
+      "details": "7 produits"
+    },
+    {
+      "id": "66",
+      "city": "Mount Forest, ON",
+      "status": "skipped",
+      "details": "nothing to commit"
+    },
+    {
+      "id": "337",
+      "city": "Fredericton North, NB",
+      "status": "committed",
+      "details": "5 produits"
     }
   ],
   "failedTwice": [],
-  "retriedAndSucceeded": []
+  "retriedAndSucceeded": [
+    {
+      "id": "168",
+      "city": "Cambridge Hespeler, ON"
+    }
+  ]
 }
