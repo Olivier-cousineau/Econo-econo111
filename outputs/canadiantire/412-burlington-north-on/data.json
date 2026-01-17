@@ -62,8 +62,8 @@
     "city": "Burlington North, ON",
     "name": "Liquide de refroidissement antigel prémélangé 50/50 robuste mixtes Turbo Power, 3,78 L",
     "title": "Liquide de refroidissement antigel prémélangé 50/50 robuste mixtes Turbo Power, 3,78 L",
-    "price": 14.93,
-    "price_raw": "14,93 $",
+    "price": 7.93,
+    "price_raw": "7,93 $",
     "liquidation": true,
     "image": "undefined?im=whresize&wid=200&hei=200",
     "image_url": "undefined?im=whresize&wid=200&hei=200",
@@ -76,14 +76,14 @@
     "badges": [
       "Liquidation◊"
     ],
-    "discount_percent": 50.22,
-    "liquidation_price": 14.93,
-    "liquidation_price_raw": "14,93 $",
-    "sale_price": 14.93,
-    "sale_price_raw": "14,93 $",
+    "discount_percent": 73.56,
+    "liquidation_price": 7.93,
+    "liquidation_price_raw": "7,93 $",
+    "sale_price": 7.93,
+    "sale_price_raw": "7,93 $",
     "regular_price": 29.99,
     "regular_price_raw": "Était±  29,99 $prix était 29,99 $",
-    "price_sale_clean": "14,93",
+    "price_sale_clean": "7,93",
     "price_original_clean": "29,99"
   }
 ]
