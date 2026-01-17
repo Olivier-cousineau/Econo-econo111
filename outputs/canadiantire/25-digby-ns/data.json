@@ -14,7 +14,7 @@
     "product_id": null,
     "sku": "0430335",
     "sku_formatted": "043-0335-2",
-    "availability": "Il n’en reste que 3 #043-0335-2",
+    "availability": "Il n’en reste que 1 #043-0335-2",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -31,30 +31,30 @@
   {
     "store_id": "25",
     "city": "Digby, NS",
-    "name": "Joint d'étanchéité instantané Permatex The Right Stuff, rouge, 147 mL",
-    "title": "Joint d'étanchéité instantané Permatex The Right Stuff, rouge, 147 mL",
-    "price": 7.93,
-    "price_raw": "7,93 $",
+    "name": "Bols de cuisine empilables MASTER Chef en plastique, paq. 8",
+    "title": "Bols de cuisine empilables MASTER Chef en plastique, paq. 8",
+    "price": 12.93,
+    "price_raw": "12,93 $",
     "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0382534/permatex-the-right-stuff-red-instant-gasket-maker-147ml-6fe86f13-1e53-4895-a8d2-10010b7e0e3c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0382534/permatex-the-right-stuff-red-instant-gasket-maker-147ml-6fe86f13-1e53-4895-a8d2-10010b7e0e3c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/joint-d-etancheite-instantane-permatex-the-right-stuff-rouge-147-ml-0382534p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/joint-d-etancheite-instantane-permatex-the-right-stuff-rouge-147-ml-0382534p.html",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/bakeware-baking-prep/1424985/masterchef-8-piece-bake-prep-set-3e85a64e-f1ef-47d2-8117-bf07641c9608-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/living/kitchen/bakeware-baking-prep/1424985/masterchef-8-piece-bake-prep-set-3e85a64e-f1ef-47d2-8117-bf07641c9608-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/bols-de-cuisine-empilables-master-chef-en-plastique-paq-8-1424985p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/bols-de-cuisine-empilables-master-chef-en-plastique-paq-8-1424985p.html",
     "product_id": null,
-    "sku": "0382534",
-    "sku_formatted": "038-2534-0",
-    "availability": "Il n’en reste que 2 #038-2534-0",
+    "sku": "1424985",
+    "sku_formatted": "142-4985-4",
+    "availability": "Il n’en reste que 2 #142-4985-4",
     "badges": [
-      "Liquidation◊"
+      "Liquidation◊Mieux notés"
     ],
-    "discount_percent": 75.21,
-    "liquidation_price": 7.93,
-    "liquidation_price_raw": "7,93 $",
-    "sale_price": 7.93,
-    "sale_price_raw": "7,93 $",
-    "regular_price": 31.99,
-    "regular_price_raw": "Était±  31,99 $prix était 31,99 $",
-    "price_sale_clean": "7,93",
-    "price_original_clean": "31,99"
+    "discount_percent": 60.81,
+    "liquidation_price": 12.93,
+    "liquidation_price_raw": "12,93 $",
+    "sale_price": 12.93,
+    "sale_price_raw": "12,93 $",
+    "regular_price": 32.99,
+    "regular_price_raw": "Était±  32,99 $prix était 32,99 $",
+    "price_sale_clean": "12,93",
+    "price_original_clean": "32,99"
   }
 ]
