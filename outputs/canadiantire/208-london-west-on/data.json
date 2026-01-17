@@ -56,34 +56,5 @@
     "regular_price_raw": "Était±  37,99 $prix était 37,99 $",
     "price_sale_clean": "12,97",
     "price_original_clean": "37,99"
-  },
-  {
-    "store_id": "208",
-    "city": "London West, ON",
-    "name": "Tasses à mesurer en acier inoxydable, 4 pièces",
-    "title": "Tasses à mesurer en acier inoxydable, 4 pièces",
-    "price": 4.97,
-    "price_raw": "4,97 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-tools-thermometers/0421790/4-piece-stainless-steel-measuring-cups-746efe54-5c20-4f42-947e-4b04faaf3452-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-tools-thermometers/0421790/4-piece-stainless-steel-measuring-cups-746efe54-5c20-4f42-947e-4b04faaf3452-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/tasses-a-mesurer-en-acier-inoxydable-4-pieces-0421790p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/tasses-a-mesurer-en-acier-inoxydable-4-pieces-0421790p.html",
-    "product_id": null,
-    "sku": "0421790",
-    "sku_formatted": "042-1790-2",
-    "availability": "12 En Stock#042-1790-2",
-    "badges": [
-      "Liquidation◊Exclusivité"
-    ],
-    "discount_percent": 58.55,
-    "liquidation_price": 4.97,
-    "liquidation_price_raw": "4,97 $",
-    "sale_price": 4.97,
-    "sale_price_raw": "4,97 $",
-    "regular_price": 11.99,
-    "regular_price_raw": "Était±  11,99 $prix était 11,99 $",
-    "price_sale_clean": "4,97",
-    "price_original_clean": "11,99"
   }
 ]
