@@ -9,7 +9,7 @@
     "branch": "Oakville North, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/luge-rapide-h2o-spider-avec-direction-et-freins-0821088p.html",
     "sku": "0821088",
-    "availability": "13 En Stock#082-1088-0"
+    "availability": "12 En Stock#082-1088-0"
   },
   {
     "title": "Liquide de préparation Evans, 1 gal",
@@ -21,7 +21,7 @@
     "branch": "Oakville North, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/liquide-de-preparation-evans-1-gal-0293102p.html",
     "sku": "0293102",
-    "availability": "Il n’en reste que 4 #029-3102-4"
+    "availability": "Il n’en reste que 3 #029-3102-4"
   },
   {
     "title": "Joint d’étanchéité Permatex 59705 Ultra Copper, température maximale, 147 mL",
@@ -72,6 +72,18 @@
     "availability": ""
   },
   {
+    "title": "Nettoyant nautique pour écran, 230 mL",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790328/marine-display-cleaner-f2601da5-df42-4d33-9177-1be27b9b3298-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 6.79,
+    "store": "Canadian Tire",
+    "city": "Oakville North, ON",
+    "branch": "Oakville North, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-nautique-pour-ecran-230-ml-0790328p.html",
+    "sku": "0790328",
+    "availability": "Il n’en reste que 3 #079-0328-6"
+  },
+  {
     "title": "Scellant élastomère pour réparation de toit Rust-Oleum LeakSeal, calfeutrant étanche, blanc, 300 mL",
     "image": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641565/white-elastomeric-roof-repair-300ml-0f78804c-5fd4-4fdb-a840-df3fda845224.png?im=whresize&wid=200&hei=200",
     "price": 20.99,
@@ -82,5 +94,17 @@
     "url": "https://www.canadiantire.ca/fr/pdp/scellant-elastomere-pour-reparation-de-toit-rust-oleum-leakseal-calfeutrant-etanche-blanc-300-ml-0641565p.html",
     "sku": "0641565",
     "availability": "Il n’en reste que 5 #064-1565-8"
+  },
+  {
+    "title": "Huile à usages multiples avec burette 3 en 1 longue durée, 88 mL",
+    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0387807/wd-40-3-in-1-household-oil-88ml-a5d8e689-f5d8-4a04-b268-cf6e3fb32b55-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 7.99,
+    "salePrice": 3.93,
+    "store": "Canadian Tire",
+    "city": "Oakville North, ON",
+    "branch": "Oakville North, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/huile-a-usages-multiples-avec-burette-3-en-1-longue-duree-88-ml-0387807p.html",
+    "sku": "0387807",
+    "availability": "23 En Stock#038-7807-2"
   }
 ]
