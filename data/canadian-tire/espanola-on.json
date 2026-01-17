@@ -1,9 +1,21 @@
 [
   {
+    "title": "Trousse de départ pour conservation et entreposage d'aliments Fresh & Save de Zwilling avec pompe à dépression portative",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430335/zwilling-food-storage-starter-kit-8pc-ee27a980-a5f6-4ca9-860b-310987524806-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 189.99,
+    "salePrice": 67.71,
+    "store": "Canadian Tire",
+    "city": "Espanola, ON",
+    "branch": "Espanola, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-depart-pour-conservation-et-entreposage-d-aliments-fresh-save-de-zwilling-avec-pompe-a-depression-portative-0430335p.html",
+    "sku": "0430335",
+    "availability": "Il n’en reste que 2 #043-0335-2"
+  },
+  {
     "title": "Liquide de refroidissement haute performance sans eau Evans, 1 gal",
     "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0293101/evans-high-performance-waterless-coolant-1gal-6a1734c6-1411-4245-8dc1-b1ccca48c952-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 79.99,
-    "salePrice": 29.92,
+    "salePrice": 26,
     "store": "Canadian Tire",
     "city": "Espanola, ON",
     "branch": "Espanola, ON",
@@ -15,7 +27,7 @@
     "title": "Liquide de préparation Evans, 1 gal",
     "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0293102/evans-prep-fluid-1gal-5e8adf31-ac7c-40e9-9306-c6aa92e46670-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 49.99,
-    "salePrice": 19.92,
+    "salePrice": 12.93,
     "store": "Canadian Tire",
     "city": "Espanola, ON",
     "branch": "Espanola, ON",
@@ -34,6 +46,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/cire-pour-bateau-3m-perfect-it-gelcoat-473-ml-0790316p.html",
     "sku": "0790316",
     "availability": "Il n’en reste que 1 #079-0316-4"
+  },
+  {
+    "title": "Bouche-toit incolore Rust-Oleum LeakSeal, intérieur/extérieur, scellant résistant à l'eau et aux intempéries, 3,78 L",
+    "image": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641571/clear-roof-patch-3-78-l-9c267c49-4660-47a8-a847-4a51ff8a9844-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 139.99,
+    "salePrice": 63,
+    "store": "Canadian Tire",
+    "city": "Espanola, ON",
+    "branch": "Espanola, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/bouche-toit-incolore-rust-oleum-leakseal-interieur-exterieur-scellant-resistant-a-l-eau-et-aux-intemperies-3-78-l-0641571p.html",
+    "sku": "0641571",
+    "availability": "Il n’en reste que 4 #064-1571-2"
   },
   {
     "title": "Lubrifiant à pellicule sèche antiadhésif DuPont, bouteille à presser, 120 mL (4 oz)",
