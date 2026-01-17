@@ -14,7 +14,7 @@
     "product_id": null,
     "sku": "0430335",
     "sku_formatted": "043-0335-2",
-    "availability": "Il n’en reste que 6 #043-0335-2",
+    "availability": "Il n’en reste que 5 #043-0335-2",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -85,63 +85,5 @@
     "regular_price_raw": "Était±  18,99 $prix était 18,99 $",
     "price_sale_clean": "6,93",
     "price_original_clean": "18,99"
-  },
-  {
-    "store_id": "24",
-    "city": "Cochrane, ON",
-    "name": "Lubrifiant de silicone hydrofuge WD-40 Specialist 01079, 311 g",
-    "title": "Lubrifiant de silicone hydrofuge WD-40 Specialist 01079, 311 g",
-    "price": 6.93,
-    "price_raw": "6,93 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0381586/wd-40-specialist-silicon-311g-6b7d3300-973d-4011-9787-637986797792-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0381586/wd-40-specialist-silicon-311g-6b7d3300-973d-4011-9787-637986797792-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/lubrifiant-de-silicone-hydrofuge-wd-40-specialist-01079-311-g-0381586p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/lubrifiant-de-silicone-hydrofuge-wd-40-specialist-01079-311-g-0381586p.html",
-    "product_id": null,
-    "sku": "0381586",
-    "sku_formatted": "038-1586-2",
-    "availability": null,
-    "badges": [
-      "Liquidation◊Mieux notés"
-    ],
-    "discount_percent": 56.66,
-    "liquidation_price": 6.93,
-    "liquidation_price_raw": "6,93 $",
-    "sale_price": 6.93,
-    "sale_price_raw": "6,93 $",
-    "regular_price": 15.99,
-    "regular_price_raw": "Était±  15,99 $prix était 15,99 $",
-    "price_sale_clean": "6,93",
-    "price_original_clean": "15,99"
-  },
-  {
-    "store_id": "24",
-    "city": "Cochrane, ON",
-    "name": "Lubrifiant et nettoyant tout usage WD-40 1011, aérosol, 311 g",
-    "title": "Lubrifiant et nettoyant tout usage WD-40 1011, aérosol, 311 g",
-    "price": 4.93,
-    "price_raw": "4,93 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0381536/wd-40-311g-f7f9ed19-6b02-46bb-a837-c8950c54ee9d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0381536/wd-40-311g-f7f9ed19-6b02-46bb-a837-c8950c54ee9d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/lubrifiant-et-nettoyant-tout-usage-wd-40-1011-aerosol-311-g-0381536p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/lubrifiant-et-nettoyant-tout-usage-wd-40-1011-aerosol-311-g-0381536p.html",
-    "product_id": null,
-    "sku": "0381536",
-    "sku_formatted": "038-1536-2",
-    "availability": "Il n’en reste que 1 #038-1536-2",
-    "badges": [
-      "Liquidation◊Mieux notés"
-    ],
-    "discount_percent": 50.65,
-    "liquidation_price": 4.93,
-    "liquidation_price_raw": "4,93 $",
-    "sale_price": 4.93,
-    "sale_price_raw": "4,93 $",
-    "regular_price": 9.99,
-    "regular_price_raw": "Était±  9,99 $prix était 9,99 $",
-    "price_sale_clean": "4,93",
-    "price_original_clean": "9,99"
   }
 ]
