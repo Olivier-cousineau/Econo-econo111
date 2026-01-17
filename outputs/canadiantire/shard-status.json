@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-01-17T17:12:43.903Z",
+  "generatedAt": "2026-01-17T19:43:30.758Z",
   "stores": [
     {
-      "id": "16",
-      "city": "Atholville, NB",
-      "status": "committed",
-      "details": "3 produits"
-    },
-    {
-      "id": "193",
-      "city": "Delhi, ON",
+      "id": "48",
+      "city": "Ingersoll, ON",
       "status": "skipped",
       "details": "nothing to commit"
     },
     {
-      "id": "124",
-      "city": "Woodstock, ON",
-      "status": "committed",
-      "details": "5 produits"
-    },
-    {
-      "id": "103",
-      "city": "Stratford, ON",
-      "status": "committed",
-      "details": "2 produits"
-    },
-    {
-      "id": "349",
-      "city": "Saint John Fairville, NB",
+      "id": "110",
+      "city": "Tillsonburg, ON",
       "status": "committed",
       "details": "1 produits"
     },
     {
-      "id": "254",
-      "city": "Saint John - Westmorland Road, NB",
+      "id": "91",
+      "city": "St. Marys, ON",
+      "status": "committed",
+      "details": "2 produits"
+    },
+    {
+      "id": "111",
+      "city": "Timmins, ON",
+      "status": "committed",
+      "details": "7 produits"
+    },
+    {
+      "id": "24",
+      "city": "Cochrane, ON",
       "status": "committed",
       "details": "3 produits"
     },
     {
-      "id": "476",
-      "city": "Rothesay, NB",
+      "id": "130",
+      "city": "London East, ON",
       "status": "skipped",
       "details": "nothing to commit"
     },
     {
-      "id": "51",
-      "city": "Kincardine, ON",
+      "id": "142",
+      "city": "Aylmer, ON",
       "status": "committed",
-      "details": "5 produits"
+      "details": "6 produits"
+    },
+    {
+      "id": "39",
+      "city": "Goderich, ON",
+      "status": "committed",
+      "details": "2 produits"
     }
   ],
   "failedTwice": [],
