@@ -14,7 +14,7 @@
     "product_id": null,
     "sku": "0821088",
     "sku_formatted": "082-1088-0",
-    "availability": "Il n’en reste que 7 #082-1088-0",
+    "availability": "Il n’en reste que 2 #082-1088-0",
     "badges": [
       "Liquidation◊Exclusivité"
     ],
@@ -60,35 +60,6 @@
   {
     "store_id": "260",
     "city": "Guelph North, ON",
-    "name": "Joint d’étanchéité Permatex 59705 Ultra Copper, température maximale, 147 mL",
-    "title": "Joint d’étanchéité Permatex 59705 Ultra Copper, température maximale, 147 mL",
-    "price": 6.93,
-    "price_raw": "6,93 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0383831/permatex-ultra-copper-gasket-maker-f2db9a34-74fc-43c9-8c35-a1598bde05d2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0383831/permatex-ultra-copper-gasket-maker-f2db9a34-74fc-43c9-8c35-a1598bde05d2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/joint-d-etancheite-permatex-59705-ultra-copper-temperature-maximale-147-ml-0383831p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/joint-d-etancheite-permatex-59705-ultra-copper-temperature-maximale-147-ml-0383831p.html",
-    "product_id": null,
-    "sku": "0383831",
-    "sku_formatted": "038-3831-6",
-    "availability": "Il n’en reste que 1 #038-3831-6",
-    "badges": [
-      "Liquidation◊"
-    ],
-    "discount_percent": 63.51,
-    "liquidation_price": 6.93,
-    "liquidation_price_raw": "6,93 $",
-    "sale_price": 6.93,
-    "sale_price_raw": "6,93 $",
-    "regular_price": 18.99,
-    "regular_price_raw": "Était±  18,99 $prix était 18,99 $",
-    "price_sale_clean": "6,93",
-    "price_original_clean": "18,99"
-  },
-  {
-    "store_id": "260",
-    "city": "Guelph North, ON",
     "name": "Bols de cuisine empilables MASTER Chef en plastique, paq. 8",
     "title": "Bols de cuisine empilables MASTER Chef en plastique, paq. 8",
     "price": 12.93,
@@ -118,35 +89,6 @@
   {
     "store_id": "260",
     "city": "Guelph North, ON",
-    "name": "Lubrifiant sec résistant à la poussière et la rouille PTFE WD-40 Specialist 2209, aérosol, 283 g",
-    "title": "Lubrifiant sec résistant à la poussière et la rouille PTFE WD-40 Specialist 2209, aérosol, 283 g",
-    "price": 6.93,
-    "price_raw": "6,93 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0388090/wd-40-specialist-dry-lube-94d9becc-dda1-45fd-9634-9246ed2bfd62-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0388090/wd-40-specialist-dry-lube-94d9becc-dda1-45fd-9634-9246ed2bfd62-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/lubrifiant-sec-resistant-a-la-poussiere-et-la-rouille-ptfe-wd-40-specialist-2209-aerosol-283-g-0388090p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/lubrifiant-sec-resistant-a-la-poussiere-et-la-rouille-ptfe-wd-40-specialist-2209-aerosol-283-g-0388090p.html",
-    "product_id": null,
-    "sku": "0388090",
-    "sku_formatted": "038-8090-8",
-    "availability": null,
-    "badges": [
-      "Liquidation◊Mieux notés"
-    ],
-    "discount_percent": 56.66,
-    "liquidation_price": 6.93,
-    "liquidation_price_raw": "6,93 $",
-    "sale_price": 6.93,
-    "sale_price_raw": "6,93 $",
-    "regular_price": 15.99,
-    "regular_price_raw": "Était±  15,99 $prix était 15,99 $",
-    "price_sale_clean": "6,93",
-    "price_original_clean": "15,99"
-  },
-  {
-    "store_id": "260",
-    "city": "Guelph North, ON",
     "name": "Scellant pour gouttière/revêtement Rust-Oleum LeakSeal, toutes saisons, réparation de surface, blanc, 300 mL",
     "title": "Scellant pour gouttière/revêtement Rust-Oleum LeakSeal, toutes saisons, réparation de surface, blanc, 300 mL",
     "price": 9.93,
@@ -159,7 +101,7 @@
     "product_id": null,
     "sku": "0641577",
     "sku_formatted": "064-1577-0",
-    "availability": "Il n’en reste que 1 #064-1577-0",
+    "availability": "Il n’en reste que 2 #064-1577-0",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
