@@ -14,7 +14,7 @@
     "product_id": null,
     "sku": "0821088",
     "sku_formatted": "082-1088-0",
-    "availability": "13 En Stock#082-1088-0",
+    "availability": "12 En Stock#082-1088-0",
     "badges": [
       "Liquidation◊Exclusivité"
     ],
@@ -43,7 +43,7 @@
     "product_id": null,
     "sku": "0293102",
     "sku_formatted": "029-3102-4",
-    "availability": "Il n’en reste que 4 #029-3102-4",
+    "availability": "Il n’en reste que 3 #029-3102-4",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -176,6 +176,35 @@
   {
     "store_id": "429",
     "city": "Oakville North, ON",
+    "name": "Nettoyant nautique pour écran, 230 mL",
+    "title": "Nettoyant nautique pour écran, 230 mL",
+    "price": 6.79,
+    "price_raw": "6,79 $",
+    "liquidation": true,
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790328/marine-display-cleaner-f2601da5-df42-4d33-9177-1be27b9b3298-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790328/marine-display-cleaner-f2601da5-df42-4d33-9177-1be27b9b3298-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-nautique-pour-ecran-230-ml-0790328p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/nettoyant-nautique-pour-ecran-230-ml-0790328p.html",
+    "product_id": null,
+    "sku": "0790328",
+    "sku_formatted": "079-0328-6",
+    "availability": "Il n’en reste que 3 #079-0328-6",
+    "badges": [
+      "Liquidation◊Mieux notés"
+    ],
+    "discount_percent": 66.03,
+    "liquidation_price": 6.79,
+    "liquidation_price_raw": "6,79 $",
+    "sale_price": 6.79,
+    "sale_price_raw": "6,79 $",
+    "regular_price": 19.99,
+    "regular_price_raw": "Était±  19,99 $prix était 19,99 $",
+    "price_sale_clean": "6,79",
+    "price_original_clean": "19,99"
+  },
+  {
+    "store_id": "429",
+    "city": "Oakville North, ON",
     "name": "Scellant élastomère pour réparation de toit Rust-Oleum LeakSeal, calfeutrant étanche, blanc, 300 mL",
     "title": "Scellant élastomère pour réparation de toit Rust-Oleum LeakSeal, calfeutrant étanche, blanc, 300 mL",
     "price": 9.93,
@@ -201,5 +230,34 @@
     "regular_price_raw": "Était±  20,99 $prix était 20,99 $",
     "price_sale_clean": "9,93",
     "price_original_clean": "20,99"
+  },
+  {
+    "store_id": "429",
+    "city": "Oakville North, ON",
+    "name": "Huile à usages multiples avec burette 3 en 1 longue durée, 88 mL",
+    "title": "Huile à usages multiples avec burette 3 en 1 longue durée, 88 mL",
+    "price": 3.93,
+    "price_raw": "3,93 $",
+    "liquidation": true,
+    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0387807/wd-40-3-in-1-household-oil-88ml-a5d8e689-f5d8-4a04-b268-cf6e3fb32b55-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0387807/wd-40-3-in-1-household-oil-88ml-a5d8e689-f5d8-4a04-b268-cf6e3fb32b55-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/huile-a-usages-multiples-avec-burette-3-en-1-longue-duree-88-ml-0387807p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/huile-a-usages-multiples-avec-burette-3-en-1-longue-duree-88-ml-0387807p.html",
+    "product_id": null,
+    "sku": "0387807",
+    "sku_formatted": "038-7807-2",
+    "availability": "23 En Stock#038-7807-2",
+    "badges": [
+      "Liquidation◊Mieux notés"
+    ],
+    "discount_percent": 50.81,
+    "liquidation_price": 3.93,
+    "liquidation_price_raw": "3,93 $",
+    "sale_price": 3.93,
+    "sale_price_raw": "3,93 $",
+    "regular_price": 7.99,
+    "regular_price_raw": "Était±  7,99 $prix était 7,99 $",
+    "price_sale_clean": "3,93",
+    "price_original_clean": "7,99"
   }
 ]
