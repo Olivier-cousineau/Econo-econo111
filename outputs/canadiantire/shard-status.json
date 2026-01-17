@@ -1,60 +1,55 @@
 {
-  "generatedAt": "2026-01-17T05:48:05.100Z",
+  "generatedAt": "2026-01-17T08:29:16.788Z",
   "stores": [
     {
-      "id": "122",
-      "city": "Burlington Fairview, ON",
-      "status": "committed",
-      "details": "4 produits (after retry)"
-    },
-    {
-      "id": "154",
-      "city": "Hamilton East, ON",
+      "id": "177",
+      "city": "Hamilton Mt.West, ON",
       "status": "committed",
       "details": "4 produits"
     },
     {
-      "id": "129",
-      "city": "Hamilton Centre, ON",
+      "id": "657",
+      "city": "Hanmer, ON",
+      "status": "committed",
+      "details": "2 produits"
+    },
+    {
+      "id": "27",
+      "city": "Dundas, ON",
       "status": "committed",
       "details": "3 produits"
     },
     {
-      "id": "278",
-      "city": "Sudbury North, ON",
-      "status": "committed",
-      "details": "4 produits"
-    },
-    {
-      "id": "220",
-      "city": "Waterdown, ON",
-      "status": "committed",
-      "details": "3 produits"
-    },
-    {
-      "id": "45",
-      "city": "Hamilton Main, ON",
-      "status": "committed",
-      "details": "10 produits"
-    },
-    {
-      "id": "194",
-      "city": "Hamilton Mt.East, ON",
-      "status": "committed",
-      "details": "3 produits"
-    },
-    {
-      "id": "445",
-      "city": "Sudbury South, ON",
+      "id": "29",
+      "city": "Dunnville, ON",
       "status": "skipped",
       "details": "nothing to commit"
+    },
+    {
+      "id": "42",
+      "city": "Guelph Stone Rd, ON",
+      "status": "committed",
+      "details": "2 produits"
+    },
+    {
+      "id": "31",
+      "city": "Centre Wellington, ON",
+      "status": "committed",
+      "details": "4 produits"
+    },
+    {
+      "id": "260",
+      "city": "Guelph North, ON",
+      "status": "committed",
+      "details": "4 produits"
+    },
+    {
+      "id": "639",
+      "city": "Ancaster, ON",
+      "status": "committed",
+      "details": "4 produits"
     }
   ],
   "failedTwice": [],
-  "retriedAndSucceeded": [
-    {
-      "id": "122",
-      "city": "Burlington Fairview, ON"
-    }
-  ]
+  "retriedAndSucceeded": []
 }
