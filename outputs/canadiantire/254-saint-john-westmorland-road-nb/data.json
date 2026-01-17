@@ -56,5 +56,34 @@
     "regular_price_raw": "Était±  19,99 $prix était 19,99 $",
     "price_sale_clean": "9,09",
     "price_original_clean": "19,99"
+  },
+  {
+    "store_id": "254",
+    "city": "Saint John - Westmorland Road, NB",
+    "name": "Scellant pour gouttière/revêtement Rust-Oleum LeakSeal, toutes saisons, réparation de surface, blanc, 300 mL",
+    "title": "Scellant pour gouttière/revêtement Rust-Oleum LeakSeal, toutes saisons, réparation de surface, blanc, 300 mL",
+    "price": 9.93,
+    "price_raw": "9,93 $",
+    "liquidation": true,
+    "image": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641577/leakseal-gutter-and-siding-white-300ml-5dde50d2-eb94-4077-9029-dea17929b073.png?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641577/leakseal-gutter-and-siding-white-300ml-5dde50d2-eb94-4077-9029-dea17929b073.png?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/scellant-pour-gouttiere-revetement-rust-oleum-leakseal-toutes-saisons-reparation-de-surface-blanc-300-ml-0641577p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/scellant-pour-gouttiere-revetement-rust-oleum-leakseal-toutes-saisons-reparation-de-surface-blanc-300-ml-0641577p.html",
+    "product_id": null,
+    "sku": "0641577",
+    "sku_formatted": "064-1577-0",
+    "availability": "Il n’en reste que 1 #064-1577-0",
+    "badges": [
+      "Liquidation◊Mieux notés"
+    ],
+    "discount_percent": 52.69,
+    "liquidation_price": 9.93,
+    "liquidation_price_raw": "9,93 $",
+    "sale_price": 9.93,
+    "sale_price_raw": "9,93 $",
+    "regular_price": 20.99,
+    "regular_price_raw": "Était±  20,99 $prix était 20,99 $",
+    "price_sale_clean": "9,93",
+    "price_original_clean": "20,99"
   }
 ]
