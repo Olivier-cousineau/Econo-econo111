@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-01-18T10:29:12.381Z",
+  "generatedAt": "2026-01-18T13:10:00.038Z",
   "stores": [
     {
-      "id": "224",
-      "city": "Halifax - Bedford, NS",
-      "status": "committed",
-      "details": "9 produits"
-    },
-    {
-      "id": "465",
-      "city": "Halifax - Bayers Lake, NS",
-      "status": "skipped",
-      "details": "nothing to commit"
-    },
-    {
-      "id": "121",
-      "city": "Windsor University Plaza, ON",
-      "status": "skipped",
-      "details": "nothing to commit"
-    },
-    {
-      "id": "186",
-      "city": "Halifax - Spryfield, NS",
-      "status": "skipped",
-      "details": "nothing to commit"
-    },
-    {
-      "id": "619",
-      "city": "Elmsdale, NS",
-      "status": "skipped",
-      "details": "nothing to commit"
-    },
-    {
-      "id": "44",
-      "city": "Halifax, NS",
-      "status": "committed",
-      "details": "5 produits"
-    },
-    {
-      "id": "41",
-      "city": "Dartmouth Crossing, NS",
+      "id": "113",
+      "city": "Truro, NS",
       "status": "committed",
       "details": "2 produits"
     },
     {
-      "id": "436",
-      "city": "Halifax - Cole Harbour, NS",
+      "id": "281",
+      "city": "Amherstburg, ON",
+      "status": "committed",
+      "details": "2 produits"
+    },
+    {
+      "id": "20",
+      "city": "Charlottetown, PEI 20 Babineau Avenue",
+      "status": "committed",
+      "details": "6 produits"
+    },
+    {
+      "id": "406",
+      "city": "Hearst, ON",
+      "status": "committed",
+      "details": "5 produits"
+    },
+    {
+      "id": "279",
+      "city": "Wawa, ON",
+      "status": "committed",
+      "details": "2 produits"
+    },
+    {
+      "id": "67",
+      "city": "New Glasgow, NS",
+      "status": "committed",
+      "details": "4 produits"
+    },
+    {
+      "id": "2",
+      "city": "Antigonish, NS",
       "status": "committed",
       "details": "3 produits"
+    },
+    {
+      "id": "901",
+      "city": "Labrador City, NL",
+      "status": "skipped",
+      "details": "nothing to commit"
     }
   ],
   "failedTwice": [],
