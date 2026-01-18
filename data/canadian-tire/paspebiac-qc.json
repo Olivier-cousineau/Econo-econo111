@@ -9,7 +9,19 @@
     "branch": "Paspebiac, QC",
     "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-depart-pour-conservation-et-entreposage-d-aliments-fresh-save-de-zwilling-avec-pompe-a-depression-portative-0430335p.html",
     "sku": "0430335",
-    "availability": "10 En Stock#043-0335-2"
+    "availability": "9 En Stock#043-0335-2"
+  },
+  {
+    "title": "Luge rapide H2O Spider avec direction et freins",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/winter-recreation/0821088/spider-snow-bike-e7a5d494-3744-4104-9151-337a07902637-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 99.99,
+    "salePrice": 49.93,
+    "store": "Canadian Tire",
+    "city": "Paspebiac, QC",
+    "branch": "Paspebiac, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/luge-rapide-h2o-spider-avec-direction-et-freins-0821088p.html",
+    "sku": "0821088",
+    "availability": "Il n’en reste que 5 #082-1088-0"
   },
   {
     "title": "Joint d’étanchéité Permatex 59705 Ultra Copper, température maximale, 147 mL",
@@ -58,5 +70,17 @@
     "url": "https://www.canadiantire.ca/fr/pdp/savon-moussant-pour-les-mains-method-avec-pompe-parfum-the-vert-et-aloes-300-ml-0534246p.html",
     "sku": "0534246",
     "availability": "Il n’en reste que 1 #053-4246-6"
+  },
+  {
+    "title": "Nettoyant pour moisissure de bateau Triton, transparent, 950 mL",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790183/triton-mildew-rmvr-5436fc01-e399-4c72-8dd6-e1986c6c7a97-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 17.99,
+    "salePrice": 1.93,
+    "store": "Canadian Tire",
+    "city": "Paspebiac, QC",
+    "branch": "Paspebiac, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-pour-moisissure-de-bateau-triton-transparent-950-ml-0790183p.html",
+    "sku": "0790183",
+    "availability": ""
   }
 ]
