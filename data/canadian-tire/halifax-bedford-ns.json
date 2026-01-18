@@ -58,5 +58,53 @@
     "url": "https://www.canadiantire.ca/fr/pdp/peinture-en-aerosol-toute-surface-rust-oleum-specialty-laque-312-g-0482525p.html",
     "sku": "0482525",
     "availability": ""
+  },
+  {
+    "title": "Nettoyant nautique pour écran, 230 mL",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790328/marine-display-cleaner-f2601da5-df42-4d33-9177-1be27b9b3298-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 6.79,
+    "store": "Canadian Tire",
+    "city": "Halifax - Bedford, NS",
+    "branch": "Halifax - Bedford, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-nautique-pour-ecran-230-ml-0790328p.html",
+    "sku": "0790328",
+    "availability": "Il n’en reste que 1 #079-0328-6"
+  },
+  {
+    "title": "Peinture en aérosol toute surface camouflage Rust-Oleum Specialty, ultra mat, 340 g",
+    "image": "https://media-www.canadiantire.ca/product/fixing/paint/paints/0482394/specialty-camouflage-paint-black-340g-c3c66881-05d0-408a-a61c-9140533695c4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 18.99,
+    "salePrice": 9.49,
+    "store": "Canadian Tire",
+    "city": "Halifax - Bedford, NS",
+    "branch": "Halifax - Bedford, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/peinture-en-aerosol-toute-surface-camouflage-rust-oleum-specialty-ultra-mat-340-g-0482280p.html",
+    "sku": "0482280",
+    "availability": ""
+  },
+  {
+    "title": "Bouche-toit incolore Rust-Oleum LeakSeal, intérieur/extérieur, scellant résistant à l'eau et aux intempéries, 946 mL",
+    "image": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641570/clear-roof-patch-946-ml-104767ac-428b-4e84-90b8-2619ef352249-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 48.99,
+    "salePrice": 24.49,
+    "store": "Canadian Tire",
+    "city": "Halifax - Bedford, NS",
+    "branch": "Halifax - Bedford, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/bouche-toit-incolore-rust-oleum-leakseal-interieur-exterieur-scellant-resistant-a-l-eau-et-aux-intemperies-946-ml-0641570p.html",
+    "sku": "0641570",
+    "availability": "Il n’en reste que 1 #064-1570-4"
+  },
+  {
+    "title": "Vaporisateur pénétrant WD-40 antirouille Specialist 01078, 311 g",
+    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0381587/wd-40-specialist-penetrant-311g-ace0d42a-a27d-4ac7-8bbf-427348a6591f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 15.99,
+    "salePrice": 6.93,
+    "store": "Canadian Tire",
+    "city": "Halifax - Bedford, NS",
+    "branch": "Halifax - Bedford, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/vaporisateur-penetrant-wd-40-antirouille-specialist-01078-311-g-0381587p.html",
+    "sku": "0381587",
+    "availability": ""
   }
 ]
