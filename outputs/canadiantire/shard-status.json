@@ -1,51 +1,51 @@
 {
-  "generatedAt": "2026-01-18T04:58:56.546Z",
+  "generatedAt": "2026-01-18T07:43:09.704Z",
   "stores": [
     {
-      "id": "178",
-      "city": "Kapuskasing, ON",
-      "status": "committed",
-      "details": "2 produits"
-    },
-    {
-      "id": "307",
-      "city": "Sept-Iles, QC",
-      "status": "skipped",
-      "details": "nothing to commit"
-    },
-    {
-      "id": "21",
-      "city": "Chatham, ON",
-      "status": "committed",
-      "details": "5 produits"
-    },
-    {
-      "id": "135",
-      "city": "Wallaceburg, ON",
+      "id": "456",
+      "city": "Gaspe, QC",
       "status": "committed",
       "details": "4 produits"
     },
     {
-      "id": "13",
-      "city": "Bridgewater, NS",
+      "id": "95",
+      "city": "Sault Ste. Marie, ON",
       "status": "committed",
       "details": "2 produits"
     },
     {
-      "id": "3",
-      "city": "Amherst, NS",
+      "id": "618",
+      "city": "Tantallon, NS",
+      "status": "committed",
+      "details": "4 produits"
+    },
+    {
+      "id": "55",
+      "city": "Leamington, ON",
+      "status": "committed",
+      "details": "4 produits"
+    },
+    {
+      "id": "199",
+      "city": "Windsor East, ON",
+      "status": "committed",
+      "details": "2 produits"
+    },
+    {
+      "id": "172",
+      "city": "Essex, ON",
       "status": "skipped",
       "details": "nothing to commit"
     },
     {
-      "id": "215",
-      "city": "Tilbury, ON",
-      "status": "committed",
-      "details": "3 produits"
+      "id": "289",
+      "city": "Halifax - Lwr. Sackville, NS",
+      "status": "skipped",
+      "details": "nothing to commit"
     },
     {
-      "id": "132",
-      "city": "Summerside, PEI 474 Granville Street",
+      "id": "236",
+      "city": "Windsor South, ON",
       "status": "committed",
       "details": "2 produits"
     }
