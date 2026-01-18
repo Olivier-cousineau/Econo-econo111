@@ -14,7 +14,7 @@
     "product_id": null,
     "sku": "0430335",
     "sku_formatted": "043-0335-2",
-    "availability": "15 En Stock#043-0335-2",
+    "availability": "14 En Stock#043-0335-2",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -72,7 +72,7 @@
     "product_id": null,
     "sku": "0383831",
     "sku_formatted": "038-3831-6",
-    "availability": "Il n’en reste que 5 #038-3831-6",
+    "availability": "Il n’en reste que 4 #038-3831-6",
     "badges": [
       "Liquidation◊"
     ],
@@ -143,5 +143,34 @@
     "regular_price_raw": "Était±  19,99 $prix était 19,99 $",
     "price_sale_clean": "9,99",
     "price_original_clean": "19,99"
+  },
+  {
+    "store_id": "20",
+    "city": "Charlottetown, PEI 20 Babineau Avenue",
+    "name": "Lubrifiant sec résistant à la poussière et la rouille PTFE WD-40 Specialist 2209, aérosol, 283 g",
+    "title": "Lubrifiant sec résistant à la poussière et la rouille PTFE WD-40 Specialist 2209, aérosol, 283 g",
+    "price": 6.93,
+    "price_raw": "6,93 $",
+    "liquidation": true,
+    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0388090/wd-40-specialist-dry-lube-94d9becc-dda1-45fd-9634-9246ed2bfd62-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0388090/wd-40-specialist-dry-lube-94d9becc-dda1-45fd-9634-9246ed2bfd62-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/lubrifiant-sec-resistant-a-la-poussiere-et-la-rouille-ptfe-wd-40-specialist-2209-aerosol-283-g-0388090p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/lubrifiant-sec-resistant-a-la-poussiere-et-la-rouille-ptfe-wd-40-specialist-2209-aerosol-283-g-0388090p.html",
+    "product_id": null,
+    "sku": "0388090",
+    "sku_formatted": "038-8090-8",
+    "availability": null,
+    "badges": [
+      "Liquidation◊Mieux notés"
+    ],
+    "discount_percent": 56.66,
+    "liquidation_price": 6.93,
+    "liquidation_price_raw": "6,93 $",
+    "sale_price": 6.93,
+    "sale_price_raw": "6,93 $",
+    "regular_price": 15.99,
+    "regular_price_raw": "Était±  15,99 $prix était 15,99 $",
+    "price_sale_clean": "6,93",
+    "price_original_clean": "15,99"
   }
 ]
