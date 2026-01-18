@@ -9,7 +9,7 @@
     "branch": "Charlottetown, PEI 20 Babineau Avenue",
     "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-depart-pour-conservation-et-entreposage-d-aliments-fresh-save-de-zwilling-avec-pompe-a-depression-portative-0430335p.html",
     "sku": "0430335",
-    "availability": "15 En Stock#043-0335-2"
+    "availability": "14 En Stock#043-0335-2"
   },
   {
     "title": "Liquide de préparation Evans, 1 gal",
@@ -33,7 +33,7 @@
     "branch": "Charlottetown, PEI 20 Babineau Avenue",
     "url": "https://www.canadiantire.ca/fr/pdp/joint-d-etancheite-permatex-59705-ultra-copper-temperature-maximale-147-ml-0383831p.html",
     "sku": "0383831",
-    "availability": "Il n’en reste que 5 #038-3831-6"
+    "availability": "Il n’en reste que 4 #038-3831-6"
   },
   {
     "title": "Peinture d'intérieur en aérosol toute surface Rust-Oleum Accents, texture de pierre, 340 g",
@@ -58,5 +58,17 @@
     "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-nautique-pour-ecran-230-ml-0790328p.html",
     "sku": "0790328",
     "availability": "Il n’en reste que 2 #079-0328-6"
+  },
+  {
+    "title": "Lubrifiant sec résistant à la poussière et la rouille PTFE WD-40 Specialist 2209, aérosol, 283 g",
+    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0388090/wd-40-specialist-dry-lube-94d9becc-dda1-45fd-9634-9246ed2bfd62-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 15.99,
+    "salePrice": 6.93,
+    "store": "Canadian Tire",
+    "city": "Charlottetown, PEI 20 Babineau Avenue",
+    "branch": "Charlottetown, PEI 20 Babineau Avenue",
+    "url": "https://www.canadiantire.ca/fr/pdp/lubrifiant-sec-resistant-a-la-poussiere-et-la-rouille-ptfe-wd-40-specialist-2209-aerosol-283-g-0388090p.html",
+    "sku": "0388090",
+    "availability": ""
   }
 ]

@@ -1,17 +1,5 @@
 [
   {
-    "title": "Bols de cuisine empilables MASTER Chef en plastique, paq. 8",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/bakeware-baking-prep/1424985/masterchef-8-piece-bake-prep-set-3e85a64e-f1ef-47d2-8117-bf07641c9608-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 32.99,
-    "salePrice": 12.93,
-    "store": "Canadian Tire",
-    "city": "Antigonish, NS",
-    "branch": "Antigonish, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/bols-de-cuisine-empilables-master-chef-en-plastique-paq-8-1424985p.html",
-    "sku": "1424985",
-    "availability": "Il n’en reste que 1 #142-4985-4"
-  },
-  {
     "title": "Peinture en aérosol toute surface Rust-Oleum Specialty, laque, 312 g",
     "image": "https://media-www.canadiantire.ca/product/fixing/paint/paints/0482395/specialty-lacquer-clear-312g-1c0cce3e-31bd-4ba3-99cb-67cfe9f88aac-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 15.99,
@@ -36,27 +24,15 @@
     "availability": ""
   },
   {
-    "title": "Engrais de base Root Farm étape 1, 4-0-1, 473 mL",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/gardening/lawn-plant-care/1590131/root-farm-part-1-base-nutrient-473ml-8bd064ac-40d0-4c18-a158-e1bbc6140108-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 16.99,
-    "salePrice": 6.93,
+    "title": "Huile à usages multiples avec burette 3 en 1 longue durée, 88 mL",
+    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0387807/wd-40-3-in-1-household-oil-88ml-a5d8e689-f5d8-4a04-b268-cf6e3fb32b55-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 7.99,
+    "salePrice": 3.93,
     "store": "Canadian Tire",
     "city": "Antigonish, NS",
     "branch": "Antigonish, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/engrais-de-base-root-farm-etape-1-4-0-1-473-ml-1590131p.html",
-    "sku": "1590131",
-    "availability": ""
-  },
-  {
-    "title": "Engrais pour tomates et légumes étape 2 Root Farm, 1-5-7, 473 mL",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/gardening/lawn-plant-care/1590134/root-farm-part-2-tomato-and-veggie-nutrient-473ml-65f791ec-c404-43e3-84c2-e15e78450338-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 16.99,
-    "salePrice": 6.93,
-    "store": "Canadian Tire",
-    "city": "Antigonish, NS",
-    "branch": "Antigonish, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/engrais-pour-tomates-et-legumes-etape-2-root-farm-1-5-7-473-ml-1590134p.html",
-    "sku": "1590134",
+    "url": "https://www.canadiantire.ca/fr/pdp/huile-a-usages-multiples-avec-burette-3-en-1-longue-duree-88-ml-0387807p.html",
+    "sku": "0387807",
     "availability": ""
   }
 ]
