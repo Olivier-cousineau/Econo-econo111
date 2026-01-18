@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-01-18T07:43:09.704Z",
+  "generatedAt": "2026-01-18T10:29:12.381Z",
   "stores": [
     {
-      "id": "456",
-      "city": "Gaspe, QC",
+      "id": "224",
+      "city": "Halifax - Bedford, NS",
       "status": "committed",
-      "details": "4 produits"
+      "details": "9 produits"
     },
     {
-      "id": "95",
-      "city": "Sault Ste. Marie, ON",
-      "status": "committed",
-      "details": "2 produits"
-    },
-    {
-      "id": "618",
-      "city": "Tantallon, NS",
-      "status": "committed",
-      "details": "4 produits"
-    },
-    {
-      "id": "55",
-      "city": "Leamington, ON",
-      "status": "committed",
-      "details": "4 produits"
-    },
-    {
-      "id": "199",
-      "city": "Windsor East, ON",
-      "status": "committed",
-      "details": "2 produits"
-    },
-    {
-      "id": "172",
-      "city": "Essex, ON",
+      "id": "465",
+      "city": "Halifax - Bayers Lake, NS",
       "status": "skipped",
       "details": "nothing to commit"
     },
     {
-      "id": "289",
-      "city": "Halifax - Lwr. Sackville, NS",
+      "id": "121",
+      "city": "Windsor University Plaza, ON",
       "status": "skipped",
       "details": "nothing to commit"
     },
     {
-      "id": "236",
-      "city": "Windsor South, ON",
+      "id": "186",
+      "city": "Halifax - Spryfield, NS",
+      "status": "skipped",
+      "details": "nothing to commit"
+    },
+    {
+      "id": "619",
+      "city": "Elmsdale, NS",
+      "status": "skipped",
+      "details": "nothing to commit"
+    },
+    {
+      "id": "44",
+      "city": "Halifax, NS",
+      "status": "committed",
+      "details": "5 produits"
+    },
+    {
+      "id": "41",
+      "city": "Dartmouth Crossing, NS",
       "status": "committed",
       "details": "2 produits"
+    },
+    {
+      "id": "436",
+      "city": "Halifax - Cole Harbour, NS",
+      "status": "committed",
+      "details": "3 produits"
     }
   ],
   "failedTwice": [],
