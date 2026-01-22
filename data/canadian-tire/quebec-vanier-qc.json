@@ -12,18 +12,6 @@
     "availability": "Il n’en reste que 2 #029-3102-4"
   },
   {
-    "title": "Savon à mains liquide avec pompe Sapadilla, parfums variés, 350 mL",
-    "image": "https://media-www.canadiantire.ca/product/living/home-essentials/laundry-hand-dish-cleaning-solutions/1531482/sapadilla-hand-soap-grapefruit-and-bergmot-350ml-a31addb3-c55a-46e0-b232-42680e295c4f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 8.99,
-    "salePrice": 3.93,
-    "store": "Canadian Tire",
-    "city": "Quebec Vanier, QC",
-    "branch": "Quebec Vanier, QC",
-    "url": "https://www.canadiantire.ca/fr/pdp/savon-a-mains-liquide-avec-pompe-sapadilla-parfums-varies-350-ml-1531482p.html",
-    "sku": "1531482",
-    "availability": ""
-  },
-  {
     "title": "Bols de cuisine empilables MASTER Chef en plastique, paq. 8",
     "image": "https://media-www.canadiantire.ca/product/living/kitchen/bakeware-baking-prep/1424985/masterchef-8-piece-bake-prep-set-3e85a64e-f1ef-47d2-8117-bf07641c9608-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 32.99,
@@ -33,6 +21,18 @@
     "branch": "Quebec Vanier, QC",
     "url": "https://www.canadiantire.ca/fr/pdp/bols-de-cuisine-empilables-master-chef-en-plastique-paq-8-1424985p.html",
     "sku": "1424985",
-    "availability": "31 En Stock#142-4985-4"
+    "availability": "30 En Stock#142-4985-4"
+  },
+  {
+    "title": "Filet en tissu pour toiture Tremco",
+    "image": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641142/tremco-instant-patch-fabric-mesh-7-6m-roll-0e32082f-7f2f-4b58-b9ec-775a5c75242f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 7.99,
+    "salePrice": 3,
+    "store": "Canadian Tire",
+    "city": "Quebec Vanier, QC",
+    "branch": "Quebec Vanier, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/filet-en-tissu-pour-toiture-tremco-0641142p.html",
+    "sku": "0641142",
+    "availability": "Il n’en reste que 1 #064-1142-4"
   }
 ]
