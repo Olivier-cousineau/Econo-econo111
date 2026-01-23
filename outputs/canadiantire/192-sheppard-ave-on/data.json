@@ -14,7 +14,7 @@
     "product_id": null,
     "sku": "0821088",
     "sku_formatted": "082-1088-0",
-    "availability": "23 En Stock#082-1088-0",
+    "availability": "22 En Stock#082-1088-0",
     "badges": [
       "Liquidation◊Exclusivité"
     ],
@@ -130,7 +130,7 @@
     "product_id": null,
     "sku": "0383831",
     "sku_formatted": "038-3831-6",
-    "availability": "9 En Stock#038-3831-6",
+    "availability": "8 En Stock#038-3831-6",
     "badges": [
       "Liquidation◊"
     ],
@@ -143,5 +143,34 @@
     "regular_price_raw": "Était±  18,99 $prix était 18,99 $",
     "price_sale_clean": "2,93",
     "price_original_clean": "18,99"
+  },
+  {
+    "store_id": "192",
+    "city": "Sheppard Ave., ON",
+    "name": "Joint d'étanchéité instantané Permatex The Right Stuff, rouge, 147 mL",
+    "title": "Joint d'étanchéité instantané Permatex The Right Stuff, rouge, 147 mL",
+    "price": 4.93,
+    "price_raw": "4,93 $",
+    "liquidation": true,
+    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0382534/permatex-the-right-stuff-red-instant-gasket-maker-147ml-6fe86f13-1e53-4895-a8d2-10010b7e0e3c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0382534/permatex-the-right-stuff-red-instant-gasket-maker-147ml-6fe86f13-1e53-4895-a8d2-10010b7e0e3c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/joint-d-etancheite-instantane-permatex-the-right-stuff-rouge-147-ml-0382534p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/joint-d-etancheite-instantane-permatex-the-right-stuff-rouge-147-ml-0382534p.html",
+    "product_id": null,
+    "sku": "0382534",
+    "sku_formatted": "038-2534-0",
+    "availability": "Il n’en reste que 3 #038-2534-0",
+    "badges": [
+      "Liquidation◊"
+    ],
+    "discount_percent": 84.59,
+    "liquidation_price": 4.93,
+    "liquidation_price_raw": "4,93 $",
+    "sale_price": 4.93,
+    "sale_price_raw": "4,93 $",
+    "regular_price": 31.99,
+    "regular_price_raw": "Était±  31,99 $prix était 31,99 $",
+    "price_sale_clean": "4,93",
+    "price_original_clean": "31,99"
   }
 ]
