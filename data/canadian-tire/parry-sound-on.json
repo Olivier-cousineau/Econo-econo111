@@ -1,29 +1,5 @@
 [
   {
-    "title": "Luge rapide H2O Spider avec direction et freins",
-    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/winter-recreation/0821088/spider-snow-bike-e7a5d494-3744-4104-9151-337a07902637-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 99.99,
-    "salePrice": 39.93,
-    "store": "Canadian Tire",
-    "city": "Parry Sound, ON",
-    "branch": "Parry Sound, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/luge-rapide-h2o-spider-avec-direction-et-freins-0821088p.html",
-    "sku": "0821088",
-    "availability": "Il n’en reste que 3 #082-1088-0"
-  },
-  {
-    "title": "Liquide de préparation Evans, 1 gal",
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0293102/evans-prep-fluid-1gal-5e8adf31-ac7c-40e9-9306-c6aa92e46670-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 49.99,
-    "salePrice": 12.93,
-    "store": "Canadian Tire",
-    "city": "Parry Sound, ON",
-    "branch": "Parry Sound, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/liquide-de-preparation-evans-1-gal-0293102p.html",
-    "sku": "0293102",
-    "availability": "Il n’en reste que 3 #029-3102-4"
-  },
-  {
     "title": "Peinture d'intérieur en aérosol toute surface Rust-Oleum Accents, texture de pierre, 340 g",
     "image": "https://media-www.canadiantire.ca/product/fixing/paint/paints/0482380/stone-spray-paint-black-granite-f8538694-ebde-401f-94c6-57b81bcebc2e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 29.99,
@@ -34,5 +10,29 @@
     "url": "https://www.canadiantire.ca/fr/pdp/peinture-d-interieur-en-aerosol-toute-surface-rust-oleum-accents-texture-de-pierre-340-g-0482380p.html",
     "sku": "0482380",
     "availability": ""
+  },
+  {
+    "title": "Lubrifiant et nettoyant tout usage WD-40 1011, aérosol, 311 g",
+    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0381536/wd-40-311g-f7f9ed19-6b02-46bb-a837-c8950c54ee9d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 9.99,
+    "salePrice": 4.93,
+    "store": "Canadian Tire",
+    "city": "Parry Sound, ON",
+    "branch": "Parry Sound, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/lubrifiant-et-nettoyant-tout-usage-wd-40-1011-aerosol-311-g-0381536p.html",
+    "sku": "0381536",
+    "availability": ""
+  },
+  {
+    "title": "Scellant Permatex High Tack Spray-A-Gasket 99MA, vaporisateur, 255 g",
+    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0382511/high-tack-gasket-sealant-1ebe6623-1ded-4c05-8d99-df6f7a68b449-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 14.99,
+    "salePrice": 4.93,
+    "store": "Canadian Tire",
+    "city": "Parry Sound, ON",
+    "branch": "Parry Sound, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/scellant-permatex-high-tack-spray-a-gasket-99ma-vaporisateur-255-g-0382511p.html",
+    "sku": "0382511",
+    "availability": "Il n’en reste que 2 #038-2511-4"
   }
 ]
