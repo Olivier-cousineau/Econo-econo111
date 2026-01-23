@@ -1,51 +1,51 @@
 {
-  "generatedAt": "2026-01-23T02:32:46.516Z",
+  "generatedAt": "2026-01-23T03:56:28.947Z",
   "stores": [
     {
-      "id": "23",
-      "city": "Cobourg, ON",
+      "id": "72",
+      "city": "North Bay, ON",
       "status": "committed",
       "details": "0 produits"
     },
     {
-      "id": "114",
-      "city": "Val d'Or, QC",
+      "id": "62",
+      "city": "Gravenhurst, ON",
       "status": "committed",
       "details": "0 produits"
     },
     {
-      "id": "38",
-      "city": "Fenelon Falls, ON",
-      "status": "committed",
-      "details": "0 produits"
-    },
-    {
-      "id": "56",
-      "city": "Lindsay, ON",
-      "status": "committed",
-      "details": "0 produits"
-    },
-    {
-      "id": "323",
-      "city": "Riviere du Loup, QC",
-      "status": "committed",
-      "details": "0 produits"
-    },
-    {
-      "id": "47",
-      "city": "Huntsville, ON",
-      "status": "skipped",
-      "details": "nothing to commit"
-    },
-    {
-      "id": "206",
-      "city": "Bracebridge, ON",
+      "id": "226",
+      "city": "Port Perry, ON",
       "status": "committed",
       "details": "1 produits"
     },
     {
-      "id": "170",
-      "city": "Bowmanville, ON",
+      "id": "336",
+      "city": "Oshawa North, ON",
+      "status": "committed",
+      "details": "5 produits"
+    },
+    {
+      "id": "75",
+      "city": "Oshawa Mid, ON",
+      "status": "committed",
+      "details": "0 produits"
+    },
+    {
+      "id": "285",
+      "city": "Amos, QC",
+      "status": "committed",
+      "details": "6 produits"
+    },
+    {
+      "id": "460",
+      "city": "Whitby North, ON",
+      "status": "committed",
+      "details": "2 produits"
+    },
+    {
+      "id": "187",
+      "city": "Whitby South, ON",
       "status": "committed",
       "details": "0 produits"
     }
