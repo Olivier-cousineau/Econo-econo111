@@ -143,34 +143,5 @@
     "regular_price_raw": "Était±  139,99 $prix était 139,99 $",
     "price_sale_clean": "63,00",
     "price_original_clean": "139,99"
-  },
-  {
-    "store_id": "22",
-    "city": "Espanola, ON",
-    "name": "Lubrifiant à pellicule sèche antiadhésif DuPont, bouteille à presser, 120 mL (4 oz)",
-    "title": "Lubrifiant à pellicule sèche antiadhésif DuPont, bouteille à presser, 120 mL (4 oz)",
-    "price": 4.33,
-    "price_raw": "4,33 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0387817/dupont-non-stick-4oz-squeeze-486595e9-13b3-42a0-9c33-1d91f9ff2266-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0387817/dupont-non-stick-4oz-squeeze-486595e9-13b3-42a0-9c33-1d91f9ff2266-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/lubrifiant-a-pellicule-seche-antiadhesif-dupont-bouteille-a-presser-120-ml-4-oz-0387817p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/lubrifiant-a-pellicule-seche-antiadhesif-dupont-bouteille-a-presser-120-ml-4-oz-0387817p.html",
-    "product_id": null,
-    "sku": "0387817",
-    "sku_formatted": "038-7817-8",
-    "availability": "Il n’en reste que 1 #038-7817-8",
-    "badges": [
-      "Liquidation◊Mieux notés"
-    ],
-    "discount_percent": 54.37,
-    "liquidation_price": 4.33,
-    "liquidation_price_raw": "4,33 $",
-    "sale_price": 4.33,
-    "sale_price_raw": "4,33 $",
-    "regular_price": 9.49,
-    "regular_price_raw": "Était±  9,49 $prix était 9,49 $",
-    "price_sale_clean": "4,33",
-    "price_original_clean": "9,49"
   }
 ]
