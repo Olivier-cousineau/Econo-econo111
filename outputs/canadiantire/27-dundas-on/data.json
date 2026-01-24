@@ -14,7 +14,7 @@
     "product_id": null,
     "sku": "0821088",
     "sku_formatted": "082-1088-0",
-    "availability": "17 En Stock#082-1088-0",
+    "availability": "16 En Stock#082-1088-0",
     "badges": [
       "Liquidation◊Exclusivité"
     ],
@@ -85,5 +85,63 @@
     "regular_price_raw": "29,99 $Était   et+ prix était à partir de 29,99 $",
     "price_sale_clean": "14,93",
     "price_original_clean": "29,99"
+  },
+  {
+    "store_id": "27",
+    "city": "Dundas, ON",
+    "name": "Nettoyant nautique pour écran, 230 mL",
+    "title": "Nettoyant nautique pour écran, 230 mL",
+    "price": 7.49,
+    "price_raw": "7,49 $",
+    "liquidation": true,
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790328/marine-display-cleaner-f2601da5-df42-4d33-9177-1be27b9b3298-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790328/marine-display-cleaner-f2601da5-df42-4d33-9177-1be27b9b3298-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-nautique-pour-ecran-230-ml-0790328p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/nettoyant-nautique-pour-ecran-230-ml-0790328p.html",
+    "product_id": null,
+    "sku": "0790328",
+    "sku_formatted": "079-0328-6",
+    "availability": "Il n’en reste que 1 #079-0328-6",
+    "badges": [
+      "Liquidation◊Mieux notés"
+    ],
+    "discount_percent": 62.53,
+    "liquidation_price": 7.49,
+    "liquidation_price_raw": "7,49 $",
+    "sale_price": 7.49,
+    "sale_price_raw": "7,49 $",
+    "regular_price": 19.99,
+    "regular_price_raw": "Était±  19,99 $prix était 19,99 $",
+    "price_sale_clean": "7,49",
+    "price_original_clean": "19,99"
+  },
+  {
+    "store_id": "27",
+    "city": "Dundas, ON",
+    "name": "Savon à main moussant Dove avec pompe, senteurs assorties, 300 ml",
+    "title": "Savon à main moussant Dove avec pompe, senteurs assorties, 300 ml",
+    "price": 0.93,
+    "price_raw": "0,93 $",
+    "liquidation": true,
+    "image": "https://media-www.canadiantire.ca/product/living/home-essentials/laundry-hand-dish-cleaning-solutions/1531717/dove-foaming-hand-wash-coconut-300ml-51e2feee-f181-4149-b3e4-d44e0b46e087-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/living/home-essentials/laundry-hand-dish-cleaning-solutions/1531717/dove-foaming-hand-wash-coconut-300ml-51e2feee-f181-4149-b3e4-d44e0b46e087-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/savon-a-main-moussant-dove-avec-pompe-senteurs-assorties-300-ml-1531716p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/savon-a-main-moussant-dove-avec-pompe-senteurs-assorties-300-ml-1531716p.html",
+    "product_id": null,
+    "sku": "1531716",
+    "sku_formatted": "153-1716",
+    "availability": null,
+    "badges": [
+      "Liquidation◊"
+    ],
+    "discount_percent": 81.36,
+    "liquidation_price": 0.93,
+    "liquidation_price_raw": "0,93 $",
+    "sale_price": 0.93,
+    "sale_price_raw": "0,93 $",
+    "regular_price": 4.99,
+    "regular_price_raw": "4,99 $Était   et+ prix était à partir de 4,99 $",
+    "price_sale_clean": "0,93",
+    "price_original_clean": "4,99"
   }
 ]
