@@ -2,35 +2,6 @@
   {
     "store_id": "124",
     "city": "Woodstock, ON",
-    "name": "Luge rapide H2O Spider avec direction et freins",
-    "title": "Luge rapide H2O Spider avec direction et freins",
-    "price": 44.97,
-    "price_raw": "44,97 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/winter-recreation/0821088/spider-snow-bike-e7a5d494-3744-4104-9151-337a07902637-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/winter-recreation/0821088/spider-snow-bike-e7a5d494-3744-4104-9151-337a07902637-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/luge-rapide-h2o-spider-avec-direction-et-freins-0821088p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/luge-rapide-h2o-spider-avec-direction-et-freins-0821088p.html",
-    "product_id": null,
-    "sku": "0821088",
-    "sku_formatted": "082-1088-0",
-    "availability": "Il n’en reste que 1 #082-1088-0",
-    "badges": [
-      "Liquidation◊Exclusivité"
-    ],
-    "discount_percent": 55.03,
-    "liquidation_price": 44.97,
-    "liquidation_price_raw": "44,97 $",
-    "sale_price": 44.97,
-    "sale_price_raw": "44,97 $",
-    "regular_price": 99.99,
-    "regular_price_raw": "Était±  99,99 $prix était 99,99 $",
-    "price_sale_clean": "44,97",
-    "price_original_clean": "99,99"
-  },
-  {
-    "store_id": "124",
-    "city": "Woodstock, ON",
     "name": "Batterie de cuisine en cuivre Lagostina Artiste-Clad allant au four, paq. 12",
     "title": "Batterie de cuisine en cuivre Lagostina Artiste-Clad allant au four, paq. 12",
     "price": 299.93,
@@ -114,34 +85,5 @@
     "regular_price_raw": "8,99 $Était   et+ prix était à partir de 8,99 $",
     "price_sale_clean": "3,93",
     "price_original_clean": "8,99"
-  },
-  {
-    "store_id": "124",
-    "city": "Woodstock, ON",
-    "name": "Tasses et cuillères à mesurer MASTER Chef en plastique, paq. 8",
-    "title": "Tasses et cuillères à mesurer MASTER Chef en plastique, paq. 8",
-    "price": 4.93,
-    "price_raw": "4,93 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-tools-thermometers/1423764/master-chef-measuring-cups-spoons-set-49dd4e11-9c3b-4ead-bd34-e73789f33af1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-tools-thermometers/1423764/master-chef-measuring-cups-spoons-set-49dd4e11-9c3b-4ead-bd34-e73789f33af1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/tasses-et-cuilleres-a-mesurer-master-chef-en-plastique-paq-8-1423764p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/tasses-et-cuilleres-a-mesurer-master-chef-en-plastique-paq-8-1423764p.html",
-    "product_id": null,
-    "sku": "1423764",
-    "sku_formatted": "142-3764-6",
-    "availability": "119 En Stock#142-3764-6",
-    "badges": [
-      "Liquidation◊Mieux notés"
-    ],
-    "discount_percent": 62.05,
-    "liquidation_price": 4.93,
-    "liquidation_price_raw": "4,93 $",
-    "sale_price": 4.93,
-    "sale_price_raw": "4,93 $",
-    "regular_price": 12.99,
-    "regular_price_raw": "Était±  12,99 $prix était 12,99 $",
-    "price_sale_clean": "4,93",
-    "price_original_clean": "12,99"
   }
 ]
