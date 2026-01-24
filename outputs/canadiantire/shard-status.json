@@ -1,51 +1,51 @@
 {
-  "generatedAt": "2026-01-24T08:30:20.028Z",
+  "generatedAt": "2026-01-24T10:24:47.673Z",
   "stores": [
     {
-      "id": "177",
-      "city": "Hamilton Mt.West, ON",
-      "status": "committed",
-      "details": "3 produits"
-    },
-    {
-      "id": "657",
-      "city": "Hanmer, ON",
-      "status": "committed",
-      "details": "0 produits"
-    },
-    {
-      "id": "27",
-      "city": "Dundas, ON",
-      "status": "committed",
-      "details": "5 produits"
-    },
-    {
-      "id": "29",
-      "city": "Dunnville, ON",
-      "status": "committed",
-      "details": "0 produits"
-    },
-    {
-      "id": "42",
-      "city": "Guelph Stone Rd, ON",
-      "status": "committed",
-      "details": "0 produits"
-    },
-    {
-      "id": "31",
-      "city": "Centre Wellington, ON",
-      "status": "committed",
-      "details": "3 produits"
-    },
-    {
-      "id": "260",
-      "city": "Guelph North, ON",
+      "id": "77",
+      "city": "Owen Sound, ON",
       "status": "committed",
       "details": "1 produits"
     },
     {
-      "id": "639",
-      "city": "Ancaster, ON",
+      "id": "244",
+      "city": "Chelmsford, ON",
+      "status": "committed",
+      "details": "0 produits"
+    },
+    {
+      "id": "49",
+      "city": "Caledonia, ON",
+      "status": "committed",
+      "details": "0 produits"
+    },
+    {
+      "id": "168",
+      "city": "Cambridge Hespeler, ON",
+      "status": "committed",
+      "details": "4 produits"
+    },
+    {
+      "id": "36",
+      "city": "Cambridge, ON",
+      "status": "committed",
+      "details": "7 produits"
+    },
+    {
+      "id": "35",
+      "city": "Fredericton, NB",
+      "status": "committed",
+      "details": "1 produits"
+    },
+    {
+      "id": "66",
+      "city": "Mount Forest, ON",
+      "status": "committed",
+      "details": "0 produits"
+    },
+    {
+      "id": "337",
+      "city": "Fredericton North, NB",
       "status": "committed",
       "details": "0 produits"
     }
