@@ -1,29 +1,5 @@
 [
   {
-    "title": "Luge rapide H2O Spider avec direction et freins",
-    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/winter-recreation/0821088/spider-snow-bike-e7a5d494-3744-4104-9151-337a07902637-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 99.99,
-    "salePrice": 39.93,
-    "store": "Canadian Tire",
-    "city": "Grimsby, ON",
-    "branch": "Grimsby, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/luge-rapide-h2o-spider-avec-direction-et-freins-0821088p.html",
-    "sku": "0821088",
-    "availability": "14 En Stock#082-1088-0"
-  },
-  {
-    "title": "Liquide de préparation Evans, 1 gal",
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0293102/evans-prep-fluid-1gal-5e8adf31-ac7c-40e9-9306-c6aa92e46670-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 49.99,
-    "salePrice": 12.93,
-    "store": "Canadian Tire",
-    "city": "Grimsby, ON",
-    "branch": "Grimsby, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/liquide-de-preparation-evans-1-gal-0293102p.html",
-    "sku": "0293102",
-    "availability": "Il n’en reste que 4 #029-3102-4"
-  },
-  {
     "title": "Peinture d'intérieur en aérosol toute surface Rust-Oleum Accents, texture de pierre, 340 g",
     "image": "https://media-www.canadiantire.ca/product/fixing/paint/paints/0482380/stone-spray-paint-black-granite-f8538694-ebde-401f-94c6-57b81bcebc2e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 29.99,
@@ -45,6 +21,6 @@
     "branch": "Grimsby, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/huile-a-usages-multiples-avec-burette-3-en-1-longue-duree-88-ml-0387807p.html",
     "sku": "0387807",
-    "availability": "12 En Stock#038-7807-2"
+    "availability": "8 En Stock#038-7807-2"
   }
 ]
