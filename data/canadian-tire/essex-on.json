@@ -1,17 +1,5 @@
 [
   {
-    "title": "Trousse de départ pour conservation et entreposage d'aliments Fresh & Save de Zwilling avec pompe à dépression portative",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430335/zwilling-food-storage-starter-kit-8pc-ee27a980-a5f6-4ca9-860b-310987524806-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 189.99,
-    "salePrice": 49.93,
-    "store": "Canadian Tire",
-    "city": "Essex, ON",
-    "branch": "Essex, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-depart-pour-conservation-et-entreposage-d-aliments-fresh-save-de-zwilling-avec-pompe-a-depression-portative-0430335p.html",
-    "sku": "0430335",
-    "availability": "Il n’en reste que 1 #043-0335-2"
-  },
-  {
     "title": "Nettoyant nautique pour écran, 230 mL",
     "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790328/marine-display-cleaner-f2601da5-df42-4d33-9177-1be27b9b3298-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 19.99,
@@ -22,5 +10,29 @@
     "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-nautique-pour-ecran-230-ml-0790328p.html",
     "sku": "0790328",
     "availability": "Il n’en reste que 6 #079-0328-6"
+  },
+  {
+    "title": "Lubrifiant de silicone hydrofuge WD-40 Specialist 01079, 311 g",
+    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0381586/wd-40-specialist-silicon-311g-6b7d3300-973d-4011-9787-637986797792-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 15.99,
+    "salePrice": 6.93,
+    "store": "Canadian Tire",
+    "city": "Essex, ON",
+    "branch": "Essex, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/lubrifiant-de-silicone-hydrofuge-wd-40-specialist-01079-311-g-0381586p.html",
+    "sku": "0381586",
+    "availability": "Il n’en reste que 1 #038-1586-2"
+  },
+  {
+    "title": "Scellant pour gouttière/revêtement Rust-Oleum LeakSeal, toutes saisons, réparation de surface, blanc, 300 mL",
+    "image": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641577/leakseal-gutter-and-siding-white-300ml-5dde50d2-eb94-4077-9029-dea17929b073.png?im=whresize&wid=200&hei=200",
+    "price": 20.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Essex, ON",
+    "branch": "Essex, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/scellant-pour-gouttiere-revetement-rust-oleum-leakseal-toutes-saisons-reparation-de-surface-blanc-300-ml-0641577p.html",
+    "sku": "0641577",
+    "availability": "Il n’en reste que 1 #064-1577-0"
   }
 ]
