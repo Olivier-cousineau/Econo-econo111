@@ -31,6 +31,35 @@
   {
     "store_id": "55",
     "city": "Leamington, ON",
+    "name": "Tasses et cuillères à mesurer MASTER Chef en acier inoxydable, paq. 8",
+    "title": "Tasses et cuillères à mesurer MASTER Chef en acier inoxydable, paq. 8",
+    "price": 4.97,
+    "price_raw": "4,97 $",
+    "liquidation": true,
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-tools-thermometers/1429341/masterchef-8-piece-stacking-measuring-cup-and-spoons-set-08f5ccd2-9073-4ef8-9d88-6db4d0858a9e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-tools-thermometers/1429341/masterchef-8-piece-stacking-measuring-cup-and-spoons-set-08f5ccd2-9073-4ef8-9d88-6db4d0858a9e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/tasses-et-cuilleres-a-mesurer-master-chef-en-acier-inoxydable-paq-8-1429341p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/tasses-et-cuilleres-a-mesurer-master-chef-en-acier-inoxydable-paq-8-1429341p.html",
+    "product_id": null,
+    "sku": "1429341",
+    "sku_formatted": "142-9341-6",
+    "availability": "10 En Stock#142-9341-6",
+    "badges": [
+      "Liquidation◊Articles à succès"
+    ],
+    "discount_percent": 50.25,
+    "liquidation_price": 4.97,
+    "liquidation_price_raw": "4,97 $",
+    "sale_price": 4.97,
+    "sale_price_raw": "4,97 $",
+    "regular_price": 9.99,
+    "regular_price_raw": "Était±  9,99 $prix était 9,99 $",
+    "price_sale_clean": "4,97",
+    "price_original_clean": "9,99"
+  },
+  {
+    "store_id": "55",
+    "city": "Leamington, ON",
     "name": "Peinture d'intérieur en aérosol toute surface Rust-Oleum Accents, texture de pierre, 340 g",
     "title": "Peinture d'intérieur en aérosol toute surface Rust-Oleum Accents, texture de pierre, 340 g",
     "price": 14.93,
@@ -85,34 +114,5 @@
     "regular_price_raw": "Était±  19,99 $prix était 19,99 $",
     "price_sale_clean": "9,99",
     "price_original_clean": "19,99"
-  },
-  {
-    "store_id": "55",
-    "city": "Leamington, ON",
-    "name": "Lubrifiant à pellicule sèche antiadhésif DuPont, bouteille à presser, 120 mL (4 oz)",
-    "title": "Lubrifiant à pellicule sèche antiadhésif DuPont, bouteille à presser, 120 mL (4 oz)",
-    "price": 2.93,
-    "price_raw": "2,93 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0387817/dupont-non-stick-4oz-squeeze-486595e9-13b3-42a0-9c33-1d91f9ff2266-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0387817/dupont-non-stick-4oz-squeeze-486595e9-13b3-42a0-9c33-1d91f9ff2266-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/lubrifiant-a-pellicule-seche-antiadhesif-dupont-bouteille-a-presser-120-ml-4-oz-0387817p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/lubrifiant-a-pellicule-seche-antiadhesif-dupont-bouteille-a-presser-120-ml-4-oz-0387817p.html",
-    "product_id": null,
-    "sku": "0387817",
-    "sku_formatted": "038-7817-8",
-    "availability": null,
-    "badges": [
-      "Liquidation◊Mieux notés"
-    ],
-    "discount_percent": 69.13,
-    "liquidation_price": 2.93,
-    "liquidation_price_raw": "2,93 $",
-    "sale_price": 2.93,
-    "sale_price_raw": "2,93 $",
-    "regular_price": 9.49,
-    "regular_price_raw": "Était±  9,49 $prix était 9,49 $",
-    "price_sale_clean": "2,93",
-    "price_original_clean": "9,49"
   }
 ]
