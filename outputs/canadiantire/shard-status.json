@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-01-24T22:15:12.835Z",
+  "generatedAt": "2026-01-25T02:47:34.813Z",
   "stores": [
     {
-      "id": "141",
-      "city": "Exeter, ON",
-      "status": "committed",
-      "details": "0 produits"
-    },
-    {
-      "id": "494",
-      "city": "London Auto Centre, ON",
-      "status": "committed",
-      "details": "0 produits"
-    },
-    {
-      "id": "58",
-      "city": "London South, ON",
+      "id": "92",
+      "city": "St. Thomas, ON",
       "status": "committed",
       "details": "1 produits"
     },
     {
-      "id": "106",
-      "city": "Sussex, NB",
+      "id": "136",
+      "city": "Miramichi, NB",
       "status": "committed",
       "details": "0 produits"
     },
     {
-      "id": "25",
-      "city": "Digby, NS",
-      "status": "committed",
-      "details": "3 produits"
+      "id": "11",
+      "city": "Bathurst, NB",
+      "status": "skipped",
+      "details": "nothing to commit"
     },
     {
-      "id": "125",
-      "city": "Yarmouth, NS",
+      "id": "167",
+      "city": "Elliot Lake, ON",
+      "status": "committed",
+      "details": "2 produits"
+    },
+    {
+      "id": "104",
+      "city": "Strathroy, ON",
       "status": "committed",
       "details": "0 produits"
     },
     {
-      "id": "425",
-      "city": "London North, ON",
+      "id": "32",
+      "city": "Forest, ON",
       "status": "committed",
       "details": "0 produits"
     },
     {
-      "id": "208",
-      "city": "London West, ON",
+      "id": "249",
+      "city": "Moncton Mountain Rd, NB",
+      "status": "skipped",
+      "details": "nothing to commit"
+    },
+    {
+      "id": "463",
+      "city": "Paspebiac, QC",
       "status": "committed",
-      "details": "0 produits"
+      "details": "4 produits"
     }
   ],
   "failedTwice": [],
