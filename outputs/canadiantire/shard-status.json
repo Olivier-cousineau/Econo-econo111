@@ -1,55 +1,60 @@
 {
-  "generatedAt": "2026-01-30T17:48:09.556Z",
+  "generatedAt": "2026-01-30T20:07:58.211Z",
   "stores": [
     {
-      "id": "321",
-      "city": "Dufferin & 407, ON",
+      "id": "237",
+      "city": "Woodbridge, ON",
       "status": "committed",
-      "details": "151 produits"
+      "details": "110 produits"
     },
     {
-      "id": "150",
-      "city": "Toronto, Yonge & Church, ON",
+      "id": "182",
+      "city": "West Toronto (Stockyards), ON",
+      "status": "committed",
+      "details": "66 produits"
+    },
+    {
+      "id": "119",
+      "city": "Weston Road & 401, ON",
+      "status": "committed",
+      "details": "97 produits"
+    },
+    {
+      "id": "137",
+      "city": "Woodstock, NB",
+      "status": "committed",
+      "details": "73 produits"
+    },
+    {
+      "id": "294",
+      "city": "Etobicoke, Albion & Kipling, ON",
       "status": "committed",
       "details": "105 produits"
     },
     {
-      "id": "485",
-      "city": "Dufferin & Finch Auto Ctr, ON",
-      "status": "committed",
-      "details": "18 produits"
+      "id": "242",
+      "city": "Rexdale, ON",
+      "status": "failed_twice",
+      "details": "failed twice – accepted"
     },
     {
-      "id": "600",
-      "city": "Toronto Eaton Centre, ON",
-      "status": "committed",
-      "details": "132 produits"
-    },
-    {
-      "id": "19",
-      "city": "Lawrence & Allen Expwy, ON",
-      "status": "committed",
-      "details": "67 produits"
-    },
-    {
-      "id": "653",
-      "city": "Maple, ON",
+      "id": "1",
+      "city": "Alliston, ON",
       "status": "committed",
       "details": "86 produits"
     },
     {
-      "id": "621",
-      "city": "Liberty Village, ON",
+      "id": "652",
+      "city": "Wasaga Beach, ON",
       "status": "committed",
-      "details": "112 produits"
-    },
-    {
-      "id": "214",
-      "city": "Eglinton & Caledonia, Toronto, ON",
-      "status": "committed",
-      "details": "78 produits"
+      "details": "46 produits"
     }
   ],
-  "failedTwice": [],
+  "failedTwice": [
+    {
+      "id": "242",
+      "city": "Rexdale, ON"
+    }
+  ],
   "retriedAndSucceeded": []
 }
