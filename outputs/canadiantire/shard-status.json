@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-01-30T22:34:34.865Z",
+  "generatedAt": "2026-01-31T00:31:07.777Z",
   "stores": [
     {
-      "id": "197",
-      "city": "Bolton, ON",
+      "id": "145",
+      "city": "St. Catharines S., ON",
       "status": "committed",
-      "details": "67 produits"
+      "details": "58 produits"
     },
     {
-      "id": "219",
-      "city": "Grand Falls, NB",
+      "id": "411",
+      "city": "Brampton Trinity Common, ON",
       "status": "committed",
-      "details": "78 produits"
+      "details": "110 produits"
     },
     {
-      "id": "70",
-      "city": "The Queensway, ON",
+      "id": "346",
+      "city": "Miss.Mavis & Dundas, ON",
       "status": "committed",
-      "details": "112 produits"
+      "details": "104 produits"
     },
     {
-      "id": "152",
-      "city": "Miss. Dixie & Dundas, ON",
+      "id": "108",
+      "city": "Collingwood, ON",
       "status": "committed",
-      "details": "86 produits"
+      "details": "40 produits"
     },
     {
-      "id": "71",
-      "city": "Niagara Falls North, ON",
+      "id": "90",
+      "city": "St. Catharines, ON",
       "status": "committed",
-      "details": "78 produits"
+      "details": "116 produits"
     },
     {
-      "id": "305",
-      "city": "Brampton Bramalea, ON",
+      "id": "320",
+      "city": "Rimouski, QC",
       "status": "committed",
-      "details": "208 produits"
+      "details": "113 produits"
     },
     {
-      "id": "162",
-      "city": "St. Catharines N., ON",
+      "id": "10",
+      "city": "Brampton Shoppers World, ON",
       "status": "committed",
-      "details": "61 produits"
+      "details": "126 produits"
     },
     {
-      "id": "33",
-      "city": "Fort Erie, ON",
+      "id": "497",
+      "city": "Mississauga Heartland, ON",
       "status": "committed",
-      "details": "56 produits"
+      "details": "103 produits"
     }
   ],
   "failedTwice": [],
