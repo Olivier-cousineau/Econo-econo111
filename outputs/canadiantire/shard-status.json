@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-01-31T04:42:12.436Z",
+  "generatedAt": "2026-01-31T05:34:14.242Z",
   "stores": [
     {
-      "id": "241",
-      "city": "Mississauga Southdown, ON",
+      "id": "159",
+      "city": "Georgetown, ON",
       "status": "committed",
-      "details": "102 produits"
+      "details": "47 produits"
     },
     {
-      "id": "675",
-      "city": "Brampton McLaughlin Road, ON",
-      "status": "committed",
-      "details": "152 produits"
-    },
-    {
-      "id": "424",
-      "city": "Oak., Winston Churchill, ON",
-      "status": "committed",
-      "details": "112 produits"
-    },
-    {
-      "id": "233",
-      "city": "La Sarre, QC",
+      "id": "73",
+      "city": "Orangeville, ON",
       "status": "committed",
       "details": "57 produits"
     },
     {
-      "id": "118",
-      "city": "Welland, ON",
+      "id": "128",
+      "city": "Port Colborne, ON",
       "status": "committed",
-      "details": "44 produits"
+      "details": "71 produits"
     },
     {
-      "id": "169",
-      "city": "Meadowvale, ON",
+      "id": "140",
+      "city": "Milton, ON",
       "status": "committed",
-      "details": "59 produits"
+      "details": "42 produits"
     },
     {
-      "id": "429",
-      "city": "Oakville North, ON",
+      "id": "40",
+      "city": "Grimsby, ON",
       "status": "committed",
-      "details": "136 produits"
+      "details": "50 produits"
     },
     {
-      "id": "143",
-      "city": "Oakville, ON",
+      "id": "232",
+      "city": "St. Stephen, NB",
       "status": "committed",
-      "details": "58 produits"
+      "details": "124 produits"
+    },
+    {
+      "id": "52",
+      "city": "Kirkland Lake, ON",
+      "status": "committed",
+      "details": "41 produits"
+    },
+    {
+      "id": "412",
+      "city": "Burlington North, ON",
+      "status": "committed",
+      "details": "94 produits"
     }
   ],
   "failedTwice": [],
