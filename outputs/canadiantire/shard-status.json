@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-01-31T00:31:07.777Z",
+  "generatedAt": "2026-01-31T04:42:12.436Z",
   "stores": [
     {
-      "id": "145",
-      "city": "St. Catharines S., ON",
+      "id": "241",
+      "city": "Mississauga Southdown, ON",
+      "status": "committed",
+      "details": "102 produits"
+    },
+    {
+      "id": "675",
+      "city": "Brampton McLaughlin Road, ON",
+      "status": "committed",
+      "details": "152 produits"
+    },
+    {
+      "id": "424",
+      "city": "Oak., Winston Churchill, ON",
+      "status": "committed",
+      "details": "112 produits"
+    },
+    {
+      "id": "233",
+      "city": "La Sarre, QC",
+      "status": "committed",
+      "details": "57 produits"
+    },
+    {
+      "id": "118",
+      "city": "Welland, ON",
+      "status": "committed",
+      "details": "44 produits"
+    },
+    {
+      "id": "169",
+      "city": "Meadowvale, ON",
+      "status": "committed",
+      "details": "59 produits"
+    },
+    {
+      "id": "429",
+      "city": "Oakville North, ON",
+      "status": "committed",
+      "details": "136 produits"
+    },
+    {
+      "id": "143",
+      "city": "Oakville, ON",
       "status": "committed",
       "details": "58 produits"
-    },
-    {
-      "id": "411",
-      "city": "Brampton Trinity Common, ON",
-      "status": "committed",
-      "details": "110 produits"
-    },
-    {
-      "id": "346",
-      "city": "Miss.Mavis & Dundas, ON",
-      "status": "committed",
-      "details": "104 produits"
-    },
-    {
-      "id": "108",
-      "city": "Collingwood, ON",
-      "status": "committed",
-      "details": "40 produits"
-    },
-    {
-      "id": "90",
-      "city": "St. Catharines, ON",
-      "status": "committed",
-      "details": "116 produits"
-    },
-    {
-      "id": "320",
-      "city": "Rimouski, QC",
-      "status": "committed",
-      "details": "113 produits"
-    },
-    {
-      "id": "10",
-      "city": "Brampton Shoppers World, ON",
-      "status": "committed",
-      "details": "126 produits"
-    },
-    {
-      "id": "497",
-      "city": "Mississauga Heartland, ON",
-      "status": "committed",
-      "details": "103 produits"
     }
   ],
   "failedTwice": [],
