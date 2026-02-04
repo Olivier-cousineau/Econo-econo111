@@ -1,17 +1,53 @@
 {
-  "generatedAt": "2026-02-01T15:11:20.539Z",
+  "generatedAt": "2026-02-04T08:28:35.211Z",
   "stores": [
     {
-      "id": "213",
-      "city": "Port Hawkesbury, NS",
+      "id": "271",
+      "city": "St. Jerome, QC",
       "status": "committed",
-      "details": "73 produits"
+      "details": "287 produits"
     },
     {
-      "id": "451",
-      "city": "Marathon, ON",
+      "id": "649",
+      "city": "Blainville, QC",
       "status": "committed",
-      "details": "47 produits"
+      "details": "104 produits"
+    },
+    {
+      "id": "418",
+      "city": "Rosemere, QC",
+      "status": "committed",
+      "details": "119 produits"
+    },
+    {
+      "id": "641",
+      "city": "La Plaine, QC",
+      "status": "committed",
+      "details": "114 produits"
+    },
+    {
+      "id": "218",
+      "city": "St. Eustache, QC",
+      "status": "committed",
+      "details": "151 produits"
+    },
+    {
+      "id": "690",
+      "city": "Laval Fabreville, QC",
+      "status": "committed",
+      "details": "110 produits"
+    },
+    {
+      "id": "312",
+      "city": "Terrebonne, QC",
+      "status": "committed",
+      "details": "115 produits"
+    },
+    {
+      "id": "231",
+      "city": "Laval Vimont, QC",
+      "status": "committed",
+      "details": "108 produits"
     }
   ],
   "failedTwice": [],
