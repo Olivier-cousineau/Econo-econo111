@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-02-05T18:48:53.227Z",
+  "generatedAt": "2026-02-06T04:11:37.272Z",
   "stores": [
     {
-      "id": "184",
-      "city": "Beauport, QC",
+      "id": "306",
+      "city": "La Malbaie, QC",
       "status": "committed",
-      "details": "84 produits"
+      "details": "119 produits"
     },
     {
-      "id": "173",
-      "city": "St. Georges, QC",
+      "id": "221",
+      "city": "Jonquiere, QC",
       "status": "committed",
-      "details": "78 produits"
+      "details": "153 produits"
     },
     {
-      "id": "694",
-      "city": "Kingston Division St., ON",
+      "id": "268",
+      "city": "Chicoutimi, QC",
       "status": "committed",
-      "details": "169 produits"
+      "details": "99 produits"
     },
     {
-      "id": "195",
-      "city": "Kingston, ON",
+      "id": "335",
+      "city": "La Baie, QC",
       "status": "committed",
-      "details": "126 produits"
+      "details": "95 produits"
     },
     {
-      "id": "417",
-      "city": "Kingston Township, ON",
+      "id": "284",
+      "city": "Dolbeau-Mistassini, QC",
       "status": "committed",
-      "details": "64 produits"
+      "details": "83 produits"
     },
     {
-      "id": "253",
-      "city": "Deep River, ON",
+      "id": "660",
+      "city": "Peterborough North, ON",
       "status": "committed",
-      "details": "35 produits"
+      "details": "27 produits"
     },
     {
-      "id": "65",
-      "city": "Napanee, ON",
+      "id": "81",
+      "city": "Peterborough, ON",
       "status": "committed",
-      "details": "77 produits"
+      "details": "80 produits"
     },
     {
-      "id": "180",
-      "city": "Montmagny, QC",
+      "id": "682",
+      "city": "Minden, ON",
       "status": "committed",
-      "details": "109 produits"
+      "details": "37 produits"
     }
   ],
   "failedTwice": [],
