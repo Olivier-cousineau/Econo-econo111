@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-02-06T05:18:39.649Z",
+  "generatedAt": "2026-02-06T06:30:20.488Z",
   "stores": [
     {
-      "id": "23",
-      "city": "Cobourg, ON",
+      "id": "72",
+      "city": "North Bay, ON",
       "status": "committed",
-      "details": "51 produits"
+      "details": "86 produits"
     },
     {
-      "id": "114",
-      "city": "Val d'Or, QC",
+      "id": "62",
+      "city": "Gravenhurst, ON",
+      "status": "committed",
+      "details": "87 produits"
+    },
+    {
+      "id": "226",
+      "city": "Port Perry, ON",
       "status": "committed",
       "details": "89 produits"
     },
     {
-      "id": "38",
-      "city": "Fenelon Falls, ON",
+      "id": "336",
+      "city": "Oshawa North, ON",
       "status": "committed",
-      "details": "54 produits"
+      "details": "117 produits"
     },
     {
-      "id": "56",
-      "city": "Lindsay, ON",
+      "id": "75",
+      "city": "Oshawa Mid, ON",
       "status": "committed",
-      "details": "115 produits"
+      "details": "76 produits"
     },
     {
-      "id": "323",
-      "city": "Riviere du Loup, QC",
+      "id": "285",
+      "city": "Amos, QC",
       "status": "committed",
       "details": "72 produits"
     },
     {
-      "id": "47",
-      "city": "Huntsville, ON",
+      "id": "460",
+      "city": "Whitby North, ON",
       "status": "committed",
-      "details": "54 produits"
+      "details": "79 produits"
     },
     {
-      "id": "206",
-      "city": "Bracebridge, ON",
+      "id": "187",
+      "city": "Whitby South, ON",
       "status": "committed",
-      "details": "45 produits"
-    },
-    {
-      "id": "170",
-      "city": "Bowmanville, ON",
-      "status": "committed",
-      "details": "91 produits"
+      "details": "80 produits"
     }
   ],
   "failedTwice": [],
