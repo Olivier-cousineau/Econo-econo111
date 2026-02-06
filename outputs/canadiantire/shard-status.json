@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-02-06T12:49:04.104Z",
+  "generatedAt": "2026-02-06T16:14:41.808Z",
   "stores": [
     {
-      "id": "69",
-      "city": "Newmarket, ON",
+      "id": "446",
+      "city": "Bradford, ON",
       "status": "committed",
-      "details": "117 produits"
+      "details": "135 produits"
     },
     {
-      "id": "209",
-      "city": "Kingston Rd, ON",
+      "id": "697",
+      "city": "Richmond Hill North, ON",
       "status": "committed",
-      "details": "100 produits"
+      "details": "120 produits"
     },
     {
-      "id": "164",
-      "city": "Markham, ON",
-      "status": "committed",
-      "details": "140 produits"
-    },
-    {
-      "id": "6",
-      "city": "Barrie, ON",
-      "status": "committed",
-      "details": "119 produits"
-    },
-    {
-      "id": "68",
-      "city": "New Liskeard, ON",
-      "status": "committed",
-      "details": "66 produits"
-    },
-    {
-      "id": "444",
-      "city": "Barrie South, ON",
-      "status": "committed",
-      "details": "113 produits"
-    },
-    {
-      "id": "30",
-      "city": "Warden & Eglinton, ON",
+      "id": "87",
+      "city": "Richmond Hill, ON",
       "status": "committed",
       "details": "106 produits"
     },
     {
-      "id": "61",
-      "city": "Midland, ON",
+      "id": "273",
+      "city": "Toronto Main & Danforth, ON",
       "status": "committed",
-      "details": "106 produits"
+      "details": "72 produits"
+    },
+    {
+      "id": "192",
+      "city": "Sheppard Ave., ON",
+      "status": "committed",
+      "details": "98 produits"
+    },
+    {
+      "id": "126",
+      "city": "Yonge & Steeles, ON",
+      "status": "committed",
+      "details": "200 produits"
+    },
+    {
+      "id": "459",
+      "city": "Eglinton & Laird, ON",
+      "status": "committed",
+      "details": "75 produits"
+    },
+    {
+      "id": "654",
+      "city": "Leslie & Lake Shore, ON",
+      "status": "committed",
+      "details": "109 produits"
     }
   ],
   "failedTwice": [],
