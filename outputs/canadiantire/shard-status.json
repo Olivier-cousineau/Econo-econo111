@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-02-06T16:14:41.808Z",
+  "generatedAt": "2026-02-07T00:12:45.655Z",
   "stores": [
     {
-      "id": "446",
-      "city": "Bradford, ON",
+      "id": "197",
+      "city": "Bolton, ON",
       "status": "committed",
-      "details": "135 produits"
+      "details": "77 produits"
     },
     {
-      "id": "697",
-      "city": "Richmond Hill North, ON",
+      "id": "219",
+      "city": "Grand Falls, NB",
       "status": "committed",
-      "details": "120 produits"
+      "details": "91 produits"
     },
     {
-      "id": "87",
-      "city": "Richmond Hill, ON",
+      "id": "70",
+      "city": "The Queensway, ON",
       "status": "committed",
-      "details": "106 produits"
+      "details": "100 produits"
     },
     {
-      "id": "273",
-      "city": "Toronto Main & Danforth, ON",
-      "status": "committed",
-      "details": "72 produits"
-    },
-    {
-      "id": "192",
-      "city": "Sheppard Ave., ON",
-      "status": "committed",
-      "details": "98 produits"
-    },
-    {
-      "id": "126",
-      "city": "Yonge & Steeles, ON",
-      "status": "committed",
-      "details": "200 produits"
-    },
-    {
-      "id": "459",
-      "city": "Eglinton & Laird, ON",
+      "id": "152",
+      "city": "Miss. Dixie & Dundas, ON",
       "status": "committed",
       "details": "75 produits"
     },
     {
-      "id": "654",
-      "city": "Leslie & Lake Shore, ON",
+      "id": "71",
+      "city": "Niagara Falls North, ON",
       "status": "committed",
-      "details": "109 produits"
+      "details": "122 produits"
+    },
+    {
+      "id": "305",
+      "city": "Brampton Bramalea, ON",
+      "status": "committed",
+      "details": "231 produits"
+    },
+    {
+      "id": "162",
+      "city": "St. Catharines N., ON",
+      "status": "committed",
+      "details": "97 produits"
+    },
+    {
+      "id": "33",
+      "city": "Fort Erie, ON",
+      "status": "committed",
+      "details": "61 produits"
     }
   ],
   "failedTwice": [],
