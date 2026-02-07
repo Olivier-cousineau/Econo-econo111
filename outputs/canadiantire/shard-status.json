@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-02-07T15:45:47.536Z",
+  "generatedAt": "2026-02-07T18:19:16.534Z",
   "stores": [
     {
-      "id": "674",
-      "city": "Waterloo West, ON",
+      "id": "16",
+      "city": "Atholville, NB",
       "status": "committed",
-      "details": "58 produits"
+      "details": "88 produits"
     },
     {
-      "id": "309",
-      "city": "Oromocto, NB",
+      "id": "193",
+      "city": "Delhi, ON",
       "status": "committed",
-      "details": "55 produits"
+      "details": "64 produits"
     },
     {
-      "id": "43",
-      "city": "Paris, ON",
+      "id": "124",
+      "city": "Woodstock, ON",
       "status": "committed",
-      "details": "33 produits"
+      "details": "156 produits"
     },
     {
-      "id": "315",
-      "city": "Matane, QC",
+      "id": "103",
+      "city": "Stratford, ON",
       "status": "committed",
-      "details": "106 produits"
+      "details": "74 produits"
     },
     {
-      "id": "57",
-      "city": "Listowel, ON",
+      "id": "349",
+      "city": "Saint John Fairville, NB",
       "status": "committed",
-      "details": "63 produits"
+      "details": "47 produits"
     },
     {
-      "id": "97",
-      "city": "Simcoe, ON",
+      "id": "254",
+      "city": "Saint John - Westmorland Road, NB",
       "status": "committed",
-      "details": "50 produits"
+      "details": "52 produits"
     },
     {
-      "id": "269",
-      "city": "Port Elgin, ON",
+      "id": "476",
+      "city": "Rothesay, NB",
       "status": "committed",
-      "details": "68 produits"
+      "details": "35 produits"
     },
     {
-      "id": "22",
-      "city": "Espanola, ON",
+      "id": "51",
+      "city": "Kincardine, ON",
       "status": "committed",
-      "details": "44 produits"
+      "details": "78 produits"
     }
   ],
   "failedTwice": [],
