@@ -1,55 +1,60 @@
 {
-  "generatedAt": "2026-02-07T11:33:59.394Z",
+  "generatedAt": "2026-02-07T14:56:09.649Z",
   "stores": [
     {
-      "id": "77",
-      "city": "Owen Sound, ON",
+      "id": "139",
+      "city": "Kitchener East, ON",
       "status": "committed",
-      "details": "128 produits"
+      "details": "154 produits"
     },
     {
-      "id": "244",
-      "city": "Chelmsford, ON",
+      "id": "616",
+      "city": "Elmira, ON",
       "status": "committed",
-      "details": "116 produits"
+      "details": "93 produits"
     },
     {
-      "id": "49",
-      "city": "Caledonia, ON",
+      "id": "53",
+      "city": "Kitchener South, ON",
+      "status": "committed",
+      "details": "133 produits"
+    },
+    {
+      "id": "664",
+      "city": "Brantford North, ON",
+      "status": "committed",
+      "details": "94 produits"
+    },
+    {
+      "id": "265",
+      "city": "Baie-Comeau, QC",
+      "status": "committed",
+      "details": "41 produits"
+    },
+    {
+      "id": "251",
+      "city": "Waterloo, ON",
+      "status": "committed",
+      "details": "115 produits"
+    },
+    {
+      "id": "420",
+      "city": "Kitchener West, ON",
+      "status": "committed",
+      "details": "95 produits (after retry)"
+    },
+    {
+      "id": "46",
+      "city": "Hanover, ON",
       "status": "committed",
       "details": "84 produits"
-    },
-    {
-      "id": "168",
-      "city": "Cambridge Hespeler, ON",
-      "status": "committed",
-      "details": "107 produits"
-    },
-    {
-      "id": "36",
-      "city": "Cambridge, ON",
-      "status": "committed",
-      "details": "153 produits"
-    },
-    {
-      "id": "35",
-      "city": "Fredericton, NB",
-      "status": "committed",
-      "details": "140 produits"
-    },
-    {
-      "id": "66",
-      "city": "Mount Forest, ON",
-      "status": "committed",
-      "details": "88 produits"
-    },
-    {
-      "id": "337",
-      "city": "Fredericton North, NB",
-      "status": "committed",
-      "details": "96 produits"
     }
   ],
   "failedTwice": [],
-  "retriedAndSucceeded": []
+  "retriedAndSucceeded": [
+    {
+      "id": "420",
+      "city": "Kitchener West, ON"
+    }
+  ]
 }
