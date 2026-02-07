@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-02-07T01:30:11.397Z",
+  "generatedAt": "2026-02-07T04:57:22.552Z",
   "stores": [
     {
-      "id": "145",
-      "city": "St. Catharines S., ON",
+      "id": "241",
+      "city": "Mississauga Southdown, ON",
       "status": "committed",
-      "details": "88 produits"
+      "details": "81 produits"
     },
     {
-      "id": "411",
-      "city": "Brampton Trinity Common, ON",
+      "id": "675",
+      "city": "Brampton McLaughlin Road, ON",
       "status": "committed",
-      "details": "90 produits"
+      "details": "198 produits"
     },
     {
-      "id": "346",
-      "city": "Miss.Mavis & Dundas, ON",
+      "id": "424",
+      "city": "Oak., Winston Churchill, ON",
       "status": "committed",
-      "details": "108 produits"
+      "details": "123 produits"
     },
     {
-      "id": "108",
-      "city": "Collingwood, ON",
+      "id": "233",
+      "city": "La Sarre, QC",
       "status": "committed",
-      "details": "46 produits"
+      "details": "98 produits"
     },
     {
-      "id": "90",
-      "city": "St. Catharines, ON",
+      "id": "118",
+      "city": "Welland, ON",
       "status": "committed",
-      "details": "158 produits"
+      "details": "97 produits"
     },
     {
-      "id": "320",
-      "city": "Rimouski, QC",
+      "id": "169",
+      "city": "Meadowvale, ON",
       "status": "committed",
-      "details": "112 produits"
+      "details": "95 produits"
     },
     {
-      "id": "10",
-      "city": "Brampton Shoppers World, ON",
+      "id": "429",
+      "city": "Oakville North, ON",
       "status": "committed",
-      "details": "150 produits"
+      "details": "185 produits"
     },
     {
-      "id": "497",
-      "city": "Mississauga Heartland, ON",
+      "id": "143",
+      "city": "Oakville, ON",
       "status": "committed",
-      "details": "108 produits"
+      "details": "115 produits"
     }
   ],
   "failedTwice": [],
