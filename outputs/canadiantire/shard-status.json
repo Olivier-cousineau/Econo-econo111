@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-02-08T04:52:19.550Z",
+  "generatedAt": "2026-02-08T05:48:30.042Z",
   "stores": [
     {
-      "id": "92",
-      "city": "St. Thomas, ON",
+      "id": "691",
+      "city": "Riverview, NB",
       "status": "committed",
-      "details": "84 produits"
+      "details": "58 produits"
     },
     {
-      "id": "136",
-      "city": "Miramichi, NB",
+      "id": "261",
+      "city": "Greenwood, NS",
       "status": "committed",
-      "details": "81 produits"
+      "details": "39 produits"
     },
     {
-      "id": "11",
-      "city": "Bathurst, NB",
+      "id": "63",
+      "city": "Moncton Dieppe, NB",
       "status": "committed",
-      "details": "25 produits"
+      "details": "60 produits"
     },
     {
-      "id": "167",
-      "city": "Elliot Lake, ON",
+      "id": "491",
+      "city": "Tracadie - Sheila, NB",
       "status": "committed",
-      "details": "30 produits"
+      "details": "63 produits"
     },
     {
-      "id": "104",
-      "city": "Strathroy, ON",
+      "id": "647",
+      "city": "Shediac, NB",
       "status": "committed",
-      "details": "121 produits"
+      "details": "41 produits"
     },
     {
-      "id": "32",
-      "city": "Forest, ON",
+      "id": "94",
+      "city": "Sarnia, ON",
       "status": "committed",
-      "details": "24 produits"
+      "details": "54 produits"
     },
     {
-      "id": "249",
-      "city": "Moncton Mountain Rd, NB",
+      "id": "8",
+      "city": "Blenheim, ON",
       "status": "committed",
-      "details": "66 produits"
+      "details": "67 produits"
     },
     {
-      "id": "463",
-      "city": "Paspebiac, QC",
+      "id": "54",
+      "city": "New Minas, NS",
       "status": "committed",
-      "details": "123 produits"
+      "details": "58 produits"
     }
   ],
   "failedTwice": [],
