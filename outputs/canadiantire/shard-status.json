@@ -1,60 +1,55 @@
 {
-  "generatedAt": "2026-02-08T06:59:43.746Z",
+  "generatedAt": "2026-02-08T08:52:39.593Z",
   "stores": [
     {
-      "id": "178",
-      "city": "Kapuskasing, ON",
+      "id": "456",
+      "city": "Gaspe, QC",
       "status": "committed",
-      "details": "71 produits"
+      "details": "94 produits"
     },
     {
-      "id": "307",
-      "city": "Sept-Iles, QC",
+      "id": "95",
+      "city": "Sault Ste. Marie, ON",
       "status": "committed",
-      "details": "132 produits"
+      "details": "21 produits"
     },
     {
-      "id": "21",
-      "city": "Chatham, ON",
+      "id": "618",
+      "city": "Tantallon, NS",
       "status": "committed",
-      "details": "73 produits"
+      "details": "81 produits"
     },
     {
-      "id": "135",
-      "city": "Wallaceburg, ON",
+      "id": "55",
+      "city": "Leamington, ON",
       "status": "committed",
-      "details": "51 produits (after retry)"
+      "details": "82 produits"
     },
     {
-      "id": "13",
-      "city": "Bridgewater, NS",
+      "id": "199",
+      "city": "Windsor East, ON",
       "status": "committed",
-      "details": "96 produits"
+      "details": "70 produits"
     },
     {
-      "id": "3",
-      "city": "Amherst, NS",
+      "id": "172",
+      "city": "Essex, ON",
       "status": "committed",
-      "details": "26 produits"
+      "details": "85 produits"
     },
     {
-      "id": "215",
-      "city": "Tilbury, ON",
+      "id": "289",
+      "city": "Halifax - Lwr. Sackville, NS",
       "status": "committed",
-      "details": "38 produits"
+      "details": "64 produits"
     },
     {
-      "id": "132",
-      "city": "Summerside, PEI 474 Granville Street",
+      "id": "236",
+      "city": "Windsor South, ON",
       "status": "committed",
-      "details": "39 produits"
+      "details": "82 produits"
     }
   ],
   "failedTwice": [],
-  "retriedAndSucceeded": [
-    {
-      "id": "135",
-      "city": "Wallaceburg, ON"
-    }
-  ]
+  "retriedAndSucceeded": []
 }
