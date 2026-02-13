@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-02-13T04:26:58.037Z",
+  "generatedAt": "2026-02-13T08:25:43.852Z",
   "stores": [
     {
-      "id": "23",
-      "city": "Cobourg, ON",
+      "id": "74",
+      "city": "Orillia, ON",
       "status": "committed",
-      "details": "53 produits"
+      "details": "126 produits"
     },
     {
-      "id": "114",
-      "city": "Val d'Or, QC",
+      "id": "127",
+      "city": "Uxbridge, ON",
       "status": "committed",
-      "details": "83 produits"
+      "details": "86 produits"
     },
     {
-      "id": "38",
-      "city": "Fenelon Falls, ON",
+      "id": "160",
+      "city": "Ajax, ON",
       "status": "committed",
-      "details": "50 produits"
+      "details": "128 produits"
     },
     {
-      "id": "56",
-      "city": "Lindsay, ON",
+      "id": "324",
+      "city": "Pickering, ON",
+      "status": "committed",
+      "details": "186 produits"
+    },
+    {
+      "id": "102",
+      "city": "Sturgeon Falls, ON",
       "status": "committed",
       "details": "82 produits"
     },
     {
-      "id": "323",
-      "city": "Riviere du Loup, QC",
+      "id": "134",
+      "city": "Keswick, ON",
       "status": "committed",
-      "details": "61 produits"
+      "details": "94 produits"
     },
     {
-      "id": "47",
-      "city": "Huntsville, ON",
+      "id": "427",
+      "city": "Scarborough East, ON",
       "status": "committed",
-      "details": "48 produits"
+      "details": "60 produits"
     },
     {
-      "id": "206",
-      "city": "Bracebridge, ON",
+      "id": "280",
+      "city": "Stouffville, ON",
       "status": "committed",
-      "details": "48 produits"
-    },
-    {
-      "id": "170",
-      "city": "Bowmanville, ON",
-      "status": "committed",
-      "details": "97 produits"
+      "details": "77 produits"
     }
   ],
   "failedTwice": [],
