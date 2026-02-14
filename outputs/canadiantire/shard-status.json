@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-02-13T16:10:40.975Z",
+  "generatedAt": "2026-02-14T00:18:35.710Z",
   "stores": [
     {
-      "id": "446",
-      "city": "Bradford, ON",
+      "id": "197",
+      "city": "Bolton, ON",
       "status": "committed",
-      "details": "128 produits"
+      "details": "90 produits"
     },
     {
-      "id": "697",
-      "city": "Richmond Hill North, ON",
+      "id": "219",
+      "city": "Grand Falls, NB",
       "status": "committed",
-      "details": "108 produits"
+      "details": "36 produits"
     },
     {
-      "id": "87",
-      "city": "Richmond Hill, ON",
+      "id": "70",
+      "city": "The Queensway, ON",
       "status": "committed",
-      "details": "95 produits"
+      "details": "166 produits"
     },
     {
-      "id": "273",
-      "city": "Toronto Main & Danforth, ON",
+      "id": "152",
+      "city": "Miss. Dixie & Dundas, ON",
+      "status": "committed",
+      "details": "72 produits"
+    },
+    {
+      "id": "71",
+      "city": "Niagara Falls North, ON",
       "status": "committed",
       "details": "79 produits"
     },
     {
-      "id": "192",
-      "city": "Sheppard Ave., ON",
+      "id": "305",
+      "city": "Brampton Bramalea, ON",
       "status": "committed",
-      "details": "118 produits"
+      "details": "188 produits"
     },
     {
-      "id": "126",
-      "city": "Yonge & Steeles, ON",
+      "id": "162",
+      "city": "St. Catharines N., ON",
       "status": "committed",
-      "details": "151 produits"
+      "details": "69 produits"
     },
     {
-      "id": "459",
-      "city": "Eglinton & Laird, ON",
+      "id": "33",
+      "city": "Fort Erie, ON",
       "status": "committed",
-      "details": "68 produits"
-    },
-    {
-      "id": "654",
-      "city": "Leslie & Lake Shore, ON",
-      "status": "committed",
-      "details": "101 produits"
+      "details": "62 produits"
     }
   ],
   "failedTwice": [],
