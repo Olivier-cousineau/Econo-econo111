@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-02-15T04:36:03.180Z",
+  "generatedAt": "2026-02-15T05:30:11.320Z",
   "stores": [
     {
-      "id": "92",
-      "city": "St. Thomas, ON",
+      "id": "691",
+      "city": "Riverview, NB",
+      "status": "committed",
+      "details": "79 produits"
+    },
+    {
+      "id": "261",
+      "city": "Greenwood, NS",
+      "status": "committed",
+      "details": "35 produits"
+    },
+    {
+      "id": "63",
+      "city": "Moncton Dieppe, NB",
       "status": "committed",
       "details": "67 produits"
     },
     {
-      "id": "136",
-      "city": "Miramichi, NB",
-      "status": "committed",
-      "details": "87 produits"
-    },
-    {
-      "id": "11",
-      "city": "Bathurst, NB",
-      "status": "committed",
-      "details": "49 produits"
-    },
-    {
-      "id": "167",
-      "city": "Elliot Lake, ON",
-      "status": "committed",
-      "details": "24 produits"
-    },
-    {
-      "id": "104",
-      "city": "Strathroy, ON",
-      "status": "committed",
-      "details": "127 produits"
-    },
-    {
-      "id": "32",
-      "city": "Forest, ON",
-      "status": "committed",
-      "details": "29 produits"
-    },
-    {
-      "id": "249",
-      "city": "Moncton Mountain Rd, NB",
+      "id": "491",
+      "city": "Tracadie - Sheila, NB",
       "status": "committed",
       "details": "71 produits"
     },
     {
-      "id": "463",
-      "city": "Paspebiac, QC",
+      "id": "647",
+      "city": "Shediac, NB",
       "status": "committed",
-      "details": "137 produits"
+      "details": "38 produits"
+    },
+    {
+      "id": "94",
+      "city": "Sarnia, ON",
+      "status": "committed",
+      "details": "53 produits"
+    },
+    {
+      "id": "8",
+      "city": "Blenheim, ON",
+      "status": "committed",
+      "details": "77 produits"
+    },
+    {
+      "id": "54",
+      "city": "New Minas, NS",
+      "status": "committed",
+      "details": "71 produits"
     }
   ],
   "failedTwice": [],
