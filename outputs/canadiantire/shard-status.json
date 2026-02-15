@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-02-15T05:30:11.320Z",
+  "generatedAt": "2026-02-15T12:46:21.248Z",
   "stores": [
     {
-      "id": "691",
-      "city": "Riverview, NB",
+      "id": "224",
+      "city": "Halifax - Bedford, NS",
       "status": "committed",
-      "details": "79 produits"
+      "details": "208 produits"
     },
     {
-      "id": "261",
-      "city": "Greenwood, NS",
+      "id": "465",
+      "city": "Halifax - Bayers Lake, NS",
       "status": "committed",
-      "details": "35 produits"
+      "details": "84 produits"
     },
     {
-      "id": "63",
-      "city": "Moncton Dieppe, NB",
+      "id": "121",
+      "city": "Windsor University Plaza, ON",
       "status": "committed",
-      "details": "67 produits"
+      "details": "69 produits"
     },
     {
-      "id": "491",
-      "city": "Tracadie - Sheila, NB",
+      "id": "186",
+      "city": "Halifax - Spryfield, NS",
       "status": "committed",
-      "details": "71 produits"
+      "details": "100 produits"
     },
     {
-      "id": "647",
-      "city": "Shediac, NB",
+      "id": "619",
+      "city": "Elmsdale, NS",
       "status": "committed",
-      "details": "38 produits"
+      "details": "47 produits"
     },
     {
-      "id": "94",
-      "city": "Sarnia, ON",
+      "id": "44",
+      "city": "Halifax, NS",
       "status": "committed",
-      "details": "53 produits"
+      "details": "154 produits"
     },
     {
-      "id": "8",
-      "city": "Blenheim, ON",
+      "id": "41",
+      "city": "Dartmouth Crossing, NS",
       "status": "committed",
-      "details": "77 produits"
+      "details": "56 produits"
     },
     {
-      "id": "54",
-      "city": "New Minas, NS",
+      "id": "436",
+      "city": "Halifax - Cole Harbour, NS",
       "status": "committed",
-      "details": "71 produits"
+      "details": "73 produits"
     }
   ],
   "failedTwice": [],
