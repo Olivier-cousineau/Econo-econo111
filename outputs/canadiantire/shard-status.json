@@ -1,60 +1,64 @@
 {
-  "generatedAt": "2026-02-19T22:12:36.325Z",
+  "generatedAt": "2026-02-19T23:26:54.653Z",
   "stores": [
     {
-      "id": "5",
-      "city": "Bancroft, ON",
+      "id": "306",
+      "city": "La Malbaie, QC",
       "status": "committed",
-      "details": "60 produits"
+      "details": "123 produits"
     },
     {
-      "id": "82",
-      "city": "Picton, ON",
+      "id": "221",
+      "city": "Jonquiere, QC",
       "status": "committed",
-      "details": "87 produits"
+      "details": "172 produits"
     },
     {
-      "id": "7",
-      "city": "Belleville, ON",
+      "id": "268",
+      "city": "Chicoutimi, QC",
+      "status": "committed",
+      "details": "63 produits"
+    },
+    {
+      "id": "335",
+      "city": "La Baie, QC",
       "status": "committed",
       "details": "127 produits"
     },
     {
-      "id": "458",
-      "city": "Roberval, QC",
+      "id": "284",
+      "city": "Dolbeau-Mistassini, QC",
       "status": "committed",
-      "details": "75 produits"
+      "details": "53 produits"
     },
     {
-      "id": "112",
-      "city": "Trenton, ON",
+      "id": "660",
+      "city": "Peterborough North, ON",
       "status": "committed",
-      "details": "51 produits (after retry)"
+      "details": "27 produits"
     },
     {
-      "id": "17",
-      "city": "Campbellford, ON",
-      "status": "committed",
-      "details": "37 produits"
+      "id": "81",
+      "city": "Peterborough, ON",
+      "status": "failed_twice",
+      "details": "failed twice – accepted"
     },
     {
-      "id": "633",
-      "city": "La Pocatiere, QC",
-      "status": "committed",
-      "details": "54 produits"
-    },
-    {
-      "id": "298",
-      "city": "Alma, QC",
-      "status": "committed",
-      "details": "57 produits"
+      "id": "682",
+      "city": "Minden, ON",
+      "status": "failed_twice",
+      "details": "failed twice – accepted"
     }
   ],
-  "failedTwice": [],
-  "retriedAndSucceeded": [
+  "failedTwice": [
     {
-      "id": "112",
-      "city": "Trenton, ON"
+      "id": "81",
+      "city": "Peterborough, ON"
+    },
+    {
+      "id": "682",
+      "city": "Minden, ON"
     }
-  ]
+  ],
+  "retriedAndSucceeded": []
 }
