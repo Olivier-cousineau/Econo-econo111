@@ -1,64 +1,55 @@
 {
-  "generatedAt": "2026-02-19T23:26:54.653Z",
+  "generatedAt": "2026-02-20T04:15:52.358Z",
   "stores": [
     {
-      "id": "306",
-      "city": "La Malbaie, QC",
+      "id": "23",
+      "city": "Cobourg, ON",
       "status": "committed",
-      "details": "123 produits"
+      "details": "54 produits"
     },
     {
-      "id": "221",
-      "city": "Jonquiere, QC",
+      "id": "114",
+      "city": "Val d'Or, QC",
       "status": "committed",
-      "details": "172 produits"
+      "details": "78 produits"
     },
     {
-      "id": "268",
-      "city": "Chicoutimi, QC",
+      "id": "38",
+      "city": "Fenelon Falls, ON",
       "status": "committed",
-      "details": "63 produits"
+      "details": "50 produits"
     },
     {
-      "id": "335",
-      "city": "La Baie, QC",
+      "id": "56",
+      "city": "Lindsay, ON",
       "status": "committed",
-      "details": "127 produits"
+      "details": "88 produits"
     },
     {
-      "id": "284",
-      "city": "Dolbeau-Mistassini, QC",
+      "id": "323",
+      "city": "Riviere du Loup, QC",
       "status": "committed",
-      "details": "53 produits"
+      "details": "45 produits"
     },
     {
-      "id": "660",
-      "city": "Peterborough North, ON",
+      "id": "47",
+      "city": "Huntsville, ON",
       "status": "committed",
-      "details": "27 produits"
+      "details": "52 produits"
     },
     {
-      "id": "81",
-      "city": "Peterborough, ON",
-      "status": "failed_twice",
-      "details": "failed twice – accepted"
+      "id": "206",
+      "city": "Bracebridge, ON",
+      "status": "committed",
+      "details": "50 produits"
     },
     {
-      "id": "682",
-      "city": "Minden, ON",
-      "status": "failed_twice",
-      "details": "failed twice – accepted"
+      "id": "170",
+      "city": "Bowmanville, ON",
+      "status": "committed",
+      "details": "91 produits"
     }
   ],
-  "failedTwice": [
-    {
-      "id": "81",
-      "city": "Peterborough, ON"
-    },
-    {
-      "id": "682",
-      "city": "Minden, ON"
-    }
-  ],
+  "failedTwice": [],
   "retriedAndSucceeded": []
 }
