@@ -1,60 +1,55 @@
 {
-  "generatedAt": "2026-02-20T20:30:32.977Z",
+  "generatedAt": "2026-02-20T22:40:59.490Z",
   "stores": [
     {
-      "id": "237",
-      "city": "Woodbridge, ON",
+      "id": "197",
+      "city": "Bolton, ON",
       "status": "committed",
-      "details": "104 produits"
+      "details": "100 produits"
     },
     {
-      "id": "182",
-      "city": "West Toronto (Stockyards), ON",
+      "id": "219",
+      "city": "Grand Falls, NB",
       "status": "committed",
-      "details": "85 produits"
+      "details": "49 produits"
     },
     {
-      "id": "119",
-      "city": "Weston Road & 401, ON",
+      "id": "70",
+      "city": "The Queensway, ON",
       "status": "committed",
-      "details": "97 produits"
+      "details": "90 produits"
     },
     {
-      "id": "137",
-      "city": "Woodstock, NB",
+      "id": "152",
+      "city": "Miss. Dixie & Dundas, ON",
       "status": "committed",
       "details": "74 produits"
     },
     {
-      "id": "294",
-      "city": "Etobicoke, Albion & Kipling, ON",
+      "id": "71",
+      "city": "Niagara Falls North, ON",
       "status": "committed",
-      "details": "83 produits"
+      "details": "106 produits"
     },
     {
-      "id": "242",
-      "city": "Rexdale, ON",
-      "status": "failed_twice",
-      "details": "failed twice – accepted"
+      "id": "305",
+      "city": "Brampton Bramalea, ON",
+      "status": "committed",
+      "details": "183 produits"
     },
     {
-      "id": "1",
-      "city": "Alliston, ON",
+      "id": "162",
+      "city": "St. Catharines N., ON",
       "status": "committed",
-      "details": "94 produits"
+      "details": "62 produits"
     },
     {
-      "id": "652",
-      "city": "Wasaga Beach, ON",
+      "id": "33",
+      "city": "Fort Erie, ON",
       "status": "committed",
-      "details": "56 produits"
+      "details": "44 produits"
     }
   ],
-  "failedTwice": [
-    {
-      "id": "242",
-      "city": "Rexdale, ON"
-    }
-  ],
+  "failedTwice": [],
   "retriedAndSucceeded": []
 }
