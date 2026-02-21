@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-02-21T05:53:41.511Z",
+  "generatedAt": "2026-02-21T07:15:19.375Z",
   "stores": [
     {
-      "id": "159",
-      "city": "Georgetown, ON",
+      "id": "122",
+      "city": "Burlington Fairview, ON",
       "status": "committed",
-      "details": "58 produits"
+      "details": "125 produits"
     },
     {
-      "id": "73",
-      "city": "Orangeville, ON",
+      "id": "154",
+      "city": "Hamilton East, ON",
       "status": "committed",
-      "details": "88 produits"
+      "details": "144 produits"
     },
     {
-      "id": "128",
-      "city": "Port Colborne, ON",
+      "id": "129",
+      "city": "Hamilton Centre, ON",
       "status": "committed",
-      "details": "73 produits"
+      "details": "140 produits"
     },
     {
-      "id": "140",
-      "city": "Milton, ON",
+      "id": "278",
+      "city": "Sudbury North, ON",
       "status": "committed",
-      "details": "66 produits"
+      "details": "156 produits"
     },
     {
-      "id": "40",
-      "city": "Grimsby, ON",
+      "id": "220",
+      "city": "Waterdown, ON",
       "status": "committed",
-      "details": "56 produits"
+      "details": "79 produits"
     },
     {
-      "id": "232",
-      "city": "St. Stephen, NB",
+      "id": "45",
+      "city": "Hamilton Main, ON",
       "status": "committed",
-      "details": "152 produits"
+      "details": "78 produits"
     },
     {
-      "id": "52",
-      "city": "Kirkland Lake, ON",
+      "id": "194",
+      "city": "Hamilton Mt.East, ON",
       "status": "committed",
-      "details": "49 produits"
+      "details": "110 produits"
     },
     {
-      "id": "412",
-      "city": "Burlington North, ON",
+      "id": "445",
+      "city": "Sudbury South, ON",
       "status": "committed",
-      "details": "76 produits"
+      "details": "60 produits"
     }
   ],
   "failedTwice": [],
