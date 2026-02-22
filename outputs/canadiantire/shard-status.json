@@ -1,55 +1,60 @@
 {
-  "generatedAt": "2026-02-22T11:33:05.019Z",
+  "generatedAt": "2026-02-22T14:38:30.194Z",
   "stores": [
     {
-      "id": "224",
-      "city": "Halifax - Bedford, NS",
+      "id": "113",
+      "city": "Truro, NS",
       "status": "committed",
-      "details": "118 produits"
+      "details": "42 produits"
     },
     {
-      "id": "465",
-      "city": "Halifax - Bayers Lake, NS",
+      "id": "281",
+      "city": "Amherstburg, ON",
       "status": "committed",
-      "details": "70 produits"
+      "details": "84 produits"
     },
     {
-      "id": "121",
-      "city": "Windsor University Plaza, ON",
+      "id": "20",
+      "city": "Charlottetown, PEI 20 Babineau Avenue",
       "status": "committed",
-      "details": "68 produits"
+      "details": "64 produits"
     },
     {
-      "id": "186",
-      "city": "Halifax - Spryfield, NS",
+      "id": "406",
+      "city": "Hearst, ON",
       "status": "committed",
-      "details": "69 produits"
+      "details": "42 produits"
     },
     {
-      "id": "619",
-      "city": "Elmsdale, NS",
+      "id": "279",
+      "city": "Wawa, ON",
       "status": "committed",
-      "details": "46 produits"
+      "details": "30 produits (after retry)"
     },
     {
-      "id": "44",
-      "city": "Halifax, NS",
+      "id": "67",
+      "city": "New Glasgow, NS",
       "status": "committed",
-      "details": "101 produits"
+      "details": "55 produits"
     },
     {
-      "id": "41",
-      "city": "Dartmouth Crossing, NS",
+      "id": "2",
+      "city": "Antigonish, NS",
       "status": "committed",
-      "details": "53 produits"
+      "details": "76 produits"
     },
     {
-      "id": "436",
-      "city": "Halifax - Cole Harbour, NS",
+      "id": "901",
+      "city": "Labrador City, NL",
       "status": "committed",
-      "details": "32 produits"
+      "details": "130 produits"
     }
   ],
   "failedTwice": [],
-  "retriedAndSucceeded": []
+  "retriedAndSucceeded": [
+    {
+      "id": "279",
+      "city": "Wawa, ON"
+    }
+  ]
 }
