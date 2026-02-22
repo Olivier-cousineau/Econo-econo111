@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-02-22T05:21:58.289Z",
+  "generatedAt": "2026-02-22T06:27:42.133Z",
   "stores": [
     {
-      "id": "691",
-      "city": "Riverview, NB",
+      "id": "178",
+      "city": "Kapuskasing, ON",
       "status": "committed",
-      "details": "64 produits"
+      "details": "82 produits"
     },
     {
-      "id": "261",
-      "city": "Greenwood, NS",
+      "id": "307",
+      "city": "Sept-Iles, QC",
       "status": "committed",
-      "details": "39 produits"
+      "details": "89 produits"
     },
     {
-      "id": "63",
-      "city": "Moncton Dieppe, NB",
+      "id": "21",
+      "city": "Chatham, ON",
+      "status": "committed",
+      "details": "65 produits"
+    },
+    {
+      "id": "135",
+      "city": "Wallaceburg, ON",
+      "status": "committed",
+      "details": "57 produits"
+    },
+    {
+      "id": "13",
+      "city": "Bridgewater, NS",
+      "status": "committed",
+      "details": "101 produits"
+    },
+    {
+      "id": "3",
+      "city": "Amherst, NS",
+      "status": "committed",
+      "details": "23 produits"
+    },
+    {
+      "id": "215",
+      "city": "Tilbury, ON",
+      "status": "committed",
+      "details": "28 produits"
+    },
+    {
+      "id": "132",
+      "city": "Summerside, PEI 474 Granville Street",
       "status": "committed",
       "details": "48 produits"
-    },
-    {
-      "id": "491",
-      "city": "Tracadie - Sheila, NB",
-      "status": "committed",
-      "details": "54 produits"
-    },
-    {
-      "id": "647",
-      "city": "Shediac, NB",
-      "status": "committed",
-      "details": "47 produits"
-    },
-    {
-      "id": "94",
-      "city": "Sarnia, ON",
-      "status": "committed",
-      "details": "45 produits"
-    },
-    {
-      "id": "8",
-      "city": "Blenheim, ON",
-      "status": "committed",
-      "details": "51 produits"
-    },
-    {
-      "id": "54",
-      "city": "New Minas, NS",
-      "status": "committed",
-      "details": "54 produits"
     }
   ],
   "failedTwice": [],
