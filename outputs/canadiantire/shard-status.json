@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-02-25T08:42:55.794Z",
+  "generatedAt": "2026-02-26T08:24:32.266Z",
   "stores": [
     {
-      "id": "271",
-      "city": "St. Jerome, QC",
+      "id": "290",
+      "city": "Ottawa Carling Ave, ON",
       "status": "committed",
-      "details": "364 produits"
+      "details": "90 produits"
     },
     {
-      "id": "649",
-      "city": "Blainville, QC",
+      "id": "442",
+      "city": "Barrhaven, ON",
       "status": "committed",
-      "details": "120 produits"
+      "details": "68 produits"
     },
     {
-      "id": "418",
-      "city": "Rosemere, QC",
+      "id": "272",
+      "city": "Ottawa Bells Cnrs, ON",
       "status": "committed",
-      "details": "192 produits"
+      "details": "79 produits"
     },
     {
-      "id": "641",
-      "city": "La Plaine, QC",
+      "id": "227",
+      "city": "Kemptville, ON",
       "status": "committed",
-      "details": "136 produits"
+      "details": "36 produits"
     },
     {
-      "id": "218",
-      "city": "St. Eustache, QC",
+      "id": "240",
+      "city": "Magog, QC",
       "status": "committed",
-      "details": "209 produits"
+      "details": "106 produits"
     },
     {
-      "id": "690",
-      "city": "Laval Fabreville, QC",
+      "id": "457",
+      "city": "Kanata, ON",
       "status": "committed",
-      "details": "129 produits"
+      "details": "49 produits"
     },
     {
-      "id": "312",
-      "city": "Terrebonne, QC",
+      "id": "243",
+      "city": "Victoriaville, QC",
       "status": "committed",
-      "details": "124 produits"
+      "details": "117 produits"
     },
     {
-      "id": "231",
-      "city": "Laval Vimont, QC",
+      "id": "96",
+      "city": "Sherbrooke, QC",
       "status": "committed",
-      "details": "178 produits"
+      "details": "153 produits"
     }
   ],
   "failedTwice": [],
