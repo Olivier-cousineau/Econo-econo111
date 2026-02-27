@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-02-27T08:18:49.983Z",
+  "generatedAt": "2026-02-27T10:21:26.658Z",
   "stores": [
     {
-      "id": "74",
-      "city": "Orillia, ON",
+      "id": "399",
+      "city": "Markham East, ON",
+      "status": "committed",
+      "details": "169 produits"
+    },
+    {
+      "id": "93",
+      "city": "Edmundston, NB",
+      "status": "committed",
+      "details": "150 produits"
+    },
+    {
+      "id": "687",
+      "city": "Innisfil, ON",
+      "status": "committed",
+      "details": "90 produits"
+    },
+    {
+      "id": "175",
+      "city": "Scarborough, ON",
+      "status": "committed",
+      "details": "190 produits"
+    },
+    {
+      "id": "89",
+      "city": "Rouyn, QC",
       "status": "committed",
       "details": "162 produits"
     },
     {
-      "id": "127",
-      "city": "Uxbridge, ON",
+      "id": "78",
+      "city": "Parry Sound, ON",
       "status": "committed",
       "details": "100 produits"
     },
     {
-      "id": "160",
-      "city": "Ajax, ON",
+      "id": "264",
+      "city": "Agincourt, ON",
       "status": "committed",
-      "details": "87 produits"
+      "details": "166 produits"
     },
     {
-      "id": "324",
-      "city": "Pickering, ON",
+      "id": "189",
+      "city": "Aurora, ON",
       "status": "committed",
-      "details": "161 produits"
-    },
-    {
-      "id": "102",
-      "city": "Sturgeon Falls, ON",
-      "status": "committed",
-      "details": "77 produits"
-    },
-    {
-      "id": "134",
-      "city": "Keswick, ON",
-      "status": "committed",
-      "details": "96 produits"
-    },
-    {
-      "id": "427",
-      "city": "Scarborough East, ON",
-      "status": "committed",
-      "details": "89 produits"
-    },
-    {
-      "id": "280",
-      "city": "Stouffville, ON",
-      "status": "committed",
-      "details": "105 produits"
+      "details": "99 produits"
     }
   ],
   "failedTwice": [],
