@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-02-26T23:42:00.283Z",
+  "generatedAt": "2026-02-27T04:11:56.487Z",
   "stores": [
     {
-      "id": "306",
-      "city": "La Malbaie, QC",
+      "id": "23",
+      "city": "Cobourg, ON",
       "status": "committed",
-      "details": "223 produits"
+      "details": "56 produits"
     },
     {
-      "id": "221",
-      "city": "Jonquiere, QC",
+      "id": "114",
+      "city": "Val d'Or, QC",
       "status": "committed",
-      "details": "248 produits"
+      "details": "111 produits"
     },
     {
-      "id": "268",
-      "city": "Chicoutimi, QC",
+      "id": "38",
+      "city": "Fenelon Falls, ON",
       "status": "committed",
-      "details": "132 produits"
+      "details": "78 produits"
     },
     {
-      "id": "335",
-      "city": "La Baie, QC",
+      "id": "56",
+      "city": "Lindsay, ON",
       "status": "committed",
-      "details": "106 produits"
+      "details": "111 produits"
     },
     {
-      "id": "284",
-      "city": "Dolbeau-Mistassini, QC",
+      "id": "323",
+      "city": "Riviere du Loup, QC",
       "status": "committed",
-      "details": "77 produits"
+      "details": "66 produits"
     },
     {
-      "id": "660",
-      "city": "Peterborough North, ON",
+      "id": "47",
+      "city": "Huntsville, ON",
       "status": "committed",
-      "details": "34 produits"
+      "details": "41 produits"
     },
     {
-      "id": "81",
-      "city": "Peterborough, ON",
+      "id": "206",
+      "city": "Bracebridge, ON",
       "status": "committed",
-      "details": "70 produits"
+      "details": "49 produits"
     },
     {
-      "id": "682",
-      "city": "Minden, ON",
+      "id": "170",
+      "city": "Bowmanville, ON",
       "status": "committed",
-      "details": "34 produits"
+      "details": "127 produits"
     }
   ],
   "failedTwice": [],
