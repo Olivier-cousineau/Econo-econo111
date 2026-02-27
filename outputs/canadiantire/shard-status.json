@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-02-27T16:06:23.755Z",
+  "generatedAt": "2026-02-27T17:56:35.690Z",
   "stores": [
     {
-      "id": "446",
-      "city": "Bradford, ON",
+      "id": "321",
+      "city": "Dufferin & 407, ON",
       "status": "committed",
-      "details": "113 produits"
+      "details": "153 produits"
     },
     {
-      "id": "697",
-      "city": "Richmond Hill North, ON",
+      "id": "150",
+      "city": "Toronto, Yonge & Church, ON",
       "status": "committed",
-      "details": "156 produits"
+      "details": "112 produits"
     },
     {
-      "id": "87",
-      "city": "Richmond Hill, ON",
+      "id": "485",
+      "city": "Dufferin & Finch Auto Ctr, ON",
       "status": "committed",
-      "details": "170 produits"
+      "details": "26 produits"
     },
     {
-      "id": "273",
-      "city": "Toronto Main & Danforth, ON",
-      "status": "committed",
-      "details": "57 produits"
-    },
-    {
-      "id": "192",
-      "city": "Sheppard Ave., ON",
+      "id": "600",
+      "city": "Toronto Eaton Centre, ON",
       "status": "committed",
       "details": "114 produits"
     },
     {
-      "id": "126",
-      "city": "Yonge & Steeles, ON",
+      "id": "19",
+      "city": "Lawrence & Allen Expwy, ON",
       "status": "committed",
-      "details": "185 produits"
+      "details": "48 produits"
     },
     {
-      "id": "459",
-      "city": "Eglinton & Laird, ON",
+      "id": "653",
+      "city": "Maple, ON",
       "status": "committed",
-      "details": "95 produits"
+      "details": "84 produits"
     },
     {
-      "id": "654",
-      "city": "Leslie & Lake Shore, ON",
+      "id": "621",
+      "city": "Liberty Village, ON",
       "status": "committed",
-      "details": "159 produits"
+      "details": "157 produits"
+    },
+    {
+      "id": "214",
+      "city": "Eglinton & Caledonia, Toronto, ON",
+      "status": "committed",
+      "details": "92 produits"
     }
   ],
   "failedTwice": [],
