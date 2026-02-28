@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-02-28T09:29:47.760Z",
+  "generatedAt": "2026-02-28T11:28:57.732Z",
   "stores": [
     {
-      "id": "177",
-      "city": "Hamilton Mt.West, ON",
+      "id": "77",
+      "city": "Owen Sound, ON",
       "status": "committed",
-      "details": "104 produits"
+      "details": "130 produits"
     },
     {
-      "id": "657",
-      "city": "Hanmer, ON",
+      "id": "244",
+      "city": "Chelmsford, ON",
       "status": "committed",
-      "details": "52 produits"
+      "details": "118 produits"
     },
     {
-      "id": "27",
-      "city": "Dundas, ON",
+      "id": "49",
+      "city": "Caledonia, ON",
       "status": "committed",
-      "details": "97 produits"
+      "details": "70 produits"
     },
     {
-      "id": "29",
-      "city": "Dunnville, ON",
+      "id": "168",
+      "city": "Cambridge Hespeler, ON",
       "status": "committed",
-      "details": "84 produits"
+      "details": "102 produits"
     },
     {
-      "id": "42",
-      "city": "Guelph Stone Rd, ON",
+      "id": "36",
+      "city": "Cambridge, ON",
       "status": "committed",
-      "details": "81 produits"
+      "details": "116 produits"
     },
     {
-      "id": "31",
-      "city": "Centre Wellington, ON",
+      "id": "35",
+      "city": "Fredericton, NB",
       "status": "committed",
-      "details": "90 produits"
+      "details": "116 produits"
     },
     {
-      "id": "260",
-      "city": "Guelph North, ON",
+      "id": "66",
+      "city": "Mount Forest, ON",
       "status": "committed",
-      "details": "56 produits"
+      "details": "108 produits"
     },
     {
-      "id": "639",
-      "city": "Ancaster, ON",
+      "id": "337",
+      "city": "Fredericton North, NB",
       "status": "committed",
-      "details": "100 produits"
+      "details": "108 produits"
     }
   ],
   "failedTwice": [],
