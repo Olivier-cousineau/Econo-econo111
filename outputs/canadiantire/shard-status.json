@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-02-28T20:49:07.789Z",
+  "generatedAt": "2026-02-28T23:03:34.507Z",
   "stores": [
     {
-      "id": "48",
-      "city": "Ingersoll, ON",
+      "id": "141",
+      "city": "Exeter, ON",
       "status": "committed",
-      "details": "46 produits"
+      "details": "71 produits"
     },
     {
-      "id": "110",
-      "city": "Tillsonburg, ON",
+      "id": "494",
+      "city": "London Auto Centre, ON",
+      "status": "committed",
+      "details": "22 produits"
+    },
+    {
+      "id": "58",
+      "city": "London South, ON",
+      "status": "committed",
+      "details": "136 produits"
+    },
+    {
+      "id": "106",
+      "city": "Sussex, NB",
       "status": "committed",
       "details": "54 produits"
     },
     {
-      "id": "91",
-      "city": "St. Marys, ON",
+      "id": "25",
+      "city": "Digby, NS",
       "status": "committed",
-      "details": "91 produits"
+      "details": "39 produits"
     },
     {
-      "id": "111",
-      "city": "Timmins, ON",
+      "id": "125",
+      "city": "Yarmouth, NS",
       "status": "committed",
-      "details": "182 produits"
+      "details": "46 produits"
     },
     {
-      "id": "24",
-      "city": "Cochrane, ON",
+      "id": "425",
+      "city": "London North, ON",
       "status": "committed",
-      "details": "53 produits"
+      "details": "82 produits"
     },
     {
-      "id": "130",
-      "city": "London East, ON",
+      "id": "208",
+      "city": "London West, ON",
       "status": "committed",
-      "details": "55 produits"
-    },
-    {
-      "id": "142",
-      "city": "Aylmer, ON",
-      "status": "committed",
-      "details": "45 produits"
-    },
-    {
-      "id": "39",
-      "city": "Goderich, ON",
-      "status": "committed",
-      "details": "58 produits"
+      "details": "82 produits"
     }
   ],
   "failedTwice": [],
