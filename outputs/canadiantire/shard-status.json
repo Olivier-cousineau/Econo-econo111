@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-02-28T07:07:50.459Z",
+  "generatedAt": "2026-02-28T09:29:47.760Z",
   "stores": [
     {
-      "id": "122",
-      "city": "Burlington Fairview, ON",
-      "status": "committed",
-      "details": "147 produits"
-    },
-    {
-      "id": "154",
-      "city": "Hamilton East, ON",
-      "status": "committed",
-      "details": "151 produits"
-    },
-    {
-      "id": "129",
-      "city": "Hamilton Centre, ON",
-      "status": "committed",
-      "details": "108 produits"
-    },
-    {
-      "id": "278",
-      "city": "Sudbury North, ON",
-      "status": "committed",
-      "details": "189 produits"
-    },
-    {
-      "id": "220",
-      "city": "Waterdown, ON",
-      "status": "committed",
-      "details": "102 produits"
-    },
-    {
-      "id": "45",
-      "city": "Hamilton Main, ON",
+      "id": "177",
+      "city": "Hamilton Mt.West, ON",
       "status": "committed",
       "details": "104 produits"
     },
     {
-      "id": "194",
-      "city": "Hamilton Mt.East, ON",
+      "id": "657",
+      "city": "Hanmer, ON",
       "status": "committed",
-      "details": "88 produits"
+      "details": "52 produits"
     },
     {
-      "id": "445",
-      "city": "Sudbury South, ON",
+      "id": "27",
+      "city": "Dundas, ON",
       "status": "committed",
-      "details": "83 produits"
+      "details": "97 produits"
+    },
+    {
+      "id": "29",
+      "city": "Dunnville, ON",
+      "status": "committed",
+      "details": "84 produits"
+    },
+    {
+      "id": "42",
+      "city": "Guelph Stone Rd, ON",
+      "status": "committed",
+      "details": "81 produits"
+    },
+    {
+      "id": "31",
+      "city": "Centre Wellington, ON",
+      "status": "committed",
+      "details": "90 produits"
+    },
+    {
+      "id": "260",
+      "city": "Guelph North, ON",
+      "status": "committed",
+      "details": "56 produits"
+    },
+    {
+      "id": "639",
+      "city": "Ancaster, ON",
+      "status": "committed",
+      "details": "100 produits"
     }
   ],
   "failedTwice": [],
