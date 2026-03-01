@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-03-01T06:28:28.549Z",
+  "generatedAt": "2026-03-01T08:46:32.068Z",
   "stores": [
     {
-      "id": "178",
-      "city": "Kapuskasing, ON",
+      "id": "456",
+      "city": "Gaspe, QC",
       "status": "committed",
-      "details": "68 produits"
+      "details": "70 produits"
     },
     {
-      "id": "307",
-      "city": "Sept-Iles, QC",
-      "status": "committed",
-      "details": "88 produits"
-    },
-    {
-      "id": "21",
-      "city": "Chatham, ON",
-      "status": "committed",
-      "details": "58 produits"
-    },
-    {
-      "id": "135",
-      "city": "Wallaceburg, ON",
-      "status": "committed",
-      "details": "78 produits"
-    },
-    {
-      "id": "13",
-      "city": "Bridgewater, NS",
-      "status": "committed",
-      "details": "106 produits"
-    },
-    {
-      "id": "3",
-      "city": "Amherst, NS",
-      "status": "committed",
-      "details": "22 produits"
-    },
-    {
-      "id": "215",
-      "city": "Tilbury, ON",
-      "status": "committed",
-      "details": "34 produits"
-    },
-    {
-      "id": "132",
-      "city": "Summerside, PEI 474 Granville Street",
+      "id": "95",
+      "city": "Sault Ste. Marie, ON",
       "status": "committed",
       "details": "42 produits"
+    },
+    {
+      "id": "618",
+      "city": "Tantallon, NS",
+      "status": "committed",
+      "details": "77 produits"
+    },
+    {
+      "id": "55",
+      "city": "Leamington, ON",
+      "status": "committed",
+      "details": "75 produits"
+    },
+    {
+      "id": "199",
+      "city": "Windsor East, ON",
+      "status": "committed",
+      "details": "92 produits"
+    },
+    {
+      "id": "172",
+      "city": "Essex, ON",
+      "status": "committed",
+      "details": "89 produits"
+    },
+    {
+      "id": "289",
+      "city": "Halifax - Lwr. Sackville, NS",
+      "status": "committed",
+      "details": "54 produits"
+    },
+    {
+      "id": "236",
+      "city": "Windsor South, ON",
+      "status": "committed",
+      "details": "89 produits"
     }
   ],
   "failedTwice": [],
