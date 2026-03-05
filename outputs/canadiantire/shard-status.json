@@ -1,55 +1,60 @@
 {
-  "generatedAt": "2026-03-04T08:26:49.523Z",
+  "generatedAt": "2026-03-05T08:51:30.386Z",
   "stores": [
     {
-      "id": "271",
-      "city": "St. Jerome, QC",
+      "id": "290",
+      "city": "Ottawa Carling Ave, ON",
       "status": "committed",
-      "details": "455 produits"
+      "details": "34 produits (after retry)"
     },
     {
-      "id": "649",
-      "city": "Blainville, QC",
-      "status": "committed",
-      "details": "167 produits"
-    },
-    {
-      "id": "418",
-      "city": "Rosemere, QC",
-      "status": "committed",
-      "details": "162 produits"
-    },
-    {
-      "id": "641",
-      "city": "La Plaine, QC",
-      "status": "committed",
-      "details": "144 produits"
-    },
-    {
-      "id": "218",
-      "city": "St. Eustache, QC",
-      "status": "committed",
-      "details": "267 produits"
-    },
-    {
-      "id": "690",
-      "city": "Laval Fabreville, QC",
-      "status": "committed",
-      "details": "149 produits"
-    },
-    {
-      "id": "312",
-      "city": "Terrebonne, QC",
+      "id": "442",
+      "city": "Barrhaven, ON",
       "status": "committed",
       "details": "101 produits"
     },
     {
-      "id": "231",
-      "city": "Laval Vimont, QC",
+      "id": "272",
+      "city": "Ottawa Bells Cnrs, ON",
       "status": "committed",
-      "details": "147 produits"
+      "details": "110 produits"
+    },
+    {
+      "id": "227",
+      "city": "Kemptville, ON",
+      "status": "committed",
+      "details": "37 produits"
+    },
+    {
+      "id": "240",
+      "city": "Magog, QC",
+      "status": "committed",
+      "details": "76 produits"
+    },
+    {
+      "id": "457",
+      "city": "Kanata, ON",
+      "status": "committed",
+      "details": "34 produits"
+    },
+    {
+      "id": "243",
+      "city": "Victoriaville, QC",
+      "status": "committed",
+      "details": "106 produits"
+    },
+    {
+      "id": "96",
+      "city": "Sherbrooke, QC",
+      "status": "committed",
+      "details": "139 produits"
     }
   ],
   "failedTwice": [],
-  "retriedAndSucceeded": []
+  "retriedAndSucceeded": [
+    {
+      "id": "290",
+      "city": "Ottawa Carling Ave, ON"
+    }
+  ]
 }
