@@ -1,64 +1,55 @@
 {
-  "generatedAt": "2026-03-06T14:15:56.802Z",
+  "generatedAt": "2026-03-06T16:11:33.449Z",
   "stores": [
     {
-      "id": "69",
-      "city": "Newmarket, ON",
+      "id": "446",
+      "city": "Bradford, ON",
       "status": "committed",
-      "details": "127 produits"
+      "details": "62 produits"
     },
     {
-      "id": "209",
-      "city": "Kingston Rd, ON",
+      "id": "697",
+      "city": "Richmond Hill North, ON",
       "status": "committed",
-      "details": "70 produits"
+      "details": "53 produits"
     },
     {
-      "id": "164",
-      "city": "Markham, ON",
+      "id": "87",
+      "city": "Richmond Hill, ON",
       "status": "committed",
-      "details": "63 produits (after retry)"
+      "details": "75 produits"
     },
     {
-      "id": "6",
-      "city": "Barrie, ON",
+      "id": "273",
+      "city": "Toronto Main & Danforth, ON",
       "status": "committed",
-      "details": "105 produits"
+      "details": "30 produits"
     },
     {
-      "id": "68",
-      "city": "New Liskeard, ON",
+      "id": "192",
+      "city": "Sheppard Ave., ON",
       "status": "committed",
-      "details": "35 produits"
+      "details": "46 produits"
     },
     {
-      "id": "444",
-      "city": "Barrie South, ON",
+      "id": "126",
+      "city": "Yonge & Steeles, ON",
       "status": "committed",
-      "details": "73 produits"
+      "details": "96 produits"
     },
     {
-      "id": "30",
-      "city": "Warden & Eglinton, ON",
+      "id": "459",
+      "city": "Eglinton & Laird, ON",
       "status": "committed",
-      "details": "48 produits (after retry)"
+      "details": "39 produits"
     },
     {
-      "id": "61",
-      "city": "Midland, ON",
+      "id": "654",
+      "city": "Leslie & Lake Shore, ON",
       "status": "committed",
-      "details": "80 produits"
+      "details": "86 produits"
     }
   ],
   "failedTwice": [],
-  "retriedAndSucceeded": [
-    {
-      "id": "30",
-      "city": "Warden & Eglinton, ON"
-    },
-    {
-      "id": "164",
-      "city": "Markham, ON"
-    }
-  ]
+  "retriedAndSucceeded": []
 }
