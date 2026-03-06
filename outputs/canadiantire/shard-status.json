@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-03-06T04:16:52.367Z",
+  "generatedAt": "2026-03-06T05:33:08.141Z",
   "stores": [
     {
-      "id": "23",
-      "city": "Cobourg, ON",
-      "status": "committed",
-      "details": "18 produits"
-    },
-    {
-      "id": "114",
-      "city": "Val d'Or, QC",
-      "status": "committed",
-      "details": "69 produits"
-    },
-    {
-      "id": "38",
-      "city": "Fenelon Falls, ON",
-      "status": "committed",
-      "details": "37 produits"
-    },
-    {
-      "id": "56",
-      "city": "Lindsay, ON",
-      "status": "committed",
-      "details": "64 produits"
-    },
-    {
-      "id": "323",
-      "city": "Riviere du Loup, QC",
-      "status": "committed",
-      "details": "31 produits"
-    },
-    {
-      "id": "47",
-      "city": "Huntsville, ON",
-      "status": "committed",
-      "details": "22 produits"
-    },
-    {
-      "id": "206",
-      "city": "Bracebridge, ON",
-      "status": "committed",
-      "details": "16 produits"
-    },
-    {
-      "id": "170",
-      "city": "Bowmanville, ON",
+      "id": "72",
+      "city": "North Bay, ON",
       "status": "committed",
       "details": "40 produits"
+    },
+    {
+      "id": "62",
+      "city": "Gravenhurst, ON",
+      "status": "committed",
+      "details": "70 produits"
+    },
+    {
+      "id": "226",
+      "city": "Port Perry, ON",
+      "status": "committed",
+      "details": "32 produits"
+    },
+    {
+      "id": "336",
+      "city": "Oshawa North, ON",
+      "status": "committed",
+      "details": "60 produits"
+    },
+    {
+      "id": "75",
+      "city": "Oshawa Mid, ON",
+      "status": "committed",
+      "details": "99 produits"
+    },
+    {
+      "id": "285",
+      "city": "Amos, QC",
+      "status": "committed",
+      "details": "63 produits"
+    },
+    {
+      "id": "460",
+      "city": "Whitby North, ON",
+      "status": "committed",
+      "details": "47 produits"
+    },
+    {
+      "id": "187",
+      "city": "Whitby South, ON",
+      "status": "committed",
+      "details": "58 produits"
     }
   ],
   "failedTwice": [],
