@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-03-08T11:34:44.801Z",
+  "generatedAt": "2026-03-08T14:20:43.843Z",
   "stores": [
     {
-      "id": "224",
-      "city": "Halifax - Bedford, NS",
-      "status": "committed",
-      "details": "149 produits"
-    },
-    {
-      "id": "465",
-      "city": "Halifax - Bayers Lake, NS",
-      "status": "committed",
-      "details": "70 produits"
-    },
-    {
-      "id": "121",
-      "city": "Windsor University Plaza, ON",
-      "status": "committed",
-      "details": "77 produits"
-    },
-    {
-      "id": "186",
-      "city": "Halifax - Spryfield, NS",
-      "status": "committed",
-      "details": "109 produits"
-    },
-    {
-      "id": "619",
-      "city": "Elmsdale, NS",
-      "status": "committed",
-      "details": "49 produits"
-    },
-    {
-      "id": "44",
-      "city": "Halifax, NS",
-      "status": "committed",
-      "details": "98 produits"
-    },
-    {
-      "id": "41",
-      "city": "Dartmouth Crossing, NS",
-      "status": "committed",
-      "details": "54 produits"
-    },
-    {
-      "id": "436",
-      "city": "Halifax - Cole Harbour, NS",
+      "id": "113",
+      "city": "Truro, NS",
       "status": "committed",
       "details": "47 produits"
+    },
+    {
+      "id": "281",
+      "city": "Amherstburg, ON",
+      "status": "committed",
+      "details": "86 produits"
+    },
+    {
+      "id": "20",
+      "city": "Charlottetown, PEI 20 Babineau Avenue",
+      "status": "committed",
+      "details": "74 produits"
+    },
+    {
+      "id": "406",
+      "city": "Hearst, ON",
+      "status": "committed",
+      "details": "50 produits"
+    },
+    {
+      "id": "279",
+      "city": "Wawa, ON",
+      "status": "committed",
+      "details": "39 produits"
+    },
+    {
+      "id": "67",
+      "city": "New Glasgow, NS",
+      "status": "committed",
+      "details": "60 produits"
+    },
+    {
+      "id": "2",
+      "city": "Antigonish, NS",
+      "status": "committed",
+      "details": "71 produits"
+    },
+    {
+      "id": "901",
+      "city": "Labrador City, NL",
+      "status": "committed",
+      "details": "104 produits"
     }
   ],
   "failedTwice": [],
