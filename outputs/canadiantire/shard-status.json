@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-03-08T05:19:27.945Z",
+  "generatedAt": "2026-03-08T06:22:02.964Z",
   "stores": [
     {
-      "id": "691",
-      "city": "Riverview, NB",
-      "status": "committed",
-      "details": "58 produits"
-    },
-    {
-      "id": "261",
-      "city": "Greenwood, NS",
-      "status": "committed",
-      "details": "44 produits"
-    },
-    {
-      "id": "63",
-      "city": "Moncton Dieppe, NB",
-      "status": "committed",
-      "details": "63 produits"
-    },
-    {
-      "id": "491",
-      "city": "Tracadie - Sheila, NB",
-      "status": "committed",
-      "details": "56 produits"
-    },
-    {
-      "id": "647",
-      "city": "Shediac, NB",
-      "status": "committed",
-      "details": "45 produits"
-    },
-    {
-      "id": "94",
-      "city": "Sarnia, ON",
-      "status": "committed",
-      "details": "58 produits"
-    },
-    {
-      "id": "8",
-      "city": "Blenheim, ON",
-      "status": "committed",
-      "details": "60 produits"
-    },
-    {
-      "id": "54",
-      "city": "New Minas, NS",
+      "id": "178",
+      "city": "Kapuskasing, ON",
       "status": "committed",
       "details": "70 produits"
+    },
+    {
+      "id": "307",
+      "city": "Sept-Iles, QC",
+      "status": "committed",
+      "details": "90 produits"
+    },
+    {
+      "id": "21",
+      "city": "Chatham, ON",
+      "status": "committed",
+      "details": "82 produits"
+    },
+    {
+      "id": "135",
+      "city": "Wallaceburg, ON",
+      "status": "committed",
+      "details": "49 produits"
+    },
+    {
+      "id": "13",
+      "city": "Bridgewater, NS",
+      "status": "committed",
+      "details": "85 produits"
+    },
+    {
+      "id": "3",
+      "city": "Amherst, NS",
+      "status": "committed",
+      "details": "17 produits"
+    },
+    {
+      "id": "215",
+      "city": "Tilbury, ON",
+      "status": "committed",
+      "details": "29 produits"
+    },
+    {
+      "id": "132",
+      "city": "Summerside, PEI 474 Granville Street",
+      "status": "committed",
+      "details": "53 produits"
     }
   ],
   "failedTwice": [],
