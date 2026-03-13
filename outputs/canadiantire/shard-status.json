@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-03-12T21:53:24.492Z",
+  "generatedAt": "2026-03-13T05:38:41.369Z",
   "stores": [
     {
-      "id": "5",
-      "city": "Bancroft, ON",
+      "id": "72",
+      "city": "North Bay, ON",
       "status": "committed",
-      "details": "50 produits"
+      "details": "61 produits"
     },
     {
-      "id": "82",
-      "city": "Picton, ON",
+      "id": "62",
+      "city": "Gravenhurst, ON",
       "status": "committed",
-      "details": "105 produits"
+      "details": "123 produits"
     },
     {
-      "id": "7",
-      "city": "Belleville, ON",
+      "id": "226",
+      "city": "Port Perry, ON",
       "status": "committed",
-      "details": "194 produits"
+      "details": "78 produits"
     },
     {
-      "id": "458",
-      "city": "Roberval, QC",
+      "id": "336",
+      "city": "Oshawa North, ON",
       "status": "committed",
-      "details": "64 produits"
+      "details": "88 produits"
     },
     {
-      "id": "112",
-      "city": "Trenton, ON",
+      "id": "75",
+      "city": "Oshawa Mid, ON",
       "status": "committed",
-      "details": "60 produits"
+      "details": "82 produits"
     },
     {
-      "id": "17",
-      "city": "Campbellford, ON",
+      "id": "285",
+      "city": "Amos, QC",
       "status": "committed",
-      "details": "28 produits"
+      "details": "56 produits"
     },
     {
-      "id": "633",
-      "city": "La Pocatiere, QC",
+      "id": "460",
+      "city": "Whitby North, ON",
       "status": "committed",
-      "details": "72 produits"
+      "details": "83 produits"
     },
     {
-      "id": "298",
-      "city": "Alma, QC",
+      "id": "187",
+      "city": "Whitby South, ON",
       "status": "committed",
-      "details": "76 produits"
+      "details": "89 produits"
     }
   ],
   "failedTwice": [],
