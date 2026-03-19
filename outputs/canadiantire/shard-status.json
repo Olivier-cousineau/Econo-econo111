@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-03-19T12:29:41.947Z",
+  "generatedAt": "2026-03-19T15:27:57.058Z",
   "stores": [
     {
-      "id": "423",
-      "city": "Donnacona, QC",
+      "id": "342",
+      "city": "Quebec Les Saules, QC",
       "status": "committed",
-      "details": "57 produits"
+      "details": "48 produits"
     },
     {
-      "id": "80",
-      "city": "Perth, ON",
+      "id": "245",
+      "city": "Quebec Ste. Foy, QC",
       "status": "committed",
-      "details": "43 produits"
+      "details": "35 produits"
     },
     {
-      "id": "352",
-      "city": "La Tuque, QC",
+      "id": "79",
+      "city": "Pembroke, ON",
       "status": "committed",
-      "details": "91 produits"
+      "details": "31 produits"
     },
     {
-      "id": "86",
-      "city": "Renfrew, ON",
+      "id": "405",
+      "city": "Lebourgneuf, QC",
       "status": "committed",
-      "details": "125 produits"
+      "details": "67 produits"
     },
     {
-      "id": "156",
-      "city": "Thetford Mines, QC",
+      "id": "101",
+      "city": "Quebec Vanier, QC",
       "status": "committed",
-      "details": "117 produits"
+      "details": "42 produits"
     },
     {
-      "id": "692",
-      "city": "Ancienne Lorette, QC",
+      "id": "416",
+      "city": "Ste. Marie De Beauce, QC",
       "status": "committed",
-      "details": "68 produits"
+      "details": "7 produits"
     },
     {
-      "id": "37",
-      "city": "Gananoque, ON",
+      "id": "225",
+      "city": "Lac Megantic, QC",
       "status": "committed",
-      "details": "44 produits"
+      "details": "24 produits"
     },
     {
-      "id": "624",
-      "city": "St. Romuald, QC",
+      "id": "165",
+      "city": "Levis, QC",
       "status": "committed",
-      "details": "33 produits"
+      "details": "8 produits"
     }
   ],
   "failedTwice": [],
