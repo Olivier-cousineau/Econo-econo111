@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-03-19T18:29:52.754Z",
+  "generatedAt": "2026-03-19T21:39:58.043Z",
   "stores": [
     {
-      "id": "184",
-      "city": "Beauport, QC",
+      "id": "5",
+      "city": "Bancroft, ON",
       "status": "committed",
-      "details": "200 produits"
+      "details": "194 produits"
     },
     {
-      "id": "173",
-      "city": "St. Georges, QC",
-      "status": "committed",
-      "details": "137 produits"
-    },
-    {
-      "id": "694",
-      "city": "Kingston Division St., ON",
-      "status": "committed",
-      "details": "328 produits"
-    },
-    {
-      "id": "195",
-      "city": "Kingston, ON",
-      "status": "committed",
-      "details": "106 produits"
-    },
-    {
-      "id": "417",
-      "city": "Kingston Township, ON",
-      "status": "committed",
-      "details": "196 produits"
-    },
-    {
-      "id": "253",
-      "city": "Deep River, ON",
-      "status": "committed",
-      "details": "35 produits"
-    },
-    {
-      "id": "65",
-      "city": "Napanee, ON",
+      "id": "82",
+      "city": "Picton, ON",
       "status": "committed",
       "details": "296 produits"
     },
     {
-      "id": "180",
-      "city": "Montmagny, QC",
+      "id": "7",
+      "city": "Belleville, ON",
       "status": "committed",
-      "details": "250 produits"
+      "details": "626 produits"
+    },
+    {
+      "id": "458",
+      "city": "Roberval, QC",
+      "status": "committed",
+      "details": "90 produits"
+    },
+    {
+      "id": "112",
+      "city": "Trenton, ON",
+      "status": "committed",
+      "details": "170 produits"
+    },
+    {
+      "id": "17",
+      "city": "Campbellford, ON",
+      "status": "committed",
+      "details": "13 produits"
+    },
+    {
+      "id": "633",
+      "city": "La Pocatiere, QC",
+      "status": "committed",
+      "details": "214 produits"
+    },
+    {
+      "id": "298",
+      "city": "Alma, QC",
+      "status": "committed",
+      "details": "132 produits"
     }
   ],
   "failedTwice": [],
