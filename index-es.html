@@ -1077,7 +1077,7 @@
       const explicit = [globalBase, htmlBase, bodyBase, metaBase].find(value => typeof value === 'string' && value.trim());
       if(explicit) return explicit.trim().replace(/\/+$/, '');
       const host = window.location?.hostname || '';
-      if(host.endsWith('.vercel.app')) return DEFAULT_REMOTE_DATA_BASE;
+      if(host.endsWith('.vercel.app')) return window.location?.origin || '';
       return '';
     }
 
