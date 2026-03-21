@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-03-21T07:01:28.740Z",
+  "generatedAt": "2026-03-21T09:11:00.155Z",
   "stores": [
     {
-      "id": "122",
-      "city": "Burlington Fairview, ON",
+      "id": "177",
+      "city": "Hamilton Mt.West, ON",
+      "status": "committed",
+      "details": "93 produits"
+    },
+    {
+      "id": "657",
+      "city": "Hanmer, ON",
+      "status": "committed",
+      "details": "96 produits"
+    },
+    {
+      "id": "27",
+      "city": "Dundas, ON",
+      "status": "committed",
+      "details": "108 produits"
+    },
+    {
+      "id": "29",
+      "city": "Dunnville, ON",
+      "status": "committed",
+      "details": "94 produits"
+    },
+    {
+      "id": "42",
+      "city": "Guelph Stone Rd, ON",
+      "status": "committed",
+      "details": "187 produits"
+    },
+    {
+      "id": "31",
+      "city": "Centre Wellington, ON",
+      "status": "committed",
+      "details": "253 produits"
+    },
+    {
+      "id": "260",
+      "city": "Guelph North, ON",
+      "status": "committed",
+      "details": "162 produits"
+    },
+    {
+      "id": "639",
+      "city": "Ancaster, ON",
       "status": "committed",
       "details": "304 produits"
-    },
-    {
-      "id": "154",
-      "city": "Hamilton East, ON",
-      "status": "committed",
-      "details": "241 produits"
-    },
-    {
-      "id": "129",
-      "city": "Hamilton Centre, ON",
-      "status": "committed",
-      "details": "243 produits"
-    },
-    {
-      "id": "278",
-      "city": "Sudbury North, ON",
-      "status": "committed",
-      "details": "413 produits"
-    },
-    {
-      "id": "220",
-      "city": "Waterdown, ON",
-      "status": "committed",
-      "details": "156 produits"
-    },
-    {
-      "id": "45",
-      "city": "Hamilton Main, ON",
-      "status": "committed",
-      "details": "179 produits"
-    },
-    {
-      "id": "194",
-      "city": "Hamilton Mt.East, ON",
-      "status": "committed",
-      "details": "197 produits"
-    },
-    {
-      "id": "445",
-      "city": "Sudbury South, ON",
-      "status": "committed",
-      "details": "151 produits"
     }
   ],
   "failedTwice": [],
