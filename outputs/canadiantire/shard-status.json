@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-03-21T18:08:28.067Z",
+  "generatedAt": "2026-03-21T20:43:56.859Z",
   "stores": [
     {
-      "id": "16",
-      "city": "Atholville, NB",
+      "id": "48",
+      "city": "Ingersoll, ON",
       "status": "committed",
-      "details": "154 produits"
+      "details": "78 produits"
     },
     {
-      "id": "193",
-      "city": "Delhi, ON",
+      "id": "110",
+      "city": "Tillsonburg, ON",
       "status": "committed",
-      "details": "74 produits"
+      "details": "110 produits"
     },
     {
-      "id": "124",
-      "city": "Woodstock, ON",
+      "id": "91",
+      "city": "St. Marys, ON",
       "status": "committed",
-      "details": "334 produits"
+      "details": "104 produits"
     },
     {
-      "id": "103",
-      "city": "Stratford, ON",
+      "id": "111",
+      "city": "Timmins, ON",
       "status": "committed",
-      "details": "159 produits"
+      "details": "465 produits"
     },
     {
-      "id": "349",
-      "city": "Saint John Fairville, NB",
+      "id": "24",
+      "city": "Cochrane, ON",
       "status": "committed",
-      "details": "120 produits"
+      "details": "110 produits"
     },
     {
-      "id": "254",
-      "city": "Saint John - Westmorland Road, NB",
+      "id": "130",
+      "city": "London East, ON",
       "status": "committed",
-      "details": "106 produits"
+      "details": "147 produits"
     },
     {
-      "id": "476",
-      "city": "Rothesay, NB",
+      "id": "142",
+      "city": "Aylmer, ON",
       "status": "committed",
-      "details": "47 produits"
+      "details": "165 produits"
     },
     {
-      "id": "51",
-      "city": "Kincardine, ON",
+      "id": "39",
+      "city": "Goderich, ON",
       "status": "committed",
-      "details": "170 produits"
+      "details": "148 produits"
     }
   ],
   "failedTwice": [],
