@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-03-22T05:59:37.407Z",
+  "generatedAt": "2026-03-22T08:40:35.315Z",
   "stores": [
     {
-      "id": "178",
-      "city": "Kapuskasing, ON",
+      "id": "456",
+      "city": "Gaspe, QC",
       "status": "committed",
-      "details": "103 produits"
+      "details": "256 produits"
     },
     {
-      "id": "307",
-      "city": "Sept-Iles, QC",
-      "status": "committed",
-      "details": "85 produits"
-    },
-    {
-      "id": "21",
-      "city": "Chatham, ON",
-      "status": "committed",
-      "details": "139 produits"
-    },
-    {
-      "id": "135",
-      "city": "Wallaceburg, ON",
-      "status": "committed",
-      "details": "92 produits"
-    },
-    {
-      "id": "13",
-      "city": "Bridgewater, NS",
-      "status": "committed",
-      "details": "243 produits"
-    },
-    {
-      "id": "3",
-      "city": "Amherst, NS",
-      "status": "committed",
-      "details": "22 produits"
-    },
-    {
-      "id": "215",
-      "city": "Tilbury, ON",
+      "id": "95",
+      "city": "Sault Ste. Marie, ON",
       "status": "committed",
       "details": "61 produits"
     },
     {
-      "id": "132",
-      "city": "Summerside, PEI 474 Granville Street",
+      "id": "618",
+      "city": "Tantallon, NS",
       "status": "committed",
-      "details": "87 produits"
+      "details": "166 produits"
+    },
+    {
+      "id": "55",
+      "city": "Leamington, ON",
+      "status": "committed",
+      "details": "200 produits"
+    },
+    {
+      "id": "199",
+      "city": "Windsor East, ON",
+      "status": "committed",
+      "details": "230 produits"
+    },
+    {
+      "id": "172",
+      "city": "Essex, ON",
+      "status": "committed",
+      "details": "234 produits"
+    },
+    {
+      "id": "289",
+      "city": "Halifax - Lwr. Sackville, NS",
+      "status": "committed",
+      "details": "210 produits"
+    },
+    {
+      "id": "236",
+      "city": "Windsor South, ON",
+      "status": "committed",
+      "details": "335 produits"
     }
   ],
   "failedTwice": [],
