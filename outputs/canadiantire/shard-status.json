@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-03-22T11:12:00.325Z",
+  "generatedAt": "2026-03-22T13:47:22.935Z",
   "stores": [
     {
-      "id": "224",
-      "city": "Halifax - Bedford, NS",
+      "id": "113",
+      "city": "Truro, NS",
       "status": "committed",
-      "details": "188 produits"
+      "details": "60 produits"
     },
     {
-      "id": "465",
-      "city": "Halifax - Bayers Lake, NS",
+      "id": "281",
+      "city": "Amherstburg, ON",
       "status": "committed",
-      "details": "174 produits"
+      "details": "197 produits"
     },
     {
-      "id": "121",
-      "city": "Windsor University Plaza, ON",
+      "id": "20",
+      "city": "Charlottetown, PEI 20 Babineau Avenue",
       "status": "committed",
-      "details": "89 produits"
+      "details": "152 produits"
     },
     {
-      "id": "186",
-      "city": "Halifax - Spryfield, NS",
+      "id": "406",
+      "city": "Hearst, ON",
       "status": "committed",
-      "details": "179 produits"
+      "details": "102 produits"
     },
     {
-      "id": "619",
-      "city": "Elmsdale, NS",
+      "id": "279",
+      "city": "Wawa, ON",
       "status": "committed",
-      "details": "121 produits"
+      "details": "96 produits"
     },
     {
-      "id": "44",
-      "city": "Halifax, NS",
+      "id": "67",
+      "city": "New Glasgow, NS",
       "status": "committed",
-      "details": "421 produits"
+      "details": "181 produits"
     },
     {
-      "id": "41",
-      "city": "Dartmouth Crossing, NS",
+      "id": "2",
+      "city": "Antigonish, NS",
       "status": "committed",
-      "details": "154 produits"
+      "details": "238 produits"
     },
     {
-      "id": "436",
-      "city": "Halifax - Cole Harbour, NS",
+      "id": "901",
+      "city": "Labrador City, NL",
       "status": "committed",
-      "details": "71 produits"
+      "details": "239 produits"
     }
   ],
   "failedTwice": [],
