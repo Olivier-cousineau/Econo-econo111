@@ -1,60 +1,64 @@
 {
-  "generatedAt": "2026-03-25T08:54:16.121Z",
+  "generatedAt": "2026-03-26T08:51:26.862Z",
   "stores": [
     {
-      "id": "271",
-      "city": "St. Jerome, QC",
+      "id": "290",
+      "city": "Ottawa Carling Ave, ON",
       "status": "committed",
-      "details": "328 produits"
+      "details": "40 produits (after retry)"
     },
     {
-      "id": "649",
-      "city": "Blainville, QC",
+      "id": "442",
+      "city": "Barrhaven, ON",
       "status": "committed",
-      "details": "67 produits"
+      "details": "40 produits"
     },
     {
-      "id": "418",
-      "city": "Rosemere, QC",
+      "id": "272",
+      "city": "Ottawa Bells Cnrs, ON",
       "status": "committed",
-      "details": "119 produits"
+      "details": "59 produits"
     },
     {
-      "id": "641",
-      "city": "La Plaine, QC",
+      "id": "227",
+      "city": "Kemptville, ON",
       "status": "committed",
-      "details": "77 produits (after retry)"
+      "details": "49 produits"
     },
     {
-      "id": "218",
-      "city": "St. Eustache, QC",
+      "id": "240",
+      "city": "Magog, QC",
       "status": "committed",
-      "details": "189 produits"
+      "details": "56 produits"
     },
     {
-      "id": "690",
-      "city": "Laval Fabreville, QC",
+      "id": "457",
+      "city": "Kanata, ON",
       "status": "committed",
-      "details": "115 produits"
+      "details": "10 produits (after retry)"
     },
     {
-      "id": "312",
-      "city": "Terrebonne, QC",
+      "id": "243",
+      "city": "Victoriaville, QC",
       "status": "committed",
-      "details": "93 produits"
+      "details": "61 produits"
     },
     {
-      "id": "231",
-      "city": "Laval Vimont, QC",
+      "id": "96",
+      "city": "Sherbrooke, QC",
       "status": "committed",
-      "details": "65 produits"
+      "details": "102 produits"
     }
   ],
   "failedTwice": [],
   "retriedAndSucceeded": [
     {
-      "id": "641",
-      "city": "La Plaine, QC"
+      "id": "290",
+      "city": "Ottawa Carling Ave, ON"
+    },
+    {
+      "id": "457",
+      "city": "Kanata, ON"
     }
   ]
 }
