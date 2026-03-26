@@ -1,64 +1,55 @@
 {
-  "generatedAt": "2026-03-26T08:51:26.862Z",
+  "generatedAt": "2026-03-26T09:56:16.364Z",
   "stores": [
     {
-      "id": "290",
-      "city": "Ottawa Carling Ave, ON",
+      "id": "196",
+      "city": "Maniwaki, QC",
       "status": "committed",
-      "details": "40 produits (after retry)"
+      "details": "134 produits"
     },
     {
-      "id": "442",
-      "city": "Barrhaven, ON",
+      "id": "85",
+      "city": "Prescott, ON",
+      "status": "committed",
+      "details": "100 produits"
+    },
+    {
+      "id": "348",
+      "city": "Sherbrooke Fleurimont, QC",
+      "status": "committed",
+      "details": "115 produits"
+    },
+    {
+      "id": "18",
+      "city": "Carleton Place, ON",
+      "status": "committed",
+      "details": "70 produits"
+    },
+    {
+      "id": "14",
+      "city": "Brockville, ON",
+      "status": "committed",
+      "details": "74 produits"
+    },
+    {
+      "id": "98",
+      "city": "Smiths Falls, ON",
+      "status": "committed",
+      "details": "46 produits"
+    },
+    {
+      "id": "4",
+      "city": "Arnprior, ON",
+      "status": "committed",
+      "details": "55 produits"
+    },
+    {
+      "id": "99",
+      "city": "Shawville, QC",
       "status": "committed",
       "details": "40 produits"
-    },
-    {
-      "id": "272",
-      "city": "Ottawa Bells Cnrs, ON",
-      "status": "committed",
-      "details": "59 produits"
-    },
-    {
-      "id": "227",
-      "city": "Kemptville, ON",
-      "status": "committed",
-      "details": "49 produits"
-    },
-    {
-      "id": "240",
-      "city": "Magog, QC",
-      "status": "committed",
-      "details": "56 produits"
-    },
-    {
-      "id": "457",
-      "city": "Kanata, ON",
-      "status": "committed",
-      "details": "10 produits (after retry)"
-    },
-    {
-      "id": "243",
-      "city": "Victoriaville, QC",
-      "status": "committed",
-      "details": "61 produits"
-    },
-    {
-      "id": "96",
-      "city": "Sherbrooke, QC",
-      "status": "committed",
-      "details": "102 produits"
     }
   ],
   "failedTwice": [],
-  "retriedAndSucceeded": [
-    {
-      "id": "290",
-      "city": "Ottawa Carling Ave, ON"
-    },
-    {
-      "id": "457",
-      "city": "Kanata, ON"
-    }
-  ]
+  "retriedAndSucceeded": []
 }
