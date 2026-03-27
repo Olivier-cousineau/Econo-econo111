@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-03-27T15:49:49.753Z",
+  "generatedAt": "2026-03-27T17:34:18.285Z",
   "stores": [
     {
-      "id": "446",
-      "city": "Bradford, ON",
+      "id": "321",
+      "city": "Dufferin & 407, ON",
       "status": "committed",
-      "details": "93 produits"
+      "details": "148 produits"
     },
     {
-      "id": "697",
-      "city": "Richmond Hill North, ON",
+      "id": "150",
+      "city": "Toronto, Yonge & Church, ON",
+      "status": "committed",
+      "details": "100 produits"
+    },
+    {
+      "id": "485",
+      "city": "Dufferin & Finch Auto Ctr, ON",
+      "status": "committed",
+      "details": "43 produits"
+    },
+    {
+      "id": "600",
+      "city": "Toronto Eaton Centre, ON",
       "status": "committed",
       "details": "96 produits"
     },
     {
-      "id": "87",
-      "city": "Richmond Hill, ON",
+      "id": "19",
+      "city": "Lawrence & Allen Expwy, ON",
+      "status": "committed",
+      "details": "54 produits"
+    },
+    {
+      "id": "653",
+      "city": "Maple, ON",
+      "status": "committed",
+      "details": "99 produits"
+    },
+    {
+      "id": "621",
+      "city": "Liberty Village, ON",
       "status": "committed",
       "details": "122 produits"
     },
     {
-      "id": "273",
-      "city": "Toronto Main & Danforth, ON",
+      "id": "214",
+      "city": "Eglinton & Caledonia, Toronto, ON",
       "status": "committed",
-      "details": "71 produits"
-    },
-    {
-      "id": "192",
-      "city": "Sheppard Ave., ON",
-      "status": "committed",
-      "details": "88 produits"
-    },
-    {
-      "id": "126",
-      "city": "Yonge & Steeles, ON",
-      "status": "committed",
-      "details": "127 produits"
-    },
-    {
-      "id": "459",
-      "city": "Eglinton & Laird, ON",
-      "status": "committed",
-      "details": "58 produits"
-    },
-    {
-      "id": "654",
-      "city": "Leslie & Lake Shore, ON",
-      "status": "committed",
-      "details": "97 produits"
+      "details": "102 produits"
     }
   ],
   "failedTwice": [],
