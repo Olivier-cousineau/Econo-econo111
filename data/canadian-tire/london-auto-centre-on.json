@@ -1,41 +1,5 @@
 [
   {
-    "title": "Liquide de transmission automatique OEM à faible viscosité pour véhicules multiples, Euro, 946 mL",
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0281596/oem-euro-atf-mv-946ml-964921f3-866a-483f-9bc3-4f6f23af7a17-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 23.99,
-    "salePrice": 9.93,
-    "store": "Canadian Tire",
-    "city": "London Auto Centre, ON",
-    "branch": "London Auto Centre, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/liquide-de-transmission-automatique-oem-a-faible-viscosite-pour-vehicules-multiples-euro-946-ml-0281596p.html",
-    "sku": "0281596",
-    "availability": "Il n’en reste que 4 #028-1596-2"
-  },
-  {
-    "title": "Chaises de salle à manger rembourrées tête de clou avec pattes en bois massif CANVAS Regent, paq. 2, gris",
-    "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/1680087/canvas-regent-chair-2-pack-d7669315-d5c9-4944-9fa5-af38fa9fb225-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 189.99,
-    "salePrice": 69.93,
-    "store": "Canadian Tire",
-    "city": "London Auto Centre, ON",
-    "branch": "London Auto Centre, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/chaises-de-salle-a-manger-rembourrees-tete-de-clou-avec-pattes-en-bois-massif-canvas-regent-paq-2-gris-1680087p.html",
-    "sku": "1680087",
-    "availability": "Il n’en reste que 1 #168-0087-6"
-  },
-  {
-    "title": "Tabouret de bar réglable FOR LIVING avec dossier incurvé, noir",
-    "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/1680124/for-living-adjustable-bar-stool-a5255c71-f960-41f9-a8f1-6cdbaf086b0c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 199.99,
-    "salePrice": 79.93,
-    "store": "Canadian Tire",
-    "city": "London Auto Centre, ON",
-    "branch": "London Auto Centre, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/tabouret-de-bar-reglable-for-living-avec-dossier-incurve-noir-1680124p.html",
-    "sku": "1680124",
-    "availability": "Il n’en reste que 3 #168-0124-8"
-  },
-  {
     "title": "Friteuse à air chaud à deux zones T-Fal Easy Fry, 8,3 L/8,7 ptes",
     "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430340/t-fal-dual-zone-air-fryer-f30f9c50-9b02-4977-a8b9-2e9b9249a74e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 199.99,
@@ -57,7 +21,7 @@
     "branch": "London Auto Centre, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/affute-couteaux-a-3-etapes-master-chef-2421029p.html",
     "sku": "2421029",
-    "availability": "40 En Stock#242-1029-2"
+    "availability": "38 En Stock#242-1029-2"
   },
   {
     "title": "Bloc à couteaux Global Jouzu, paq. 5",
@@ -72,18 +36,6 @@
     "availability": "Il n’en reste que 1 #242-5201-6"
   },
   {
-    "title": "Écouteurs-bouton vraiment sans fil sport Bluehive Bluepods, noir",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-electronics/0358089/bluehive-bluepods-sport-true-wireless-earbuds-black-1c54ce42-6fbe-4f4b-8a11-3a24c5470b0e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 69.99,
-    "salePrice": 17.93,
-    "store": "Canadian Tire",
-    "city": "London Auto Centre, ON",
-    "branch": "London Auto Centre, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/ecouteurs-bouton-vraiment-sans-fil-sport-bluehive-bluepods-noir-0358089p.html",
-    "sku": "0358089",
-    "availability": "Il n’en reste que 2 #035-8089-0"
-  },
-  {
     "title": "Tasses à mesurer empilables en plastique MASTER Chef, paq. 10",
     "image": "https://media-www.canadiantire.ca/product/living/kitchen/bakeware-baking-prep/1429676/master-chef-10pc-measuring-cup-set-73c761cb-c28c-42fe-a32e-f57a30c6b9a6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 24.99,
@@ -93,7 +45,43 @@
     "branch": "London Auto Centre, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/tasses-a-mesurer-empilables-en-plastique-master-chef-paq-10-1429676p.html",
     "sku": "1429676",
-    "availability": "40 En Stock#142-9676-0"
+    "availability": "38 En Stock#142-9676-0"
+  },
+  {
+    "title": "Chaises de salle à manger rembourrées tête de clou avec pattes en bois massif CANVAS Regent, paq. 2, gris",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/1680087/canvas-regent-chair-2-pack-d7669315-d5c9-4944-9fa5-af38fa9fb225-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 189.99,
+    "salePrice": 69.93,
+    "store": "Canadian Tire",
+    "city": "London Auto Centre, ON",
+    "branch": "London Auto Centre, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/chaises-de-salle-a-manger-rembourrees-tete-de-clou-avec-pattes-en-bois-massif-canvas-regent-paq-2-gris-1680087p.html",
+    "sku": "1680087",
+    "availability": "Il n’en reste que 1 #168-0087-6"
+  },
+  {
+    "title": "Cintres pivotants compacts en velours Type A avec barre à pantalon, couleurs variées, paq. 40",
+    "image": "https://media-www.canadiantire.ca/product/living/home-organization/closet-organization/0688308/type-a-velvet-suit-hanger-black-10pk-4afb3f73-0449-46d6-975c-369ae2760de2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 32.99,
+    "salePrice": 12.93,
+    "store": "Canadian Tire",
+    "city": "London Auto Centre, ON",
+    "branch": "London Auto Centre, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/cintres-pivotants-compacts-en-velours-type-a-avec-barre-a-pantalon-couleurs-variees-paq-40-0688307p.html",
+    "sku": "0688307",
+    "availability": ""
+  },
+  {
+    "title": "Écouteurs-bouton vraiment sans fil sport Bluehive Bluepods, noir",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-electronics/0358089/bluehive-bluepods-sport-true-wireless-earbuds-black-1c54ce42-6fbe-4f4b-8a11-3a24c5470b0e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 69.99,
+    "salePrice": 17.93,
+    "store": "Canadian Tire",
+    "city": "London Auto Centre, ON",
+    "branch": "London Auto Centre, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ecouteurs-bouton-vraiment-sans-fil-sport-bluehive-bluepods-noir-0358089p.html",
+    "sku": "0358089",
+    "availability": "Il n’en reste que 1 #035-8089-0"
   },
   {
     "title": "Glacière/réchaud électrique thermoélectrique sur roulettes Mobicool, avec poignée, 45 L, bleu",
@@ -108,52 +96,112 @@
     "availability": "Il n’en reste que 1 #037-0124-0"
   },
   {
-    "title": "Pêne dormant électronique EZSET, noir mat",
-    "image": "https://media-www.canadiantire.ca/product/fixing/hardware/curb-appeal/0463552/ezset-electronic-dead-bolt-matt-black-525bd051-9543-442b-bdf9-129b04547ed3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "title": "Sac de couchage pour temps froid Coleman Flatlands, 10 °C, bleu",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-furniture/0766638/coleman-flatlands-10c-sleeping-bag-435a51aa-91c0-47a6-9e7f-a5a0f796dfe0-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 99.99,
     "salePrice": 49.93,
     "store": "Canadian Tire",
     "city": "London Auto Centre, ON",
     "branch": "London Auto Centre, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/pene-dormant-electronique-ezset-noir-mat-0463552p.html",
-    "sku": "0463552",
-    "availability": "Il n’en reste que 6 #046-3552-0"
+    "url": "https://www.canadiantire.ca/fr/pdp/sac-de-couchage-pour-temps-froid-coleman-flatlands-10-c-bleu-0766638p.html",
+    "sku": "0766638",
+    "availability": "Il n’en reste que 1 #076-6638-8"
   },
   {
-    "title": "Assortiment de fil enduit de nylon",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0783400/danielson-leader-wire-assortment-10-pack-57572a0f-1459-4f13-878e-5bb55080a9d4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 6.99,
-    "salePrice": 3.43,
+    "title": "Papier abrasif 3M Wetordry, 4 x 9 po, paq. 5",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-body-repair/0475842/3m-imperial-wetordry-sandpaper-p400-3f901c4f-8345-4630-9155-5ec371ea3509-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 10.99,
+    "salePrice": 2.93,
     "store": "Canadian Tire",
     "city": "London Auto Centre, ON",
     "branch": "London Auto Centre, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/assortiment-de-fil-enduit-de-nylon-0783400p.html",
-    "sku": "0783400",
-    "availability": "Il n’en reste que 1 #078-3400-6"
+    "url": "https://www.canadiantire.ca/fr/pdp/papier-abrasif-3m-wetordry-4-x-9-po-paq-5-0475844p.html",
+    "sku": "0475844",
+    "availability": ""
   },
   {
-    "title": "Rallonge d’extérieur NOMA, calibre 16/3, 32 pi 10 po, prise avec mise à la terre et connecteur verrouillable, orange",
-    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/power-bars-extension-cords-timers/0522449/noma-orange-32-10-10m-outdoor-cord-16-3-single-lock-end-4572883f-c3a4-48ac-b172-8abd7f72800a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 41.99,
-    "salePrice": 19.93,
+    "title": "Batterie de cuisine pour sac à dos Woods O'Hara",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-living/0766500/woods-o-hara-pot-set-0428ba47-d5f6-481e-9910-2a9cf8f10b99-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 52.99,
+    "salePrice": 24.93,
     "store": "Canadian Tire",
     "city": "London Auto Centre, ON",
     "branch": "London Auto Centre, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/rallonge-d-exterieur-noma-calibre-16-3-32-pi-10-po-prise-avec-mise-a-la-terre-et-connecteur-verrouillable-orange-0522449p.html",
-    "sku": "0522449",
-    "availability": "Il n’en reste que 1 #052-2449-8"
+    "url": "https://www.canadiantire.ca/fr/pdp/batterie-de-cuisine-pour-sac-a-dos-woods-o-hara-0766500p.html",
+    "sku": "0766500",
+    "availability": "0 En Stock#076-6500-4"
   },
   {
-    "title": "Tapis de recharge sans fil en tissu Bluehive, 10 W",
-    "image": "https://media-www.canadiantire.ca/product/automotive/electronics/mobile-electronics/0357142/bluehive-fabric-wireless-charging-pad-a5bac5a3-896e-4cff-b61a-553f7627b960-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 24.99,
-    "salePrice": 8.93,
+    "title": "Rallonge d'extérieur NOMA, calibre 16/2, 3 prises, blanc",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/power-bars-extension-cords-timers/0522444/noma-white-9-10-3m-outdoor-cord-16-2-3-tap-8b83ae64-ec4b-4a9b-915b-b68d0454edbf-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 12.99,
+    "salePrice": 5.93,
     "store": "Canadian Tire",
     "city": "London Auto Centre, ON",
     "branch": "London Auto Centre, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/tapis-de-recharge-sans-fil-en-tissu-bluehive-10-w-0357142p.html",
-    "sku": "0357142",
-    "availability": "21 En Stock#035-7142-8"
+    "url": "https://www.canadiantire.ca/fr/pdp/rallonge-d-exterieur-noma-calibre-16-2-3-prises-blanc-0522444p.html",
+    "sku": "0522444",
+    "availability": ""
+  },
+  {
+    "title": "Séchoir et souffleur Chemical Guys ProBlow",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-tools/0393676/chemical-guys-problow-dryer-and-blower-caf10355-3e99-41f5-8d96-f48e24ad5376-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 159.99,
+    "salePrice": 69.93,
+    "store": "Canadian Tire",
+    "city": "London Auto Centre, ON",
+    "branch": "London Auto Centre, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/sechoir-et-souffleur-chemical-guys-problow-0393676p.html",
+    "sku": "0393676",
+    "availability": "Il n’en reste que 2 #039-3676-4"
+  },
+  {
+    "title": "Trousse de batterie compacte DeWALT 20 V MAX, 4 Ah",
+    "image": "https://media-www.canadiantire.ca/product/fixing/tools/portable-power-tools/0548756/dewalt-20v-max-compact-4ah-starter-kit-14ae598c-1a46-48ba-b39b-d3fee70cc0cf-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 259.99,
+    "salePrice": 129.93,
+    "store": "Canadian Tire",
+    "city": "London Auto Centre, ON",
+    "branch": "London Auto Centre, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-batterie-compacte-dewalt-20-v-max-4-ah-0548756p.html",
+    "sku": "0548756",
+    "availability": "Il n’en reste que 2 #054-8756-6"
+  },
+  {
+    "title": "Table et train en bois Rocky Mountain, paq. 50",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/preschool-toys-activities/1501272/rocky-mountain-wooden-train-set-and-table-d9702a1d-eceb-406f-99bf-dc0cf5d5b2e9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 149.99,
+    "salePrice": 55.93,
+    "store": "Canadian Tire",
+    "city": "London Auto Centre, ON",
+    "branch": "London Auto Centre, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/table-et-train-en-bois-rocky-mountain-paq-50-1501272p.html",
+    "sku": "1501272",
+    "availability": "Il n’en reste que 3 #150-1272-8"
+  },
+  {
+    "title": "Aspirateur vertical 850 W Kenmore Featherlite Lift-Up de avec éliminateur de poils",
+    "image": "https://media-www.canadiantire.ca/product/living/cleaning/vacuums-and-floorcare/0437193/kenmore-featherlite-lift-up-with-hair-eliminator-f69f9790-0d7e-45f5-bf03-41c25af27666-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 299.99,
+    "salePrice": 149.93,
+    "store": "Canadian Tire",
+    "city": "London Auto Centre, ON",
+    "branch": "London Auto Centre, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/aspirateur-vertical-850-w-kenmore-featherlite-lift-up-de-avec-eliminateur-de-poils-0437193p.html",
+    "sku": "0437193",
+    "availability": "Il n’en reste que 1 #043-7193-6"
+  },
+  {
+    "title": "Tabouret de bar réglable FOR LIVING avec dossier incurvé, noir",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/1680124/for-living-adjustable-bar-stool-a5255c71-f960-41f9-a8f1-6cdbaf086b0c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 199.99,
+    "salePrice": 79.93,
+    "store": "Canadian Tire",
+    "city": "London Auto Centre, ON",
+    "branch": "London Auto Centre, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tabouret-de-bar-reglable-for-living-avec-dossier-incurve-noir-1680124p.html",
+    "sku": "1680124",
+    "availability": "Il n’en reste que 3 #168-0124-8"
   },
   {
     "title": "Filet pour panier de toit élastique SportRack SR0033, 40 x 36 po",
@@ -168,51 +216,15 @@
     "availability": ""
   },
   {
-    "title": "Chargeur pour l’auto à motif de pneus Bluehive, 24 W, 2 ports USB-A, noir",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-electronics/0357396/bluehive-24-watt-tire-pattern-car-charger-b13d7bcd-0445-4447-abab-d98943427e2c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 25.99,
-    "salePrice": 7.93,
+    "title": "Calendrier de l'avent sans arachides Laura Secord, 201 g",
+    "image": "https://media-www.canadiantire.ca/product/living/food-drink/seasonal-confectionery/1519553/laura-secord-peanut-free-advent-calendar-201g-403c6e4b-e8c1-487e-a8c6-09a4d52f01ba-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 15.99,
+    "salePrice": 7.99,
     "store": "Canadian Tire",
     "city": "London Auto Centre, ON",
     "branch": "London Auto Centre, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/chargeur-pour-l-auto-a-motif-de-pneus-bluehive-24-w-2-ports-usb-a-noir-0357396p.html",
-    "sku": "0357396",
+    "url": "https://www.canadiantire.ca/fr/pdp/calendrier-de-l-avent-sans-arachides-laura-secord-201-g-1519553p.html",
+    "sku": "1519553",
     "availability": ""
-  },
-  {
-    "title": "Bouteille d'eau isotherme en acier inoxydable à transfert d'air avec paille Manna Crosby, 24 oz",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/food-storage/1427348/manna-24oz-crosby-air-transfer-print-3-fe25512f-f27b-421c-9df7-c6a90ac76242-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 18.99,
-    "salePrice": 7.93,
-    "store": "Canadian Tire",
-    "city": "London Auto Centre, ON",
-    "branch": "London Auto Centre, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/bouteille-d-eau-isotherme-en-acier-inoxydable-a-transfert-d-air-avec-paille-manna-crosby-24-oz-1427346p.html",
-    "sku": "1427346",
-    "availability": ""
-  },
-  {
-    "title": "Assiette à dîner CANVAS Lauren, blanc, paq. 1",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/dining-and-entertaining/2421186/canvas-lauren-dinner-plate-4ca2c429-449f-4d78-932b-8e5d1a9deb31-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 3.99,
-    "salePrice": 1.93,
-    "store": "Canadian Tire",
-    "city": "London Auto Centre, ON",
-    "branch": "London Auto Centre, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/assiette-a-diner-canvas-lauren-blanc-paq-1-2421186p.html",
-    "sku": "2421186",
-    "availability": "16 En Stock#242-1186-6"
-  },
-  {
-    "title": "Épices et sauce pour ramen Thoughtfully, paq. 4",
-    "image": "https://media-www.canadiantire.ca/product/living/food-drink/seasonal-confectionery/1519542/ramen-spice-and-sauce-set-4-pk-148f71a1-92d6-47c2-a388-abad12a953e9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 21.99,
-    "salePrice": 9.99,
-    "store": "Canadian Tire",
-    "city": "London Auto Centre, ON",
-    "branch": "London Auto Centre, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/epices-et-sauce-pour-ramen-thoughtfully-paq-4-1519542p.html",
-    "sku": "1519542",
-    "availability": "Il n’en reste que 1 #151-9542-6"
   }
 ]
