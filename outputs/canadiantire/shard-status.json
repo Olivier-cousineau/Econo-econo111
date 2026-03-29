@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-03-29T11:14:12.986Z",
+  "generatedAt": "2026-03-29T13:46:42.708Z",
   "stores": [
     {
-      "id": "224",
-      "city": "Halifax - Bedford, NS",
-      "status": "committed",
-      "details": "135 produits"
-    },
-    {
-      "id": "465",
-      "city": "Halifax - Bayers Lake, NS",
-      "status": "committed",
-      "details": "75 produits"
-    },
-    {
-      "id": "121",
-      "city": "Windsor University Plaza, ON",
-      "status": "committed",
-      "details": "65 produits"
-    },
-    {
-      "id": "186",
-      "city": "Halifax - Spryfield, NS",
-      "status": "committed",
-      "details": "82 produits"
-    },
-    {
-      "id": "619",
-      "city": "Elmsdale, NS",
+      "id": "113",
+      "city": "Truro, NS",
       "status": "committed",
       "details": "43 produits"
     },
     {
-      "id": "44",
-      "city": "Halifax, NS",
+      "id": "281",
+      "city": "Amherstburg, ON",
       "status": "committed",
-      "details": "105 produits"
+      "details": "79 produits"
     },
     {
-      "id": "41",
-      "city": "Dartmouth Crossing, NS",
+      "id": "20",
+      "city": "Charlottetown, PEI 20 Babineau Avenue",
       "status": "committed",
-      "details": "42 produits"
+      "details": "63 produits"
     },
     {
-      "id": "436",
-      "city": "Halifax - Cole Harbour, NS",
+      "id": "406",
+      "city": "Hearst, ON",
       "status": "committed",
-      "details": "42 produits"
+      "details": "58 produits"
+    },
+    {
+      "id": "279",
+      "city": "Wawa, ON",
+      "status": "committed",
+      "details": "32 produits"
+    },
+    {
+      "id": "67",
+      "city": "New Glasgow, NS",
+      "status": "committed",
+      "details": "52 produits"
+    },
+    {
+      "id": "2",
+      "city": "Antigonish, NS",
+      "status": "committed",
+      "details": "79 produits"
+    },
+    {
+      "id": "901",
+      "city": "Labrador City, NL",
+      "status": "committed",
+      "details": "96 produits"
     }
   ],
   "failedTwice": [],
