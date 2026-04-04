@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-04-04T00:25:53.092Z",
+  "generatedAt": "2026-04-04T03:31:35.782Z",
   "stores": [
     {
-      "id": "145",
-      "city": "St. Catharines S., ON",
+      "id": "241",
+      "city": "Mississauga Southdown, ON",
       "status": "committed",
-      "details": "74 produits"
+      "details": "78 produits"
     },
     {
-      "id": "411",
-      "city": "Brampton Trinity Common, ON",
-      "status": "committed",
-      "details": "108 produits"
-    },
-    {
-      "id": "346",
-      "city": "Miss.Mavis & Dundas, ON",
-      "status": "committed",
-      "details": "94 produits"
-    },
-    {
-      "id": "108",
-      "city": "Collingwood, ON",
-      "status": "committed",
-      "details": "43 produits"
-    },
-    {
-      "id": "90",
-      "city": "St. Catharines, ON",
-      "status": "committed",
-      "details": "109 produits"
-    },
-    {
-      "id": "320",
-      "city": "Rimouski, QC",
-      "status": "committed",
-      "details": "89 produits"
-    },
-    {
-      "id": "10",
-      "city": "Brampton Shoppers World, ON",
-      "status": "committed",
-      "details": "106 produits"
-    },
-    {
-      "id": "497",
-      "city": "Mississauga Heartland, ON",
+      "id": "675",
+      "city": "Brampton McLaughlin Road, ON",
       "status": "committed",
       "details": "103 produits"
+    },
+    {
+      "id": "424",
+      "city": "Oak., Winston Churchill, ON",
+      "status": "committed",
+      "details": "72 produits"
+    },
+    {
+      "id": "233",
+      "city": "La Sarre, QC",
+      "status": "committed",
+      "details": "54 produits"
+    },
+    {
+      "id": "118",
+      "city": "Welland, ON",
+      "status": "committed",
+      "details": "44 produits"
+    },
+    {
+      "id": "169",
+      "city": "Meadowvale, ON",
+      "status": "committed",
+      "details": "65 produits"
+    },
+    {
+      "id": "429",
+      "city": "Oakville North, ON",
+      "status": "committed",
+      "details": "95 produits"
+    },
+    {
+      "id": "143",
+      "city": "Oakville, ON",
+      "status": "committed",
+      "details": "64 produits"
     }
   ],
   "failedTwice": [],
