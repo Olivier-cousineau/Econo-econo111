@@ -9,7 +9,7 @@
     "branch": "Greenwood, NS",
     "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-depart-pour-conservation-et-entreposage-d-aliments-fresh-save-de-zwilling-avec-pompe-a-depression-portative-0430335p.html",
     "sku": "0430335",
-    "availability": "Il n’en reste que 4 #043-0335-2"
+    "availability": "Il n’en reste que 2 #043-0335-2"
   },
   {
     "title": "Friteuse à air chaud à deux zones T-Fal Easy Fry, 8,3 L/8,7 ptes",
@@ -21,7 +21,7 @@
     "branch": "Greenwood, NS",
     "url": "https://www.canadiantire.ca/fr/pdp/friteuse-a-air-chaud-a-deux-zones-t-fal-easy-fry-8-3-l-8-7-ptes-0430340p.html",
     "sku": "0430340",
-    "availability": "26 En Stock#043-0340-8"
+    "availability": "25 En Stock#043-0340-8"
   },
   {
     "title": "T-shirt sport à manches courtes et extensibles avec encolure ras du cou Mooselander, hommes, couleur unie, tailles variées, noir/gris, paq. 2",
@@ -48,30 +48,6 @@
     "availability": "Il n’en reste que 4 #043-0385-2"
   },
   {
-    "title": "Bloc à couteaux Global Jouzu, paq. 5",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/cutlery/2425201/global-jouzu-knife-block-set-5pc-4006bc53-0ca6-4ecc-9b42-40c93d044947-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 499.99,
-    "salePrice": 199.93,
-    "store": "Canadian Tire",
-    "city": "Greenwood, NS",
-    "branch": "Greenwood, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/bloc-a-couteaux-global-jouzu-paq-5-2425201p.html",
-    "sku": "2425201",
-    "availability": "Il n’en reste que 2 #242-5201-6"
-  },
-  {
-    "title": "Jeu d'arcade de tir de basketball REC-Tek avec 4 balles et tableau de pointage électronique",
-    "image": "https://media-www.canadiantire.ca/product/playing/team-sports-and-golf/indoor-games/1840694/rec-tek-basketball-shootout-challenge-game-b5d7e061-32a3-40d8-a913-45673257eaf7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 129.99,
-    "salePrice": 54.93,
-    "store": "Canadian Tire",
-    "city": "Greenwood, NS",
-    "branch": "Greenwood, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/jeu-d-arcade-de-tir-de-basketball-rec-tek-avec-4-balles-et-tableau-de-pointage-electronique-1840694p.html",
-    "sku": "1840694",
-    "availability": "Il n’en reste que 2 #184-0694-0"
-  },
-  {
     "title": "Tasses à mesurer empilables en plastique MASTER Chef, paq. 10",
     "image": "https://media-www.canadiantire.ca/product/living/kitchen/bakeware-baking-prep/1429676/master-chef-10pc-measuring-cup-set-73c761cb-c28c-42fe-a32e-f57a30c6b9a6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 24.99,
@@ -84,28 +60,28 @@
     "availability": "Il n’en reste que 1 #142-9676-0"
   },
   {
-    "title": "Meuble pour téléviseur avec foyer électrique multimédia CANVAS Lotus, 67 po, 1 500 W, télécommande comprise, brun",
-    "image": "https://media-www.canadiantire.ca/product/living/home-decor/electric-fireplaces/0643590/masterflame-lotus-fireplace-29773e4b-4b40-472b-be08-9c8722e7d97f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 549.99,
-    "salePrice": 274.93,
+    "title": "Ampoules à DEL à intensité variable à culot E12 NOMA B10, 2700K, 350 lumens, blanc chaud, 40 W, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/light-bulbs/0529347/noma-2-pack-40w-e12-soft-white-led-lightbulbs-2abc2edf-7b69-449d-b49f-8024c6332e19-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 12.99,
+    "salePrice": 1.93,
     "store": "Canadian Tire",
     "city": "Greenwood, NS",
     "branch": "Greenwood, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/meuble-pour-televiseur-avec-foyer-electrique-multimedia-canvas-lotus-67-po-1-500-w-telecommande-comprise-brun-0643590p.html",
-    "sku": "0643590",
-    "availability": "Il n’en reste que 1 #064-3590-4"
+    "url": "https://www.canadiantire.ca/fr/pdp/ampoules-a-del-a-intensite-variable-a-culot-e12-noma-b10-2700k-350-lumens-blanc-chaud-40-w-paq-2-0529347p.html",
+    "sku": "0529347",
+    "availability": "14 En Stock#052-9347-8"
   },
   {
-    "title": "Meuble pour téléviseur avec console multimédia et foyer électrique CANVAS Ashcroft, 60 po, 1 400 W, télécommande comprise, blanc",
-    "image": "https://media-www.canadiantire.ca/product/living/home-decor/electric-fireplaces/0644017/60-ashcroft-media-fireplace-da24f099-5c3e-45d3-855f-45c203e35495-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 649.99,
-    "salePrice": 324.93,
+    "title": "Foyer électrique CANVAS Marseille, 54 po, 1 400 W, comprend une télécommande, blanc",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/electric-fireplaces/0643176/canvas-marseille-fireplace-fedce335-a386-471e-87b0-b3ad50097466-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 699.99,
+    "salePrice": 349.93,
     "store": "Canadian Tire",
     "city": "Greenwood, NS",
     "branch": "Greenwood, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/meuble-pour-televiseur-avec-console-multimedia-et-foyer-electrique-canvas-ashcroft-60-po-1-400-w-telecommande-comprise-blanc-0644017p.html",
-    "sku": "0644017",
-    "availability": "Il n’en reste que 4 #064-4017-6"
+    "url": "https://www.canadiantire.ca/fr/pdp/foyer-electrique-canvas-marseille-54-po-1-400-w-comprend-une-telecommande-blanc-0643176p.html",
+    "sku": "0643176",
+    "availability": "Il n’en reste que 2 #064-3176-2"
   },
   {
     "title": "Meuble pour téléviseur avec foyer électrique multimédia CANVAS Hanover, 58 po, 1 400 W, télécommande comprise, brun",
@@ -117,7 +93,7 @@
     "branch": "Greenwood, NS",
     "url": "https://www.canadiantire.ca/fr/pdp/meuble-pour-televiseur-avec-foyer-electrique-multimedia-canvas-hanover-58-po-1-400-w-telecommande-comprise-brun-0644016p.html",
     "sku": "0644016",
-    "availability": "Il n’en reste que 2 #064-4016-8"
+    "availability": "Il n’en reste que 1 #064-4016-8"
   },
   {
     "title": "Présentoir d'articles saisonniers Mastercraft avec chariot à plateforme roulante, noir",
@@ -132,42 +108,6 @@
     "availability": "Il n’en reste que 2 #068-1822-8"
   },
   {
-    "title": "Parka technique de chasse perméable à l'air imperméable coupe-vent Yukon Gear pour hommes, camouflage Realtree Xtra",
-    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-apparel-footwear/3750716/yukon-gear-parka-2-rte-m-a47cf6f2-275c-44e1-93da-5eb1da27165e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 99.99,
-    "salePrice": 39.93,
-    "store": "Canadian Tire",
-    "city": "Greenwood, NS",
-    "branch": "Greenwood, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/parka-technique-de-chasse-permeable-a-l-air-impermeable-coupe-vent-yukon-gear-pour-hommes-camouflage-realtree-xtra-3750716p.html",
-    "sku": "3750716",
-    "availability": ""
-  },
-  {
-    "title": "Cintres pivotants compacts en velours Type A avec barre à pantalon, couleurs variées, paq. 40",
-    "image": "https://media-www.canadiantire.ca/product/living/home-organization/closet-organization/0688308/type-a-velvet-suit-hanger-black-10pk-4afb3f73-0449-46d6-975c-369ae2760de2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 32.99,
-    "salePrice": 9.98,
-    "store": "Canadian Tire",
-    "city": "Greenwood, NS",
-    "branch": "Greenwood, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/cintres-pivotants-compacts-en-velours-type-a-avec-barre-a-pantalon-couleurs-variees-paq-40-0688307p.html",
-    "sku": "0688307",
-    "availability": ""
-  },
-  {
-    "title": "Foyer multimédia CANVAS Alma, 72 po",
-    "image": "https://media-www.canadiantire.ca/product/living/home-decor/electric-fireplaces/0644023/canvas-72-alma-media-fireplace-f820a533-3b11-4251-b5c4-e5a69a494aa7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 729.99,
-    "salePrice": 349.93,
-    "store": "Canadian Tire",
-    "city": "Greenwood, NS",
-    "branch": "Greenwood, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/foyer-multimedia-canvas-alma-72-po-0644023p.html",
-    "sku": "0644023",
-    "availability": "Il n’en reste que 2 #064-4023-0"
-  },
-  {
     "title": "Vélo hybride Raleigh Sundance, 700C, cuivré",
     "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycles/0711982/raleigh-sundance-women-s-hybrid-bike-700c-3bb8d501-e6aa-426e-8174-061f74e98473-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 539.99,
@@ -180,16 +120,52 @@
     "availability": "Il n’en reste que 1 #071-1982-6"
   },
   {
-    "title": "Jeu de forets au titane à 7 arêtes MAXIMUM Precision Point, pour bois, métal, plastique, paq. 84",
-    "image": "https://media-www.canadiantire.ca/product/fixing/tools/power-tool-accessories/0540288/maximum-84-piece-7-edge-titanium-drill-bit-set-dccb93d4-9e7d-4b2f-ba2b-8a293ddadffd-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 129.99,
+    "title": "Casque de vélo Supercycle Pursuit, jeune, bleu/jaune",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/cycling/bicycle-accessories/0730540/supercycle-pursuit-youth-blue-black-061beba1-8936-4bdc-a397-fb1547330c28-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 39.99,
+    "salePrice": 19.93,
+    "store": "Canadian Tire",
+    "city": "Greenwood, NS",
+    "branch": "Greenwood, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/casque-de-velo-supercycle-pursuit-jeune-bleu-jaune-0730540p.html",
+    "sku": "0730540",
+    "availability": "Il n’en reste que 1 #073-0540-0"
+  },
+  {
+    "title": "Roue de remorque MotoMaster Bias ASM205/75/D15, 5 écrous",
+    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0403175/motomaster-bias-trailer-tire-st530-x-12-lr-c-tire-only-fed60885-3f31-40fd-8ff3-4c51c0ebc8d0-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 159.99,
+    "salePrice": 59.93,
+    "store": "Canadian Tire",
+    "city": "Greenwood, NS",
+    "branch": "Greenwood, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/roue-de-remorque-motomaster-bias-asm205-75-d15-5-ecrous-0403173p.html",
+    "sku": "0403173",
+    "availability": "Il n’en reste que 1 #040-3173-4"
+  },
+  {
+    "title": "Sac de couchage sans fermeture à glissière Outbound Boundless, 2 °C, vert",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-furniture/0766640/outbound-2c-zipperless-sleeping-bag-92015620-b8aa-4f67-9bdb-5dda79ef1552-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 139.99,
     "salePrice": 49.93,
     "store": "Canadian Tire",
     "city": "Greenwood, NS",
     "branch": "Greenwood, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/jeu-de-forets-au-titane-a-7-aretes-maximum-precision-point-pour-bois-metal-plastique-paq-84-0540288p.html",
-    "sku": "0540288",
-    "availability": "Il n’en reste que 1 #054-0288-8"
+    "url": "https://www.canadiantire.ca/fr/pdp/sac-de-couchage-sans-fermeture-a-glissiere-outbound-boundless-2-c-vert-0766640p.html",
+    "sku": "0766640",
+    "availability": "Il n’en reste que 2 #076-6640-0"
+  },
+  {
+    "title": "Tasse en grès empilable CANVAS, pois, 16 oz",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/1427924/canvas-stackable-dot-mug-15c20672-2627-4064-80d2-8430fe95cfc2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 5.49,
+    "salePrice": 1.5,
+    "store": "Canadian Tire",
+    "city": "Greenwood, NS",
+    "branch": "Greenwood, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/tasse-en-gres-empilable-canvas-pois-16-oz-1427924p.html",
+    "sku": "1427924",
+    "availability": "10 En Stock#142-7924-2"
   },
   {
     "title": "Ensemble de nettoyants automobiles Armor All, paq. 16",
@@ -201,91 +177,67 @@
     "branch": "Greenwood, NS",
     "url": "https://www.canadiantire.ca/fr/pdp/ensemble-de-nettoyants-automobiles-armor-all-paq-16-0397080p.html",
     "sku": "0397080",
-    "availability": "Il n’en reste que 3 #039-7080-6"
+    "availability": "Il n’en reste que 2 #039-7080-6"
   },
   {
-    "title": "La station de chargement sans fil en tissu de 10 W de Bluehive est compatible avec la plupart des appareils compatibles Qi",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-electronics/0355450/bluehive-10w-fabric-wireless-charging-stand-6b52202a-6938-46af-9704-982dbbc034ce-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 25.99,
-    "salePrice": 8.93,
+    "title": "Tabouret de bar réglable CANVAS Dutton avec siège pivotant, noir",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/1680125/canvas-dutton-stool-5e8f6bb1-d167-4f04-905a-2ffac877a377-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 139.99,
+    "salePrice": 54.93,
     "store": "Canadian Tire",
     "city": "Greenwood, NS",
     "branch": "Greenwood, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/la-station-de-chargement-sans-fil-en-tissu-de-10-w-de-bluehive-est-compatible-avec-la-plupart-des-appareils-compatibles-qi-0355450p.html",
-    "sku": "0355450",
-    "availability": "Il n’en reste que 3 #035-5450-6"
+    "url": "https://www.canadiantire.ca/fr/pdp/tabouret-de-bar-reglable-canvas-dutton-avec-siege-pivotant-noir-1680125p.html",
+    "sku": "1680125",
+    "availability": "Il n’en reste que 1 #168-0125-6"
   },
   {
-    "title": "Pochette à porte-clés à blocage de signal RFID AutoTrends, petit",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0379852/rfid-signal-blocking-keychain-small-ae7c6861-f7e1-4f5d-ad4a-ab6a36f04732-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "title": "La station de chargement sans fil avec tapis de 10 W de Bluehive est compatible avec la plupart des appareils compatibles Qi",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-electronics/0355501/bluehive-10w-fabric-wireless-charging-stand-pad-dff12d50-3081-4550-8e48-cecbe7fa230a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 42.99,
+    "salePrice": 14.93,
+    "store": "Canadian Tire",
+    "city": "Greenwood, NS",
+    "branch": "Greenwood, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/la-station-de-chargement-sans-fil-avec-tapis-de-10-w-de-bluehive-est-compatible-avec-la-plupart-des-appareils-compatibles-qi-0355501p.html",
+    "sku": "0355501",
+    "availability": "Il n’en reste que 1 #035-5501-6"
+  },
+  {
+    "title": "Pistolet de nettoyage Wash-N-Rinse de Bon Aire avec tête rotative, modèle WNR5R",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-tools/0398540/wash-n-rinse-spray-gun-ddb510dd-8912-4cc7-a0a1-dfa8a37997bb-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 44.99,
+    "salePrice": 20.93,
+    "store": "Canadian Tire",
+    "city": "Greenwood, NS",
+    "branch": "Greenwood, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/pistolet-de-nettoyage-wash-n-rinse-de-bon-aire-avec-tete-rotative-modele-wnr5r-0398540p.html",
+    "sku": "0398540",
+    "availability": "Il n’en reste que 1 #039-8540-6"
+  },
+  {
+    "title": "Bande lumineuse intelligente DEL flexible Philips Hue Plus, blanc et couleur, 2 m",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/light-bulbs/0529757/philips-hue-lightstrip-plus-9a24570d-a8fa-4781-89f9-438052769571-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 99.99,
+    "salePrice": 49.93,
+    "store": "Canadian Tire",
+    "city": "Greenwood, NS",
+    "branch": "Greenwood, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/bande-lumineuse-intelligente-del-flexible-philips-hue-plus-blanc-et-couleur-2-m-0529757p.html",
+    "sku": "0529757",
+    "availability": "Il n’en reste que 1 #052-9757-2"
+  },
+  {
+    "title": "Manche de balai en bois Mastercraft, 54 po",
+    "image": "https://media-www.canadiantire.ca/product/living/cleaning/household-cleaning-tools/0429835/54-broom-handle-ed44f108-ca71-4725-8bbe-3bda4d1f2f85-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 9.99,
-    "salePrice": 4.93,
-    "store": "Canadian Tire",
-    "city": "Greenwood, NS",
-    "branch": "Greenwood, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/pochette-a-porte-cles-a-blocage-de-signal-rfid-autotrends-petit-0379852p.html",
-    "sku": "0379852",
-    "availability": "Il n’en reste que 7 #037-9852-2"
-  },
-  {
-    "title": "Interrupteur à bascule silencieux unipolaire CA Decorator, 15 A, 120 V, mise à la terre, qualité résidentielle, couleurs variées",
-    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/rough-electrical/0528352/decora-switch-1-pole-black-c26060b3-be73-4c84-bfd0-55a05b4de038-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 2.79,
-    "salePrice": 0.93,
-    "store": "Canadian Tire",
-    "city": "Greenwood, NS",
-    "branch": "Greenwood, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/interrupteur-a-bascule-silencieux-unipolaire-ca-decorator-15-a-120-v-mise-a-la-terre-qualite-residentielle-couleurs-variees-0528222p.html",
-    "sku": "0528222",
-    "availability": ""
-  },
-  {
-    "title": "Robinet de lavabo de salle de bains Peerless Precept, à poignée simple et trou unique, certifié WaterSense, chrome",
-    "image": "https://media-www.canadiantire.ca/product/fixing/plumbing/faucets-fixtures/0639944/peerless-precept-1-handle-lavatory-faucet-chrome-cad24aa7-e4ba-4e31-86be-970fb7183158-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 189.99,
-    "salePrice": 94.93,
-    "store": "Canadian Tire",
-    "city": "Greenwood, NS",
-    "branch": "Greenwood, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/robinet-de-lavabo-de-salle-de-bains-peerless-precept-a-poignee-simple-et-trou-unique-certifie-watersense-chrome-0639944p.html",
-    "sku": "0639944",
-    "availability": "Il n’en reste que 3 #063-9944-0"
-  },
-  {
-    "title": "Diffuseur ultrasonique d'aromathérapie à base d'huile essentielle HoMedics Uplift avec lumière, blanc",
-    "image": "https://media-www.canadiantire.ca/product/living/personal-garment-care/personal-care/0438660/homedics-uplift-diffuser-f8b0aa8d-1acd-4922-b216-b4a8eec6f374-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 49.99,
-    "salePrice": 21.93,
-    "store": "Canadian Tire",
-    "city": "Greenwood, NS",
-    "branch": "Greenwood, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/diffuseur-ultrasonique-d-aromatherapie-a-base-d-huile-essentielle-homedics-uplift-avec-lumiere-blanc-0438660p.html",
-    "sku": "0438660",
-    "availability": "Il n’en reste que 2 #043-8660-8"
-  },
-  {
-    "title": "Jardinière d'extérieur surélevée à arrosage automatique Frame It All avec couvercle de serre, moyenne",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/gardening/gardening-plant-accessories/1591927/frame-it-all-patio-planter-with-trellis-greenhouse-cover-m-e599e1e6-a919-4784-aeab-e605d2453382-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 149.99,
-    "salePrice": 44.93,
-    "store": "Canadian Tire",
-    "city": "Greenwood, NS",
-    "branch": "Greenwood, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/jardiniere-d-exterieur-surelevee-a-arrosage-automatique-frame-it-all-avec-couvercle-de-serre-moyenne-1591927p.html",
-    "sku": "1591927",
-    "availability": "Il n’en reste que 1 #159-1927-4"
-  },
-  {
-    "title": "Câble de charge micro USB Jensen, noir, 3 pi",
-    "image": "https://media-www.canadiantire.ca/product/automotive/electronics/home-electronics/0452816/3-foot-micro-usb-charging-cablea--91fff085-257e-47e9-b434-5f16de5af8f7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 12.99,
     "salePrice": 3.93,
     "store": "Canadian Tire",
     "city": "Greenwood, NS",
     "branch": "Greenwood, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/cable-de-charge-micro-usb-jensen-noir-3-pi-0452816p.html",
-    "sku": "0452816",
-    "availability": ""
+    "url": "https://www.canadiantire.ca/fr/pdp/manche-de-balai-en-bois-mastercraft-54-po-0429835p.html",
+    "sku": "0429835",
+    "availability": "20 En Stock#042-9835-0"
   },
   {
     "title": "Trousse de câblage pour connecteur métallique à 4 broches plates à 6 broches rondes Hopkins",
@@ -300,18 +252,6 @@
     "availability": "Il n’en reste que 2 #140-7233-0"
   },
   {
-    "title": "Serviettes de table Achievement is Key",
-    "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-seasonal/party-city-micro-season-decor/8549451/achievement-is-key-luncheon-napkin-6a6d7292-089b-4e6e-b900-700544f56af0-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 11.99,
-    "salePrice": 2.93,
-    "store": "Canadian Tire",
-    "city": "Greenwood, NS",
-    "branch": "Greenwood, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/serviettes-de-table-achievement-is-key-8549451p.html",
-    "sku": "8549451",
-    "availability": "12 En Stock#854-9451-0"
-  },
-  {
     "title": "Trousse de réparation rapide en de pneu de VR CAMCO Pro-Tech",
     "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0408898/rubber-roof-repair-kit-c9b1e79b-619f-4f23-b84e-6726592ae938-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 34.99,
@@ -324,147 +264,87 @@
     "availability": "Il n’en reste que 2 #040-8898-0"
   },
   {
-    "title": "Cordon de recharge pour l'auto Karcher",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-winter-accessories/0304234/karcher-car-charger-cord-687391e0-c435-4508-ba13-b4fa205eb315-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 34.99,
-    "salePrice": 4.93,
+    "title": "Caméra de sentier/de chasse à faible luminosité Primos, 14 Mpx, exclusivité",
+    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-equipment/3750931/primos-14mp-camera-lo-glo-exlcusive-4b7714af-c335-40e2-b09e-c1d15c19c160.png?im=whresize&wid=200&hei=200",
+    "price": 99.99,
+    "salePrice": 38.93,
     "store": "Canadian Tire",
     "city": "Greenwood, NS",
     "branch": "Greenwood, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/cordon-de-recharge-pour-l-auto-karcher-0304234p.html",
-    "sku": "0304234",
-    "availability": "Il n’en reste que 1 #030-4234-8"
+    "url": "https://www.canadiantire.ca/fr/pdp/camera-de-sentier-de-chasse-a-faible-luminosite-primos-14-mpx-exclusivite-3750931p.html",
+    "sku": "3750931",
+    "availability": "Il n’en reste que 1 #375-0931-2"
   },
   {
-    "title": "5 flotteurs Danielson rouges et blancs assortis",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0782900/danielson-snap-on-float-red-white-5-pack-359a8d71-f143-422a-88f5-df73a8a66109-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 5.99,
+    "title": "Hameçon en faucille Xcalibur Octopus",
+    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0770366/matzuo-octopus-sickle-size-6-7ef44089-7bd0-4794-a1f8-2f0cdbbdac95-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 3.99,
+    "salePrice": 1.93,
+    "store": "Canadian Tire",
+    "city": "Greenwood, NS",
+    "branch": "Greenwood, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/hamecon-en-faucille-xcalibur-octopus-0770366p.html",
+    "sku": "0770366",
+    "availability": ""
+  },
+  {
+    "title": "Ensemble d'hameçons Mustad, truite",
+    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0777702/mustad-hook-kit-trout-98e097e9-535f-490a-861b-01f4940c86e3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 14.99,
+    "salePrice": 7.43,
+    "store": "Canadian Tire",
+    "city": "Greenwood, NS",
+    "branch": "Greenwood, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/ensemble-d-hamecons-mustad-truite-0777702p.html",
+    "sku": "0777702",
+    "availability": "Il n’en reste que 1 #077-7702-6"
+  },
+  {
+    "title": "Commande d'éclairage pivotante Atron Electro Industries PL103, 300 W",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/rough-electrical/0523040/photocell-swivel-outdoor-c8c7e32d-28fe-4671-bece-9d2128e9c204-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.49,
+    "salePrice": 7.93,
+    "store": "Canadian Tire",
+    "city": "Greenwood, NS",
+    "branch": "Greenwood, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/commande-d-eclairage-pivotante-atron-electro-industries-pl103-300-w-0523040p.html",
+    "sku": "0523040",
+    "availability": "Il n’en reste que 7 #052-3040-2"
+  },
+  {
+    "title": "Module d’interface universel Directed DBALL3 avec faisceaux en T spécifiques au véhicule",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-electronics/0342402/dball-3-universal-interface-module-509f753a-0899-4028-8f7c-d202209c4d63-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 89.99,
+    "salePrice": 17.93,
+    "store": "Canadian Tire",
+    "city": "Greenwood, NS",
+    "branch": "Greenwood, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/module-d-interface-universel-directed-dball3-avec-faisceaux-en-t-specifiques-au-vehicule-0342402p.html",
+    "sku": "0342402",
+    "availability": "Il n’en reste que 1 #034-2402-2"
+  },
+  {
+    "title": "Porte-clés/bouteille de désinfectant pour les mains AutoTrends",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0373161/autotrends-hand-santizer-bottle-keychain-2377f301-da8b-48bc-aa4b-a007c2cacc50-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 8.99,
     "salePrice": 2.93,
     "store": "Canadian Tire",
     "city": "Greenwood, NS",
     "branch": "Greenwood, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/5-flotteurs-danielson-rouges-et-blancs-assortis-0782900p.html",
-    "sku": "0782900",
-    "availability": "Il n’en reste que 2 #078-2900-2"
+    "url": "https://www.canadiantire.ca/fr/pdp/porte-cles-bouteille-de-desinfectant-pour-les-mains-autotrends-0373161p.html",
+    "sku": "0373161",
+    "availability": "Il n’en reste que 2 #037-3161-2"
   },
   {
-    "title": "Papier de rechange ligné épais Five Star, paq. 200",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/home-office-supplies/1424100/five-star-200-sheet-heavyweight-refill-d92ee914-3105-41af-99e4-acaa3967b856-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 8.99,
-    "salePrice": 3.73,
-    "store": "Canadian Tire",
-    "city": "Greenwood, NS",
-    "branch": "Greenwood, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/papier-de-rechange-ligne-epais-five-star-paq-200-1424100p.html",
-    "sku": "1424100",
-    "availability": "Il n’en reste que 5 #142-4100-0"
-  },
-  {
-    "title": "Diviseur vidéo numérique 4 voies RCA, doré",
-    "image": "https://media-www.canadiantire.ca/product/living/electronics/home-entertainment-accessories/0452823/4-way-digital-video-splitter-d3f5c13c-1798-40a9-9e3e-be6d51176e3f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 22.99,
-    "salePrice": 5.93,
-    "store": "Canadian Tire",
-    "city": "Greenwood, NS",
-    "branch": "Greenwood, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/diviseur-video-numerique-4-voies-rca-dore-0452823p.html",
-    "sku": "0452823",
-    "availability": "Il n’en reste que 4 #045-2823-4"
-  },
-  {
-    "title": "Couronne de licorne à fleurs avec corne, multicolore, taille unique, paq. 8, accessoire à porter pour anniversaires",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8535395/enchanted-unicorn-paper-crown-691dea3c-f733-4901-9364-76b10cc2c226-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 4.99,
-    "salePrice": 2.49,
-    "store": "Canadian Tire",
-    "city": "Greenwood, NS",
-    "branch": "Greenwood, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/couronne-de-licorne-a-fleurs-avec-corne-multicolore-taille-unique-paq-8-accessoire-a-porter-pour-anniversaires-8535395p.html",
-    "sku": "8535395",
-    "availability": "Il n’en reste que 1 #853-5395-0"
-  },
-  {
-    "title": "Filtre HEPA rechange pour aspirateur portatif Dirt Devil F105",
-    "image": "https://media-www.canadiantire.ca/product/living/cleaning/vacuums-and-floorcare/0439454/dirt-devil-f105-hand-vacuum-filter-f3071fee-65a1-4234-b7f9-be4dcea5870f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "title": "Pieds de rechange Drive Medical pour les cannes HurryCane Freedom, Go & HurryBright, noir, paq. 3",
+    "image": "https://media-www.canadiantire.ca/product/living/personal-garment-care/personal-care/0439190/hurrycane-replacement-foot-18fc9837-43be-402b-ad91-fc18c771fabd-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 16.99,
     "salePrice": 4.93,
     "store": "Canadian Tire",
     "city": "Greenwood, NS",
     "branch": "Greenwood, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/filtre-hepa-rechange-pour-aspirateur-portatif-dirt-devil-f105-0439454p.html",
-    "sku": "0439454",
-    "availability": "Il n’en reste que 1 #043-9454-4"
-  },
-  {
-    "title": "Serviettes pour boissons Achievement is Key",
-    "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-seasonal/party-city-micro-season-decor/8549451/achievement-is-key-luncheon-napkin-6a6d7292-089b-4e6e-b900-700544f56af0-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 9.99,
-    "salePrice": 2.93,
-    "store": "Canadian Tire",
-    "city": "Greenwood, NS",
-    "branch": "Greenwood, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/serviettes-pour-boissons-achievement-is-key-8549454p.html",
-    "sku": "8549454",
-    "availability": "13 En Stock#854-9454-4"
-  },
-  {
-    "title": "Émerillon en laiton South Bend, taille 10, paq. 7",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0779675/south-bend-snap-swivel-brass-size-10-977b7c5a-8535-4f3e-a412-b21492d77d19-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 2.99,
-    "salePrice": 1.43,
-    "store": "Canadian Tire",
-    "city": "Greenwood, NS",
-    "branch": "Greenwood, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/emerillon-en-laiton-south-bend-taille-10-paq-7-0779675p.html",
-    "sku": "0779675",
-    "availability": "35 En Stock#077-9675-8"
-  },
-  {
-    "title": "Peinture de retouche Dupli-Color Scratch Fix All-in-1 Exact-Match pour automobile, or ensoleillé métallisé (BP)",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-body-repair/0474957/scratch-fix-ford-sunburst-gold-m-all-in-1-6209a307-6d35-412d-b563-86a29b36018e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 28.99,
-    "salePrice": 6.93,
-    "store": "Canadian Tire",
-    "city": "Greenwood, NS",
-    "branch": "Greenwood, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/peinture-de-retouche-dupli-color-scratch-fix-all-in-1-exact-match-pour-automobile-or-ensoleille-metallise-bp-0474957p.html",
-    "sku": "0474957",
-    "availability": "Il n’en reste que 1 #047-4957-0"
-  },
-  {
-    "title": "Hameçon triple South Bend, taille 16, paq. 4",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0779757/south-bend-treble-hook-bronze-pack-4-size-16-2a219cb7-e3c4-499f-9bb2-4627eeca41df-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 2.99,
-    "salePrice": 1.43,
-    "store": "Canadian Tire",
-    "city": "Greenwood, NS",
-    "branch": "Greenwood, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/hamecon-triple-south-bend-taille-16-paq-4-0779757p.html",
-    "sku": "0779757",
-    "availability": "Il n’en reste que 1 #077-9757-4"
-  },
-  {
-    "title": "Flotteur à bouton-pressoir, 1,5 po, paq. 2",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0782908/danielson-snap-on-float-red-white-1-5-2-pack-31a76191-c1c7-49ba-a1e9-68df59c08607-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 1.49,
-    "salePrice": 0.73,
-    "store": "Canadian Tire",
-    "city": "Greenwood, NS",
-    "branch": "Greenwood, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/flotteur-a-bouton-pressoir-1-5-po-paq-2-0782908p.html",
-    "sku": "0782908",
-    "availability": "11 En Stock#078-2908-6"
-  },
-  {
-    "title": "Support de remorque bloc CAMCO 44636, plastique, jaune, paq. 5",
-    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0401907/block-tongue-jack-stand-83f0fe72-a842-45f9-8d50-263051a19802-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 9.99,
-    "salePrice": 4.99,
-    "store": "Canadian Tire",
-    "city": "Greenwood, NS",
-    "branch": "Greenwood, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/support-de-remorque-bloc-camco-44636-plastique-jaune-paq-5-0401907p.html",
-    "sku": "0401907",
-    "availability": "16 En Stock#040-1907-2"
+    "url": "https://www.canadiantire.ca/fr/pdp/pieds-de-rechange-drive-medical-pour-les-cannes-hurrycane-freedom-go-hurrybright-noir-paq-3-0439190p.html",
+    "sku": "0439190",
+    "availability": "Il n’en reste que 1 #043-9190-0"
   }
 ]
