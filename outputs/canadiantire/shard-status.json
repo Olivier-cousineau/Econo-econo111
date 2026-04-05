@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-04-05T08:44:00.298Z",
+  "generatedAt": "2026-04-05T11:16:13.218Z",
   "stores": [
     {
-      "id": "456",
-      "city": "Gaspe, QC",
+      "id": "224",
+      "city": "Halifax - Bedford, NS",
       "status": "committed",
-      "details": "94 produits"
+      "details": "131 produits"
     },
     {
-      "id": "95",
-      "city": "Sault Ste. Marie, ON",
+      "id": "465",
+      "city": "Halifax - Bayers Lake, NS",
       "status": "committed",
-      "details": "18 produits"
+      "details": "76 produits"
     },
     {
-      "id": "618",
-      "city": "Tantallon, NS",
-      "status": "committed",
-      "details": "52 produits"
-    },
-    {
-      "id": "55",
-      "city": "Leamington, ON",
-      "status": "committed",
-      "details": "103 produits"
-    },
-    {
-      "id": "199",
-      "city": "Windsor East, ON",
-      "status": "committed",
-      "details": "93 produits"
-    },
-    {
-      "id": "172",
-      "city": "Essex, ON",
+      "id": "121",
+      "city": "Windsor University Plaza, ON",
       "status": "committed",
       "details": "84 produits"
     },
     {
-      "id": "289",
-      "city": "Halifax - Lwr. Sackville, NS",
+      "id": "186",
+      "city": "Halifax - Spryfield, NS",
       "status": "committed",
-      "details": "57 produits"
+      "details": "74 produits"
     },
     {
-      "id": "236",
-      "city": "Windsor South, ON",
+      "id": "619",
+      "city": "Elmsdale, NS",
       "status": "committed",
-      "details": "86 produits"
+      "details": "45 produits"
+    },
+    {
+      "id": "44",
+      "city": "Halifax, NS",
+      "status": "committed",
+      "details": "126 produits"
+    },
+    {
+      "id": "41",
+      "city": "Dartmouth Crossing, NS",
+      "status": "committed",
+      "details": "50 produits"
+    },
+    {
+      "id": "436",
+      "city": "Halifax - Cole Harbour, NS",
+      "status": "committed",
+      "details": "50 produits"
     }
   ],
   "failedTwice": [],
