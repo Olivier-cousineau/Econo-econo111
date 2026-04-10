@@ -1,60 +1,55 @@
 {
-  "generatedAt": "2026-04-10T19:56:09.619Z",
+  "generatedAt": "2026-04-10T22:36:33.360Z",
   "stores": [
     {
-      "id": "237",
-      "city": "Woodbridge, ON",
+      "id": "197",
+      "city": "Bolton, ON",
       "status": "committed",
-      "details": "118 produits"
+      "details": "88 produits"
     },
     {
-      "id": "182",
-      "city": "West Toronto (Stockyards), ON",
+      "id": "219",
+      "city": "Grand Falls, NB",
       "status": "committed",
-      "details": "76 produits"
+      "details": "56 produits"
     },
     {
-      "id": "119",
-      "city": "Weston Road & 401, ON",
+      "id": "70",
+      "city": "The Queensway, ON",
       "status": "committed",
-      "details": "115 produits"
+      "details": "85 produits"
     },
     {
-      "id": "137",
-      "city": "Woodstock, NB",
+      "id": "152",
+      "city": "Miss. Dixie & Dundas, ON",
       "status": "committed",
-      "details": "55 produits"
+      "details": "91 produits"
     },
     {
-      "id": "294",
-      "city": "Etobicoke, Albion & Kipling, ON",
-      "status": "committed",
-      "details": "103 produits"
-    },
-    {
-      "id": "242",
-      "city": "Rexdale, ON",
-      "status": "failed_twice",
-      "details": "failed twice – accepted"
-    },
-    {
-      "id": "1",
-      "city": "Alliston, ON",
+      "id": "71",
+      "city": "Niagara Falls North, ON",
       "status": "committed",
       "details": "99 produits"
     },
     {
-      "id": "652",
-      "city": "Wasaga Beach, ON",
+      "id": "305",
+      "city": "Brampton Bramalea, ON",
+      "status": "committed",
+      "details": "172 produits"
+    },
+    {
+      "id": "162",
+      "city": "St. Catharines N., ON",
+      "status": "committed",
+      "details": "66 produits"
+    },
+    {
+      "id": "33",
+      "city": "Fort Erie, ON",
       "status": "committed",
       "details": "56 produits"
     }
   ],
-  "failedTwice": [
-    {
-      "id": "242",
-      "city": "Rexdale, ON"
-    }
-  ],
+  "failedTwice": [],
   "retriedAndSucceeded": []
 }
