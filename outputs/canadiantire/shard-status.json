@@ -1,55 +1,60 @@
 {
-  "generatedAt": "2026-04-10T16:19:51.929Z",
+  "generatedAt": "2026-04-10T18:08:03.588Z",
   "stores": [
     {
-      "id": "446",
-      "city": "Bradford, ON",
+      "id": "321",
+      "city": "Dufferin & 407, ON",
+      "status": "committed",
+      "details": "94 produits"
+    },
+    {
+      "id": "150",
+      "city": "Toronto, Yonge & Church, ON",
+      "status": "committed",
+      "details": "84 produits"
+    },
+    {
+      "id": "485",
+      "city": "Dufferin & Finch Auto Ctr, ON",
+      "status": "committed",
+      "details": "32 produits"
+    },
+    {
+      "id": "600",
+      "city": "Toronto Eaton Centre, ON",
+      "status": "committed",
+      "details": "87 produits"
+    },
+    {
+      "id": "19",
+      "city": "Lawrence & Allen Expwy, ON",
+      "status": "committed",
+      "details": "46 produits"
+    },
+    {
+      "id": "653",
+      "city": "Maple, ON",
+      "status": "committed",
+      "details": "80 produits (after retry)"
+    },
+    {
+      "id": "621",
+      "city": "Liberty Village, ON",
       "status": "committed",
       "details": "119 produits"
     },
     {
-      "id": "697",
-      "city": "Richmond Hill North, ON",
+      "id": "214",
+      "city": "Eglinton & Caledonia, Toronto, ON",
       "status": "committed",
-      "details": "101 produits"
-    },
-    {
-      "id": "87",
-      "city": "Richmond Hill, ON",
-      "status": "committed",
-      "details": "114 produits"
-    },
-    {
-      "id": "273",
-      "city": "Toronto Main & Danforth, ON",
-      "status": "committed",
-      "details": "102 produits"
-    },
-    {
-      "id": "192",
-      "city": "Sheppard Ave., ON",
-      "status": "committed",
-      "details": "105 produits"
-    },
-    {
-      "id": "126",
-      "city": "Yonge & Steeles, ON",
-      "status": "committed",
-      "details": "135 produits"
-    },
-    {
-      "id": "459",
-      "city": "Eglinton & Laird, ON",
-      "status": "committed",
-      "details": "69 produits"
-    },
-    {
-      "id": "654",
-      "city": "Leslie & Lake Shore, ON",
-      "status": "committed",
-      "details": "100 produits"
+      "details": "86 produits"
     }
   ],
   "failedTwice": [],
-  "retriedAndSucceeded": []
+  "retriedAndSucceeded": [
+    {
+      "id": "653",
+      "city": "Maple, ON"
+    }
+  ]
 }
