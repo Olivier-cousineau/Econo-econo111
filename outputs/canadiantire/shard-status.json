@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-04-10T08:03:16.278Z",
+  "generatedAt": "2026-04-10T16:19:51.929Z",
   "stores": [
     {
-      "id": "74",
-      "city": "Orillia, ON",
+      "id": "446",
+      "city": "Bradford, ON",
       "status": "committed",
-      "details": "140 produits"
+      "details": "119 produits"
     },
     {
-      "id": "127",
-      "city": "Uxbridge, ON",
+      "id": "697",
+      "city": "Richmond Hill North, ON",
       "status": "committed",
-      "details": "57 produits"
+      "details": "101 produits"
     },
     {
-      "id": "160",
-      "city": "Ajax, ON",
+      "id": "87",
+      "city": "Richmond Hill, ON",
       "status": "committed",
-      "details": "79 produits"
+      "details": "114 produits"
     },
     {
-      "id": "324",
-      "city": "Pickering, ON",
+      "id": "273",
+      "city": "Toronto Main & Danforth, ON",
       "status": "committed",
       "details": "102 produits"
     },
     {
-      "id": "102",
-      "city": "Sturgeon Falls, ON",
+      "id": "192",
+      "city": "Sheppard Ave., ON",
       "status": "committed",
-      "details": "57 produits"
+      "details": "105 produits"
     },
     {
-      "id": "134",
-      "city": "Keswick, ON",
+      "id": "126",
+      "city": "Yonge & Steeles, ON",
       "status": "committed",
-      "details": "89 produits"
+      "details": "135 produits"
     },
     {
-      "id": "427",
-      "city": "Scarborough East, ON",
+      "id": "459",
+      "city": "Eglinton & Laird, ON",
       "status": "committed",
-      "details": "60 produits"
+      "details": "69 produits"
     },
     {
-      "id": "280",
-      "city": "Stouffville, ON",
+      "id": "654",
+      "city": "Leslie & Lake Shore, ON",
       "status": "committed",
-      "details": "83 produits"
+      "details": "100 produits"
     }
   ],
   "failedTwice": [],
