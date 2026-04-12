@@ -9,7 +9,7 @@
     "branch": "Amherst, NS",
     "url": "https://www.canadiantire.ca/fr/pdp/affute-couteaux-a-3-etapes-master-chef-2421029p.html",
     "sku": "2421029",
-    "availability": "Il n’en reste que 4 #242-1029-2"
+    "availability": "Il n’en reste que 3 #242-1029-2"
   },
   {
     "title": "Machine à espresso semi-automatique à un toucher avec mousseur à lait Mr. Coffee",
@@ -21,19 +21,7 @@
     "branch": "Amherst, NS",
     "url": "https://www.canadiantire.ca/fr/pdp/machine-a-espresso-semi-automatique-a-un-toucher-avec-mousseur-a-lait-mr-coffee-0430385p.html",
     "sku": "0430385",
-    "availability": "Il n’en reste que 2 #043-0385-2"
-  },
-  {
-    "title": "Ampoules à DEL à intensité variable à culot E12 NOMA B10, 2700K, 350 lumens, blanc chaud, 40 W, paq. 2",
-    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/light-bulbs/0529347/noma-2-pack-40w-e12-soft-white-led-lightbulbs-2abc2edf-7b69-449d-b49f-8024c6332e19-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 12.99,
-    "salePrice": 1.93,
-    "store": "Canadian Tire",
-    "city": "Amherst, NS",
-    "branch": "Amherst, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/ampoules-a-del-a-intensite-variable-a-culot-e12-noma-b10-2700k-350-lumens-blanc-chaud-40-w-paq-2-0529347p.html",
-    "sku": "0529347",
-    "availability": "17 En Stock#052-9347-8"
+    "availability": "Il n’en reste que 1 #043-0385-2"
   },
   {
     "title": "Service de vaisselle en grès à rebord orné CANVAS Gatestone, blanc, paq. 12",
@@ -60,30 +48,6 @@
     "availability": ""
   },
   {
-    "title": "Linges de cuisine tout usage PADERNO, gris, paq. 5",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/dining-and-entertaining/1427792/paderno-black-chambray-gift-set-17cfd0f4-09b7-45df-97b5-40da8725d7ea-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 26.99,
-    "salePrice": 11.93,
-    "store": "Canadian Tire",
-    "city": "Amherst, NS",
-    "branch": "Amherst, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/linges-de-cuisine-tout-usage-paderno-gris-paq-5-1427792p.html",
-    "sku": "1427792",
-    "availability": "Il n’en reste que 1 #142-7792-4"
-  },
-  {
-    "title": "Décanteur et verres whisky en verre Trudeau, 5 pièces",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/dining-and-entertaining/1426174/trudeau-whiskey-set-5-pc-19b99451-15bf-4b77-b69f-9d77f38abab3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 39.99,
-    "salePrice": 19.93,
-    "store": "Canadian Tire",
-    "city": "Amherst, NS",
-    "branch": "Amherst, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/decanteur-et-verres-whisky-en-verre-trudeau-5-pieces-1426174p.html",
-    "sku": "1426174",
-    "availability": "Il n’en reste que 6 #142-6174-2"
-  },
-  {
     "title": "Tapis de couloir d'intérieur et d'extérieur CANVAS Elfin, 3 x 5 pi",
     "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680045/elfin-outdoor-runner-rug-f81ffe3f-6368-4f13-8809-4b772e430737-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 29.99,
@@ -96,28 +60,40 @@
     "availability": "Il n’en reste que 1 #068-0045-4"
   },
   {
-    "title": "Caméra de tableau de bord Bluehive BH100 1080p",
-    "image": "https://media-www.canadiantire.ca/product/automotive/electronics/auto-electronics/0350748/bluehive-bh100-1080p-dash-cam-688b0dea-1d23-4695-afdd-1f363c72e2b0-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 159.99,
+    "title": "Projecteur à DEL de 1 000 lumens Mastercraft pour service intense",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0372426/mastercraft-1000lumen-heavy-duty-spotlight-c0d329db-7a7e-4302-a634-a31ceb039174-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 149.99,
+    "salePrice": 54.93,
+    "store": "Canadian Tire",
+    "city": "Amherst, NS",
+    "branch": "Amherst, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/projecteur-a-del-de-1-000-lumens-mastercraft-pour-service-intense-0372426p.html",
+    "sku": "0372426",
+    "availability": "Il n’en reste que 2 #037-2426-0"
+  },
+  {
+    "title": "Table de soccer de table Ambassador, fini bois, 48 po",
+    "image": "https://media-www.canadiantire.ca/product/playing/team-sports-and-golf/sports-equipment-accessories/1840106/-48-foosball--7b2776e4-d562-4d02-bb52-ff449d124dde-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 169.99,
+    "salePrice": 79.93,
+    "store": "Canadian Tire",
+    "city": "Amherst, NS",
+    "branch": "Amherst, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/table-de-soccer-de-table-ambassador-fini-bois-48-po-1840106p.html",
+    "sku": "1840106",
+    "availability": "Il n’en reste que 2 #184-0106-2"
+  },
+  {
+    "title": "Service de vaisselle en grès recyclé CANVAS Silverspring pour 4 personnes, bleu/gris, paq. 12",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/dining-and-entertaining/2421149/canvas-60-pc-beaded-edge-flatware-set-25c80336-610c-43b1-9264-d0fb36e32c14-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 99.99,
     "salePrice": 49.93,
     "store": "Canadian Tire",
     "city": "Amherst, NS",
     "branch": "Amherst, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/camera-de-tableau-de-bord-bluehive-bh100-1080p-0350748p.html",
-    "sku": "0350748",
-    "availability": "Il n’en reste que 2 #035-0748-0"
-  },
-  {
-    "title": "Papier abrasif 3M Wetordry, 4 x 9 po, paq. 5",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-body-repair/0475842/3m-imperial-wetordry-sandpaper-p400-3f901c4f-8345-4630-9155-5ec371ea3509-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 10.99,
-    "salePrice": 4.93,
-    "store": "Canadian Tire",
-    "city": "Amherst, NS",
-    "branch": "Amherst, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/papier-abrasif-3m-wetordry-4-x-9-po-paq-5-0475844p.html",
-    "sku": "0475844",
-    "availability": ""
+    "url": "https://www.canadiantire.ca/fr/pdp/service-de-vaisselle-en-gres-recycle-canvas-silverspring-pour-4-personnes-bleu-gris-paq-12-2421120p.html",
+    "sku": "2421120",
+    "availability": "Il n’en reste que 7 #242-1120-2"
   },
   {
     "title": "Interrupteur à bascule silencieux unipolaire CA Decorator, 15 A, 120 V, mise à la terre, qualité résidentielle, couleurs variées",
@@ -132,135 +108,99 @@
     "availability": ""
   },
   {
-    "title": "Émerillon Danielson triple",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0783499/red-wolf-swivel-assortment-25-pack-ce2b024b-14e1-4986-a554-7158dc1934f9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 4.49,
-    "salePrice": 2.23,
+    "title": "Assortiment d'hameçons montés Danielson, paq. 12",
+    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0783244/danielson-baitholder-assortment-12-pack-fbcdbda3-53fa-49d3-b114-250a7331a46d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 6.49,
+    "salePrice": 3.23,
     "store": "Canadian Tire",
     "city": "Amherst, NS",
     "branch": "Amherst, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/emerillon-danielson-triple-0783499p.html",
-    "sku": "0783499",
-    "availability": "Il n’en reste que 1 #078-3499-2"
+    "url": "https://www.canadiantire.ca/fr/pdp/assortiment-d-hamecons-montes-danielson-paq-12-0783244p.html",
+    "sku": "0783244",
+    "availability": "Il n’en reste que 3 #078-3244-8"
   },
   {
-    "title": "Interrupteur silencieux à bascule 3 voies CA Decorator, 15 A, 120 V, aucune mise à la terre, qualité résidentielle, couleurs variées",
-    "image": "undefined?im=whresize&wid=200&hei=200",
-    "price": 4.79,
-    "salePrice": 1.93,
+    "title": "Tiges de siège pour bateau en aluminium brossé Lock ’N-Pin, avec poteau de siège, 11 po",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0794406/seat-post-889a9bb6-1fba-49b5-ad32-53f39a3d3565-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 29.99,
+    "salePrice": 12.93,
     "store": "Canadian Tire",
     "city": "Amherst, NS",
     "branch": "Amherst, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/interrupteur-silencieux-a-bascule-3-voies-ca-decorator-15-a-120-v-aucune-mise-a-la-terre-qualite-residentielle-couleurs-variees-0528225p.html",
-    "sku": "0528225",
-    "availability": ""
+    "url": "https://www.canadiantire.ca/fr/pdp/tiges-de-siege-pour-bateau-en-aluminium-brosse-lock-n-pin-avec-poteau-de-siege-11-po-0794406p.html",
+    "sku": "0794406",
+    "availability": "Il n’en reste que 1 #079-4406-6"
   },
   {
-    "title": "Pot de peinture pliable Handy, 0,5 l, rouge",
-    "image": "https://media-www.canadiantire.ca/product/fixing/paint/paint-accessories/0492544/handy-paint-collapsible-snap-cup-7576f265-9312-439f-9ae6-d8021ebac517-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 10.99,
-    "salePrice": 4.93,
+    "title": "Garde-boues avant et arrière personnalisés Husky Liners 58186 pour camion Dodge Ram avec élargisseur d’ailes d’origine, 2009 à 2018, paquet de 4",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0376238/husky-mud-flaps-dodge-ram-with-oem-fender-flares-09-18-4pc-867a7f00-fb2d-4ac8-8ab4-bc9c9099971b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 119.99,
+    "salePrice": 38.93,
     "store": "Canadian Tire",
     "city": "Amherst, NS",
     "branch": "Amherst, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/pot-de-peinture-pliable-handy-0-5-l-rouge-0492544p.html",
-    "sku": "0492544",
-    "availability": "Il n’en reste que 4 #049-2544-0"
+    "url": "https://www.canadiantire.ca/fr/pdp/garde-boues-avant-et-arriere-personnalises-husky-liners-58186-pour-camion-dodge-ram-avec-elargisseur-d-ailes-d-origine-2009-a-2018-paquet-de-4-0376238p.html",
+    "sku": "0376238",
+    "availability": "Il n’en reste que 1 #037-6238-4"
   },
   {
-    "title": "Appât Xcalibur Rigged Tubes, 3 po",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0778915/xcalibur-rigged-tubes-3-chartreuse-flake-7e9fc7b9-6f99-47f5-838d-23c514caea26-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 5.99,
-    "salePrice": 2.93,
+    "title": "Peinture de retouche Scratch Fix All-in-1, Ocre des prairies pâle (M) (BA)",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-body-repair/0474970/scratch-fix-ford-lt-prairie-tan-m-all-in-1-98164696-3789-4c44-bd6e-c894bc264f76.png?im=whresize&wid=200&hei=200",
+    "price": 28.99,
+    "salePrice": 9.93,
     "store": "Canadian Tire",
     "city": "Amherst, NS",
     "branch": "Amherst, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/appat-xcalibur-rigged-tubes-3-po-0778913p.html",
-    "sku": "0778913",
-    "availability": ""
+    "url": "https://www.canadiantire.ca/fr/pdp/peinture-de-retouche-scratch-fix-all-in-1-ocre-des-prairies-pale-m-ba-0474970p.html",
+    "sku": "0474970",
+    "availability": "Il n’en reste que 1 #047-4970-6"
   },
   {
-    "title": "Support à planches MotoMaster E-Track",
-    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/tarps-cords/0402920/e-track-board-holder-519ff0be-624d-4d95-885b-2dcb78902e1a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 7.49,
-    "salePrice": 2.93,
-    "store": "Canadian Tire",
-    "city": "Amherst, NS",
-    "branch": "Amherst, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/support-a-planches-motomaster-e-track-0402920p.html",
-    "sku": "0402920",
-    "availability": "Il n’en reste que 1 #040-2920-2"
-  },
-  {
-    "title": "Cuiller Danielson Renegade, nickel rouge 1/2 oz",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0782228/danielson-renegade-spoon-nickel-red-1-2oz-cae5c361-6287-4161-a634-082017de831b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "title": "Cuillère tournante Yakima Slim Eli, n° 1",
+    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0787129/slim-eli-spinner-1-gold-6df686c8-ccc1-4259-94c8-09e539123ca2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 5.49,
     "salePrice": 2.73,
     "store": "Canadian Tire",
     "city": "Amherst, NS",
     "branch": "Amherst, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/cuiller-danielson-renegade-nickel-rouge-1-2-oz-0782228p.html",
-    "sku": "0782228",
+    "url": "https://www.canadiantire.ca/fr/pdp/cuillere-tournante-yakima-slim-eli-n-1-0787129p.html",
+    "sku": "0787129",
     "availability": ""
   },
   {
-    "title": "Brosse à manchette en nylon pour doublure de caisse Sure Seal Dominion",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-body-repair/0479976/bedliner-nylon-scuff-brush-fb1198af-02e4-4e78-9992-2116f42c874b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 39.99,
-    "salePrice": 13.93,
+    "title": "Émerillon en laiton South Bend, taille 5, paq. 5",
+    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0779671/south-bend-snap-swivel-brass-size-5-e888d6c0-7e98-4fac-bab5-75081768efa3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 2.99,
+    "salePrice": 1.43,
     "store": "Canadian Tire",
     "city": "Amherst, NS",
     "branch": "Amherst, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/brosse-a-manchette-en-nylon-pour-doublure-de-caisse-sure-seal-dominion-0479976p.html",
-    "sku": "0479976",
-    "availability": "Il n’en reste que 1 #047-9976-4"
+    "url": "https://www.canadiantire.ca/fr/pdp/emerillon-en-laiton-south-bend-taille-5-paq-5-0779671p.html",
+    "sku": "0779671",
+    "availability": "Il n’en reste que 2 #077-9671-6"
   },
   {
-    "title": "Cuiller Danielson Hypocrite, 1 oz",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0782105/danielson-hyprocrite-spoon-red-white-1-2oz-91749a90-017e-462b-9892-d644c168d253-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 4.99,
-    "salePrice": 2.43,
+    "title": "Hameçon à ver à très grande ouverture Xcalibur",
+    "image": "undefined?im=whresize&wid=200&hei=200",
+    "price": 5.49,
+    "salePrice": 2.73,
     "store": "Canadian Tire",
     "city": "Amherst, NS",
     "branch": "Amherst, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/cuiller-danielson-hypocrite-1-oz-0782105p.html",
-    "sku": "0782105",
+    "url": "https://www.canadiantire.ca/fr/pdp/hamecon-a-ver-a-tres-grande-ouverture-xcalibur-0770371p.html",
+    "sku": "0770371",
     "availability": ""
   },
   {
-    "title": "Adaptateur à souffleuse de rechange Atlas pour tondeuse à éjection latérale",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/outdoor-tools/tractor-lawn-mower-snowthrower-parts/0606400/atlas-mower-blower-attachment-7275f242-c92a-4312-a7bb-d8e67b9e7b85-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 31.99,
-    "salePrice": 11.93,
+    "title": "Oeillets sans noeud pour pêche à la mouche South Bend, petit, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-accessories/0789628/south-bend-no-knot-eyelets-small-6837890e-4c0c-4c50-8166-fb2ea5a416fa-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 2.49,
+    "salePrice": 0.93,
     "store": "Canadian Tire",
     "city": "Amherst, NS",
     "branch": "Amherst, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/adaptateur-a-souffleuse-de-rechange-atlas-pour-tondeuse-a-ejection-laterale-0606400p.html",
-    "sku": "0606400",
-    "availability": "Il n’en reste que 1 #060-6400-8"
-  },
-  {
-    "title": "Costume Top Gun, hommes, combinaison de vol verte, tailles variées",
-    "image": "https://media-www.canadiantire.ca/product/automotive/party-city-seasonal/party-city-halloween-costumes/8510128/832-adult-top-gun-flightsuit-costume-standard-817eb9da-2163-4045-be25-04d48cb2bcb0-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 69.99,
-    "salePrice": 34.99,
-    "store": "Canadian Tire",
-    "city": "Amherst, NS",
-    "branch": "Amherst, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/costume-top-gun-hommes-combinaison-de-vol-verte-tailles-variees-8510128p.html",
-    "sku": "8510128",
-    "availability": ""
-  },
-  {
-    "title": "Garde-boues avant et arrière personnalisés Husky Liners 56886 pour camion Chevrolet Silverado, 2014 à 2018, paquet de 4",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0376233/husky-custom-fit-mud-flaps-chevy-silverado-14-18-4pc-b14ed095-5a85-4cd4-8a63-2dbedb44aefd-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 119.99,
-    "salePrice": 48.93,
-    "store": "Canadian Tire",
-    "city": "Amherst, NS",
-    "branch": "Amherst, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/garde-boues-avant-et-arriere-personnalises-husky-liners-56886-pour-camion-chevrolet-silverado-2014-a-2018-paquet-de-4-0376233p.html",
-    "sku": "0376233",
-    "availability": "Il n’en reste que 1 #037-6233-4"
+    "url": "https://www.canadiantire.ca/fr/pdp/oeillets-sans-noeud-pour-peche-a-la-mouche-south-bend-petit-paq-2-0789628p.html",
+    "sku": "0789628",
+    "availability": "Il n’en reste que 2 #078-9628-0"
   }
 ]
