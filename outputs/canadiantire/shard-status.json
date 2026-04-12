@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-04-11T22:56:14.152Z",
+  "generatedAt": "2026-04-12T08:03:52.507Z",
   "stores": [
     {
-      "id": "141",
-      "city": "Exeter, ON",
+      "id": "178",
+      "city": "Kapuskasing, ON",
       "status": "committed",
-      "details": "69 produits"
+      "details": "71 produits"
     },
     {
-      "id": "494",
-      "city": "London Auto Centre, ON",
+      "id": "307",
+      "city": "Sept-Iles, QC",
       "status": "committed",
-      "details": "13 produits"
+      "details": "108 produits"
     },
     {
-      "id": "58",
-      "city": "London South, ON",
+      "id": "21",
+      "city": "Chatham, ON",
       "status": "committed",
-      "details": "91 produits"
+      "details": "58 produits"
     },
     {
-      "id": "106",
-      "city": "Sussex, NB",
+      "id": "135",
+      "city": "Wallaceburg, ON",
       "status": "committed",
-      "details": "56 produits"
+      "details": "50 produits"
     },
     {
-      "id": "25",
-      "city": "Digby, NS",
+      "id": "13",
+      "city": "Bridgewater, NS",
+      "status": "committed",
+      "details": "104 produits"
+    },
+    {
+      "id": "3",
+      "city": "Amherst, NS",
+      "status": "committed",
+      "details": "17 produits"
+    },
+    {
+      "id": "215",
+      "city": "Tilbury, ON",
       "status": "committed",
       "details": "40 produits"
     },
     {
-      "id": "125",
-      "city": "Yarmouth, NS",
+      "id": "132",
+      "city": "Summerside, PEI 474 Granville Street",
       "status": "committed",
-      "details": "31 produits"
-    },
-    {
-      "id": "425",
-      "city": "London North, ON",
-      "status": "committed",
-      "details": "49 produits"
-    },
-    {
-      "id": "208",
-      "city": "London West, ON",
-      "status": "committed",
-      "details": "74 produits"
+      "details": "50 produits"
     }
   ],
   "failedTwice": [],
