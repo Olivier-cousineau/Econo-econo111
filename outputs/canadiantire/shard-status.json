@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-04-15T08:43:07.497Z",
+  "generatedAt": "2026-04-16T14:05:05.815Z",
   "stores": [
     {
-      "id": "271",
-      "city": "St. Jerome, QC",
+      "id": "423",
+      "city": "Donnacona, QC",
       "status": "committed",
-      "details": "334 produits"
+      "details": "99 produits"
     },
     {
-      "id": "649",
-      "city": "Blainville, QC",
+      "id": "80",
+      "city": "Perth, ON",
       "status": "committed",
-      "details": "150 produits"
+      "details": "66 produits"
     },
     {
-      "id": "418",
-      "city": "Rosemere, QC",
+      "id": "352",
+      "city": "La Tuque, QC",
       "status": "committed",
-      "details": "95 produits"
+      "details": "54 produits"
     },
     {
-      "id": "641",
-      "city": "La Plaine, QC",
+      "id": "86",
+      "city": "Renfrew, ON",
       "status": "committed",
-      "details": "108 produits"
+      "details": "50 produits"
     },
     {
-      "id": "218",
-      "city": "St. Eustache, QC",
+      "id": "156",
+      "city": "Thetford Mines, QC",
       "status": "committed",
-      "details": "177 produits"
+      "details": "87 produits"
     },
     {
-      "id": "690",
-      "city": "Laval Fabreville, QC",
+      "id": "692",
+      "city": "Ancienne Lorette, QC",
       "status": "committed",
-      "details": "101 produits"
+      "details": "68 produits"
     },
     {
-      "id": "312",
-      "city": "Terrebonne, QC",
+      "id": "37",
+      "city": "Gananoque, ON",
       "status": "committed",
-      "details": "118 produits"
+      "details": "25 produits"
     },
     {
-      "id": "231",
-      "city": "Laval Vimont, QC",
+      "id": "624",
+      "city": "St. Romuald, QC",
       "status": "committed",
-      "details": "154 produits"
+      "details": "76 produits"
     }
   ],
   "failedTwice": [],
