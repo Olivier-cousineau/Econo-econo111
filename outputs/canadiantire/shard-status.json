@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-04-16T14:05:05.815Z",
+  "generatedAt": "2026-04-16T21:57:50.085Z",
   "stores": [
     {
-      "id": "423",
-      "city": "Donnacona, QC",
+      "id": "184",
+      "city": "Beauport, QC",
       "status": "committed",
-      "details": "99 produits"
+      "details": "34 produits"
     },
     {
-      "id": "80",
-      "city": "Perth, ON",
+      "id": "173",
+      "city": "St. Georges, QC",
       "status": "committed",
-      "details": "66 produits"
+      "details": "31 produits"
     },
     {
-      "id": "352",
-      "city": "La Tuque, QC",
+      "id": "694",
+      "city": "Kingston Division St., ON",
       "status": "committed",
-      "details": "54 produits"
+      "details": "65 produits"
     },
     {
-      "id": "86",
-      "city": "Renfrew, ON",
+      "id": "195",
+      "city": "Kingston, ON",
       "status": "committed",
-      "details": "50 produits"
+      "details": "52 produits"
     },
     {
-      "id": "156",
-      "city": "Thetford Mines, QC",
+      "id": "417",
+      "city": "Kingston Township, ON",
       "status": "committed",
-      "details": "87 produits"
+      "details": "37 produits"
     },
     {
-      "id": "692",
-      "city": "Ancienne Lorette, QC",
+      "id": "253",
+      "city": "Deep River, ON",
       "status": "committed",
-      "details": "68 produits"
+      "details": "28 produits"
     },
     {
-      "id": "37",
-      "city": "Gananoque, ON",
+      "id": "65",
+      "city": "Napanee, ON",
       "status": "committed",
-      "details": "25 produits"
+      "details": "34 produits"
     },
     {
-      "id": "624",
-      "city": "St. Romuald, QC",
+      "id": "180",
+      "city": "Montmagny, QC",
       "status": "committed",
-      "details": "76 produits"
+      "details": "59 produits"
     }
   ],
   "failedTwice": [],
