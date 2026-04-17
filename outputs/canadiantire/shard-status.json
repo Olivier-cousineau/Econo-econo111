@@ -1,55 +1,60 @@
 {
-  "generatedAt": "2026-04-17T17:42:43.211Z",
+  "generatedAt": "2026-04-17T20:02:03.282Z",
   "stores": [
     {
-      "id": "321",
-      "city": "Dufferin & 407, ON",
+      "id": "237",
+      "city": "Woodbridge, ON",
       "status": "committed",
-      "details": "54 produits"
+      "details": "55 produits"
     },
     {
-      "id": "150",
-      "city": "Toronto, Yonge & Church, ON",
+      "id": "182",
+      "city": "West Toronto (Stockyards), ON",
       "status": "committed",
-      "details": "95 produits"
+      "details": "86 produits"
     },
     {
-      "id": "485",
-      "city": "Dufferin & Finch Auto Ctr, ON",
+      "id": "119",
+      "city": "Weston Road & 401, ON",
       "status": "committed",
-      "details": "10 produits"
+      "details": "42 produits"
     },
     {
-      "id": "600",
-      "city": "Toronto Eaton Centre, ON",
+      "id": "137",
+      "city": "Woodstock, NB",
       "status": "committed",
-      "details": "77 produits"
+      "details": "6 produits"
     },
     {
-      "id": "19",
-      "city": "Lawrence & Allen Expwy, ON",
+      "id": "294",
+      "city": "Etobicoke, Albion & Kipling, ON",
       "status": "committed",
-      "details": "14 produits"
+      "details": "1 produits"
     },
     {
-      "id": "653",
-      "city": "Maple, ON",
-      "status": "committed",
-      "details": "27 produits"
+      "id": "242",
+      "city": "Rexdale, ON",
+      "status": "failed_twice",
+      "details": "failed twice – accepted"
     },
     {
-      "id": "621",
-      "city": "Liberty Village, ON",
+      "id": "1",
+      "city": "Alliston, ON",
       "status": "committed",
-      "details": "22 produits"
+      "details": "8 produits"
     },
     {
-      "id": "214",
-      "city": "Eglinton & Caledonia, Toronto, ON",
+      "id": "652",
+      "city": "Wasaga Beach, ON",
       "status": "committed",
-      "details": "50 produits"
+      "details": "7 produits"
     }
   ],
-  "failedTwice": [],
+  "failedTwice": [
+    {
+      "id": "242",
+      "city": "Rexdale, ON"
+    }
+  ],
   "retriedAndSucceeded": []
 }
