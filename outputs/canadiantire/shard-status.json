@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-04-23T10:15:08.032Z",
+  "generatedAt": "2026-04-23T12:42:15.169Z",
   "stores": [
     {
-      "id": "196",
-      "city": "Maniwaki, QC",
+      "id": "423",
+      "city": "Donnacona, QC",
       "status": "committed",
-      "details": "62 produits"
+      "details": "34 produits"
     },
     {
-      "id": "85",
-      "city": "Prescott, ON",
+      "id": "80",
+      "city": "Perth, ON",
       "status": "committed",
-      "details": "72 produits"
+      "details": "27 produits"
     },
     {
-      "id": "348",
-      "city": "Sherbrooke Fleurimont, QC",
+      "id": "352",
+      "city": "La Tuque, QC",
       "status": "committed",
-      "details": "58 produits"
+      "details": "39 produits"
     },
     {
-      "id": "18",
-      "city": "Carleton Place, ON",
+      "id": "86",
+      "city": "Renfrew, ON",
       "status": "committed",
-      "details": "83 produits"
+      "details": "27 produits"
     },
     {
-      "id": "14",
-      "city": "Brockville, ON",
+      "id": "156",
+      "city": "Thetford Mines, QC",
       "status": "committed",
-      "details": "53 produits"
+      "details": "17 produits"
     },
     {
-      "id": "98",
-      "city": "Smiths Falls, ON",
-      "status": "committed",
-      "details": "21 produits"
-    },
-    {
-      "id": "4",
-      "city": "Arnprior, ON",
-      "status": "committed",
-      "details": "12 produits"
-    },
-    {
-      "id": "99",
-      "city": "Shawville, QC",
+      "id": "692",
+      "city": "Ancienne Lorette, QC",
       "status": "committed",
       "details": "14 produits"
+    },
+    {
+      "id": "37",
+      "city": "Gananoque, ON",
+      "status": "committed",
+      "details": "3 produits"
+    },
+    {
+      "id": "624",
+      "city": "St. Romuald, QC",
+      "status": "committed",
+      "details": "29 produits"
     }
   ],
   "failedTwice": [],
