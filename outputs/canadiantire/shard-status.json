@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-04-25T13:55:48.524Z",
+  "generatedAt": "2026-04-25T15:38:31.658Z",
   "stores": [
     {
-      "id": "139",
-      "city": "Kitchener East, ON",
+      "id": "674",
+      "city": "Waterloo West, ON",
       "status": "committed",
-      "details": "110 produits"
+      "details": "44 produits"
     },
     {
-      "id": "616",
-      "city": "Elmira, ON",
+      "id": "309",
+      "city": "Oromocto, NB",
+      "status": "committed",
+      "details": "49 produits"
+    },
+    {
+      "id": "43",
+      "city": "Paris, ON",
+      "status": "committed",
+      "details": "38 produits"
+    },
+    {
+      "id": "315",
+      "city": "Matane, QC",
       "status": "committed",
       "details": "82 produits"
     },
     {
-      "id": "53",
-      "city": "Kitchener South, ON",
+      "id": "57",
+      "city": "Listowel, ON",
       "status": "committed",
-      "details": "74 produits"
+      "details": "59 produits"
     },
     {
-      "id": "664",
-      "city": "Brantford North, ON",
+      "id": "97",
+      "city": "Simcoe, ON",
       "status": "committed",
-      "details": "77 produits"
+      "details": "42 produits"
     },
     {
-      "id": "265",
-      "city": "Baie-Comeau, QC",
+      "id": "269",
+      "city": "Port Elgin, ON",
       "status": "committed",
-      "details": "46 produits"
+      "details": "64 produits"
     },
     {
-      "id": "251",
-      "city": "Waterloo, ON",
+      "id": "22",
+      "city": "Espanola, ON",
       "status": "committed",
-      "details": "97 produits"
-    },
-    {
-      "id": "420",
-      "city": "Kitchener West, ON",
-      "status": "committed",
-      "details": "94 produits"
-    },
-    {
-      "id": "46",
-      "city": "Hanover, ON",
-      "status": "committed",
-      "details": "83 produits"
+      "details": "29 produits"
     }
   ],
   "failedTwice": [],
