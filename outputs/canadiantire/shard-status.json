@@ -1,60 +1,55 @@
 {
-  "generatedAt": "2026-04-30T08:50:28.804Z",
+  "generatedAt": "2026-04-30T16:24:12.245Z",
   "stores": [
     {
-      "id": "290",
-      "city": "Ottawa Carling Ave, ON",
+      "id": "342",
+      "city": "Quebec Les Saules, QC",
       "status": "committed",
-      "details": "32 produits (after retry)"
+      "details": "70 produits"
     },
     {
-      "id": "442",
-      "city": "Barrhaven, ON",
-      "status": "committed",
-      "details": "25 produits"
-    },
-    {
-      "id": "272",
-      "city": "Ottawa Bells Cnrs, ON",
-      "status": "committed",
-      "details": "67 produits"
-    },
-    {
-      "id": "227",
-      "city": "Kemptville, ON",
-      "status": "committed",
-      "details": "52 produits"
-    },
-    {
-      "id": "240",
-      "city": "Magog, QC",
+      "id": "245",
+      "city": "Quebec Ste. Foy, QC",
       "status": "committed",
       "details": "54 produits"
     },
     {
-      "id": "457",
-      "city": "Kanata, ON",
+      "id": "79",
+      "city": "Pembroke, ON",
       "status": "committed",
-      "details": "33 produits"
+      "details": "52 produits"
     },
     {
-      "id": "243",
-      "city": "Victoriaville, QC",
+      "id": "405",
+      "city": "Lebourgneuf, QC",
       "status": "committed",
-      "details": "120 produits"
+      "details": "70 produits"
     },
     {
-      "id": "96",
-      "city": "Sherbrooke, QC",
+      "id": "101",
+      "city": "Quebec Vanier, QC",
       "status": "committed",
-      "details": "112 produits"
+      "details": "8 produits"
+    },
+    {
+      "id": "416",
+      "city": "Ste. Marie De Beauce, QC",
+      "status": "committed",
+      "details": "23 produits"
+    },
+    {
+      "id": "225",
+      "city": "Lac Megantic, QC",
+      "status": "committed",
+      "details": "20 produits"
+    },
+    {
+      "id": "165",
+      "city": "Levis, QC",
+      "status": "skipped",
+      "details": "nothing to commit"
     }
   ],
   "failedTwice": [],
-  "retriedAndSucceeded": [
-    {
-      "id": "290",
-      "city": "Ottawa Carling Ave, ON"
-    }
-  ]
+  "retriedAndSucceeded": []
 }
