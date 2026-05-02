@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-05-01T22:48:16.452Z",
+  "generatedAt": "2026-05-02T06:23:45.805Z",
   "stores": [
     {
-      "id": "197",
-      "city": "Bolton, ON",
+      "id": "159",
+      "city": "Georgetown, ON",
       "status": "committed",
-      "details": "29 produits"
+      "details": "34 produits"
     },
     {
-      "id": "219",
-      "city": "Grand Falls, NB",
+      "id": "73",
+      "city": "Orangeville, ON",
       "status": "committed",
-      "details": "22 produits"
+      "details": "74 produits"
     },
     {
-      "id": "70",
-      "city": "The Queensway, ON",
+      "id": "128",
+      "city": "Port Colborne, ON",
       "status": "committed",
-      "details": "36 produits"
+      "details": "55 produits"
     },
     {
-      "id": "152",
-      "city": "Miss. Dixie & Dundas, ON",
+      "id": "140",
+      "city": "Milton, ON",
       "status": "committed",
-      "details": "89 produits"
+      "details": "46 produits"
     },
     {
-      "id": "71",
-      "city": "Niagara Falls North, ON",
+      "id": "40",
+      "city": "Grimsby, ON",
       "status": "committed",
-      "details": "57 produits"
+      "details": "46 produits"
     },
     {
-      "id": "305",
-      "city": "Brampton Bramalea, ON",
+      "id": "232",
+      "city": "St. Stephen, NB",
       "status": "committed",
-      "details": "113 produits"
+      "details": "73 produits"
     },
     {
-      "id": "162",
-      "city": "St. Catharines N., ON",
+      "id": "52",
+      "city": "Kirkland Lake, ON",
       "status": "committed",
-      "details": "21 produits"
+      "details": "42 produits"
     },
     {
-      "id": "33",
-      "city": "Fort Erie, ON",
+      "id": "412",
+      "city": "Burlington North, ON",
       "status": "committed",
-      "details": "36 produits"
+      "details": "77 produits"
     }
   ],
   "failedTwice": [],
