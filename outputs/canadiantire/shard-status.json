@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-05-02T06:23:45.805Z",
+  "generatedAt": "2026-05-02T07:33:31.318Z",
   "stores": [
     {
-      "id": "159",
-      "city": "Georgetown, ON",
+      "id": "122",
+      "city": "Burlington Fairview, ON",
       "status": "committed",
-      "details": "34 produits"
+      "details": "124 produits"
     },
     {
-      "id": "73",
-      "city": "Orangeville, ON",
+      "id": "154",
+      "city": "Hamilton East, ON",
+      "status": "committed",
+      "details": "146 produits"
+    },
+    {
+      "id": "129",
+      "city": "Hamilton Centre, ON",
+      "status": "committed",
+      "details": "110 produits"
+    },
+    {
+      "id": "278",
+      "city": "Sudbury North, ON",
+      "status": "committed",
+      "details": "135 produits"
+    },
+    {
+      "id": "220",
+      "city": "Waterdown, ON",
+      "status": "committed",
+      "details": "69 produits"
+    },
+    {
+      "id": "45",
+      "city": "Hamilton Main, ON",
+      "status": "committed",
+      "details": "85 produits"
+    },
+    {
+      "id": "194",
+      "city": "Hamilton Mt.East, ON",
+      "status": "committed",
+      "details": "99 produits"
+    },
+    {
+      "id": "445",
+      "city": "Sudbury South, ON",
       "status": "committed",
       "details": "74 produits"
-    },
-    {
-      "id": "128",
-      "city": "Port Colborne, ON",
-      "status": "committed",
-      "details": "55 produits"
-    },
-    {
-      "id": "140",
-      "city": "Milton, ON",
-      "status": "committed",
-      "details": "46 produits"
-    },
-    {
-      "id": "40",
-      "city": "Grimsby, ON",
-      "status": "committed",
-      "details": "46 produits"
-    },
-    {
-      "id": "232",
-      "city": "St. Stephen, NB",
-      "status": "committed",
-      "details": "73 produits"
-    },
-    {
-      "id": "52",
-      "city": "Kirkland Lake, ON",
-      "status": "committed",
-      "details": "42 produits"
-    },
-    {
-      "id": "412",
-      "city": "Burlington North, ON",
-      "status": "committed",
-      "details": "77 produits"
     }
   ],
   "failedTwice": [],
