@@ -1,38 +1,50 @@
 [
   {
-    "title": "Chocolat de Pâque Kinder Surprise Maxi, 150 g",
-    "image": "https://media-www.canadiantire.ca/product/living/food-drink/seasonal-confectionery/0514226/easter-kinder-surprise-cc9cb2f8-7b5d-4ff6-8ab5-9b6e27601a31-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 15.99,
-    "salePrice": 7.99,
+    "title": "Nettoyant pour plancher dur humide Dyson WashG1",
+    "image": "https://media-www.canadiantire.ca/product/living/cleaning/vacuums-and-floorcare/0437203/dyson-washg1a-is-the-latest-wet-cleaning-technology--78d707ef-8aa9-4cfb-9da1-6723242c10bc-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 899.99,
+    "salePrice": 299.93,
     "store": "Canadian Tire",
     "city": "Gananoque, ON",
     "branch": "Gananoque, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/chocolat-de-paque-kinder-surprise-maxi-150-g-0514226p.html",
-    "sku": "0514226",
-    "availability": "Il n’en reste que 3 #051-4226-8"
+    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-pour-plancher-dur-humide-dyson-washg1-0437203p.html",
+    "sku": "0437203",
+    "availability": "Il n’en reste que 1 #043-7203-4"
   },
   {
-    "title": "Bouton-pressoir lumineux hydrofuge sans fil pour sonnette avec montage en surface Globe, plastique blanc",
-    "image": "https://media-www.canadiantire.ca/product/fixing/hardware/curb-appeal/0521743/wireless-push-button-white-plastic-lighted-surface-mount-882c4999-5d5d-4e16-8c55-e410b8ab90ea-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 19.99,
-    "salePrice": 9.93,
+    "title": "Friteuse à air chaud à deux zones T-Fal Easy Fry, 8,3 L/8,7 ptes",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430340/t-fal-dual-zone-air-fryer-f30f9c50-9b02-4977-a8b9-2e9b9249a74e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 199.99,
+    "salePrice": 99.93,
     "store": "Canadian Tire",
     "city": "Gananoque, ON",
     "branch": "Gananoque, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/bouton-pressoir-lumineux-hydrofuge-sans-fil-pour-sonnette-avec-montage-en-surface-globe-plastique-blanc-0521743p.html",
-    "sku": "0521743",
-    "availability": "Il n’en reste que 1 #052-1743-2"
+    "url": "https://www.canadiantire.ca/fr/pdp/friteuse-a-air-chaud-a-deux-zones-t-fal-easy-fry-8-3-l-8-7-ptes-0430340p.html",
+    "sku": "0430340",
+    "availability": "9 En Stock#043-0340-8"
   },
   {
-    "title": "Lampe d'appoint avec abat-jour en métal CANVAS Stellan, 10,4 po, noyer/béton",
-    "image": "https://media-www.canadiantire.ca/product/living/home-decor/lighting/0528383/canvas-stellan-accent-lamp-218411f2-b7cb-4b36-945b-8b01882f27b1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 79.99,
-    "salePrice": 26.93,
+    "title": "Service de vaisselle en grès recyclé CANVAS Silverspring pour 4 personnes, bleu/gris, paq. 12",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/dining-and-entertaining/2421149/canvas-60-pc-beaded-edge-flatware-set-25c80336-610c-43b1-9264-d0fb36e32c14-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 99.99,
+    "salePrice": 49.93,
     "store": "Canadian Tire",
     "city": "Gananoque, ON",
     "branch": "Gananoque, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/lampe-d-appoint-avec-abat-jour-en-metal-canvas-stellan-10-4-po-noyer-beton-0528383p.html",
-    "sku": "0528383",
-    "availability": "Il n’en reste que 1 #052-8383-6"
+    "url": "https://www.canadiantire.ca/fr/pdp/service-de-vaisselle-en-gres-recycle-canvas-silverspring-pour-4-personnes-bleu-gris-paq-12-2421120p.html",
+    "sku": "2421120",
+    "availability": "Il n’en reste que 2 #242-1120-2"
+  },
+  {
+    "title": "Foyer multimédia CANVAS Waldon, 60 po",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/electric-fireplaces/0644020/canvas-waldon-60-led-media-fireplace-a8bfac77-50a4-452c-a5e7-5e8346ba545d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 749.99,
+    "salePrice": 329.93,
+    "store": "Canadian Tire",
+    "city": "Gananoque, ON",
+    "branch": "Gananoque, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/foyer-multimedia-canvas-waldon-60-po-0644020p.html",
+    "sku": "0644020",
+    "availability": "Il n’en reste que 1 #064-4020-6"
   }
 ]
