@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-05-09T00:31:21.435Z",
+  "generatedAt": "2026-05-09T09:35:12.113Z",
   "stores": [
     {
-      "id": "145",
-      "city": "St. Catharines S., ON",
+      "id": "122",
+      "city": "Burlington Fairview, ON",
       "status": "committed",
-      "details": "57 produits"
+      "details": "97 produits"
     },
     {
-      "id": "411",
-      "city": "Brampton Trinity Common, ON",
+      "id": "154",
+      "city": "Hamilton East, ON",
       "status": "committed",
-      "details": "86 produits"
+      "details": "106 produits"
     },
     {
-      "id": "346",
-      "city": "Miss.Mavis & Dundas, ON",
-      "status": "committed",
-      "details": "81 produits"
-    },
-    {
-      "id": "108",
-      "city": "Collingwood, ON",
-      "status": "committed",
-      "details": "36 produits"
-    },
-    {
-      "id": "90",
-      "city": "St. Catharines, ON",
-      "status": "committed",
-      "details": "88 produits"
-    },
-    {
-      "id": "320",
-      "city": "Rimouski, QC",
+      "id": "129",
+      "city": "Hamilton Centre, ON",
       "status": "committed",
       "details": "74 produits"
     },
     {
-      "id": "10",
-      "city": "Brampton Shoppers World, ON",
+      "id": "278",
+      "city": "Sudbury North, ON",
       "status": "committed",
-      "details": "100 produits"
+      "details": "95 produits"
     },
     {
-      "id": "497",
-      "city": "Mississauga Heartland, ON",
+      "id": "220",
+      "city": "Waterdown, ON",
       "status": "committed",
-      "details": "79 produits"
+      "details": "59 produits"
+    },
+    {
+      "id": "45",
+      "city": "Hamilton Main, ON",
+      "status": "committed",
+      "details": "80 produits"
+    },
+    {
+      "id": "194",
+      "city": "Hamilton Mt.East, ON",
+      "status": "committed",
+      "details": "70 produits"
+    },
+    {
+      "id": "445",
+      "city": "Sudbury South, ON",
+      "status": "committed",
+      "details": "44 produits"
     }
   ],
   "failedTwice": [],
