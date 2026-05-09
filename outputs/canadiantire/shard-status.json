@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-05-09T10:33:04.775Z",
+  "generatedAt": "2026-05-09T11:34:13.462Z",
   "stores": [
     {
-      "id": "177",
-      "city": "Hamilton Mt.West, ON",
+      "id": "77",
+      "city": "Owen Sound, ON",
       "status": "committed",
-      "details": "74 produits"
+      "details": "129 produits"
     },
     {
-      "id": "657",
-      "city": "Hanmer, ON",
+      "id": "244",
+      "city": "Chelmsford, ON",
       "status": "committed",
-      "details": "31 produits"
+      "details": "53 produits"
     },
     {
-      "id": "27",
-      "city": "Dundas, ON",
+      "id": "49",
+      "city": "Caledonia, ON",
+      "status": "committed",
+      "details": "50 produits"
+    },
+    {
+      "id": "168",
+      "city": "Cambridge Hespeler, ON",
+      "status": "committed",
+      "details": "118 produits"
+    },
+    {
+      "id": "36",
+      "city": "Cambridge, ON",
+      "status": "committed",
+      "details": "84 produits"
+    },
+    {
+      "id": "35",
+      "city": "Fredericton, NB",
+      "status": "committed",
+      "details": "88 produits"
+    },
+    {
+      "id": "66",
+      "city": "Mount Forest, ON",
+      "status": "committed",
+      "details": "82 produits"
+    },
+    {
+      "id": "337",
+      "city": "Fredericton North, NB",
       "status": "committed",
       "details": "67 produits"
-    },
-    {
-      "id": "29",
-      "city": "Dunnville, ON",
-      "status": "committed",
-      "details": "61 produits"
-    },
-    {
-      "id": "42",
-      "city": "Guelph Stone Rd, ON",
-      "status": "committed",
-      "details": "67 produits"
-    },
-    {
-      "id": "31",
-      "city": "Centre Wellington, ON",
-      "status": "committed",
-      "details": "63 produits"
-    },
-    {
-      "id": "260",
-      "city": "Guelph North, ON",
-      "status": "committed",
-      "details": "40 produits"
-    },
-    {
-      "id": "639",
-      "city": "Ancaster, ON",
-      "status": "committed",
-      "details": "73 produits"
     }
   ],
   "failedTwice": [],
