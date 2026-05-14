@@ -1,60 +1,55 @@
 {
-  "generatedAt": "2026-05-13T09:09:15.639Z",
+  "generatedAt": "2026-05-14T08:42:50.972Z",
   "stores": [
     {
-      "id": "271",
-      "city": "St. Jerome, QC",
+      "id": "290",
+      "city": "Ottawa Carling Ave, ON",
       "status": "committed",
-      "details": "241 produits"
+      "details": "54 produits"
     },
     {
-      "id": "649",
-      "city": "Blainville, QC",
+      "id": "442",
+      "city": "Barrhaven, ON",
       "status": "committed",
-      "details": "85 produits"
+      "details": "39 produits"
     },
     {
-      "id": "418",
-      "city": "Rosemere, QC",
+      "id": "272",
+      "city": "Ottawa Bells Cnrs, ON",
+      "status": "committed",
+      "details": "78 produits"
+    },
+    {
+      "id": "227",
+      "city": "Kemptville, ON",
+      "status": "committed",
+      "details": "54 produits"
+    },
+    {
+      "id": "240",
+      "city": "Magog, QC",
+      "status": "committed",
+      "details": "117 produits"
+    },
+    {
+      "id": "457",
+      "city": "Kanata, ON",
+      "status": "committed",
+      "details": "46 produits"
+    },
+    {
+      "id": "243",
+      "city": "Victoriaville, QC",
       "status": "committed",
       "details": "107 produits"
     },
     {
-      "id": "641",
-      "city": "La Plaine, QC",
+      "id": "96",
+      "city": "Sherbrooke, QC",
       "status": "committed",
-      "details": "109 produits"
-    },
-    {
-      "id": "218",
-      "city": "St. Eustache, QC",
-      "status": "committed",
-      "details": "127 produits"
-    },
-    {
-      "id": "690",
-      "city": "Laval Fabreville, QC",
-      "status": "committed",
-      "details": "92 produits"
-    },
-    {
-      "id": "312",
-      "city": "Terrebonne, QC",
-      "status": "committed",
-      "details": "82 produits"
-    },
-    {
-      "id": "231",
-      "city": "Laval Vimont, QC",
-      "status": "committed",
-      "details": "120 produits (after retry)"
+      "details": "104 produits"
     }
   ],
   "failedTwice": [],
-  "retriedAndSucceeded": [
-    {
-      "id": "231",
-      "city": "Laval Vimont, QC"
-    }
-  ]
+  "retriedAndSucceeded": []
 }
