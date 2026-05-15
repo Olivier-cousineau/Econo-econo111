@@ -2,35 +2,6 @@
   {
     "store_id": "75",
     "city": "Oshawa Mid, ON",
-    "name": "Distributeur d'eau chaude de MASTER Chef avec poignée, noir, 3,5 L",
-    "title": "Distributeur d'eau chaude de MASTER Chef avec poignée, noir, 3,5 L",
-    "price": 49.96,
-    "price_raw": "49,96 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430196/master-chef-hot-water-dispenser-9e2e8ff7-2445-4f25-9bde-ac042fe07b54-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430196/master-chef-hot-water-dispenser-9e2e8ff7-2445-4f25-9bde-ac042fe07b54-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/distributeur-d-eau-chaude-de-master-chef-avec-poignee-noir-3-5-l-0430196p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/distributeur-d-eau-chaude-de-master-chef-avec-poignee-noir-3-5-l-0430196p.html",
-    "product_id": null,
-    "sku": "0430196",
-    "sku_formatted": "043-0196-2",
-    "availability": "10 En Stock#043-0196-2",
-    "badges": [
-      "Liquidation◊Mieux notés"
-    ],
-    "discount_percent": 50.04,
-    "liquidation_price": 49.96,
-    "liquidation_price_raw": "49,96 $",
-    "sale_price": 49.96,
-    "sale_price_raw": "49,96 $",
-    "regular_price": 99.99,
-    "regular_price_raw": "Était±  99,99 $prix était 99,99 $",
-    "price_sale_clean": "49,96",
-    "price_original_clean": "99,99"
-  },
-  {
-    "store_id": "75",
-    "city": "Oshawa Mid, ON",
     "name": "Cintres pivotants compacts en velours Type A avec barre à pantalon, couleurs variées, paq. 40",
     "title": "Cintres pivotants compacts en velours Type A avec barre à pantalon, couleurs variées, paq. 40",
     "price": 12.93,
@@ -101,7 +72,7 @@
     "product_id": null,
     "sku": "0529347",
     "sku_formatted": "052-9347-8",
-    "availability": "647 En Stock#052-9347-8",
+    "availability": "630 En Stock#052-9347-8",
     "badges": [
       "Liquidation◊Exclusivité"
     ],
@@ -114,6 +85,35 @@
     "regular_price_raw": "Était±  12,99 $prix était 12,99 $",
     "price_sale_clean": "1,93",
     "price_original_clean": "12,99"
+  },
+  {
+    "store_id": "75",
+    "city": "Oshawa Mid, ON",
+    "name": "Machine à café et à espresso mince Nespresso Vertuo Next par DeLonghi, gris",
+    "title": "Machine à café et à espresso mince Nespresso Vertuo Next par DeLonghi, gris",
+    "price": 114.93,
+    "price_raw": "114,93 $",
+    "liquidation": true,
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430395/nespresso-vertuo-next-espresso-machine-by-delonghi-grey-fac2366d-dee6-4db4-8252-8086cb68fbba-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430395/nespresso-vertuo-next-espresso-machine-by-delonghi-grey-fac2366d-dee6-4db4-8252-8086cb68fbba-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/machine-a-cafe-et-a-espresso-mince-nespresso-vertuo-next-par-delonghi-gris-0430395p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/machine-a-cafe-et-a-espresso-mince-nespresso-vertuo-next-par-delonghi-gris-0430395p.html",
+    "product_id": null,
+    "sku": "0430395",
+    "sku_formatted": "043-0395-8",
+    "availability": null,
+    "badges": [
+      "Liquidation◊"
+    ],
+    "discount_percent": 50.03,
+    "liquidation_price": 114.93,
+    "liquidation_price_raw": "114,93 $",
+    "sale_price": 114.93,
+    "sale_price_raw": "114,93 $",
+    "regular_price": 229.99,
+    "regular_price_raw": "Était±  229,99 $prix était 229,99 $",
+    "price_sale_clean": "114,93",
+    "price_original_clean": "229,99"
   },
   {
     "store_id": "75",
@@ -159,7 +159,7 @@
     "product_id": null,
     "sku": "0681822",
     "sku_formatted": "068-1822-8",
-    "availability": "Il n’en reste que 4 #068-1822-8",
+    "availability": "Il n’en reste que 3 #068-1822-8",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -246,7 +246,7 @@
     "product_id": null,
     "sku": "2421124",
     "sku_formatted": "242-1124-4",
-    "availability": "0 En Stock#242-1124-4",
+    "availability": null,
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -263,35 +263,6 @@
   {
     "store_id": "75",
     "city": "Oshawa Mid, ON",
-    "name": "Glacière/réchaud électrique thermoélectrique sur roulettes Mobicool, avec poignée, 45 L, bleu",
-    "title": "Glacière/réchaud électrique thermoélectrique sur roulettes Mobicool, avec poignée, 45 L, bleu",
-    "price": 139.93,
-    "price_raw": "139,93 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/playing/camping/hydration-coolers/0370124/45l-wheeled-12v-cooler-with-adapter-1a3a5430-7fbc-4bde-bbb2-549a37e1e05e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/playing/camping/hydration-coolers/0370124/45l-wheeled-12v-cooler-with-adapter-1a3a5430-7fbc-4bde-bbb2-549a37e1e05e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/glaciere-rechaud-electrique-thermoelectrique-sur-roulettes-mobicool-avec-poignee-45-l-bleu-0370124p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/glaciere-rechaud-electrique-thermoelectrique-sur-roulettes-mobicool-avec-poignee-45-l-bleu-0370124p.html",
-    "product_id": null,
-    "sku": "0370124",
-    "sku_formatted": "037-0124-0",
-    "availability": "Il n’en reste que 1 #037-0124-0",
-    "badges": [
-      "Liquidation◊Mieux notés"
-    ],
-    "discount_percent": 63.18,
-    "liquidation_price": 139.93,
-    "liquidation_price_raw": "139,93 $",
-    "sale_price": 139.93,
-    "sale_price_raw": "139,93 $",
-    "regular_price": 379.99,
-    "regular_price_raw": "Était±  379,99 $prix était 379,99 $",
-    "price_sale_clean": "139,93",
-    "price_original_clean": "379,99"
-  },
-  {
-    "store_id": "75",
-    "city": "Oshawa Mid, ON",
     "name": "Jouet aquatique gonflable Soak N' Splash & Slide avec gicleur, bleu, 16 pi, 5 ans et plus, pour plage/piscine",
     "title": "Jouet aquatique gonflable Soak N' Splash & Slide avec gicleur, bleu, 16 pi, 5 ans et plus, pour plage/piscine",
     "price": 6.93,
@@ -304,7 +275,7 @@
     "product_id": null,
     "sku": "0504211",
     "sku_formatted": "050-4211-4",
-    "availability": "Il n’en reste que 2 #050-4211-4",
+    "availability": "Il n’en reste que 1 #050-4211-4",
     "badges": [
       "Liquidation◊"
     ],
@@ -594,7 +565,7 @@
     "product_id": null,
     "sku": "0765971",
     "sku_formatted": "076-5971-8",
-    "availability": "Il n’en reste que 2 #076-5971-8",
+    "availability": "Il n’en reste que 1 #076-5971-8",
     "badges": [
       "Liquidation◊Articles à succès"
     ],
@@ -843,35 +814,6 @@
   {
     "store_id": "75",
     "city": "Oshawa Mid, ON",
-    "name": "Moules au beurre d'arachides étagés au chocolat Reese's avec caramel, format collation, 170 g, friandises de Pâques",
-    "title": "Moules au beurre d'arachides étagés au chocolat Reese's avec caramel, format collation, 170 g, friandises de Pâques",
-    "price": 3.49,
-    "price_raw": "3,49 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/living/food-drink/seasonal-confectionery/1519666/reese-easter-peanut-butter-caramel-cups-24ct-778f4ab3-6499-40e5-85ce-a1d5e7c41ff4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/living/food-drink/seasonal-confectionery/1519666/reese-easter-peanut-butter-caramel-cups-24ct-778f4ab3-6499-40e5-85ce-a1d5e7c41ff4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/moules-au-beurre-d-arachides-etages-au-chocolat-reese-s-avec-caramel-format-collation-170-g-friandises-de-paques-1519666p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/moules-au-beurre-d-arachides-etages-au-chocolat-reese-s-avec-caramel-format-collation-170-g-friandises-de-paques-1519666p.html",
-    "product_id": null,
-    "sku": "1519666",
-    "sku_formatted": "151-9666-2",
-    "availability": "Il n’en reste que 2 #151-9666-2",
-    "badges": [
-      "Liquidation◊"
-    ],
-    "discount_percent": 50.07,
-    "liquidation_price": 3.49,
-    "liquidation_price_raw": "3,49 $",
-    "sale_price": 3.49,
-    "sale_price_raw": "3,49 $",
-    "regular_price": 6.99,
-    "regular_price_raw": "Était±  6,99 $prix était 6,99 $",
-    "price_sale_clean": "3,49",
-    "price_original_clean": "6,99"
-  },
-  {
-    "store_id": "75",
-    "city": "Oshawa Mid, ON",
     "name": "Rail d'éclairage à 6 lampes NOMA Protino, nickel brossé/chrome",
     "title": "Rail d'éclairage à 6 lampes NOMA Protino, nickel brossé/chrome",
     "price": 89.93,
@@ -942,7 +884,7 @@
     "product_id": null,
     "sku": "1427779",
     "sku_formatted": "142-7779-8",
-    "availability": "13 En Stock#142-7779-8",
+    "availability": "12 En Stock#142-7779-8",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -1042,35 +984,6 @@
     "regular_price_raw": "Était±  19,99 $prix était 19,99 $",
     "price_sale_clean": "9,93",
     "price_original_clean": "19,99"
-  },
-  {
-    "store_id": "75",
-    "city": "Oshawa Mid, ON",
-    "name": "Ampoules à DEL non variable à culot E12 NOMA B10, 3000K, 300 lumens, blanc chaud, 40 W, paq. 4",
-    "title": "Ampoules à DEL non variable à culot E12 NOMA B10, 3000K, 300 lumens, blanc chaud, 40 W, paq. 4",
-    "price": 9.93,
-    "price_raw": "9,93 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/light-bulbs/0527028/noma-led-candelabra-bulb-40w-non-dimmable-4-pack-97c9907b-6688-4781-9442-e149d92de2c5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/fixing/electrical/light-bulbs/0527028/noma-led-candelabra-bulb-40w-non-dimmable-4-pack-97c9907b-6688-4781-9442-e149d92de2c5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/ampoules-a-del-non-variable-a-culot-e12-noma-b10-3000k-300-lumens-blanc-chaud-40-w-paq-4-0527028p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/ampoules-a-del-non-variable-a-culot-e12-noma-b10-3000k-300-lumens-blanc-chaud-40-w-paq-4-0527028p.html",
-    "product_id": null,
-    "sku": "0527028",
-    "sku_formatted": "052-7028-0",
-    "availability": null,
-    "badges": [
-      "Liquidation◊Mieux notés"
-    ],
-    "discount_percent": 64.52,
-    "liquidation_price": 9.93,
-    "liquidation_price_raw": "9,93 $",
-    "sale_price": 9.93,
-    "sale_price_raw": "9,93 $",
-    "regular_price": 27.99,
-    "regular_price_raw": "Était±  27,99 $prix était 27,99 $",
-    "price_sale_clean": "9,93",
-    "price_original_clean": "27,99"
   },
   {
     "store_id": "75",
@@ -1377,7 +1290,7 @@
     "product_id": null,
     "sku": "0450627",
     "sku_formatted": "045-0627-4",
-    "availability": "13 En Stock#045-0627-4",
+    "availability": "12 En Stock#045-0627-4",
     "badges": [
       "Liquidation◊"
     ],
@@ -1419,6 +1332,35 @@
     "regular_price_raw": "22,99 $Était   et+ prix était à partir de 22,99 $",
     "price_sale_clean": "9,93",
     "price_original_clean": "22,99"
+  },
+  {
+    "store_id": "75",
+    "city": "Oshawa Mid, ON",
+    "name": "Lampe de sécurité solaire à deux têtes et à DEL NOMA, détection de mouvement, 1 200 lumens, noir",
+    "title": "Lampe de sécurité solaire à deux têtes et à DEL NOMA, détection de mouvement, 1 200 lumens, noir",
+    "price": 24.96,
+    "price_raw": "24,96 $",
+    "liquidation": true,
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/lighting/1523122/noma-solar-security-light-1200-lumens-af729ff1-bca5-4704-8ceb-cabb38aa6b34-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/fixing/electrical/lighting/1523122/noma-solar-security-light-1200-lumens-af729ff1-bca5-4704-8ceb-cabb38aa6b34-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/lampe-de-securite-solaire-a-deux-tetes-et-a-del-noma-detection-de-mouvement-1-200-lumens-noir-1523122p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/lampe-de-securite-solaire-a-deux-tetes-et-a-del-noma-detection-de-mouvement-1-200-lumens-noir-1523122p.html",
+    "product_id": null,
+    "sku": "1523122",
+    "sku_formatted": "152-3122-0",
+    "availability": "41 En Stock#152-3122-0",
+    "badges": [
+      "Liquidation◊Exclusivité"
+    ],
+    "discount_percent": 70.63,
+    "liquidation_price": 24.96,
+    "liquidation_price_raw": "24,96 $",
+    "sale_price": 24.96,
+    "sale_price_raw": "24,96 $",
+    "regular_price": 84.99,
+    "regular_price_raw": "Était±  84,99 $prix était 84,99 $",
+    "price_sale_clean": "24,96",
+    "price_original_clean": "84,99"
   },
   {
     "store_id": "75",
@@ -1725,7 +1667,7 @@
     "product_id": null,
     "sku": "0357421",
     "sku_formatted": "035-7421-4",
-    "availability": "62 En Stock#035-7421-4",
+    "availability": "56 En Stock#035-7421-4",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -1892,8 +1834,8 @@
     "price": 2.23,
     "price_raw": "2,23 $",
     "liquidation": true,
-    "image": "undefined?im=whresize&wid=200&hei=200",
-    "image_url": "undefined?im=whresize&wid=200&hei=200",
+    "image": "undefined",
+    "image_url": "undefined",
     "url": "https://www.canadiantire.ca/fr/pdp/hamecon-a-ver-a-tres-grande-ouverture-xcalibur-0770371p.html",
     "link": "https://www.canadiantire.ca/fr/pdp/hamecon-a-ver-a-tres-grande-ouverture-xcalibur-0770371p.html",
     "product_id": null,
