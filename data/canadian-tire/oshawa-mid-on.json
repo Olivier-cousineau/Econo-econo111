@@ -1,17 +1,5 @@
 [
   {
-    "title": "Distributeur d'eau chaude de MASTER Chef avec poignée, noir, 3,5 L",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430196/master-chef-hot-water-dispenser-9e2e8ff7-2445-4f25-9bde-ac042fe07b54-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 99.99,
-    "salePrice": 49.96,
-    "store": "Canadian Tire",
-    "city": "Oshawa Mid, ON",
-    "branch": "Oshawa Mid, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/distributeur-d-eau-chaude-de-master-chef-avec-poignee-noir-3-5-l-0430196p.html",
-    "sku": "0430196",
-    "availability": "10 En Stock#043-0196-2"
-  },
-  {
     "title": "Cintres pivotants compacts en velours Type A avec barre à pantalon, couleurs variées, paq. 40",
     "image": "https://media-www.canadiantire.ca/product/living/home-organization/closet-organization/0688308/type-a-velvet-suit-hanger-black-10pk-4afb3f73-0449-46d6-975c-369ae2760de2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 32.99,
@@ -45,7 +33,19 @@
     "branch": "Oshawa Mid, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/ampoules-a-del-a-intensite-variable-a-culot-e12-noma-b10-2700k-350-lumens-blanc-chaud-40-w-paq-2-0529347p.html",
     "sku": "0529347",
-    "availability": "647 En Stock#052-9347-8"
+    "availability": "630 En Stock#052-9347-8"
+  },
+  {
+    "title": "Machine à café et à espresso mince Nespresso Vertuo Next par DeLonghi, gris",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430395/nespresso-vertuo-next-espresso-machine-by-delonghi-grey-fac2366d-dee6-4db4-8252-8086cb68fbba-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 229.99,
+    "salePrice": 114.93,
+    "store": "Canadian Tire",
+    "city": "Oshawa Mid, ON",
+    "branch": "Oshawa Mid, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/machine-a-cafe-et-a-espresso-mince-nespresso-vertuo-next-par-delonghi-gris-0430395p.html",
+    "sku": "0430395",
+    "availability": ""
   },
   {
     "title": "Pantalon Huntshield Sutton No Fly Zone, hommes, gris",
@@ -69,7 +69,7 @@
     "branch": "Oshawa Mid, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/presentoir-d-articles-saisonniers-mastercraft-avec-chariot-a-plateforme-roulante-noir-0681822p.html",
     "sku": "0681822",
-    "availability": "Il n’en reste que 4 #068-1822-8"
+    "availability": "Il n’en reste que 3 #068-1822-8"
   },
   {
     "title": "Parka technique de chasse perméable à l'air imperméable coupe-vent Yukon Gear pour hommes, camouflage Realtree Xtra",
@@ -105,19 +105,7 @@
     "branch": "Oshawa Mid, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/service-de-vaisselle-en-gres-a-rebord-orne-canvas-gatestone-blanc-paq-12-2421124p.html",
     "sku": "2421124",
-    "availability": "0 En Stock#242-1124-4"
-  },
-  {
-    "title": "Glacière/réchaud électrique thermoélectrique sur roulettes Mobicool, avec poignée, 45 L, bleu",
-    "image": "https://media-www.canadiantire.ca/product/playing/camping/hydration-coolers/0370124/45l-wheeled-12v-cooler-with-adapter-1a3a5430-7fbc-4bde-bbb2-549a37e1e05e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 379.99,
-    "salePrice": 139.93,
-    "store": "Canadian Tire",
-    "city": "Oshawa Mid, ON",
-    "branch": "Oshawa Mid, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/glaciere-rechaud-electrique-thermoelectrique-sur-roulettes-mobicool-avec-poignee-45-l-bleu-0370124p.html",
-    "sku": "0370124",
-    "availability": "Il n’en reste que 1 #037-0124-0"
+    "availability": ""
   },
   {
     "title": "Jouet aquatique gonflable Soak N' Splash & Slide avec gicleur, bleu, 16 pi, 5 ans et plus, pour plage/piscine",
@@ -129,7 +117,7 @@
     "branch": "Oshawa Mid, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/jouet-aquatique-gonflable-soak-n-splash-slide-avec-gicleur-bleu-16-pi-5-ans-et-plus-pour-plage-piscine-0504211p.html",
     "sku": "0504211",
-    "availability": "Il n’en reste que 2 #050-4211-4"
+    "availability": "Il n’en reste que 1 #050-4211-4"
   },
   {
     "title": "Foyer multimédia CANVAS Alma, 72 po",
@@ -249,7 +237,7 @@
     "branch": "Oshawa Mid, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/glaciere-pour-canettes-outbound-12-2-oz-couleurs-variees-0765971p.html",
     "sku": "0765971",
-    "availability": "Il n’en reste que 2 #076-5971-8"
+    "availability": "Il n’en reste que 1 #076-5971-8"
   },
   {
     "title": "Tabouret de comptoir/bar For Living, noir, en similicuir et chrome à hauteur réglable",
@@ -348,18 +336,6 @@
     "availability": "9 En Stock#073-0500-6"
   },
   {
-    "title": "Moules au beurre d'arachides étagés au chocolat Reese's avec caramel, format collation, 170 g, friandises de Pâques",
-    "image": "https://media-www.canadiantire.ca/product/living/food-drink/seasonal-confectionery/1519666/reese-easter-peanut-butter-caramel-cups-24ct-778f4ab3-6499-40e5-85ce-a1d5e7c41ff4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 6.99,
-    "salePrice": 3.49,
-    "store": "Canadian Tire",
-    "city": "Oshawa Mid, ON",
-    "branch": "Oshawa Mid, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/moules-au-beurre-d-arachides-etages-au-chocolat-reese-s-avec-caramel-format-collation-170-g-friandises-de-paques-1519666p.html",
-    "sku": "1519666",
-    "availability": "Il n’en reste que 2 #151-9666-2"
-  },
-  {
     "title": "Rail d'éclairage à 6 lampes NOMA Protino, nickel brossé/chrome",
     "image": "https://media-www.canadiantire.ca/product/living/home-decor/lighting/0527889/track-6-light-protino-8836ef79-f9ce-4ab5-a55c-e55bee1c8d93-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 189.99,
@@ -393,7 +369,7 @@
     "branch": "Oshawa Mid, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/serviettes-de-cuisine-en-coton-tout-usage-paderno-rouge-paq-2-1427779p.html",
     "sku": "1427779",
-    "availability": "13 En Stock#142-7779-8"
+    "availability": "12 En Stock#142-7779-8"
   },
   {
     "title": "Cales de roues",
@@ -430,18 +406,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/napperons-rectangulaires-canvas-bristol-vinyle-et-polyester-13-x-19-po-paq-4-1424815p.html",
     "sku": "1424815",
     "availability": "Il n’en reste que 2 #142-4815-0"
-  },
-  {
-    "title": "Ampoules à DEL non variable à culot E12 NOMA B10, 3000K, 300 lumens, blanc chaud, 40 W, paq. 4",
-    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/light-bulbs/0527028/noma-led-candelabra-bulb-40w-non-dimmable-4-pack-97c9907b-6688-4781-9442-e149d92de2c5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 27.99,
-    "salePrice": 9.93,
-    "store": "Canadian Tire",
-    "city": "Oshawa Mid, ON",
-    "branch": "Oshawa Mid, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/ampoules-a-del-non-variable-a-culot-e12-noma-b10-3000k-300-lumens-blanc-chaud-40-w-paq-4-0527028p.html",
-    "sku": "0527028",
-    "availability": ""
   },
   {
     "title": "Bouée tractable gonflable pour 2 passagers pompes à air thème de vélo Connelly Nitro 2, jaune",
@@ -573,7 +537,7 @@
     "branch": "Oshawa Mid, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/support-mural-a-pivot-integral-sky-shelf-ss150-pour-televiseur-9-a-36-po-0450627p.html",
     "sku": "0450627",
-    "availability": "13 En Stock#045-0627-4"
+    "availability": "12 En Stock#045-0627-4"
   },
   {
     "title": "Costume de bain short rayé Outbound à entrejambe de 7 po pour hommes",
@@ -586,6 +550,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/costume-de-bain-short-raye-outbound-a-entrejambe-de-7-po-pour-hommes-1873524p.html",
     "sku": "1873524",
     "availability": ""
+  },
+  {
+    "title": "Lampe de sécurité solaire à deux têtes et à DEL NOMA, détection de mouvement, 1 200 lumens, noir",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/lighting/1523122/noma-solar-security-light-1200-lumens-af729ff1-bca5-4704-8ceb-cabb38aa6b34-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 84.99,
+    "salePrice": 24.96,
+    "store": "Canadian Tire",
+    "city": "Oshawa Mid, ON",
+    "branch": "Oshawa Mid, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/lampe-de-securite-solaire-a-deux-tetes-et-a-del-noma-detection-de-mouvement-1-200-lumens-noir-1523122p.html",
+    "sku": "1523122",
+    "availability": "41 En Stock#152-3122-0"
   },
   {
     "title": "Cuillère Danielson Renegade, 1/8 oz",
@@ -717,7 +693,7 @@
     "branch": "Oshawa Mid, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/chargeur-mural-scosche-powervolt-pd20-0357421p.html",
     "sku": "0357421",
-    "availability": "62 En Stock#035-7421-4"
+    "availability": "56 En Stock#035-7421-4"
   },
   {
     "title": "Feu de dessous de bateau DEL 12 V",
@@ -781,7 +757,7 @@
   },
   {
     "title": "Hameçon à ver à très grande ouverture Xcalibur",
-    "image": "undefined?im=whresize&wid=200&hei=200",
+    "image": "undefined",
     "price": 5.49,
     "salePrice": 2.23,
     "store": "Canadian Tire",

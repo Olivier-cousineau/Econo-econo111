@@ -1,65 +1,5 @@
 [
   {
-    "title": "Affûte-couteaux à 3 étapes MASTER Chef",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/cutlery/2421029/master-chef-3stage-knife-sharpener-b9ab2767-c8c0-473e-a296-6cb70527856a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 18.99,
-    "salePrice": 4.93,
-    "store": "Canadian Tire",
-    "city": "Whitby North, ON",
-    "branch": "Whitby North, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/affute-couteaux-a-3-etapes-master-chef-2421029p.html",
-    "sku": "2421029",
-    "availability": "11 En Stock#242-1029-2"
-  },
-  {
-    "title": "Tasses à mesurer empilables en plastique MASTER Chef, paq. 10",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/bakeware-baking-prep/1429676/master-chef-10pc-measuring-cup-set-73c761cb-c28c-42fe-a32e-f57a30c6b9a6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 24.99,
-    "salePrice": 6.96,
-    "store": "Canadian Tire",
-    "city": "Whitby North, ON",
-    "branch": "Whitby North, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/tasses-a-mesurer-empilables-en-plastique-master-chef-paq-10-1429676p.html",
-    "sku": "1429676",
-    "availability": "112 En Stock#142-9676-0"
-  },
-  {
-    "title": "Cintres pivotants compacts en velours Type A avec barre à pantalon, couleurs variées, paq. 40",
-    "image": "https://media-www.canadiantire.ca/product/living/home-organization/closet-organization/0688308/type-a-velvet-suit-hanger-black-10pk-4afb3f73-0449-46d6-975c-369ae2760de2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 32.99,
-    "salePrice": 12.93,
-    "store": "Canadian Tire",
-    "city": "Whitby North, ON",
-    "branch": "Whitby North, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/cintres-pivotants-compacts-en-velours-type-a-avec-barre-a-pantalon-couleurs-variees-paq-40-0688307p.html",
-    "sku": "0688307",
-    "availability": ""
-  },
-  {
-    "title": "Serviettes de bar MASTER Chef, paq. 8",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/dining-and-entertaining/1429826/master-chef-8-pack-bar-mops-misc-colours-4b1f6a4d-f9b4-4891-8c49-0420c079a6ed-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 7.99,
-    "salePrice": 3.93,
-    "store": "Canadian Tire",
-    "city": "Whitby North, ON",
-    "branch": "Whitby North, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/serviettes-de-bar-master-chef-paq-8-1429826p.html",
-    "sku": "1429826",
-    "availability": "27 En Stock#142-9826-4"
-  },
-  {
-    "title": "Chaussures de soccer Adidas Goletto II, FG, homme",
-    "image": "https://media-www.canadiantire.ca/product/playing/team-sports-and-golf/field-sports/0898050/adidas-goletto-ii-fg-soccer-shoes-mens-size-7-62a196be-6596-41df-bb24-da370528899d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 74.99,
-    "salePrice": 19.96,
-    "store": "Canadian Tire",
-    "city": "Whitby North, ON",
-    "branch": "Whitby North, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/chaussures-de-soccer-adidas-goletto-ii-fg-homme-0898050p.html",
-    "sku": "0898050",
-    "availability": ""
-  },
-  {
     "title": "Présentoir d'articles saisonniers Mastercraft avec chariot à plateforme roulante, noir",
     "image": "https://media-www.canadiantire.ca/product/fixing/tools/garage-organization/0681822/mastercraft-seasonal-storage-rack-4657eb31-2d51-419f-a388-3dcc3e45f853-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 299.99,
@@ -69,7 +9,7 @@
     "branch": "Whitby North, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/presentoir-d-articles-saisonniers-mastercraft-avec-chariot-a-plateforme-roulante-noir-0681822p.html",
     "sku": "0681822",
-    "availability": "12 En Stock#068-1822-8"
+    "availability": "10 En Stock#068-1822-8"
   },
   {
     "title": "Parka technique de chasse perméable à l'air imperméable coupe-vent Yukon Gear pour hommes, camouflage Realtree Xtra",
@@ -82,18 +22,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/parka-technique-de-chasse-permeable-a-l-air-impermeable-coupe-vent-yukon-gear-pour-hommes-camouflage-realtree-xtra-3750716p.html",
     "sku": "3750716",
     "availability": ""
-  },
-  {
-    "title": "Support à plateforme sur attelage pour 4 vélos SportRack SR2414 Ridge 4, attelages de 2 po, gris granite",
-    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0401012/sportrack-ridge-4-towing-bike-carrier-5e4d8ecc-1077-45b8-a6ea-6135c08baf3f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 249.99,
-    "salePrice": 99.93,
-    "store": "Canadian Tire",
-    "city": "Whitby North, ON",
-    "branch": "Whitby North, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/support-a-plateforme-sur-attelage-pour-4-velos-sportrack-sr2414-ridge-4-attelages-de-2-po-gris-granite-0401012p.html",
-    "sku": "0401012",
-    "availability": "Il n’en reste que 1 #040-1012-0"
   },
   {
     "title": "Foyer électrique CANVAS Marseille, 54 po, 1 400 W, comprend une télécommande, blanc",
@@ -120,6 +48,18 @@
     "availability": "Il n’en reste que 2 #168-0221-6"
   },
   {
+    "title": "Suncast - Coffre de rangement d'extérieur en résine,très grand, gris, 200 gal",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-storage/0600632/suncast-200-gallon-extra-large-deck-box-944eb197-8a12-4286-bb38-4bc562189c1b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 399.99,
+    "salePrice": 199.93,
+    "store": "Canadian Tire",
+    "city": "Whitby North, ON",
+    "branch": "Whitby North, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/suncast-coffre-de-rangement-d-exterieur-en-resine-tres-grand-gris-200-gal-0600632p.html",
+    "sku": "0600632",
+    "availability": "Il n’en reste que 3 #060-0632-2"
+  },
+  {
     "title": "Service de vaisselle en grès à rebord orné CANVAS Gatestone, blanc, paq. 12",
     "image": "https://media-www.canadiantire.ca/product/living/kitchen/dining-and-entertaining/2421124/canvas-12-pc-ornate-rim-dinnerware-set-ec677528-47a1-4eea-a43d-63735afa1b7e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 99.99,
@@ -141,19 +81,31 @@
     "branch": "Whitby North, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/meuble-pour-televiseur-avec-console-multimedia-et-foyer-electrique-canvas-ashcroft-60-po-1-400-w-telecommande-comprise-blanc-0644017p.html",
     "sku": "0644017",
-    "availability": "Il n’en reste que 4 #064-4017-6"
+    "availability": "Il n’en reste que 3 #064-4017-6"
   },
   {
     "title": "Tapis d'intérieur et d'extérieur Korhani Sienna, 5 x 7 pi",
     "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680032/tofino-indoor-outdoor-rug-593a3364-ff9a-4daa-8160-ea1342dcc4ec-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 114.99,
-    "salePrice": 54.93,
+    "salePrice": 44.93,
     "store": "Canadian Tire",
     "city": "Whitby North, ON",
     "branch": "Whitby North, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/tapis-d-interieur-et-d-exterieur-korhani-sienna-5-x-7-pi-0680032p.html",
     "sku": "0680032",
-    "availability": "Il n’en reste que 4 #068-0032-4"
+    "availability": "Il n’en reste que 3 #068-0032-4"
+  },
+  {
+    "title": "CANVAS Bala - Table à manger de jardin en osier à plateau en similibois pour toutes les conditions",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/0881695/canvas-bala-casual-dining-table-5ca88d41-582d-4068-957c-ddee4d89cc49-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 399.99,
+    "salePrice": 199.93,
+    "store": "Canadian Tire",
+    "city": "Whitby North, ON",
+    "branch": "Whitby North, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/canvas-bala-table-a-manger-de-jardin-en-osier-a-plateau-en-similibois-pour-toutes-les-conditions-0881695p.html",
+    "sku": "0881695",
+    "availability": "Il n’en reste que 1 #088-1695-2"
   },
   {
     "title": "Shark HyperAIR IQ - Sèche-cheveux ionique à séchage rapide avec concentrateur 2-en-1",
@@ -168,6 +120,66 @@
     "availability": "24 En Stock#043-8670-4"
   },
   {
+    "title": "Sac de couchage pour temps froid Coleman Flatlands, 10 °C, bleu",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-furniture/0766638/coleman-flatlands-10c-sleeping-bag-435a51aa-91c0-47a6-9e7f-a5a0f796dfe0-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 99.99,
+    "salePrice": 44.93,
+    "store": "Canadian Tire",
+    "city": "Whitby North, ON",
+    "branch": "Whitby North, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/sac-de-couchage-pour-temps-froid-coleman-flatlands-10-c-bleu-0766638p.html",
+    "sku": "0766638",
+    "availability": "Il n’en reste que 6 #076-6638-8"
+  },
+  {
+    "title": "Coussin de siège profond hydrofuge résistant aux taches CANVAS, rouge",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0882124/canvas-deep-seat-chair-cushion-red-70a5e419-f063-4d33-87d9-34a3290bd702-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 139.99,
+    "salePrice": 69.93,
+    "store": "Canadian Tire",
+    "city": "Whitby North, ON",
+    "branch": "Whitby North, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/coussin-de-siege-profond-hydrofuge-resistant-aux-taches-canvas-rouge-0882124p.html",
+    "sku": "0882124",
+    "availability": "Il n’en reste que 2 #088-2124-6"
+  },
+  {
+    "title": "Raboteuse MAXIMUM, 13 po",
+    "image": "https://media-www.canadiantire.ca/product/fixing/tools/stationary-tools/0556971/maximum-13-planer-with-stand-5293d4dd-ad69-44ae-8e0c-58294ed90772-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 729.99,
+    "salePrice": 349.93,
+    "store": "Canadian Tire",
+    "city": "Whitby North, ON",
+    "branch": "Whitby North, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/raboteuse-maximum-13-po-0556971p.html",
+    "sku": "0556971",
+    "availability": "Il n’en reste que 1 #055-6971-2"
+  },
+  {
+    "title": "Coussin de banc hydrofuge résistant aux taches CANVAS Boho, noir",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0880043/canvas-boho-bench-cushion-1bc1b0c8-c0fd-4099-afa7-89581dead011-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 72.99,
+    "salePrice": 34.93,
+    "store": "Canadian Tire",
+    "city": "Whitby North, ON",
+    "branch": "Whitby North, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/coussin-de-banc-hydrofuge-resistant-aux-taches-canvas-boho-noir-0880043p.html",
+    "sku": "0880043",
+    "availability": "Il n’en reste que 1 #088-0043-0"
+  },
+  {
+    "title": "Meuble-lavabo simple CANVAS Wellington à 1 porte, dessus en pierre, 24 po, chêne vieilli",
+    "image": "https://media-www.canadiantire.ca/product/fixing/plumbing/faucets-fixtures/0636340/canvas-wellington-24-vanity-single-door-weathered-oak-c63a46d3-7cc6-4cbd-b432-77df9ec7c1fc-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 469.99,
+    "salePrice": 199.93,
+    "store": "Canadian Tire",
+    "city": "Whitby North, ON",
+    "branch": "Whitby North, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/meuble-lavabo-simple-canvas-wellington-a-1-porte-dessus-en-pierre-24-po-chene-vieilli-0636340p.html",
+    "sku": "0636340",
+    "availability": "Il n’en reste que 3 #063-6340-4"
+  },
+  {
     "title": "Spin Spinner Race - Cardiovélo d'intérieur",
     "image": "https://media-www.canadiantire.ca/product/playing/exercise/exercise-equipment/1840997/spin-pace-bike-1dd3f228-ee4c-4fad-a84c-23009ec8a6a5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 899.99,
@@ -180,6 +192,30 @@
     "availability": "Il n’en reste que 2 #184-0997-0"
   },
   {
+    "title": "Pompe à air électrique Coleman QuickPump 12 V avec adaptateur pour auto, matelas pneumatiques et jouets",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-furniture/0760234/coleman-12v-inflate-deflate-quickpump--1e25d88c-6e5a-4c03-8b38-3c767c69f8cf-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 57.99,
+    "salePrice": 24.93,
+    "store": "Canadian Tire",
+    "city": "Whitby North, ON",
+    "branch": "Whitby North, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/pompe-a-air-electrique-coleman-quickpump-12-v-avec-adaptateur-pour-auto-matelas-pneumatiques-et-jouets-0760234p.html",
+    "sku": "0760234",
+    "availability": "Il n’en reste que 6 #076-0234-4"
+  },
+  {
+    "title": "Pergola modulaire CANVAS Horizon, extérieur et patio, 10 x 10 pi",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/1880240/canvas-horizon-10-x-10-modular-pergola-036babcc-70d8-48f1-b1f2-73666688de06-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 1199.99,
+    "salePrice": 599.93,
+    "store": "Canadian Tire",
+    "city": "Whitby North, ON",
+    "branch": "Whitby North, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/pergola-modulaire-canvas-horizon-exterieur-et-patio-10-x-10-pi-1880240p.html",
+    "sku": "1880240",
+    "availability": "Il n’en reste que 3 #188-0240-2"
+  },
+  {
     "title": "Range-placard autoportant Type A avec tiroirs, couleurs variées, 35,75 po",
     "image": "https://media-www.canadiantire.ca/product/living/home-organization/closet-organization/0688344/type-a-closet-kit-with-drawers-35-75-black-and-natural-9a8e4f19-5279-408b-a64c-8e6c2e1658a4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 299.99,
@@ -190,6 +226,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/range-placard-autoportant-type-a-avec-tiroirs-couleurs-variees-35-75-po-0688342p.html",
     "sku": "0688342",
     "availability": ""
+  },
+  {
+    "title": "Ventilateur de plafond d’extérieur NOMA Cassian avec éclairage DEL, 52 po",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/ceiling-fans/0529722/noma-cassian-52-ceiling-fan-98b0adc3-6678-4ecc-ab68-7d7dfd1d130a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 309.99,
+    "salePrice": 149.93,
+    "store": "Canadian Tire",
+    "city": "Whitby North, ON",
+    "branch": "Whitby North, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ventilateur-de-plafond-d-exterieur-noma-cassian-avec-eclairage-del-52-po-0529722p.html",
+    "sku": "0529722",
+    "availability": "Il n’en reste que 1 #052-9722-4"
   },
   {
     "title": "Sac de frappe lourd Everlast Cardio Blast, rose, 40 lb",
@@ -240,6 +288,30 @@
     "availability": "Il n’en reste que 2 #242-0004-6"
   },
   {
+    "title": "Craies d'extérieur aux couleurs vives et audacieuses pour trottoir Crayola Superchalk, lavables, 4 ans et plus",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/seasonal-toys/0509725/crayola-superchalk-55b77fce-a226-4f82-8438-cf57fc64801c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 1.99,
+    "salePrice": 0.43,
+    "store": "Canadian Tire",
+    "city": "Whitby North, ON",
+    "branch": "Whitby North, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/craies-d-exterieur-aux-couleurs-vives-et-audacieuses-pour-trottoir-crayola-superchalk-lavables-4-ans-et-plus-0509725p.html",
+    "sku": "0509725",
+    "availability": "Il n’en reste que 1 #050-9725-2"
+  },
+  {
+    "title": "Tapis d'intérieur et d'extérieur Korhani Elena, 6 x 8 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680034/maville-6x8-indoor-outdoor-rug-c6210407-b9bb-4738-9c56-f6da14cb1a69-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 149.99,
+    "salePrice": 74.93,
+    "store": "Canadian Tire",
+    "city": "Whitby North, ON",
+    "branch": "Whitby North, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-d-interieur-et-d-exterieur-korhani-elena-6-x-8-pi-0680034p.html",
+    "sku": "0680034",
+    "availability": "Il n’en reste que 3 #068-0034-0"
+  },
+  {
     "title": "Tapis de jeu rond rempli d’eau Banzai JR Wiggle n Waves, 44 po, 12 mois et plus",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pools-spas/0813922/wiggle-n-waves-sprinkling-mat-e1a1b4c7-2c51-4810-a285-974dae65cf39-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 24.99,
@@ -249,7 +321,7 @@
     "branch": "Whitby North, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/tapis-de-jeu-rond-rempli-d-eau-banzai-jr-wiggle-n-waves-44-po-12-mois-et-plus-0813922p.html",
     "sku": "0813922",
-    "availability": "28 En Stock#081-3922-4"
+    "availability": "27 En Stock#081-3922-4"
   },
   {
     "title": "Robinet d’évier de cuisine rétractable Danze Smartsense, noir mat",
@@ -264,10 +336,22 @@
     "availability": "Il n’en reste que 3 #063-4827-0"
   },
   {
+    "title": "Ventilateur de plafond NOMA Levi avec moteur c.c. et éclairage DEL, blanc, 48 po",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/ceiling-fans/0529605/noma-levi-48-ceiling-fan-ec605fff-c90f-43bb-9fdd-d6c430adcdb0-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 299.99,
+    "salePrice": 99.93,
+    "store": "Canadian Tire",
+    "city": "Whitby North, ON",
+    "branch": "Whitby North, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ventilateur-de-plafond-noma-levi-avec-moteur-c-c-et-eclairage-del-blanc-48-po-0529605p.html",
+    "sku": "0529605",
+    "availability": "Il n’en reste que 3 #052-9605-4"
+  },
+  {
     "title": "Lampe à suspendre sous le capot CMS MotoMaster",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0370744/motomaster-smd-underhood-hanging-light-06675b9a-b8ab-4eb4-af06-ed0658a3b085-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 99.99,
-    "salePrice": 39.93,
+    "salePrice": 27.93,
     "store": "Canadian Tire",
     "city": "Whitby North, ON",
     "branch": "Whitby North, ON",
@@ -279,13 +363,37 @@
     "title": "Table de soccer de table Ambassador, fini bois, 48 po",
     "image": "https://media-www.canadiantire.ca/product/playing/team-sports-and-golf/sports-equipment-accessories/1840106/-48-foosball--7b2776e4-d562-4d02-bb52-ff449d124dde-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 169.99,
-    "salePrice": 79.93,
+    "salePrice": 69.93,
     "store": "Canadian Tire",
     "city": "Whitby North, ON",
     "branch": "Whitby North, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/table-de-soccer-de-table-ambassador-fini-bois-48-po-1840106p.html",
     "sku": "1840106",
     "availability": "Il n’en reste que 2 #184-0106-2"
+  },
+  {
+    "title": "Ballon de piscine Melon Madness en forme de melon d'eau, rouge/vert, 9 po, pour plage/piscine",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-fun/0813957/banzai-melon-madness-sports-ball-00d04bb7-9d3b-4481-88ec-84fe574ded7d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 14.99,
+    "salePrice": 4.93,
+    "store": "Canadian Tire",
+    "city": "Whitby North, ON",
+    "branch": "Whitby North, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ballon-de-piscine-melon-madness-en-forme-de-melon-d-eau-rouge-vert-9-po-pour-plage-piscine-0813957p.html",
+    "sku": "0813957",
+    "availability": "12 En Stock#081-3957-2"
+  },
+  {
+    "title": "Gobelet incassable CANVAS, transparent, 15,9 oz",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/1592104/canvas-clear-shatterproof-tumbler-bb1275f1-68e6-4b10-80d6-71c3325cec4c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 5.99,
+    "salePrice": 2.93,
+    "store": "Canadian Tire",
+    "city": "Whitby North, ON",
+    "branch": "Whitby North, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/gobelet-incassable-canvas-transparent-15-9-oz-1592104p.html",
+    "sku": "1592104",
+    "availability": "17 En Stock#159-2104-6"
   },
   {
     "title": "Sonnette avec fausse caméra sans fil à piles avec montage en surface Globe",
@@ -327,7 +435,7 @@
     "title": "Bandes lave-auto prémesurées biodégradables Nature Clean, paq. 36",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-chemicals/0396097/nature-clean-car-wash-strips-178be73a-215b-4d50-9b8c-8801de11a125-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 13.99,
-    "salePrice": 6.93,
+    "salePrice": 4.93,
     "store": "Canadian Tire",
     "city": "Whitby North, ON",
     "branch": "Whitby North, ON",
@@ -337,7 +445,7 @@
   },
   {
     "title": "Interrupteur silencieux à bascule 3 voies CA Decorator, 15 A, 120 V, aucune mise à la terre, qualité résidentielle, couleurs variées",
-    "image": "undefined?im=whresize&wid=200&hei=200",
+    "image": "undefined",
     "price": 4.79,
     "salePrice": 1.93,
     "store": "Canadian Tire",
@@ -346,6 +454,30 @@
     "url": "https://www.canadiantire.ca/fr/pdp/interrupteur-silencieux-a-bascule-3-voies-ca-decorator-15-a-120-v-aucune-mise-a-la-terre-qualite-residentielle-couleurs-variees-0528225p.html",
     "sku": "0528225",
     "availability": ""
+  },
+  {
+    "title": "Thermomètre à viande numérique sans fil Vermont Castings",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking-accessories/0853780/vermont-castings-digital-thermometer-d071313c-23d6-4a8e-9c07-7cef9f0e81fd-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 119.99,
+    "salePrice": 59.93,
+    "store": "Canadian Tire",
+    "city": "Whitby North, ON",
+    "branch": "Whitby North, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/thermometre-a-viande-numerique-sans-fil-vermont-castings-0853780p.html",
+    "sku": "0853780",
+    "availability": "Il n’en reste que 2 #085-3780-2"
+  },
+  {
+    "title": "Pagaie de kayak de pêche Outbound en aluminium, léger, gris, 86,5 po",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0792057/outbound-87-angler-kayak-paddle-grey--1dfe390c-1968-453a-bd4e-b3bbe7def962-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 69.99,
+    "salePrice": 27.93,
+    "store": "Canadian Tire",
+    "city": "Whitby North, ON",
+    "branch": "Whitby North, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/pagaie-de-kayak-de-peche-outbound-en-aluminium-leger-gris-86-5-po-0792057p.html",
+    "sku": "0792057",
+    "availability": "Il n’en reste que 2 #079-2057-8"
   },
   {
     "title": "Peinture de retouche Dupli-Color Scratch Fix All-in-1 Exact-Match pour automobile, brume argentée (KT3)",
@@ -408,6 +540,30 @@
     "availability": "Il n’en reste que 2 #020-3535-2"
   },
   {
+    "title": "Ampoule Edison rétro suspendue en plastique avec pince For Living",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-lighting/0521726/for-living-edison-bulb-clip-light-49cbe450-e5bf-4c9c-9615-24efee3b4f3d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 12.99,
+    "salePrice": 4.93,
+    "store": "Canadian Tire",
+    "city": "Whitby North, ON",
+    "branch": "Whitby North, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ampoule-edison-retro-suspendue-en-plastique-avec-pince-for-living-0521726p.html",
+    "sku": "0521726",
+    "availability": "Il n’en reste que 4 #052-1726-4"
+  },
+  {
+    "title": "Friteuse à air chaud avec 10 préréglages PowerXL Luminex, chauffage infrarouge, 5 L",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430397/power-xl-luminex-air-fryer-5l-02022883-f407-4a18-abff-15b0873b676d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 194.99,
+    "salePrice": 79.93,
+    "store": "Canadian Tire",
+    "city": "Whitby North, ON",
+    "branch": "Whitby North, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/friteuse-a-air-chaud-avec-10-prereglages-powerxl-luminex-chauffage-infrarouge-5-l-0430397p.html",
+    "sku": "0430397",
+    "availability": "Il n’en reste que 2 #043-0397-4"
+  },
+  {
     "title": "Maison de poupée à 3 étages pour enfants, bord de mer, 25 accessoires",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/toys-games/1501666/beachside-doll-house-499b056d-aa09-4c1b-8974-7e409c58a2fc-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 249.99,
@@ -420,54 +576,6 @@
     "availability": "Il n’en reste que 4 #150-1666-2"
   },
   {
-    "title": "Table d'appoint ronde de canapé en métal avec plateau amovible CANVAS Slate, noir, 21 po",
-    "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/1680017/canvas-slate-tray-side-table-0d29f349-3377-4d5f-972e-fcc4f7480016-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 69.99,
-    "salePrice": 24.96,
-    "store": "Canadian Tire",
-    "city": "Whitby North, ON",
-    "branch": "Whitby North, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/table-d-appoint-ronde-de-canape-en-metal-avec-plateau-amovible-canvas-slate-noir-21-po-1680017p.html",
-    "sku": "1680017",
-    "availability": "Il n’en reste que 5 #168-0017-4"
-  },
-  {
-    "title": "Câble de charge micro USB Jensen, noir, 3 pi",
-    "image": "https://media-www.canadiantire.ca/product/automotive/electronics/home-electronics/0452816/3-foot-micro-usb-charging-cablea--91fff085-257e-47e9-b434-5f16de5af8f7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 12.99,
-    "salePrice": 3.93,
-    "store": "Canadian Tire",
-    "city": "Whitby North, ON",
-    "branch": "Whitby North, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/cable-de-charge-micro-usb-jensen-noir-3-pi-0452816p.html",
-    "sku": "0452816",
-    "availability": "Il n’en reste que 5 #045-2816-2"
-  },
-  {
-    "title": "Jeu de cuillers tournantes garnies Red Wolf",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0781748/danielson-spinner-assorted-dressed-3-pack-3822cd60-f2be-44aa-8a73-45158cc4a1fc-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 10.99,
-    "salePrice": 4.93,
-    "store": "Canadian Tire",
-    "city": "Whitby North, ON",
-    "branch": "Whitby North, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/jeu-de-cuillers-tournantes-garnies-red-wolf-0781748p.html",
-    "sku": "0781748",
-    "availability": "Il n’en reste que 1 #078-1748-2"
-  },
-  {
-    "title": "Table de travail à toupie Mastercraft avec jauge à onglets coulissante",
-    "image": "https://media-www.canadiantire.ca/product/fixing/tools/stationary-tools/0546841/mastercraft-custom-router-table-55c4433f-db66-4044-9dad-cc35fa554730-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 199.99,
-    "salePrice": 99.93,
-    "store": "Canadian Tire",
-    "city": "Whitby North, ON",
-    "branch": "Whitby North, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/table-de-travail-a-toupie-mastercraft-avec-jauge-a-onglets-coulissante-0546841p.html",
-    "sku": "0546841",
-    "availability": "Il n’en reste que 3 #054-6841-4"
-  },
-  {
     "title": "For Living Statue de jardin avec maison de carotte décorative à DEL alimentée par l'énergie solaire, 8,9 po",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/1590036/for-living-carrot-house-01cb250a-3721-4ee4-9120-b89b4ae2a1c3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 35.99,
@@ -477,7 +585,31 @@
     "branch": "Whitby North, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/for-living-statue-de-jardin-avec-maison-de-carotte-decorative-a-del-alimentee-par-l-energie-solaire-8-9-po-1590036p.html",
     "sku": "1590036",
-    "availability": "26 En Stock#159-0036-0"
+    "availability": "25 En Stock#159-0036-0"
+  },
+  {
+    "title": "Applique à 1 lampe CANVAS Fuller, nickel poli",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/lighting/1522615/canvas-fuller-wall-sconce-34a366a1-1afd-4801-8a29-801898d6b2f7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 77.99,
+    "salePrice": 34.93,
+    "store": "Canadian Tire",
+    "city": "Whitby North, ON",
+    "branch": "Whitby North, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/applique-a-1-lampe-canvas-fuller-nickel-poli-1522615p.html",
+    "sku": "1522615",
+    "availability": "Il n’en reste que 1 #152-2615-4"
+  },
+  {
+    "title": "Radiateur hybride au kérosène à air pulsé 80 000 BTU Remington",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-living/0766267/80k-btu-hybrid-forced-air-kero-heater-6c2a3969-230e-4736-8de8-d807dc7cb352-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 479.99,
+    "salePrice": 239.93,
+    "store": "Canadian Tire",
+    "city": "Whitby North, ON",
+    "branch": "Whitby North, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/radiateur-hybride-au-kerosene-a-air-pulse-80-000-btu-remington-0766267p.html",
+    "sku": "0766267",
+    "availability": "Il n’en reste que 2 #076-6267-0"
   },
   {
     "title": "Feuilles de papier abrasif antidérapant 3M Pro Grade, en oxyde d'aluminium, pour bois, métal, plastique, maçonnerie, 9 x 11 po, paq. 3",
@@ -552,6 +684,18 @@
     "availability": "Il n’en reste que 5 #842-4410-6"
   },
   {
+    "title": "Cerf-volant en nylon X-Kites Micro avec queues volantes pour enfants, choix de couleurs, 5 po, 8 ans et plus, pour activités estivales/d'extérieur",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/seasonal-toys/0505056/micro-kite-34f143cd-9fbf-4e44-a7aa-43afb1ec312a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 4.99,
+    "salePrice": 1.93,
+    "store": "Canadian Tire",
+    "city": "Whitby North, ON",
+    "branch": "Whitby North, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/cerf-volant-en-nylon-x-kites-micro-avec-queues-volantes-pour-enfants-choix-de-couleurs-5-po-8-ans-et-plus-pour-activites-estivales-d-exterieur-0505056p.html",
+    "sku": "0505056",
+    "availability": "Il n’en reste que 1 #050-5056-8"
+  },
+  {
     "title": "Barre d’alimentation intelligente Wi-Fi Geeni, 3 prises avec limiteur de surtension, cordon de 3 pi, 1 200 joules, compatible avec Alexa et l’assistant Google, blanc",
     "image": "https://media-www.canadiantire.ca/product/fixing/electrical/power-bars-extension-cords-timers/0529623/smart-wifi-surge-protector-mini-1200j-fabric-cord-798331b0-d00f-44a7-8a62-fbded2e1a25a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 32.99,
@@ -567,7 +711,7 @@
     "title": "Station de recharge sans fil bluehive",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-electronics/0351596/bluehive-wireless-charging-dock-2ce0fb18-8296-4597-b9e3-2bd6b9d59968-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 49.99,
-    "salePrice": 19.93,
+    "salePrice": 14.93,
     "store": "Canadian Tire",
     "city": "Whitby North, ON",
     "branch": "Whitby North, ON",
@@ -597,7 +741,7 @@
     "branch": "Whitby North, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/emerillon-a-barillet-danielson-laiton-taille-1-paq-4-0774428p.html",
     "sku": "0774428",
-    "availability": "Il n’en reste que 3 #077-4428-8"
+    "availability": "Il n’en reste que 1 #077-4428-8"
   },
   {
     "title": "Huileur pour outil pneumatique intégré Mastercraft",
@@ -610,18 +754,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/huileur-pour-outil-pneumatique-integre-mastercraft-0587729p.html",
     "sku": "0587729",
     "availability": "Il n’en reste que 1 #058-7729-0"
-  },
-  {
-    "title": "Ballon gonflable rebondissant en Goofy Foot, multicolore, choix variés, 3 ans et plus, pour activités estivales/d'extérieur",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/seasonal-toys/0504055/goofy-balls-display-48112755-7d47-4149-b308-38501c4c1233-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 8.99,
-    "salePrice": 2.93,
-    "store": "Canadian Tire",
-    "city": "Whitby North, ON",
-    "branch": "Whitby North, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/ballon-gonflable-rebondissant-en-goofy-foot-multicolore-choix-varies-3-ans-et-plus-pour-activites-estivales-d-exterieur-0504055p.html",
-    "sku": "0504055",
-    "availability": "Il n’en reste que 1 #050-4055-6"
   },
   {
     "title": "Jouet Star Wars Hoover Hide Grogu, 4 ans et plus",
@@ -672,6 +804,18 @@
     "availability": "Il n’en reste que 1 #842-3954-8"
   },
   {
+    "title": "Pinceau à badigeonner en tissu Vermont Castings avec anneau en cuir",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking-accessories/0852157/vermont-castings-sauce-mop-c3400c13-5240-4244-926d-099929ac008d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 21.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Whitby North, ON",
+    "branch": "Whitby North, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/pinceau-a-badigeonner-en-tissu-vermont-castings-avec-anneau-en-cuir-0852157p.html",
+    "sku": "0852157",
+    "availability": "Il n’en reste que 3 #085-2157-4"
+  },
+  {
     "title": "Accessoires et jeux, très grand ensemble, 100 pièces",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/party-city-everyday/party-city-fun/8422797/general-2-super-mix-pk-732a0ee8-29bf-4f99-8861-81c6ce83d815-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 24.99,
@@ -718,6 +862,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/affiche-d-automne-reversible-pour-veranda-bilingue-canvas-35-8-po-1511088p.html",
     "sku": "1511088",
     "availability": ""
+  },
+  {
+    "title": "Barre attelage abaissement Reese Towpower carbone 1 1/4x2 po",
+    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0403028/reese-carbon-forged-ball-mount-1-1-4-x-2-black-ac125133-3ead-43ee-80cd-95d01fba97e3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 46.99,
+    "salePrice": 19.93,
+    "store": "Canadian Tire",
+    "city": "Whitby North, ON",
+    "branch": "Whitby North, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/barre-attelage-abaissement-reese-towpower-carbone-1-1-4x2-po-0403028p.html",
+    "sku": "0403028",
+    "availability": "Il n’en reste que 1 #040-3028-2"
   },
   {
     "title": "Trousse de pose de cadre en bois Solutions",

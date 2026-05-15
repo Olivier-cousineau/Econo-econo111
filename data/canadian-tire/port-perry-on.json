@@ -1,5 +1,41 @@
 [
   {
+    "title": "Affûte-couteaux à 3 étapes MASTER Chef",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/cutlery/2421029/master-chef-3stage-knife-sharpener-b9ab2767-c8c0-473e-a296-6cb70527856a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 18.99,
+    "salePrice": 4.93,
+    "store": "Canadian Tire",
+    "city": "Port Perry, ON",
+    "branch": "Port Perry, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/affute-couteaux-a-3-etapes-master-chef-2421029p.html",
+    "sku": "2421029",
+    "availability": "23 En Stock#242-1029-2"
+  },
+  {
+    "title": "Tasses à mesurer empilables en plastique MASTER Chef, paq. 10",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/bakeware-baking-prep/1429676/master-chef-10pc-measuring-cup-set-73c761cb-c28c-42fe-a32e-f57a30c6b9a6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 24.99,
+    "salePrice": 5,
+    "store": "Canadian Tire",
+    "city": "Port Perry, ON",
+    "branch": "Port Perry, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tasses-a-mesurer-empilables-en-plastique-master-chef-paq-10-1429676p.html",
+    "sku": "1429676",
+    "availability": "33 En Stock#142-9676-0"
+  },
+  {
+    "title": "Toile pare soleil triangulaire ShelterLogic, 12 pi",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/0882240/shelter-logic-triangle-shade-sail-12--2c190960-0271-482d-a439-b31dbf8f42e7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 54.99,
+    "salePrice": 24.93,
+    "store": "Canadian Tire",
+    "city": "Port Perry, ON",
+    "branch": "Port Perry, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/toile-pare-soleil-triangulaire-shelterlogic-12-pi-0882307p.html",
+    "sku": "0882307",
+    "availability": "Il n’en reste que 3 #088-2307-2"
+  },
+  {
     "title": "Four à pizza de table portatif au gaz Vida par PADERNO, 1 brûleur, 12 po",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking/0850001/vida-by-paderno-pizza-oven-c3f6852d-30b5-4ad8-96fe-41ea01ff0eaa-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 399.99,
@@ -10,6 +46,42 @@
     "url": "https://www.canadiantire.ca/fr/pdp/four-a-pizza-de-table-portatif-au-gaz-vida-par-paderno-1-bruleur-12-po-0850001p.html",
     "sku": "0850001",
     "availability": "Il n’en reste que 1 #085-0001-6"
+  },
+  {
+    "title": "Fauteuil de salle à manger d'extérieur/de terrasse CANVAS Belwood en aluminium et osier, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/0880541/canvas-belwood-aluminum-dining-chair-2-pack-de38f891-c44a-49df-a4e2-897c643e77fb-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 499.99,
+    "salePrice": 249.93,
+    "store": "Canadian Tire",
+    "city": "Port Perry, ON",
+    "branch": "Port Perry, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/fauteuil-de-salle-a-manger-d-exterieur-de-terrasse-canvas-belwood-en-aluminium-et-osier-paq-2-0880541p.html",
+    "sku": "0880541",
+    "availability": "Il n’en reste que 2 #088-0541-4"
+  },
+  {
+    "title": "Tapis d'intérieur et d'extérieur CANVAS Morency, 6 x 9 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680042/morency-outdoor-rug-d723df32-0b9c-4c2a-86c8-9c791795e3b2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 49.99,
+    "salePrice": 19.93,
+    "store": "Canadian Tire",
+    "city": "Port Perry, ON",
+    "branch": "Port Perry, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-d-interieur-et-d-exterieur-canvas-morency-6-x-9-pi-0680042p.html",
+    "sku": "0680042",
+    "availability": "Il n’en reste que 2 #068-0042-0"
+  },
+  {
+    "title": "Tapis d'intérieur et d'extérieur CANVAS Fresco Marven, 8 x 10 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680038/marven-indoor-outdoor-rug-f51c7cd9-ed84-43e2-8599-b714280d7a6c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 199.99,
+    "salePrice": 99.93,
+    "store": "Canadian Tire",
+    "city": "Port Perry, ON",
+    "branch": "Port Perry, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-d-interieur-et-d-exterieur-canvas-fresco-marven-8-x-10-pi-0680038p.html",
+    "sku": "0680038",
+    "availability": "Il n’en reste que 1 #068-0038-2"
   },
   {
     "title": "Distributeur d'eau chaude de MASTER Chef avec poignée, noir, 3,5 L",
@@ -36,16 +108,16 @@
     "availability": ""
   },
   {
-    "title": "Machine à espresso semi-automatique à un toucher avec mousseur à lait Mr. Coffee",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430385/mr-coffee-semi-automatic-espresso-machine-w-milk-frother-482b518b-cfa5-4d80-bb51-f3dc6d06036e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 439.99,
-    "salePrice": 129.93,
+    "title": "Barbecue MASTER Chef G70220 Turismo, 4 brûleurs, propane avec tablettes latérales, 36 po",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking/0850106/master-chef-grill-turismo-4-burner-gas-griddle-cart-19667163-bb41-4715-b58c-645b95721288-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 399.99,
+    "salePrice": 199.93,
     "store": "Canadian Tire",
     "city": "Port Perry, ON",
     "branch": "Port Perry, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/machine-a-espresso-semi-automatique-a-un-toucher-avec-mousseur-a-lait-mr-coffee-0430385p.html",
-    "sku": "0430385",
-    "availability": "Il n’en reste que 2 #043-0385-2"
+    "url": "https://www.canadiantire.ca/fr/pdp/barbecue-master-chef-g70220-turismo-4-bruleurs-propane-avec-tablettes-laterales-36-po-0850106p.html",
+    "sku": "0850106",
+    "availability": "Il n’en reste que 1 #085-0106-8"
   },
   {
     "title": "Fauteuil de salle à manger de jardin/d'extérieur en osier CANVAS Jasper, toute saison, paq. 2",
@@ -69,7 +141,7 @@
     "branch": "Port Perry, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/ampoules-a-del-a-intensite-variable-a-culot-e12-noma-b10-2700k-350-lumens-blanc-chaud-40-w-paq-2-0529347p.html",
     "sku": "0529347",
-    "availability": "226 En Stock#052-9347-8"
+    "availability": "224 En Stock#052-9347-8"
   },
   {
     "title": "Machine à café et à espresso mince Nespresso Vertuo Next par DeLonghi, gris",
@@ -99,13 +171,25 @@
     "title": "Meuble de rangement d'angle ouvert à 9 cubes For Living, blanc",
     "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/1680221/for-living-corner-9-cube-organizer-7b7dc5f9-de00-4529-ab60-96254faa2854-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 159.99,
-    "salePrice": 79.93,
+    "salePrice": 73.93,
     "store": "Canadian Tire",
     "city": "Port Perry, ON",
     "branch": "Port Perry, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/meuble-de-rangement-d-angle-ouvert-a-9-cubes-for-living-blanc-1680221p.html",
     "sku": "1680221",
     "availability": "Il n’en reste que 2 #168-0221-6"
+  },
+  {
+    "title": "Tapis d'intérieur et d'extérieur CANVAS Basca, 8 x 10 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680048/basca-outdoor-rug-9605a092-adeb-4af7-9752-a7e7577775cb-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 72.99,
+    "salePrice": 34.93,
+    "store": "Canadian Tire",
+    "city": "Port Perry, ON",
+    "branch": "Port Perry, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-d-interieur-et-d-exterieur-canvas-basca-8-x-10-pi-0680048p.html",
+    "sku": "0680048",
+    "availability": "Il n’en reste que 3 #068-0048-8"
   },
   {
     "title": "Sécheuse extensible intérieur/extérieur Type A",
@@ -132,22 +216,10 @@
     "availability": "Il n’en reste que 4 #242-1124-4"
   },
   {
-    "title": "Glacière/réchaud électrique thermoélectrique sur roulettes Mobicool, avec poignée, 45 L, bleu",
-    "image": "https://media-www.canadiantire.ca/product/playing/camping/hydration-coolers/0370124/45l-wheeled-12v-cooler-with-adapter-1a3a5430-7fbc-4bde-bbb2-549a37e1e05e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 379.99,
-    "salePrice": 139.93,
-    "store": "Canadian Tire",
-    "city": "Port Perry, ON",
-    "branch": "Port Perry, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/glaciere-rechaud-electrique-thermoelectrique-sur-roulettes-mobicool-avec-poignee-45-l-bleu-0370124p.html",
-    "sku": "0370124",
-    "availability": "Il n’en reste que 1 #037-0124-0"
-  },
-  {
     "title": "Jouet aquatique gonflable Soak N' Splash & Slide avec gicleur, bleu, 16 pi, 5 ans et plus, pour plage/piscine",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/seasonal-toys/0504211/soak-n-splash-water-slide-16--6fa00059-6643-4304-ad97-12a017f202a2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 14.99,
-    "salePrice": 6.93,
+    "salePrice": 4.93,
     "store": "Canadian Tire",
     "city": "Port Perry, ON",
     "branch": "Port Perry, ON",
@@ -180,10 +252,178 @@
     "availability": ""
   },
   {
+    "title": "Tente de camping Coleman Slylodge pour 10 personnes avec pièce à moustiquaire convertible, double-toit et sac de transport",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/tents-shelters/0766127/coleman-10-person-cabin-tent-with-screen-room-508408d3-620b-447f-8946-288dc1cdbc12-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 489.99,
+    "salePrice": 244.93,
+    "store": "Canadian Tire",
+    "city": "Port Perry, ON",
+    "branch": "Port Perry, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tente-de-camping-coleman-slylodge-pour-10-personnes-avec-piece-a-moustiquaire-convertible-double-toit-et-sac-de-transport-0766127p.html",
+    "sku": "0766127",
+    "availability": "Il n’en reste que 2 #076-6127-4"
+  },
+  {
+    "title": "Tapis d'intérieur et d'extérieur CANVAS Fresco Belfont, 8 x 10 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680039/belfont-indoor-outdoor-rug-2cc2ee2e-72b8-4508-bef2-3b4dbbe72d93-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 199.99,
+    "salePrice": 99.93,
+    "store": "Canadian Tire",
+    "city": "Port Perry, ON",
+    "branch": "Port Perry, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-d-interieur-et-d-exterieur-canvas-fresco-belfont-8-x-10-pi-0680039p.html",
+    "sku": "0680039",
+    "availability": ""
+  },
+  {
+    "title": "Tabouret de bar métal et bois CANVAS Union, paq. 2, brun",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/0687563/canvas-union-stool-2-pk-29ecf7e3-3af9-4631-ab03-ba8946104db3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 229.99,
+    "salePrice": 74.93,
+    "store": "Canadian Tire",
+    "city": "Port Perry, ON",
+    "branch": "Port Perry, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tabouret-de-bar-metal-et-bois-canvas-union-paq-2-brun-0687563p.html",
+    "sku": "0687563",
+    "availability": "Il n’en reste que 2 #068-7563-8"
+  },
+  {
+    "title": "Lit de camp pliant portatif pour chiens Woods DOG-WOOD avec sac de transport, capacité de 70 lb, bleu",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-accessories/0766424/woods-dogwood-quad-fold-pet-cot-fe2e4cef-58fa-4578-93b8-795fe70105e1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 79.99,
+    "salePrice": 35.93,
+    "store": "Canadian Tire",
+    "city": "Port Perry, ON",
+    "branch": "Port Perry, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/lit-de-camp-pliant-portatif-pour-chiens-woods-dog-wood-avec-sac-de-transport-capacite-de-70-lb-bleu-0766424p.html",
+    "sku": "0766424",
+    "availability": "Il n’en reste que 1 #076-6424-6"
+  },
+  {
+    "title": "Garde-robe compacte Canvas",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/1680204/canvas-slim-wardrobe-98f1ed6a-144b-4f67-a348-6ea6f35a5649-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 349.99,
+    "salePrice": 173.93,
+    "store": "Canadian Tire",
+    "city": "Port Perry, ON",
+    "branch": "Port Perry, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/garde-robe-compacte-canvas-1680204p.html",
+    "sku": "1680204",
+    "availability": "Il n’en reste que 1 #168-0204-8"
+  },
+  {
+    "title": "CANVAS Minden - Fauteuil Adirondack empilable rembourré, gris",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/0882190/canvas-minden-padded-sling-adirondack-chair-22bfb86d-0e5b-4775-9dbb-b82e723cafcd-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 129.99,
+    "salePrice": 59.93,
+    "store": "Canadian Tire",
+    "city": "Port Perry, ON",
+    "branch": "Port Perry, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/canvas-minden-fauteuil-adirondack-empilable-rembourre-gris-0882190p.html",
+    "sku": "0882190",
+    "availability": "Il n’en reste que 4 #088-2190-6"
+  },
+  {
+    "title": "Décanteur et verres whisky en verre Trudeau, 5 pièces",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/dining-and-entertaining/1426174/trudeau-whiskey-set-5-pc-19b99451-15bf-4b77-b69f-9d77f38abab3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 39.99,
+    "salePrice": 14.93,
+    "store": "Canadian Tire",
+    "city": "Port Perry, ON",
+    "branch": "Port Perry, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/decanteur-et-verres-whisky-en-verre-trudeau-5-pieces-1426174p.html",
+    "sku": "1426174",
+    "availability": "Il n’en reste que 2 #142-6174-2"
+  },
+  {
+    "title": "Parasol de plage réglable Slumbertrek Pack Umbrella avec vis de sable et sac de transport",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/tents-shelters/0765950/slumbertrek-pack-umbrella-e8ec8d94-c365-4e47-afeb-47db658e5896-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 32.99,
+    "salePrice": 14.93,
+    "store": "Canadian Tire",
+    "city": "Port Perry, ON",
+    "branch": "Port Perry, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/parasol-de-plage-reglable-slumbertrek-pack-umbrella-avec-vis-de-sable-et-sac-de-transport-0765950p.html",
+    "sku": "0765950",
+    "availability": "Il n’en reste que 1 #076-5950-8"
+  },
+  {
+    "title": "For Living Bluebay - Table à manger de jardin rectangulaire en acier avec carreaux de céramique, 64 x 41 x 28 po",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/0881648/for-living-bluebay-tile-table-7cccd5bd-1a27-4d77-abc0-9fd004963332-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 199.99,
+    "salePrice": 99.93,
+    "store": "Canadian Tire",
+    "city": "Port Perry, ON",
+    "branch": "Port Perry, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/for-living-bluebay-table-a-manger-de-jardin-rectangulaire-en-acier-avec-carreaux-de-ceramique-64-x-41-x-28-po-0881648p.html",
+    "sku": "0881648",
+    "availability": "Il n’en reste que 1 #088-1648-6"
+  },
+  {
+    "title": "Tapis d'intérieur et d'extérieur Korhani Sienna, 5 x 7 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680032/tofino-indoor-outdoor-rug-593a3364-ff9a-4daa-8160-ea1342dcc4ec-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 114.99,
+    "salePrice": 44.93,
+    "store": "Canadian Tire",
+    "city": "Port Perry, ON",
+    "branch": "Port Perry, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-d-interieur-et-d-exterieur-korhani-sienna-5-x-7-pi-0680032p.html",
+    "sku": "0680032",
+    "availability": "Il n’en reste que 1 #068-0032-4"
+  },
+  {
+    "title": "CANVAS Bala - Table à manger de jardin en osier à plateau en similibois pour toutes les conditions",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/0881695/canvas-bala-casual-dining-table-5ca88d41-582d-4068-957c-ddee4d89cc49-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 399.99,
+    "salePrice": 199.93,
+    "store": "Canadian Tire",
+    "city": "Port Perry, ON",
+    "branch": "Port Perry, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/canvas-bala-table-a-manger-de-jardin-en-osier-a-plateau-en-similibois-pour-toutes-les-conditions-0881695p.html",
+    "sku": "0881695",
+    "availability": "Il n’en reste que 1 #088-1695-2"
+  },
+  {
+    "title": "Banc d'extérieur/de jardin en osier à cadre en acier CANVAS Chambly, résistant aux intempéries",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/1880277/canvas-chambly-bench-cdc7c163-4422-4c33-96f2-bc18b4d43c9d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 299.99,
+    "salePrice": 149.93,
+    "store": "Canadian Tire",
+    "city": "Port Perry, ON",
+    "branch": "Port Perry, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/banc-d-exterieur-de-jardin-en-osier-a-cadre-en-acier-canvas-chambly-resistant-aux-intemperies-1880277p.html",
+    "sku": "1880277",
+    "availability": "Il n’en reste que 1 #188-0277-6"
+  },
+  {
+    "title": "Banc de rangement sur rails avec poignées découpées FOR LIVING, 36 x 17 x 22 po, blanc",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/1680173/for-living-pull-out-storage-bench-f77b5742-e1d3-4ea8-940d-a0d2525c3a8b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 249.99,
+    "salePrice": 93.93,
+    "store": "Canadian Tire",
+    "city": "Port Perry, ON",
+    "branch": "Port Perry, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/banc-de-rangement-sur-rails-avec-poignees-decoupees-for-living-36-x-17-x-22-po-blanc-1680173p.html",
+    "sku": "1680173",
+    "availability": "Il n’en reste que 1 #168-0173-0"
+  },
+  {
+    "title": "Banc pliant à dossier Outbound pour 4 personnes, gris",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-furniture/0766407/outbound-4-person-quad-fold-bench-with-backrest-4756bfb5-0d11-4262-a4eb-7b34a2c6f5d0-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 109.99,
+    "salePrice": 54.93,
+    "store": "Canadian Tire",
+    "city": "Port Perry, ON",
+    "branch": "Port Perry, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/banc-pliant-a-dossier-outbound-pour-4-personnes-gris-0766407p.html",
+    "sku": "0766407",
+    "availability": "Il n’en reste que 2 #076-6407-8"
+  },
+  {
     "title": "Housse de pare-brise 2-en-1 MyRide pour soleil et neige, convient à la plupart des véhicules",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-winter-accessories/0304491/myride-sun-and-snow-windshield-cover-1d0e1f73-cc79-4090-b8a5-bdaefbe970b7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 32.99,
-    "salePrice": 12.93,
+    "salePrice": 9.93,
     "store": "Canadian Tire",
     "city": "Port Perry, ON",
     "branch": "Port Perry, ON",
@@ -204,10 +444,22 @@
     "availability": ""
   },
   {
+    "title": "Chaise longue empilable For Living, bleu",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/1881311/for-living-stacking-lounge-chair-blue-ffdc524a-12aa-4b4a-9bd0-c3d4eb89e7dd-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 79.99,
+    "salePrice": 39.93,
+    "store": "Canadian Tire",
+    "city": "Port Perry, ON",
+    "branch": "Port Perry, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/chaise-longue-empilable-for-living-bleu-1881311p.html",
+    "sku": "1881311",
+    "availability": "Il n’en reste que 3 #188-1311-8"
+  },
+  {
     "title": "Fauteuil de jeu pivotant ergonomique avec haut-parleur Bluetooth à vibration X Rocker Nemesis 2.1, noir",
     "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/1680114/x-rocker-nemesis-2-1-pedestal-with-vibration-c04afa7a-a8e5-4138-9c0b-6ae9edac7abe-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 269.99,
-    "salePrice": 134.93,
+    "salePrice": 133.93,
     "store": "Canadian Tire",
     "city": "Port Perry, ON",
     "branch": "Port Perry, ON",
@@ -228,6 +480,18 @@
     "availability": "Il n’en reste que 2 #184-1346-4"
   },
   {
+    "title": "Abri soleil Outbound Haven à système de 2 moyeux",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/tents-shelters/0766442/outbound-haven-2hub-sun-shelter-dd9ff823-d50f-4269-a2f3-7cb00e9450a9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 79.99,
+    "salePrice": 39.93,
+    "store": "Canadian Tire",
+    "city": "Port Perry, ON",
+    "branch": "Port Perry, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/abri-soleil-outbound-haven-a-systeme-de-2-moyeux-0766442p.html",
+    "sku": "0766442",
+    "availability": "Il n’en reste que 1 #076-6442-2"
+  },
+  {
     "title": "CANVAS Coventry Hills - Table à manger de jardin rectangulaire en aluminium, brun, 72 x 40 x 28 po",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/0882034/canvas-coventry-hills-rectangular-dining-table-7eef4776-fd0b-4a04-900d-5e1c57fc1f9e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 549.99,
@@ -240,40 +504,16 @@
     "availability": "Il n’en reste que 1 #088-2034-0"
   },
   {
-    "title": "Caméra de sentier Stealth Cam Revolver 360 degrés",
-    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-equipment/3751790/stealth-cam-revolver-360-degree-trail-camera-22b4a3f0-95dd-4316-8eae-f9e7606f091e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 249.99,
-    "salePrice": 119.93,
+    "title": "Craies d'extérieur aux couleurs vives et audacieuses pour trottoir Crayola Superchalk, lavables, 4 ans et plus",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/seasonal-toys/0509725/crayola-superchalk-55b77fce-a226-4f82-8438-cf57fc64801c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 1.99,
+    "salePrice": 0.43,
     "store": "Canadian Tire",
     "city": "Port Perry, ON",
     "branch": "Port Perry, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/camera-de-sentier-stealth-cam-revolver-360-degres-3751790p.html",
-    "sku": "3751790",
-    "availability": "Il n’en reste que 1 #375-1790-0"
-  },
-  {
-    "title": "Lampe à faisceau large à DEL Mastercraft, 1500 lumens, compatible PWR POD",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0372969/mastercraft-1500-lumens-spotlight-pwr-pod-compatible-363c7083-04a4-4a37-b863-da8214fd1958-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 119.99,
-    "salePrice": 44.93,
-    "store": "Canadian Tire",
-    "city": "Port Perry, ON",
-    "branch": "Port Perry, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/lampe-a-faisceau-large-a-del-mastercraft-1500-lumens-compatible-pwr-pod-0372969p.html",
-    "sku": "0372969",
-    "availability": "Il n’en reste que 5 #037-2969-8"
-  },
-  {
-    "title": "Bec verseur de rechange Reliance, 53 mm",
-    "image": "https://media-www.canadiantire.ca/product/playing/camping/hydration-coolers/0854308/reliance-replacement-spout-assembly-084b6ed6-c410-4129-915c-26becd3c163c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 9.99,
-    "salePrice": 4.93,
-    "store": "Canadian Tire",
-    "city": "Port Perry, ON",
-    "branch": "Port Perry, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/bec-verseur-de-rechange-reliance-53-mm-0854308p.html",
-    "sku": "0854308",
-    "availability": "10 En Stock#085-4308-4"
+    "url": "https://www.canadiantire.ca/fr/pdp/craies-d-exterieur-aux-couleurs-vives-et-audacieuses-pour-trottoir-crayola-superchalk-lavables-4-ans-et-plus-0509725p.html",
+    "sku": "0509725",
+    "availability": "Il n’en reste que 5 #050-9725-2"
   },
   {
     "title": "Liquide de protection contre les inondations Flex Seal, protection imperméable contre les inondations, 10 oz",
@@ -297,19 +537,43 @@
     "branch": "Port Perry, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/secateur-a-enclume-yardworks-0596605p.html",
     "sku": "0596605",
-    "availability": "8 En Stock#059-6605-8"
+    "availability": "Il n’en reste que 7 #059-6605-8"
+  },
+  {
+    "title": "Coussin de chaise longue hydrofuge résistant aux taches CANVAS BoHo, noir",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0880044/canvas-boho-lounge-cushion-b957b1ee-4e74-4578-8bbc-9b4fd2a75f15-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 109.99,
+    "salePrice": 54.93,
+    "store": "Canadian Tire",
+    "city": "Port Perry, ON",
+    "branch": "Port Perry, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/coussin-de-chaise-longue-hydrofuge-resistant-aux-taches-canvas-boho-noir-0880044p.html",
+    "sku": "0880044",
+    "availability": ""
   },
   {
     "title": "Chaise à dîner CANVAS Windsor, blanc",
     "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/1680126/canvas-windsor-white-dining-chair-308adadd-fff5-4b03-9585-49671be60cca-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 169.99,
-    "salePrice": 84.93,
+    "salePrice": 79.93,
     "store": "Canadian Tire",
     "city": "Port Perry, ON",
     "branch": "Port Perry, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/chaise-a-diner-canvas-windsor-blanc-1680126p.html",
     "sku": "1680126",
     "availability": "Il n’en reste que 1 #168-0126-4"
+  },
+  {
+    "title": "Aspirateur de déchets secs/humides compact 3-en-1 Simoniz PWR POD avec tuyau et accessoires",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-tools/0398256/simoniz-pwr-pod-wet-dry-vac-5f04eace-45c9-4895-9e3d-774df8898131-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 189.99,
+    "salePrice": 90.93,
+    "store": "Canadian Tire",
+    "city": "Port Perry, ON",
+    "branch": "Port Perry, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/aspirateur-de-dechets-secs-humides-compact-3-en-1-simoniz-pwr-pod-avec-tuyau-et-accessoires-0398256p.html",
+    "sku": "0398256",
+    "availability": "Il n’en reste que 1 #039-8256-4"
   },
   {
     "title": "Banc de rangement For Living, blanc",
@@ -333,7 +597,7 @@
     "branch": "Port Perry, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/lotion-chasse-moustiques-8-h-30-deet-muskol-100-ml-0594182p.html",
     "sku": "0594182",
-    "availability": "Il n’en reste que 7 #059-4182-4"
+    "availability": "Il n’en reste que 6 #059-4182-4"
   },
   {
     "title": "La station de chargement sans fil en tissu de 10 W de Bluehive est compatible avec la plupart des appareils compatibles Qi",
@@ -358,6 +622,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/ligne-en-monofilament-red-wolf-transparent-800-vg-0778320p.html",
     "sku": "0778320",
     "availability": ""
+  },
+  {
+    "title": "Tapis d'intérieur et d'extérieur Korhani Luna, 5 x 7 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680033/maville-5x7-indoor-outdoor-rug-2fbded30-72ce-46a7-8c89-dc7dd7287d85-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 114.99,
+    "salePrice": 54.93,
+    "store": "Canadian Tire",
+    "city": "Port Perry, ON",
+    "branch": "Port Perry, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-d-interieur-et-d-exterieur-korhani-luna-5-x-7-pi-0680033p.html",
+    "sku": "0680033",
+    "availability": "Il n’en reste que 2 #068-0033-2"
   },
   {
     "title": "Bureau de jeu X Rocker Raven",
@@ -399,7 +675,7 @@
     "title": "Sacs pour cadeaux-surprises La Reine des neiges 2, paq. 8",
     "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8420233/frozen-2-favour-bags-8ct-83513744-dd34-4e89-b6c1-5475e9ff9c65-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 8.99,
-    "salePrice": 3.93,
+    "salePrice": 2.93,
     "store": "Canadian Tire",
     "city": "Port Perry, ON",
     "branch": "Port Perry, ON",
@@ -442,18 +718,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/advanced-elements-packraft-2-personnes-flatwater-general-bleu-0798350p.html",
     "sku": "0798350",
     "availability": "Il n’en reste que 1 #079-8350-2"
-  },
-  {
-    "title": "Tube Lunkerhunt, 3 po",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0776970/lunkerhunt-unsalted-tube-pumpkinseed-8-pack-3--5049c485-a542-4322-8682-16a8d221a00c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 7.99,
-    "salePrice": 2,
-    "store": "Canadian Tire",
-    "city": "Port Perry, ON",
-    "branch": "Port Perry, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/tube-lunkerhunt-3-po-0776966p.html",
-    "sku": "0776966",
-    "availability": ""
   },
   {
     "title": "Boîte à cadran de plombs",
@@ -504,6 +768,42 @@
     "availability": "Il n’en reste que 1 #052-3444-2"
   },
   {
+    "title": "Ampoules fluocompactes à intensité non variable, lumière du jour, 100 W, paq. 3",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/light-bulbs/0522815/micromini-100w-daylight-10000-hours-cfl-3-pack-e1e9698a-3832-444b-a345-26ce41d006ff-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 15.99,
+    "salePrice": 7.93,
+    "store": "Canadian Tire",
+    "city": "Port Perry, ON",
+    "branch": "Port Perry, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ampoules-fluocompactes-a-intensite-non-variable-lumiere-du-jour-100-w-paq-3-0522815p.html",
+    "sku": "0522815",
+    "availability": "Il n’en reste que 1 #052-2815-6"
+  },
+  {
+    "title": "Île flottante gonflable pour 6 personnes pour rivière ou lac avec porte-gobelets et dossier HydroForce Lazy Dayz, blanc, orange, bleu",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-water-fun/0797164/hydroforce-lazy-dayz-party-island-3-6-person-da163630-2a0e-48c7-adcd-75fdb51f9bd8-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 199.99,
+    "salePrice": 79.93,
+    "store": "Canadian Tire",
+    "city": "Port Perry, ON",
+    "branch": "Port Perry, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ile-flottante-gonflable-pour-6-personnes-pour-riviere-ou-lac-avec-porte-gobelets-et-dossier-hydroforce-lazy-dayz-blanc-orange-bleu-0797164p.html",
+    "sku": "0797164",
+    "availability": "Il n’en reste que 1 #079-7164-2"
+  },
+  {
+    "title": "Ballon en aluminium satiné lettres It's a Boy, argent prismatique, 40 x 9 po, gonflé d'air, pour fête prénatale",
+    "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8423830/holo-blln-bloc-a38e25da-dc27-4a51-a05b-e86253537aab-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 13.99,
+    "salePrice": 6.93,
+    "store": "Canadian Tire",
+    "city": "Port Perry, ON",
+    "branch": "Port Perry, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ballon-en-aluminium-satine-lettres-it-s-a-boy-argent-prismatique-40-x-9-po-gonfle-d-air-pour-fete-prenatale-8423830p.html",
+    "sku": "8423830",
+    "availability": "Il n’en reste que 4 #842-3830-2"
+  },
+  {
     "title": "Chargeur pour l’auto à motif de pneus Bluehive, 24 W, 2 ports USB-A, noir",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-electronics/0357396/bluehive-24-watt-tire-pattern-car-charger-b13d7bcd-0445-4447-abab-d98943427e2c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 25.99,
@@ -526,18 +826,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/ballon-en-aluminium-satine-mot-clic-choix-de-couleurs-11-x-13-po-gonfle-d-air-pour-anniversaire-remise-de-diplomes-fete-prenatale-mariage-de-finissants-8423769p.html",
     "sku": "8423769",
     "availability": ""
-  },
-  {
-    "title": "Coulis prémélangé pour carreaux de revêtement LePage Polyfilla Repair, hydrofuge et antitache, blanc, 900 mL",
-    "image": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0495008/pre-mixed-tile-grout-980-c6972bdd-8c39-4bd5-81c5-bc8a91e36883-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 22.99,
-    "salePrice": 9.93,
-    "store": "Canadian Tire",
-    "city": "Port Perry, ON",
-    "branch": "Port Perry, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/coulis-premelange-pour-carreaux-de-revetement-lepage-polyfilla-repair-hydrofuge-et-antitache-blanc-900-ml-0495008p.html",
-    "sku": "0495008",
-    "availability": "Il n’en reste que 1 #049-5008-0"
   },
   {
     "title": "Gradateur numérique unipolaire et à 3 voies Leviton REL06-742 Renu, DEL/CFL, plaque murale non incluse, blanc",
@@ -567,13 +855,25 @@
     "title": "Station de recharge sans fil bluehive",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-electronics/0351596/bluehive-wireless-charging-dock-2ce0fb18-8296-4597-b9e3-2bd6b9d59968-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 49.99,
-    "salePrice": 19.93,
+    "salePrice": 14.93,
     "store": "Canadian Tire",
     "city": "Port Perry, ON",
     "branch": "Port Perry, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/station-de-recharge-sans-fil-bluehive-0351596p.html",
     "sku": "0351596",
     "availability": "Il n’en reste que 7 #035-1596-4"
+  },
+  {
+    "title": "Masque et tuba Speedo Expedition pour adulte",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-fun/0810426/speedo-adult-expedition-mask-and-snorkel-set-f40f8d01-5643-42b7-a31c-88719dcc120b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 59.99,
+    "salePrice": 29.93,
+    "store": "Canadian Tire",
+    "city": "Port Perry, ON",
+    "branch": "Port Perry, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/masque-et-tuba-speedo-expedition-pour-adulte-0810426p.html",
+    "sku": "0810426",
+    "availability": "Il n’en reste que 1 #081-0426-4"
   },
   {
     "title": "Squelette suspendu pour véranda Gemmy, blanc/vert, 18 po, décoration intérieure/extérieure pour l'Halloween",
@@ -586,6 +886,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/squelette-suspendu-pour-veranda-gemmy-blanc-vert-18-po-decoration-interieure-exterieure-pour-l-halloween-1519184p.html",
     "sku": "1519184",
     "availability": ""
+  },
+  {
+    "title": "Prises de dame de nage chromées pour kayak ou canot",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0792470/oar-sockets-chrome-00094463-040e-43c3-85b6-5a093733a7b1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 29.99,
+    "salePrice": 11.93,
+    "store": "Canadian Tire",
+    "city": "Port Perry, ON",
+    "branch": "Port Perry, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/prises-de-dame-de-nage-chromees-pour-kayak-ou-canot-0792470p.html",
+    "sku": "0792470",
+    "availability": "Il n’en reste que 1 #079-2470-2"
   },
   {
     "title": "Colle adhésive époxyde pour frein-filet à haute résistance DAP Tank Bond, fixe et scelle les fixations, 6 mL",
@@ -621,7 +933,7 @@
     "branch": "Port Perry, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/hamecons-mustad-achigan-0777703p.html",
     "sku": "0777703",
-    "availability": ""
+    "availability": "Il n’en reste que 1 #077-7703-4"
   },
   {
     "title": "Couvre-poignée de rechange Drive Medical pour les cannes HurryCane Freedom et HurryBright, noir",
@@ -658,6 +970,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/cache-prise-exterieur-rond-resistant-aux-intemperies-hubbell-5193-0-prises-filetees-de-1-2-po-gris-0524246p.html",
     "sku": "0524246",
     "availability": "Il n’en reste que 1 #052-4246-8"
+  },
+  {
+    "title": "Ballon en aluminium satiné lettres attachées Celebrate, arc-en-ciel, 59 x 20 po, gonflé d'air, pour fiançailles/mariage/anniversaire",
+    "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8423834/rnbw-splash-blln-block-celbrt-c721fccc-bb91-4106-9474-b5fb109a1347-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 13.99,
+    "salePrice": 6.93,
+    "store": "Canadian Tire",
+    "city": "Port Perry, ON",
+    "branch": "Port Perry, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ballon-en-aluminium-satine-lettres-attachees-celebrate-arc-en-ciel-59-x-20-po-gonfle-d-air-pour-fiancailles-mariage-anniversaire-8423834p.html",
+    "sku": "8423834",
+    "availability": "Il n’en reste que 2 #842-3834-4"
   },
   {
     "title": "Serta - Matelas pour lit de bébé",
@@ -756,20 +1080,8 @@
     "availability": "Il n’en reste que 1 #035-5550-8"
   },
   {
-    "title": "Plomb à fente amovible Xcalibur, taille 5",
-    "image": "undefined?im=whresize&wid=200&hei=200",
-    "price": 14.99,
-    "salePrice": 3,
-    "store": "Canadian Tire",
-    "city": "Port Perry, ON",
-    "branch": "Port Perry, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/plomb-a-fente-amovible-xcalibur-taille-5-0783276p.html",
-    "sku": "0783276",
-    "availability": ""
-  },
-  {
     "title": "Hameçon à ver à très grande ouverture Xcalibur",
-    "image": "undefined?im=whresize&wid=200&hei=200",
+    "image": "undefined",
     "price": 5.49,
     "salePrice": 2,
     "store": "Canadian Tire",
@@ -802,6 +1114,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/ensemble-de-jeu-de-cuisine-kidkraft-let-s-cook-3-ans-et-plus-1500670p.html",
     "sku": "1500670",
     "availability": ""
+  },
+  {
+    "title": "Couche de natation pour bébé Swimways, moyen, couleurs variées",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-fun/0813873/swimways-swim-diaper-medium-32d9e85e-fb64-4931-8196-d2a0a9df6512-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 12.99,
+    "salePrice": 4.93,
+    "store": "Canadian Tire",
+    "city": "Port Perry, ON",
+    "branch": "Port Perry, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/couche-de-natation-pour-bebe-swimways-moyen-couleurs-variees-0813873p.html",
+    "sku": "0813873",
+    "availability": "Il n’en reste que 1 #081-3873-0"
   },
   {
     "title": "Piquets de jardin pour pierre tombale en métal, noir, 15 po, paq. 6, décorations extérieures pour l'Halloween",
