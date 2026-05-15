@@ -36,15 +36,15 @@
     "availability": "36 En Stock#052-9347-8"
   },
   {
-    "title": "Barres de chocolat miniatures assorties Hershey's, 200 g, saveurs variées, friandises de Pâques",
-    "image": "https://media-www.canadiantire.ca/product/living/food-drink/seasonal-confectionery/1519665/hershey-assorted-miniatures-assorted-chocolates-200g-3851e433-c821-4ff6-82e8-9f1590df9896-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 6.99,
-    "salePrice": 3.49,
+    "title": "Neufs gaufrettes Kinder Bueno enrobées de chocolat au lait avec garniture aux noisettes et au chocolat, 140 g",
+    "image": "https://media-www.canadiantire.ca/product/living/food-drink/seasonal-confectionery/1515169/kinder-bueno-eggs-140-g-2266d947-9cf2-4c21-a779-1d26628b6897-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 7.99,
+    "salePrice": 3.99,
     "store": "Canadian Tire",
     "city": "Orillia, ON",
     "branch": "Orillia, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/barres-de-chocolat-miniatures-assorties-hershey-s-200-g-saveurs-variees-friandises-de-paques-1519665p.html",
-    "sku": "1519665",
+    "url": "https://www.canadiantire.ca/fr/pdp/neufs-gaufrettes-kinder-bueno-enrobees-de-chocolat-au-lait-avec-garniture-aux-noisettes-et-au-chocolat-140-g-1515169p.html",
+    "sku": "1515169",
     "availability": ""
   },
   {
@@ -81,7 +81,7 @@
     "branch": "Orillia, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/jeu-d-arcade-de-tir-pliable-skee-ball-toss-bullseye-avec-tableau-electronique-et-6-balles-94-po-1840880p.html",
     "sku": "1840880",
-    "availability": "76 En Stock#184-0880-6"
+    "availability": "65 En Stock#184-0880-6"
   },
   {
     "title": "Système d’élimination déchets de cuisine écologique Sepura",
@@ -123,7 +123,7 @@
     "title": "Leurre Rapala X-Rap Shad 6",
     "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0788016/rapala-x-rap-shad-firetiger-06-28b46204-d5a4-4b1a-bd87-055ebe62e0cd-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 20.99,
-    "salePrice": 10.43,
+    "salePrice": 9.43,
     "store": "Canadian Tire",
     "city": "Orillia, ON",
     "branch": "Orillia, ON",
@@ -144,6 +144,18 @@
     "availability": "140 En Stock#059-1352-8"
   },
   {
+    "title": "Bluehive – Câble de synchronisation et de chargement tressé USB à Micro, compatible avec les appareils dotés d’un port mini USB, blanc, 10 pi",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-electronics/0356207/bluehive-10-braided-usb-to-micro-charge-sync-cable-8489ab69-5bcd-40e3-8c01-28e59e57f4e5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 13.99,
+    "salePrice": 6.99,
+    "store": "Canadian Tire",
+    "city": "Orillia, ON",
+    "branch": "Orillia, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/bluehive-cable-de-synchronisation-et-de-chargement-tresse-usb-a-micro-compatible-avec-les-appareils-dotes-d-un-port-mini-usb-blanc-10-pi-0356207p.html",
+    "sku": "0356207",
+    "availability": "Il n’en reste que 1 #035-6207-2"
+  },
+  {
     "title": "Chocolat au lait aromatisé à l'orange original Terry's, Pâques, 157 g",
     "image": "https://media-www.canadiantire.ca/product/living/food-drink/seasonal-confectionery/1519505/terry-s-original-orange-easter-157g-c54004de-aa58-4270-b78b-114961d8d3a6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 7.99,
@@ -153,6 +165,66 @@
     "branch": "Orillia, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/chocolat-au-lait-aromatise-a-l-orange-original-terry-s-paques-157-g-1519505p.html",
     "sku": "1519505",
+    "availability": ""
+  },
+  {
+    "title": "Bluehive – Support d’extension universel pour téléphone intelligent, compatible avec la plupart des téléphones intelligents",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-electronics/0355434/bluehive-universal-smartphone-laptop-extension-stand-a3f0b6be-1d5d-4329-8913-c2ec84f28d6d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 9.99,
+    "salePrice": 2.93,
+    "store": "Canadian Tire",
+    "city": "Orillia, ON",
+    "branch": "Orillia, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/bluehive-support-d-extension-universel-pour-telephone-intelligent-compatible-avec-la-plupart-des-telephones-intelligents-0355434p.html",
+    "sku": "0355434",
+    "availability": "Il n’en reste que 5 #035-5434-6"
+  },
+  {
+    "title": "Carreaux muraux autoadhésifs peler et coller pour cuisine et salle de bain Smart Tiles, Milenza Vasto",
+    "image": "https://media-www.canadiantire.ca/product/fixing/paint/paints/0702238/smart-tiles-peel-stick-milenza-vasto-f7dcc2f5-f1cd-4e23-871a-bc38907dfa4e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 39.99,
+    "salePrice": 19.93,
+    "store": "Canadian Tire",
+    "city": "Orillia, ON",
+    "branch": "Orillia, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/carreaux-muraux-autoadhesifs-peler-et-coller-pour-cuisine-et-salle-de-bain-smart-tiles-milenza-vasto-0702238p.html",
+    "sku": "0702238",
+    "availability": "Il n’en reste que 1 #070-2238-6"
+  },
+  {
+    "title": "Contenant de 8 tasses en résine biodégradable avec couvercle en bois Rosanna Pansino",
+    "image": "https://media-www.canadiantire.ca/product/living/home-organization/kitchen-organization/1427725/rosanna-pansino-bio-resin-8-cup-canister-ccfc00ce-094b-41a5-8a61-6343c1020514-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 21.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Orillia, ON",
+    "branch": "Orillia, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/contenant-de-8-tasses-en-resine-biodegradable-avec-couvercle-en-bois-rosanna-pansino-1427725p.html",
+    "sku": "1427725",
+    "availability": "Il n’en reste que 1 #142-7725-6"
+  },
+  {
+    "title": "Cuillers RedWolf, variées, paq. 5",
+    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0777756/red-wolf-spoon-kit-assorted-88973628-3fc4-4431-8a4e-69329047f3db-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 6.49,
+    "salePrice": 3.23,
+    "store": "Canadian Tire",
+    "city": "Orillia, ON",
+    "branch": "Orillia, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/cuillers-redwolf-variees-paq-5-0777756p.html",
+    "sku": "0777756",
+    "availability": "Il n’en reste que 2 #077-7756-8"
+  },
+  {
+    "title": "Plateau tournant à compartiments The Home Edit par iDESIGN avec séparateurs amovibles",
+    "image": "https://media-www.canadiantire.ca/product/living/home-organization/storage-solutions/1429620/the-home-edit-by-idesign-divided-spinner-onyx-189f5f15-d205-477f-9952-13524e96a1f9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 47.99,
+    "salePrice": 14.93,
+    "store": "Canadian Tire",
+    "city": "Orillia, ON",
+    "branch": "Orillia, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/plateau-tournant-a-compartiments-the-home-edit-par-idesign-avec-separateurs-amovibles-1429619p.html",
+    "sku": "1429619",
     "availability": ""
   },
   {
@@ -190,6 +262,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/plafonnier-semi-encastre-a-1-lampe-canvas-bonnyview-verre-transparent-dore-antique-0526100p.html",
     "sku": "0526100",
     "availability": "Il n’en reste que 1 #052-6100-2"
+  },
+  {
+    "title": "Applique d'extérieur NOMA Hemingway, 19,2 po, noir mat",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/lighting/1522791/noma-hemingway-19-2a-outdoor-wall-sconce-e06c12ad-b641-4a75-aaae-a210989c086d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 109.99,
+    "salePrice": 54.93,
+    "store": "Canadian Tire",
+    "city": "Orillia, ON",
+    "branch": "Orillia, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/applique-d-exterieur-noma-hemingway-19-2-po-noir-mat-1522791p.html",
+    "sku": "1522791",
+    "availability": "Il n’en reste que 4 #152-2791-2"
   },
   {
     "title": "Sac réutilisable édition 100e anniversaire de Canadian Tire, petit",
@@ -238,6 +322,54 @@
     "url": "https://www.canadiantire.ca/fr/pdp/gobelet-a-surprises-en-plastique-reutilisable-disney-once-upon-a-time-a-princess-party-rose-violet-8438216p.html",
     "sku": "8438216",
     "availability": "Il n’en reste que 4 #843-8216-4"
+  },
+  {
+    "title": "Gobelet de retouche de peinture Premier",
+    "image": "https://media-www.canadiantire.ca/product/fixing/paint/paint-accessories/0495850/premier-single-touch-up-cup-51899b96-1e87-439b-b0fa-b3ec674c0e97-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 7.99,
+    "salePrice": 3.93,
+    "store": "Canadian Tire",
+    "city": "Orillia, ON",
+    "branch": "Orillia, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/gobelet-de-retouche-de-peinture-premier-0495850p.html",
+    "sku": "0495850",
+    "availability": ""
+  },
+  {
+    "title": "Leurre Coyote Flasher, 11 po",
+    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/1781889/luhr-jensen-coyote-flasher-blue-chartreuse-size-003-2e37db6c-3107-4d50-85a5-16e17faeb853-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 16.49,
+    "salePrice": 8.23,
+    "store": "Canadian Tire",
+    "city": "Orillia, ON",
+    "branch": "Orillia, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/leurre-coyote-flasher-11-po-1781885p.html",
+    "sku": "1781885",
+    "availability": ""
+  },
+  {
+    "title": "Porte-papier hygiénique compact For Living, jusqu’à 4 rouleaux, fini chromé",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/bed-bath-decor/0636234/for-living-toilet-paper-holder-chrome-e1287397-9e38-495b-8534-8ed41d5c85c3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 5.99,
+    "salePrice": 1.93,
+    "store": "Canadian Tire",
+    "city": "Orillia, ON",
+    "branch": "Orillia, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/porte-papier-hygienique-compact-for-living-jusqu-a-4-rouleaux-fini-chrome-0636234p.html",
+    "sku": "0636234",
+    "availability": ""
+  },
+  {
+    "title": "Lampe murale d'extérieur à 1 lampe en verre transparent NOMA, résistant aux intempéries, 8-1/4 po, noir",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/lighting/0529265/noma-wellesley-outdoor-down-light-d68e8d30-014a-444c-96b7-cd80d0c07f7a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 59.99,
+    "salePrice": 29.93,
+    "store": "Canadian Tire",
+    "city": "Orillia, ON",
+    "branch": "Orillia, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/lampe-murale-d-exterieur-a-1-lampe-en-verre-transparent-noma-resistant-aux-intemperies-8-1-4-po-noir-0529265p.html",
+    "sku": "0529265",
+    "availability": ""
   },
   {
     "title": "Lapin de Pâques au chocolat au lait Kit Kat, 85 g",
@@ -298,6 +430,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/detachant-moneysworth-best-pour-le-sel-300-g-0897100p.html",
     "sku": "0897100",
     "availability": "8 En Stock#089-7100-0"
+  },
+  {
+    "title": "Applique à 1 lampe CANVAS Fuller, nickel poli",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/lighting/1522615/canvas-fuller-wall-sconce-34a366a1-1afd-4801-8a29-801898d6b2f7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 77.99,
+    "salePrice": 34.93,
+    "store": "Canadian Tire",
+    "city": "Orillia, ON",
+    "branch": "Orillia, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/applique-a-1-lampe-canvas-fuller-nickel-poli-1522615p.html",
+    "sku": "1522615",
+    "availability": "Il n’en reste que 2 #152-2615-4"
   },
   {
     "title": "Manuel de réparation automobile Haynes, Dodge et Plymouth Neon 1995 à 1998, 30034",
@@ -384,6 +528,30 @@
     "availability": "Il n’en reste que 5 #844-2558-4"
   },
   {
+    "title": "Plaque murale sans vis Legrand RWP26NICC6 Radiant, 1 dispositif, nickel",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/rough-electrical/0529162/1-gang-screwless-plate-nickel-b1159c4a-e3c5-44eb-a9dc-28ec7abcc7c7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 8.79,
+    "salePrice": 3.93,
+    "store": "Canadian Tire",
+    "city": "Orillia, ON",
+    "branch": "Orillia, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/plaque-murale-sans-vis-legrand-rwp26nicc6-radiant-1-dispositif-nickel-0529162p.html",
+    "sku": "0529162",
+    "availability": "Il n’en reste que 1 #052-9162-6"
+  },
+  {
+    "title": "Mélanges de chocolat chaud, Batman, paq. 4",
+    "image": "https://media-www.canadiantire.ca/product/living/food-drink/seasonal-confectionery/1519520/batman-hot-cocoa-mixes-4-pk-d3167311-6134-4c59-a3dc-c19bbc0e020e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 12.99,
+    "salePrice": 5.99,
+    "store": "Canadian Tire",
+    "city": "Orillia, ON",
+    "branch": "Orillia, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/melanges-de-chocolat-chaud-batman-paq-4-1519520p.html",
+    "sku": "1519520",
+    "availability": ""
+  },
+  {
     "title": "Banderole décorative « Happy Birthday » étape 60e anniversaire, or et argent",
     "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8420188/prismatic-60th-birthday-banner-sparkling-celebration-861e466e-1881-4718-acc2-dd2ff9467cd0-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 6.99,
@@ -393,7 +561,7 @@
     "branch": "Orillia, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/banderole-decorative-happy-birthday-etape-60e-anniversaire-or-et-argent-8420188p.html",
     "sku": "8420188",
-    "availability": "13 En Stock#842-0188-0"
+    "availability": "12 En Stock#842-0188-0"
   },
   {
     "title": "Woods™ - Panneau solaire portatif, 21 W",
@@ -405,7 +573,7 @@
     "branch": "Orillia, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/woodstm-panneau-solaire-portatif-21-w-0112519p.html",
     "sku": "0112519",
-    "availability": "21 En Stock#011-2519-0"
+    "availability": "20 En Stock#011-2519-0"
   },
   {
     "title": "Ampoule de rechange pour tue-moustiques/tue-insectes à lumière UV Stinger, compatible avec la série BKC90, paq. 2",
@@ -540,42 +708,6 @@
     "availability": "Il n’en reste que 5 #052-8285-0"
   },
   {
-    "title": "Manuel automobile Haynes, 42012",
-    "image": "undefined?im=whresize&wid=200&hei=200",
-    "price": 29.99,
-    "salePrice": 2.93,
-    "store": "Canadian Tire",
-    "city": "Orillia, ON",
-    "branch": "Orillia, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/manuel-automobile-haynes-42012-0259333p.html",
-    "sku": "0259333",
-    "availability": "Il n’en reste que 2 #025-9333-6"
-  },
-  {
-    "title": "Pantalon à couche de base en mérinos évacuant l'humidité Hunstshield pour femmes pour la chasse, la pêche et la randonnée, bleu marine",
-    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-apparel-footwear/3750191/huntshield-baselayer-women-s-bottom-merino-small-2f3998d6-34c5-4411-b758-8e056026524d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 89.99,
-    "salePrice": 26.43,
-    "store": "Canadian Tire",
-    "city": "Orillia, ON",
-    "branch": "Orillia, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/pantalon-a-couche-de-base-en-merinos-evacuant-l-humidite-hunstshield-pour-femmes-pour-la-chasse-la-peche-et-la-randonnee-bleu-marine-3750191p.html",
-    "sku": "3750191",
-    "availability": ""
-  },
-  {
-    "title": "Imperméable très léger Wetskins pour hommes comprenant manteau et pantalon, beige/noir",
-    "image": "https://media-www.canadiantire.ca/product/playing/footwear-apparel/summer-footwear-apparel/1872096/wetskins-men-s-ultralight-2pc-rainsuit-beige-m-5a32d1b8-7852-4075-bb9c-087842a78464-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 59.99,
-    "salePrice": 24.93,
-    "store": "Canadian Tire",
-    "city": "Orillia, ON",
-    "branch": "Orillia, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/impermeable-tres-leger-wetskins-pour-hommes-comprenant-manteau-et-pantalon-beige-noir-1872096p.html",
-    "sku": "1872096",
-    "availability": ""
-  },
-  {
     "title": "Récepteur stéréo numérique pour l'auto de Sondpex, Bluetooth, radio AM/FM, entrées auxiliaires",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-electronics/0355400/sondpex-car-stereo-bundle-f539f524-6166-4d59-84f4-016fa124be54-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 159.99,
@@ -610,6 +742,78 @@
     "url": "https://www.canadiantire.ca/fr/pdp/planche-a-roulettes-fingerboard-hot-wheels-sup-md-sup-serie-de-collection-avec-chaussures-et-voiture-choix-de-styles-5-ans-et-plus-1500158p.html",
     "sku": "1500158",
     "availability": ""
+  },
+  {
+    "title": "Filet à bagages de planche debout Shoreline Marine, 12 L x 6 po",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0793369/sup-cargo-net-430ff607-19d3-4c75-b511-d13a1eb5096c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 17.99,
+    "salePrice": 6.23,
+    "store": "Canadian Tire",
+    "city": "Orillia, ON",
+    "branch": "Orillia, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/filet-a-bagages-de-planche-debout-shoreline-marine-12-l-x-6-po-0793369p.html",
+    "sku": "0793369",
+    "availability": "Il n’en reste que 1 #079-3369-0"
+  },
+  {
+    "title": "Adaptateur de plafond Atron Electro Industries 19215 pour luminaires avec abat-jour en verre, blanc",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/rough-electrical/0523565/white-ceiling-fitter-247d378f-3e7c-4624-acd3-eff8ce5d2d83-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 9.79,
+    "salePrice": 3.93,
+    "store": "Canadian Tire",
+    "city": "Orillia, ON",
+    "branch": "Orillia, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/adaptateur-de-plafond-atron-electro-industries-19215-pour-luminaires-avec-abat-jour-en-verre-blanc-0523565p.html",
+    "sku": "0523565",
+    "availability": "Il n’en reste que 2 #052-3565-4"
+  },
+  {
+    "title": "Leurre dandinette XCalibur Sickle, rouge",
+    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0785000/matzuo-red-sickle-jig-3-8oz-eda9c2e2-aaea-4ce3-ad03-517458fa9558-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 7.99,
+    "salePrice": 3.93,
+    "store": "Canadian Tire",
+    "city": "Orillia, ON",
+    "branch": "Orillia, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/leurre-dandinette-xcalibur-sickle-rouge-0785000p.html",
+    "sku": "0785000",
+    "availability": ""
+  },
+  {
+    "title": "Écharpe arc-en-ciel de la Fierté, taille unique, paq. 1",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/party-city-seasonal/party-city-micro-season-decor/8549843/pride-rainbow-sash-f7f24ec0-ab02-4b1e-b1b6-2ad8ca746bc6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 4.99,
+    "salePrice": 0.93,
+    "store": "Canadian Tire",
+    "city": "Orillia, ON",
+    "branch": "Orillia, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/echarpe-arc-en-ciel-de-la-fierte-taille-unique-paq-1-8549843p.html",
+    "sku": "8549843",
+    "availability": "Il n’en reste que 2 #854-9843-8"
+  },
+  {
+    "title": "Lampe stroboscopique courbée imperméable de Hendo, blanc et ambre",
+    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0203809/hendo-curved-white-and-amber-strobe-light-0b705f05-fd5a-4b01-9b00-cccbccce93ba-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 69.99,
+    "salePrice": 27.93,
+    "store": "Canadian Tire",
+    "city": "Orillia, ON",
+    "branch": "Orillia, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/lampe-stroboscopique-courbee-impermeable-de-hendo-blanc-et-ambre-0203809p.html",
+    "sku": "0203809",
+    "availability": "Il n’en reste que 3 #020-3809-2"
+  },
+  {
+    "title": "Pinces pour tube de montage de phares KC HiLITES, 1,25 po à 1,5 po",
+    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0203749/1-25-1-5-tube-clamp-light-mount-434db738-4756-4b7e-828f-c13ea2306556-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 49.99,
+    "salePrice": 17.93,
+    "store": "Canadian Tire",
+    "city": "Orillia, ON",
+    "branch": "Orillia, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/pinces-pour-tube-de-montage-de-phares-kc-hilites-1-25-po-a-1-5-po-0203749p.html",
+    "sku": "0203749",
+    "availability": "Il n’en reste que 3 #020-3749-4"
   },
   {
     "title": "Leurre Freedom Tackle Herring Cutbait, 5 po",
@@ -684,18 +888,6 @@
     "availability": ""
   },
   {
-    "title": "Ballons en latex ronds célébration étincelante 50 Happy Birthday, noir/or/argent, à pois, 12 po, paq. 15, pour fête d'anniversaire",
-    "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8420179/50th-birthday-balloons-15ct-sparkling-celebration-1f158f40-ebbc-4afc-9504-6abbb9a45eae-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 5.99,
-    "salePrice": 2.99,
-    "store": "Canadian Tire",
-    "city": "Orillia, ON",
-    "branch": "Orillia, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/ballons-en-latex-ronds-celebration-etincelante-50-happy-birthday-noir-or-argent-a-pois-12-po-paq-15-pour-fete-d-anniversaire-8420179p.html",
-    "sku": "8420179",
-    "availability": ""
-  },
-  {
     "title": "Bougie en cire scintillante chiffre 60, argent, 3 po, paq. 2, pour fête/anniversaire",
     "image": "https://media-www.partycity.ca/product/living/kitchen/party-city-bakeware/8420236/glitter-silver-number-60-birthday-candles-2ct-a1181e13-c921-408f-ab9c-d0c0487dcac9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 3.99,
@@ -717,7 +909,127 @@
     "branch": "Orillia, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/trottinette-pliable-en-aluminium-world-industries-enfants-noir-0847031p.html",
     "sku": "0847031",
-    "availability": "439 En Stock#084-7031-4"
+    "availability": "436 En Stock#084-7031-4"
+  },
+  {
+    "title": "Bouton-pressoir lumineux hydrofuge à fil pour sonnette avec montage encastré Globe, métal noir",
+    "image": "https://media-www.canadiantire.ca/product/fixing/hardware/curb-appeal/0521742/wired-push-button-black-metal-lighted-recess-mount-abe2aa6b-52c2-4778-b59a-fafc7fa53625-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 15.99,
+    "salePrice": 7.93,
+    "store": "Canadian Tire",
+    "city": "Orillia, ON",
+    "branch": "Orillia, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/bouton-pressoir-lumineux-hydrofuge-a-fil-pour-sonnette-avec-montage-encastre-globe-metal-noir-0521742p.html",
+    "sku": "0521742",
+    "availability": "Il n’en reste que 3 #052-1742-4"
+  },
+  {
+    "title": "Pile alcaline de rechange PetSafe L1325 6V",
+    "image": "https://media-www.canadiantire.ca/product/living/pet-care/pet-accessories/0426492/replacement-battery-for-42-6490-91-89-91e0035b-8a0d-424b-b127-a65d3add2397-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 8.99,
+    "salePrice": 0.93,
+    "store": "Canadian Tire",
+    "city": "Orillia, ON",
+    "branch": "Orillia, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/pile-alcaline-de-rechange-petsafe-l1325-6v-0426492p.html",
+    "sku": "0426492",
+    "availability": "Il n’en reste que 1 #042-6492-2"
+  },
+  {
+    "title": "Luminaire suspendu à 3 lumières Artika Crystal Nest",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/lighting/0521708/artika-crystal-nest-pendant-68eecc32-b600-4988-b52b-61e2a26c2c2c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 199.99,
+    "salePrice": 99.93,
+    "store": "Canadian Tire",
+    "city": "Orillia, ON",
+    "branch": "Orillia, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/luminaire-suspendu-a-3-lumieres-artika-crystal-nest-0521708p.html",
+    "sku": "0521708",
+    "availability": "Il n’en reste que 1 #052-1708-8"
+  },
+  {
+    "title": "Housse de siège Browning Buckmark à chevrons, dossier bas, noir",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-comfort/0324038/browning-heather-grey-low-back-seat-cover-1-piece-eb9a6f71-e420-4b5d-99c4-738a74213fdc-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 49.99,
+    "salePrice": 19.93,
+    "store": "Canadian Tire",
+    "city": "Orillia, ON",
+    "branch": "Orillia, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/housse-de-siege-browning-buckmark-a-chevrons-dossier-bas-noir-0324038p.html",
+    "sku": "0324038",
+    "availability": "Il n’en reste que 1 #032-4038-2"
+  },
+  {
+    "title": "Télécommande sans fil Alpena PROStrobe EZ-Wireless",
+    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0203820/ez-wireless-command-10608a43-4382-40d3-a0c7-e71ee23d267e.png?im=whresize&wid=200&hei=200",
+    "price": 79.99,
+    "salePrice": 16.93,
+    "store": "Canadian Tire",
+    "city": "Orillia, ON",
+    "branch": "Orillia, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/telecommande-sans-fil-alpena-prostrobe-ez-wireless-0203820p.html",
+    "sku": "0203820",
+    "availability": "Il n’en reste que 2 #020-3820-2"
+  },
+  {
+    "title": "Bluehive 12 V, 4 prises avec port USB, voyant d’alimentation DEL",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-electronics/0374570/bluehive-12v-4-socket-with-1-usb-2-1a-9734dfbb-e533-46e1-9eaa-6d089043b304-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 32.99,
+    "salePrice": 14.98,
+    "store": "Canadian Tire",
+    "city": "Orillia, ON",
+    "branch": "Orillia, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/bluehive-12-v-4-prises-avec-port-usb-voyant-d-alimentation-del-0374570p.html",
+    "sku": "0374570",
+    "availability": ""
+  },
+  {
+    "title": "Douille-chandelier en porcelaine non émaillée Leviton 03152-739, culot moyen, sans interrupteur, 660 W, 250 V, blanc",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/rough-electrical/0527534/lamp-socket-keyless-porcelain-0a0dba44-6f45-4e00-9815-250966fa8b52-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 8.49,
+    "salePrice": 3.93,
+    "store": "Canadian Tire",
+    "city": "Orillia, ON",
+    "branch": "Orillia, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/douille-chandelier-en-porcelaine-non-emaillee-leviton-03152-739-culot-moyen-sans-interrupteur-660-w-250-v-blanc-0527534p.html",
+    "sku": "0527534",
+    "availability": "Il n’en reste que 3 #052-7534-4"
+  },
+  {
+    "title": "Sacs en papier kraft Pokémon",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/party-city-everyday/party-city-kids-birthday-pinatas/8546774/pokemon-kraft-bags-144fd1f4-fde4-4602-bc78-62e49bb7ed95-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 8.99,
+    "salePrice": 3.93,
+    "store": "Canadian Tire",
+    "city": "Orillia, ON",
+    "branch": "Orillia, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/sacs-en-papier-kraft-pokemon-8546774p.html",
+    "sku": "8546774",
+    "availability": ""
+  },
+  {
+    "title": "Flotteurs à ressort pour pêche blanche en eau dure HT, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/playing/fishing/ice-fishing/0778520/ht-hardwater-spring-bobbers-2-pack-c875082d-be5a-422a-86f0-43d012dd2183-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 5.49,
+    "salePrice": 2.63,
+    "store": "Canadian Tire",
+    "city": "Orillia, ON",
+    "branch": "Orillia, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/flotteurs-a-ressort-pour-peche-blanche-en-eau-dure-ht-paq-2-0778520p.html",
+    "sku": "0778520",
+    "availability": "9 En Stock#077-8520-2"
+  },
+  {
+    "title": "Arroseur baleine géante gonflable, bleu, 45 po, 3 ans et plus, pour plage/piscine",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/seasonal-toys/0500654/whale-giant-sprinkler-c97f32e7-63a3-4936-b3bf-24b6340b3eb7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 39.99,
+    "salePrice": 16.43,
+    "store": "Canadian Tire",
+    "city": "Orillia, ON",
+    "branch": "Orillia, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/arroseur-baleine-geante-gonflable-bleu-45-po-3-ans-et-plus-pour-plage-piscine-0500654p.html",
+    "sku": "0500654",
+    "availability": "Il n’en reste que 7 #050-0654-4"
   },
   {
     "title": "Woods™ - Bottes Wildfire Thermo, dames",
@@ -742,78 +1054,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/formule-de-pretraitement-de-nettoyant-pour-tapis-pour-taches-hoover-oxy-940-ml-1531527p.html",
     "sku": "1531527",
     "availability": "Il n’en reste que 1 #153-1527-8"
-  },
-  {
-    "title": "Antenne extérieure amplifiée à l’épreuve des intempéries SkyWire AD-535, 100 km",
-    "image": "https://media-www.canadiantire.ca/product/living/electronics/home-entertainment-accessories/0452863/skywire-outdoor-weatherproof-antenna-9080be24-f4ad-491b-ab3d-79fa1a3f8866-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 69.99,
-    "salePrice": 19.93,
-    "store": "Canadian Tire",
-    "city": "Orillia, ON",
-    "branch": "Orillia, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/antenne-exterieure-amplifiee-a-l-epreuve-des-intemperies-skywire-ad-535-100-km-0452863p.html",
-    "sku": "0452863",
-    "availability": "Il n’en reste que 1 #045-2863-8"
-  },
-  {
-    "title": "Aspirateur traîneau sans sac et multicyclonique Hoover",
-    "image": "https://media-www.canadiantire.ca/product/living/cleaning/vacuums-and-floorcare/0437174/hoover-windtunnel-multi-cyclonic-bagless-canister-vacuum-73833230-d54f-4062-9a8c-b40994ec5275-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 499.99,
-    "salePrice": 199.93,
-    "store": "Canadian Tire",
-    "city": "Orillia, ON",
-    "branch": "Orillia, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/aspirateur-traineau-sans-sac-et-multicyclonique-hoover-0437174p.html",
-    "sku": "0437174",
-    "availability": ""
-  },
-  {
-    "title": "Manchon de rouleau à peinture en poly Wagner pour 'N Roll Plus et Mate Plus",
-    "image": "https://media-www.canadiantire.ca/product/fixing/paint/paint-accessories/0490324/3-8x9-cover-roller-1802b77e-93a2-4708-b9fc-f6cb04fbf282.png?im=whresize&wid=200&hei=200",
-    "price": 10.49,
-    "salePrice": 1.93,
-    "store": "Canadian Tire",
-    "city": "Orillia, ON",
-    "branch": "Orillia, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/manchon-de-rouleau-a-peinture-en-poly-wagner-pour-n-roll-plus-et-mate-plus-0490301p.html",
-    "sku": "0490301",
-    "availability": ""
-  },
-  {
-    "title": "Couvre-poignée de rechange Drive Medical pour les cannes HurryCane Freedom et HurryBright, noir",
-    "image": "https://media-www.canadiantire.ca/product/living/personal-garment-care/personal-care/0439189/hurrycane-replacement-handle--97632f26-1a7b-4bcc-9765-6d91189d9f7d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 16.99,
-    "salePrice": 4.93,
-    "store": "Canadian Tire",
-    "city": "Orillia, ON",
-    "branch": "Orillia, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/couvre-poignee-de-rechange-drive-medical-pour-les-cannes-hurrycane-freedom-et-hurrybright-noir-0439189p.html",
-    "sku": "0439189",
-    "availability": "Il n’en reste que 2 #043-9189-6"
-  },
-  {
-    "title": "Leurre Berkley Powerbait Hollow Belly, 4 po",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/1784003/powerbait-hollow-belly-4-sexy-shad-ca9c9119-fc1d-4326-afb7-a38cc5a8487a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 13.99,
-    "salePrice": 6.93,
-    "store": "Canadian Tire",
-    "city": "Orillia, ON",
-    "branch": "Orillia, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/leurre-berkley-powerbait-hollow-belly-4-po-1784002p.html",
-    "sku": "1784002",
-    "availability": ""
-  },
-  {
-    "title": "Crochets de suspension pour lampe Atron Electro Industries LA708, laiton antique, paq. 2",
-    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/rough-electrical/0523126/swag-hooks-antique-brass-602c2dda-7557-424f-82f3-ffef77b42f36-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 3.49,
-    "salePrice": 1.43,
-    "store": "Canadian Tire",
-    "city": "Orillia, ON",
-    "branch": "Orillia, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/crochets-de-suspension-pour-lampe-atron-electro-industries-la708-laiton-antique-paq-2-0523126p.html",
-    "sku": "0523126",
-    "availability": "Il n’en reste que 2 #052-3126-0"
   },
   {
     "title": "Trousse de réparation de réservoir à pièces d'origine Kohler GP1229656 pour toutes les toilettes à réservoir",
@@ -888,54 +1128,6 @@
     "availability": "Il n’en reste que 4 #052-2358-4"
   },
   {
-    "title": "Filtre de rechange Geeni pour WP00, paq. 12",
-    "image": "https://media-www.canadiantire.ca/product/living/pet-care/pet-accessories/1427408/geeni-12-pack-replacement-filter-for-wp001-f42a3374-ea44-4ab3-9df5-a5f72a03b5a3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 29.99,
-    "salePrice": 9.93,
-    "store": "Canadian Tire",
-    "city": "Orillia, ON",
-    "branch": "Orillia, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/filtre-de-rechange-geeni-pour-wp00-paq-12-1427408p.html",
-    "sku": "1427408",
-    "availability": "Il n’en reste que 2 #142-7408-2"
-  },
-  {
-    "title": "Chaussures à crampons de soccer LOTTO Striker, dames",
-    "image": "https://media-www.canadiantire.ca/product/playing/team-sports-and-golf/sports-equipment-accessories/0897906/lotto-striker-soccer-shoe-womens-size-6-be71eb85-527c-4dd6-ade0-b5b2f5e8d713-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 49.99,
-    "salePrice": 9.93,
-    "store": "Canadian Tire",
-    "city": "Orillia, ON",
-    "branch": "Orillia, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/chaussures-a-crampons-de-soccer-lotto-striker-dames-0897906p.html",
-    "sku": "0897906",
-    "availability": ""
-  },
-  {
-    "title": "Rallonge de voyage NOMA à 1 prise et 2 ports USB, prise rétractable de 6 pi, gris",
-    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/power-bars-extension-cords-timers/0529672/noma-winding-travel-extension-cord-2m-2-4a-usb-1-outlet-a9956594-2e9e-44ac-a5cf-b35cc2b6e71a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 38.99,
-    "salePrice": 11.98,
-    "store": "Canadian Tire",
-    "city": "Orillia, ON",
-    "branch": "Orillia, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/rallonge-de-voyage-noma-a-1-prise-et-2-ports-usb-prise-retractable-de-6-pi-gris-0529672p.html",
-    "sku": "0529672",
-    "availability": "123 En Stock#052-9672-2"
-  },
-  {
-    "title": "Nez de marche Shur-Trim en vinyle, caoutchouc, noir, 1 7/8 po x 3 pi",
-    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0682870/stair-nosing-vinyl-black-bb8f7aea-0857-42c7-8f43-20a7aa323150-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 4.99,
-    "salePrice": 1.93,
-    "store": "Canadian Tire",
-    "city": "Orillia, ON",
-    "branch": "Orillia, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/nez-de-marche-shur-trim-en-vinyle-caoutchouc-noir-1-7-8-po-x-3-pi-0682870p.html",
-    "sku": "0682870",
-    "availability": "Il n’en reste que 1 #068-2870-6"
-  },
-  {
     "title": "Bac de rangement en bois The Home Edit par iDESIGN, avec ouverture à l'avant, grand, 12 L",
     "image": "https://media-www.canadiantire.ca/product/living/home-organization/storage-solutions/1429616/the-home-edit-by-idesign-large-open-front-bin-onyx-d5670c35-d720-4b5f-b5e1-2150f47fc64b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 32.99,
@@ -993,7 +1185,7 @@
     "branch": "Orillia, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/ballon-en-aluminium-satine-lettres-girl-rose-22-x-10-po-gonfle-d-air-pour-fete-prenatale-8420823p.html",
     "sku": "8420823",
-    "availability": "Il n’en reste que 5 #842-0823-8"
+    "availability": "Il n’en reste que 4 #842-0823-8"
   },
   {
     "title": "Protège pare-brise Subzero ArcticGuard",
@@ -1125,7 +1317,7 @@
     "branch": "Orillia, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/rallonge-pour-motocyclette-autotrends-12-v-0374546p.html",
     "sku": "0374546",
-    "availability": "182 En Stock#037-4546-2"
+    "availability": "181 En Stock#037-4546-2"
   },
   {
     "title": "Housse de siège à carreaux en velours AutoTrends",
@@ -1161,7 +1353,7 @@
     "branch": "Orillia, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/nappe-de-fete-scintillante-40e-anniversaire-8420498p.html",
     "sku": "8420498",
-    "availability": "9 En Stock#842-0498-2"
+    "availability": "8 En Stock#842-0498-2"
   },
   {
     "title": "Barre-marchepied Bully NB-XTR",
@@ -1200,90 +1392,6 @@
     "availability": "Il n’en reste que 1 #057-7511-8"
   },
   {
-    "title": "Bac de rangement en bois The Home Edit par iDESIGN, 7,77 L",
-    "image": "https://media-www.canadiantire.ca/product/living/home-organization/storage-containers/1429610/the-home-edit-by-idesign-all-purpose-bin-onyx-31f8e201-4e94-47bd-98f7-df65cac2f570-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 29.99,
-    "salePrice": 7.93,
-    "store": "Canadian Tire",
-    "city": "Orillia, ON",
-    "branch": "Orillia, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/bac-de-rangement-en-bois-the-home-edit-par-idesign-7-77-l-1429609p.html",
-    "sku": "1429609",
-    "availability": ""
-  },
-  {
-    "title": "Bottes Outbound Blitzen, femmes",
-    "image": "https://media-www.canadiantire.ca/product/playing/footwear-apparel/winter-footwear-apparel/1871546/outbound-women-s-blitzen-boot-w6-ec61c6d5-abc5-40cd-a6d5-c3217603e5a7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 69.99,
-    "salePrice": 29.98,
-    "store": "Canadian Tire",
-    "city": "Orillia, ON",
-    "branch": "Orillia, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/bottes-outbound-blitzen-femmes-1871546p.html",
-    "sku": "1871546",
-    "availability": ""
-  },
-  {
-    "title": "Jardinière ronde suspendue en résine Planters Pride, 10 po, vert/blanc",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/gardening/gardening-plant-accessories/0594649/hanging-planter-10-green-86094eae-ddc8-41f0-ab2f-bb0c46f60e84-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 4.49,
-    "salePrice": 1.43,
-    "store": "Canadian Tire",
-    "city": "Orillia, ON",
-    "branch": "Orillia, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/jardiniere-ronde-suspendue-en-resine-planters-pride-10-po-vert-blanc-0594649p.html",
-    "sku": "0594649",
-    "availability": ""
-  },
-  {
-    "title": "Manteau matelassé d'hiver à capuchon léger hydrofuge Outbound Lewis pour hommes, bleu marine",
-    "image": "https://media-www.canadiantire.ca/product/playing/footwear-apparel/winter-footwear-apparel/1873087/outbound-men-s-lewis-jacket-navy-m-c6e30bec-4adf-492f-af19-e9fd7af80323-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 99.99,
-    "salePrice": 19.93,
-    "store": "Canadian Tire",
-    "city": "Orillia, ON",
-    "branch": "Orillia, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/manteau-matelasse-d-hiver-a-capuchon-leger-hydrofuge-outbound-lewis-pour-hommes-bleu-marine-1873087p.html",
-    "sku": "1873087",
-    "availability": ""
-  },
-  {
-    "title": "Tapis touffeté For Living Logan, tailles variées",
-    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0682487/mat-logan3-x4-asst-a3d1f287-1862-470d-8607-59f929fec7cd-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 24.99,
-    "salePrice": 9.93,
-    "store": "Canadian Tire",
-    "city": "Orillia, ON",
-    "branch": "Orillia, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/tapis-touffete-for-living-logan-tailles-variees-0682486p.html",
-    "sku": "0682486",
-    "availability": "Il n’en reste que 1 #068-2486-2"
-  },
-  {
-    "title": "Leurre rigide P-Line 11 oz",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/1780195/p-line-kodiak-jig-pink-11oz-98189919-96e0-4053-b0d2-17a3dec4d214-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 23.99,
-    "salePrice": 8.93,
-    "store": "Canadian Tire",
-    "city": "Orillia, ON",
-    "branch": "Orillia, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/leurre-rigide-p-line-11-oz-1780195p.html",
-    "sku": "1780195",
-    "availability": ""
-  },
-  {
-    "title": "Proform Carbon T7 - Tapis roulant pliable adapté à la technologie iFit",
-    "image": "https://media-www.canadiantire.ca/product/playing/exercise/exercise-equipment/1840962/pro-form-carbon-t7-treadmill-b1c569c2-fa73-4554-b36c-033a03fdfc2b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 2999.99,
-    "salePrice": 1299.98,
-    "store": "Canadian Tire",
-    "city": "Orillia, ON",
-    "branch": "Orillia, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/proform-carbon-t7-tapis-roulant-pliable-adapte-a-la-technologie-ifit-1840962p.html",
-    "sku": "1840962",
-    "availability": "Il n’en reste que 5 #184-0962-2"
-  },
-  {
     "title": "Vis de fixation du démarreur Dorman",
     "image": "https://media-www.canadiantire.ca/product/automotive/light-auto-parts/general-auto-repair/0245662/45643-starter-mounting-bolts-9e4a9f69-73ef-40cf-9cd8-f77d5b4df668-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 3.99,
@@ -1317,31 +1425,7 @@
     "branch": "Orillia, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/dc-comics-la-batmobile-turbo-boost-de-le-batman-voiture-teleguidee-au-style-du-film-officiel-de-batman-jouets-pour-enfants-de-4-ans-et-plus-0508619p.html",
     "sku": "0508619",
-    "availability": "9 En Stock#050-8619-2"
-  },
-  {
-    "title": "Éclairage personnalisé auto à bande DEL, multicolore, 36 po",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0378022/auto-custom-lighting-36-inch-multi-led-extension-99bc7151-788a-4c78-9180-924e0930daaa.png?im=whresize&wid=200&hei=200",
-    "price": 39.99,
-    "salePrice": 2.93,
-    "store": "Canadian Tire",
-    "city": "Orillia, ON",
-    "branch": "Orillia, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/eclairage-personnalise-auto-a-bande-del-multicolore-36-po-0378022p.html",
-    "sku": "0378022",
-    "availability": "Il n’en reste que 1 #037-8022-4"
-  },
-  {
-    "title": "Véhicule Al Micro Movers Truck Pups de la Pat'Patrouille, 3 ans et plus",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/preschool-toys-activities/0508918/paw-patrol-big-truck-pups-micro-movers-al-vehicle-00e0eb35-7dc5-482e-8cc9-ca0c06d8f37f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 32.99,
-    "salePrice": 11.43,
-    "store": "Canadian Tire",
-    "city": "Orillia, ON",
-    "branch": "Orillia, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/vehicule-al-micro-movers-truck-pups-de-la-pat-patrouille-3-ans-et-plus-0508918p.html",
-    "sku": "0508918",
-    "availability": "41 En Stock#050-8918-0"
+    "availability": "8 En Stock#050-8619-2"
   },
   {
     "title": "Chandail en couche de base Outbound, dames, gris",
@@ -1392,42 +1476,6 @@
     "availability": ""
   },
   {
-    "title": "Pelle compacte de secours Stayhold avec grattoir, raclette et réflecteurs de sécurité",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-winter-accessories/0379253/stayhold-emergency-car-shovel-581efa0b-59a5-4f8f-b913-810987b5c5f8-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 32.99,
-    "salePrice": 12.98,
-    "store": "Canadian Tire",
-    "city": "Orillia, ON",
-    "branch": "Orillia, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/pelle-compacte-de-secours-stayhold-avec-grattoir-raclette-et-reflecteurs-de-securite-0379253p.html",
-    "sku": "0379253",
-    "availability": "30 En Stock#037-9253-8"
-  },
-  {
-    "title": "Protège-banquette arrière hydrofuge Type S, noir",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-comfort/0323912/type-s-waterproof-rear-seat-protector-black-1-pk-521a3d42-5cbc-47ed-b8bf-8418bcd4d416-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 39.99,
-    "salePrice": 9.93,
-    "store": "Canadian Tire",
-    "city": "Orillia, ON",
-    "branch": "Orillia, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/protege-banquette-arriere-hydrofuge-type-s-noir-0323912p.html",
-    "sku": "0323912",
-    "availability": "Il n’en reste que 1 #032-3912-6"
-  },
-  {
-    "title": "Bandes lumineuses à DEL Alpena Max 12 V, étanche, bleu, 24 po",
-    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0203397/alpena-max-led-24-kit-blue-b3138e70-0d7f-4276-a34f-e5c443d9a5a1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 44.99,
-    "salePrice": 22.48,
-    "store": "Canadian Tire",
-    "city": "Orillia, ON",
-    "branch": "Orillia, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/bandes-lumineuses-a-del-alpena-max-12-v-etanche-bleu-24-po-0203397p.html",
-    "sku": "0203397",
-    "availability": "11 En Stock#020-3397-0"
-  },
-  {
     "title": "Range-tout pour pare-soleil Auto Trends effaçable à sec",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0370090/autotrends-dry-erase-visor-organizer-65c65879-a951-41fd-98b9-5b2f5275537e.png?im=whresize&wid=200&hei=200",
     "price": 19.99,
@@ -1437,7 +1485,7 @@
     "branch": "Orillia, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/range-tout-pour-pare-soleil-auto-trends-effacable-a-sec-0370090p.html",
     "sku": "0370090",
-    "availability": "166 En Stock#037-0090-8"
+    "availability": "165 En Stock#037-0090-8"
   },
   {
     "title": "Lime à filet rotative avec collet MAXIMUM, 3/8 po",
@@ -1645,7 +1693,7 @@
   },
   {
     "title": "Ciseaux à froid Mastercraft, 3/8 x 6 x 5/16 po",
-    "image": "undefined?im=whresize&wid=200&hei=200",
+    "image": "undefined",
     "price": 9.99,
     "salePrice": 0.93,
     "store": "Canadian Tire",
@@ -1653,7 +1701,7 @@
     "branch": "Orillia, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/ciseaux-a-froid-mastercraft-3-8-x-6-x-5-16-po-0581442p.html",
     "sku": "0581442",
-    "availability": "Il n’en reste que 7 #058-1442-6"
+    "availability": "Il n’en reste que 1 #058-1442-6"
   },
   {
     "title": "Manteau Outbound Lola, dames, rhubarbe",
@@ -1677,18 +1725,6 @@
     "branch": "Orillia, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/sonnette-de-boule-de-cristal-avec-squelette-parlant-1519582p.html",
     "sku": "1519582",
-    "availability": ""
-  },
-  {
-    "title": "Trousse de pêche Shakespeare Catch More Fish pour le doré",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0774226/shakespeare-catch-more-fish-tackle-kit-walleye-c9e3ca80-bc0d-4c26-b32b-c193e87db510-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 22.99,
-    "salePrice": 11.43,
-    "store": "Canadian Tire",
-    "city": "Orillia, ON",
-    "branch": "Orillia, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-peche-shakespeare-catch-more-fish-pour-le-dore-0774226p.html",
-    "sku": "0774226",
     "availability": ""
   },
   {
@@ -1725,7 +1761,7 @@
     "branch": "Orillia, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/decoration-centre-de-table-en-fontaine-pour-etape-40e-anniversaire-argent-et-or-8420172p.html",
     "sku": "8420172",
-    "availability": "Il n’en reste que 6 #842-0172-6"
+    "availability": "Il n’en reste que 5 #842-0172-6"
   },
   {
     "title": "Grand sac-cadeau en papier Little Lovely Baby",
