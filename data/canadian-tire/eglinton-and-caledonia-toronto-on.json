@@ -1,5 +1,77 @@
 [
   {
+    "title": "Affûte-couteaux à 3 étapes MASTER Chef",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/cutlery/2421029/master-chef-3stage-knife-sharpener-b9ab2767-c8c0-473e-a296-6cb70527856a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 18.99,
+    "salePrice": 3.97,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/affute-couteaux-a-3-etapes-master-chef-2421029p.html",
+    "sku": "2421029",
+    "availability": "49 En Stock#242-1029-2"
+  },
+  {
+    "title": "Tasses à mesurer empilables en plastique MASTER Chef, paq. 10",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/bakeware-baking-prep/1429676/master-chef-10pc-measuring-cup-set-73c761cb-c28c-42fe-a32e-f57a30c6b9a6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 24.99,
+    "salePrice": 8.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tasses-a-mesurer-empilables-en-plastique-master-chef-paq-10-1429676p.html",
+    "sku": "1429676",
+    "availability": "19 En Stock#142-9676-0"
+  },
+  {
+    "title": "Ensemble de détente For Living Avenue, 4 pièces",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/1881372/for-living-avenue-4-pc-conversation-set-3f6194c7-af31-4b20-8c68-e15c8926954d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 699.99,
+    "salePrice": 349.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ensemble-de-detente-for-living-avenue-4-pieces-1881372p.html",
+    "sku": "1881372",
+    "availability": "11 En Stock#188-1372-2"
+  },
+  {
+    "title": "Toile pare soleil triangulaire ShelterLogic, 12 pi",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/0882240/shelter-logic-triangle-shade-sail-12--2c190960-0271-482d-a439-b31dbf8f42e7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 54.99,
+    "salePrice": 24.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/toile-pare-soleil-triangulaire-shelterlogic-12-pi-0882307p.html",
+    "sku": "0882307",
+    "availability": "Il n’en reste que 2 #088-2307-2"
+  },
+  {
+    "title": "Tapis d'intérieur et d'extérieur CANVAS Morency, 6 x 9 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680042/morency-outdoor-rug-d723df32-0b9c-4c2a-86c8-9c791795e3b2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 49.99,
+    "salePrice": 19.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-d-interieur-et-d-exterieur-canvas-morency-6-x-9-pi-0680042p.html",
+    "sku": "0680042",
+    "availability": ""
+  },
+  {
+    "title": "Tapis d'intérieur et d'extérieur CANVAS Fresco Marven, 8 x 10 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680038/marven-indoor-outdoor-rug-f51c7cd9-ed84-43e2-8599-b714280d7a6c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 199.99,
+    "salePrice": 99.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-d-interieur-et-d-exterieur-canvas-fresco-marven-8-x-10-pi-0680038p.html",
+    "sku": "0680038",
+    "availability": ""
+  },
+  {
     "title": "Cintres pivotants compacts en velours Type A avec barre à pantalon, couleurs variées, paq. 40",
     "image": "https://media-www.canadiantire.ca/product/living/home-organization/closet-organization/0688308/type-a-velvet-suit-hanger-black-10pk-4afb3f73-0449-46d6-975c-369ae2760de2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 32.99,
@@ -21,7 +93,7 @@
     "branch": "Eglinton & Caledonia, Toronto, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/serviettes-de-bar-master-chef-paq-8-1429826p.html",
     "sku": "1429826",
-    "availability": "49 En Stock#142-9826-4"
+    "availability": "44 En Stock#142-9826-4"
   },
   {
     "title": "Couteaux Global, paq. 2",
@@ -48,6 +120,18 @@
     "availability": "Il n’en reste que 2 #043-0385-2"
   },
   {
+    "title": "Barbecue MASTER Chef G70220 Turismo, 4 brûleurs, propane avec tablettes latérales, 36 po",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking/0850106/master-chef-grill-turismo-4-burner-gas-griddle-cart-19667163-bb41-4715-b58c-645b95721288-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 399.99,
+    "salePrice": 199.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/barbecue-master-chef-g70220-turismo-4-bruleurs-propane-avec-tablettes-laterales-36-po-0850106p.html",
+    "sku": "0850106",
+    "availability": "Il n’en reste que 1 #085-0106-8"
+  },
+  {
     "title": "Fauteuil de salle à manger de jardin/d'extérieur en osier CANVAS Jasper, toute saison, paq. 2",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/1880272/canvas-jasper-dining-chair-2pk-2a5479fd-5f27-4f3d-85e2-8b4b9fa230c9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 499.99,
@@ -69,7 +153,7 @@
     "branch": "Eglinton & Caledonia, Toronto, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/coussin-de-fauteuil-de-jardin-canvas-summer-palm-resistant-a-l-eau-et-aux-taches-bleu-1880350p.html",
     "sku": "1880350",
-    "availability": "Il n’en reste que 5 #188-0350-0"
+    "availability": "Il n’en reste que 1 #188-0350-0"
   },
   {
     "title": "Ampoules à DEL à intensité variable à culot E12 NOMA B10, 2700K, 350 lumens, blanc chaud, 40 W, paq. 2",
@@ -108,6 +192,42 @@
     "availability": "Il n’en reste que 5 #064-3176-2"
   },
   {
+    "title": "Tapis d'intérieur et d'extérieur CANVAS Basca, 8 x 10 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680048/basca-outdoor-rug-9605a092-adeb-4af7-9752-a7e7577775cb-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 72.99,
+    "salePrice": 34.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-d-interieur-et-d-exterieur-canvas-basca-8-x-10-pi-0680048p.html",
+    "sku": "0680048",
+    "availability": "Il n’en reste que 1 #068-0048-8"
+  },
+  {
+    "title": "Coussin de siège profond hydrofuge et résistant aux taches CANVAS, gris",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0882161/canvas-deep-seat-cushion-grey-fa2d2095-2c71-43a3-a80c-9881f7935b2a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 139.99,
+    "salePrice": 69.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/coussin-de-siege-profond-hydrofuge-et-resistant-aux-taches-canvas-gris-0882161p.html",
+    "sku": "0882161",
+    "availability": "Il n’en reste que 4 #088-2161-6"
+  },
+  {
+    "title": "CANVAS Mercier - Table à dîner de terrasse rectangulaire en acier à plateau en verre, noir",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/0882029/canvas-mercier-dining-table-1ab27b9c-d50f-4a17-9d15-124e2a4f2a96-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 299.99,
+    "salePrice": 149.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/canvas-mercier-table-a-diner-de-terrasse-rectangulaire-en-acier-a-plateau-en-verre-noir-0882029p.html",
+    "sku": "0882029",
+    "availability": "Il n’en reste que 2 #088-2029-4"
+  },
+  {
     "title": "Linges de cuisine tout usage PADERNO, gris, paq. 5",
     "image": "https://media-www.canadiantire.ca/product/living/kitchen/dining-and-entertaining/1427792/paderno-black-chambray-gift-set-17cfd0f4-09b7-45df-97b5-40da8725d7ea-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 26.99,
@@ -123,7 +243,7 @@
     "title": "Ensemble de nettoyants automobiles Armor All, paq. 16",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-chemicals/0397080/armor-all-car-wash-packs-16ct-8ed7ef02-e539-49d9-8a49-0232d41a7968-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 17.99,
-    "salePrice": 8.93,
+    "salePrice": 6.93,
     "store": "Canadian Tire",
     "city": "Eglinton & Caledonia, Toronto, ON",
     "branch": "Eglinton & Caledonia, Toronto, ON",
@@ -141,7 +261,19 @@
     "branch": "Eglinton & Caledonia, Toronto, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/meuble-lavabo-simple-canvas-wellington-a-1-porte-dessus-en-pierre-24-po-chene-vieilli-0636340p.html",
     "sku": "0636340",
-    "availability": "Il n’en reste que 4 #063-6340-4"
+    "availability": "Il n’en reste que 2 #063-6340-4"
+  },
+  {
+    "title": "Coussin lombaire à grille CANVAS, 12 x 20 po",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0882399/canvas-grid-12-x20-lumbar-cushion-4060c439-9c63-4d2b-8553-b82eaf78466b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 24.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/coussin-lombaire-a-grille-canvas-12-x-20-po-0882399p.html",
+    "sku": "0882399",
+    "availability": "0 En Stock#088-2399-2"
   },
   {
     "title": "Montre d’activité intelligente Sech Fusion avec écran tactile couleur",
@@ -153,7 +285,7 @@
     "branch": "Eglinton & Caledonia, Toronto, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/montre-d-activite-intelligente-sech-fusion-avec-ecran-tactile-couleur-0356235p.html",
     "sku": "0356235",
-    "availability": "Il n’en reste que 7 #035-6235-4"
+    "availability": "Il n’en reste que 6 #035-6235-4"
   },
   {
     "title": "Station d'outils rotatifs Mastercraft 20 V, 40 pièces, compatible avec PWR POD",
@@ -166,6 +298,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/station-d-outils-rotatifs-mastercraft-20-v-40-pieces-compatible-avec-pwr-pod-0548721p.html",
     "sku": "0548721",
     "availability": "Il n’en reste que 1 #054-8721-8"
+  },
+  {
+    "title": "Ventilateur de table/bureau portatif compact For Living, 2 vitesses, blanc, 10 po",
+    "image": "https://media-www.canadiantire.ca/product/fixing/home-environment/summer-climate-control/0435673/for-living-10-table-fan-72e559f7-a8dd-420d-af4b-00cc39bbfc04-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 22.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ventilateur-de-table-bureau-portatif-compact-for-living-2-vitesses-blanc-10-po-0435673p.html",
+    "sku": "0435673",
+    "availability": "Il n’en reste que 4 #043-5673-6"
   },
   {
     "title": "Tasse en grès empilable CANVAS, botanique, 16 oz",
@@ -216,16 +360,52 @@
     "availability": "43 En Stock#143-0030-8"
   },
   {
+    "title": "Barre d'attelage réglable MotoMaster, 2 po, 5 000 lb",
+    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0406575/reese-towpower-adjustable-ball-mount-ce57ec66-3694-489a-8c97-36bc3fa161e8-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 49.99,
+    "salePrice": 24.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/barre-d-attelage-reglable-motomaster-2-po-5-000-lb-0406575p.html",
+    "sku": "0406575",
+    "availability": "Il n’en reste que 4 #040-6575-0"
+  },
+  {
+    "title": "Tapis d'intérieur et d'extérieur Korhani Sienna, 8 x 10 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680036/tofino-8x10-indoor-outdoor-rug-aed5e0f0-99f7-41f3-8043-723dbce74433-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 229.99,
+    "salePrice": 99.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-d-interieur-et-d-exterieur-korhani-sienna-8-x-10-pi-0680036p.html",
+    "sku": "0680036",
+    "availability": ""
+  },
+  {
     "title": "Étagère Ziva à 3 tablettes, support de poids pour haltères, haltères russes",
     "image": "https://media-www.canadiantire.ca/product/playing/exercise/strength/1841869/ziva-3-tier-storage-rack-cb9baf50-3c80-4ca8-bddf-98bd5c49a1a5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 399.99,
-    "salePrice": 199.93,
+    "salePrice": 179.93,
     "store": "Canadian Tire",
     "city": "Eglinton & Caledonia, Toronto, ON",
     "branch": "Eglinton & Caledonia, Toronto, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/etagere-ziva-a-3-tablettes-support-de-poids-pour-halteres-halteres-russes-1841869p.html",
     "sku": "1841869",
     "availability": "Il n’en reste que 1 #184-1869-0"
+  },
+  {
+    "title": "CANVAS Clareview - Table basse de jardin modulaire ronde, 40 x 20 po",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/0882212/canvas-clareview-patio-chat-table-a054684c-f668-45b0-97a3-8c1fae55c34a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 199.99,
+    "salePrice": 89.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/canvas-clareview-table-basse-de-jardin-modulaire-ronde-40-x-20-po-0882212p.html",
+    "sku": "0882212",
+    "availability": "Il n’en reste que 1 #088-2212-6"
   },
   {
     "title": "Panneau solaire cristallin de type mallette Coleman, 60 W",
@@ -250,6 +430,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/lampe-a-faisceau-large-a-del-mastercraft-1500-lumens-compatible-pwr-pod-0372969p.html",
     "sku": "0372969",
     "availability": ""
+  },
+  {
+    "title": "Barbecue et fumoir à granules de bois avec commandes numériques MASTER Chef Grill Turismo",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking/0853185/masterchef-grill-turismo-pellet-grill-0e9e7b45-7f3b-40ef-b79d-a60edcc1aca5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 499.99,
+    "salePrice": 249.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/barbecue-et-fumoir-a-granules-de-bois-avec-commandes-numeriques-master-chef-grill-turismo-0853185p.html",
+    "sku": "0853185",
+    "availability": "Il n’en reste que 1 #085-3185-0"
   },
   {
     "title": "Balançoire à bascule rotative à 360 degrés en métal Plum, 3 ans et plus",
@@ -288,6 +480,18 @@
     "availability": "65 En Stock#142-7928-4"
   },
   {
+    "title": "VFI Helly Hansen à gonflage manuel",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-water-fun/0793042/helly-hansen-personal-flotation-device-manual-inflate-85a87b21-f29f-424c-92b1-c4302e938b2d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 199.99,
+    "salePrice": 79.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/vfi-helly-hansen-a-gonflage-manuel-0793042p.html",
+    "sku": "0793042",
+    "availability": "Il n’en reste que 1 #079-3042-6"
+  },
+  {
     "title": "Câble de chargement micro USB DE SMART Accessories pour téléphones intelligents Android et plus encore, 3 pi",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-electronics/0355355/smart-accessories-micro-usb-cable-3--7e33cb19-bb77-4286-a278-ac6df41bed68-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 4.99,
@@ -300,6 +504,30 @@
     "availability": ""
   },
   {
+    "title": "Bateau gonflable avec supports intégrés pour cannes à pêche Bestway Hydro-Force Voyager X2",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-water-fun/0798325/bestway-hydroforce-voyager-300-inflatable-boat-7ecf8a7b-c65e-43a3-a04e-7cbb5a425336-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 119.99,
+    "salePrice": 49.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/bateau-gonflable-avec-supports-integres-pour-cannes-a-peche-bestway-hydro-force-voyager-x2-0798325p.html",
+    "sku": "0798325",
+    "availability": "Il n’en reste que 1 #079-8325-4"
+  },
+  {
+    "title": "Aspirateur de déchets secs/humides compact 3-en-1 Simoniz PWR POD avec tuyau et accessoires",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-tools/0398256/simoniz-pwr-pod-wet-dry-vac-5f04eace-45c9-4895-9e3d-774df8898131-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 189.99,
+    "salePrice": 90.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/aspirateur-de-dechets-secs-humides-compact-3-en-1-simoniz-pwr-pod-avec-tuyau-et-accessoires-0398256p.html",
+    "sku": "0398256",
+    "availability": "Il n’en reste que 2 #039-8256-4"
+  },
+  {
     "title": "ProForm 225 CSX - Vélo stationnaire d'intérieur adapté à la technologie iFit",
     "image": "https://media-www.canadiantire.ca/product/playing/exercise/exercise-equipment/1840969/proform-225-csx-u-bike-df6fe500-5e97-4ba5-bfb3-9d9985218fe3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 729.99,
@@ -310,6 +538,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/proform-225-csx-velo-stationnaire-d-interieur-adapte-a-la-technologie-ifit-1840969p.html",
     "sku": "1840969",
     "availability": "Il n’en reste que 1 #184-0969-8"
+  },
+  {
+    "title": "Bateau gonflable Outbound, 2 personnes, 6 ans et plus",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-water-fun/0798313/2-person-inflatable-boat-set-7b11aa03-fddd-4477-ada1-c5f82db3059c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 49.99,
+    "salePrice": 24.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/bateau-gonflable-outbound-2-personnes-6-ans-et-plus-0798313p.html",
+    "sku": "0798313",
+    "availability": "14 En Stock#079-8313-2"
   },
   {
     "title": "Ampoules pour projecteur à DEL non variable à culot E26 pour la maison NOMA A19, 2700K, 800 lumens, blanc chaud, 60 W, paq. 6",
@@ -369,7 +609,7 @@
     "branch": "Eglinton & Caledonia, Toronto, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/etamine-master-chef-6-verges-1426343p.html",
     "sku": "1426343",
-    "availability": "23 En Stock#142-6343-0"
+    "availability": "20 En Stock#142-6343-0"
   },
   {
     "title": "Assiettes à dessert Ballons d'anniversaire, 7 po, paq. 60",
@@ -393,7 +633,19 @@
     "branch": "Eglinton & Caledonia, Toronto, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/ampoule-a-del-a-spectre-complet-non-variable-pour-croissance-des-plantes-feit-electric-spectre-rouge-19-w-2-pi-0528588p.html",
     "sku": "0528588",
-    "availability": "Il n’en reste que 2 #052-8588-0"
+    "availability": "Il n’en reste que 1 #052-8588-0"
+  },
+  {
+    "title": "Huile pour fourches synthétique Lucas, 15, 473 mL",
+    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/specialty-oil-lubricants/0281842/lucas-synthetic-fork-oil-15-weight-473ml-13092561-8bf5-42dd-b642-4d30dd6d85db-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 13.99,
+    "salePrice": 6.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/huile-pour-fourches-synthetique-lucas-15-473-ml-0281842p.html",
+    "sku": "0281842",
+    "availability": ""
   },
   {
     "title": "Plafonnier encastré à 2 lampes avec abat-jour en cage en cristal CANVAS Chelsea, fini chromé",
@@ -432,6 +684,18 @@
     "availability": "Il n’en reste que 4 #151-5223-0"
   },
   {
+    "title": "Nettoyant rapide SIMONIZ pour tableaux de bord, non parfumé",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-chemicals/0393633/simoniz-dashboard-protectant-6351e878-3b35-4ac0-9fb6-41b8fa566016-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 8.99,
+    "salePrice": 3.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-rapide-simoniz-pour-tableaux-de-bord-non-parfume-0393633p.html",
+    "sku": "0393633",
+    "availability": "Il n’en reste que 2 #039-3633-6"
+  },
+  {
     "title": "Étagère de rangement en métal pour garage Mastercraft avec crochets, noir, 17 x 3,5 x 4,5 po",
     "image": "https://media-www.canadiantire.ca/product/fixing/tools/tool-storage/0582534/mastercraft-garage-can-brush-organizer-9b4c9249-a2f0-455e-8b25-2013253735a6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 17.99,
@@ -442,6 +706,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/etagere-de-rangement-en-metal-pour-garage-mastercraft-avec-crochets-noir-17-x-3-5-x-4-5-po-0582534p.html",
     "sku": "0582534",
     "availability": "9 En Stock#058-2534-2"
+  },
+  {
+    "title": "Pagaie de kayak de pêche Outbound en aluminium, léger, gris, 86,5 po",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0792057/outbound-87-angler-kayak-paddle-grey--1dfe390c-1968-453a-bd4e-b3bbe7def962-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 69.99,
+    "salePrice": 27.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/pagaie-de-kayak-de-peche-outbound-en-aluminium-leger-gris-86-5-po-0792057p.html",
+    "sku": "0792057",
+    "availability": ""
   },
   {
     "title": "Plaque verticale pour prise double extérieure Thomas & Betts 37128-722, joint d'étanchéité et vis inclus, gris",
@@ -466,6 +742,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/patte-de-chevalet-telescopique-galvanisee-certified-2-x-4-0580347p.html",
     "sku": "0580347",
     "availability": "Il n’en reste que 1 #058-0347-0"
+  },
+  {
+    "title": "Lustre à 5 lampes CANVAS Tavio, noir mat",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/lighting/1522643/canvas-tavio-chandelier-e97146c2-76cd-4478-ae5a-9d534d336030-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 174.99,
+    "salePrice": 39.97,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/lustre-a-5-lampes-canvas-tavio-noir-mat-1522643p.html",
+    "sku": "1522643",
+    "availability": "Il n’en reste que 3 #152-2643-6"
   },
   {
     "title": "Trousse de préparation de yogourt Kilner",
@@ -504,6 +792,30 @@
     "availability": "37 En Stock#052-6007-6"
   },
   {
+    "title": "Chaise/bouée gonflable Swimways Dry Float, 79 x 41 po",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-fun/0813954/dry-float-lazy-lounger-3c9ddb83-f2f0-4b6b-8f0a-7daf908c2a49-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 79.99,
+    "salePrice": 29.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/chaise-bouee-gonflable-swimways-dry-float-79-x-41-po-0813954p.html",
+    "sku": "0813954",
+    "availability": "Il n’en reste que 1 #081-3954-8"
+  },
+  {
+    "title": "Flotteur gonflable pour piscine/eau Stella and Finn, paresseux",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pools-spas/0810233/sloth-canopy-pool-b490c080-0bad-4f70-b0e7-7355c307cdc3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 39.99,
+    "salePrice": 14.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/flotteur-gonflable-pour-piscine-eau-stella-and-finn-paresseux-0810233p.html",
+    "sku": "0810233",
+    "availability": "Il n’en reste que 1 #081-0233-2"
+  },
+  {
     "title": "Ampoule incandescente givrée à intensité variable à culot E26 NOMA T10, 260 lumens, blanc chaud, 40 W",
     "image": "https://media-www.canadiantire.ca/product/fixing/electrical/light-bulbs/0525583/incandescent-t10-40w-frosted-1p-noma-med-492ffcfa-2298-41c6-b14e-2f00c9c4e9d7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 4.79,
@@ -514,6 +826,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/ampoule-incandescente-givree-a-intensite-variable-a-culot-e26-noma-t10-260-lumens-blanc-chaud-40-w-0525583p.html",
     "sku": "0525583",
     "availability": "17 En Stock#052-5583-8"
+  },
+  {
+    "title": "Jeu de lancer Swimways Hydro Bottle Splash",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-fun/0810244/swimways-hydro-bottle-splash-7decea75-87df-42e3-8c7f-03ca30aba35b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 7.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/jeu-de-lancer-swimways-hydro-bottle-splash-0810244p.html",
+    "sku": "0810244",
+    "availability": "Il n’en reste que 1 #081-0244-6"
   },
   {
     "title": "Jeu de lumières solaires à DEL étanche d'extérieur pour terrasse et spa NOMA",
@@ -540,6 +864,18 @@
     "availability": "Il n’en reste que 1 #052-1868-6"
   },
   {
+    "title": "VFI/gilet de sauvetage en nylon/néoprène pour poupons Stearns",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-water-fun/0791996/infant-person-floatation-device-20-30lb-e9190fbb-f01b-40a0-9700-c284a3c25344-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 44.99,
+    "salePrice": 19.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/vfi-gilet-de-sauvetage-en-nylon-neoprene-pour-poupons-stearns-0791996p.html",
+    "sku": "0791996",
+    "availability": ""
+  },
+  {
     "title": "Plafonnier semi-encastré à 1 lampe CANVAS Bonnyview, verre transparent/doré antique",
     "image": "https://media-www.canadiantire.ca/product/living/home-decor/lighting/0526100/canvas-bonnyview-semi-flush-mount-7b3bd0fd-9b5e-4fb7-9283-1a34c7c52ab9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 139.99,
@@ -562,6 +898,30 @@
     "url": "https://www.canadiantire.ca/fr/pdp/goupille-et-boulon-d-attelage-sportrack-sr0901-avec-verrou-anti-vibration-0401102p.html",
     "sku": "0401102",
     "availability": "Il n’en reste que 1 #040-1102-6"
+  },
+  {
+    "title": "Treuil MotoMaster Eliminator avec corde synthétique, 4 700 lb",
+    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/powersport/1400050/motomaster-winch-4700lb-with-synthetic-rope-5387f33d-56ae-4e0c-aa62-b19f2e4abe4f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 399.99,
+    "salePrice": 146.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/treuil-motomaster-eliminator-avec-corde-synthetique-4-700-lb-1400050p.html",
+    "sku": "1400050",
+    "availability": "Il n’en reste que 1 #140-0050-6"
+  },
+  {
+    "title": "Parc aquatique d'extérieur gonflable 6-en-1 Banzai, bilingue",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/seasonal-toys/0509716/banzai-water-park-18432708-22bf-46ba-bb08-727b71924c1e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 69.99,
+    "salePrice": 24.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/parc-aquatique-d-exterieur-gonflable-6-en-1-banzai-bilingue-0509716p.html",
+    "sku": "0509716",
+    "availability": "Il n’en reste que 1 #050-9716-4"
   },
   {
     "title": "Leurre Lunkerhunt Natural Fillet, 3/8 oz",
@@ -636,6 +996,18 @@
     "availability": "11 En Stock#142-2294-0"
   },
   {
+    "title": "Flotteur ovale en plastique soudé, rouge",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-water-fun/0797069/ski-tow-rope-float-809a395d-f49c-42a4-8b3b-141e8f0b5e7d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 8.99,
+    "salePrice": 2.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/flotteur-ovale-en-plastique-soude-rouge-0797069p.html",
+    "sku": "0797069",
+    "availability": "Il n’en reste que 2 #079-7069-0"
+  },
+  {
     "title": "Récepteur BOSS Audio BE10ACP à technologie Bluetooth",
     "image": "https://media-www.canadiantire.ca/product/automotive/electronics/auto-electronics/0355592/bose-audio-10acp-bluetooth-receiver-e6be234f-0ad6-4809-9bbd-f85056ac9f3a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 749.99,
@@ -646,6 +1018,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/recepteur-boss-audio-be10acp-a-technologie-bluetooth-0355592p.html",
     "sku": "0355592",
     "availability": "Il n’en reste que 1 #035-5592-8"
+  },
+  {
+    "title": "Bouée/Flotteur gonflable Stella et Finn, baleine, noir, 67 po",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-fun/0813951/stella-finn-killer-whale-ride-on-5ed323a2-ce62-4d51-b297-2d64cbd15555-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 29.99,
+    "salePrice": 11.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/bouee-flotteur-gonflable-stella-et-finn-baleine-noir-67-po-0813951p.html",
+    "sku": "0813951",
+    "availability": "Il n’en reste que 5 #081-3951-4"
   },
   {
     "title": "Gâteries pour chats WholeHearted, riches en protéines, filet de poulet, 30 g",
@@ -660,6 +1044,18 @@
     "availability": "24 En Stock#142-9878-0"
   },
   {
+    "title": "Jeu d'eau aquarelle pour chiens Petco, grand",
+    "image": "https://media-www.canadiantire.ca/product/living/pet-care/pet-accessories/1424073/petco-watercolor-splash-pad-dog-toy-large-d39b563b-7ec4-4003-ac0c-6e360f78b63c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 39.99,
+    "salePrice": 19.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/jeu-d-eau-aquarelle-pour-chiens-petco-grand-1424073p.html",
+    "sku": "1424073",
+    "availability": "Il n’en reste que 1 #142-4073-4"
+  },
+  {
     "title": "Tasse en grès CANVAS, Number One Fan, 13 oz",
     "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/1427932/canvas-number-one-fan-mug-072d8a37-6a7e-4fe3-a113-da66a0c5b1ad-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 5.49,
@@ -669,7 +1065,7 @@
     "branch": "Eglinton & Caledonia, Toronto, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/tasse-en-gres-canvas-number-one-fan-13-oz-1427932p.html",
     "sku": "1427932",
-    "availability": "9 En Stock#142-7932-2"
+    "availability": "33 En Stock#142-7932-2"
   },
   {
     "title": "Prise à port USB inviolable Legrand TM826USBNI Radiant, 15 A, 125 V, nickel",
@@ -699,7 +1095,7 @@
     "title": "Masque et tuba de voyage Speedo pour jeunes et adultes, vert océan",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-fun/0813914/speedo-adult-travel-mask-snorkel-set-85bbeba6-cda7-409a-9a7a-70b5261a2dc6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 59.99,
-    "salePrice": 29.93,
+    "salePrice": 19.93,
     "store": "Canadian Tire",
     "city": "Eglinton & Caledonia, Toronto, ON",
     "branch": "Eglinton & Caledonia, Toronto, ON",
@@ -723,7 +1119,7 @@
     "title": "Mini jouet porteur électrique Kid Trax Rideamals Tiger, 6 V, orange, 18 à 30 mois",
     "image": "https://media-www.canadiantire.ca/product/playing/cycling/wheeled-goods/1840682/6v-tiger-rideamals-electric-ride-on-2fd06d21-dc4f-4abe-9272-d983f71425b1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 169.99,
-    "salePrice": 79.93,
+    "salePrice": 71.93,
     "store": "Canadian Tire",
     "city": "Eglinton & Caledonia, Toronto, ON",
     "branch": "Eglinton & Caledonia, Toronto, ON",
@@ -771,7 +1167,7 @@
     "title": "Lanterne suspendue avec bougie For Living, varié",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0597874/for-living-hanging-tabletop-lantern-assorted-9481de4c-99b6-4e7c-897a-6d7fb8cbe5a8-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 17.99,
-    "salePrice": 6.43,
+    "salePrice": 4.93,
     "store": "Canadian Tire",
     "city": "Eglinton & Caledonia, Toronto, ON",
     "branch": "Eglinton & Caledonia, Toronto, ON",
@@ -852,6 +1248,18 @@
     "availability": "9 En Stock#039-6085-2"
   },
   {
+    "title": "Housse robuste de barbecue à granules Vermont Castings, hydrofuge résistant aux intempéries et aux rayons UV, moyen, noir",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking-accessories/0852364/vermont-castings-750-sq-in-pellet-grill-cover-37717a30-bcbc-47cc-8337-9517281caeeb-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 109.99,
+    "salePrice": 49.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/housse-robuste-de-barbecue-a-granules-vermont-castings-hydrofuge-resistant-aux-intemperies-et-aux-rayons-uv-moyen-noir-0852364p.html",
+    "sku": "0852364",
+    "availability": "Il n’en reste que 1 #085-2364-0"
+  },
+  {
     "title": "Housse de pare-brise Mallory Artic",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-winter-accessories/0304231/mallory-artic-windshield-cover-011618a4-6e16-4b05-acca-39665bdfee0b.png?im=whresize&wid=200&hei=200",
     "price": 19.99,
@@ -873,7 +1281,19 @@
     "branch": "Eglinton & Caledonia, Toronto, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/bande-lumineuse-rvb-a-del-avec-bluetooth-merkury-2-m-0373141p.html",
     "sku": "0373141",
-    "availability": "Il n’en reste que 1 #037-3141-0"
+    "availability": "21 En Stock#037-3141-0"
+  },
+  {
+    "title": "Lampe de travail et haut-parleur 4-en-1 MotoMaster, 1000 lumens",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0379893/4-in-1-worklight-and-speaker-3befce74-4dcc-4ce2-b1f7-96297e54aa10-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 99.99,
+    "salePrice": 41.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/lampe-de-travail-et-haut-parleur-4-en-1-motomaster-1000-lumens-0379893p.html",
+    "sku": "0379893",
+    "availability": "Il n’en reste que 4 #037-9893-4"
   },
   {
     "title": "Aqua Training Bag - Sac de frappe d'entraînement, 75 lb",
@@ -948,6 +1368,18 @@
     "availability": "Il n’en reste que 3 #076-5694-8"
   },
   {
+    "title": "Prises de dame de nage chromées pour kayak ou canot",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0792470/oar-sockets-chrome-00094463-040e-43c3-85b6-5a093733a7b1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 29.99,
+    "salePrice": 11.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/prises-de-dame-de-nage-chromees-pour-kayak-ou-canot-0792470p.html",
+    "sku": "0792470",
+    "availability": "Il n’en reste que 2 #079-2470-2"
+  },
+  {
     "title": "Spatule pour gelées Roots & Harvest LEM avec thermomètre intégré",
     "image": "https://media-www.canadiantire.ca/product/living/kitchen/canning/2420195/roots-harvest-jelly-spatula-with-integrated-thermometer-2737ff72-1e28-4faf-8e2e-a04959c9efe3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 29.99,
@@ -958,6 +1390,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/spatule-pour-gelees-roots-harvest-lem-avec-thermometre-integre-2420195p.html",
     "sku": "2420195",
     "availability": "Il n’en reste que 3 #242-0195-0"
+  },
+  {
+    "title": "Filtre d’humidificateur auto-assainissant NOMA",
+    "image": "https://media-www.canadiantire.ca/product/fixing/home-environment/home-air-quality-appliances/0430172/noma-self-sanitizing-humidifier-filter-3162dfdd-25aa-415e-8e90-104e014ed3a7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 7.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/filtre-d-humidificateur-auto-assainissant-noma-0430172p.html",
+    "sku": "0430172",
+    "availability": "Il n’en reste que 1 #043-0172-8"
   },
   {
     "title": "Cochon jouet en peluche pour chiens Petco, petit",
@@ -972,10 +1416,22 @@
     "availability": "Il n’en reste que 1 #142-7436-4"
   },
   {
+    "title": "Soupape de sécurité et de température à fermeture automatique en laiton Watts 1L-2CAN-150210, 1⁄2 po, marron",
+    "image": "https://media-www.canadiantire.ca/product/fixing/plumbing/water-management/0630169/valve-temperature-pressure-1l-5981feb4-fcc2-46b3-96e8-755eb5c86ddd-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 22.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/soupape-de-securite-et-de-temperature-a-fermeture-automatique-en-laiton-watts-1l-2can-150210-1-2-po-marron-0630169p.html",
+    "sku": "0630169",
+    "availability": "Il n’en reste que 2 #063-0169-0"
+  },
+  {
     "title": "Flotteur/Hamac gonflable de piscine pour 2 personnes Stella & Finn, 48 x 58 po",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-fun/0813880/2-person-water-hammock-5d92e375-b6c8-4fe9-a8bd-7bd74b799e75-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 24.99,
-    "salePrice": 11.73,
+    "salePrice": 9.93,
     "store": "Canadian Tire",
     "city": "Eglinton & Caledonia, Toronto, ON",
     "branch": "Eglinton & Caledonia, Toronto, ON",
@@ -1018,6 +1474,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/parka-manteau-de-chasse-a-capuchon-hydrofuge-coupe-vent-dsg-pour-femmes-orange-vif-3750700p.html",
     "sku": "3750700",
     "availability": ""
+  },
+  {
+    "title": "Pinceau à badigeonner en tissu Vermont Castings avec anneau en cuir",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking-accessories/0852157/vermont-castings-sauce-mop-c3400c13-5240-4244-926d-099929ac008d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 21.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/pinceau-a-badigeonner-en-tissu-vermont-castings-avec-anneau-en-cuir-0852157p.html",
+    "sku": "0852157",
+    "availability": "Il n’en reste que 2 #085-2157-4"
   },
   {
     "title": "Forets et embouts au titane à 7 arêtes MAXIMUM Precision Point, pour bois, métal, plastique, paq. 10",
@@ -1152,6 +1620,54 @@
     "availability": "Il n’en reste que 1 #024-5619-4"
   },
   {
+    "title": "Gilet de sauvetage VFI nylon La Reine des neiges Disney, poupons",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-water-fun/0791895/disney-cartoon-infant-girl-nylon-pfd-4a2eb70f-ec3d-42ac-91d7-ec87a9cd3d42-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 57.99,
+    "salePrice": 24.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/gilet-de-sauvetage-vfi-nylon-la-reine-des-neiges-disney-poupons-0791895p.html",
+    "sku": "0791895",
+    "availability": ""
+  },
+  {
+    "title": "Chaînette de ventilateur de plafond Atron Electro Industries FA63 perlée et en laiton, bois blanc, 12 po",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/rough-electrical/0520016/ceiling-fan-pull-chain-oval-white-f1cb4a5d-b13d-4fcc-9938-b9dd9e2050df-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 3.49,
+    "salePrice": 1.43,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/chainette-de-ventilateur-de-plafond-atron-electro-industries-fa63-perlee-et-en-laiton-bois-blanc-12-po-0520016p.html",
+    "sku": "0520016",
+    "availability": "Il n’en reste que 2 #052-0016-0"
+  },
+  {
+    "title": "Barre de son de jeu ENHANCE SM2 Attack à DEL pour ordinateur de bureau, noir",
+    "image": "https://media-www.canadiantire.ca/product/living/electronics/home-entertainment-accessories/0451208/enhance-sm2-attack-gaming-speaker-soundbar-1a29de5c-6dd7-41b9-89d6-ecebca9abf39-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 79.99,
+    "salePrice": 11.93,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/barre-de-son-de-jeu-enhance-sm2-attack-a-del-pour-ordinateur-de-bureau-noir-0451208p.html",
+    "sku": "0451208",
+    "availability": "Il n’en reste que 1 #045-1208-6"
+  },
+  {
+    "title": "Bobine de rechange pour tête de coupe-herbe Husqvarna T35, 0,95 po",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/outdoor-tools/hand-held-outdoor-power-tools/0601572/husqvarna-t35-trimmer-spool-42e975d4-8246-4b50-9686-e5667983f0e7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 6.79,
+    "store": "Canadian Tire",
+    "city": "Eglinton & Caledonia, Toronto, ON",
+    "branch": "Eglinton & Caledonia, Toronto, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/bobine-de-rechange-pour-tete-de-coupe-herbe-husqvarna-t35-0-95-po-0601572p.html",
+    "sku": "0601572",
+    "availability": "Il n’en reste que 4 #060-1572-8"
+  },
+  {
     "title": "Peinture de retouche Scratch Fix All-in-1, Flamme rayonnante (PRB, R87)",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-body-repair/0474937/scratch-fix-chrysler-radiant-fire-all-in-1-e4c5c075-f76b-408a-9c88-3b85f8685123-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 28.99,
@@ -1185,13 +1701,13 @@
     "branch": "Eglinton & Caledonia, Toronto, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/plaque-de-lubrification-pour-caravane-a-sellette-0408434p.html",
     "sku": "0408434",
-    "availability": "Il n’en reste que 1 #040-8434-4"
+    "availability": ""
   },
   {
     "title": "Peinture de retouche Scratch Fix All-in-1, SAUGE antique PERLÉE (1B2)",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-body-repair/0475157/scratch-fix-toyota-antique-sage-pearl-all-in-1-b2292936-861d-4ec9-85a2-d9a873718867.png?im=whresize&wid=200&hei=200",
     "price": 28.99,
-    "salePrice": 5.93,
+    "salePrice": 4.93,
     "store": "Canadian Tire",
     "city": "Eglinton & Caledonia, Toronto, ON",
     "branch": "Eglinton & Caledonia, Toronto, ON",
@@ -1215,7 +1731,7 @@
     "title": "Gant de golf Nike Dura Feel X pour femmes, main gauche",
     "image": "https://media-www.canadiantire.ca/product/playing/team-sports-and-golf/golf/0860820/nike-dura-feel-ix-women-s-golf-glove-left-hand-small-7feac63c-5361-4e68-b135-cd1017f84597-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 14.99,
-    "salePrice": 6.93,
+    "salePrice": 6.23,
     "store": "Canadian Tire",
     "city": "Eglinton & Caledonia, Toronto, ON",
     "branch": "Eglinton & Caledonia, Toronto, ON",
