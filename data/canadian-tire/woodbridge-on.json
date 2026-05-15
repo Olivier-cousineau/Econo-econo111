@@ -1,29 +1,5 @@
 [
   {
-    "title": "Affûte-couteaux à 3 étapes MASTER Chef",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/cutlery/2421029/master-chef-3stage-knife-sharpener-b9ab2767-c8c0-473e-a296-6cb70527856a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 18.99,
-    "salePrice": 6.93,
-    "store": "Canadian Tire",
-    "city": "Woodbridge, ON",
-    "branch": "Woodbridge, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/affute-couteaux-a-3-etapes-master-chef-2421029p.html",
-    "sku": "2421029",
-    "availability": "271 En Stock#242-1029-2"
-  },
-  {
-    "title": "Tasses à mesurer empilables en plastique MASTER Chef, paq. 10",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/bakeware-baking-prep/1429676/master-chef-10pc-measuring-cup-set-73c761cb-c28c-42fe-a32e-f57a30c6b9a6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 24.99,
-    "salePrice": 8.93,
-    "store": "Canadian Tire",
-    "city": "Woodbridge, ON",
-    "branch": "Woodbridge, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/tasses-a-mesurer-empilables-en-plastique-master-chef-paq-10-1429676p.html",
-    "sku": "1429676",
-    "availability": "30 En Stock#142-9676-0"
-  },
-  {
     "title": "Jeu d'arcade de tir de basketball REC-Tek avec 4 balles et tableau de pointage électronique",
     "image": "https://media-www.canadiantire.ca/product/playing/team-sports-and-golf/indoor-games/1840694/rec-tek-basketball-shootout-challenge-game-b5d7e061-32a3-40d8-a913-45673257eaf7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 129.99,
@@ -48,6 +24,18 @@
     "availability": "Il n’en reste que 6 #085-0001-6"
   },
   {
+    "title": "Tapis d'intérieur et d'extérieur CANVAS Morency, 6 x 9 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680042/morency-outdoor-rug-d723df32-0b9c-4c2a-86c8-9c791795e3b2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 49.99,
+    "salePrice": 19.93,
+    "store": "Canadian Tire",
+    "city": "Woodbridge, ON",
+    "branch": "Woodbridge, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-d-interieur-et-d-exterieur-canvas-morency-6-x-9-pi-0680042p.html",
+    "sku": "0680042",
+    "availability": "9 En Stock#068-0042-0"
+  },
+  {
     "title": "Distributeur d'eau chaude de MASTER Chef avec poignée, noir, 3,5 L",
     "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430196/master-chef-hot-water-dispenser-9e2e8ff7-2445-4f25-9bde-ac042fe07b54-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 99.99,
@@ -57,7 +45,7 @@
     "branch": "Woodbridge, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/distributeur-d-eau-chaude-de-master-chef-avec-poignee-noir-3-5-l-0430196p.html",
     "sku": "0430196",
-    "availability": "71 En Stock#043-0196-2"
+    "availability": "70 En Stock#043-0196-2"
   },
   {
     "title": "Machine à espresso semi-automatique à un toucher avec mousseur à lait Mr. Coffee",
@@ -93,7 +81,7 @@
     "branch": "Woodbridge, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/velo-hybride-raleigh-sundance-700c-cuivre-0711982p.html",
     "sku": "0711982",
-    "availability": "Il n’en reste que 4 #071-1982-6"
+    "availability": "Il n’en reste que 3 #071-1982-6"
   },
   {
     "title": "Présentoir d'articles saisonniers Mastercraft avec chariot à plateforme roulante, noir",
@@ -120,10 +108,94 @@
     "availability": "Il n’en reste que 4 #040-1012-0"
   },
   {
+    "title": "Meuble de rangement d'angle ouvert à 9 cubes For Living, blanc",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/1680221/for-living-corner-9-cube-organizer-7b7dc5f9-de00-4529-ab60-96254faa2854-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 159.99,
+    "salePrice": 79.93,
+    "store": "Canadian Tire",
+    "city": "Woodbridge, ON",
+    "branch": "Woodbridge, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/meuble-de-rangement-d-angle-ouvert-a-9-cubes-for-living-blanc-1680221p.html",
+    "sku": "1680221",
+    "availability": "Il n’en reste que 3 #168-0221-6"
+  },
+  {
+    "title": "Tente de camping Coleman Slylodge pour 10 personnes avec pièce à moustiquaire convertible, double-toit et sac de transport",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/tents-shelters/0766127/coleman-10-person-cabin-tent-with-screen-room-508408d3-620b-447f-8946-288dc1cdbc12-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 489.99,
+    "salePrice": 244.93,
+    "store": "Canadian Tire",
+    "city": "Woodbridge, ON",
+    "branch": "Woodbridge, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tente-de-camping-coleman-slylodge-pour-10-personnes-avec-piece-a-moustiquaire-convertible-double-toit-et-sac-de-transport-0766127p.html",
+    "sku": "0766127",
+    "availability": "Il n’en reste que 5 #076-6127-4"
+  },
+  {
+    "title": "Vélo électrique tout-terrain Raleigh Getaway 36 V, 700C roues, bleu",
+    "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycles/0711932/raleigh-getaway-women-s-electric-bike-700c-8dc09e7f-a9b4-4e61-aa08-2b9e38d895c6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 2799.99,
+    "salePrice": 1399.93,
+    "store": "Canadian Tire",
+    "city": "Woodbridge, ON",
+    "branch": "Woodbridge, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/velo-electrique-tout-terrain-raleigh-getaway-36-v-700c-roues-bleu-0711932p.html",
+    "sku": "0711932",
+    "availability": "Il n’en reste que 1 #071-1932-6"
+  },
+  {
+    "title": "Meuble pour téléviseur avec foyer électrique multimédia CANVAS Hanover, 58 po, 1 400 W, télécommande comprise, brun",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/electric-fireplaces/0644016/58-hanover-media-fireplace-80aaedf9-1443-4308-90a8-136be62f1565-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 699.99,
+    "salePrice": 349.93,
+    "store": "Canadian Tire",
+    "city": "Woodbridge, ON",
+    "branch": "Woodbridge, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/meuble-pour-televiseur-avec-foyer-electrique-multimedia-canvas-hanover-58-po-1-400-w-telecommande-comprise-brun-0644016p.html",
+    "sku": "0644016",
+    "availability": "Il n’en reste que 3 #064-4016-8"
+  },
+  {
+    "title": "Tapis d'intérieur et d'extérieur CANVAS Fresco Belfont, 8 x 10 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680039/belfont-indoor-outdoor-rug-2cc2ee2e-72b8-4508-bef2-3b4dbbe72d93-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 199.99,
+    "salePrice": 99.93,
+    "store": "Canadian Tire",
+    "city": "Woodbridge, ON",
+    "branch": "Woodbridge, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-d-interieur-et-d-exterieur-canvas-fresco-belfont-8-x-10-pi-0680039p.html",
+    "sku": "0680039",
+    "availability": "Il n’en reste que 6 #068-0039-0"
+  },
+  {
+    "title": "Tabouret de bar métal et bois CANVAS Union, paq. 2, brun",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/0687563/canvas-union-stool-2-pk-29ecf7e3-3af9-4631-ab03-ba8946104db3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 229.99,
+    "salePrice": 74.93,
+    "store": "Canadian Tire",
+    "city": "Woodbridge, ON",
+    "branch": "Woodbridge, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tabouret-de-bar-metal-et-bois-canvas-union-paq-2-brun-0687563p.html",
+    "sku": "0687563",
+    "availability": "13 En Stock#068-7563-8"
+  },
+  {
+    "title": "Vélo électrique Raleigh Dobson Comfort, léger, écran ACL intégré, 700C roues, blanc",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/cycling/bicycles/0712020/raleigh-dobson-electric-bike-700c-white-46befcab-abaf-4947-ae19-7764447767ed-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 1999.99,
+    "salePrice": 799.93,
+    "store": "Canadian Tire",
+    "city": "Woodbridge, ON",
+    "branch": "Woodbridge, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/velo-electrique-raleigh-dobson-comfort-leger-ecran-acl-integre-700c-roues-blanc-0712020p.html",
+    "sku": "0712020",
+    "availability": "Il n’en reste que 2 #071-2020-0"
+  },
+  {
     "title": "Tabouret de bar pivotant en métal hauteur réglable CANVAS Turner, paq. 2, noir/brun",
     "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/0687554/canvas-turner-stool-2-pack-84c1b1ad-45f7-4a96-a4c4-5a3f394d31ee-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 174.99,
-    "salePrice": 79.93,
+    "salePrice": 84.93,
     "store": "Canadian Tire",
     "city": "Woodbridge, ON",
     "branch": "Woodbridge, ON",
@@ -213,7 +285,7 @@
     "branch": "Woodbridge, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/tres-petite-cage-pliable-a-1-porte-pour-chiens-petco-18-l-x-13-la-x-16-h-po-1427495p.html",
     "sku": "1427495",
-    "availability": "Il n’en reste que 1 #142-7495-2"
+    "availability": ""
   },
   {
     "title": "Batterie de cuisine pour sac à dos Woods O'Hara",
@@ -226,6 +298,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/batterie-de-cuisine-pour-sac-a-dos-woods-o-hara-0766500p.html",
     "sku": "0766500",
     "availability": "Il n’en reste que 1 #076-6500-4"
+  },
+  {
+    "title": "Chaise à dîner CANVAS Windsor, blanc",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/1680126/canvas-windsor-white-dining-chair-308adadd-fff5-4b03-9585-49671be60cca-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 169.99,
+    "salePrice": 84.93,
+    "store": "Canadian Tire",
+    "city": "Woodbridge, ON",
+    "branch": "Woodbridge, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/chaise-a-diner-canvas-windsor-blanc-1680126p.html",
+    "sku": "1680126",
+    "availability": "Il n’en reste que 7 #168-0126-4"
   },
   {
     "title": "Gobelet isotherme empilable Woods avec paille, noir, 830 mL",
@@ -297,7 +381,7 @@
     "branch": "Woodbridge, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/moule-a-brie-en-ceramique-canvas-1426470p.html",
     "sku": "1426470",
-    "availability": "11 En Stock#142-6470-6"
+    "availability": "10 En Stock#142-6470-6"
   },
   {
     "title": "Leurres Lucky Strike Devil Bait, paq. 6",
@@ -312,8 +396,20 @@
     "availability": ""
   },
   {
+    "title": "Trampoline d'eau gonflable Pathfinder, 9,2 pi",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-water-fun/0791421/pathfinder-water-trampoline-6b774c44-c405-4169-90f9-01a872145868-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 499.99,
+    "salePrice": 199.93,
+    "store": "Canadian Tire",
+    "city": "Woodbridge, ON",
+    "branch": "Woodbridge, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/trampoline-d-eau-gonflable-pathfinder-9-2-pi-0791421p.html",
+    "sku": "0791421",
+    "availability": "Il n’en reste que 1 #079-1421-6"
+  },
+  {
     "title": "Interrupteur silencieux à bascule 3 voies CA Decorator, 15 A, 120 V, aucune mise à la terre, qualité résidentielle, couleurs variées",
-    "image": "undefined?im=whresize&wid=200&hei=200",
+    "image": "undefined",
     "price": 4.79,
     "salePrice": 1.93,
     "store": "Canadian Tire",
@@ -348,6 +444,30 @@
     "availability": "Il n’en reste que 4 #079-3997-4"
   },
   {
+    "title": "Décoration de jardin For Living, maison de gnomes enchantée",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0597870/for-living-enchanted-gnome-cabin-kit-05083210-f13f-41f8-b2b1-c7d784eb461e.png?im=whresize&wid=200&hei=200",
+    "price": 37.99,
+    "salePrice": 14.93,
+    "store": "Canadian Tire",
+    "city": "Woodbridge, ON",
+    "branch": "Woodbridge, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/decoration-de-jardin-for-living-maison-de-gnomes-enchantee-0597870p.html",
+    "sku": "0597870",
+    "availability": "Il n’en reste que 6 #059-7870-8"
+  },
+  {
+    "title": "Guirlande de lumières solaires à DEL CANVAS Springhill pour l'intérieur et l'extérieur, blanc chaud, 10,5 pi",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-lighting/0521616/canvas-springhill-string-lights-ae879125-62ed-4b33-96ca-9a1fcc1f2c6f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 27.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Woodbridge, ON",
+    "branch": "Woodbridge, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/guirlande-de-lumieres-solaires-a-del-canvas-springhill-pour-l-interieur-et-l-exterieur-blanc-chaud-10-5-pi-0521616p.html",
+    "sku": "0521616",
+    "availability": "36 En Stock#052-1616-6"
+  },
+  {
     "title": "La station de chargement sans fil avec tapis de 10 W de Bluehive est compatible avec la plupart des appareils compatibles Qi",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-electronics/0355501/bluehive-10w-fabric-wireless-charging-stand-pad-dff12d50-3081-4550-8e48-cecbe7fa230a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 42.99,
@@ -357,7 +477,7 @@
     "branch": "Woodbridge, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/la-station-de-chargement-sans-fil-avec-tapis-de-10-w-de-bluehive-est-compatible-avec-la-plupart-des-appareils-compatibles-qi-0355501p.html",
     "sku": "0355501",
-    "availability": "8 En Stock#035-5501-6"
+    "availability": "Il n’en reste que 7 #035-5501-6"
   },
   {
     "title": "Peinture d'intérieur en aérosol toute surface Rust-Oleum Accents, texture de pierre, 340 g",
@@ -588,18 +708,6 @@
     "availability": ""
   },
   {
-    "title": "Antenne intérieure/extérieure amplifiée SkyWire AD-550, 100 km",
-    "image": "https://media-www.canadiantire.ca/product/living/electronics/home-entertainment-accessories/0452859/skywire-outdoor-antenna-amplified-c1dd329e-878c-4f9f-b00c-aa06a59a60b6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 99.99,
-    "salePrice": 29.93,
-    "store": "Canadian Tire",
-    "city": "Woodbridge, ON",
-    "branch": "Woodbridge, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/antenne-interieure-exterieure-amplifiee-skywire-ad-550-100-km-0452859p.html",
-    "sku": "0452859",
-    "availability": "Il n’en reste que 1 #045-2859-0"
-  },
-  {
     "title": "Enduit en caoutchouc flexible instantané Rust-Oleum LeakSeal, imperméable, pouvant être peint, noir, 946 mL",
     "image": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641198/flexible-rubber-sealant-black-946-ml-6d181b1e-ddcd-4bd4-aea4-6f2ca589f692-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 63.99,
@@ -610,6 +718,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/enduit-en-caoutchouc-flexible-instantane-rust-oleum-leakseal-impermeable-pouvant-etre-peint-noir-946-ml-0641198p.html",
     "sku": "0641198",
     "availability": "Il n’en reste que 7 #064-1198-2"
+  },
+  {
+    "title": "Tente de camping étanche pour 2 personnes Woods Cascade avec toile de sol et fourre-tout",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/tents-shelters/0766202/woods-cascade-2p-tent-footprint-a8e8e455-4c62-4e17-b67b-73550252753d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 31.99,
+    "salePrice": 14.93,
+    "store": "Canadian Tire",
+    "city": "Woodbridge, ON",
+    "branch": "Woodbridge, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tente-de-camping-etanche-pour-2-personnes-woods-cascade-avec-toile-de-sol-et-fourre-tout-0766202p.html",
+    "sku": "0766202",
+    "availability": "Il n’en reste que 2 #076-6202-4"
   },
   {
     "title": "Woods™ - Panneau solaire portatif, 21 W",
@@ -660,6 +780,18 @@
     "availability": "Il n’en reste que 3 #078-8270-4"
   },
   {
+    "title": "Pistolet à bulles Gazillion Bubbles Stormin', comprend 8 oz de solution à bulles, 3 ans et plus",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/seasonal-toys/0509726/gazillion-stormin-bubble-blaster-72cb01ad-1f0a-4f95-843a-eb88ccb87f89-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 24.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Woodbridge, ON",
+    "branch": "Woodbridge, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/pistolet-a-bulles-gazillion-bubbles-stormin-comprend-8-oz-de-solution-a-bulles-3-ans-et-plus-0509726p.html",
+    "sku": "0509726",
+    "availability": "Il n’en reste que 4 #050-9726-0"
+  },
+  {
     "title": "Boy or Girl? Ballon en aluminium satiné cache-couche, rose, 22 po, gonflement à l'hélium et ruban inclus, pour dévoilement du sexe",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8535646/the-big-reveal-super-shape-foil-balloon-4a127e22-b25d-40ef-aee8-3e481d728818-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 16.99,
@@ -670,66 +802,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/boy-or-girl-ballon-en-aluminium-satine-cache-couche-rose-22-po-gonflement-a-l-helium-et-ruban-inclus-pour-devoilement-du-sexe-8535646p.html",
     "sku": "8535646",
     "availability": "Il n’en reste que 7 #853-5646-4"
-  },
-  {
-    "title": "Trousse de réparation rapide en de pneu de VR CAMCO Pro-Tech",
-    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0408898/rubber-roof-repair-kit-c9b1e79b-619f-4f23-b84e-6726592ae938-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 34.99,
-    "salePrice": 16.93,
-    "store": "Canadian Tire",
-    "city": "Woodbridge, ON",
-    "branch": "Woodbridge, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-reparation-rapide-en-de-pneu-de-vr-camco-pro-tech-0408898p.html",
-    "sku": "0408898",
-    "availability": "Il n’en reste que 2 #040-8898-0"
-  },
-  {
-    "title": "Peinture laque acrylique en aérosol pour automobile de qualité supérieure Dupli-Color Perfect Match, brume bronze pâle, 227 g",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-body-repair/0472436/general-motors-8oz-light-bronze-mist-paint-351b16df-a5cd-4182-b591-3d3d0de9eb60-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 24.99,
-    "salePrice": 7.93,
-    "store": "Canadian Tire",
-    "city": "Woodbridge, ON",
-    "branch": "Woodbridge, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/peinture-laque-acrylique-en-aerosol-pour-automobile-de-qualite-superieure-dupli-color-perfect-match-brume-bronze-pale-227-g-0472436p.html",
-    "sku": "0472436",
-    "availability": "Il n’en reste que 3 #047-2436-2"
-  },
-  {
-    "title": "Émerillons à roulement et mousqueton Mustad taille 4, paq. 3",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0785077/mustad-ball-bearing-swivel-with-snap-size-4-150lb-58f3937f-5c46-4f4b-804a-96dd1e6a4f98-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 13.99,
-    "salePrice": 6.23,
-    "store": "Canadian Tire",
-    "city": "Woodbridge, ON",
-    "branch": "Woodbridge, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/emerillons-a-roulement-et-mousqueton-mustad-taille-4-paq-3-0785077p.html",
-    "sku": "0785077",
-    "availability": "8 En Stock#078-5077-4"
-  },
-  {
-    "title": "Pantoufles à carreaux Outbound pour dames",
-    "image": "https://media-www.canadiantire.ca/product/playing/footwear-apparel/winter-footwear-apparel/1873626/women-s-plaid-slipper-6-a5725c7e-c1ae-410d-a213-61984bf8c6c1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 39.99,
-    "salePrice": 12.93,
-    "store": "Canadian Tire",
-    "city": "Woodbridge, ON",
-    "branch": "Woodbridge, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/pantoufles-a-carreaux-outbound-pour-dames-1873626p.html",
-    "sku": "1873626",
-    "availability": ""
-  },
-  {
-    "title": "Masques antipoussière jetables réglables Honeywell, blanc, paq. 50",
-    "image": "https://media-www.canadiantire.ca/product/fixing/tools/cutting-measuring/0550071/honeywell-dust-masks-50-pack-404726eb-e630-4aed-8201-234549c8e6a5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 24.99,
-    "salePrice": 7.93,
-    "store": "Canadian Tire",
-    "city": "Woodbridge, ON",
-    "branch": "Woodbridge, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/masques-antipoussiere-jetables-reglables-honeywell-blanc-paq-50-0550071p.html",
-    "sku": "0550071",
-    "availability": "Il n’en reste que 3 #055-0071-0"
   },
   {
     "title": "Adaptateur Hopkins avec test DEL, rond 6 fils à plat 4 fils",
@@ -765,7 +837,7 @@
     "branch": "Woodbridge, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/ballon-en-aluminium-satine-rond-et-etoiles-happy-new-year-or-noir-30-po-gonflement-a-l-helium-et-ruban-inclus-pour-veille-du-jour-de-l-an-8431628p.html",
     "sku": "8431628",
-    "availability": ""
+    "availability": "Il n’en reste que 7 #843-1628-6"
   },
   {
     "title": "Planche à roulettes fingerboard Hot WheelsMD Série de collection avec chaussures et voiture, choix de styles, 5 ans et plus",
@@ -789,7 +861,7 @@
     "branch": "Woodbridge, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/porte-serviettes-vertical-en-metal-umbra-squire-pour-comptoir-de-cuisine-table-a-manger-noir-1422775p.html",
     "sku": "1422775",
-    "availability": "Il n’en reste que 7 #142-2775-6"
+    "availability": "Il n’en reste que 3 #142-2775-6"
   },
   {
     "title": "Bottes d'hiver isolées en cuir imperméables antidérapantes Woods Whistler pour femmes, miel",
@@ -867,7 +939,7 @@
     "title": "Ustensiles pour petit déjeuner Napoleon avec 4 découpe-oeufs, spatule et hachoir",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking-accessories/0852399/napoleon-breakfast-set-4ba5af30-f92f-4073-800a-098d94aa7d82-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 84.99,
-    "salePrice": 34.93,
+    "salePrice": 24.93,
     "store": "Canadian Tire",
     "city": "Woodbridge, ON",
     "branch": "Woodbridge, ON",
@@ -936,66 +1008,6 @@
     "availability": "Il n’en reste que 5 #050-9986-0"
   },
   {
-    "title": "Pavillon de plafond Atron Electro Industries LA618, chrome, 5 po",
-    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/rough-electrical/0523575/chrome-canopy-f8597991-eb9a-4ee6-a430-d3530416555f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 4.29,
-    "salePrice": 0.49,
-    "store": "Canadian Tire",
-    "city": "Woodbridge, ON",
-    "branch": "Woodbridge, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/pavillon-de-plafond-atron-electro-industries-la618-chrome-5-po-0523575p.html",
-    "sku": "0523575",
-    "availability": "Il n’en reste que 4 #052-3575-0"
-  },
-  {
-    "title": "Collier pour animal de compagnie Perri's, motif guépard",
-    "image": "https://media-www.canadiantire.ca/product/living/pet-care/pet-accessories/1427573/perri-s-pet-collar-cheetah-small-05b8926d-32df-4b25-aa88-c0d02a982350-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 14.99,
-    "salePrice": 3.93,
-    "store": "Canadian Tire",
-    "city": "Woodbridge, ON",
-    "branch": "Woodbridge, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/collier-pour-animal-de-compagnie-perri-s-motif-guepard-1427573p.html",
-    "sku": "1427573",
-    "availability": ""
-  },
-  {
-    "title": "PopSocket – Support extensible pour téléphones intelligents et tablettes",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-electronics/0356179/popsocket-hypnotize-56b7af34-66a9-4edb-bad1-9add7a3b58d3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 12.99,
-    "salePrice": 3.93,
-    "store": "Canadian Tire",
-    "city": "Woodbridge, ON",
-    "branch": "Woodbridge, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/popsocket-support-extensible-pour-telephones-intelligents-et-tablettes-0356175p.html",
-    "sku": "0356175",
-    "availability": ""
-  },
-  {
-    "title": "Plombs rotatifs Water Gremlin Dipsey Pro Pack, paq. 27",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/1784376/water-gremlin-dipsey-swivel-sinker-pro-pack-27-pieces-d85bac8a-f6e2-479f-b48a-23abeadd38a6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 16.99,
-    "salePrice": 7.93,
-    "store": "Canadian Tire",
-    "city": "Woodbridge, ON",
-    "branch": "Woodbridge, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/plombs-rotatifs-water-gremlin-dipsey-pro-pack-paq-27-1784376p.html",
-    "sku": "1784376",
-    "availability": "Il n’en reste que 1 #178-4376-0"
-  },
-  {
-    "title": "Diviseur vidéo numérique 4 voies RCA, doré",
-    "image": "https://media-www.canadiantire.ca/product/living/electronics/home-entertainment-accessories/0452823/4-way-digital-video-splitter-d3f5c13c-1798-40a9-9e3e-be6d51176e3f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 22.99,
-    "salePrice": 5.93,
-    "store": "Canadian Tire",
-    "city": "Woodbridge, ON",
-    "branch": "Woodbridge, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/diviseur-video-numerique-4-voies-rca-dore-0452823p.html",
-    "sku": "0452823",
-    "availability": "10 En Stock#045-2823-4"
-  },
-  {
     "title": "Housse de siège de luxe universelle pour VTT Classic Accessories QuadGear, camouflage",
     "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/powersport/0278106/seat-cover-camo-a2dd800c-9b87-4f62-aa9e-9bb5b11a5355-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 74.99,
@@ -1020,18 +1032,6 @@
     "availability": "Il n’en reste que 3 #047-5752-0"
   },
   {
-    "title": "Ballon rond en aluminium satiné Diva Glitter On L.O.L. Surprise!, bleu/rose, 18 po, gonflage à l'hélium et ruban inclus, pour fête d'anniversaire",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8534097/lol-surprise-together-4-eva-18c-hx-balloon-6c8e5004-0e29-4779-bcfd-a7d33dfd934e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 6.99,
-    "salePrice": 1.79,
-    "store": "Canadian Tire",
-    "city": "Woodbridge, ON",
-    "branch": "Woodbridge, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/ballon-rond-en-aluminium-satine-diva-glitter-on-l-o-l-surprise-bleu-rose-18-po-gonflage-a-l-helium-et-ruban-inclus-pour-fete-d-anniversaire-8534097p.html",
-    "sku": "8534097",
-    "availability": "Il n’en reste que 1 #853-4097-6"
-  },
-  {
     "title": "Clapet antiretour pour pompe d'eaux d'égout Burcam 450457, 2 po",
     "image": "https://media-www.canadiantire.ca/product/fixing/plumbing/water-management/0623546/sewage-pump-check-valve-2--5d0d1647-1faa-42ba-8f71-85a3404273b1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 49.99,
@@ -1041,7 +1041,7 @@
     "branch": "Woodbridge, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/clapet-antiretour-pour-pompe-d-eaux-d-egout-burcam-450457-2-po-0623546p.html",
     "sku": "0623546",
-    "availability": "Il n’en reste que 5 #062-3546-6"
+    "availability": "Il n’en reste que 2 #062-3546-6"
   },
   {
     "title": "Crochets utilitaires pour mur à lamelles/rails Mastercraft, paq. 4",
@@ -1090,78 +1090,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/accessoires-pour-panneau-perfore-type-a-1427617p.html",
     "sku": "1427617",
     "availability": "Il n’en reste que 1 #142-7617-4"
-  },
-  {
-    "title": "Collection de figurines Mattel, 4 ans et plus",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/toys-games/0509488/masters-of-the-universe-animated-core-asst-7539d0f4-2e86-4b53-aa6d-aa8202eee79f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 29.99,
-    "salePrice": 10.93,
-    "store": "Canadian Tire",
-    "city": "Woodbridge, ON",
-    "branch": "Woodbridge, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/collection-de-figurines-mattel-4-ans-et-plus-0509488p.html",
-    "sku": "0509488",
-    "availability": "Il n’en reste que 1 #050-9488-6"
-  },
-  {
-    "title": "Poignées en métal en forme d’arc Peerless, bronze avec cuivre, 3 po, paq. 2",
-    "image": "https://media-www.canadiantire.ca/product/living/home-decor/decor-accents/0467408/peerless-3-arch-pull-2pk-bronze-with-copper-highlights-e7dff44f-61c0-4cb6-a774-c1cf51fd8211-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 8.99,
-    "salePrice": 3.93,
-    "store": "Canadian Tire",
-    "city": "Woodbridge, ON",
-    "branch": "Woodbridge, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/poignees-en-metal-en-forme-d-arc-peerless-bronze-avec-cuivre-3-po-paq-2-0467408p.html",
-    "sku": "0467408",
-    "availability": "Il n’en reste que 1 #046-7408-2"
-  },
-  {
-    "title": "Bottes d'hiver Outbond Dave pour hommes",
-    "image": "https://media-www.canadiantire.ca/product/playing/footwear-apparel/winter-footwear-apparel/0873500/outbound-dave-winter-boot-m7-78ffc309-049a-44ed-9bf1-46baac668984-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 119.99,
-    "salePrice": 44.93,
-    "store": "Canadian Tire",
-    "city": "Woodbridge, ON",
-    "branch": "Woodbridge, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/bottes-d-hiver-outbond-dave-pour-hommes-0873500p.html",
-    "sku": "0873500",
-    "availability": ""
-  },
-  {
-    "title": "Cuiller pour pêche blanche Northland Glo-Shot, 1/8 oz",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/ice-fishing/0777875/northland-glo-shot-spoon-uv-glo-perch-1-8-oz-50b47984-e8f5-47ee-a756-fa8267460c48-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 9.99,
-    "salePrice": 4.43,
-    "store": "Canadian Tire",
-    "city": "Woodbridge, ON",
-    "branch": "Woodbridge, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/cuiller-pour-peche-blanche-northland-glo-shot-1-8-oz-0777875p.html",
-    "sku": "0777875",
-    "availability": ""
-  },
-  {
-    "title": "Boîte de rangement The Home Edit par iDESIGN, petit",
-    "image": "https://media-www.canadiantire.ca/product/living/home-organization/storage-containers/1429629/the-home-edit-by-idesign-small-bin-organizer-onyx-5ab7ffc8-0c49-4532-840f-8f75aaa8bd9b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 9.49,
-    "salePrice": 2.93,
-    "store": "Canadian Tire",
-    "city": "Woodbridge, ON",
-    "branch": "Woodbridge, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/boite-de-rangement-the-home-edit-par-idesign-petit-1429628p.html",
-    "sku": "1429628",
-    "availability": ""
-  },
-  {
-    "title": "Leurre pour pêche blanche Rapala Jigging Rap, taille 3",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/ice-fishing/0777892/rapala-jigging-rap-live-goby-03-b5e03ae1-0d91-4ff3-ad74-03f020bea3ba-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 9.79,
-    "salePrice": 4.43,
-    "store": "Canadian Tire",
-    "city": "Woodbridge, ON",
-    "branch": "Woodbridge, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/leurre-pour-peche-blanche-rapala-jigging-rap-taille-3-0777890p.html",
-    "sku": "0777890",
-    "availability": ""
   },
   {
     "title": "Trousse d'installation de bougie d'allumage de tondeuse Atlas conçue pour réparer les fils de connexion des bougies d'allumage, paq. 2",

@@ -1,129 +1,9 @@
 [
   {
-    "title": "Distributeur d'eau chaude de MASTER Chef avec poignée, noir, 3,5 L",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430196/master-chef-hot-water-dispenser-9e2e8ff7-2445-4f25-9bde-ac042fe07b54-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 99.99,
-    "salePrice": 49.93,
-    "store": "Canadian Tire",
-    "city": "Etobicoke, Albion & Kipling, ON",
-    "branch": "Etobicoke, Albion & Kipling, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/distributeur-d-eau-chaude-de-master-chef-avec-poignee-noir-3-5-l-0430196p.html",
-    "sku": "0430196",
-    "availability": "Il n’en reste que 2 #043-0196-2"
-  },
-  {
-    "title": "Cintres pivotants compacts en velours Type A avec barre à pantalon, couleurs variées, paq. 40",
-    "image": "https://media-www.canadiantire.ca/product/living/home-organization/closet-organization/0688308/type-a-velvet-suit-hanger-black-10pk-4afb3f73-0449-46d6-975c-369ae2760de2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 32.99,
-    "salePrice": 12.93,
-    "store": "Canadian Tire",
-    "city": "Etobicoke, Albion & Kipling, ON",
-    "branch": "Etobicoke, Albion & Kipling, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/cintres-pivotants-compacts-en-velours-type-a-avec-barre-a-pantalon-couleurs-variees-paq-40-0688307p.html",
-    "sku": "0688307",
-    "availability": ""
-  },
-  {
-    "title": "Fauteuil de salle à manger de jardin/d'extérieur en osier CANVAS Jasper, toute saison, paq. 2",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/1880272/canvas-jasper-dining-chair-2pk-2a5479fd-5f27-4f3d-85e2-8b4b9fa230c9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 499.99,
-    "salePrice": 199.93,
-    "store": "Canadian Tire",
-    "city": "Etobicoke, Albion & Kipling, ON",
-    "branch": "Etobicoke, Albion & Kipling, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/fauteuil-de-salle-a-manger-de-jardin-d-exterieur-en-osier-canvas-jasper-toute-saison-paq-2-1880272p.html",
-    "sku": "1880272",
-    "availability": "Il n’en reste que 1 #188-0272-6"
-  },
-  {
-    "title": "Ampoules à DEL à intensité variable à culot E12 NOMA B10, 2700K, 350 lumens, blanc chaud, 40 W, paq. 2",
-    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/light-bulbs/0529347/noma-2-pack-40w-e12-soft-white-led-lightbulbs-2abc2edf-7b69-449d-b49f-8024c6332e19-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 12.99,
-    "salePrice": 1.93,
-    "store": "Canadian Tire",
-    "city": "Etobicoke, Albion & Kipling, ON",
-    "branch": "Etobicoke, Albion & Kipling, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/ampoules-a-del-a-intensite-variable-a-culot-e12-noma-b10-2700k-350-lumens-blanc-chaud-40-w-paq-2-0529347p.html",
-    "sku": "0529347",
-    "availability": "247 En Stock#052-9347-8"
-  },
-  {
-    "title": "Vélo hybride Raleigh Sundance, 700C, cuivré",
-    "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycles/0711982/raleigh-sundance-women-s-hybrid-bike-700c-3bb8d501-e6aa-426e-8174-061f74e98473-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 539.99,
-    "salePrice": 249.93,
-    "store": "Canadian Tire",
-    "city": "Etobicoke, Albion & Kipling, ON",
-    "branch": "Etobicoke, Albion & Kipling, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/velo-hybride-raleigh-sundance-700c-cuivre-0711982p.html",
-    "sku": "0711982",
-    "availability": "Il n’en reste que 1 #071-1982-6"
-  },
-  {
-    "title": "Chaises de salle à manger rembourrées tête de clou avec pattes en bois massif CANVAS Regent, paq. 2, gris",
-    "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/1680087/canvas-regent-chair-2-pack-d7669315-d5c9-4944-9fa5-af38fa9fb225-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 189.99,
-    "salePrice": 69.93,
-    "store": "Canadian Tire",
-    "city": "Etobicoke, Albion & Kipling, ON",
-    "branch": "Etobicoke, Albion & Kipling, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/chaises-de-salle-a-manger-rembourrees-tete-de-clou-avec-pattes-en-bois-massif-canvas-regent-paq-2-gris-1680087p.html",
-    "sku": "1680087",
-    "availability": "Il n’en reste que 1 #168-0087-6"
-  },
-  {
-    "title": "Foyer électrique CANVAS Marseille, 54 po, 1 400 W, comprend une télécommande, blanc",
-    "image": "https://media-www.canadiantire.ca/product/living/home-decor/electric-fireplaces/0643176/canvas-marseille-fireplace-fedce335-a386-471e-87b0-b3ad50097466-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 699.99,
-    "salePrice": 349.93,
-    "store": "Canadian Tire",
-    "city": "Etobicoke, Albion & Kipling, ON",
-    "branch": "Etobicoke, Albion & Kipling, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/foyer-electrique-canvas-marseille-54-po-1-400-w-comprend-une-telecommande-blanc-0643176p.html",
-    "sku": "0643176",
-    "availability": "Il n’en reste que 1 #064-3176-2"
-  },
-  {
-    "title": "Meuble de rangement d'angle ouvert à 9 cubes For Living, blanc",
-    "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/1680221/for-living-corner-9-cube-organizer-7b7dc5f9-de00-4529-ab60-96254faa2854-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 159.99,
-    "salePrice": 79.93,
-    "store": "Canadian Tire",
-    "city": "Etobicoke, Albion & Kipling, ON",
-    "branch": "Etobicoke, Albion & Kipling, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/meuble-de-rangement-d-angle-ouvert-a-9-cubes-for-living-blanc-1680221p.html",
-    "sku": "1680221",
-    "availability": "Il n’en reste que 2 #168-0221-6"
-  },
-  {
-    "title": "Sécheuse extensible intérieur/extérieur Type A",
-    "image": "https://media-www.canadiantire.ca/product/living/home-organization/laundry/1429642/type-a-indoor-outdoor-dryer-4f8c50be-fec9-479f-b4f9-efc08ac97fad-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 79.99,
-    "salePrice": 39.93,
-    "store": "Canadian Tire",
-    "city": "Etobicoke, Albion & Kipling, ON",
-    "branch": "Etobicoke, Albion & Kipling, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/secheuse-extensible-interieur-exterieur-type-a-1429642p.html",
-    "sku": "1429642",
-    "availability": "Il n’en reste que 5 #142-9642-0"
-  },
-  {
-    "title": "Service de vaisselle en grès à rebord orné CANVAS Gatestone, blanc, paq. 12",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/dining-and-entertaining/2421124/canvas-12-pc-ornate-rim-dinnerware-set-ec677528-47a1-4eea-a43d-63735afa1b7e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 99.99,
-    "salePrice": 41.97,
-    "store": "Canadian Tire",
-    "city": "Etobicoke, Albion & Kipling, ON",
-    "branch": "Etobicoke, Albion & Kipling, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/service-de-vaisselle-en-gres-a-rebord-orne-canvas-gatestone-blanc-paq-12-2421124p.html",
-    "sku": "2421124",
-    "availability": "Il n’en reste que 5 #242-1124-4"
-  },
-  {
     "title": "Jouet aquatique gonflable Soak N' Splash & Slide avec gicleur, bleu, 16 pi, 5 ans et plus, pour plage/piscine",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/seasonal-toys/0504211/soak-n-splash-water-slide-16--6fa00059-6643-4304-ad97-12a017f202a2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 14.99,
-    "salePrice": 6.93,
+    "salePrice": 4.93,
     "store": "Canadian Tire",
     "city": "Etobicoke, Albion & Kipling, ON",
     "branch": "Etobicoke, Albion & Kipling, ON",
@@ -144,10 +24,22 @@
     "availability": "Il n’en reste que 3 #064-4017-6"
   },
   {
+    "title": "Parasol de plage réglable Slumbertrek Pack Umbrella avec vis de sable et sac de transport",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/tents-shelters/0765950/slumbertrek-pack-umbrella-e8ec8d94-c365-4e47-afeb-47db658e5896-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 32.99,
+    "salePrice": 14.93,
+    "store": "Canadian Tire",
+    "city": "Etobicoke, Albion & Kipling, ON",
+    "branch": "Etobicoke, Albion & Kipling, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/parasol-de-plage-reglable-slumbertrek-pack-umbrella-avec-vis-de-sable-et-sac-de-transport-0765950p.html",
+    "sku": "0765950",
+    "availability": "Il n’en reste que 3 #076-5950-8"
+  },
+  {
     "title": "Ensemble de nettoyants automobiles Armor All, paq. 16",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-chemicals/0397080/armor-all-car-wash-packs-16ct-8ed7ef02-e539-49d9-8a49-0232d41a7968-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 17.99,
-    "salePrice": 8.93,
+    "salePrice": 6.93,
     "store": "Canadian Tire",
     "city": "Etobicoke, Albion & Kipling, ON",
     "branch": "Etobicoke, Albion & Kipling, ON",
@@ -159,7 +51,7 @@
     "title": "Ensemble de détente CANVAS Meridian, filet, 4 pièces",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/1881374/canvas-meridian-mesh-conversation-set-850cea28-97ab-4a8f-b6df-b3de52a806d5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 799.99,
-    "salePrice": 349.93,
+    "salePrice": 299.93,
     "store": "Canadian Tire",
     "city": "Etobicoke, Albion & Kipling, ON",
     "branch": "Etobicoke, Albion & Kipling, ON",
@@ -177,19 +69,67 @@
     "branch": "Etobicoke, Albion & Kipling, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/casque-de-velo-supercycle-pursuit-jeune-violet-jaune-0730541p.html",
     "sku": "0730541",
-    "availability": "Il n’en reste que 6 #073-0541-8"
+    "availability": "Il n’en reste que 5 #073-0541-8"
+  },
+  {
+    "title": "Coussin de banc de terrasse CANVAS Summer Palm, résistant à la décoloration, à l'eau et aux taches",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/1880348/canvas-summer-palm-bench-cushion-b3811d99-0623-43b4-a659-fc982d9a2c8b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 55.99,
+    "salePrice": 24.93,
+    "store": "Canadian Tire",
+    "city": "Etobicoke, Albion & Kipling, ON",
+    "branch": "Etobicoke, Albion & Kipling, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/coussin-de-banc-de-terrasse-canvas-summer-palm-resistant-a-la-decoloration-a-l-eau-et-aux-taches-1880348p.html",
+    "sku": "1880348",
+    "availability": "11 En Stock#188-0348-8"
+  },
+  {
+    "title": "Ventilateur de table/bureau portatif compact For Living, 2 vitesses, blanc, 10 po",
+    "image": "https://media-www.canadiantire.ca/product/fixing/home-environment/summer-climate-control/0435673/for-living-10-table-fan-72e559f7-a8dd-420d-af4b-00cc39bbfc04-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 22.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Etobicoke, Albion & Kipling, ON",
+    "branch": "Etobicoke, Albion & Kipling, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ventilateur-de-table-bureau-portatif-compact-for-living-2-vitesses-blanc-10-po-0435673p.html",
+    "sku": "0435673",
+    "availability": "Il n’en reste que 2 #043-5673-6"
   },
   {
     "title": "Sac d'aliments pour chiens à fermeture à enrouler Woods PAW-THORN",
     "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-furniture/0766409/woods-o-hara-camp-pad-eaf0561c-b507-479f-8a74-585ab3804103-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 23.99,
-    "salePrice": 8.93,
+    "salePrice": 7.93,
     "store": "Canadian Tire",
     "city": "Etobicoke, Albion & Kipling, ON",
     "branch": "Etobicoke, Albion & Kipling, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/sac-d-aliments-pour-chiens-a-fermeture-a-enrouler-woods-paw-thorn-0766427p.html",
     "sku": "0766427",
     "availability": "Il n’en reste que 2 #076-6427-0"
+  },
+  {
+    "title": "Coussin de siège CANVAS, résistant à l'eau et à la décoloration, rouge",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0882514/canvas-red-seat-pad-8422ec7e-8007-432b-998f-e751823e04fd-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 26.99,
+    "salePrice": 12.93,
+    "store": "Canadian Tire",
+    "city": "Etobicoke, Albion & Kipling, ON",
+    "branch": "Etobicoke, Albion & Kipling, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/coussin-de-siege-canvas-resistant-a-l-eau-et-a-la-decoloration-rouge-0882514p.html",
+    "sku": "0882514",
+    "availability": "Il n’en reste que 3 #088-2514-8"
+  },
+  {
+    "title": "Pompe à air électrique Coleman QuickPump, 120 V, rechargeable, gonflage et dégonflage",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-furniture/0760214/coleman-120v-quickpump-bc47206a-86db-476c-b910-64be02da84ed-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 63.99,
+    "salePrice": 29.93,
+    "store": "Canadian Tire",
+    "city": "Etobicoke, Albion & Kipling, ON",
+    "branch": "Etobicoke, Albion & Kipling, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/pompe-a-air-electrique-coleman-quickpump-120-v-rechargeable-gonflage-et-degonflage-0760214p.html",
+    "sku": "0760214",
+    "availability": "Il n’en reste que 5 #076-0214-2"
   },
   {
     "title": "Foyer avec manteau For Living",
@@ -204,6 +144,18 @@
     "availability": "Il n’en reste que 1 #064-4024-8"
   },
   {
+    "title": "Jeu de lumières de parasol de jardin For Living, multicolore",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-lighting/0525926/for-living-multicolour-umbrella-garden-string-lights-3cfaed3d-e1b2-4291-ab88-238bdaf2e71a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 29.99,
+    "salePrice": 7.93,
+    "store": "Canadian Tire",
+    "city": "Etobicoke, Albion & Kipling, ON",
+    "branch": "Etobicoke, Albion & Kipling, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/jeu-de-lumieres-de-parasol-de-jardin-for-living-multicolore-0525926p.html",
+    "sku": "0525926",
+    "availability": "Il n’en reste que 2 #052-5926-4"
+  },
+  {
     "title": "Canne en chocolat blanc Hershey's Cookies 'n' Creme Kisses, 50 g, friandises de Pâques",
     "image": "https://media-www.canadiantire.ca/product/living/food-drink/seasonal-confectionery/1519668/hersey-easter-cookies-n-creme-cane-50g-d74122ce-8110-43d5-b533-941542510637-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 3.79,
@@ -214,6 +166,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/canne-en-chocolat-blanc-hershey-s-cookies-n-creme-kisses-50-g-friandises-de-paques-1519668p.html",
     "sku": "1519668",
     "availability": ""
+  },
+  {
+    "title": "Dôme d'escalade métallique Plum Phobos, 108 x 108 x 53 po, 3 an et plus, violet/bleu",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/backyard-amusement/0847235/plum-climbing-dome-bc803342-1a3d-41a1-a0eb-3a8f26f16ea5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 299.99,
+    "salePrice": 149.93,
+    "store": "Canadian Tire",
+    "city": "Etobicoke, Albion & Kipling, ON",
+    "branch": "Etobicoke, Albion & Kipling, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/dome-d-escalade-metallique-plum-phobos-108-x-108-x-53-po-3-an-et-plus-violet-bleu-0847235p.html",
+    "sku": "0847235",
+    "availability": "Il n’en reste que 2 #084-7235-0"
   },
   {
     "title": "Plombs amovibles ronds à fente",
@@ -237,7 +201,31 @@
     "branch": "Etobicoke, Albion & Kipling, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/secateur-a-enclume-yardworks-0596605p.html",
     "sku": "0596605",
-    "availability": "Il n’en reste que 7 #059-6605-8"
+    "availability": "Il n’en reste que 6 #059-6605-8"
+  },
+  {
+    "title": "Housse de barbecue Vermont Castings pour barbecues au charbon Kamado",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking-accessories/0852366/vermont-castings-charcoal-grill-cover-a749c682-d36f-4f8b-a5b5-2dcd524089e3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 99.99,
+    "salePrice": 49.93,
+    "store": "Canadian Tire",
+    "city": "Etobicoke, Albion & Kipling, ON",
+    "branch": "Etobicoke, Albion & Kipling, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/housse-de-barbecue-vermont-castings-pour-barbecues-au-charbon-kamado-0852366p.html",
+    "sku": "0852366",
+    "availability": "Il n’en reste que 1 #085-2366-6"
+  },
+  {
+    "title": "Lampe tulipe à énergie solaire sur piquet For Living, choix varié",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/1590077/for-living-solar-powered-tulip-stake-assorted-67716efc-ba0f-46c6-ae49-281197afc2ad-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 7.93,
+    "store": "Canadian Tire",
+    "city": "Etobicoke, Albion & Kipling, ON",
+    "branch": "Etobicoke, Albion & Kipling, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/lampe-tulipe-a-energie-solaire-sur-piquet-for-living-choix-varie-1590077p.html",
+    "sku": "1590077",
+    "availability": "12 En Stock#159-0077-2"
   },
   {
     "title": "Lapins de Pâques aux cerises Twizzlers, 200 g, 105 pièces",
@@ -279,13 +267,13 @@
     "title": "Sacs réutilisables pour barbecue COOKINA PAKS, 100 % antiadhésif, paq. 2",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking-accessories/0852238/cookina-bbq-pocket-96916823-dc93-4f53-b17c-ff70804f3bfe-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 14.99,
-    "salePrice": 3.43,
+    "salePrice": 1.93,
     "store": "Canadian Tire",
     "city": "Etobicoke, Albion & Kipling, ON",
     "branch": "Etobicoke, Albion & Kipling, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/sacs-reutilisables-pour-barbecue-cookina-paks-100-antiadhesif-paq-2-0852238p.html",
     "sku": "0852238",
-    "availability": "109 En Stock#085-2238-2"
+    "availability": "107 En Stock#085-2238-2"
   },
   {
     "title": "ProForm 225 CSX - Vélo stationnaire d'intérieur adapté à la technologie iFit",
@@ -298,6 +286,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/proform-225-csx-velo-stationnaire-d-interieur-adapte-a-la-technologie-ifit-1840969p.html",
     "sku": "1840969",
     "availability": "Il n’en reste que 1 #184-0969-8"
+  },
+  {
+    "title": "Bateau gonflable Outbound, 2 personnes, 6 ans et plus",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-water-fun/0798313/2-person-inflatable-boat-set-7b11aa03-fddd-4477-ada1-c5f82db3059c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 49.99,
+    "salePrice": 24.93,
+    "store": "Canadian Tire",
+    "city": "Etobicoke, Albion & Kipling, ON",
+    "branch": "Etobicoke, Albion & Kipling, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/bateau-gonflable-outbound-2-personnes-6-ans-et-plus-0798313p.html",
+    "sku": "0798313",
+    "availability": "Il n’en reste que 2 #079-8313-2"
   },
   {
     "title": "Cuiller de série originale Len Thompson, reflet blanc / bleu",
@@ -360,6 +360,42 @@
     "availability": ""
   },
   {
+    "title": "Piquets en filet For Living, colorés, choix variés",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/1592462/for-living-colourful-mesh-stakes-assorted-52832330-5d10-4a22-ac2e-0c32422764c7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 7.93,
+    "store": "Canadian Tire",
+    "city": "Etobicoke, Albion & Kipling, ON",
+    "branch": "Etobicoke, Albion & Kipling, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/piquets-en-filet-for-living-colores-choix-varies-1592462p.html",
+    "sku": "1592462",
+    "availability": "Il n’en reste que 5 #159-2462-2"
+  },
+  {
+    "title": "Haut antifrottements Outbound à manches longues, glissière intégrale, protection UV, dames",
+    "image": "https://media-www.canadiantire.ca/product/playing/footwear-apparel/summer-footwear-apparel/1873368/ooutbound-upf-full-zip-long-sleeve-rashguard-women-size-s-80411dc9-f90c-4141-8442-4e825f646b82-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 32.99,
+    "salePrice": 12.93,
+    "store": "Canadian Tire",
+    "city": "Etobicoke, Albion & Kipling, ON",
+    "branch": "Etobicoke, Albion & Kipling, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/haut-antifrottements-outbound-a-manches-longues-glissiere-integrale-protection-uv-dames-1873368p.html",
+    "sku": "1873368",
+    "availability": ""
+  },
+  {
+    "title": "Décoration de jardin For Living, maison de gnomes enchantée",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0597870/for-living-enchanted-gnome-cabin-kit-05083210-f13f-41f8-b2b1-c7d784eb461e.png?im=whresize&wid=200&hei=200",
+    "price": 37.99,
+    "salePrice": 14.93,
+    "store": "Canadian Tire",
+    "city": "Etobicoke, Albion & Kipling, ON",
+    "branch": "Etobicoke, Albion & Kipling, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/decoration-de-jardin-for-living-maison-de-gnomes-enchantee-0597870p.html",
+    "sku": "0597870",
+    "availability": "Il n’en reste que 2 #059-7870-8"
+  },
+  {
     "title": "Décoration de salle d'anniversaire, 40 ans, célébration étincelante, paq. 10",
     "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8420282/40th-birthday-room-decorat-kit-10pc-sparkling-celeb-964f7a70-41f2-43c3-ae64-70a295e1bf00-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 14.99,
@@ -372,6 +408,18 @@
     "availability": "Il n’en reste que 2 #842-0282-4"
   },
   {
+    "title": "Chaise longue gonflable Fluid Roll'N Float, 152,4 x 76,2 cm (60 x 36 po), violet",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-fun/0813955/fluid-roll-n-float-pool-lounge-85af6e7e-35a6-4d5c-871d-9d4bd044e510-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 49.99,
+    "salePrice": 19.93,
+    "store": "Canadian Tire",
+    "city": "Etobicoke, Albion & Kipling, ON",
+    "branch": "Etobicoke, Albion & Kipling, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/chaise-longue-gonflable-fluid-roll-n-float-152-4-x-76-2-cm-60-x-36-po-violet-0813955p.html",
+    "sku": "0813955",
+    "availability": "Il n’en reste que 1 #081-3955-6"
+  },
+  {
     "title": "Bandes de rechange repositionnables réglables Command, sans dommage pour la surface, paq. 18",
     "image": "https://media-www.canadiantire.ca/product/fixing/hardware/general-hardware/0612047/command-adjustables-repositionable-refill-strips-18-pack-a22cf16c-72b2-43a1-9a61-34030d359bfa-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 7.99,
@@ -382,6 +430,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/bandes-de-rechange-repositionnables-reglables-command-sans-dommage-pour-la-surface-paq-18-0612047p.html",
     "sku": "0612047",
     "availability": "Il n’en reste que 3 #061-2047-2"
+  },
+  {
+    "title": "Guirlande de lumières solaires à DEL CANVAS Springhill pour l'intérieur et l'extérieur, blanc chaud, 10,5 pi",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-lighting/0521616/canvas-springhill-string-lights-ae879125-62ed-4b33-96ca-9a1fcc1f2c6f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 27.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Etobicoke, Albion & Kipling, ON",
+    "branch": "Etobicoke, Albion & Kipling, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/guirlande-de-lumieres-solaires-a-del-canvas-springhill-pour-l-interieur-et-l-exterieur-blanc-chaud-10-5-pi-0521616p.html",
+    "sku": "0521616",
+    "availability": "Il n’en reste que 5 #052-1616-6"
   },
   {
     "title": "La station de chargement sans fil avec tapis de 10 W de Bluehive est compatible avec la plupart des appareils compatibles Qi",
@@ -408,6 +468,30 @@
     "availability": "Il n’en reste que 3 #084-0499-4"
   },
   {
+    "title": "Lanterne à bougie CANVAS avec DEL blanc chaud, noir mat",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/1592479/canvas-matte-black-candle-lantern-c545b4e9-58e2-41dd-bdf5-dcdae85670f0-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 29.99,
+    "salePrice": 14.93,
+    "store": "Canadian Tire",
+    "city": "Etobicoke, Albion & Kipling, ON",
+    "branch": "Etobicoke, Albion & Kipling, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/lanterne-a-bougie-canvas-avec-del-blanc-chaud-noir-mat-1592479p.html",
+    "sku": "1592479",
+    "availability": "Il n’en reste que 2 #159-2479-4"
+  },
+  {
+    "title": "Haut-parleurs coaxiaux d’auto JVC CS-DR621 2 voies, 6 1/5 po",
+    "image": "https://media-www.canadiantire.ca/product/automotive/electronics/auto-electronics/0354090/jvc-cs-dr621-6-speaker-a81ffc8e-197d-428c-a02c-028e1a37239e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 99.99,
+    "salePrice": 48.93,
+    "store": "Canadian Tire",
+    "city": "Etobicoke, Albion & Kipling, ON",
+    "branch": "Etobicoke, Albion & Kipling, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/haut-parleurs-coaxiaux-d-auto-jvc-cs-dr621-2-voies-6-1-5-po-0354090p.html",
+    "sku": "0354090",
+    "availability": "Il n’en reste que 1 #035-4090-8"
+  },
+  {
     "title": "Sachets nettoyants pour tapis Hoover, nett.prof/animaux, paq. 14",
     "image": "https://media-www.canadiantire.ca/product/living/cleaning/household-cleaning-solutions/1531872/hoover-oxy-permanent-stain-removal-clean-pack-14-count-6483f862-06c3-4f95-8f7e-80ecf7f85294-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 19.99,
@@ -430,6 +514,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/bouche-toit-incolore-rust-oleum-leakseal-interieur-exterieur-scellant-resistant-a-l-eau-et-aux-intemperies-3-78-l-0641571p.html",
     "sku": "0641571",
     "availability": "Il n’en reste que 1 #064-1571-2"
+  },
+  {
+    "title": "Applique d'extérieur NOMA Hemingway, 19,2 po, noir mat",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/lighting/1522791/noma-hemingway-19-2a-outdoor-wall-sconce-e06c12ad-b641-4a75-aaae-a210989c086d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 109.99,
+    "salePrice": 49.93,
+    "store": "Canadian Tire",
+    "city": "Etobicoke, Albion & Kipling, ON",
+    "branch": "Etobicoke, Albion & Kipling, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/applique-d-exterieur-noma-hemingway-19-2-po-noir-mat-1522791p.html",
+    "sku": "1522791",
+    "availability": "Il n’en reste que 2 #152-2791-2"
   },
   {
     "title": "Gobelet de retouche de peinture Premier",
@@ -456,6 +552,18 @@
     "availability": ""
   },
   {
+    "title": "Fontaine de jardin d’extérieur prince grenouille For Living",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/1590071/for-living-frog-prince-fountain-05597899-04be-49ac-b62d-723ad57fbb1f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 99.99,
+    "salePrice": 49.93,
+    "store": "Canadian Tire",
+    "city": "Etobicoke, Albion & Kipling, ON",
+    "branch": "Etobicoke, Albion & Kipling, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/fontaine-de-jardin-d-exterieur-prince-grenouille-for-living-1590071p.html",
+    "sku": "1590071",
+    "availability": "Il n’en reste que 1 #159-0071-4"
+  },
+  {
     "title": "Outil de correspondance des couleurs Swipe par Premier",
     "image": "https://media-www.canadiantire.ca/product/fixing/paint/paint-accessories/0495853/swipe-by-premier-colour-match-tool-aad8521c-81ac-49e2-8d18-d62133b49727-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 59.99,
@@ -478,6 +586,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/poisson-nageur-alose-redwolf-paq-3-0771717p.html",
     "sku": "0771717",
     "availability": ""
+  },
+  {
+    "title": "Ballon en aluminium satiné cadeau d'anniversaire Happy Birthday, multicolore, à pois, 32 po, ruban et gonflage hélium compris, pour fête d'anniversaire",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/party-city-everyday/party-city-balloons-accessories/8551367/satin-paint-dot-bday-supershape-balloon-735ac514-5ec1-4e92-8349-4c258bab65d2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Etobicoke, Albion & Kipling, ON",
+    "branch": "Etobicoke, Albion & Kipling, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ballon-en-aluminium-satine-cadeau-d-anniversaire-happy-birthday-multicolore-a-pois-32-po-ruban-et-gonflage-helium-compris-pour-fete-d-anniversaire-8551367p.html",
+    "sku": "8551367",
+    "availability": "Il n’en reste que 5 #855-1367-8"
   },
   {
     "title": "Table de travail à toupie Mastercraft avec jauge à onglets coulissante",
@@ -528,6 +648,30 @@
     "availability": "Il n’en reste que 3 #854-3122-0"
   },
   {
+    "title": "Échelle robuste de trampoline Plum® 20,5 x 41,3 po",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/backyard-amusement/1840767/plum-trampoline-step-ladder-and-accessory-kit-2d587e5f-e193-4a8c-9361-f6532dbe5e06-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 89.99,
+    "salePrice": 39.93,
+    "store": "Canadian Tire",
+    "city": "Etobicoke, Albion & Kipling, ON",
+    "branch": "Etobicoke, Albion & Kipling, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/echelle-robuste-de-trampoline-plum-20-5-x-41-3-po-1840767p.html",
+    "sku": "1840767",
+    "availability": "Il n’en reste que 4 #184-0767-8"
+  },
+  {
+    "title": "Lunettes de natation Speedo Kids Glide Print",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-fun/0810444/speedo-kids-glide-print-goggles-4333c586-93be-4225-9852-8f589ef1d61c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Etobicoke, Albion & Kipling, ON",
+    "branch": "Etobicoke, Albion & Kipling, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/lunettes-de-natation-speedo-kids-glide-print-0810444p.html",
+    "sku": "0810444",
+    "availability": "Il n’en reste que 3 #081-0444-0"
+  },
+  {
     "title": "Aqua Training Bag - Sac de frappe d'entraînement, 120 lb",
     "image": "https://media-www.canadiantire.ca/product/playing/exercise/exercise-accessories/1841187/aqua-training-bag-heavy-bag-120lbs-blue-1b3eeed5-53dc-4c4a-b26f-1e8a602fe141-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 249.99,
@@ -555,7 +699,7 @@
     "title": "Savon lave-auto moussant céramique et graphène SansZo Si02",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-chemicals/0390850/sanszo-si02-foamer-ceramic-graphene-foaming-soap-5bf4b82b-5855-4cc6-9fc0-dee5234b9504-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 29.99,
-    "salePrice": 13.93,
+    "salePrice": 9.93,
     "store": "Canadian Tire",
     "city": "Etobicoke, Albion & Kipling, ON",
     "branch": "Etobicoke, Albion & Kipling, ON",
@@ -586,6 +730,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/lubrifiant-antigel-de-pompe-pump-guard-saver-pour-nettoyeur-haute-pression-karcher-16-oz-0398565p.html",
     "sku": "0398565",
     "availability": "Il n’en reste que 1 #039-8565-8"
+  },
+  {
+    "title": "Masque de natation Speedo Luca pour enfants avec tuba et lentilles antibuée, 3 ans et plus",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-fun/0810215/kids-luca-mask-w-snorkel-1e76cf32-8c00-46b0-84f9-d2dfc7f068fb-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 39.99,
+    "salePrice": 19.93,
+    "store": "Canadian Tire",
+    "city": "Etobicoke, Albion & Kipling, ON",
+    "branch": "Etobicoke, Albion & Kipling, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/masque-de-natation-speedo-luca-pour-enfants-avec-tuba-et-lentilles-antibuee-3-ans-et-plus-0810215p.html",
+    "sku": "0810215",
+    "availability": "Il n’en reste que 4 #081-0215-6"
   },
   {
     "title": "Verrou de sûreté et stabilité pour climatiseur de fenêtre, acier",
@@ -627,7 +783,7 @@
     "title": "Doublure de caisse de camion Dupli-Color BED ARMOR, 1 gallon",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-body-repair/0478001/bed-armor-truck-bed-liner-gallon-kit-1b2db5a1-2adc-4d80-b98b-e4474f57a275-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 199.99,
-    "salePrice": 73.93,
+    "salePrice": 51.93,
     "store": "Canadian Tire",
     "city": "Etobicoke, Albion & Kipling, ON",
     "branch": "Etobicoke, Albion & Kipling, ON",
@@ -651,7 +807,7 @@
     "title": "Ensemble de 200 ballons d’eau autoscellants Fill & Tie et fronde de ZURU Bunch O Balloons, 6 ans et plus",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/seasonal-toys/0500645/zuru-bunch-of-balloons-sling-shot-1639209c-6de3-44cc-ac53-30f43f618a05-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 39.99,
-    "salePrice": 16.43,
+    "salePrice": 14.93,
     "store": "Canadian Tire",
     "city": "Etobicoke, Albion & Kipling, ON",
     "branch": "Etobicoke, Albion & Kipling, ON",
@@ -670,6 +826,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/manuel-automobile-haynes-36074-0259308p.html",
     "sku": "0259308",
     "availability": "Il n’en reste que 1 #025-9308-8"
+  },
+  {
+    "title": "Jouet de sable SandBox Mega Expand-A-Pail, multiolore, 2 ans et plus, pour activités estivales/de plage",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/seasonal-toys/0508703/mega-expand-a-pail-0bf2c83b-a8d2-44dd-ae01-426d086362e5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 9.99,
+    "salePrice": 3.93,
+    "store": "Canadian Tire",
+    "city": "Etobicoke, Albion & Kipling, ON",
+    "branch": "Etobicoke, Albion & Kipling, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/jouet-de-sable-sandbox-mega-expand-a-pail-multiolore-2-ans-et-plus-pour-activites-estivales-de-plage-0508703p.html",
+    "sku": "0508703",
+    "availability": "Il n’en reste que 1 #050-8703-0"
   },
   {
     "title": "Leurre dandinette XCalibur Sickle, rouge",
@@ -789,7 +957,7 @@
     "branch": "Etobicoke, Albion & Kipling, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/voitures-en-metal-moule-a-retrofriction-1-43-maisto-fresh-metal-power-racer-choix-varie-1501760p.html",
     "sku": "1501760",
-    "availability": "67 En Stock#150-1760-6"
+    "availability": "65 En Stock#150-1760-6"
   },
   {
     "title": "Projecteur USB magnétique d'extérieur pour abri de jardin CANVAS Radiant, noir, paq. 2",
@@ -802,18 +970,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/projecteur-usb-magnetique-d-exterieur-pour-abri-de-jardin-canvas-radiant-noir-paq-2-0521722p.html",
     "sku": "0521722",
     "availability": "Il n’en reste que 2 #052-1722-2"
-  },
-  {
-    "title": "Oeuf de Pâques Kinder Surprise, rose, 100 g",
-    "image": "https://media-www.canadiantire.ca/product/living/food-drink/seasonal-confectionery/0513370/kinder-easter-pink-100g-0156cd56-e521-453e-9f4e-4af9360fb76c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 7.99,
-    "salePrice": 3.99,
-    "store": "Canadian Tire",
-    "city": "Etobicoke, Albion & Kipling, ON",
-    "branch": "Etobicoke, Albion & Kipling, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/oeuf-de-paques-kinder-surprise-rose-100-g-0513370p.html",
-    "sku": "0513370",
-    "availability": ""
   },
   {
     "title": "Filet pour panier de toit élastique SportRack SR0033, 40 x 36 po",
@@ -838,6 +994,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/bouton-pressoir-lumineux-hydrofuge-a-fil-pour-sonnette-avec-montage-encastre-globe-metal-blanc-0521741p.html",
     "sku": "0521741",
     "availability": "Il n’en reste que 1 #052-1741-6"
+  },
+  {
+    "title": "Soupape de sécurité et de température à fermeture automatique en laiton Watts 1L-2CAN-150210, 1⁄2 po, marron",
+    "image": "https://media-www.canadiantire.ca/product/fixing/plumbing/water-management/0630169/valve-temperature-pressure-1l-5981feb4-fcc2-46b3-96e8-755eb5c86ddd-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 22.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Etobicoke, Albion & Kipling, ON",
+    "branch": "Etobicoke, Albion & Kipling, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/soupape-de-securite-et-de-temperature-a-fermeture-automatique-en-laiton-watts-1l-2can-150210-1-2-po-marron-0630169p.html",
+    "sku": "0630169",
+    "availability": "Il n’en reste que 3 #063-0169-0"
   },
   {
     "title": "Couvre-poignée de rechange Drive Medical pour les cannes HurryCane Freedom et HurryBright, noir",
@@ -888,18 +1056,6 @@
     "availability": "Il n’en reste que 2 #184-0924-4"
   },
   {
-    "title": "Chandelles de cric MAXIMUM en aluminium, 3 tonnes, paire",
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-shop-equipment-supplies/0091627/maximum-3-ton-aluminum-axle-stands-dcaf3439-eac0-4dc3-87f7-1b4b3dee8921-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 144.99,
-    "salePrice": 39.93,
-    "store": "Canadian Tire",
-    "city": "Etobicoke, Albion & Kipling, ON",
-    "branch": "Etobicoke, Albion & Kipling, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/chandelles-de-cric-maximum-en-aluminium-3-tonnes-paire-0091627p.html",
-    "sku": "0091627",
-    "availability": "Il n’en reste que 2 #009-1627-6"
-  },
-  {
     "title": "Coeur gonflable de la Saint-Valentin, 4 pi",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/party-city-seasonal/party-city-micro-season-decor/8541401/valentines-hearts-inflatable-4--e3f30b3d-0552-40c6-8f37-cfd23bce1d49-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 49.99,
@@ -946,6 +1102,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/prise-electrique-ddft-inviolable-avec-autoverification-legrand-1597trnicc4-radiant-15-a-125-v-nickel-0529166p.html",
     "sku": "0529166",
     "availability": "Il n’en reste que 2 #052-9166-8"
+  },
+  {
+    "title": "Distributeur de chlore instantané Spa",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-maintenance/0813968/aquarius-spa-chlorine-dispenser-9ab5c155-54d0-4366-8265-f2e5bd2eecbd-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 12.99,
+    "salePrice": 6.43,
+    "store": "Canadian Tire",
+    "city": "Etobicoke, Albion & Kipling, ON",
+    "branch": "Etobicoke, Albion & Kipling, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/distributeur-de-chlore-instantane-spa-0813968p.html",
+    "sku": "0813968",
+    "availability": "Il n’en reste que 1 #081-3968-6"
   },
   {
     "title": "Leurre Savage Gear 4D, perchaude jaune, 9 po",
@@ -1006,6 +1174,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/ballon-en-aluminium-satine-rond-arc-en-ciel-prismatique-90-blanc-argent-18-po-gonflement-a-l-helium-et-ruban-inclus-pour-fete-d-anniversaire-8424222p.html",
     "sku": "8424222",
     "availability": "8 En Stock#842-4222-4"
+  },
+  {
+    "title": "Masque de natation Speedo Maskerpiece",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-fun/0810431/speedo-maskerpiece-swim-mask-425a55be-1736-4556-b620-1bc39c88517a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 24.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Etobicoke, Albion & Kipling, ON",
+    "branch": "Etobicoke, Albion & Kipling, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/masque-de-natation-speedo-maskerpiece-0810431p.html",
+    "sku": "0810431",
+    "availability": "Il n’en reste que 2 #081-0431-0"
   },
   {
     "title": "Pochette transparente à emporter Maple Leaf",
@@ -1071,7 +1251,7 @@
     "title": "Mèche pour radiateur omniradiant au kérosène",
     "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-living/0762911/wick-for-omni-kerosene-heater-99253024-01fe-4f3c-9219-f9e3c0837eac-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 29.99,
-    "salePrice": 4.93,
+    "salePrice": 4.43,
     "store": "Canadian Tire",
     "city": "Etobicoke, Albion & Kipling, ON",
     "branch": "Etobicoke, Albion & Kipling, ON",
@@ -1141,7 +1321,7 @@
   },
   {
     "title": "Dandinette Freedom Lures Hydra, alose argentée",
-    "image": "undefined?im=whresize&wid=200&hei=200",
+    "image": "undefined",
     "price": 7.99,
     "salePrice": 3.43,
     "store": "Canadian Tire",
