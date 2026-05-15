@@ -12,18 +12,6 @@
     "availability": "32 En Stock#043-0340-8"
   },
   {
-    "title": "Tasses à mesurer empilables en plastique MASTER Chef, paq. 10",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/bakeware-baking-prep/1429676/master-chef-10pc-measuring-cup-set-73c761cb-c28c-42fe-a32e-f57a30c6b9a6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 24.99,
-    "salePrice": 6.93,
-    "store": "Canadian Tire",
-    "city": "Markham East, ON",
-    "branch": "Markham East, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/tasses-a-mesurer-empilables-en-plastique-master-chef-paq-10-1429676p.html",
-    "sku": "1429676",
-    "availability": "Il n’en reste que 2 #142-9676-0"
-  },
-  {
     "title": "Ouvre-porte de garage à courroie ultra silencieux avec Wi-Fi et caméra intégrée Chamberlain B4643TC, 3/4 HP",
     "image": "https://media-www.canadiantire.ca/product/fixing/tools/garage-organization/0460985/chamberlain-3-4-hp-belt-garage-door-opener-with-wifi-camera-809fe420-8b59-4bea-8a74-5bf3b2c5f9e3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 599.99,
@@ -33,7 +21,7 @@
     "branch": "Markham East, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/ouvre-porte-de-garage-a-courroie-ultra-silencieux-avec-wi-fi-et-camera-integree-chamberlain-b4643tc-3-4-hp-0460985p.html",
     "sku": "0460985",
-    "availability": "43 En Stock#046-0985-8"
+    "availability": "16 En Stock#046-0985-8"
   },
   {
     "title": "T-shirt sport à manches courtes et extensibles avec encolure ras du cou Mooselander, hommes, couleur unie, tailles variées, noir/gris, paq. 2",
@@ -58,6 +46,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/briquet-polyvalent-master-chef-pour-le-barbecue-la-maison-et-le-camping-0851409p.html",
     "sku": "0851409",
     "availability": ""
+  },
+  {
+    "title": "Four à pizza de table portatif au gaz Vida par PADERNO, 1 brûleur, 12 po",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking/0850001/vida-by-paderno-pizza-oven-c3f6852d-30b5-4ad8-96fe-41ea01ff0eaa-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 399.99,
+    "salePrice": 179.93,
+    "store": "Canadian Tire",
+    "city": "Markham East, ON",
+    "branch": "Markham East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/four-a-pizza-de-table-portatif-au-gaz-vida-par-paderno-1-bruleur-12-po-0850001p.html",
+    "sku": "0850001",
+    "availability": "14 En Stock#085-0001-6"
   },
   {
     "title": "Cintres pivotants compacts en velours Type A avec barre à pantalon, couleurs variées, paq. 40",
@@ -105,7 +105,31 @@
     "branch": "Markham East, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/ampoules-a-del-a-intensite-variable-a-culot-e12-noma-b10-2700k-350-lumens-blanc-chaud-40-w-paq-2-0529347p.html",
     "sku": "0529347",
-    "availability": "202 En Stock#052-9347-8"
+    "availability": "194 En Stock#052-9347-8"
+  },
+  {
+    "title": "Présentoir d'articles saisonniers Mastercraft avec chariot à plateforme roulante, noir",
+    "image": "https://media-www.canadiantire.ca/product/fixing/tools/garage-organization/0681822/mastercraft-seasonal-storage-rack-4657eb31-2d51-419f-a388-3dcc3e45f853-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 299.99,
+    "salePrice": 149.93,
+    "store": "Canadian Tire",
+    "city": "Markham East, ON",
+    "branch": "Markham East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/presentoir-d-articles-saisonniers-mastercraft-avec-chariot-a-plateforme-roulante-noir-0681822p.html",
+    "sku": "0681822",
+    "availability": "Il n’en reste que 4 #068-1822-8"
+  },
+  {
+    "title": "Meuble de rangement d'angle ouvert à 9 cubes For Living, blanc",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/1680221/for-living-corner-9-cube-organizer-7b7dc5f9-de00-4529-ab60-96254faa2854-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 159.99,
+    "salePrice": 79.93,
+    "store": "Canadian Tire",
+    "city": "Markham East, ON",
+    "branch": "Markham East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/meuble-de-rangement-d-angle-ouvert-a-9-cubes-for-living-blanc-1680221p.html",
+    "sku": "1680221",
+    "availability": "Il n’en reste que 2 #168-0221-6"
   },
   {
     "title": "Casque de vélo Supercycle Pursuit, tout-petit, confetti",
@@ -117,7 +141,7 @@
     "branch": "Markham East, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/casque-de-velo-supercycle-pursuit-tout-petit-confetti-0730542p.html",
     "sku": "0730542",
-    "availability": "15 En Stock#073-0542-6"
+    "availability": "13 En Stock#073-0542-6"
   },
   {
     "title": "Chiffons vaisselle en coton gaufré MASTER Chef à motif à carreaux, choix de couleurs, 14 x 14 po, paq. 12",
@@ -132,18 +156,6 @@
     "availability": "Il n’en reste que 5 #142-2705-4"
   },
   {
-    "title": "Applique de salle de bain à 3 lampes avec abat-jour en verre blanc opale CANVAS Essence, nickel brossé",
-    "image": "https://media-www.canadiantire.ca/product/living/home-decor/lighting/0523602/canvas-vanity-3-light-essence-04a5f34c-a07f-4d50-acf6-40e062cd9d1d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 119.99,
-    "salePrice": 49.93,
-    "store": "Canadian Tire",
-    "city": "Markham East, ON",
-    "branch": "Markham East, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/applique-de-salle-de-bain-a-3-lampes-avec-abat-jour-en-verre-blanc-opale-canvas-essence-nickel-brosse-0523602p.html",
-    "sku": "0523602",
-    "availability": "Il n’en reste que 3 #052-3602-6"
-  },
-  {
     "title": "Meuble-lavabo simple Canvas Danville à 1 porte, dessus en pierre, 24 po, chêne doré",
     "image": "https://media-www.canadiantire.ca/product/fixing/plumbing/faucets-fixtures/0636377/canvas-24a-danville-1-door-honey-oak-8e9fcc76-daab-459d-ae81-1bc4f7161516-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 399.99,
@@ -154,54 +166,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/meuble-lavabo-simple-canvas-danville-a-1-porte-dessus-en-pierre-24-po-chene-dore-0636377p.html",
     "sku": "0636377",
     "availability": "Il n’en reste que 2 #063-6377-8"
-  },
-  {
-    "title": "Cache de chasse ignifuge avec 2 chaises trépied Ameristep Enforcer",
-    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-equipment/0751806/ameristep-enforcer-fr-3p-ground-blind-w-2-tripod-chair-combo-4cc0b1ba-83fb-45fd-adb0-3656dd762b0e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 259.99,
-    "salePrice": 119.93,
-    "store": "Canadian Tire",
-    "city": "Markham East, ON",
-    "branch": "Markham East, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/cache-de-chasse-ignifuge-avec-2-chaises-trepied-ameristep-enforcer-0751806p.html",
-    "sku": "0751806",
-    "availability": "Il n’en reste que 1 #075-1806-0"
-  },
-  {
-    "title": "Panier de basketball d'extérieur fixe Spalding U-TURN, 60 po",
-    "image": "https://media-www.canadiantire.ca/product/playing/team-sports-and-golf/sports-equipment-accessories/1840808/spalding-60-glass-in-ground-basketball-system-0694c723-1f02-444a-99e6-83123f28c329-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 999.99,
-    "salePrice": 499.93,
-    "store": "Canadian Tire",
-    "city": "Markham East, ON",
-    "branch": "Markham East, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/panier-de-basketball-d-exterieur-fixe-spalding-u-turn-60-po-1840808p.html",
-    "sku": "1840808",
-    "availability": "Il n’en reste que 5 #184-0808-2"
-  },
-  {
-    "title": "Foyer multimédia CANVAS Waldon, 60 po",
-    "image": "https://media-www.canadiantire.ca/product/living/home-decor/electric-fireplaces/0644020/canvas-waldon-60-led-media-fireplace-a8bfac77-50a4-452c-a5e7-5e8346ba545d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 749.99,
-    "salePrice": 329.93,
-    "store": "Canadian Tire",
-    "city": "Markham East, ON",
-    "branch": "Markham East, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/foyer-multimedia-canvas-waldon-60-po-0644020p.html",
-    "sku": "0644020",
-    "availability": "11 En Stock#064-4020-6"
-  },
-  {
-    "title": "Soudeuse à onduleur MIG 180i Mastercraft, 115 V / 230 V",
-    "image": "https://media-www.canadiantire.ca/product/fixing/tools/welding-soldering/0581927/mastercraft-mig-180i-welder-9829792e-f357-4348-8914-4a08f4f08c55-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 799.99,
-    "salePrice": 289.93,
-    "store": "Canadian Tire",
-    "city": "Markham East, ON",
-    "branch": "Markham East, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/soudeuse-a-onduleur-mig-180i-mastercraft-115-v-230-v-0581927p.html",
-    "sku": "0581927",
-    "availability": "Il n’en reste que 3 #058-1927-4"
   },
   {
     "title": "Présentoir à gâteaux multifonctionnel en porcelaine CANVAS, blanc, 11,75 po",
@@ -226,54 +190,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/ensemble-de-cuilleres-tournantes-matzuo-5-pces-0770318p.html",
     "sku": "0770318",
     "availability": ""
-  },
-  {
-    "title": "Liquide de transmission synthétique à variation continue OEM, véhicules asiatiques, 946 mL",
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0281543/oem-synthetic-cvt-atf-asian-946ml-48dc03e8-06cf-4402-aacb-2c06759c4564-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 21.99,
-    "salePrice": 9.93,
-    "store": "Canadian Tire",
-    "city": "Markham East, ON",
-    "branch": "Markham East, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/liquide-de-transmission-synthetique-a-variation-continue-oem-vehicules-asiatiques-946-ml-0281543p.html",
-    "sku": "0281543",
-    "availability": ""
-  },
-  {
-    "title": "Porte-kayak sur le toit SportRack SR5511 Mooring, 36 po, paq. 2",
-    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0401100/sportrack-j-stacking-kayak-carrier-6b63abe3-896a-43ce-9735-f07e1c5ceea0-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 199.99,
-    "salePrice": 58.93,
-    "store": "Canadian Tire",
-    "city": "Markham East, ON",
-    "branch": "Markham East, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/porte-kayak-sur-le-toit-sportrack-sr5511-mooring-36-po-paq-2-0401100p.html",
-    "sku": "0401100",
-    "availability": "Il n’en reste que 1 #040-1100-0"
-  },
-  {
-    "title": "Chargeur portatif mince à 3 ports Bluehive, 20 000 mAh, 20 W, voyant DEL de batterie, compatible avec la plupart des appareils, noir",
-    "image": "https://media-www.canadiantire.ca/product/automotive/electronics/mobile-electronics/0358202/bh-10k-20w-slim-powerbank-a1c14346-2673-48d8-960a-0a32ad51f937-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 59.99,
-    "salePrice": 24.93,
-    "store": "Canadian Tire",
-    "city": "Markham East, ON",
-    "branch": "Markham East, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/chargeur-portatif-mince-a-3-ports-bluehive-20-000-mah-20-w-voyant-del-de-batterie-compatible-avec-la-plupart-des-appareils-noir-0358203p.html",
-    "sku": "0358203",
-    "availability": "Il n’en reste que 1 #035-8203-8"
-  },
-  {
-    "title": "Batterie de cuisine pour sac à dos Woods O'Hara",
-    "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-living/0766500/woods-o-hara-pot-set-0428ba47-d5f6-481e-9910-2a9cf8f10b99-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 52.99,
-    "salePrice": 24.93,
-    "store": "Canadian Tire",
-    "city": "Markham East, ON",
-    "branch": "Markham East, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/batterie-de-cuisine-pour-sac-a-dos-woods-o-hara-0766500p.html",
-    "sku": "0766500",
-    "availability": "Il n’en reste que 1 #076-6500-4"
   },
   {
     "title": "Robinet d’évier de cuisine rétractable Danze Smartsense, acier inoxydable",
@@ -396,18 +312,6 @@
     "availability": "Il n’en reste que 2 #073-0527-4"
   },
   {
-    "title": "Leurre Rapala X-Rap Shad 6",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0788016/rapala-x-rap-shad-firetiger-06-28b46204-d5a4-4b1a-bd87-055ebe62e0cd-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 20.99,
-    "salePrice": 9.43,
-    "store": "Canadian Tire",
-    "city": "Markham East, ON",
-    "branch": "Markham East, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/leurre-rapala-x-rap-shad-6-0788016p.html",
-    "sku": "0788016",
-    "availability": ""
-  },
-  {
     "title": "Support à plateforme sur attelage pour 1 vélo SportRack SR4885 Upshift Plu, noir",
     "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0401178/sportrack-upshift-plus-7af0b6c6-c012-4714-877a-1d548c74e63e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 199.99,
@@ -502,6 +406,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/barre-d-attelage-10-000-lb-4-x-10-25-po-0409049p.html",
     "sku": "0409049",
     "availability": "Il n’en reste que 1 #040-9049-6"
+  },
+  {
+    "title": "Humidificateur d'air ultrasonique à brume fraîche et diffuseur d'huile essentielle Crane EE-5951AD avec lampe, léger, très silencieux, blanc, 0,8 L",
+    "image": "https://media-www.canadiantire.ca/product/living/home-environment/home-air-quality-appliances/0430700/crane-ultrasonic-cool-mist-humidifier-diffuser-95c3bc13-c9f0-4d3a-aab6-08011ec6a9db-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 63.99,
+    "salePrice": 24.93,
+    "store": "Canadian Tire",
+    "city": "Markham East, ON",
+    "branch": "Markham East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/humidificateur-d-air-ultrasonique-a-brume-fraiche-et-diffuseur-d-huile-essentielle-crane-ee-5951ad-avec-lampe-leger-tres-silencieux-blanc-0-8-l-0430700p.html",
+    "sku": "0430700",
+    "availability": "Il n’en reste que 1 #043-0700-2"
   },
   {
     "title": "Grande jardinière d'extérieur en osier vert, ronde, 28 po, noir",
@@ -634,42 +550,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/interrupteur-a-bascule-rond-illumine-gardner-bender-gsw-50-unipolaire-unidirectionnel-marche-arret-1-poteau-noir-0526977p.html",
     "sku": "0526977",
     "availability": ""
-  },
-  {
-    "title": "Ampoules à DEL intelligentes Bluetooth à intensité variable à culot GU10 Philips Hue, 400 lumens, blanc chaud, paq. 2",
-    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/light-bulbs/1522545/philips-hue-gu10-white-2-pack-e3b0401c-940e-4445-b189-f0b0f4863014-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 49.99,
-    "salePrice": 24.93,
-    "store": "Canadian Tire",
-    "city": "Markham East, ON",
-    "branch": "Markham East, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/ampoules-a-del-intelligentes-bluetooth-a-intensite-variable-a-culot-gu10-philips-hue-400-lumens-blanc-chaud-paq-2-1522545p.html",
-    "sku": "1522545",
-    "availability": "Il n’en reste que 1 #152-2545-0"
-  },
-  {
-    "title": "Ballon en aluminium satiné, perluète, choix de couleurs, 11 x 14 po, gonflé d'air, pour anniversaire/remise de diplômes/fête prénatale/mariage de finissants",
-    "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8423771/gld-blln-a-f-a-92be138f-0e28-4a35-bed3-8cd983ad4759-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 2.99,
-    "salePrice": 0.43,
-    "store": "Canadian Tire",
-    "city": "Markham East, ON",
-    "branch": "Markham East, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/ballon-en-aluminium-satine-perluete-choix-de-couleurs-11-x-14-po-gonfle-d-air-pour-anniversaire-remise-de-diplomes-fete-prenatale-mariage-de-finissants-8423770p.html",
-    "sku": "8423770",
-    "availability": ""
-  },
-  {
-    "title": "Chevalet de sciage en plastique Mastercraft avec pince, 27 x 15 po",
-    "image": "https://media-www.canadiantire.ca/product/fixing/tools/tool-storage/0586572/mastercraft-clamping-sawhorse-cc7423e5-2d0e-4300-9b90-3a50f1696686-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 79.99,
-    "salePrice": 39.93,
-    "store": "Canadian Tire",
-    "city": "Markham East, ON",
-    "branch": "Markham East, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/chevalet-de-sciage-en-plastique-mastercraft-avec-pince-27-x-15-po-0586572p.html",
-    "sku": "0586572",
-    "availability": "Il n’en reste que 2 #058-6572-6"
   },
   {
     "title": "Poignées étagées en métal Peerless, fixation double, fer doux, 3 po, paq. 6",
@@ -946,30 +826,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/leurre-dandinette-xcalibur-sickle-rouge-0785000p.html",
     "sku": "0785000",
     "availability": ""
-  },
-  {
-    "title": "Luminaires encastrés CCT BAZZ, 4 po, paq. 4",
-    "image": "https://media-www.canadiantire.ca/product/living/home-decor/lighting/0521720/4-pack-4-cct-recessed-lights-93333085-2037-40d7-9780-c170f2f50609-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 119.99,
-    "salePrice": 59.93,
-    "store": "Canadian Tire",
-    "city": "Markham East, ON",
-    "branch": "Markham East, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/luminaires-encastres-cct-bazz-4-po-paq-4-0521720p.html",
-    "sku": "0521720",
-    "availability": "Il n’en reste que 3 #052-1720-6"
-  },
-  {
-    "title": "Garde-boues avant et arrière personnalisés Husky Liners 58263 pour camion Chevrolet Colorado, 2015 à 2021, paquet de 4",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0376239/husky-custom-fit-mud-flaps-chevy-colorado-15-21-4pc-c6f628f7-4589-4045-9c68-eb8e4e803227-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 119.99,
-    "salePrice": 39.93,
-    "store": "Canadian Tire",
-    "city": "Markham East, ON",
-    "branch": "Markham East, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/garde-boues-avant-et-arriere-personnalises-husky-liners-58263-pour-camion-chevrolet-colorado-2015-a-2021-paquet-de-4-0376239p.html",
-    "sku": "0376239",
-    "availability": "Il n’en reste que 1 #037-6239-2"
   },
   {
     "title": "Peinture de retouche Scratch Fix All-in-1, Toréro foncé (M) (51WA203c,WA334d,WA257C)",
@@ -1275,7 +1131,7 @@
     "title": "Coupe-spirale Lagostina, acier inoxydable, 8,86 po",
     "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-tools-thermometers/1423759/lagostina-stainless-steel-spiralizer-daf3fed7-fbcf-4e96-8a7a-f0304158b617-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 49.99,
-    "salePrice": 24.93,
+    "salePrice": 16.93,
     "store": "Canadian Tire",
     "city": "Markham East, ON",
     "branch": "Markham East, ON",
@@ -1344,6 +1200,66 @@
     "availability": "Il n’en reste que 2 #842-0326-2"
   },
   {
+    "title": "Collier avec symbole de dollar scintillant des années 1990, doré/argenté, 34 po, accessoire de costume à porter pour l'Halloween",
+    "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8525528/gold-dollar-sign-pendant-bead-necklace-264c25f5-0bdf-42df-9f33-36daf8ef1c3a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 5.99,
+    "salePrice": 2.03,
+    "store": "Canadian Tire",
+    "city": "Markham East, ON",
+    "branch": "Markham East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/collier-avec-symbole-de-dollar-scintillant-des-annees-1990-dore-argente-34-po-accessoire-de-costume-a-porter-pour-l-halloween-8525528p.html",
+    "sku": "8525528",
+    "availability": ""
+  },
+  {
+    "title": "Câble tressé USB-C vers USB-C de 60 W de Belkin pour appareils Apple et Android",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-electronics/0356220/belkin-usb-c-to-usb-c-cable-60w-braided-a8581161-da8c-451a-bdc0-06e226cd5e9b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 24.99,
+    "salePrice": 8.93,
+    "store": "Canadian Tire",
+    "city": "Markham East, ON",
+    "branch": "Markham East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/cable-tresse-usb-c-vers-usb-c-de-60-w-de-belkin-pour-appareils-apple-et-android-0356220p.html",
+    "sku": "0356220",
+    "availability": "Il n’en reste que 4 #035-6220-8"
+  },
+  {
+    "title": "Égaliseur de plancher Shur-Trim, or, 1,5 po x 6 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0682862/equalizer-1-5-x-6-gold-4b0b84bd-256c-429d-a821-f7c3a8ee77eb-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 16.99,
+    "salePrice": 7.93,
+    "store": "Canadian Tire",
+    "city": "Markham East, ON",
+    "branch": "Markham East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/egaliseur-de-plancher-shur-trim-or-1-5-po-x-6-pi-0682862p.html",
+    "sku": "0682862",
+    "availability": "Il n’en reste que 4 #068-2862-6"
+  },
+  {
+    "title": "Mousqueton à émerillon pivotant en acier inoxydable, zingué, 2-7/8 po",
+    "image": "https://media-www.canadiantire.ca/product/fixing/hardware/general-hardware/0618829/snap-rope-2-7-8--391efdeb-5da9-4358-a45d-dd8d052e7a6b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 3.19,
+    "salePrice": 1.08,
+    "store": "Canadian Tire",
+    "city": "Markham East, ON",
+    "branch": "Markham East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/mousqueton-a-emerillon-pivotant-en-acier-inoxydable-zingue-2-7-8-po-0618829p.html",
+    "sku": "0618829",
+    "availability": "Il n’en reste que 4 #061-8829-6"
+  },
+  {
+    "title": "Leurre Lunkerhunt Ned Drone, 3 po",
+    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/1785308/lunkerhunt-ned-drone-3--ed2a525d-741e-4283-807e-764be31dd12b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 8.99,
+    "salePrice": 3.93,
+    "store": "Canadian Tire",
+    "city": "Markham East, ON",
+    "branch": "Markham East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/leurre-lunkerhunt-ned-drone-3-po-1785308p.html",
+    "sku": "1785308",
+    "availability": ""
+  },
+  {
     "title": "Trousse de tuyau d'évacuation à jet Burcam 750915",
     "image": "https://media-www.canadiantire.ca/product/fixing/plumbing/water-management/0624120/jet-discharge-hose-kit-1a8f085b-5212-4366-9f47-f60766a46089-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 16.99,
@@ -1389,7 +1305,7 @@
     "branch": "Markham East, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/assortiment-my-little-pony-cutie-magic-1500143p.html",
     "sku": "1500143",
-    "availability": "Il n’en reste que 4 #150-0143-2"
+    "availability": "Il n’en reste que 3 #150-0143-2"
   },
   {
     "title": "Casier à cannes à pêche blanche HT, noir",
@@ -1500,6 +1416,114 @@
     "availability": ""
   },
   {
+    "title": "Ensemble d'éventails décoratifs pour la Divali",
+    "image": "https://media-www.canadiantire.ca/product/party-city/party-city-seasonal/party-city-micro-season-decor/8527702/diwali-orange-marigold-garland-2-pack-41715398-0855-493a-9d62-304851020e6a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 14.99,
+    "salePrice": 6.93,
+    "store": "Canadian Tire",
+    "city": "Markham East, ON",
+    "branch": "Markham East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ensemble-d-eventails-decoratifs-pour-la-divali-8540606p.html",
+    "sku": "8540606",
+    "availability": ""
+  },
+  {
+    "title": "Câble tressé de type C avec courroie en cuir Bluehive, 6 pi",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-electronics/0355531/bluehive-6-feet-fashion-line-a-to-c-cable-6b83c90e-e4d6-4c81-b215-24ac63de9369-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 14.99,
+    "salePrice": 3.93,
+    "store": "Canadian Tire",
+    "city": "Markham East, ON",
+    "branch": "Markham East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/cable-tresse-de-type-c-avec-courroie-en-cuir-bluehive-6-pi-0355531p.html",
+    "sku": "0355531",
+    "availability": "Il n’en reste que 1 #035-5531-4"
+  },
+  {
+    "title": "Couronnes en papier Cocomelon, multicolore, taille unique, paq. 8, accessoires à porter pour anniversaires",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8533629/cocomelon-paper-crowns-16f067f9-5d52-48f7-9b49-6e9fa517f8c4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 4.99,
+    "salePrice": 2.49,
+    "store": "Canadian Tire",
+    "city": "Markham East, ON",
+    "branch": "Markham East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/couronnes-en-papier-cocomelon-multicolore-taille-unique-paq-8-accessoires-a-porter-pour-anniversaires-8533629p.html",
+    "sku": "8533629",
+    "availability": "44 En Stock#853-3629-8"
+  },
+  {
+    "title": "Pantoufles à enfiler à semelles en caoutchouc pour l'intérieur et l'extérieur en cuir avec doublure en molleton Outbound pour hommes, havane",
+    "image": "https://media-www.canadiantire.ca/product/playing/footwear-apparel/winter-footwear-apparel/1871116/outbound-cable-tan-m8-b35f2635-284d-4d36-bad2-6093e018d580-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 29.99,
+    "salePrice": 8.93,
+    "store": "Canadian Tire",
+    "city": "Markham East, ON",
+    "branch": "Markham East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/pantoufles-a-enfiler-a-semelles-en-caoutchouc-pour-l-interieur-et-l-exterieur-en-cuir-avec-doublure-en-molleton-outbound-pour-hommes-havane-1871116p.html",
+    "sku": "1871116",
+    "availability": ""
+  },
+  {
+    "title": "Écrou à oreilles Hillman, fini zinc, choix de tailles",
+    "image": "https://media-www.canadiantire.ca/product/fixing/hardware/general-hardware/1610803/6mm-1-0-zinc-plated-metric-regular-wing-nut-1-pack-880806-d12a6c0e-038f-4242-80a4-f52161324865-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 1.09,
+    "salePrice": 0.54,
+    "store": "Canadian Tire",
+    "city": "Markham East, ON",
+    "branch": "Markham East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ecrou-a-oreilles-hillman-fini-zinc-choix-de-tailles-1610803p.html",
+    "sku": "1610803",
+    "availability": ""
+  },
+  {
+    "title": "Appât en pâte pour barbotte Charlie's Dough",
+    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/1780054/catfish-charlie-blood-bait-type-b-w-blood-lg-e399a0ed-e935-401a-a5f4-13da27e14074-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 10.49,
+    "salePrice": 4.73,
+    "store": "Canadian Tire",
+    "city": "Markham East, ON",
+    "branch": "Markham East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/appat-en-pate-pour-barbotte-charlie-s-dough-1780054p.html",
+    "sku": "1780054",
+    "availability": "Il n’en reste que 3 #178-0058-2"
+  },
+  {
+    "title": "Moraillon à charnière Hillman, résistant à la corrosion, zingué, 4 po",
+    "image": "https://media-www.canadiantire.ca/product/fixing/hardware/general-hardware/0462499/4-zinc-plated-hinge-hasp-665fff62-d8b9-4068-b088-3478c32d5c1d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 8.79,
+    "salePrice": 4.39,
+    "store": "Canadian Tire",
+    "city": "Markham East, ON",
+    "branch": "Markham East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/moraillon-a-charniere-hillman-resistant-a-la-corrosion-zingue-4-po-0462499p.html",
+    "sku": "0462499",
+    "availability": "Il n’en reste que 1 #046-2499-4"
+  },
+  {
+    "title": "Pantoufles chaussettes de maison à carreaux doublure en molleton doux rembourré en mousse antipatinage Outbound pour femmes",
+    "image": "https://media-www.canadiantire.ca/product/playing/footwear-apparel/winter-footwear-apparel/1872340/outbound-women-s-buffalo-plaid-slippers-5-6-cc8ba730-2122-41e2-bb2b-3300c8e81402-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 9.99,
+    "salePrice": 3.43,
+    "store": "Canadian Tire",
+    "city": "Markham East, ON",
+    "branch": "Markham East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/pantoufles-chaussettes-de-maison-a-carreaux-doublure-en-molleton-doux-rembourre-en-mousse-antipatinage-outbound-pour-femmes-1872340p.html",
+    "sku": "1872340",
+    "availability": ""
+  },
+  {
+    "title": "Clapet de pied Anka ,en polyéthylène, taille variée, noir",
+    "image": "https://media-www.canadiantire.ca/product/fixing/plumbing/water-management/0624136/anka-foot-valve-3-4--4312c86c-d0b8-48bb-8c19-a1bb0676d1a8-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 18.99,
+    "salePrice": 4.93,
+    "store": "Canadian Tire",
+    "city": "Markham East, ON",
+    "branch": "Markham East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/clapet-de-pied-anka-en-polyethylene-taille-variee-noir-0624133p.html",
+    "sku": "0624133",
+    "availability": ""
+  },
+  {
     "title": "Noeud pour ballon de garçon, 10 po",
     "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8441716/boy-balloon-bow-10-inch-502f3392-7a2a-483f-9f5e-9922dc2f9bc0-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 4.99,
@@ -1570,17 +1594,5 @@
     "url": "https://www.canadiantire.ca/fr/pdp/peinture-de-retouche-dupli-color-scratch-fix-all-in-1-exact-match-pour-automobile-brun-automne-b4-0475187p.html",
     "sku": "0475187",
     "availability": "Il n’en reste que 1 #047-5187-6"
-  },
-  {
-    "title": "Bouquet de ballons en aluminium pour 60e anniversaire, gonflage à l’hélium compris, noir/blanc/or/rose, paq. 5",
-    "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8424115/blln-bqt-pnk-gld-milestone-60-ade3afa4-1040-4d3f-8886-a7d11d008aa8-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 26.99,
-    "salePrice": 9.17,
-    "store": "Canadian Tire",
-    "city": "Markham East, ON",
-    "branch": "Markham East, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/bouquet-de-ballons-en-aluminium-pour-60e-anniversaire-gonflage-a-l-helium-compris-noir-blanc-or-rose-paq-5-8424115p.html",
-    "sku": "8424115",
-    "availability": "Il n’en reste que 1 #842-4115-0"
   }
 ]

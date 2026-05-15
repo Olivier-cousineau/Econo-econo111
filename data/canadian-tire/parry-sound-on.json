@@ -1,15 +1,99 @@
 [
   {
-    "title": "Four à pizza de table portatif au gaz Vida par PADERNO, 1 brûleur, 12 po",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking/0850001/vida-by-paderno-pizza-oven-c3f6852d-30b5-4ad8-96fe-41ea01ff0eaa-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 399.99,
-    "salePrice": 179.93,
+    "title": "Affûte-couteaux à 3 étapes MASTER Chef",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/cutlery/2421029/master-chef-3stage-knife-sharpener-b9ab2767-c8c0-473e-a296-6cb70527856a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 18.99,
+    "salePrice": 4.93,
     "store": "Canadian Tire",
     "city": "Parry Sound, ON",
     "branch": "Parry Sound, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/four-a-pizza-de-table-portatif-au-gaz-vida-par-paderno-1-bruleur-12-po-0850001p.html",
-    "sku": "0850001",
-    "availability": "Il n’en reste que 7 #085-0001-6"
+    "url": "https://www.canadiantire.ca/fr/pdp/affute-couteaux-a-3-etapes-master-chef-2421029p.html",
+    "sku": "2421029",
+    "availability": "16 En Stock#242-1029-2"
+  },
+  {
+    "title": "Tasses à mesurer empilables en plastique MASTER Chef, paq. 10",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/bakeware-baking-prep/1429676/master-chef-10pc-measuring-cup-set-73c761cb-c28c-42fe-a32e-f57a30c6b9a6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 24.99,
+    "salePrice": 8.93,
+    "store": "Canadian Tire",
+    "city": "Parry Sound, ON",
+    "branch": "Parry Sound, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tasses-a-mesurer-empilables-en-plastique-master-chef-paq-10-1429676p.html",
+    "sku": "1429676",
+    "availability": "Il n’en reste que 3 #142-9676-0"
+  },
+  {
+    "title": "Ensemble de détente For Living Avenue, 4 pièces",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/1881372/for-living-avenue-4-pc-conversation-set-3f6194c7-af31-4b20-8c68-e15c8926954d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 699.99,
+    "salePrice": 349.93,
+    "store": "Canadian Tire",
+    "city": "Parry Sound, ON",
+    "branch": "Parry Sound, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ensemble-de-detente-for-living-avenue-4-pieces-1881372p.html",
+    "sku": "1881372",
+    "availability": "Il n’en reste que 2 #188-1372-2"
+  },
+  {
+    "title": "Ouvre-porte de garage à courroie ultra silencieux avec Wi-Fi et caméra intégrée Chamberlain B4643TC, 3/4 HP",
+    "image": "https://media-www.canadiantire.ca/product/fixing/tools/garage-organization/0460985/chamberlain-3-4-hp-belt-garage-door-opener-with-wifi-camera-809fe420-8b59-4bea-8a74-5bf3b2c5f9e3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 599.99,
+    "salePrice": 299.93,
+    "store": "Canadian Tire",
+    "city": "Parry Sound, ON",
+    "branch": "Parry Sound, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ouvre-porte-de-garage-a-courroie-ultra-silencieux-avec-wi-fi-et-camera-integree-chamberlain-b4643tc-3-4-hp-0460985p.html",
+    "sku": "0460985",
+    "availability": "Il n’en reste que 2 #046-0985-8"
+  },
+  {
+    "title": "T-shirt sport à manches courtes et extensibles avec encolure ras du cou Mooselander, hommes, couleur unie, tailles variées, noir/gris, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/playing/footwear-apparel/summer-footwear-apparel/1874066/active-2-pack-short-sleeve-tees-m-l-ce888845-ad24-41df-8604-c50d7052ca02-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 21.99,
+    "salePrice": 2.93,
+    "store": "Canadian Tire",
+    "city": "Parry Sound, ON",
+    "branch": "Parry Sound, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/t-shirt-sport-a-manches-courtes-et-extensibles-avec-encolure-ras-du-cou-mooselander-hommes-couleur-unie-tailles-variees-noir-gris-paq-2-1874066p.html",
+    "sku": "1874066",
+    "availability": ""
+  },
+  {
+    "title": "Jeu d'arcade de tir de basketball REC-Tek avec 4 balles et tableau de pointage électronique",
+    "image": "https://media-www.canadiantire.ca/product/playing/team-sports-and-golf/indoor-games/1840694/rec-tek-basketball-shootout-challenge-game-b5d7e061-32a3-40d8-a913-45673257eaf7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 129.99,
+    "salePrice": 54.93,
+    "store": "Canadian Tire",
+    "city": "Parry Sound, ON",
+    "branch": "Parry Sound, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/jeu-d-arcade-de-tir-de-basketball-rec-tek-avec-4-balles-et-tableau-de-pointage-electronique-1840694p.html",
+    "sku": "1840694",
+    "availability": ""
+  },
+  {
+    "title": "Toile pare soleil triangulaire ShelterLogic, 12 pi",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/0882240/shelter-logic-triangle-shade-sail-12--2c190960-0271-482d-a439-b31dbf8f42e7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 54.99,
+    "salePrice": 24.93,
+    "store": "Canadian Tire",
+    "city": "Parry Sound, ON",
+    "branch": "Parry Sound, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/toile-pare-soleil-triangulaire-shelterlogic-12-pi-0882307p.html",
+    "sku": "0882307",
+    "availability": "Il n’en reste que 2 #088-2307-2"
+  },
+  {
+    "title": "Tapis d'intérieur et d'extérieur CANVAS Fresco Marven, 8 x 10 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680038/marven-indoor-outdoor-rug-f51c7cd9-ed84-43e2-8599-b714280d7a6c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 199.99,
+    "salePrice": 99.93,
+    "store": "Canadian Tire",
+    "city": "Parry Sound, ON",
+    "branch": "Parry Sound, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-d-interieur-et-d-exterieur-canvas-fresco-marven-8-x-10-pi-0680038p.html",
+    "sku": "0680038",
+    "availability": "Il n’en reste que 1 #068-0038-2"
   },
   {
     "title": "Distributeur d'eau chaude de MASTER Chef avec poignée, noir, 3,5 L",
@@ -36,28 +120,124 @@
     "availability": ""
   },
   {
-    "title": "Foyer multimédia CANVAS Alma, 72 po",
-    "image": "https://media-www.canadiantire.ca/product/living/home-decor/electric-fireplaces/0644023/canvas-72-alma-media-fireplace-f820a533-3b11-4251-b5c4-e5a69a494aa7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 729.99,
-    "salePrice": 349.93,
+    "title": "Barbecue MASTER Chef G70220 Turismo, 4 brûleurs, propane avec tablettes latérales, 36 po",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking/0850106/master-chef-grill-turismo-4-burner-gas-griddle-cart-19667163-bb41-4715-b58c-645b95721288-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 399.99,
+    "salePrice": 199.93,
     "store": "Canadian Tire",
     "city": "Parry Sound, ON",
     "branch": "Parry Sound, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/foyer-multimedia-canvas-alma-72-po-0644023p.html",
-    "sku": "0644023",
-    "availability": "Il n’en reste que 1 #064-4023-0"
+    "url": "https://www.canadiantire.ca/fr/pdp/barbecue-master-chef-g70220-turismo-4-bruleurs-propane-avec-tablettes-laterales-36-po-0850106p.html",
+    "sku": "0850106",
+    "availability": "Il n’en reste que 1 #085-0106-8"
   },
   {
-    "title": "Shark HyperAIR IQ - Sèche-cheveux ionique à séchage rapide avec concentrateur 2-en-1",
-    "image": "https://media-www.canadiantire.ca/product/living/personal-garment-care/personal-care/0438670/shark-hyperair-fast-drying-ionic-hair-dryer-9754f838-add4-4a69-ac79-92451a52ad69-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "title": "Ampoules à DEL à intensité variable à culot E12 NOMA B10, 2700K, 350 lumens, blanc chaud, 40 W, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/light-bulbs/0529347/noma-2-pack-40w-e12-soft-white-led-lightbulbs-2abc2edf-7b69-449d-b49f-8024c6332e19-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 12.99,
+    "salePrice": 1.93,
+    "store": "Canadian Tire",
+    "city": "Parry Sound, ON",
+    "branch": "Parry Sound, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ampoules-a-del-a-intensite-variable-a-culot-e12-noma-b10-2700k-350-lumens-blanc-chaud-40-w-paq-2-0529347p.html",
+    "sku": "0529347",
+    "availability": "652 En Stock#052-9347-8"
+  },
+  {
+    "title": "Parka technique de chasse perméable à l'air imperméable coupe-vent Yukon Gear pour hommes, camouflage Realtree Xtra",
+    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-apparel-footwear/3750716/yukon-gear-parka-2-rte-m-a47cf6f2-275c-44e1-93da-5eb1da27165e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 99.99,
+    "salePrice": 39.93,
+    "store": "Canadian Tire",
+    "city": "Parry Sound, ON",
+    "branch": "Parry Sound, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/parka-technique-de-chasse-permeable-a-l-air-impermeable-coupe-vent-yukon-gear-pour-hommes-camouflage-realtree-xtra-3750716p.html",
+    "sku": "3750716",
+    "availability": ""
+  },
+  {
+    "title": "Ouvre-porte de garage à entraînement à chaîne avec Wi-Fi Chamberlain C2202C, 1/2-HP",
+    "image": "https://media-www.canadiantire.ca/product/fixing/tools/garage-organization/0460960/chamberlain-1-2-hp-chain-drive-wifi-garage-door-opener-595868a5-e6b0-441e-944c-d15945af1929-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 379.99,
+    "salePrice": 179.93,
+    "store": "Canadian Tire",
+    "city": "Parry Sound, ON",
+    "branch": "Parry Sound, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ouvre-porte-de-garage-a-entrainement-a-chaine-avec-wi-fi-chamberlain-c2202c-1-2-hp-0460960p.html",
+    "sku": "0460960",
+    "availability": "Il n’en reste que 2 #046-0960-6"
+  },
+  {
+    "title": "Support à plateforme sur attelage pour 4 vélos SportRack SR2414 Ridge 4, attelages de 2 po, gris granite",
+    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0401012/sportrack-ridge-4-towing-bike-carrier-5e4d8ecc-1077-45b8-a6ea-6135c08baf3f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 249.99,
     "salePrice": 99.93,
     "store": "Canadian Tire",
     "city": "Parry Sound, ON",
     "branch": "Parry Sound, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/shark-hyperair-iq-seche-cheveux-ionique-a-sechage-rapide-avec-concentrateur-2-en-1-0438670p.html",
-    "sku": "0438670",
-    "availability": "Il n’en reste que 1 #043-8670-4"
+    "url": "https://www.canadiantire.ca/fr/pdp/support-a-plateforme-sur-attelage-pour-4-velos-sportrack-sr2414-ridge-4-attelages-de-2-po-gris-granite-0401012p.html",
+    "sku": "0401012",
+    "availability": "Il n’en reste que 1 #040-1012-0"
+  },
+  {
+    "title": "Tapis d'intérieur et d'extérieur CANVAS Basca, 8 x 10 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680048/basca-outdoor-rug-9605a092-adeb-4af7-9752-a7e7577775cb-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 72.99,
+    "salePrice": 34.93,
+    "store": "Canadian Tire",
+    "city": "Parry Sound, ON",
+    "branch": "Parry Sound, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-d-interieur-et-d-exterieur-canvas-basca-8-x-10-pi-0680048p.html",
+    "sku": "0680048",
+    "availability": "Il n’en reste que 1 #068-0048-8"
+  },
+  {
+    "title": "Suncast - Coffre de rangement d'extérieur en résine,très grand, gris, 200 gal",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-storage/0600632/suncast-200-gallon-extra-large-deck-box-944eb197-8a12-4286-bb38-4bc562189c1b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 399.99,
+    "salePrice": 199.93,
+    "store": "Canadian Tire",
+    "city": "Parry Sound, ON",
+    "branch": "Parry Sound, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/suncast-coffre-de-rangement-d-exterieur-en-resine-tres-grand-gris-200-gal-0600632p.html",
+    "sku": "0600632",
+    "availability": "Il n’en reste que 2 #060-0632-2"
+  },
+  {
+    "title": "Sécheuse extensible intérieur/extérieur Type A",
+    "image": "https://media-www.canadiantire.ca/product/living/home-organization/laundry/1429642/type-a-indoor-outdoor-dryer-4f8c50be-fec9-479f-b4f9-efc08ac97fad-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 79.99,
+    "salePrice": 39.93,
+    "store": "Canadian Tire",
+    "city": "Parry Sound, ON",
+    "branch": "Parry Sound, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/secheuse-extensible-interieur-exterieur-type-a-1429642p.html",
+    "sku": "1429642",
+    "availability": "Il n’en reste que 1 #142-9642-0"
+  },
+  {
+    "title": "Service de vaisselle en grès à rebord orné CANVAS Gatestone, blanc, paq. 12",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/dining-and-entertaining/2421124/canvas-12-pc-ornate-rim-dinnerware-set-ec677528-47a1-4eea-a43d-63735afa1b7e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 99.99,
+    "salePrice": 49.93,
+    "store": "Canadian Tire",
+    "city": "Parry Sound, ON",
+    "branch": "Parry Sound, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/service-de-vaisselle-en-gres-a-rebord-orne-canvas-gatestone-blanc-paq-12-2421124p.html",
+    "sku": "2421124",
+    "availability": "Il n’en reste que 1 #242-1124-4"
+  },
+  {
+    "title": "Glacière/réchaud électrique thermoélectrique sur roulettes Mobicool, avec poignée, 45 L, bleu",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/hydration-coolers/0370124/45l-wheeled-12v-cooler-with-adapter-1a3a5430-7fbc-4bde-bbb2-549a37e1e05e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 379.99,
+    "salePrice": 139.93,
+    "store": "Canadian Tire",
+    "city": "Parry Sound, ON",
+    "branch": "Parry Sound, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/glaciere-rechaud-electrique-thermoelectrique-sur-roulettes-mobicool-avec-poignee-45-l-bleu-0370124p.html",
+    "sku": "0370124",
+    "availability": "Il n’en reste que 1 #037-0124-0"
   },
   {
     "title": "Casque de vélo Supercycle Pursuit, tout-petit, confetti",
@@ -72,6 +252,18 @@
     "availability": "Il n’en reste que 7 #073-0542-6"
   },
   {
+    "title": "Ventilateur de plafond NOMA Elodie d'intérieur à 3 pales et 6 vitesses avec moteur à courant continu et télécommande, 52 po, blanc mat",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/ceiling-fans/0529607/noma-elodie-52-ceiling-fan-72da7199-530e-4a16-a0cc-f6144131f730-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 269.99,
+    "salePrice": 99.93,
+    "store": "Canadian Tire",
+    "city": "Parry Sound, ON",
+    "branch": "Parry Sound, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ventilateur-de-plafond-noma-elodie-d-interieur-a-3-pales-et-6-vitesses-avec-moteur-a-courant-continu-et-telecommande-52-po-blanc-mat-0529607p.html",
+    "sku": "0529607",
+    "availability": "Il n’en reste que 1 #052-9607-0"
+  },
+  {
     "title": "Casque de vélo Supercycle Pursuit, jeune, violet/jaune",
     "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycle-accessories/0730541/supercycle-pursuit-youth-purple-yellow-1616f128-dea9-4dc3-929b-ae690ee6240c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 39.99,
@@ -84,6 +276,18 @@
     "availability": "Il n’en reste que 1 #073-0541-8"
   },
   {
+    "title": "Coussin de banc de terrasse CANVAS Summer Palm, résistant à la décoloration, à l'eau et aux taches",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/1880348/canvas-summer-palm-bench-cushion-b3811d99-0623-43b4-a659-fc982d9a2c8b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 55.99,
+    "salePrice": 24.93,
+    "store": "Canadian Tire",
+    "city": "Parry Sound, ON",
+    "branch": "Parry Sound, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/coussin-de-banc-de-terrasse-canvas-summer-palm-resistant-a-la-decoloration-a-l-eau-et-aux-taches-1880348p.html",
+    "sku": "1880348",
+    "availability": "Il n’en reste que 5 #188-0348-8"
+  },
+  {
     "title": "Miroir mural rond CANVAS Devon, noir, 30 po",
     "image": "https://media-www.canadiantire.ca/product/living/home-decor/decor-accents/0681700/canvas-30-devon-black-round-mirror-76a0f163-c706-4617-98c0-488071843d7a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 129.99,
@@ -93,7 +297,7 @@
     "branch": "Parry Sound, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/miroir-mural-rond-canvas-devon-noir-30-po-0681700p.html",
     "sku": "0681700",
-    "availability": "Il n’en reste que 6 #068-1700-8"
+    "availability": "Il n’en reste que 4 #068-1700-8"
   },
   {
     "title": "Casque de vélo Supercycle Pursuit, tout-petit, étoiles",
@@ -108,6 +312,42 @@
     "availability": "Il n’en reste que 1 #073-0543-4"
   },
   {
+    "title": "Abri soleil Outbound Haven à système de 2 moyeux",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/tents-shelters/0766442/outbound-haven-2hub-sun-shelter-dd9ff823-d50f-4269-a2f3-7cb00e9450a9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 79.99,
+    "salePrice": 39.93,
+    "store": "Canadian Tire",
+    "city": "Parry Sound, ON",
+    "branch": "Parry Sound, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/abri-soleil-outbound-haven-a-systeme-de-2-moyeux-0766442p.html",
+    "sku": "0766442",
+    "availability": "Il n’en reste que 2 #076-6442-2"
+  },
+  {
+    "title": "Coussin décoratif réversible For Living collection estivale, nageurs, 16 x 16 po",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/1881331/for-living-summer-series-toss-cushions-swimmers-1855176e-1b0f-4840-819b-f34aecac6353-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Parry Sound, ON",
+    "branch": "Parry Sound, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/coussin-decoratif-reversible-for-living-collection-estivale-nageurs-16-x-16-po-1881331p.html",
+    "sku": "1881331",
+    "availability": "Il n’en reste que 7 #188-1331-0"
+  },
+  {
+    "title": "Sac à dos résistant à l’eau léger Woods Chilkoot pour randonnée/camping/voyage, 40 l",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/backpacks-luggage-accessories/0766178/woods-chilkoot-40l-591d1df4-4ef6-4546-88c9-f7d47662ef0a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 139.99,
+    "salePrice": 69.93,
+    "store": "Canadian Tire",
+    "city": "Parry Sound, ON",
+    "branch": "Parry Sound, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/sac-a-dos-resistant-a-l-eau-leger-woods-chilkoot-pour-randonnee-camping-voyage-40-l-0766178p.html",
+    "sku": "0766178",
+    "availability": "Il n’en reste que 2 #076-6178-2"
+  },
+  {
     "title": "Plomb ovale",
     "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0784981/danielson-sinker-egg-size-10-1-8-oz-9f7546cc-f4ae-47f3-9ab5-abbf9a12ecbf-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 3.49,
@@ -120,10 +360,22 @@
     "availability": ""
   },
   {
+    "title": "Pagaie de kayak en aluminium Pelican Vesta, 230 cm (90,5 po), bleu",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0792070/pelican-vesta-kayak-paddle-blue-1542ddac-af1f-4086-b76d-d41499e42e53-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 99.99,
+    "salePrice": 39.93,
+    "store": "Canadian Tire",
+    "city": "Parry Sound, ON",
+    "branch": "Parry Sound, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/pagaie-de-kayak-en-aluminium-pelican-vesta-230-cm-90-5-po-bleu-0792070p.html",
+    "sku": "0792070",
+    "availability": ""
+  },
+  {
     "title": "Lampe à suspendre sous le capot CMS MotoMaster",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0370744/motomaster-smd-underhood-hanging-light-06675b9a-b8ab-4eb4-af06-ed0658a3b085-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 99.99,
-    "salePrice": 39.93,
+    "salePrice": 27.93,
     "store": "Canadian Tire",
     "city": "Parry Sound, ON",
     "branch": "Parry Sound, ON",
@@ -142,6 +394,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/plats-de-cuisson-antiadhesifs-paderno-vida-paq-4-1429584p.html",
     "sku": "1429584",
     "availability": "Il n’en reste que 4 #142-9584-8"
+  },
+  {
+    "title": "Verre à boisson haut incassable CANVAS, transparent, 21,3 oz",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/1592105/canvas-clear-shatterproof-glass-885afbd7-a71b-4145-82d7-bef8cfee69b9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 8.99,
+    "salePrice": 3.93,
+    "store": "Canadian Tire",
+    "city": "Parry Sound, ON",
+    "branch": "Parry Sound, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/verre-a-boisson-haut-incassable-canvas-transparent-21-3-oz-1592105p.html",
+    "sku": "1592105",
+    "availability": "8 En Stock#159-2105-4"
   },
   {
     "title": "Cuiller hypocrite Danielson, rouge et blanc, 3/8 oz",
@@ -165,7 +429,7 @@
     "branch": "Parry Sound, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/minioeufs-en-chocolat-au-lait-hershey-s-220-g-0514168p.html",
     "sku": "0514168",
-    "availability": "10 En Stock#051-4168-6"
+    "availability": "Il n’en reste que 6 #051-4168-6"
   },
   {
     "title": "Support à plateforme sur attelage pour 1 vélo SportRack SR4885 Upshift Plu, noir",
@@ -192,10 +456,22 @@
     "availability": "Il n’en reste que 1 #842-4559-4"
   },
   {
+    "title": "Ensemble à badigeonner pour le barbecue Vermont Castings",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking-accessories/0853776/vermont-castings-basting-set-6fc10dae-3e79-4b0d-9061-be542b57ab0f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 26.99,
+    "salePrice": 12.93,
+    "store": "Canadian Tire",
+    "city": "Parry Sound, ON",
+    "branch": "Parry Sound, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ensemble-a-badigeonner-pour-le-barbecue-vermont-castings-0853776p.html",
+    "sku": "0853776",
+    "availability": "Il n’en reste que 2 #085-3776-4"
+  },
+  {
     "title": "Huitre à enfourcher flottante gonflable pour lac",
     "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-water-fun/0791411/clamshell-lake-inflatable-84c224b6-f74f-43cb-add7-f18aa0e52402-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 99.99,
-    "salePrice": 49.93,
+    "salePrice": 39.93,
     "store": "Canadian Tire",
     "city": "Parry Sound, ON",
     "branch": "Parry Sound, ON",
@@ -226,6 +502,30 @@
     "url": "https://www.canadiantire.ca/fr/pdp/peinture-antirouille-a-base-d-eau-black-decker-927-ml-pinte-0489541p.html",
     "sku": "0489541",
     "availability": ""
+  },
+  {
+    "title": "Cache-maillot à FPS Outbound, femmes, bleu",
+    "image": "https://media-www.canadiantire.ca/product/playing/footwear-apparel/summer-footwear-apparel/1874005/outbound-upf-kids-rashguard-top-youth-size-7-67896ae5-4060-4016-b0d8-d49d7fc21597-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 32.99,
+    "salePrice": 12.93,
+    "store": "Canadian Tire",
+    "city": "Parry Sound, ON",
+    "branch": "Parry Sound, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/cache-maillot-a-fps-outbound-femmes-bleu-1873987p.html",
+    "sku": "1873987",
+    "availability": ""
+  },
+  {
+    "title": "Tente de camping étanche pour 6 personnes Woods Lookout avec toile de sol et fourre-tout",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/tents-shelters/0766167/woods-lookout-6p-tent-footprint-86e1ff98-fbb8-4f40-a269-cce27579e3a0-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 46.99,
+    "salePrice": 19.93,
+    "store": "Canadian Tire",
+    "city": "Parry Sound, ON",
+    "branch": "Parry Sound, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tente-de-camping-etanche-pour-6-personnes-woods-lookout-avec-toile-de-sol-et-fourre-tout-0766167p.html",
+    "sku": "0766167",
+    "availability": "Il n’en reste que 2 #076-6167-8"
   },
   {
     "title": "Support sécuritaire robuste pour climatiseur de fenêtre, réglable, acier",
@@ -261,7 +561,7 @@
     "branch": "Parry Sound, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/feuilles-de-poncage-de-precision-en-maille-mastercraft-paq-30-0542213p.html",
     "sku": "0542213",
-    "availability": "Il n’en reste que 5 #054-2213-4"
+    "availability": "Il n’en reste que 4 #054-2213-4"
   },
   {
     "title": "Tiges de siège pour bateau en aluminium brossé Lock ’N-Pin, avec poteau de siège, 11 po",
@@ -279,7 +579,7 @@
     "title": "Pomme de douche Kohler Elliston à poignée simple et 1 pulvérisateur, pour baignoire et douche. chrome",
     "image": "https://media-www.canadiantire.ca/product/fixing/plumbing/faucets-fixtures/0634721/kohler-elliston-tub-shower-faucet-chrome-130c3ce7-5e63-4823-851c-4f4d318376c4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 334.99,
-    "salePrice": 129.93,
+    "salePrice": 119.93,
     "store": "Canadian Tire",
     "city": "Parry Sound, ON",
     "branch": "Parry Sound, ON",
@@ -360,6 +660,18 @@
     "availability": ""
   },
   {
+    "title": "Recharge de mousse non toxique Fom Mania Fomanche, transparent, 12 oz, 5 ans et plus, pour activités estivales/d'extérieur",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/seasonal-toys/0508702/fomalanche-refills-70cfff0f-25c8-4b83-aae3-39a23b5cd154-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 8.49,
+    "salePrice": 2.93,
+    "store": "Canadian Tire",
+    "city": "Parry Sound, ON",
+    "branch": "Parry Sound, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/recharge-de-mousse-non-toxique-fom-mania-fomanche-transparent-12-oz-5-ans-et-plus-pour-activites-estivales-d-exterieur-0508702p.html",
+    "sku": "0508702",
+    "availability": "Il n’en reste que 2 #050-8702-2"
+  },
+  {
     "title": "Émerillon à barillet Danielson, laiton, taille 1/0, paq. 2",
     "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0774426/danielson-barrel-swivel-brass-size-1-0-2pk-ac612623-f964-44ce-9fdd-e819f746dcb4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 0.99,
@@ -369,7 +681,7 @@
     "branch": "Parry Sound, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/emerillon-a-barillet-danielson-laiton-taille-1-0-paq-2-0774426p.html",
     "sku": "0774426",
-    "availability": "Il n’en reste que 3 #077-4426-2"
+    "availability": "Il n’en reste que 2 #077-4426-2"
   },
   {
     "title": "Plaque murale sans vis Legrand RWP262NICC6 Radiant, 2 dispositifs, nickel",
@@ -382,6 +694,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/plaque-murale-sans-vis-legrand-rwp262nicc6-radiant-2-dispositifs-nickel-0529161p.html",
     "sku": "0529161",
     "availability": ""
+  },
+  {
+    "title": "Disque de lubrification Reese pour 5e roue, 12 po",
+    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0409736/reese-5th-wheel-lube-plate-52b26878-f997-4a28-a7c4-19c53d52bb3c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 25.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Parry Sound, ON",
+    "branch": "Parry Sound, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/disque-de-lubrification-reese-pour-5e-roue-12-po-0409736p.html",
+    "sku": "0409736",
+    "availability": "Il n’en reste que 2 #040-9736-0"
   },
   {
     "title": "Extension Plug & Glow HyperBright, multicolore, 24 po",
@@ -411,13 +735,25 @@
     "title": "Disque de frein pour vélo Supercycle en acier inoxydable avec vis de fixation, 160 mm",
     "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycle-accessories/0737451/supercycle-bike-disc-brake-rotor-de8a180e-db17-40a9-9b01-ada2d1947375-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 26.99,
-    "salePrice": 12.93,
+    "salePrice": 11.43,
     "store": "Canadian Tire",
     "city": "Parry Sound, ON",
     "branch": "Parry Sound, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/disque-de-frein-pour-velo-supercycle-en-acier-inoxydable-avec-vis-de-fixation-160-mm-0737451p.html",
     "sku": "0737451",
     "availability": "Il n’en reste que 4 #073-7451-0"
+  },
+  {
+    "title": "Housse de pare-brise Mallory Artic",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-winter-accessories/0304231/mallory-artic-windshield-cover-011618a4-6e16-4b05-acca-39665bdfee0b.png?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Parry Sound, ON",
+    "branch": "Parry Sound, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/housse-de-pare-brise-mallory-artic-0304231p.html",
+    "sku": "0304231",
+    "availability": "Il n’en reste que 5 #030-4231-4"
   },
   {
     "title": "Interrupteur à 3 voies Leviton RE153-744 Renu avec câblage à mise à la terre automatique, 15 A, 120/277 V, blanc, plaque murale non incluse",
@@ -432,16 +768,16 @@
     "availability": ""
   },
   {
-    "title": "Filet porte-tuyau d’arrosage Alpena, 25 à 50 pi",
-    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0409744/alpena-hose-holder-1ea42e0b-6f53-488d-a7d6-6fbaa03b9f91-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 9.49,
-    "salePrice": 1.43,
+    "title": "Machine à bulles Gazillion Bubbles Burstin' Bubble Clouds pour enfants. 3 ans et plus",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/seasonal-toys/0508695/burstin-bubble-clouds-8da44cc7-116e-4f97-bd8b-e94f7a189de5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 39.99,
+    "salePrice": 14.93,
     "store": "Canadian Tire",
     "city": "Parry Sound, ON",
     "branch": "Parry Sound, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/filet-porte-tuyau-d-arrosage-alpena-25-a-50-pi-0409744p.html",
-    "sku": "0409744",
-    "availability": "Il n’en reste que 1 #040-9744-0"
+    "url": "https://www.canadiantire.ca/fr/pdp/machine-a-bulles-gazillion-bubbles-burstin-bubble-clouds-pour-enfants-3-ans-et-plus-0508695p.html",
+    "sku": "0508695",
+    "availability": "Il n’en reste que 1 #050-8695-8"
   },
   {
     "title": "Spirale intelligente fluorescente à mémoire Flex+ Monster Illuminessence avec RGB Flow",
@@ -465,7 +801,7 @@
     "branch": "Parry Sound, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/adaptateur-pour-toits-courts-sportrack-sr1116-noir-0401091p.html",
     "sku": "0401091",
-    "availability": ""
+    "availability": "Il n’en reste que 3 #040-1091-0"
   },
   {
     "title": "Chiffons en tissu éponge SIMONIZ, 16 x 19 po, blanc, paq. 8",
@@ -514,18 +850,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/adaptateur-pour-velo-alternatif-sportrack-sr0500-noir-0401097p.html",
     "sku": "0401097",
     "availability": "Il n’en reste que 4 #040-1097-8"
-  },
-  {
-    "title": "Cadre de plaque d'immatriculation Cruiser Chevrolet, noir mat",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0376269/license-plate-frame-chevy-matte-black-db04d571-ffd8-4ece-9f97-808020a0be07-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 24.99,
-    "salePrice": 5.93,
-    "store": "Canadian Tire",
-    "city": "Parry Sound, ON",
-    "branch": "Parry Sound, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/cadre-de-plaque-d-immatriculation-cruiser-chevrolet-noir-mat-0376269p.html",
-    "sku": "0376269",
-    "availability": "Il n’en reste que 1 #037-6269-0"
   },
   {
     "title": "Peinture de retouche Scratch Fix All-in-1, Grès clair (M) (PKG)",
@@ -612,6 +936,18 @@
     "availability": ""
   },
   {
+    "title": "Kit d'éclairage extérieur intelligent Type S, 72 po",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0378011/types-smart-72-exterior-led-kit-eb8da8eb-2c9b-40d6-81c5-88376166b279-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 154.99,
+    "salePrice": 69.93,
+    "store": "Canadian Tire",
+    "city": "Parry Sound, ON",
+    "branch": "Parry Sound, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/kit-d-eclairage-exterieur-intelligent-type-s-72-po-0378011p.html",
+    "sku": "0378011",
+    "availability": "Il n’en reste que 3 #037-8011-0"
+  },
+  {
     "title": "Dandinette bouton Matzuo, 1/2 oz",
     "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/1784497/matzuo-button-jig-glow-chartreuse-1-2-oz-cf2bbfc8-8511-4a3f-a2c9-aea1dfb0c7be-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 6.49,
@@ -634,6 +970,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/piquet-de-jardin-pour-fete-de-remise-des-diplomes-best-class-ever-multicolore-8-1-2-po-8549969p.html",
     "sku": "8549969",
     "availability": "Il n’en reste que 4 #854-9969-0"
+  },
+  {
+    "title": "Cordon élastique pour planche à pagaie et kayak Invincible Marine",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0793370/sup-paddle-bung-46d9820b-c8f4-4eb5-92c9-a1449dfbb692-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 11.99,
+    "salePrice": 4.93,
+    "store": "Canadian Tire",
+    "city": "Parry Sound, ON",
+    "branch": "Parry Sound, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/cordon-elastique-pour-planche-a-pagaie-et-kayak-invincible-marine-0793370p.html",
+    "sku": "0793370",
+    "availability": "Il n’en reste que 2 #079-3370-4"
   },
   {
     "title": "Ensemble de déchiquetage Troy-Bilt, 30 po",

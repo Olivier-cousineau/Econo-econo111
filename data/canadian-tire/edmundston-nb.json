@@ -1,5 +1,77 @@
 [
   {
+    "title": "Affûte-couteaux à 3 étapes MASTER Chef",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/cutlery/2421029/master-chef-3stage-knife-sharpener-b9ab2767-c8c0-473e-a296-6cb70527856a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 18.99,
+    "salePrice": 4.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/affute-couteaux-a-3-etapes-master-chef-2421029p.html",
+    "sku": "2421029",
+    "availability": "22 En Stock#242-1029-2"
+  },
+  {
+    "title": "Tasses à mesurer empilables en plastique MASTER Chef, paq. 10",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/bakeware-baking-prep/1429676/master-chef-10pc-measuring-cup-set-73c761cb-c28c-42fe-a32e-f57a30c6b9a6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 24.99,
+    "salePrice": 8.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/tasses-a-mesurer-empilables-en-plastique-master-chef-paq-10-1429676p.html",
+    "sku": "1429676",
+    "availability": "65 En Stock#142-9676-0"
+  },
+  {
+    "title": "Ensemble de détente For Living Avenue, 4 pièces",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/1881372/for-living-avenue-4-pc-conversation-set-3f6194c7-af31-4b20-8c68-e15c8926954d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 699.99,
+    "salePrice": 349.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/ensemble-de-detente-for-living-avenue-4-pieces-1881372p.html",
+    "sku": "1881372",
+    "availability": "Il n’en reste que 5 #188-1372-2"
+  },
+  {
+    "title": "Ouvre-porte de garage à courroie ultra silencieux avec Wi-Fi et caméra intégrée Chamberlain B4643TC, 3/4 HP",
+    "image": "https://media-www.canadiantire.ca/product/fixing/tools/garage-organization/0460985/chamberlain-3-4-hp-belt-garage-door-opener-with-wifi-camera-809fe420-8b59-4bea-8a74-5bf3b2c5f9e3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 599.99,
+    "salePrice": 299.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/ouvre-porte-de-garage-a-courroie-ultra-silencieux-avec-wi-fi-et-camera-integree-chamberlain-b4643tc-3-4-hp-0460985p.html",
+    "sku": "0460985",
+    "availability": "Il n’en reste que 1 #046-0985-8"
+  },
+  {
+    "title": "T-shirt sport à manches courtes et extensibles avec encolure ras du cou Mooselander, hommes, couleur unie, tailles variées, noir/gris, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/playing/footwear-apparel/summer-footwear-apparel/1874066/active-2-pack-short-sleeve-tees-m-l-ce888845-ad24-41df-8604-c50d7052ca02-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 21.99,
+    "salePrice": 2.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/t-shirt-sport-a-manches-courtes-et-extensibles-avec-encolure-ras-du-cou-mooselander-hommes-couleur-unie-tailles-variees-noir-gris-paq-2-1874066p.html",
+    "sku": "1874066",
+    "availability": ""
+  },
+  {
+    "title": "Planches à découper en polyéthylène MASTER Chef, va au lave-vaisselle, antidérapant, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/cutlery/0428503/master-chef-2-pack-polyboards-faebb433-ec94-4af1-a177-0bbf86d3f784-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/planches-a-decouper-en-polyethylene-master-chef-va-au-lave-vaisselle-antiderapant-paq-2-0428503p.html",
+    "sku": "0428503",
+    "availability": "8 En Stock#042-8503-6"
+  },
+  {
     "title": "Briquet polyvalent Master Chef pour le barbecue, la maison et le camping",
     "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-accessories/0851409/master-chef-bbq-lighter-7c2345d3-0bc6-42ff-ad9e-7e9f93181aec-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 2.99,
@@ -12,16 +84,16 @@
     "availability": ""
   },
   {
-    "title": "Cintres pivotants compacts en velours Type A avec barre à pantalon, couleurs variées, paq. 40",
-    "image": "https://media-www.canadiantire.ca/product/living/home-organization/closet-organization/0688308/type-a-velvet-suit-hanger-black-10pk-4afb3f73-0449-46d6-975c-369ae2760de2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 32.99,
-    "salePrice": 12.93,
+    "title": "Mini-sonnette de vélo Supercycle en alliage avec levier réglable, son puissant, argent",
+    "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycle-accessories/0730615/supercycle-mini-bike-bell-08c70060-138d-4890-99f1-96684411dade-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 7.49,
+    "salePrice": 3.43,
     "store": "Canadian Tire",
     "city": "Edmundston, NB",
     "branch": "Edmundston, NB",
-    "url": "https://www.canadiantire.ca/fr/pdp/cintres-pivotants-compacts-en-velours-type-a-avec-barre-a-pantalon-couleurs-variees-paq-40-0688307p.html",
-    "sku": "0688307",
-    "availability": ""
+    "url": "https://www.canadiantire.ca/fr/pdp/mini-sonnette-de-velo-supercycle-en-alliage-avec-levier-reglable-son-puissant-argent-0730615p.html",
+    "sku": "0730615",
+    "availability": "Il n’en reste que 2 #073-0615-4"
   },
   {
     "title": "Machine à café et à espresso mince Nespresso Vertuo Next par DeLonghi, gris",
@@ -84,6 +156,42 @@
     "availability": "Il n’en reste que 1 #168-0087-6"
   },
   {
+    "title": "Foyer électrique CANVAS Marseille, 54 po, 1 400 W, comprend une télécommande, blanc",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/electric-fireplaces/0643176/canvas-marseille-fireplace-fedce335-a386-471e-87b0-b3ad50097466-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 701.34,
+    "salePrice": 349.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/foyer-electrique-canvas-marseille-54-po-1-400-w-comprend-une-telecommande-blanc-0643176p.html",
+    "sku": "0643176",
+    "availability": "Il n’en reste que 2 #064-3176-2"
+  },
+  {
+    "title": "Tapis d'intérieur et d'extérieur CANVAS Basca, 8 x 10 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680048/basca-outdoor-rug-9605a092-adeb-4af7-9752-a7e7577775cb-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 72.99,
+    "salePrice": 34.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-d-interieur-et-d-exterieur-canvas-basca-8-x-10-pi-0680048p.html",
+    "sku": "0680048",
+    "availability": "Il n’en reste que 3 #068-0048-8"
+  },
+  {
+    "title": "Tapis rond d'intérieur et d'extérieur CANVAS Eperon, 6 x 6 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680047/eperon-round-outdoor-rug-194b3686-4034-4636-b92a-b5fa029609e5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 49.99,
+    "salePrice": 19.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-rond-d-interieur-et-d-exterieur-canvas-eperon-6-x-6-pi-0680047p.html",
+    "sku": "0680047",
+    "availability": "Il n’en reste que 1 #068-0047-0"
+  },
+  {
     "title": "Dôme d'escalade métallique Plum de 8,5 pi avec glissière de 10 pi, 3 ans et plus",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/backyard-amusement/1841061/plum-metal-climbing-dome-with-slide-53564def-8e22-4ad0-9169-b747db0e5be1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 699.99,
@@ -96,6 +204,30 @@
     "availability": "Il n’en reste que 3 #184-1061-0"
   },
   {
+    "title": "Coussin de siège profond hydrofuge résistant aux taches CANVAS, rouge",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0882124/canvas-deep-seat-chair-cushion-red-70a5e419-f063-4d33-87d9-34a3290bd702-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 139.99,
+    "salePrice": 69.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/coussin-de-siege-profond-hydrofuge-resistant-aux-taches-canvas-rouge-0882124p.html",
+    "sku": "0882124",
+    "availability": "Il n’en reste que 3 #088-2124-6"
+  },
+  {
+    "title": "Sorbetière numérique Vida par PADERNO, machine à crème glacée et gâteries 4-en-1, acier inoxydable, 1,9 L",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0431564/vida-by-paderno-ice-cream-maker-cab802eb-a002-46c2-b174-7fca7a24c75c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 150.84,
+    "salePrice": 49.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/sorbetiere-numerique-vida-par-paderno-machine-a-creme-glacee-et-gateries-4-en-1-acier-inoxydable-1-9-l-0431564p.html",
+    "sku": "0431564",
+    "availability": "Il n’en reste que 2 #043-1564-0"
+  },
+  {
     "title": "Chaises de salle à manger bois massif et garniture en similicuir CANVAS Evanʼs Creek, paq. 2, brun",
     "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/0689597/canvas-evan-s-creek-dining-chair-2-pack-287d3dbe-9c5e-41ca-9ef5-b1b9bb38cc44-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 299.99,
@@ -106,6 +238,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/chaises-de-salle-a-manger-bois-massif-et-garniture-en-similicuir-canvas-evan-s-creek-paq-2-brun-0689597p.html",
     "sku": "0689597",
     "availability": "Il n’en reste que 1 #068-9597-6"
+  },
+  {
+    "title": "Tente de camping en dôme Woods Creekside pour 3 saisons, 3 personnes avec auvent, bâche de pluie et sac de transport",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/tents-shelters/0766069/woods-creekside-3-person-tent-e93ddc19-532c-4cc0-9284-21f6cc22de39-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 159.99,
+    "salePrice": 79.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/tente-de-camping-en-dome-woods-creekside-pour-3-saisons-3-personnes-avec-auvent-bache-de-pluie-et-sac-de-transport-0766069p.html",
+    "sku": "0766069",
+    "availability": "Il n’en reste que 1 #076-6069-2"
   },
   {
     "title": "Matelas de camping pliant pour chiens en tissu à carreaux Woods DOG-WOOD, 38,6 x 31,1 po, bleu",
@@ -132,6 +276,18 @@
     "availability": "Il n’en reste que 1 #088-2034-0"
   },
   {
+    "title": "Support de plafond en acier pour kayak Mastercraft, capacité de rangement de 2 kayaks",
+    "image": "https://media-www.canadiantire.ca/product/fixing/tools/garage-organization/0681825/mastercraft-kayak-ceiling-rack-b59057ac-6af6-457f-80b2-b0491f629d26-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 99.99,
+    "salePrice": 29.98,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/support-de-plafond-en-acier-pour-kayak-mastercraft-capacite-de-rangement-de-2-kayaks-0681825p.html",
+    "sku": "0681825",
+    "availability": "10 En Stock#068-1825-2"
+  },
+  {
     "title": "Système d'organisation latéral de la lessive Type A Linear, blanc",
     "image": "https://media-www.canadiantire.ca/product/living/home-organization/laundry/2420004/type-a-side-unit-laundry-organization-system-44db3078-e2d8-4d52-bd8b-2f44f616a61e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 99.99,
@@ -142,6 +298,30 @@
     "url": "https://www.canadiantire.ca/fr/pdp/systeme-d-organisation-lateral-de-la-lessive-type-a-linear-blanc-2420004p.html",
     "sku": "2420004",
     "availability": "Il n’en reste que 4 #242-0004-6"
+  },
+  {
+    "title": "Craies d'extérieur aux couleurs vives et audacieuses pour trottoir Crayola Superchalk, lavables, 4 ans et plus",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/seasonal-toys/0509725/crayola-superchalk-55b77fce-a226-4f82-8438-cf57fc64801c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 1.99,
+    "salePrice": 0.43,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/craies-d-exterieur-aux-couleurs-vives-et-audacieuses-pour-trottoir-crayola-superchalk-lavables-4-ans-et-plus-0509725p.html",
+    "sku": "0509725",
+    "availability": "15 En Stock#050-9725-2"
+  },
+  {
+    "title": "Barbecue et fumoir à granules de bois avec commandes numériques MASTER Chef Grill Turismo",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking/0853185/masterchef-grill-turismo-pellet-grill-0e9e7b45-7f3b-40ef-b79d-a60edcc1aca5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 501.34,
+    "salePrice": 249.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/barbecue-et-fumoir-a-granules-de-bois-avec-commandes-numeriques-master-chef-grill-turismo-0853185p.html",
+    "sku": "0853185",
+    "availability": "Il n’en reste que 1 #085-3185-0"
   },
   {
     "title": "Bols de cuisine empilables MASTER Chef en plastique, paq. 8",
@@ -156,16 +336,64 @@
     "availability": "Il n’en reste que 2 #142-4985-4"
   },
   {
-    "title": "Radiateur-meuble FOR LIVING",
-    "image": "https://media-www.canadiantire.ca/product/living/home-environment/winter-climate-control/1430094/for-living-cabinet-heater-2e3d657e-d84d-43d4-92ad-48092dde6fc4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 86.34,
-    "salePrice": 39.98,
+    "title": "Vélo hybride Stratus Endure, noir, 700C",
+    "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycles/0712059/stratus-700c-black-blue-endure-00057a26-d166-44ba-9ed8-86f7f39c7d87-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 599.99,
+    "salePrice": 299.93,
     "store": "Canadian Tire",
     "city": "Edmundston, NB",
     "branch": "Edmundston, NB",
-    "url": "https://www.canadiantire.ca/fr/pdp/radiateur-meuble-for-living-1430094p.html",
-    "sku": "1430094",
-    "availability": "40 En Stock#143-0094-6"
+    "url": "https://www.canadiantire.ca/fr/pdp/velo-hybride-stratus-endure-noir-700c-0712059p.html",
+    "sku": "0712059",
+    "availability": ""
+  },
+  {
+    "title": "Plateau de culture écologique rectangulaire Planter’s Pride, recyclable, 20 po",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/gardening/gardening-plant-accessories/1591252/eco-grow-tray-20062a78-f3fd-4014-971b-d52a48b64153-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 2.99,
+    "salePrice": 1.43,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/plateau-de-culture-ecologique-rectangulaire-planter-s-pride-recyclable-20-po-1591252p.html",
+    "sku": "1591252",
+    "availability": "30 En Stock#159-1252-8"
+  },
+  {
+    "title": "VFI Helly Hansen à gonflage manuel",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-water-fun/0793042/helly-hansen-personal-flotation-device-manual-inflate-85a87b21-f29f-424c-92b1-c4302e938b2d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 199.99,
+    "salePrice": 79.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/vfi-helly-hansen-a-gonflage-manuel-0793042p.html",
+    "sku": "0793042",
+    "availability": "Il n’en reste que 2 #079-3042-6"
+  },
+  {
+    "title": "Verres CANVAS, paq. 8",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0597815/canvas-drink-set-8-piece-3ae17bd9-16da-4321-b3bc-c7570bd558d9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 34.99,
+    "salePrice": 14.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/verres-canvas-paq-8-0597815p.html",
+    "sku": "0597815",
+    "availability": "Il n’en reste que 1 #059-7815-2"
+  },
+  {
+    "title": "Allume-feu Vermont Castings PWR POD (outil seulement)",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking-fuels-flavours/0850200/vermont-castings-pwr-pod-charcoal-igniter-13e51890-ecea-462a-a3d0-cf8469353367-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 99.99,
+    "salePrice": 49.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/allume-feu-vermont-castings-pwr-pod-outil-seulement-0850200p.html",
+    "sku": "0850200",
+    "availability": "Il n’en reste que 6 #085-0200-2"
   },
   {
     "title": "Tapis de salle de bains CANVAS en coton, 20 x 34 po",
@@ -219,13 +447,25 @@
     "title": "Sandales de randonnée Outbound Shore à bout fermé pour hommes, taupe/beige",
     "image": "https://media-www.canadiantire.ca/product/playing/footwear-apparel/summer-footwear-apparel/1870291/outbound-men-s-shore-brown-taupe-gold-sandal-m7-df5c53e6-1f60-40c5-bf7e-a7f431d48ad6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 59.99,
-    "salePrice": 29.93,
+    "salePrice": 27.93,
     "store": "Canadian Tire",
     "city": "Edmundston, NB",
     "branch": "Edmundston, NB",
     "url": "https://www.canadiantire.ca/fr/pdp/sandales-de-randonnee-outbound-shore-a-bout-ferme-pour-hommes-taupe-beige-1870291p.html",
     "sku": "1870291",
     "availability": ""
+  },
+  {
+    "title": "For Living Lakeside - Rideaux en tissu pour gazebo, beige, 118 x 118 x 79 po",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/0881611/for-living-lakeside-collection-gazebo-walls--fb0de629-9d30-43df-87ce-ac2c6bbf67d9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 189.99,
+    "salePrice": 94.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/for-living-lakeside-rideaux-en-tissu-pour-gazebo-beige-118-x-118-x-79-po-0881611p.html",
+    "sku": "0881611",
+    "availability": "Il n’en reste que 2 #088-1611-2"
   },
   {
     "title": "Bottes de travail en cuir effleuré à bouts en acier CSA Stanley Jensen pour hommes, 6 po de hauteur, blé",
@@ -327,13 +567,25 @@
     "title": "Applicateur en mousse à prise hexagonale SIMONIZ, rouge/noir, 1 pièce",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-tools/0396053/simoniz-foam-hex-grip-applicator-0290b756-979a-4cf9-94a8-36efa3fc22cb-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 9.99,
-    "salePrice": 4.93,
+    "salePrice": 3.93,
     "store": "Canadian Tire",
     "city": "Edmundston, NB",
     "branch": "Edmundston, NB",
     "url": "https://www.canadiantire.ca/fr/pdp/applicateur-en-mousse-a-prise-hexagonale-simoniz-rouge-noir-1-piece-0396053p.html",
     "sku": "0396053",
     "availability": "Il n’en reste que 4 #039-6053-8"
+  },
+  {
+    "title": "Pistolet mousse sans fil SIMONIZ, outil seul, compatible PWRPOD",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-tools/0393650/simoniz-cordless-foam-gun-bare-tool--d9e374cc-260e-4071-806a-f16d2d580548-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 79.99,
+    "salePrice": 29.98,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/pistolet-mousse-sans-fil-simoniz-outil-seul-compatible-pwrpod-0393650p.html",
+    "sku": "0393650",
+    "availability": "13 En Stock#039-3650-4"
   },
   {
     "title": "Manne à linge inclinable For Living, blanc",
@@ -345,7 +597,7 @@
     "branch": "Edmundston, NB",
     "url": "https://www.canadiantire.ca/fr/pdp/manne-a-linge-inclinable-for-living-blanc-1680142p.html",
     "sku": "1680142",
-    "availability": "Il n’en reste que 4 #168-0142-4"
+    "availability": "Il n’en reste que 3 #168-0142-4"
   },
   {
     "title": "Porte-outils pour cheveux avec encart en silicone The Home Edit par iDesign, résistant à la chaleur",
@@ -372,6 +624,42 @@
     "availability": "Il n’en reste que 6 #040-9091-2"
   },
   {
+    "title": "Brosse pour barbecue en fibres naturelles avec grattoir en acier inoxydable",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking-accessories/1850178/napoleon-palmyra-coconut-bbq-cleaning-brush-15a854af-47d8-45b1-88df-6cf4d0d89362-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/brosse-pour-barbecue-en-fibres-naturelles-avec-grattoir-en-acier-inoxydable-1850178p.html",
+    "sku": "1850178",
+    "availability": ""
+  },
+  {
+    "title": "Tapis d’auto en caoutchouc MotoMaster Extreme, robuste, noir, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-comfort/0312674/motomaster-extreme-floor-mats-2-piece-black-2f5e2a9a-04a7-479b-9eb8-f62113dcb12d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 49.99,
+    "salePrice": 16.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-d-auto-en-caoutchouc-motomaster-extreme-robuste-noir-paq-2-0312674p.html",
+    "sku": "0312674",
+    "availability": "Il n’en reste que 1 #031-2674-0"
+  },
+  {
+    "title": "Coffre portatif Huntshield pour pistolet et accessoires",
+    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-equipment/0755348/huntshield-portable-pistol-and-acc-safe-b6c08d4f-d51d-4b10-9d65-892574f594f5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 39.99,
+    "salePrice": 12.98,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/coffre-portatif-huntshield-pour-pistolet-et-accessoires-0755348p.html",
+    "sku": "0755348",
+    "availability": "8 En Stock#075-5348-6"
+  },
+  {
     "title": "Ampoule halogène de longue durée MotoMaster 9004, paq. 2",
     "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-lighting/1202240/9004mm-bp2-motomaster-long-lasting-halogen-bulbs-94976e88-7002-4eb4-87a1-4b3dd1be0287-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 44.99,
@@ -387,7 +675,7 @@
     "title": "Ensemble de détente d'extérieur/de jardin/de balcon à cadre en acier CANVAS Nero, gris, paq. 3",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/1880299/canvas-nero-3-piece-chat-set-e1afc5e0-df44-4492-a7a2-58dc33c1ab07-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 599.99,
-    "salePrice": 269.93,
+    "salePrice": 199.93,
     "store": "Canadian Tire",
     "city": "Edmundston, NB",
     "branch": "Edmundston, NB",
@@ -418,6 +706,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/repulsif-pour-animaux-a-vaporiser-pret-a-l-emploi-pour-l-exterieur-ortho-animal-b-gon-max-400-g-0591116p.html",
     "sku": "0591116",
     "availability": ""
+  },
+  {
+    "title": "Ampoule pour projecteur à DEL à culot E26 non variable capteur de mouvement NOMA Advanced PAR38, 5000K, lumière du jour, 90 W",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/light-bulbs/0520930/noma-advanced-led-par38-90w-eq-dusk-to-dawn-motion-sensor-eec26b11-b9fb-4546-9974-e6796975cc9a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 30.29,
+    "salePrice": 12.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/ampoule-pour-projecteur-a-del-a-culot-e26-non-variable-capteur-de-mouvement-noma-advanced-par38-5000k-lumiere-du-jour-90-w-0520930p.html",
+    "sku": "0520930",
+    "availability": "Il n’en reste que 3 #052-0930-2"
   },
   {
     "title": "Vélo de montagne Raleigh Chase, double suspension, 27,5 po, bleu",
@@ -480,6 +780,18 @@
     "availability": ""
   },
   {
+    "title": "Housse/étui de protection pour rasoir Outbound, pour le camping, les randonnées et les voyages, convient aux rasoirs standard",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-accessories/0763292/outbound-razor-cover-b88ada25-215a-480e-b8c2-267d37bd09bd-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 1.99,
+    "salePrice": 0.73,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/housse-etui-de-protection-pour-rasoir-outbound-pour-le-camping-les-randonnees-et-les-voyages-convient-aux-rasoirs-standard-0763292p.html",
+    "sku": "0763292",
+    "availability": "19 En Stock#076-3292-6"
+  },
+  {
     "title": "Cuvette en porcelaine Laser 62247 GE avec anneau de finition, peu profond, noir, 6 po",
     "image": "https://media-www.canadiantire.ca/product/fixing/electrical/rough-electrical/1522506/ge-hotpoint-porcelain-pan-ring-6--4a10ea24-c27d-4f5e-ab37-fb4b8c3b9745-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 16.99,
@@ -516,10 +828,70 @@
     "availability": "Il n’en reste que 1 #079-7186-0"
   },
   {
+    "title": "Projecteur solaire à DEL NOMA à couleurs changeantes, 120 lumens, blanc froid, pour terrasse extérieure",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-lighting/0521697/noma-colour-changing-spot-light-ff7c3349-c662-4f9b-babf-0348c5ff1fef-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 39.99,
+    "salePrice": 19.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/projecteur-solaire-a-del-noma-a-couleurs-changeantes-120-lumens-blanc-froid-pour-terrasse-exterieure-0521697p.html",
+    "sku": "0521697",
+    "availability": "Il n’en reste que 2 #052-1697-2"
+  },
+  {
+    "title": "Balle de tir truqué super rebondissante Aerobie Sonic, pour jouer à l'extérieur, 8 ans et plus",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/seasonal-toys/0509710/aerobie-super-bounce-ball-0577bffd-1c36-4536-adb6-e671364c3cc9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 11.99,
+    "salePrice": 4.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/balle-de-tir-truque-super-rebondissante-aerobie-sonic-pour-jouer-a-l-exterieur-8-ans-et-plus-0509710p.html",
+    "sku": "0509710",
+    "availability": ""
+  },
+  {
+    "title": "Thermomètre à infrarouge 2-en-1 Vida par PADERNO avec sonde",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking-accessories/0850120/vida-infrared-thermometer-probe-19b88db6-206f-494f-90cd-aef1ad7ebe6d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 34.99,
+    "salePrice": 14.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/thermometre-a-infrarouge-2-en-1-vida-par-paderno-avec-sonde-0850120p.html",
+    "sku": "0850120",
+    "availability": "Il n’en reste que 2 #085-0120-2"
+  },
+  {
+    "title": "Grandes assiettes en faux marbre CANVAS, paq. 1",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0597343/canvas-palm-breeze-dinner-plate-b8f56df6-2442-42df-b960-87f421f48764-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 7.99,
+    "salePrice": 3.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/grandes-assiettes-en-faux-marbre-canvas-paq-1-0597204p.html",
+    "sku": "0597204",
+    "availability": "Il n’en reste que 2 #059-7204-6"
+  },
+  {
+    "title": "Friteuse à air chaud avec 10 préréglages PowerXL Luminex, chauffage infrarouge, 5 L",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430397/power-xl-luminex-air-fryer-5l-02022883-f407-4a18-abff-15b0873b676d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 196.34,
+    "salePrice": 79.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/friteuse-a-air-chaud-avec-10-prereglages-powerxl-luminex-chauffage-infrarouge-5-l-0430397p.html",
+    "sku": "0430397",
+    "availability": "Il n’en reste que 2 #043-0397-4"
+  },
+  {
     "title": "Garde-boues avant et arrière personnalisés Husky Liners 58466 pour camion à service très intense Ford F250, 2017 à 2020, paquet de 4",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0376242/husky-custom-fit-mud-flaps-ford-f250-super-duty-2017-20-4pc-5c9b9b4a-73de-4250-a0b9-64229decfa24-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 119.99,
-    "salePrice": 14.98,
+    "salePrice": 9.98,
     "store": "Canadian Tire",
     "city": "Edmundston, NB",
     "branch": "Edmundston, NB",
@@ -537,7 +909,7 @@
     "branch": "Edmundston, NB",
     "url": "https://www.canadiantire.ca/fr/pdp/plomb-en-forme-de-ver-0784901p.html",
     "sku": "0784901",
-    "availability": "Il n’en reste que 3 #078-4901-8"
+    "availability": "Il n’en reste que 2 #078-4901-8"
   },
   {
     "title": "SIMONIZ Dash & Trim Duster Refill, Duster Pad, Duster Cleaning, Quick Auto Multi-Purpose Interior Dusting Pad Refills, 10-pk",
@@ -549,7 +921,7 @@
     "branch": "Edmundston, NB",
     "url": "https://www.canadiantire.ca/fr/pdp/simoniz-dash-trim-duster-refill-duster-pad-duster-cleaning-quick-auto-multi-purpose-interior-dusting-pad-refills-10-pk-0397038p.html",
     "sku": "0397038",
-    "availability": "27 En Stock#039-7038-0"
+    "availability": "16 En Stock#039-7038-0"
   },
   {
     "title": "Tapis d'eau gonflable Jimmy Styks avec pompe à air manuelle, 12 pi",
@@ -574,6 +946,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/eponge-en-fil-nettoyante-lave-auto-recyclee-simoniz-0397050p.html",
     "sku": "0397050",
     "availability": "29 En Stock#039-7050-8"
+  },
+  {
+    "title": "Bol en fibre de bambou CANVAS, gris",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0597850/canvas-dual-tone-organic-dinner-bowl-2ed9ccb1-fb59-464c-baec-bf33c08a0b2c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 6.99,
+    "salePrice": 2.43,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/bol-en-fibre-de-bambou-canvas-gris-0597850p.html",
+    "sku": "0597850",
+    "availability": "Il n’en reste que 6 #059-7850-6"
   },
   {
     "title": "Applique murale d'extérieur CANVAS, résistant à la rouille, noir",
@@ -612,6 +996,30 @@
     "availability": "Il n’en reste que 1 #037-9272-2"
   },
   {
+    "title": "Casque de motoneige Origine Novelus, jeunes, choix de tailles",
+    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/powersport/0261220/origine-novelus-youth-helmet-small-a03f1098-eddd-453c-901a-bbd1acb09436-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 154.99,
+    "salePrice": 63.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/casque-de-motoneige-origine-novelus-jeunes-choix-de-tailles-0261220p.html",
+    "sku": "0261220",
+    "availability": ""
+  },
+  {
+    "title": "Ensemble-cadeau Vermont Castings, paq. 4",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking-accessories/0852168/vermont-castings-4-piece-gift-set-5a0656b8-6337-41f4-9472-1c0392273563-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 109.99,
+    "salePrice": 49.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/ensemble-cadeau-vermont-castings-paq-4-0852168p.html",
+    "sku": "0852168",
+    "availability": "Il n’en reste que 2 #085-2168-8"
+  },
+  {
     "title": "5 flotteurs Danielson rouges et blancs assortis",
     "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0782900/danielson-snap-on-float-red-white-5-pack-359a8d71-f143-422a-88f5-df73a8a66109-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 5.99,
@@ -622,6 +1030,102 @@
     "url": "https://www.canadiantire.ca/fr/pdp/5-flotteurs-danielson-rouges-et-blancs-assortis-0782900p.html",
     "sku": "0782900",
     "availability": "Il n’en reste que 3 #078-2900-2"
+  },
+  {
+    "title": "Barre d'alimentation NOMA à 2 prises, 3 ports USB-A et USB-C",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/power-bars-extension-cords-timers/1522704/noma-2-outlet-power-bar-with-3-usb-a-usb-c-efcb463f-5be1-4b96-9299-512d234ba12f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 34.99,
+    "salePrice": 14.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/barre-d-alimentation-noma-a-2-prises-3-ports-usb-a-et-usb-c-1522704p.html",
+    "sku": "1522704",
+    "availability": "Il n’en reste que 1 #152-2704-2"
+  },
+  {
+    "title": "Assainisseur d'air à suspendre pour véhicule Little Trees, High Octane, paq. 3",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0372917/little-trees-3-pack-high-octane-hanging-air-freshener-3bd0665f-2cb3-49df-96c9-88a34e1afefe-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 4.29,
+    "salePrice": 1.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/assainisseur-d-air-a-suspendre-pour-vehicule-little-trees-high-octane-paq-3-0372917p.html",
+    "sku": "0372917",
+    "availability": ""
+  },
+  {
+    "title": "Boule de lave requin Goofy Foot, pour l'intérieur et l'extérieur, 3 ans et plus",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/seasonal-toys/0509737/shark-lava-ball-b417b47f-a51b-4d1a-b8b6-4bd4e60eeef9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 9.99,
+    "salePrice": 3.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/boule-de-lave-requin-goofy-foot-pour-l-interieur-et-l-exterieur-3-ans-et-plus-0509737p.html",
+    "sku": "0509737",
+    "availability": "Il n’en reste que 4 #050-9737-4"
+  },
+  {
+    "title": "Craies pour trottoir Crayola Unicorn Horn, tourbillon arc-en-ciel, 3 ans et plus, pour activités estivales/jeu de pelouse, paq. 3",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/seasonal-toys/0506262/crayola-unicorn-chalk-61e0d0c4-17b8-4528-923c-176d02048600-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 5.49,
+    "salePrice": 0.43,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/craies-pour-trottoir-crayola-unicorn-horn-tourbillon-arc-en-ciel-3-ans-et-plus-pour-activites-estivales-jeu-de-pelouse-paq-3-0506262p.html",
+    "sku": "0506262",
+    "availability": "Il n’en reste que 1 #050-6262-0"
+  },
+  {
+    "title": "Sac à collation hermétique et réutilisable Stasher en silicone, choix varié, 290 mL",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/food-storage/1429113/stasher-silicone-snack-bag-4abece39-e8ae-4f72-9d5e-901bad94683d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 11.99,
+    "salePrice": 3.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/sac-a-collation-hermetique-et-reutilisable-stasher-en-silicone-choix-varie-290-ml-1429113p.html",
+    "sku": "1429113",
+    "availability": "Il n’en reste que 7 #142-9113-0"
+  },
+  {
+    "title": "Ampoule de rechange pour tue-moustiques/tue-insectes à lumière UV Stinger, compatible avec la série BKC90, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/gardening/mosquito-sun-protection/0591241/stinger-replacement-bulb-for-0597564-fb86be26-0634-4e85-a312-ee3e546fa1d7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 3.98,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/ampoule-de-rechange-pour-tue-moustiques-tue-insectes-a-lumiere-uv-stinger-compatible-avec-la-serie-bkc90-paq-2-0591241p.html",
+    "sku": "0591241",
+    "availability": "Il n’en reste que 3 #059-1241-2"
+  },
+  {
+    "title": "Masque de natation Speedo Luca pour enfants avec tuba et lentilles antibuée, 3 ans et plus",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-fun/0810215/kids-luca-mask-w-snorkel-1e76cf32-8c00-46b0-84f9-d2dfc7f068fb-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 39.99,
+    "salePrice": 19.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/masque-de-natation-speedo-luca-pour-enfants-avec-tuba-et-lentilles-antibuee-3-ans-et-plus-0810215p.html",
+    "sku": "0810215",
+    "availability": "Il n’en reste que 1 #081-0215-6"
+  },
+  {
+    "title": "Porte-bagages arrière universel Raleigh",
+    "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycle-accessories/0730575/raleigh-universal-rear-bike-rack-c2a23ec5-9f87-4fde-a2d6-7725e406efc9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 58.99,
+    "salePrice": 27.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/porte-bagages-arriere-universel-raleigh-0730575p.html",
+    "sku": "0730575",
+    "availability": "Il n’en reste que 1 #073-0575-8"
   },
   {
     "title": "Plomb Bass Bell",
@@ -646,18 +1150,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/rail-double-d-etagere-en-acier-home-collections-blanc-24-po-0687074p.html",
     "sku": "0687074",
     "availability": "Il n’en reste que 2 #068-7074-2"
-  },
-  {
-    "title": "Crochet et attelage à boule intégrés REESE, 1-7/8 po",
-    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0409088/pintle-w-1-7-8-ball-receiver-mount-a760f2c7-8ea4-4a6c-a9df-65ab20f89b03-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 199.99,
-    "salePrice": 83.93,
-    "store": "Canadian Tire",
-    "city": "Edmundston, NB",
-    "branch": "Edmundston, NB",
-    "url": "https://www.canadiantire.ca/fr/pdp/crochet-et-attelage-a-boule-integres-reese-1-7-8-po-0409088p.html",
-    "sku": "0409088",
-    "availability": "Il n’en reste que 1 #040-9088-2"
   },
   {
     "title": "Napperons rectangulaires CANVAS Granby, 13 x 19 po, paq. 2",
@@ -696,6 +1188,18 @@
     "availability": "Il n’en reste que 1 #035-8018-0"
   },
   {
+    "title": "Chargeur d'entretien de batterie MotoMaster série simple, 2 blocs, 2 A",
+    "image": "https://media-www.canadiantire.ca/product/automotive/light-auto-parts/auto-battery-accessories/0111987/motomaster-simple-series-2-bank-2a-battery-charger-5dc76e8c-66f9-4b51-8ffb-d9c023bac6f0-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 119.99,
+    "salePrice": 46.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/chargeur-d-entretien-de-batterie-motomaster-serie-simple-2-blocs-2-a-0111987p.html",
+    "sku": "0111987",
+    "availability": "Il n’en reste que 2 #011-1987-0"
+  },
+  {
     "title": "Trousse de garniture pour douche murale PlumbShop, 1,75 gal/min, chromé, paq. 1",
     "image": "https://media-www.canadiantire.ca/product/fixing/plumbing/rough-plumbing/0632902/remodel-trim-kit-shower-arm-head-flange-1-75-gpm-chrome-99ed0b9f-d79e-4b95-87aa-a7c8d758b69d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 24.99,
@@ -708,8 +1212,20 @@
     "availability": "8 En Stock#063-2902-2"
   },
   {
+    "title": "Pince à lunettes pour visière AutoTrends",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0375064/auto-trends-glasses-clip-for-sun-visor-f16399cf-927a-46c9-8486-f3adcf0be9f2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 9.99,
+    "salePrice": 2.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/pince-a-lunettes-pour-visiere-autotrends-0375064p.html",
+    "sku": "0375064",
+    "availability": ""
+  },
+  {
     "title": "Flotteur en mousse enclipsable Redwolf, 1,5 po",
-    "image": "undefined?im=whresize&wid=200&hei=200",
+    "image": "undefined",
     "price": 3.99,
     "salePrice": 1.43,
     "store": "Canadian Tire",
@@ -718,138 +1234,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/flotteur-en-mousse-enclipsable-redwolf-1-5-po-0787515p.html",
     "sku": "0787515",
     "availability": "Il n’en reste que 1 #078-7515-0"
-  },
-  {
-    "title": "Émerillon South Bend en laiton, taille 3",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0779669/south-bend-snap-swivel-brass-size-3-02114e4e-a2b4-413c-860b-afaf931cc76f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 2.99,
-    "salePrice": 0.93,
-    "store": "Canadian Tire",
-    "city": "Edmundston, NB",
-    "branch": "Edmundston, NB",
-    "url": "https://www.canadiantire.ca/fr/pdp/emerillon-south-bend-en-laiton-taille-3-0779669p.html",
-    "sku": "0779669",
-    "availability": "19 En Stock#077-9669-4"
-  },
-  {
-    "title": "Lampe DEL intelligente RGBIC Monster Illuminessence ARC+ avec chargement USB et sans fil",
-    "image": "https://media-www.canadiantire.ca/product/living/home-decor/lighting/0522105/monster-illuminessence-arc-smart-rgbic-led-lamp-c3ac911e-0e42-4523-8936-824202cc49b7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 69.99,
-    "salePrice": 34.93,
-    "store": "Canadian Tire",
-    "city": "Edmundston, NB",
-    "branch": "Edmundston, NB",
-    "url": "https://www.canadiantire.ca/fr/pdp/lampe-del-intelligente-rgbic-monster-illuminessence-arc-avec-chargement-usb-et-sans-fil-0522105p.html",
-    "sku": "0522105",
-    "availability": "Il n’en reste que 2 #052-2105-6"
-  },
-  {
-    "title": "Contenants pliables en plastique Outbound, sans BPA, rouge, paq. 3",
-    "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-living/0766112/outbound-collapsible-container-set-3-pc--a5e478cf-f410-48eb-8754-95af86b3bc33-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 39.99,
-    "salePrice": 11.93,
-    "store": "Canadian Tire",
-    "city": "Edmundston, NB",
-    "branch": "Edmundston, NB",
-    "url": "https://www.canadiantire.ca/fr/pdp/contenants-pliables-en-plastique-outbound-sans-bpa-rouge-paq-3-0766112p.html",
-    "sku": "0766112",
-    "availability": "Il n’en reste que 1 #076-6112-8"
-  },
-  {
-    "title": "Coiffe à polir en mousse et en tissus éponge SIMONIZ, 8 po, paq. 2",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-tools/0399087/simonix-8-foam-applicator-bonnet-2-pack-d21a8bbc-370e-4dee-a122-d36f58cf0c2a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 10.99,
-    "salePrice": 2.93,
-    "store": "Canadian Tire",
-    "city": "Edmundston, NB",
-    "branch": "Edmundston, NB",
-    "url": "https://www.canadiantire.ca/fr/pdp/coiffe-a-polir-en-mousse-et-en-tissus-eponge-simoniz-8-po-paq-2-0399087p.html",
-    "sku": "0399087",
-    "availability": "Il n’en reste que 3 #039-9087-0"
-  },
-  {
-    "title": "Filtre primaire de rechange pour aspirateur vertical Hoover Whole House Elite",
-    "image": "https://media-www.canadiantire.ca/product/living/cleaning/vacuums-and-floorcare/0437818/hoover-whole-house-elite-primary-filter-1644a176-7e66-4610-b6eb-ed80ddc7a0a6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 21.99,
-    "salePrice": 7.93,
-    "store": "Canadian Tire",
-    "city": "Edmundston, NB",
-    "branch": "Edmundston, NB",
-    "url": "https://www.canadiantire.ca/fr/pdp/filtre-primaire-de-rechange-pour-aspirateur-vertical-hoover-whole-house-elite-0437818p.html",
-    "sku": "0437818",
-    "availability": "Il n’en reste que 2 #043-7818-2"
-  },
-  {
-    "title": "Huile à moteur Pennzoil 5W30, bidon de 5 L",
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/oil-pcmo-/0289304/pnzl-5w30-jug-a880f867-1059-47e2-be2f-b963af2e7bab-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 37.99,
-    "salePrice": 16.93,
-    "store": "Canadian Tire",
-    "city": "Edmundston, NB",
-    "branch": "Edmundston, NB",
-    "url": "https://www.canadiantire.ca/fr/pdp/huile-a-moteur-pennzoil-5w30-bidon-de-5-l-0289304p.html",
-    "sku": "0289304",
-    "availability": "Il n’en reste que 1 #028-9304-0"
-  },
-  {
-    "title": "Louche de mise en conserve demi-chopine allant au lave-vaisselle Starfrit, rouge",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/canning/1421223/canningscoop-ed8b2ba4-96c2-4e3b-b766-0257c54d203c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 9.99,
-    "salePrice": 4.93,
-    "store": "Canadian Tire",
-    "city": "Edmundston, NB",
-    "branch": "Edmundston, NB",
-    "url": "https://www.canadiantire.ca/fr/pdp/louche-de-mise-en-conserve-demi-chopine-allant-au-lave-vaisselle-starfrit-rouge-1421223p.html",
-    "sku": "1421223",
-    "availability": "Il n’en reste que 1 #142-1223-6"
-  },
-  {
-    "title": "Émerillon triple South Bend avec crochet à plomb",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0789115/south-bend-3-way-swivel-with-sinker-pin-1-0-87c15e61-36a8-49ce-86ea-7dc083b09b3b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 2.99,
-    "salePrice": 1.43,
-    "store": "Canadian Tire",
-    "city": "Edmundston, NB",
-    "branch": "Edmundston, NB",
-    "url": "https://www.canadiantire.ca/fr/pdp/emerillon-triple-south-bend-avec-crochet-a-plomb-0789115p.html",
-    "sku": "0789115",
-    "availability": "Il n’en reste que 6 #078-9115-0"
-  },
-  {
-    "title": "Huile à usages multiples avec burette 3 en 1 longue durée, 88 mL",
-    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-fluids/0387807/wd-40-3-in-1-household-oil-88ml-a5d8e689-f5d8-4a04-b268-cf6e3fb32b55-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 7.99,
-    "salePrice": 3.93,
-    "store": "Canadian Tire",
-    "city": "Edmundston, NB",
-    "branch": "Edmundston, NB",
-    "url": "https://www.canadiantire.ca/fr/pdp/huile-a-usages-multiples-avec-burette-3-en-1-longue-duree-88-ml-0387807p.html",
-    "sku": "0387807",
-    "availability": ""
-  },
-  {
-    "title": "Ballon de basketball en caoutchouc Wilson Dribbler NBA Raptors de Toronto, noir",
-    "image": "https://media-www.canadiantire.ca/product/playing/team-sports-and-golf/sports-equipment-accessories/1841109/wilson-nba-raptors-high-bounce-ball-200c34b8-f801-4122-8e63-b47b3de99753-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 6.99,
-    "salePrice": 1.93,
-    "store": "Canadian Tire",
-    "city": "Edmundston, NB",
-    "branch": "Edmundston, NB",
-    "url": "https://www.canadiantire.ca/fr/pdp/ballon-de-basketball-en-caoutchouc-wilson-dribbler-nba-raptors-de-toronto-noir-1841109p.html",
-    "sku": "1841109",
-    "availability": "11 En Stock#184-1109-0"
-  },
-  {
-    "title": "Gants à poignets élastiques résistants aux coupures de niveau 5 enduits de polyuréthane Mastercraft, gris, tailles variées",
-    "image": "https://media-www.canadiantire.ca/product/fixing/tools/cutting-measuring/0570258/mastercraft-pu-dipped-cut-resistant-glove-medium-90f147e8-4af2-4bf3-aa56-1529561efe53-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 9.99,
-    "salePrice": 2.93,
-    "store": "Canadian Tire",
-    "city": "Edmundston, NB",
-    "branch": "Edmundston, NB",
-    "url": "https://www.canadiantire.ca/fr/pdp/gants-a-poignets-elastiques-resistants-aux-coupures-de-niveau-5-enduits-de-polyurethane-mastercraft-gris-tailles-variees-0570258p.html",
-    "sku": "0570258",
-    "availability": ""
   },
   {
     "title": "Haut-parleur portatif sans fil Bluetooth Vivitar avec microphone, radio FM et lumières DEL",
@@ -900,6 +1284,18 @@
     "availability": "Il n’en reste que 1 #063-2985-4"
   },
   {
+    "title": "Bretelles rembourrées taille unique robustes MAXIMUM avec étui pour téléphone",
+    "image": "https://media-www.canadiantire.ca/product/fixing/tools/tool-storage/0586528/maximum-suspenders-47fac731-3950-4fb4-85e0-db92a11ae544-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 39.99,
+    "salePrice": 17.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/bretelles-rembourrees-taille-unique-robustes-maximum-avec-etui-pour-telephone-0586528p.html",
+    "sku": "0586528",
+    "availability": "9 En Stock#058-6528-4"
+  },
+  {
     "title": "Anneau en D de service moyen MotoMaster, 1 200 lb, montage encastré",
     "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/tarps-cords/0402771/1200lb-recess-mount-d-ring-1pk-a72d249f-4d99-4923-8daf-cc1535d06dc0-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 6.99,
@@ -922,18 +1318,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/support-de-tablette-en-metal-home-collections-blanc-10-po-0680282p.html",
     "sku": "0680282",
     "availability": "Il n’en reste que 1 #068-0282-8"
-  },
-  {
-    "title": "Marchepied d'attelage en aluminium",
-    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0409632/aluminum-hitch-step-a60c8996-b4ad-4c5a-bea6-d95f64a2ed60-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 69.99,
-    "salePrice": 14.93,
-    "store": "Canadian Tire",
-    "city": "Edmundston, NB",
-    "branch": "Edmundston, NB",
-    "url": "https://www.canadiantire.ca/fr/pdp/marchepied-d-attelage-en-aluminium-0409632p.html",
-    "sku": "0409632",
-    "availability": "Il n’en reste que 1 #040-9632-6"
   },
   {
     "title": "Ampoule halogène Kimpex 9589, P45T, 12 V, 45/45 W",
@@ -996,6 +1380,18 @@
     "availability": "Il n’en reste que 3 #035-6156-2"
   },
   {
+    "title": "Lunettes de natation antibuée à protection UV pour enfants/jeunes Speedo, couleurs variées",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-fun/0813961/speedo-junior-goggle-80967682-28a9-4ef9-a434-b74dd2a181e5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 10.99,
+    "salePrice": 4.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/lunettes-de-natation-antibuee-a-protection-uv-pour-enfants-jeunes-speedo-couleurs-variees-0813961p.html",
+    "sku": "0813961",
+    "availability": "Il n’en reste que 1 #081-3961-0"
+  },
+  {
     "title": "Coupleur d'arbre en caoutchouc",
     "image": "https://media-www.canadiantire.ca/product/fixing/electrical/rough-electrical/0561448/rubbr-flex-lineshft-7674519e-4c37-429e-a135-4002594bac9f.png?im=whresize&wid=200&hei=200",
     "price": 4.99,
@@ -1017,7 +1413,7 @@
     "branch": "Edmundston, NB",
     "url": "https://www.canadiantire.ca/fr/pdp/surligneurs-bic-brite-liner-grip-a-pointe-biseautee-couleurs-variees-paq-5-2420351p.html",
     "sku": "2420351",
-    "availability": "Il n’en reste que 3 #242-0351-8"
+    "availability": "Il n’en reste que 1 #242-0351-8"
   },
   {
     "title": "Pinces pour tube de montage de phares KC HiLITES, 1,75 po à 2 po",
@@ -1042,6 +1438,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/cache-cou-outbound-tricot-torsade-pour-femmes-1873337p.html",
     "sku": "1873337",
     "availability": "Il n’en reste que 2 #187-3337-8"
+  },
+  {
+    "title": "Pinces Coleman Cookout",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking-accessories/0852327/coleman-cookout-bbq-tongs-59fbf95d-a410-48c9-8483-a151598b263c.png?im=whresize&wid=200&hei=200",
+    "price": 14.49,
+    "salePrice": 6.93,
+    "store": "Canadian Tire",
+    "city": "Edmundston, NB",
+    "branch": "Edmundston, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/pinces-coleman-cookout-0852327p.html",
+    "sku": "0852327",
+    "availability": "Il n’en reste que 1 #085-2327-0"
   },
   {
     "title": "Chargeur au lithium-ion CAT DG6C5 de 60 V, 5 Ah",
@@ -1069,7 +1477,7 @@
   },
   {
     "title": "Bloc de bois forgé pour coutellerie à trois rivets forgés classiques KitchenAid avec affûteur intégré, blanc, 14 pièces",
-    "image": "undefined?im=whresize&wid=200&hei=200",
+    "image": "undefined",
     "price": 199.99,
     "salePrice": 79.93,
     "store": "Canadian Tire",
@@ -1083,7 +1491,7 @@
     "title": "Brosse robuste pour tapis et surfaces Chemical Guys Nice & Stiff, jaune",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-tools/0393681/chemical-guys-carpet-and-surface-brush-yellow-29fa899f-28af-41e4-a5d1-9582548194bb-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 15.99,
-    "salePrice": 4.93,
+    "salePrice": 3.98,
     "store": "Canadian Tire",
     "city": "Edmundston, NB",
     "branch": "Edmundston, NB",
@@ -1200,18 +1608,6 @@
     "availability": "Il n’en reste que 3 #037-4921-8"
   },
   {
-    "title": "Mélanges à café au lait Laura Secord, paq. 8",
-    "image": "https://media-www.canadiantire.ca/product/living/food-drink/seasonal-confectionery/1517267/laura-secord-cafe-latte-mixes-200g-72739578-5abf-4d77-bbc8-0ef9687adc68-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 14.99,
-    "salePrice": 6.99,
-    "store": "Canadian Tire",
-    "city": "Edmundston, NB",
-    "branch": "Edmundston, NB",
-    "url": "https://www.canadiantire.ca/fr/pdp/melanges-a-cafe-au-lait-laura-secord-paq-8-1517267p.html",
-    "sku": "1517267",
-    "availability": "Il n’en reste que 1 #151-7267-4"
-  },
-  {
     "title": "Balise d'entrée à ailettes, paq. 1,54 po",
     "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0203843/54-winged-driveway-marker-1pk-95413d2b-5343-4055-9d56-898ad0cd3e19-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 16.99,
@@ -1272,102 +1668,6 @@
     "availability": "Il n’en reste que 3 #052-3123-6"
   },
   {
-    "title": "Boîtes à leurres Shakespeare Barbie",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-equipment/0777454/shakespeare-barbie-tacklebox-97b2d42d-1822-44f2-a352-f7c40f77ca92-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 17.99,
-    "salePrice": 6.93,
-    "store": "Canadian Tire",
-    "city": "Edmundston, NB",
-    "branch": "Edmundston, NB",
-    "url": "https://www.canadiantire.ca/fr/pdp/boites-a-leurres-shakespeare-barbie-0777454p.html",
-    "sku": "0777454",
-    "availability": "Il n’en reste que 1 #077-7454-6"
-  },
-  {
-    "title": "Manivelle de rechange pour cric de remorque Bulldog",
-    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0406911/bulldog-trailer-jack-replacement-topwind-hand-crank-f8c1834b-9d12-44ba-8994-1e79bb0dba57-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 25.99,
-    "salePrice": 5.93,
-    "store": "Canadian Tire",
-    "city": "Edmundston, NB",
-    "branch": "Edmundston, NB",
-    "url": "https://www.canadiantire.ca/fr/pdp/manivelle-de-rechange-pour-cric-de-remorque-bulldog-0406911p.html",
-    "sku": "0406911",
-    "availability": "Il n’en reste que 3 #040-6911-0"
-  },
-  {
-    "title": "Support de téléphone à rétroviseur Bluehive Secure Fit pour téléphones jusqu’à 3,25 po, noir",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-electronics/0358044/bluehive-rearview-mirror-phone-mount-aea4f540-e21a-4e8d-b8db-c444875275be-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 19.99,
-    "salePrice": 4.93,
-    "store": "Canadian Tire",
-    "city": "Edmundston, NB",
-    "branch": "Edmundston, NB",
-    "url": "https://www.canadiantire.ca/fr/pdp/support-de-telephone-a-retroviseur-bluehive-secure-fit-pour-telephones-jusqu-a-3-25-po-noir-0358044p.html",
-    "sku": "0358044",
-    "availability": "Il n’en reste que 1 #035-8044-6"
-  },
-  {
-    "title": "Sangle d'arrimage MotoMaster E-Track, 3 500 lb, avec anneau en D, 8 po",
-    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/tarps-cords/0402917/e-track-tie-off-strap-d5b7f976-ed01-482b-9f3a-d008cc877a59-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 7.49,
-    "salePrice": 2.93,
-    "store": "Canadian Tire",
-    "city": "Edmundston, NB",
-    "branch": "Edmundston, NB",
-    "url": "https://www.canadiantire.ca/fr/pdp/sangle-d-arrimage-motomaster-e-track-3-500-lb-avec-anneau-en-d-8-po-0402917p.html",
-    "sku": "0402917",
-    "availability": "Il n’en reste que 2 #040-2917-2"
-  },
-  {
-    "title": "Système mensuel pour chasse-moustiques Green Strike",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/gardening/mosquito-sun-protection/0590882/green-strike-monthly-kit-for-preventor-5dff4bdc-1c6c-4ce8-85a5-61a0fa7d6dda-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 24.99,
-    "salePrice": 3.93,
-    "store": "Canadian Tire",
-    "city": "Edmundston, NB",
-    "branch": "Edmundston, NB",
-    "url": "https://www.canadiantire.ca/fr/pdp/systeme-mensuel-pour-chasse-moustiques-green-strike-0590882p.html",
-    "sku": "0590882",
-    "availability": "Il n’en reste que 1 #059-0882-2"
-  },
-  {
-    "title": "Maïs soufflé au caramel FRANK, 250 g",
-    "image": "https://media-www.canadiantire.ca/product/living/food-drink/everyday-food-and-drink/1532151/frank-caramel-corn-250g-bd05b896-6f32-41f3-b0f6-983553d72d1a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 3.59,
-    "salePrice": 1.43,
-    "store": "Canadian Tire",
-    "city": "Edmundston, NB",
-    "branch": "Edmundston, NB",
-    "url": "https://www.canadiantire.ca/fr/pdp/mais-souffle-au-caramel-frank-250-g-1532151p.html",
-    "sku": "1532151",
-    "availability": ""
-  },
-  {
-    "title": "Plomb à fente amovible Xcalibur, taille 5",
-    "image": "undefined?im=whresize&wid=200&hei=200",
-    "price": 14.99,
-    "salePrice": 7.43,
-    "store": "Canadian Tire",
-    "city": "Edmundston, NB",
-    "branch": "Edmundston, NB",
-    "url": "https://www.canadiantire.ca/fr/pdp/plomb-a-fente-amovible-xcalibur-taille-5-0783276p.html",
-    "sku": "0783276",
-    "availability": "Il n’en reste que 4 #078-3276-2"
-  },
-  {
-    "title": "Contenant carré hermétique pour aliments Vida par Paderno, 1,1 L",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/food-storage/1425088/clearlock1200mlsquare-8fc4b876-1338-4d13-9122-4adb0a491ef9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 8.99,
-    "salePrice": 2.93,
-    "store": "Canadian Tire",
-    "city": "Edmundston, NB",
-    "branch": "Edmundston, NB",
-    "url": "https://www.canadiantire.ca/fr/pdp/contenant-carre-hermetique-pour-aliments-vida-par-paderno-1-1-l-1425088p.html",
-    "sku": "1425088",
-    "availability": "Il n’en reste que 1 #142-5088-4"
-  },
-  {
     "title": "Chiffon de qualité supérieure en microfibre pour nettoyage d'intérieur sans charpie pour l'auto Adam's Polishes, 300 g/m2, beige",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-tools/0396599/adam-s-polishes-interior-microfiber-premium-towel-d702f637-6995-4b96-bd31-adbff79d5606-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 18.99,
@@ -1377,7 +1677,7 @@
     "branch": "Edmundston, NB",
     "url": "https://www.canadiantire.ca/fr/pdp/chiffon-de-qualite-superieure-en-microfibre-pour-nettoyage-d-interieur-sans-charpie-pour-l-auto-adam-s-polishes-300-g-m2-beige-0396599p.html",
     "sku": "0396599",
-    "availability": "137 En Stock#039-6599-0"
+    "availability": "130 En Stock#039-6599-0"
   },
   {
     "title": "Nike - Bande de résistance moyenne noir",
@@ -1407,7 +1707,7 @@
     "title": "Ruban à conduits de marquage des dangers 3M, 48 mm x 22,8 m",
     "image": "https://media-www.canadiantire.ca/product/fixing/tools/cutting-measuring/0550221/3m-hazard-marking-duct-tape-48mm-x-22-8m-8ea0787a-d63f-4000-a33f-126bbfc00722-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 9.99,
-    "salePrice": 4.93,
+    "salePrice": 2.98,
     "store": "Canadian Tire",
     "city": "Edmundston, NB",
     "branch": "Edmundston, NB",
