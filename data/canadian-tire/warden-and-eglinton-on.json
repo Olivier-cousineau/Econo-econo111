@@ -1,15 +1,27 @@
 [
   {
-    "title": "Pantalon Huntshield Sutton No Fly Zone, hommes, gris",
-    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-apparel-footwear/3751415/mens-sutton-no-fly-zone-pants-m-grey-d6d714cf-1a68-4dfd-a8d1-674b83deb7b6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 69.99,
-    "salePrice": 34.93,
+    "title": "Machine à espresso semi-automatique à un toucher avec mousseur à lait Mr. Coffee",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430385/mr-coffee-semi-automatic-espresso-machine-w-milk-frother-482b518b-cfa5-4d80-bb51-f3dc6d06036e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 439.99,
+    "salePrice": 199.93,
     "store": "Canadian Tire",
     "city": "Warden & Eglinton, ON",
     "branch": "Warden & Eglinton, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/pantalon-huntshield-sutton-no-fly-zone-hommes-gris-3751415p.html",
-    "sku": "3751415",
-    "availability": ""
+    "url": "https://www.canadiantire.ca/fr/pdp/machine-a-espresso-semi-automatique-a-un-toucher-avec-mousseur-a-lait-mr-coffee-0430385p.html",
+    "sku": "0430385",
+    "availability": "14 En Stock#043-0385-2"
+  },
+  {
+    "title": "Ampoules à DEL à intensité variable à culot E12 NOMA B10, 2700K, 350 lumens, blanc chaud, 40 W, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/light-bulbs/0529347/noma-2-pack-40w-e12-soft-white-led-lightbulbs-2abc2edf-7b69-449d-b49f-8024c6332e19-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 12.99,
+    "salePrice": 1.93,
+    "store": "Canadian Tire",
+    "city": "Warden & Eglinton, ON",
+    "branch": "Warden & Eglinton, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ampoules-a-del-a-intensite-variable-a-culot-e12-noma-b10-2700k-350-lumens-blanc-chaud-40-w-paq-2-0529347p.html",
+    "sku": "0529347",
+    "availability": "3503 En Stock#052-9347-8"
   },
   {
     "title": "Présentoir d'articles saisonniers Mastercraft avec chariot à plateforme roulante, noir",
@@ -57,7 +69,7 @@
     "branch": "Warden & Eglinton, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/applique-de-salle-de-bain-a-3-lampes-avec-abat-jour-en-verre-blanc-opale-canvas-essence-nickel-brosse-0523602p.html",
     "sku": "0523602",
-    "availability": "Il n’en reste que 7 #052-3602-6"
+    "availability": "Il n’en reste que 6 #052-3602-6"
   },
   {
     "title": "Minioeufs en chocolat de Pâques Cadbury, 33 g",
@@ -69,7 +81,7 @@
     "branch": "Warden & Eglinton, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/minioeufs-en-chocolat-de-paques-cadbury-33-g-0514188p.html",
     "sku": "0514188",
-    "availability": ""
+    "availability": "Il n’en reste que 1 #051-4188-8"
   },
   {
     "title": "Kisses à la bière au beurre Hershey's Harry Potter, 180g, paq. 39",
@@ -81,7 +93,7 @@
     "branch": "Warden & Eglinton, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/kisses-a-la-biere-au-beurre-hershey-s-harry-potter-180g-paq-39-1519506p.html",
     "sku": "1519506",
-    "availability": "Il n’en reste que 7 #151-9506-4"
+    "availability": "Il n’en reste que 6 #151-9506-4"
   },
   {
     "title": "Bottes de randonnée de sécurité CSA Altra, hommes, coupe basse",
@@ -129,7 +141,7 @@
     "branch": "Warden & Eglinton, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/bec-verseur-de-rechange-reliance-53-mm-0854308p.html",
     "sku": "0854308",
-    "availability": "Il n’en reste que 5 #085-4308-4"
+    "availability": "Il n’en reste que 4 #085-4308-4"
   },
   {
     "title": "CANVAS Moraine - Table d'appoint en C de jardin en osier pour toutes les conditions, 2 pcs",
@@ -177,7 +189,7 @@
     "branch": "Warden & Eglinton, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/minioeufs-en-chocolat-au-lait-hershey-s-220-g-0514168p.html",
     "sku": "0514168",
-    "availability": ""
+    "availability": "Il n’en reste que 2 #051-4168-6"
   },
   {
     "title": "Interrupteur à bascule silencieux unipolaire CA Decorator, 15 A, 120 V, mise à la terre, qualité résidentielle, couleurs variées",
@@ -267,7 +279,7 @@
     "title": "Peinture laque acrylique en aérosol pour automobile de qualité supérieure Dupli-Color Perfect Match, sherwood foncé, 227 g",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-body-repair/0472432/chrysler-8oz-deep-sherwood-paint-fec6a01c-cae9-4e89-9eaf-e333b7dc50c5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 24.99,
-    "salePrice": 7.93,
+    "salePrice": 5.93,
     "store": "Canadian Tire",
     "city": "Warden & Eglinton, ON",
     "branch": "Warden & Eglinton, ON",
@@ -336,18 +348,6 @@
     "availability": "Il n’en reste que 1 #175-9422-6"
   },
   {
-    "title": "Cuiller tourn. Northland T. Rainbow, Parakeet, taille 2",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0782632/whistler-jig-neon-with-propeller-blade-1-4oz-5125a914-5326-41e0-88fc-2e4373b280d0-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 6.99,
-    "salePrice": 2.93,
-    "store": "Canadian Tire",
-    "city": "Warden & Eglinton, ON",
-    "branch": "Warden & Eglinton, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/cuiller-tourn-northland-t-rainbow-parakeet-taille-2-0782632p.html",
-    "sku": "0782632",
-    "availability": ""
-  },
-  {
     "title": "Collier pour chat/chien, bleu/orange",
     "image": "https://media-www.canadiantire.ca/product/living/pet-care/pet-accessories/1427569/perri-s-pet-collar-blue-orange-multi-small-564bef44-a3be-495c-bc22-d1682eb4660a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 14.99,
@@ -369,7 +369,7 @@
     "branch": "Warden & Eglinton, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/camera-web-usb-hd-jlab-go-cam-0694795p.html",
     "sku": "0694795",
-    "availability": "Il n’en reste que 3 #069-4795-2"
+    "availability": "Il n’en reste que 2 #069-4795-2"
   },
   {
     "title": "Bac à peinture Premier Clean en pâte de papier",
@@ -477,7 +477,7 @@
     "branch": "Warden & Eglinton, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/serviettes-pour-boissons-achievement-is-key-8549454p.html",
     "sku": "8549454",
-    "availability": "Il n’en reste que 1 #854-9454-4"
+    "availability": ""
   },
   {
     "title": "Connecteur à 4 voies REESE Towpower pour remorque et véhicule",
@@ -576,6 +576,30 @@
     "availability": "Il n’en reste que 2 #079-7181-0"
   },
   {
+    "title": "Rallonge multicolore de Type S Plug & Glow, 12 po",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0373267/12-plug-glow-multi-colour-extension-ab384024-ee42-4a6a-89bb-706bcc7a07f6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 3.93,
+    "store": "Canadian Tire",
+    "city": "Warden & Eglinton, ON",
+    "branch": "Warden & Eglinton, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/rallonge-multicolore-de-type-s-plug-glow-12-po-0373267p.html",
+    "sku": "0373267",
+    "availability": ""
+  },
+  {
+    "title": "Spatule pour gelées Roots & Harvest LEM avec thermomètre intégré",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/canning/2420195/roots-harvest-jelly-spatula-with-integrated-thermometer-2737ff72-1e28-4faf-8e2e-a04959c9efe3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 29.99,
+    "salePrice": 14.93,
+    "store": "Canadian Tire",
+    "city": "Warden & Eglinton, ON",
+    "branch": "Warden & Eglinton, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/spatule-pour-gelees-roots-harvest-lem-avec-thermometre-integre-2420195p.html",
+    "sku": "2420195",
+    "availability": "Il n’en reste que 2 #242-0195-0"
+  },
+  {
     "title": "Émerillon à barillet Danielson, laiton, taille 5, paq. 6",
     "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0774430/danielson-barrel-swivel-brass-size-5-6pk-cdee1007-948c-47cb-8caa-415cd9120e20-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 0.99,
@@ -645,7 +669,7 @@
     "branch": "Warden & Eglinton, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/granules-pour-barbecue-melange-fruits-de-mer-vida-par-paderno-1850323p.html",
     "sku": "1850323",
-    "availability": "Il n’en reste que 2 #185-0323-2"
+    "availability": "Il n’en reste que 1 #185-0323-2"
   },
   {
     "title": "Figurines tendance de WowWee, 5 ans et plus",
@@ -669,6 +693,54 @@
     "branch": "Warden & Eglinton, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/leurres-en-pot-de-peche-blanche-lunkerhunt-bait-jar-chenille-de-la-fausse-teigne-9-g-0777860p.html",
     "sku": "0777860",
+    "availability": ""
+  },
+  {
+    "title": "Couronne récolte CANVAS avec tournesols/feuilles d'érable/baies, rouge, 24 po, décoration intérieure pour l'automne",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/seasonal/halloween-harvest/1519206/24-sunflower-wreath-7d83d11a-ee6a-4a84-8569-fe3fe29b523b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 49.99,
+    "salePrice": 16.99,
+    "store": "Canadian Tire",
+    "city": "Warden & Eglinton, ON",
+    "branch": "Warden & Eglinton, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/couronne-recolte-canvas-avec-tournesols-feuilles-d-erable-baies-rouge-24-po-decoration-interieure-pour-l-automne-1519206p.html",
+    "sku": "1519206",
+    "availability": ""
+  },
+  {
+    "title": "Dandinette ronde Xcalibur, crevette, 1/2 oz",
+    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0773785/matzuo-round-jig-shrimp-1-2-82d59151-46f0-4c9e-a973-5260f9bf8d16-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 5.99,
+    "salePrice": 2.43,
+    "store": "Canadian Tire",
+    "city": "Warden & Eglinton, ON",
+    "branch": "Warden & Eglinton, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/dandinette-ronde-xcalibur-crevette-1-2-oz-0773785p.html",
+    "sku": "0773785",
+    "availability": ""
+  },
+  {
+    "title": "Décoration de centre de table Happy Birthday Happy Cake Day, vert/doré, 15 po, pour fête d'anniversaire",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8544428/happy-cake-day-table-centerpiece-c6f4b95f-a030-4fba-8aa7-929a54d66378-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 3.99,
+    "salePrice": 1.99,
+    "store": "Canadian Tire",
+    "city": "Warden & Eglinton, ON",
+    "branch": "Warden & Eglinton, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/decoration-de-centre-de-table-happy-birthday-happy-cake-day-vert-dore-15-po-pour-fete-d-anniversaire-8544428p.html",
+    "sku": "8544428",
+    "availability": "29 En Stock#854-4428-8"
+  },
+  {
+    "title": "Dandinette à appât vivant Xcalibur, crevette, 3/8 oz",
+    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0773793/matzuo-live-bait-jig-shrimp-3-8-5a6c7f8f-03d4-4e35-b470-237d66ce9913-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 5.99,
+    "salePrice": 2.43,
+    "store": "Canadian Tire",
+    "city": "Warden & Eglinton, ON",
+    "branch": "Warden & Eglinton, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/dandinette-a-appat-vivant-xcalibur-crevette-3-8-oz-0773793p.html",
+    "sku": "0773793",
     "availability": ""
   },
   {
@@ -717,7 +789,7 @@
     "branch": "Warden & Eglinton, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/tire-bouchon-a-levier-en-acier-inoxydable-kitchenaid-0421168p.html",
     "sku": "0421168",
-    "availability": "10 En Stock#042-1168-6"
+    "availability": "9 En Stock#042-1168-6"
   },
   {
     "title": "Câble coaxial RCA, blanc, longueurs variées",
@@ -730,6 +802,90 @@
     "url": "https://www.canadiantire.ca/fr/pdp/cable-coaxial-rca-blanc-longueurs-variees-0452831p.html",
     "sku": "0452831",
     "availability": ""
+  },
+  {
+    "title": "Surprise dans la capsule Disney Doorables Micro Motion, série 1, figurine jouet pour enfants, 5 ans et plus",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/toys-games/1501734/disney-doorables-micro-motion-1370c4e5-7756-4f7e-92d1-3c3f341b375e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 14.99,
+    "salePrice": 7.23,
+    "store": "Canadian Tire",
+    "city": "Warden & Eglinton, ON",
+    "branch": "Warden & Eglinton, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/surprise-dans-la-capsule-disney-doorables-micro-motion-serie-1-figurine-jouet-pour-enfants-5-ans-et-plus-1501734p.html",
+    "sku": "1501734",
+    "availability": "Il n’en reste que 7 #150-1734-0"
+  },
+  {
+    "title": "Coffre de camionnette QuadBoss Ranger",
+    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/powersport/0274328/quadboss-ranger-bed-box-3c5d31f0-2976-4518-9a6e-ff65ec281e48-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 199.99,
+    "salePrice": 41.93,
+    "store": "Canadian Tire",
+    "city": "Warden & Eglinton, ON",
+    "branch": "Warden & Eglinton, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/coffre-de-camionnette-quadboss-ranger-0274328p.html",
+    "sku": "0274328",
+    "availability": "Il n’en reste que 2 #027-4328-6"
+  },
+  {
+    "title": "Sous-verre en plastique de l'équipe olympique canadienne pour amateurs et collectionneurs, paq. 4",
+    "image": "https://media-www.canadiantire.ca/product/playing/team-sports-and-golf/sports-equipment-accessories/0845868/canadian-olympic-committee-coasters-a7f80628-d928-4733-9077-b947ac29b820-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 8.99,
+    "salePrice": 4.43,
+    "store": "Canadian Tire",
+    "city": "Warden & Eglinton, ON",
+    "branch": "Warden & Eglinton, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/sous-verre-en-plastique-de-l-equipe-olympique-canadienne-pour-amateurs-et-collectionneurs-paq-4-0845868p.html",
+    "sku": "0845868",
+    "availability": "Il n’en reste que 1 #084-5868-6"
+  },
+  {
+    "title": "Collier réfléchissant pour chiens Perri's Pet Products, rayures effrayantes, choix de tailles",
+    "image": "https://media-www.canadiantire.ca/product/living/pet-care/pet-accessories/2420533/perri-s-reflective-scary-stripes-dog-collar-small-0432f1e7-b90e-4aae-980e-d9f2fd876143-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 14.99,
+    "salePrice": 7.43,
+    "store": "Canadian Tire",
+    "city": "Warden & Eglinton, ON",
+    "branch": "Warden & Eglinton, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/collier-reflechissant-pour-chiens-perri-s-pet-products-rayures-effrayantes-choix-de-tailles-2420533p.html",
+    "sku": "2420533",
+    "availability": ""
+  },
+  {
+    "title": "Hameçon monté Aberdeen Danielson, taille 4, p6",
+    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0774109/danielson-snelled-aberdeen-hook-size-4-6pk-964ed7c0-ea1b-464a-9f45-a5bdc4047d21-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 2.99,
+    "salePrice": 0.93,
+    "store": "Canadian Tire",
+    "city": "Warden & Eglinton, ON",
+    "branch": "Warden & Eglinton, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/hamecon-monte-aberdeen-danielson-taille-4-p6-0774109p.html",
+    "sku": "0774109",
+    "availability": "Il n’en reste que 1 #077-4109-8"
+  },
+  {
+    "title": "Serviettes à boissons Happy Cake Day, paq. 16",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8544419/happy-cake-day-beverage-napkin-12-count-2ca50613-68a6-4d50-9e40-6bc18a101dcf-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 3.99,
+    "salePrice": 1.99,
+    "store": "Canadian Tire",
+    "city": "Warden & Eglinton, ON",
+    "branch": "Warden & Eglinton, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/serviettes-a-boissons-happy-cake-day-paq-16-8544419p.html",
+    "sku": "8544419",
+    "availability": "Il n’en reste que 4 #854-4419-0"
+  },
+  {
+    "title": "Trousse de changement de couleur pour DDFT Leviton Renu, 20 A, rouge délicieux",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/rough-electrical/0527104/reno-colour-change-kit-red-delicious-gfci-20a-a342e52b-190f-47d4-a338-72938ce1c015-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 2.39,
+    "salePrice": 0.43,
+    "store": "Canadian Tire",
+    "city": "Warden & Eglinton, ON",
+    "branch": "Warden & Eglinton, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-changement-de-couleur-pour-ddft-leviton-renu-20-a-rouge-delicieux-0527104p.html",
+    "sku": "0527104",
+    "availability": "13 En Stock#052-7104-8"
   },
   {
     "title": "Gants de chasse Manzella Shooter avec paume à points antidérapants pour une prise sûre, camouflage Realtree XTRA",
@@ -804,6 +960,18 @@
     "availability": "Il n’en reste que 1 #040-9048-8"
   },
   {
+    "title": "Guirlande de ballons, rose",
+    "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8539196/pnk-blln-grlnd-kit-578d33c5-3923-47f9-8480-b8fe355fcafc-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 36.99,
+    "salePrice": 17.93,
+    "store": "Canadian Tire",
+    "city": "Warden & Eglinton, ON",
+    "branch": "Warden & Eglinton, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/guirlande-de-ballons-rose-8539196p.html",
+    "sku": "8539196",
+    "availability": "Il n’en reste que 1 #853-9196-0"
+  },
+  {
     "title": "Décor mural en plastique Nico/Bella/Nina Cocomelon avec accessoires de cabine photo, multicolore, 14,75 po, paq. 16, pour fête d'anniversaire",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8533754/cocomelon-scene-setter-with-props-f1519ea1-e5b6-4594-9e89-c02f29245d51-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 11.99,
@@ -861,6 +1029,6 @@
     "branch": "Warden & Eglinton, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/decoration-centre-de-table-en-fontaine-pour-etape-40e-anniversaire-argent-et-or-8420172p.html",
     "sku": "8420172",
-    "availability": "Il n’en reste que 4 #842-0172-6"
+    "availability": ""
   }
 ]

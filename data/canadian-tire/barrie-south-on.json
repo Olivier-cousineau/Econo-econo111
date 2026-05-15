@@ -1,5 +1,101 @@
 [
   {
+    "title": "Affûte-couteaux à 3 étapes MASTER Chef",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/cutlery/2421029/master-chef-3stage-knife-sharpener-b9ab2767-c8c0-473e-a296-6cb70527856a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 18.99,
+    "salePrice": 4.93,
+    "store": "Canadian Tire",
+    "city": "Barrie South, ON",
+    "branch": "Barrie South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/affute-couteaux-a-3-etapes-master-chef-2421029p.html",
+    "sku": "2421029",
+    "availability": "149 En Stock#242-1029-2"
+  },
+  {
+    "title": "Tasses à mesurer empilables en plastique MASTER Chef, paq. 10",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/bakeware-baking-prep/1429676/master-chef-10pc-measuring-cup-set-73c761cb-c28c-42fe-a32e-f57a30c6b9a6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 24.99,
+    "salePrice": 8.93,
+    "store": "Canadian Tire",
+    "city": "Barrie South, ON",
+    "branch": "Barrie South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tasses-a-mesurer-empilables-en-plastique-master-chef-paq-10-1429676p.html",
+    "sku": "1429676",
+    "availability": "124 En Stock#142-9676-0"
+  },
+  {
+    "title": "T-shirt sport à manches courtes et extensibles avec encolure ras du cou Mooselander, hommes, couleur unie, tailles variées, noir/gris, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/playing/footwear-apparel/summer-footwear-apparel/1874066/active-2-pack-short-sleeve-tees-m-l-ce888845-ad24-41df-8604-c50d7052ca02-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 21.99,
+    "salePrice": 6.99,
+    "store": "Canadian Tire",
+    "city": "Barrie South, ON",
+    "branch": "Barrie South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/t-shirt-sport-a-manches-courtes-et-extensibles-avec-encolure-ras-du-cou-mooselander-hommes-couleur-unie-tailles-variees-noir-gris-paq-2-1874066p.html",
+    "sku": "1874066",
+    "availability": ""
+  },
+  {
+    "title": "Purificateur d'air de coin NOMA",
+    "image": "https://media-www.canadiantire.ca/product/living/home-environment/home-air-quality-appliances/1430096/noma-corner-purifier-50c0a317-25b1-4848-85ec-c4ea86f70e9d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 279.99,
+    "salePrice": 89.99,
+    "store": "Canadian Tire",
+    "city": "Barrie South, ON",
+    "branch": "Barrie South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/purificateur-d-air-de-coin-noma-1430096p.html",
+    "sku": "1430096",
+    "availability": "8 En Stock#143-0096-2"
+  },
+  {
+    "title": "Distributeur d'eau chaude de MASTER Chef avec poignée, noir, 3,5 L",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430196/master-chef-hot-water-dispenser-9e2e8ff7-2445-4f25-9bde-ac042fe07b54-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 99.99,
+    "salePrice": 39.99,
+    "store": "Canadian Tire",
+    "city": "Barrie South, ON",
+    "branch": "Barrie South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/distributeur-d-eau-chaude-de-master-chef-avec-poignee-noir-3-5-l-0430196p.html",
+    "sku": "0430196",
+    "availability": "10 En Stock#043-0196-2"
+  },
+  {
+    "title": "Cintres pivotants compacts en velours Type A avec barre à pantalon, couleurs variées, paq. 40",
+    "image": "https://media-www.canadiantire.ca/product/living/home-organization/closet-organization/0688308/type-a-velvet-suit-hanger-black-10pk-4afb3f73-0449-46d6-975c-369ae2760de2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 32.99,
+    "salePrice": 12.93,
+    "store": "Canadian Tire",
+    "city": "Barrie South, ON",
+    "branch": "Barrie South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/cintres-pivotants-compacts-en-velours-type-a-avec-barre-a-pantalon-couleurs-variees-paq-40-0688307p.html",
+    "sku": "0688307",
+    "availability": ""
+  },
+  {
+    "title": "Couteaux Global, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/cutlery/2425200/global-knife-set-2pc-98f5e7e3-6311-4b33-b794-86fe9841b50a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 199.99,
+    "salePrice": 99.99,
+    "store": "Canadian Tire",
+    "city": "Barrie South, ON",
+    "branch": "Barrie South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/couteaux-global-paq-2-2425200p.html",
+    "sku": "2425200",
+    "availability": "Il n’en reste que 2 #242-5200-8"
+  },
+  {
+    "title": "Machine à espresso semi-automatique à un toucher avec mousseur à lait Mr. Coffee",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430385/mr-coffee-semi-automatic-espresso-machine-w-milk-frother-482b518b-cfa5-4d80-bb51-f3dc6d06036e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 439.99,
+    "salePrice": 129.93,
+    "store": "Canadian Tire",
+    "city": "Barrie South, ON",
+    "branch": "Barrie South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/machine-a-espresso-semi-automatique-a-un-toucher-avec-mousseur-a-lait-mr-coffee-0430385p.html",
+    "sku": "0430385",
+    "availability": "20 En Stock#043-0385-2"
+  },
+  {
     "title": "Ampoules à DEL à intensité variable à culot E12 NOMA B10, 2700K, 350 lumens, blanc chaud, 40 W, paq. 2",
     "image": "https://media-www.canadiantire.ca/product/fixing/electrical/light-bulbs/0529347/noma-2-pack-40w-e12-soft-white-led-lightbulbs-2abc2edf-7b69-449d-b49f-8024c6332e19-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 12.99,
@@ -9,19 +105,7 @@
     "branch": "Barrie South, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/ampoules-a-del-a-intensite-variable-a-culot-e12-noma-b10-2700k-350-lumens-blanc-chaud-40-w-paq-2-0529347p.html",
     "sku": "0529347",
-    "availability": "331 En Stock#052-9347-8"
-  },
-  {
-    "title": "Machine à café et à espresso mince Nespresso Vertuo Next par DeLonghi, gris",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430395/nespresso-vertuo-next-espresso-machine-by-delonghi-grey-fac2366d-dee6-4db4-8252-8086cb68fbba-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 229.99,
-    "salePrice": 114.93,
-    "store": "Canadian Tire",
-    "city": "Barrie South, ON",
-    "branch": "Barrie South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/machine-a-cafe-et-a-espresso-mince-nespresso-vertuo-next-par-delonghi-gris-0430395p.html",
-    "sku": "0430395",
-    "availability": "Il n’en reste que 1 #043-0395-8"
+    "availability": "329 En Stock#052-9347-8"
   },
   {
     "title": "Pantalon Huntshield Sutton No Fly Zone, hommes, gris",
@@ -81,7 +165,7 @@
     "branch": "Barrie South, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/range-tout-reglable-pour-batterie-de-cuisine-type-a-perspective-noir-2420018p.html",
     "sku": "2420018",
-    "availability": "18 En Stock#242-0018-4"
+    "availability": "19 En Stock#242-0018-4"
   },
   {
     "title": "Tasse en grès empilable CANVAS, arc-en-ciel, lavable au lave-vaisselle, 16 oz",
@@ -93,7 +177,7 @@
     "branch": "Barrie South, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/tasse-en-gres-empilable-canvas-arc-en-ciel-lavable-au-lave-vaisselle-16-oz-1427925p.html",
     "sku": "1427925",
-    "availability": "80 En Stock#142-7925-0"
+    "availability": "78 En Stock#142-7925-0"
   },
   {
     "title": "Meuble pour téléviseur avec foyer électrique multimédia CANVAS Kingwood, 57 po, 1 500 W, télécommande comprise, brun",
@@ -105,7 +189,7 @@
     "branch": "Barrie South, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/meuble-pour-televiseur-avec-foyer-electrique-multimedia-canvas-kingwood-57-po-1-500-w-telecommande-comprise-brun-0643556p.html",
     "sku": "0643556",
-    "availability": "Il n’en reste que 4 #064-3556-8"
+    "availability": "Il n’en reste que 3 #064-3556-8"
   },
   {
     "title": "Scie d'établi Mastercraft, 20 Vx2, 8 1/4 po",
@@ -189,7 +273,7 @@
     "branch": "Barrie South, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/leurre-a-bavette-carree-redwolf-paq-3-0771718p.html",
     "sku": "0771718",
-    "availability": "Il n’en reste que 3 #077-1718-6"
+    "availability": "Il n’en reste que 1 #077-1718-6"
   },
   {
     "title": "Cuiller hypocrite Danielson, rouge et blanc, 3/8 oz",
@@ -237,7 +321,7 @@
     "branch": "Barrie South, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/balle-distributrice-de-gateries-petco-choix-de-couleurs-2420946p.html",
     "sku": "2420946",
-    "availability": "18 En Stock#242-0946-4"
+    "availability": "20 En Stock#242-0946-4"
   },
   {
     "title": "Aspirateur-balai sans fil Miele Triflex HX1",
@@ -357,7 +441,7 @@
     "branch": "Barrie South, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/porte-savon-for-living-en-acier-inoxydable-0632296p.html",
     "sku": "0632296",
-    "availability": "19 En Stock#063-2296-4"
+    "availability": "18 En Stock#063-2296-4"
   },
   {
     "title": "Costume de bain short Outbound à entrejambe de 7 po pour hommes, noir",
@@ -489,7 +573,7 @@
     "branch": "Barrie South, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/poisson-nageur-alose-redwolf-paq-3-0771717p.html",
     "sku": "0771717",
-    "availability": "Il n’en reste que 6 #077-1717-8"
+    "availability": "Il n’en reste que 5 #077-1717-8"
   },
   {
     "title": "Décorations pour anniversaire, paq. 12",
@@ -501,7 +585,7 @@
     "branch": "Barrie South, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/decorations-pour-anniversaire-paq-12-8544491p.html",
     "sku": "8544491",
-    "availability": "Il n’en reste que 5 #854-4491-4"
+    "availability": "Il n’en reste que 4 #854-4491-4"
   },
   {
     "title": "Macaron à ruban et chiffres It's My Birthday, célébrations étincelantes, noir/doré, taille unique, paq. 15, accessoires portables pour anniversaires",
@@ -513,7 +597,7 @@
     "branch": "Barrie South, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/macaron-a-ruban-et-chiffres-it-s-my-birthday-celebrations-etincelantes-noir-dore-taille-unique-paq-15-accessoires-portables-pour-anniversaires-8420385p.html",
     "sku": "8420385",
-    "availability": "Il n’en reste que 6 #842-0385-0"
+    "availability": "Il n’en reste que 5 #842-0385-0"
   },
   {
     "title": "Organisateur de bouteille d'eau empilable Type A Clarity, transparent, paq. 2",
@@ -526,30 +610,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/organisateur-de-bouteille-d-eau-empilable-type-a-clarity-transparent-paq-2-2420015p.html",
     "sku": "2420015",
     "availability": "11 En Stock#242-0015-0"
-  },
-  {
-    "title": "Éponge en fil nettoyante lave-auto recyclée SIMONIZ",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-tools/0397050/simoniz-recycled-yarn-recycled-sponge-0d50164c-88b4-4157-a1e7-7ed529c71079-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 6.99,
-    "salePrice": 2.93,
-    "store": "Canadian Tire",
-    "city": "Barrie South, ON",
-    "branch": "Barrie South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/eponge-en-fil-nettoyante-lave-auto-recyclee-simoniz-0397050p.html",
-    "sku": "0397050",
-    "availability": "Il n’en reste que 1 #039-7050-8"
-  },
-  {
-    "title": "Plante succulente artificielle en pot en faux diamant CANVAS, 8,5 po",
-    "image": "https://media-www.canadiantire.ca/product/living/home-decor/decor-accents/0591768/canvas-7-5-succulent-in-marble-look-pot-f80af462-5bc7-402a-b78d-e020fe0174c1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 19.99,
-    "salePrice": 9.93,
-    "store": "Canadian Tire",
-    "city": "Barrie South, ON",
-    "branch": "Barrie South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/plante-succulente-artificielle-en-pot-en-faux-diamant-canvas-8-5-po-0591768p.html",
-    "sku": "0591768",
-    "availability": "Il n’en reste que 1 #059-1768-0"
   },
   {
     "title": "Leurre Northland Gumdrop flottant",
@@ -777,7 +837,7 @@
     "branch": "Barrie South, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/banderole-metallique-a-pampille-blush-happy-birthday-8541585p.html",
     "sku": "8541585",
-    "availability": "15 En Stock#854-1585-0"
+    "availability": "14 En Stock#854-1585-0"
   },
   {
     "title": "Veste rafraîchissante hydrofuge aquarelle pour chiens Petco",
@@ -837,7 +897,7 @@
     "branch": "Barrie South, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/coiffe-a-polir-en-mousse-et-en-tissus-eponge-simoniz-8-po-paq-2-0399087p.html",
     "sku": "0399087",
-    "availability": "9 En Stock#039-9087-0"
+    "availability": "Il n’en reste que 5 #039-9087-0"
   },
   {
     "title": "Lampe USB West & Arrow avec support flexible, blanc",
@@ -862,18 +922,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/pene-dormant-et-poignee-camillus-schlage-plymouth-0463583p.html",
     "sku": "0463583",
     "availability": "Il n’en reste que 1 #046-3583-6"
-  },
-  {
-    "title": "Jouet dentaire à mâcher Petco, stégosaure vert, très petit",
-    "image": "https://media-www.canadiantire.ca/product/living/pet-care/pet-accessories/1427444/petco-green-stego-dental-dog-chew-toy-extra-small-d039d968-64bc-465d-87a4-4563b920cf82-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 19.99,
-    "salePrice": 7.99,
-    "store": "Canadian Tire",
-    "city": "Barrie South, ON",
-    "branch": "Barrie South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/jouet-dentaire-a-macher-petco-stegosaure-vert-tres-petit-1427444p.html",
-    "sku": "1427444",
-    "availability": "9 En Stock#142-7444-4"
   },
   {
     "title": "Hameçon Gamakatsu Single-Egg, doré",
@@ -909,7 +957,7 @@
     "branch": "Barrie South, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/cadre-de-plaque-d-immatriculation-cruiser-chevrolet-noir-mat-0376269p.html",
     "sku": "0376269",
-    "availability": "51 En Stock#037-6269-0"
+    "availability": "50 En Stock#037-6269-0"
   },
   {
     "title": "Peinture de retouche Scratch Fix All-in-1, Grès clair (M) (PKG)",
@@ -1080,54 +1128,6 @@
     "availability": "Il n’en reste que 3 #127-9202-6"
   },
   {
-    "title": "Lumières DEL pour plateforme de camionnette",
-    "image": "https://media-www.canadiantire.ca/product/automotive/light-auto-parts/truck-accessories/1411509/led-truck-bed-light-pod-526e0cb4-adee-4531-a68f-a78e9ec1101c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 36.99,
-    "salePrice": 8.93,
-    "store": "Canadian Tire",
-    "city": "Barrie South, ON",
-    "branch": "Barrie South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/lumieres-del-pour-plateforme-de-camionnette-1411509p.html",
-    "sku": "1411509",
-    "availability": "Il n’en reste que 2 #141-1509-0"
-  },
-  {
-    "title": "Sous-verres carrés en céramique des Jets de Winnipeg de la LNH, paq. 2",
-    "image": "https://media-www.canadiantire.ca/product/playing/hockey/hockey-accessories/1830573/winnipeg-jets-ceramic-square-coaster-2-pack-15ea8201-b1a2-4d66-acea-a53722b2e4b1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 19.99,
-    "salePrice": 9.99,
-    "store": "Canadian Tire",
-    "city": "Barrie South, ON",
-    "branch": "Barrie South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/sous-verres-carres-en-ceramique-des-jets-de-winnipeg-de-la-lnh-paq-2-1830573p.html",
-    "sku": "1830573",
-    "availability": "Il n’en reste que 4 #183-0573-0"
-  },
-  {
-    "title": "Forets et embouts au titane à 7 arêtes MAXIMUM Precision Point, pour bois, métal, plastique, paq. 10",
-    "image": "https://media-www.canadiantire.ca/product/fixing/tools/power-tool-accessories/0540310/maximum-1-8-7-edge-titanium-drill-bit-10-pk-3d476a87-170d-4a7a-9c1d-5827db29c6c6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 29.99,
-    "salePrice": 9.93,
-    "store": "Canadian Tire",
-    "city": "Barrie South, ON",
-    "branch": "Barrie South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/forets-et-embouts-au-titane-a-7-aretes-maximum-precision-point-pour-bois-metal-plastique-paq-10-0540308p.html",
-    "sku": "0540308",
-    "availability": ""
-  },
-  {
-    "title": "Dandinette Northland Sinking GYPSI JIG",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/1780640/northland-gypsi-jig-chartreuse-2-pack-1-16-oz-9bb8d057-0055-49ef-b95b-85e28a44a9b0-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 4.99,
-    "salePrice": 2.43,
-    "store": "Canadian Tire",
-    "city": "Barrie South, ON",
-    "branch": "Barrie South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/dandinette-northland-sinking-gypsi-jig-1780640p.html",
-    "sku": "1780640",
-    "availability": ""
-  },
-  {
     "title": "Pince de fixation antidérapante pour éclairage à DEL Alpena",
     "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0203458/alpena-led-lighta-clamp-mounting-bracket-07ddd329-cfd2-4e8e-afd2-4dc7c9f16f82-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 51.99,
@@ -1246,6 +1246,54 @@
     "url": "https://www.canadiantire.ca/fr/pdp/connecteur-de-faisceau-stereo-scosche-vehicules-volkswagen-2006-a-aujourd-hui-0350191p.html",
     "sku": "0350191",
     "availability": "12 En Stock#035-0191-2"
+  },
+  {
+    "title": "Rug-All Tapis persan lavable beige foncé, 1,5 x 2,5 m (5 x 7 pi)",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680022/rugall-persian-dark-beige-5x7--75234348-b5d2-4815-a090-5f6f3c12a30b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 149.99,
+    "salePrice": 59.93,
+    "store": "Canadian Tire",
+    "city": "Barrie South, ON",
+    "branch": "Barrie South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/rug-all-tapis-persan-lavable-beige-fonce-1-5-x-2-5-m-5-x-7-pi-0680022p.html",
+    "sku": "0680022",
+    "availability": "Il n’en reste que 2 #068-0022-8"
+  },
+  {
+    "title": "Cintres antidérapants en plastique pour pantalons Type A, paq. 2, blanc",
+    "image": "https://media-www.canadiantire.ca/product/living/home-organization/closet-organization/0680195/type-a-2-pack-non-slip-plastic-pant-hanger-8701061c-63f9-4172-acf5-f8f10e7c297f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 7.99,
+    "salePrice": 3.93,
+    "store": "Canadian Tire",
+    "city": "Barrie South, ON",
+    "branch": "Barrie South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/cintres-antiderapants-en-plastique-pour-pantalons-type-a-paq-2-blanc-0680195p.html",
+    "sku": "0680195",
+    "availability": "Il n’en reste que 4 #068-0195-6"
+  },
+  {
+    "title": "Manteau coquille souple en nylon piqué Outbound Sienna pour femmes avec poches à glissière, noir",
+    "image": "https://media-www.canadiantire.ca/product/playing/footwear-apparel/summer-footwear-apparel/1872035/outbound-women-s-sienna-softshell-nylon-jacket-black-xs-bce55d64-2455-4d43-be40-a34dadcc7c8b.png?im=whresize&wid=200&hei=200",
+    "price": 69.99,
+    "salePrice": 11.93,
+    "store": "Canadian Tire",
+    "city": "Barrie South, ON",
+    "branch": "Barrie South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/manteau-coquille-souple-en-nylon-pique-outbound-sienna-pour-femmes-avec-poches-a-glissiere-noir-1872035p.html",
+    "sku": "1872035",
+    "availability": ""
+  },
+  {
+    "title": "Crochet double à ventouse Umbra Flex",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/bed-bath-decor/0636278/umbra-flex-suction-double-hook-d6169f46-9fc1-46cf-a7ff-d4b7955850f4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 9.99,
+    "salePrice": 4.93,
+    "store": "Canadian Tire",
+    "city": "Barrie South, ON",
+    "branch": "Barrie South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/crochet-double-a-ventouse-umbra-flex-0636278p.html",
+    "sku": "0636278",
+    "availability": ""
   },
   {
     "title": "Chapeau cagoule de chasse en molleton polaire chaud Hot Shot pour femmes, camouflage",

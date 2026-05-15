@@ -1,5 +1,41 @@
 [
   {
+    "title": "Friteuse à air chaud à deux zones T-Fal Easy Fry, 8,3 L/8,7 ptes",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430340/t-fal-dual-zone-air-fryer-f30f9c50-9b02-4977-a8b9-2e9b9249a74e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 199.99,
+    "salePrice": 99.93,
+    "store": "Canadian Tire",
+    "city": "Markham, ON",
+    "branch": "Markham, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/friteuse-a-air-chaud-a-deux-zones-t-fal-easy-fry-8-3-l-8-7-ptes-0430340p.html",
+    "sku": "0430340",
+    "availability": "15 En Stock#043-0340-8"
+  },
+  {
+    "title": "Tasses à mesurer empilables en plastique MASTER Chef, paq. 10",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/bakeware-baking-prep/1429676/master-chef-10pc-measuring-cup-set-73c761cb-c28c-42fe-a32e-f57a30c6b9a6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 24.99,
+    "salePrice": 8.93,
+    "store": "Canadian Tire",
+    "city": "Markham, ON",
+    "branch": "Markham, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tasses-a-mesurer-empilables-en-plastique-master-chef-paq-10-1429676p.html",
+    "sku": "1429676",
+    "availability": "91 En Stock#142-9676-0"
+  },
+  {
+    "title": "Planches à découper en polyéthylène MASTER Chef, va au lave-vaisselle, antidérapant, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/cutlery/0428503/master-chef-2-pack-polyboards-faebb433-ec94-4af1-a177-0bbf86d3f784-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Markham, ON",
+    "branch": "Markham, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/planches-a-decouper-en-polyethylene-master-chef-va-au-lave-vaisselle-antiderapant-paq-2-0428503p.html",
+    "sku": "0428503",
+    "availability": "Il n’en reste que 6 #042-8503-6"
+  },
+  {
     "title": "Four à pizza de table portatif au gaz Vida par PADERNO, 1 brûleur, 12 po",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking/0850001/vida-by-paderno-pizza-oven-c3f6852d-30b5-4ad8-96fe-41ea01ff0eaa-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 399.99,
@@ -21,6 +57,54 @@
     "branch": "Markham, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/cintres-pivotants-compacts-en-velours-type-a-avec-barre-a-pantalon-couleurs-variees-paq-40-0688307p.html",
     "sku": "0688307",
+    "availability": ""
+  },
+  {
+    "title": "Machine à espresso semi-automatique à un toucher avec mousseur à lait Mr. Coffee",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430385/mr-coffee-semi-automatic-espresso-machine-w-milk-frother-482b518b-cfa5-4d80-bb51-f3dc6d06036e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 439.99,
+    "salePrice": 129.93,
+    "store": "Canadian Tire",
+    "city": "Markham, ON",
+    "branch": "Markham, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/machine-a-espresso-semi-automatique-a-un-toucher-avec-mousseur-a-lait-mr-coffee-0430385p.html",
+    "sku": "0430385",
+    "availability": "20 En Stock#043-0385-2"
+  },
+  {
+    "title": "Fauteuil de salle à manger de jardin/d'extérieur en osier CANVAS Jasper, toute saison, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/1880272/canvas-jasper-dining-chair-2pk-2a5479fd-5f27-4f3d-85e2-8b4b9fa230c9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 499.99,
+    "salePrice": 199.93,
+    "store": "Canadian Tire",
+    "city": "Markham, ON",
+    "branch": "Markham, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/fauteuil-de-salle-a-manger-de-jardin-d-exterieur-en-osier-canvas-jasper-toute-saison-paq-2-1880272p.html",
+    "sku": "1880272",
+    "availability": "Il n’en reste que 4 #188-0272-6"
+  },
+  {
+    "title": "Machine à café et à espresso mince Nespresso Vertuo Next par DeLonghi, gris",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430395/nespresso-vertuo-next-espresso-machine-by-delonghi-grey-fac2366d-dee6-4db4-8252-8086cb68fbba-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 229.99,
+    "salePrice": 114.93,
+    "store": "Canadian Tire",
+    "city": "Markham, ON",
+    "branch": "Markham, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/machine-a-cafe-et-a-espresso-mince-nespresso-vertuo-next-par-delonghi-gris-0430395p.html",
+    "sku": "0430395",
+    "availability": ""
+  },
+  {
+    "title": "Pantalon Huntshield Sutton No Fly Zone, hommes, gris",
+    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-apparel-footwear/3751415/mens-sutton-no-fly-zone-pants-m-grey-d6d714cf-1a68-4dfd-a8d1-674b83deb7b6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 69.99,
+    "salePrice": 29.93,
+    "store": "Canadian Tire",
+    "city": "Markham, ON",
+    "branch": "Markham, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/pantalon-huntshield-sutton-no-fly-zone-hommes-gris-3751415p.html",
+    "sku": "3751415",
     "availability": ""
   },
   {
@@ -48,6 +132,18 @@
     "availability": "Il n’en reste que 1 #168-0087-6"
   },
   {
+    "title": "Meuble de rangement d'angle ouvert à 9 cubes For Living, blanc",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/1680221/for-living-corner-9-cube-organizer-7b7dc5f9-de00-4529-ab60-96254faa2854-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 159.99,
+    "salePrice": 79.93,
+    "store": "Canadian Tire",
+    "city": "Markham, ON",
+    "branch": "Markham, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/meuble-de-rangement-d-angle-ouvert-a-9-cubes-for-living-blanc-1680221p.html",
+    "sku": "1680221",
+    "availability": "Il n’en reste que 2 #168-0221-6"
+  },
+  {
     "title": "Sécheuse extensible intérieur/extérieur Type A",
     "image": "https://media-www.canadiantire.ca/product/living/home-organization/laundry/1429642/type-a-indoor-outdoor-dryer-4f8c50be-fec9-479f-b4f9-efc08ac97fad-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 79.99,
@@ -58,54 +154,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/secheuse-extensible-interieur-exterieur-type-a-1429642p.html",
     "sku": "1429642",
     "availability": "Il n’en reste que 3 #142-9642-0"
-  },
-  {
-    "title": "Service de vaisselle en grès à rebord orné CANVAS Gatestone, blanc, paq. 12",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/dining-and-entertaining/2421124/canvas-12-pc-ornate-rim-dinnerware-set-ec677528-47a1-4eea-a43d-63735afa1b7e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 99.99,
-    "salePrice": 49.93,
-    "store": "Canadian Tire",
-    "city": "Markham, ON",
-    "branch": "Markham, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/service-de-vaisselle-en-gres-a-rebord-orne-canvas-gatestone-blanc-paq-12-2421124p.html",
-    "sku": "2421124",
-    "availability": "Il n’en reste que 1 #242-1124-4"
-  },
-  {
-    "title": "Jouet aquatique gonflable Soak N' Splash & Slide avec gicleur, bleu, 16 pi, 5 ans et plus, pour plage/piscine",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/seasonal-toys/0504211/soak-n-splash-water-slide-16--6fa00059-6643-4304-ad97-12a017f202a2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 14.99,
-    "salePrice": 6.93,
-    "store": "Canadian Tire",
-    "city": "Markham, ON",
-    "branch": "Markham, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/jouet-aquatique-gonflable-soak-n-splash-slide-avec-gicleur-bleu-16-pi-5-ans-et-plus-pour-plage-piscine-0504211p.html",
-    "sku": "0504211",
-    "availability": "Il n’en reste que 2 #050-4211-4"
-  },
-  {
-    "title": "Meuble pour téléviseur avec console multimédia et foyer électrique CANVAS Ashcroft, 60 po, 1 400 W, télécommande comprise, blanc",
-    "image": "https://media-www.canadiantire.ca/product/living/home-decor/electric-fireplaces/0644017/60-ashcroft-media-fireplace-da24f099-5c3e-45d3-855f-45c203e35495-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 649.99,
-    "salePrice": 324.93,
-    "store": "Canadian Tire",
-    "city": "Markham, ON",
-    "branch": "Markham, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/meuble-pour-televiseur-avec-console-multimedia-et-foyer-electrique-canvas-ashcroft-60-po-1-400-w-telecommande-comprise-blanc-0644017p.html",
-    "sku": "0644017",
-    "availability": "Il n’en reste que 1 #064-4017-6"
-  },
-  {
-    "title": "Vélo électrique tout-terrain Raleigh Getaway 36 V, 700C roues, noir",
-    "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycles/0711931/raleigh-getaway-men-s-electric-bike-700c-e4b77c61-6dc1-49c0-b6d7-114a1fe93cc4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 2799.99,
-    "salePrice": 1399.93,
-    "store": "Canadian Tire",
-    "city": "Markham, ON",
-    "branch": "Markham, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/velo-electrique-tout-terrain-raleigh-getaway-36-v-700c-roues-noir-0711931p.html",
-    "sku": "0711931",
-    "availability": "Il n’en reste que 1 #071-1931-8"
   },
   {
     "title": "Échelle de piscine en A en acier Bestway Flowclear avec rampe, 42 po",
@@ -132,78 +180,6 @@
     "availability": "Il n’en reste que 2 #068-0032-4"
   },
   {
-    "title": "Papier abrasif 3M Wetordry, 4 x 9 po, paq. 5",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-body-repair/0475842/3m-imperial-wetordry-sandpaper-p400-3f901c4f-8345-4630-9155-5ec371ea3509-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 10.99,
-    "salePrice": 2.93,
-    "store": "Canadian Tire",
-    "city": "Markham, ON",
-    "branch": "Markham, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/papier-abrasif-3m-wetordry-4-x-9-po-paq-5-0475844p.html",
-    "sku": "0475844",
-    "availability": ""
-  },
-  {
-    "title": "Chaise d'extérieur empilable en plastique léger CANVAS Como pour la terrasse et la salle à manger. Résistante à la décoloration et aux taches, 18 po",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/1880397/canvas-como-stacking-chair-black-5d68b743-a549-4973-8cf0-faabf4c56fa1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 79.99,
-    "salePrice": 27.19,
-    "store": "Canadian Tire",
-    "city": "Markham, ON",
-    "branch": "Markham, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/chaise-d-exterieur-empilable-en-plastique-leger-canvas-como-pour-la-terrasse-et-la-salle-a-manger-resistante-a-la-decoloration-et-aux-taches-18-po-1880396p.html",
-    "sku": "1880396",
-    "availability": ""
-  },
-  {
-    "title": "Tapis de couloir d'intérieur et d'extérieur CANVAS Elmken, 3 x 5 pi",
-    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680046/baldi-3x5-outdoor-runner-rug-350670e1-7256-4998-93eb-5ec048a7e9e4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 29.99,
-    "salePrice": 14.93,
-    "store": "Canadian Tire",
-    "city": "Markham, ON",
-    "branch": "Markham, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/tapis-de-couloir-d-interieur-et-d-exterieur-canvas-elmken-3-x-5-pi-0680046p.html",
-    "sku": "0680046",
-    "availability": "Il n’en reste que 3 #068-0046-2"
-  },
-  {
-    "title": "Chargeur portatif Bluehive avec câbles, noir, 20 000 mAh",
-    "image": "https://media-www.canadiantire.ca/product/automotive/electronics/mobile-electronics/0355469/bluehive-20-000-mah-power-bank-with-cables-a1396292-cd03-47d4-a9ea-03a281e18227-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 69.99,
-    "salePrice": 24.93,
-    "store": "Canadian Tire",
-    "city": "Markham, ON",
-    "branch": "Markham, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/chargeur-portatif-bluehive-avec-cables-noir-20-000-mah-0355469p.html",
-    "sku": "0355469",
-    "availability": "Il n’en reste que 3 #035-5469-4"
-  },
-  {
-    "title": "Tabouret de bar pivotant en métal hauteur réglable CANVAS Turner, paq. 2, noir/brun",
-    "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/0687554/canvas-turner-stool-2-pack-84c1b1ad-45f7-4a96-a4c4-5a3f394d31ee-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 174.99,
-    "salePrice": 79.93,
-    "store": "Canadian Tire",
-    "city": "Markham, ON",
-    "branch": "Markham, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/tabouret-de-bar-pivotant-en-metal-hauteur-reglable-canvas-turner-paq-2-noir-brun-0687554p.html",
-    "sku": "0687554",
-    "availability": "Il n’en reste que 3 #068-7554-0"
-  },
-  {
-    "title": "Veste de travail imperméable Dry Core Forcefield à capuchon amovible, hommes, noir",
-    "image": "https://media-www.canadiantire.ca/product/playing/footwear-apparel/work-footwear-apparel/0891623/forcefield-men-s-dry-core-industrial-rain-jacket-m-e21838f4-2caa-43c8-a1eb-c0143ae09dc5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 89.99,
-    "salePrice": 44.93,
-    "store": "Canadian Tire",
-    "city": "Markham, ON",
-    "branch": "Markham, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/veste-de-travail-impermeable-dry-core-forcefield-a-capuchon-amovible-hommes-noir-0891623p.html",
-    "sku": "0891623",
-    "availability": ""
-  },
-  {
     "title": "Meuble-lavabo simple CANVAS Wellington à 1 porte, dessus en pierre, 24 po, chêne vieilli",
     "image": "https://media-www.canadiantire.ca/product/fixing/plumbing/faucets-fixtures/0636340/canvas-wellington-24-vanity-single-door-weathered-oak-c63a46d3-7cc6-4cbd-b432-77df9ec7c1fc-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 469.99,
@@ -225,7 +201,7 @@
     "branch": "Markham, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/barres-de-chocolat-miniatures-assorties-hershey-s-200-g-saveurs-variees-friandises-de-paques-1519665p.html",
     "sku": "1519665",
-    "availability": "27 En Stock#151-9665-4"
+    "availability": "22 En Stock#151-9665-4"
   },
   {
     "title": "Fauteuils club rembourrés d'extérieur/de jardin CANVAS Hunter, osier, toutes saisons, paq. 2",
@@ -252,18 +228,6 @@
     "availability": "Il n’en reste que 1 #184-0501-0"
   },
   {
-    "title": "Caméra de sentier Stealth Cam Revolver 360 degrés",
-    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-equipment/3751790/stealth-cam-revolver-360-degree-trail-camera-22b4a3f0-95dd-4316-8eae-f9e7606f091e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 249.99,
-    "salePrice": 119.93,
-    "store": "Canadian Tire",
-    "city": "Markham, ON",
-    "branch": "Markham, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/camera-de-sentier-stealth-cam-revolver-360-degres-3751790p.html",
-    "sku": "3751790",
-    "availability": "Il n’en reste que 1 #375-1790-0"
-  },
-  {
     "title": "Robinet d’évier de cuisine rétractable Danze Smartsense, acier inoxydable",
     "image": "https://media-www.canadiantire.ca/product/fixing/plumbing/faucets-fixtures/0634826/danze-smartsense-1h-kitchen-pull-down-faucet-stainless-steel-d22462dc-b7db-475f-a0b2-dbe4ec318ffe-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 339.99,
@@ -274,18 +238,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/robinet-d-evier-de-cuisine-retractable-danze-smartsense-acier-inoxydable-0634826p.html",
     "sku": "0634826",
     "availability": "Il n’en reste que 2 #063-4826-2"
-  },
-  {
-    "title": "Meuble-lavabo simple CANVAS Creston à 1 porte, dessus en porcelaine vitrifiée, 20 po, noir",
-    "image": "https://media-www.canadiantire.ca/product/fixing/plumbing/faucets-fixtures/0636374/canvas-20a-creston-1-door-black-08058f48-d96e-4bca-b53b-a0634e072aae-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 299.99,
-    "salePrice": 149.93,
-    "store": "Canadian Tire",
-    "city": "Markham, ON",
-    "branch": "Markham, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/meuble-lavabo-simple-canvas-creston-a-1-porte-dessus-en-porcelaine-vitrifiee-20-po-noir-0636374p.html",
-    "sku": "0636374",
-    "availability": "Il n’en reste que 1 #063-6374-4"
   },
   {
     "title": "Plombs amovibles ronds à fente",
@@ -384,6 +336,18 @@
     "availability": ""
   },
   {
+    "title": "Lustre à 5 lampes CANVAS Carlaw, noir mat",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/lighting/1522603/canvas-carlaw-chandelier-ef5bf9bd-067d-4da3-a17e-a6a58e40ec10-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 249.99,
+    "salePrice": 99.93,
+    "store": "Canadian Tire",
+    "city": "Markham, ON",
+    "branch": "Markham, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/lustre-a-5-lampes-canvas-carlaw-noir-mat-1522603p.html",
+    "sku": "1522603",
+    "availability": "Il n’en reste que 1 #152-2603-2"
+  },
+  {
     "title": "Barre d'attelage, 10 000 lb, 4 x 10,25 po",
     "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0409049/4-x10-25-hitch-bar-41995e0a-11be-44cc-9e1e-63b0bbbbde2a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 129.99,
@@ -394,6 +358,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/barre-d-attelage-10-000-lb-4-x-10-25-po-0409049p.html",
     "sku": "0409049",
     "availability": "Il n’en reste que 2 #040-9049-6"
+  },
+  {
+    "title": "Protection réversible Rawlings, noir",
+    "image": "https://media-www.canadiantire.ca/product/playing/team-sports-and-golf/field-sports/1841416/rawlings-reversible-guard-black-1f7604bf-211a-4575-b60c-0bd1bfedd66b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 27.99,
+    "salePrice": 13.99,
+    "store": "Canadian Tire",
+    "city": "Markham, ON",
+    "branch": "Markham, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/protection-reversible-rawlings-noir-0801096p.html",
+    "sku": "0801096",
+    "availability": "Il n’en reste que 1 #080-1096-4"
   },
   {
     "title": "Plateau à glace à 4 sphères Houdini",
@@ -468,18 +444,6 @@
     "availability": ""
   },
   {
-    "title": "Cric Bulldog carré, 8000 lb, 15 po",
-    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0406922/bulldog-trailer-jack-8000-lb-15-in-weld-on-direct-mount-a5dea59e-3f0b-4a2e-a023-124fdf76ebcd-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 224.99,
-    "salePrice": 46.93,
-    "store": "Canadian Tire",
-    "city": "Markham, ON",
-    "branch": "Markham, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/cric-bulldog-carre-8000-lb-15-po-0406922p.html",
-    "sku": "0406922",
-    "availability": "Il n’en reste que 1 #040-6922-4"
-  },
-  {
     "title": "Ampoules à DEL intelligentes Bluetooth à intensité variable à culot GU10 Philips Hue, 400 lumens, blanc chaud, paq. 2",
     "image": "https://media-www.canadiantire.ca/product/fixing/electrical/light-bulbs/1522545/philips-hue-gu10-white-2-pack-e3b0401c-940e-4445-b189-f0b0f4863014-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 49.99,
@@ -526,18 +490,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/plaque-d-interrupteur-a-bascule-double-atron-electro-industries-2163rbr-2-dispositifs-bronze-0522734p.html",
     "sku": "0522734",
     "availability": "Il n’en reste que 2 #052-2734-8"
-  },
-  {
-    "title": "Bouton-pressoir lumineux hydrofuge sans fil pour sonnette avec montage en surface Globe, plastique blanc",
-    "image": "https://media-www.canadiantire.ca/product/fixing/hardware/curb-appeal/0521743/wireless-push-button-white-plastic-lighted-surface-mount-882c4999-5d5d-4e16-8c55-e410b8ab90ea-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 19.99,
-    "salePrice": 9.93,
-    "store": "Canadian Tire",
-    "city": "Markham, ON",
-    "branch": "Markham, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/bouton-pressoir-lumineux-hydrofuge-sans-fil-pour-sonnette-avec-montage-en-surface-globe-plastique-blanc-0521743p.html",
-    "sku": "0521743",
-    "availability": "Il n’en reste que 1 #052-1743-2"
   },
   {
     "title": "Spatule à récipient en acier inoxydable PADERNO avec tête en silicone résistante à la chaleur",
@@ -600,54 +552,6 @@
     "availability": "Il n’en reste que 1 #842-0188-0"
   },
   {
-    "title": "Balle Bash Ball DEL NerfDog, petit, orange/rouge",
-    "image": "https://media-www.canadiantire.ca/product/living/pet-care/pet-accessories/1420767/nerf-dog-led-bash-ball--00c6069e-d52e-4721-9531-6b15623b234b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 9.99,
-    "salePrice": 4.93,
-    "store": "Canadian Tire",
-    "city": "Markham, ON",
-    "branch": "Markham, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/balle-bash-ball-del-nerfdog-petit-orange-rouge-1420767p.html",
-    "sku": "1420767",
-    "availability": "Il n’en reste que 2 #142-0767-8"
-  },
-  {
-    "title": "Phare stroboscopique à DEL Alpena prime, 2 couleurs, blanc, ambre",
-    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0203383/alpena-stealth-led-strobe-f5cd19e2-9148-4786-8a34-dc03966d9429-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 24.99,
-    "salePrice": 9.93,
-    "store": "Canadian Tire",
-    "city": "Markham, ON",
-    "branch": "Markham, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/phare-stroboscopique-a-del-alpena-prime-2-couleurs-blanc-ambre-0203383p.html",
-    "sku": "0203383",
-    "availability": "Il n’en reste que 2 #020-3383-2"
-  },
-  {
-    "title": "Lampe de travail sans fil Hoover ONEPWR, outil seulement",
-    "image": "https://media-www.canadiantire.ca/product/living/cleaning/vacuums-and-floorcare/0438263/hoover-onepwr-task-light-bare-tool--0b66a674-92f1-4692-921f-d7c1c1c3b759-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 54.99,
-    "salePrice": 24.93,
-    "store": "Canadian Tire",
-    "city": "Markham, ON",
-    "branch": "Markham, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/lampe-de-travail-sans-fil-hoover-onepwr-outil-seulement-0438263p.html",
-    "sku": "0438263",
-    "availability": "Il n’en reste que 1 #043-8263-4"
-  },
-  {
-    "title": "Lampe à DEL stroboscopique double, blanc",
-    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0203968/led-twinstrobz-amber-18d7b5e1-3479-48cf-a17c-2c3d7b18bbbd-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 43.99,
-    "salePrice": 15.93,
-    "store": "Canadian Tire",
-    "city": "Markham, ON",
-    "branch": "Markham, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/lampe-a-del-stroboscopique-double-blanc-0203966p.html",
-    "sku": "0203966",
-    "availability": "Il n’en reste que 3 #020-3966-6"
-  },
-  {
     "title": "Cap Barbell - Banc d'exercice olympique réglable",
     "image": "https://media-www.canadiantire.ca/product/playing/exercise/exercise-equipment/1840041/cap-olympic-bench-f50e07a2-b537-44e8-8a5b-9b633ee56e9c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 299.99,
@@ -663,7 +567,7 @@
     "title": "Jardinière en poterie décorative Chia Pet, Mercredi",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/gardening/dormant-goods/1591980/chia-pet-wednesday-1cc60e61-f0d0-465a-a881-8a8389dca6c3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 19.99,
-    "salePrice": 6.79,
+    "salePrice": 9.93,
     "store": "Canadian Tire",
     "city": "Markham, ON",
     "branch": "Markham, ON",
@@ -756,18 +660,6 @@
     "availability": "Il n’en reste que 2 #049-4836-4"
   },
   {
-    "title": "Assiettes rondes Achievement is Key, 9 po",
-    "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-seasonal/party-city-micro-season-decor/8549449/9-achievement-is-key-round-plate-7c4a3b05-486d-48bb-a2c8-0ed6de0d0c7c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 11.99,
-    "salePrice": 5.93,
-    "store": "Canadian Tire",
-    "city": "Markham, ON",
-    "branch": "Markham, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/assiettes-rondes-achievement-is-key-9-po-8549449p.html",
-    "sku": "8549449",
-    "availability": "Il n’en reste que 2 #854-9449-8"
-  },
-  {
     "title": "Leurre Mister Twister Curly Tail Grub, 6 po",
     "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0784815/mister-twister-assorted-pack-6--5d004470-5547-4849-bda8-6534149de2fb-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 5.99,
@@ -814,54 +706,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/barre-lumineuse-intelligente-avec-technologies-rgb-ic-et-sound-reactive-monster-illuminessence-0522104p.html",
     "sku": "0522104",
     "availability": "Il n’en reste que 3 #052-2104-8"
-  },
-  {
-    "title": "Émerillon à barillet Danielson, laiton, taille 1, paq. 4",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0774428/danielson-barrel-swivel-brass-size-1-4pk-a5637e2b-1ed4-4ca3-aeb5-172e8c974138-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 0.99,
-    "salePrice": 0.43,
-    "store": "Canadian Tire",
-    "city": "Markham, ON",
-    "branch": "Markham, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/emerillon-a-barillet-danielson-laiton-taille-1-paq-4-0774428p.html",
-    "sku": "0774428",
-    "availability": "Il n’en reste que 6 #077-4428-8"
-  },
-  {
-    "title": "Poupées Barbie Extra Mini, 5-1/2 po, choix de styles, 3 ans et plus",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/toys-games/1500208/barbie-extra-minis-ast--25162aa3-9a41-4e48-94e7-c99bc7d9e3f3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 24.99,
-    "salePrice": 10.23,
-    "store": "Canadian Tire",
-    "city": "Markham, ON",
-    "branch": "Markham, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/poupees-barbie-extra-mini-5-1-2-po-choix-de-styles-3-ans-et-plus-1500208p.html",
-    "sku": "1500208",
-    "availability": ""
-  },
-  {
-    "title": "WypAll 33352 Essuie-tout huile, graisse et encre, 12,1 x 16,6 pouces, bleu, paquet de 180",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-tools/0390827/wypall-oil-and-grease-brag-box-33352-180-ct-e09921cc-1529-4477-b78e-c3ceb4349f5c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 44.99,
-    "salePrice": 9.93,
-    "store": "Canadian Tire",
-    "city": "Markham, ON",
-    "branch": "Markham, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/wypall-33352-essuie-tout-huile-graisse-et-encre-12-1-x-16-6-pouces-bleu-paquet-de-180-0390827p.html",
-    "sku": "0390827",
-    "availability": ""
-  },
-  {
-    "title": "Pince à lunettes pour visière AutoTrends",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0375064/auto-trends-glasses-clip-for-sun-visor-f16399cf-927a-46c9-8486-f3adcf0be9f2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 9.99,
-    "salePrice": 2.93,
-    "store": "Canadian Tire",
-    "city": "Markham, ON",
-    "branch": "Markham, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/pince-a-lunettes-pour-visiere-autotrends-0375064p.html",
-    "sku": "0375064",
-    "availability": ""
   },
   {
     "title": "Plafonnier à 4 lampes avec abat-jour en cristal NOMA Cora, chrome",
@@ -934,6 +778,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/costume-disney-la-reine-des-neiges-2-elsa-tout-petits-et-enfants-robe-de-reine-bleue-choix-de-tailles-8510096p.html",
     "sku": "8510096",
     "availability": ""
+  },
+  {
+    "title": "Jouet pour chiens Petco, Llamacorne en peluche",
+    "image": "https://media-www.canadiantire.ca/product/living/pet-care/pet-accessories/1429445/petco-llamacorn-tough-plush-12--c5da7008-b32f-4e00-8c61-180a3c3b85be-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 29.99,
+    "salePrice": 14.92,
+    "store": "Canadian Tire",
+    "city": "Markham, ON",
+    "branch": "Markham, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/jouet-pour-chiens-petco-llamacorne-en-peluche-1429445p.html",
+    "sku": "1429445",
+    "availability": "Il n’en reste que 1 #142-9445-0"
   },
   {
     "title": "Chaîne à maillons ovales Atron Electro Industries LA736, calibre 8, chrome, 3 pi",
@@ -1020,6 +876,78 @@
     "availability": "Il n’en reste que 2 #052-4847-8"
   },
   {
+    "title": "Tapis de jeu pour chatons Petco",
+    "image": "https://media-www.canadiantire.ca/product/living/pet-care/pet-accessories/1427422/petco-kitten-playmat-6107c37c-e56b-4c59-b9f0-492eebf94ef1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 29.99,
+    "salePrice": 12.93,
+    "store": "Canadian Tire",
+    "city": "Markham, ON",
+    "branch": "Markham, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-de-jeu-pour-chatons-petco-1427422p.html",
+    "sku": "1427422",
+    "availability": "Il n’en reste que 1 #142-7422-6"
+  },
+  {
+    "title": "Cuillers Len Thompson, rouge et blanc, Siwash, 5 pces",
+    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/1783638/len-thompson-red-white-spoon-kit-siwash-5-piece-c1c30091-af6e-42be-b50f-f2af7bf1afe4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 26.99,
+    "salePrice": 11.93,
+    "store": "Canadian Tire",
+    "city": "Markham, ON",
+    "branch": "Markham, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/cuillers-len-thompson-rouge-et-blanc-siwash-5-pces-1783638p.html",
+    "sku": "1783638",
+    "availability": "Il n’en reste que 2 #178-3638-4"
+  },
+  {
+    "title": "Gobelets en papier, Hibiscus d'été, 9 oz",
+    "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-seasonal/party-city-micro-season-decor/8549352/summer-hibiscus-9oz-72f4b548-3c4c-4609-9c50-bca051ccdf37-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 8.99,
+    "salePrice": 3.93,
+    "store": "Canadian Tire",
+    "city": "Markham, ON",
+    "branch": "Markham, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/gobelets-en-papier-hibiscus-d-ete-9-oz-8549352p.html",
+    "sku": "8549352",
+    "availability": ""
+  },
+  {
+    "title": "Bandes abrasives à décapage rapide 3M, en oxyde d'aluminium, pour bois, plastique et métal, 4 x 36 po",
+    "image": "https://media-www.canadiantire.ca/product/fixing/tools/power-tool-accessories/0545583/3m-rapid-removal-4x36-power-sanding-belt-60-grit-1-pk-07523b31-4b79-4d5f-9643-0457f53aec15-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 16.99,
+    "salePrice": 7.93,
+    "store": "Canadian Tire",
+    "city": "Markham, ON",
+    "branch": "Markham, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/bandes-abrasives-a-decapage-rapide-3m-en-oxyde-d-aluminium-pour-bois-plastique-et-metal-4-x-36-po-0545583p.html",
+    "sku": "0545583",
+    "availability": ""
+  },
+  {
+    "title": "Interrupteur à bascule Gardner Bender GSW-41, électroménager, 1 poteau, noir",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/rough-electrical/0526975/appliance-rocker-switch-single-pole-single-throw-6f9001a1-0ab8-4376-9727-021fa31c66d1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 9.49,
+    "salePrice": 3.93,
+    "store": "Canadian Tire",
+    "city": "Markham, ON",
+    "branch": "Markham, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/interrupteur-a-bascule-gardner-bender-gsw-41-electromenager-1-poteau-noir-0526975p.html",
+    "sku": "0526975",
+    "availability": ""
+  },
+  {
+    "title": "Lampe stroboscopique à DEL, ambre",
+    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0203968/led-twinstrobz-amber-c3fd96fa-dd9a-4d81-8114-4f8282531c37-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 42.99,
+    "salePrice": 15.93,
+    "store": "Canadian Tire",
+    "city": "Markham, ON",
+    "branch": "Markham, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/lampe-stroboscopique-a-del-ambre-0203968p.html",
+    "sku": "0203968",
+    "availability": "Il n’en reste que 3 #020-3968-2"
+  },
+  {
     "title": "Connecteur rond 6 pôles en métal côté véhicule Hopkins Towing Solution Endurance",
     "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0409680/endurance-6-pole-round-vehicle-end-metal--206f47b2-dbb0-4b2a-b2f9-d6d4022185c6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 24.99,
@@ -1080,6 +1008,54 @@
     "availability": ""
   },
   {
+    "title": "Plateau à gâteau rond blanc Wilton, paq. 12",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-tools-thermometers/1426626/wilton-12pc-8-10-12-14-cake-board-af2e9a89-9b28-4269-8caf-f823f40a596f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 12.99,
+    "salePrice": 4.93,
+    "store": "Canadian Tire",
+    "city": "Markham, ON",
+    "branch": "Markham, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/plateau-a-gateau-rond-blanc-wilton-paq-12-1426626p.html",
+    "sku": "1426626",
+    "availability": "Il n’en reste que 4 #142-6626-8"
+  },
+  {
+    "title": "Appât pour barbotte, sang Charlie's Wild Cat",
+    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/1780059/catfish-charlie-w-cat-chicken-liver-dough-balls-5bb50307-c0d8-4b1b-a745-0c562b06c442-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 10.49,
+    "salePrice": 4.73,
+    "store": "Canadian Tire",
+    "city": "Markham, ON",
+    "branch": "Markham, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/appat-pour-barbotte-sang-charlie-s-wild-cat-1780059p.html",
+    "sku": "1780059",
+    "availability": "Il n’en reste que 1 #178-0059-0"
+  },
+  {
+    "title": "Sacs à surprises en papier kraft d'anniversaire, Battle Royal, paq. 8",
+    "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8421649/8ct-kraft-bag-battle-royal-33b4a76a-f6b6-4f7b-bd85-ffdb7028bfcb-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 8.99,
+    "salePrice": 1.93,
+    "store": "Canadian Tire",
+    "city": "Markham, ON",
+    "branch": "Markham, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/sacs-a-surprises-en-papier-kraft-d-anniversaire-battle-royal-paq-8-8421649p.html",
+    "sku": "8421649",
+    "availability": "Il n’en reste que 1 #842-1649-8"
+  },
+  {
+    "title": "Support de remorque bloc CAMCO 44636, plastique, jaune, paq. 5",
+    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0401907/block-tongue-jack-stand-83f0fe72-a842-45f9-8d50-263051a19802-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 9.99,
+    "salePrice": 3.39,
+    "store": "Canadian Tire",
+    "city": "Markham, ON",
+    "branch": "Markham, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/support-de-remorque-bloc-camco-44636-plastique-jaune-paq-5-0401907p.html",
+    "sku": "0401907",
+    "availability": "17 En Stock#040-1907-2"
+  },
+  {
     "title": "Leurre Lucky Strike spécial du lac, bleu nickel martelé, 17 po",
     "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0772088/lucky-strike-lake-special-17-hammered-nickel-blue-9ab4c917-2223-45c1-ad75-9f6f431563f5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 10.99,
@@ -1102,18 +1078,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/support-mural-fixe-sky-shelf-ss100-pour-televiseur-de-10-a-30-po-format-petit-0450625p.html",
     "sku": "0450625",
     "availability": "Il n’en reste que 1 #045-0625-8"
-  },
-  {
-    "title": "Affiche For Rent auto-adhésive Hillman, 8 x 12 po, noir/rouge/blanc",
-    "image": "https://media-www.canadiantire.ca/product/fixing/hardware/curb-appeal/0463107/for-rent-sign-8-x-12--a86606f0-eb84-4438-922c-f86f21b781f7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 2.99,
-    "salePrice": 1.49,
-    "store": "Canadian Tire",
-    "city": "Markham, ON",
-    "branch": "Markham, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/affiche-for-rent-auto-adhesive-hillman-8-x-12-po-noir-rouge-blanc-0463107p.html",
-    "sku": "0463107",
-    "availability": "Il n’en reste que 3 #046-3107-2"
   },
   {
     "title": "Assiettes à dîner en verre opale CANVAS Willowdale, blanc, paq. 6",
