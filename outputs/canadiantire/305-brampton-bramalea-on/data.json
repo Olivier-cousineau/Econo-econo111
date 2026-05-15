@@ -43,7 +43,7 @@
     "product_id": null,
     "sku": "1840694",
     "sku_formatted": "184-0694-0",
-    "availability": "60 En Stock#184-0694-0",
+    "availability": "53 En Stock#184-0694-0",
     "badges": [
       "Liquidation◊Exclusivité"
     ],
@@ -72,7 +72,7 @@
     "product_id": null,
     "sku": "1841012",
     "sku_formatted": "184-1012-8",
-    "availability": "14 En Stock#184-1012-8",
+    "availability": "13 En Stock#184-1012-8",
     "badges": [
       "Liquidation◊"
     ],
@@ -85,6 +85,35 @@
     "regular_price_raw": "Était±  449,99 $prix était 449,99 $",
     "price_sale_clean": "149,99",
     "price_original_clean": "449,99"
+  },
+  {
+    "store_id": "305",
+    "city": "Brampton Bramalea, ON",
+    "name": "Pouf en jute CANVAS, beige, résistant à l'eau, aux taches et à la décoloration, 18 x 18 x 12 po",
+    "title": "Pouf en jute CANVAS, beige, résistant à l'eau, aux taches et à la décoloration, 18 x 18 x 12 po",
+    "price": 34.99,
+    "price_raw": "34,99 $",
+    "liquidation": true,
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0882398/canvas-beige-jute-pouf-6db0c10c-d666-45bc-88cc-03d44f0e5e1b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0882398/canvas-beige-jute-pouf-6db0c10c-d666-45bc-88cc-03d44f0e5e1b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/pouf-en-jute-canvas-beige-resistant-a-l-eau-aux-taches-et-a-la-decoloration-18-x-18-x-12-po-0882398p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/pouf-en-jute-canvas-beige-resistant-a-l-eau-aux-taches-et-a-la-decoloration-18-x-18-x-12-po-0882398p.html",
+    "product_id": null,
+    "sku": "0882398",
+    "sku_formatted": "088-2398-4",
+    "availability": "26 En Stock#088-2398-4",
+    "badges": [
+      "Liquidation◊Mieux notés"
+    ],
+    "discount_percent": 50.01,
+    "liquidation_price": 34.99,
+    "liquidation_price_raw": "34,99 $",
+    "sale_price": 34.99,
+    "sale_price_raw": "34,99 $",
+    "regular_price": 69.99,
+    "regular_price_raw": "Était±  69,99 $prix était 69,99 $",
+    "price_sale_clean": "34,99",
+    "price_original_clean": "69,99"
   },
   {
     "store_id": "305",
@@ -536,7 +565,7 @@
     "product_id": null,
     "sku": "1519664",
     "sku_formatted": "151-9664-6",
-    "availability": "Il n’en reste que 4 #151-9664-6",
+    "availability": "Il n’en reste que 3 #151-9664-6",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -669,6 +698,35 @@
   {
     "store_id": "305",
     "city": "Brampton Bramalea, ON",
+    "name": "Cuiseur T-fal Acti-Fry",
+    "title": "Cuiseur T-fal Acti-Fry",
+    "price": 129.93,
+    "price_raw": "129,93 $",
+    "liquidation": true,
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0432071/t-fal-acti-fry-cooker-9e66184b-04b7-4e7c-aa7b-ecfac8fb6849-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0432071/t-fal-acti-fry-cooker-9e66184b-04b7-4e7c-aa7b-ecfac8fb6849-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/cuiseur-t-fal-acti-fry-0432071p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/cuiseur-t-fal-acti-fry-0432071p.html",
+    "product_id": null,
+    "sku": "0432071",
+    "sku_formatted": "043-2071-6",
+    "availability": "110 En Stock#043-2071-6",
+    "badges": [
+      "Liquidation◊Mieux notés"
+    ],
+    "discount_percent": 64.88,
+    "liquidation_price": 129.93,
+    "liquidation_price_raw": "129,93 $",
+    "sale_price": 129.93,
+    "sale_price_raw": "129,93 $",
+    "regular_price": 369.99,
+    "regular_price_raw": "Était±  369,99 $prix était 369,99 $",
+    "price_sale_clean": "129,93",
+    "price_original_clean": "369,99"
+  },
+  {
+    "store_id": "305",
+    "city": "Brampton Bramalea, ON",
     "name": "Mini moules au beurre d'arachide de Pâques Reese, 230 g",
     "title": "Mini moules au beurre d'arachide de Pâques Reese, 230 g",
     "price": 3.49,
@@ -681,7 +739,7 @@
     "product_id": null,
     "sku": "0512782",
     "sku_formatted": "051-2782-4",
-    "availability": "Il n’en reste que 4 #051-2782-4",
+    "availability": "Il n’en reste que 3 #051-2782-4",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -884,7 +942,7 @@
     "product_id": null,
     "sku": "1519666",
     "sku_formatted": "151-9666-2",
-    "availability": "12 En Stock#151-9666-2",
+    "availability": "9 En Stock#151-9666-2",
     "badges": [
       "Liquidation◊"
     ],
@@ -964,8 +1022,8 @@
     "price": 1.93,
     "price_raw": "1,93 $",
     "liquidation": true,
-    "image": "undefined?im=whresize&wid=200&hei=200",
-    "image_url": "undefined?im=whresize&wid=200&hei=200",
+    "image": "undefined",
+    "image_url": "undefined",
     "url": "https://www.canadiantire.ca/fr/pdp/interrupteur-silencieux-a-bascule-3-voies-ca-decorator-15-a-120-v-aucune-mise-a-la-terre-qualite-residentielle-couleurs-variees-0528225p.html",
     "link": "https://www.canadiantire.ca/fr/pdp/interrupteur-silencieux-a-bascule-3-voies-ca-decorator-15-a-120-v-aucune-mise-a-la-terre-qualite-residentielle-couleurs-variees-0528225p.html",
     "product_id": null,
@@ -1000,7 +1058,7 @@
     "product_id": null,
     "sku": "8420173",
     "sku_formatted": "842-0173-4",
-    "availability": null,
+    "availability": "Il n’en reste que 4 #842-0173-4",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -1104,6 +1162,35 @@
   {
     "store_id": "305",
     "city": "Brampton Bramalea, ON",
+    "name": "Plafonnier semi-encastré à 3 lampes CANVAS, laiton brossé",
+    "title": "Plafonnier semi-encastré à 3 lampes CANVAS, laiton brossé",
+    "price": 49.93,
+    "price_raw": "49,93 $",
+    "liquidation": true,
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/lighting/1522691/canvas-3-light-flushmount-brushed-brass-fe76ffd5-576a-4452-a1cb-60a56027aded-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/fixing/electrical/lighting/1522691/canvas-3-light-flushmount-brushed-brass-fe76ffd5-576a-4452-a1cb-60a56027aded-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/plafonnier-semi-encastre-a-3-lampes-canvas-laiton-brosse-1522691p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/plafonnier-semi-encastre-a-3-lampes-canvas-laiton-brosse-1522691p.html",
+    "product_id": null,
+    "sku": "1522691",
+    "sku_formatted": "152-2691-0",
+    "availability": "29 En Stock#152-2691-0",
+    "badges": [
+      "Liquidation◊Exclusivité"
+    ],
+    "discount_percent": 76.22,
+    "liquidation_price": 49.93,
+    "liquidation_price_raw": "49,93 $",
+    "sale_price": 49.93,
+    "sale_price_raw": "49,93 $",
+    "regular_price": 209.99,
+    "regular_price_raw": "Était±  209,99 $prix était 209,99 $",
+    "price_sale_clean": "49,93",
+    "price_original_clean": "209,99"
+  },
+  {
+    "store_id": "305",
+    "city": "Brampton Bramalea, ON",
     "name": "Manteau matelassé d'hiver à capuchon isotherme hydrofuge Outbound Lola pour femmes, noir",
     "title": "Manteau matelassé d'hiver à capuchon isotherme hydrofuge Outbound Lola pour femmes, noir",
     "price": 19.93,
@@ -1129,6 +1216,35 @@
     "regular_price_raw": "99,99 $Était   et+ prix était à partir de 99,99 $",
     "price_sale_clean": "19,93",
     "price_original_clean": "99,99"
+  },
+  {
+    "store_id": "305",
+    "city": "Brampton Bramalea, ON",
+    "name": "Lustre à 5 lampes CANVAS Carlaw, noir mat",
+    "title": "Lustre à 5 lampes CANVAS Carlaw, noir mat",
+    "price": 99.93,
+    "price_raw": "99,93 $",
+    "liquidation": true,
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/lighting/1522603/canvas-carlaw-chandelier-ef5bf9bd-067d-4da3-a17e-a6a58e40ec10-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/living/home-decor/lighting/1522603/canvas-carlaw-chandelier-ef5bf9bd-067d-4da3-a17e-a6a58e40ec10-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/lustre-a-5-lampes-canvas-carlaw-noir-mat-1522603p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/lustre-a-5-lampes-canvas-carlaw-noir-mat-1522603p.html",
+    "product_id": null,
+    "sku": "1522603",
+    "sku_formatted": "152-2603-2",
+    "availability": "12 En Stock#152-2603-2",
+    "badges": [
+      "Liquidation◊Mieux notés"
+    ],
+    "discount_percent": 60.03,
+    "liquidation_price": 99.93,
+    "liquidation_price_raw": "99,93 $",
+    "sale_price": 99.93,
+    "sale_price_raw": "99,93 $",
+    "regular_price": 249.99,
+    "regular_price_raw": "Était±  249,99 $prix était 249,99 $",
+    "price_sale_clean": "99,93",
+    "price_original_clean": "249,99"
   },
   {
     "store_id": "305",
@@ -1783,7 +1899,7 @@
     "product_id": null,
     "sku": "2421077",
     "sku_formatted": "242-1077-6",
-    "availability": "110 En Stock#242-1077-6",
+    "availability": "104 En Stock#242-1077-6",
     "badges": [
       "Liquidation◊"
     ],
@@ -2276,7 +2392,7 @@
     "product_id": null,
     "sku": "0269167",
     "sku_formatted": "026-9167-0",
-    "availability": null,
+    "availability": "Il n’en reste que 1 #026-9167-0",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -3569,35 +3685,6 @@
   {
     "store_id": "305",
     "city": "Brampton Bramalea, ON",
-    "name": "Sac de selle de vélo avec poche pour gourde Raleigh",
-    "title": "Sac de selle de vélo avec poche pour gourde Raleigh",
-    "price": 10,
-    "price_raw": "10,00 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycle-accessories/0730557/raleigh-saddle-bag-with-water-bottle-10f1f7bc-5439-4466-a4ea-0a7a4b1de8e7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/playing/cycling/bicycle-accessories/0730557/raleigh-saddle-bag-with-water-bottle-10f1f7bc-5439-4466-a4ea-0a7a4b1de8e7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/sac-de-selle-de-velo-avec-poche-pour-gourde-raleigh-0730557p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/sac-de-selle-de-velo-avec-poche-pour-gourde-raleigh-0730557p.html",
-    "product_id": null,
-    "sku": "0730557",
-    "sku_formatted": "073-0557-2",
-    "availability": "Il n’en reste que 2 #073-0557-2",
-    "badges": [
-      "Liquidation◊Mieux notés"
-    ],
-    "discount_percent": 70.58,
-    "liquidation_price": 10,
-    "liquidation_price_raw": "10,00 $",
-    "sale_price": 10,
-    "sale_price_raw": "10,00 $",
-    "regular_price": 33.99,
-    "regular_price_raw": "Était±  33,99 $prix était 33,99 $",
-    "price_sale_clean": "10,00",
-    "price_original_clean": "33,99"
-  },
-  {
-    "store_id": "305",
-    "city": "Brampton Bramalea, ON",
     "name": "Tapis antimicrobien à chevrons Korhani Studio, gris, tailles variées",
     "title": "Tapis antimicrobien à chevrons Korhani Studio, gris, tailles variées",
     "price": 4,
@@ -4074,7 +4161,7 @@
     "product_id": null,
     "sku": "0813920",
     "sku_formatted": "081-3920-8",
-    "availability": null,
+    "availability": "Il n’en reste que 1 #081-3920-8",
     "badges": [
       "Liquidation◊"
     ],
@@ -4277,7 +4364,7 @@
     "product_id": null,
     "sku": "1427696",
     "sku_formatted": "142-7696-4",
-    "availability": "Il n’en reste que 3 #142-7696-4",
+    "availability": "Il n’en reste que 1 #142-7696-4",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
