@@ -1,27 +1,75 @@
 [
   {
-    "title": "Fauteuil de salle à manger de jardin/d'extérieur en osier CANVAS Jasper, toute saison, paq. 2",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/1880272/canvas-jasper-dining-chair-2pk-2a5479fd-5f27-4f3d-85e2-8b4b9fa230c9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 499.99,
-    "salePrice": 199.93,
+    "title": "Toile pare soleil triangulaire ShelterLogic, 12 pi",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/0882240/shelter-logic-triangle-shade-sail-12--2c190960-0271-482d-a439-b31dbf8f42e7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 54.99,
+    "salePrice": 24.93,
     "store": "Canadian Tire",
     "city": "Yonge & Steeles, ON",
     "branch": "Yonge & Steeles, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/fauteuil-de-salle-a-manger-de-jardin-d-exterieur-en-osier-canvas-jasper-toute-saison-paq-2-1880272p.html",
-    "sku": "1880272",
+    "url": "https://www.canadiantire.ca/fr/pdp/toile-pare-soleil-triangulaire-shelterlogic-12-pi-0882307p.html",
+    "sku": "0882307",
+    "availability": "Il n’en reste que 6 #088-2307-2"
+  },
+  {
+    "title": "Fauteuil de salle à manger d'extérieur/de terrasse CANVAS Belwood en aluminium et osier, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/0880541/canvas-belwood-aluminum-dining-chair-2-pack-de38f891-c44a-49df-a4e2-897c643e77fb-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 499.99,
+    "salePrice": 249.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/fauteuil-de-salle-a-manger-d-exterieur-de-terrasse-canvas-belwood-en-aluminium-et-osier-paq-2-0880541p.html",
+    "sku": "0880541",
     "availability": ""
   },
   {
-    "title": "Machine à café et à espresso mince Nespresso Vertuo Next par DeLonghi, gris",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430395/nespresso-vertuo-next-espresso-machine-by-delonghi-grey-fac2366d-dee6-4db4-8252-8086cb68fbba-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 229.99,
-    "salePrice": 114.93,
+    "title": "Tapis d'intérieur et d'extérieur CANVAS Fresco Marven, 8 x 10 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680038/marven-indoor-outdoor-rug-f51c7cd9-ed84-43e2-8599-b714280d7a6c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 199.99,
+    "salePrice": 99.93,
     "store": "Canadian Tire",
     "city": "Yonge & Steeles, ON",
     "branch": "Yonge & Steeles, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/machine-a-cafe-et-a-espresso-mince-nespresso-vertuo-next-par-delonghi-gris-0430395p.html",
-    "sku": "0430395",
-    "availability": "Il n’en reste que 5 #043-0395-8"
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-d-interieur-et-d-exterieur-canvas-fresco-marven-8-x-10-pi-0680038p.html",
+    "sku": "0680038",
+    "availability": "Il n’en reste que 2 #068-0038-2"
+  },
+  {
+    "title": "Cintres pivotants compacts en velours Type A avec barre à pantalon, couleurs variées, paq. 40",
+    "image": "https://media-www.canadiantire.ca/product/living/home-organization/closet-organization/0688308/type-a-velvet-suit-hanger-black-10pk-4afb3f73-0449-46d6-975c-369ae2760de2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 32.99,
+    "salePrice": 12.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/cintres-pivotants-compacts-en-velours-type-a-avec-barre-a-pantalon-couleurs-variees-paq-40-0688307p.html",
+    "sku": "0688307",
+    "availability": ""
+  },
+  {
+    "title": "Serviettes de bar MASTER Chef, paq. 8",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/dining-and-entertaining/1429826/master-chef-8-pack-bar-mops-misc-colours-4b1f6a4d-f9b4-4891-8c49-0420c079a6ed-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 7.99,
+    "salePrice": 3.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/serviettes-de-bar-master-chef-paq-8-1429826p.html",
+    "sku": "1429826",
+    "availability": ""
+  },
+  {
+    "title": "Machine à espresso semi-automatique à un toucher avec mousseur à lait Mr. Coffee",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430385/mr-coffee-semi-automatic-espresso-machine-w-milk-frother-482b518b-cfa5-4d80-bb51-f3dc6d06036e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 439.99,
+    "salePrice": 129.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/machine-a-espresso-semi-automatique-a-un-toucher-avec-mousseur-a-lait-mr-coffee-0430385p.html",
+    "sku": "0430385",
+    "availability": "Il n’en reste que 6 #043-0385-2"
   },
   {
     "title": "Présentoir d'articles saisonniers Mastercraft avec chariot à plateforme roulante, noir",
@@ -48,6 +96,30 @@
     "availability": "Il n’en reste que 1 #040-1012-0"
   },
   {
+    "title": "Suncast - Coffre de rangement d'extérieur en résine,très grand, gris, 200 gal",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-storage/0600632/suncast-200-gallon-extra-large-deck-box-944eb197-8a12-4286-bb38-4bc562189c1b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 399.99,
+    "salePrice": 199.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/suncast-coffre-de-rangement-d-exterieur-en-resine-tres-grand-gris-200-gal-0600632p.html",
+    "sku": "0600632",
+    "availability": "Il n’en reste que 1 #060-0632-2"
+  },
+  {
+    "title": "Tapis rond d'intérieur et d'extérieur CANVAS Eperon, 6 x 6 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680047/eperon-round-outdoor-rug-194b3686-4034-4636-b92a-b5fa029609e5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 49.99,
+    "salePrice": 19.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-rond-d-interieur-et-d-exterieur-canvas-eperon-6-x-6-pi-0680047p.html",
+    "sku": "0680047",
+    "availability": "Il n’en reste que 4 #068-0047-0"
+  },
+  {
     "title": "Sécheuse extensible intérieur/extérieur Type A",
     "image": "https://media-www.canadiantire.ca/product/living/home-organization/laundry/1429642/type-a-indoor-outdoor-dryer-4f8c50be-fec9-479f-b4f9-efc08ac97fad-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 79.99,
@@ -58,6 +130,126 @@
     "url": "https://www.canadiantire.ca/fr/pdp/secheuse-extensible-interieur-exterieur-type-a-1429642p.html",
     "sku": "1429642",
     "availability": "8 En Stock#142-9642-0"
+  },
+  {
+    "title": "Lit de camp pliant portatif pour chiens Woods DOG-WOOD avec sac de transport, capacité de 70 lb, bleu",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-accessories/0766424/woods-dogwood-quad-fold-pet-cot-fe2e4cef-58fa-4578-93b8-795fe70105e1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 79.99,
+    "salePrice": 35.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/lit-de-camp-pliant-portatif-pour-chiens-woods-dog-wood-avec-sac-de-transport-capacite-de-70-lb-bleu-0766424p.html",
+    "sku": "0766424",
+    "availability": "Il n’en reste que 2 #076-6424-6"
+  },
+  {
+    "title": "Garde-robe compacte Canvas",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/1680204/canvas-slim-wardrobe-98f1ed6a-144b-4f67-a348-6ea6f35a5649-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 349.99,
+    "salePrice": 174.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/garde-robe-compacte-canvas-1680204p.html",
+    "sku": "1680204",
+    "availability": "Il n’en reste que 3 #168-0204-8"
+  },
+  {
+    "title": "CANVAS Minden - Fauteuil Adirondack empilable rembourré, gris",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/0882190/canvas-minden-padded-sling-adirondack-chair-22bfb86d-0e5b-4775-9dbb-b82e723cafcd-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 129.99,
+    "salePrice": 59.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/canvas-minden-fauteuil-adirondack-empilable-rembourre-gris-0882190p.html",
+    "sku": "0882190",
+    "availability": ""
+  },
+  {
+    "title": "Décanteur et verres whisky en verre Trudeau, 5 pièces",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/dining-and-entertaining/1426174/trudeau-whiskey-set-5-pc-19b99451-15bf-4b77-b69f-9d77f38abab3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 39.99,
+    "salePrice": 14.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/decanteur-et-verres-whisky-en-verre-trudeau-5-pieces-1426174p.html",
+    "sku": "1426174",
+    "availability": "Il n’en reste que 2 #142-6174-2"
+  },
+  {
+    "title": "Tapis d'intérieur et d'extérieur CANVAS Varlyn, 6 x 9 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680044/varlyn-outdoor-rug-aebd113c-da07-4627-9ecc-c9c5bc98f257-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 49.99,
+    "salePrice": 19.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-d-interieur-et-d-exterieur-canvas-varlyn-6-x-9-pi-0680044p.html",
+    "sku": "0680044",
+    "availability": ""
+  },
+  {
+    "title": "Tapis de couloir d'intérieur et d'extérieur CANVAS Elfin, 3 x 5 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680045/elfin-outdoor-runner-rug-f81ffe3f-6368-4f13-8809-4b772e430737-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 29.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-de-couloir-d-interieur-et-d-exterieur-canvas-elfin-3-x-5-pi-0680045p.html",
+    "sku": "0680045",
+    "availability": ""
+  },
+  {
+    "title": "Fauteuil en aluminium empilable CANVAS Hastings",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/1881375/canvas-hastings-stacking-aluminum-chair-618a8055-0d90-40fa-b420-6e2ee713fb52-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 99.99,
+    "salePrice": 49.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/fauteuil-en-aluminium-empilable-canvas-hastings-1881375p.html",
+    "sku": "1881375",
+    "availability": "Il n’en reste que 4 #188-1375-6"
+  },
+  {
+    "title": "CANVAS Mercier - Table à dîner de terrasse rectangulaire en acier à plateau en verre, noir",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/0882029/canvas-mercier-dining-table-1ab27b9c-d50f-4a17-9d15-124e2a4f2a96-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 299.99,
+    "salePrice": 149.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/canvas-mercier-table-a-diner-de-terrasse-rectangulaire-en-acier-a-plateau-en-verre-noir-0882029p.html",
+    "sku": "0882029",
+    "availability": "Il n’en reste que 4 #088-2029-4"
+  },
+  {
+    "title": "Baguette à bulles géante Gazillion Kid-In-A-Bubble avec liquide à bulles et plateau, transparent, 8 oz, 3 ans et plus, activités estivales/extérieur",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/seasonal-toys/0509136/kid-in-a-bubble-27ab10b7-ca87-4f73-aae9-c813ed3dbedc-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 24.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/baguette-a-bulles-geante-gazillion-kid-in-a-bubble-avec-liquide-a-bulles-et-plateau-transparent-8-oz-3-ans-et-plus-activites-estivales-exterieur-0509136p.html",
+    "sku": "0509136",
+    "availability": "Il n’en reste que 4 #050-9136-4"
+  },
+  {
+    "title": "Coussin de siège extérieur CANVAS Boho",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0880046/canvas-boho-seat-pad-5ca65013-3b48-49c3-8076-56f99e57c716-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 44.99,
+    "salePrice": 19.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/coussin-de-siege-exterieur-canvas-boho-0880046p.html",
+    "sku": "0880046",
+    "availability": "8 En Stock#088-0046-4"
   },
   {
     "title": "Écouteurs sans fil Hesh Evo de Skullcandy",
@@ -72,6 +264,78 @@
     "availability": "Il n’en reste que 3 #035-8102-8"
   },
   {
+    "title": "Ventilateur de plafond réversible à 4 pales Hunter Simple, 3 vitesses, éclairage et télécommande, 52 po, chêne gris pâle/noyer gris",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/ceiling-fans/0529334/hunter-52-mitros-ceiling-fan-1c36df52-62a3-47ae-84f7-0372f9eb4804-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 279.99,
+    "salePrice": 129.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ventilateur-de-plafond-reversible-a-4-pales-hunter-simple-3-vitesses-eclairage-et-telecommande-52-po-chene-gris-pale-noyer-gris-0529334p.html",
+    "sku": "0529334",
+    "availability": "Il n’en reste que 2 #052-9334-8"
+  },
+  {
+    "title": "Pergola modulaire CANVAS Horizon, extérieur et patio, 10 x 10 pi",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/1880240/canvas-horizon-10-x-10-modular-pergola-036babcc-70d8-48f1-b1f2-73666688de06-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 1199.99,
+    "salePrice": 599.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/pergola-modulaire-canvas-horizon-exterieur-et-patio-10-x-10-pi-1880240p.html",
+    "sku": "1880240",
+    "availability": "Il n’en reste que 5 #188-0240-2"
+  },
+  {
+    "title": "Coussin de siège CANVAS Helene",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0882518/canvas-adelaide-seat-pad-79c13923-af04-4139-88e8-5a253b100930-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 52.99,
+    "salePrice": 24.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/coussin-de-siege-canvas-helene-0882518p.html",
+    "sku": "0882518",
+    "availability": "Il n’en reste que 4 #088-2518-0"
+  },
+  {
+    "title": "Pagaie de kayak standard Pelican, noir, 89 po (2,26 m)",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0793365/kayak-paddle-90f64628-f3f6-4b2f-8666-1d68fcb360e4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 64.99,
+    "salePrice": 24.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/pagaie-de-kayak-standard-pelican-noir-89-po-2-26-m-0793365p.html",
+    "sku": "0793365",
+    "availability": "Il n’en reste que 2 #079-3365-8"
+  },
+  {
+    "title": "Panier de basketball d'extérieur fixe Spalding U-TURN, 60 po",
+    "image": "https://media-www.canadiantire.ca/product/playing/team-sports-and-golf/sports-equipment-accessories/1840808/spalding-60-glass-in-ground-basketball-system-0694c723-1f02-444a-99e6-83123f28c329-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 999.99,
+    "salePrice": 499.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/panier-de-basketball-d-exterieur-fixe-spalding-u-turn-60-po-1840808p.html",
+    "sku": "1840808",
+    "availability": ""
+  },
+  {
+    "title": "Abri soleil Outbound Haven à système de 2 moyeux",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/tents-shelters/0766442/outbound-haven-2hub-sun-shelter-dd9ff823-d50f-4269-a2f3-7cb00e9450a9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 79.99,
+    "salePrice": 39.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/abri-soleil-outbound-haven-a-systeme-de-2-moyeux-0766442p.html",
+    "sku": "0766442",
+    "availability": "8 En Stock#076-6442-2"
+  },
+  {
     "title": "Foyer avec manteau For Living",
     "image": "https://media-www.canadiantire.ca/product/living/home-decor/electric-fireplaces/0644024/for-living-mantel-fireplace-47ed5734-731a-487c-a523-d038a08e8026-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 499.99,
@@ -82,6 +346,42 @@
     "url": "https://www.canadiantire.ca/fr/pdp/foyer-avec-manteau-for-living-0644024p.html",
     "sku": "0644024",
     "availability": "Il n’en reste que 1 #064-4024-8"
+  },
+  {
+    "title": "Disques volants portatifs pour l'extérieur Kan Jam, jaune/noir, 8 ans et plus, pour activités de jeu de pelouse",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/backyard-amusement/1840761/kan-jam-97e5a4da-da13-43a1-b181-6757efec4cb0.png?im=whresize&wid=200&hei=200",
+    "price": 89.99,
+    "salePrice": 44.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/disques-volants-portatifs-pour-l-exterieur-kan-jam-jaune-noir-8-ans-et-plus-pour-activites-de-jeu-de-pelouse-1840761p.html",
+    "sku": "1840761",
+    "availability": "Il n’en reste que 5 #184-0761-0"
+  },
+  {
+    "title": "Tapis de jeu rond rempli d’eau Banzai JR Wiggle n Waves, 44 po, 12 mois et plus",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pools-spas/0813922/wiggle-n-waves-sprinkling-mat-e1a1b4c7-2c51-4810-a285-974dae65cf39-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 24.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-de-jeu-rond-rempli-d-eau-banzai-jr-wiggle-n-waves-44-po-12-mois-et-plus-0813922p.html",
+    "sku": "0813922",
+    "availability": "Il n’en reste que 5 #081-3922-4"
+  },
+  {
+    "title": "Barbecue et fumoir à granules de bois avec commandes numériques MASTER Chef Grill Turismo",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking/0853185/masterchef-grill-turismo-pellet-grill-0e9e7b45-7f3b-40ef-b79d-a60edcc1aca5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 499.99,
+    "salePrice": 249.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/barbecue-et-fumoir-a-granules-de-bois-avec-commandes-numeriques-master-chef-grill-turismo-0853185p.html",
+    "sku": "0853185",
+    "availability": "Il n’en reste que 2 #085-3185-0"
   },
   {
     "title": "Applique murale d'extérieur à 1 lampe abat-jour verre martelé transparent NOMA, noir mat",
@@ -111,13 +411,25 @@
     "title": "Bouquets de ballons en aluminium satiné étoile/rond licorne Believe in Unicorns, rose/blanc, paq. 5, gonflement à l'hélium et ruban inclus, pour fête d'anniversaire",
     "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8424566/blln-5pc-bqt-magical-unicorn-2391f545-dbbb-46bb-aa83-c9b753a85335-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 33.99,
-    "salePrice": 16.93,
+    "salePrice": 11.93,
     "store": "Canadian Tire",
     "city": "Yonge & Steeles, ON",
     "branch": "Yonge & Steeles, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/bouquets-de-ballons-en-aluminium-satine-etoile-rond-licorne-believe-in-unicorns-rose-blanc-paq-5-gonflement-a-l-helium-et-ruban-inclus-pour-fete-d-anniversaire-8424566p.html",
     "sku": "8424566",
     "availability": "8 En Stock#842-4566-6"
+  },
+  {
+    "title": "Fontaine de jardin de table d'extérieur fleur For Living",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/1590070/for-living-flower-tabletop-fountain-8cb57a21-e33f-4e14-9028-bc83b3315e3f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 99.99,
+    "salePrice": 49.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/fontaine-de-jardin-de-table-d-exterieur-fleur-for-living-1590070p.html",
+    "sku": "1590070",
+    "availability": "Il n’en reste que 3 #159-0070-6"
   },
   {
     "title": "Bols pour la préparation des repas MASTER Chef, paq. 6",
@@ -132,6 +444,18 @@
     "availability": ""
   },
   {
+    "title": "CANVAS Rideau - Salle à manger de jardin avec foyer, 5 pce",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/0880538/canvas-rideau-5-pc-fire-dining-set-048d32b7-b184-4682-b746-13ca502b947e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 1999.99,
+    "salePrice": 899.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/canvas-rideau-salle-a-manger-de-jardin-avec-foyer-5-pce-0880538p.html",
+    "sku": "0880538",
+    "availability": "Il n’en reste que 2 #088-0538-4"
+  },
+  {
     "title": "Pneu de remorque Motomaster Bias ST205/75/D15",
     "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0403176/motomaster-bias-trailer-tire-st205-75-d15-tire-only-e927b74d-fcfe-49ec-a377-40ccd78ff85f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 99.99,
@@ -142,6 +466,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/pneu-de-remorque-motomaster-bias-st205-75-d15-0403176p.html",
     "sku": "0403176",
     "availability": ""
+  },
+  {
+    "title": "VFI Helly Hansen à gonflage automatique",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-water-fun/0793043/helly-hansen-personal-flotation-device-automatic-inflate-2caed308-e4c4-4792-a4f0-e0dfb43af7d1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 249.99,
+    "salePrice": 99.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/vfi-helly-hansen-a-gonflage-automatique-0793043p.html",
+    "sku": "0793043",
+    "availability": "Il n’en reste que 2 #079-3043-4"
   },
   {
     "title": "Foyer électrique à montage mural Napoleon avec Bluetooth, 50 po, 1 500 W, télécommande comprise, noir",
@@ -177,19 +513,55 @@
     "branch": "Yonge & Steeles, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/ampoules-a-del-a-intensite-variable-globe-a-culot-e26-noma-g25-350-lumens-blanc-chaud-40-w-paq-2-0529899p.html",
     "sku": "0529899",
-    "availability": "404 En Stock#052-9899-4"
+    "availability": "403 En Stock#052-9899-4"
+  },
+  {
+    "title": "Grandes assiettes en fibre de bambou CANVAS, paq. 1, gris",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0597852/canvas-dual-tone-organic-dinner-plate-3d0be8b4-1843-43ea-b675-1263bd5ab2e8-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 7.99,
+    "salePrice": 3.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/grandes-assiettes-en-fibre-de-bambou-canvas-paq-1-gris-0597852p.html",
+    "sku": "0597852",
+    "availability": "Il n’en reste que 4 #059-7852-2"
   },
   {
     "title": "Nettoyant auto Chemical Guys, mat méticuleux",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-chemicals/0390598/chemical-guys-meticulous-matte-auto-wash-1ee1abd1-7fd4-49c1-ab91-096052fb02a6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 19.99,
-    "salePrice": 9.93,
+    "salePrice": 6.93,
     "store": "Canadian Tire",
     "city": "Yonge & Steeles, ON",
     "branch": "Yonge & Steeles, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-auto-chemical-guys-mat-meticuleux-0390598p.html",
     "sku": "0390598",
     "availability": ""
+  },
+  {
+    "title": "Brasero/foyer d'extérieur pour dessus de table CANVAS Wallace, carré, 40 000 BTU",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-heating/0851553/canvas-wallace-fire-table-c0cac372-f7fb-4cba-9d29-e36b4189d4c6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 269.99,
+    "salePrice": 129.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/brasero-foyer-d-exterieur-pour-dessus-de-table-canvas-wallace-carre-40-000-btu-0851553p.html",
+    "sku": "0851553",
+    "availability": "Il n’en reste que 1 #085-1553-6"
+  },
+  {
+    "title": "Sac fourre-tout de camping Woods Haul 45, 45 L, anthracite",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/backpacks-luggage-accessories/0766610/woods-campfire-tote-a68e35d0-677b-486b-ad97-24a2ad763e01-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 99.99,
+    "salePrice": 49.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/sac-fourre-tout-de-camping-woods-haul-45-45-l-anthracite-0766610p.html",
+    "sku": "0766610",
+    "availability": "Il n’en reste que 2 #076-6610-2"
   },
   {
     "title": "Hameçon en faucille Xcalibur Octopus",
@@ -204,6 +576,18 @@
     "availability": ""
   },
   {
+    "title": "Lanterne à bougie à DEL cylindrique décorative For Living",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/1590072/for-living-cylinder-led-candle-lantern-af75e83b-b7cd-43e0-b5b0-d55069daa89c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 24.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/lanterne-a-bougie-a-del-cylindrique-decorative-for-living-1590072p.html",
+    "sku": "1590072",
+    "availability": "Il n’en reste que 4 #159-0072-2"
+  },
+  {
     "title": "Casque supra-auriculaire sans fil JLAB Studio, noir",
     "image": "https://media-www.canadiantire.ca/product/living/electronics/home-entertainment-accessories/0442407/jlab-studio-wireless-on-ear-headphones-black-3aa5f370-8bfa-41fb-8bb6-0f432bb21473-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 44.99,
@@ -216,10 +600,46 @@
     "availability": ""
   },
   {
+    "title": "Gobelets empilables ananas For Living",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/1592514/for-living-stackable-pineapple-cups-b68e7f07-1432-4009-bf45-aa371216ab02-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 14.99,
+    "salePrice": 4.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/gobelets-empilables-ananas-for-living-1592514p.html",
+    "sku": "1592514",
+    "availability": "Il n’en reste que 4 #159-2514-0"
+  },
+  {
+    "title": "Brosse pour barbecue en fibres naturelles avec grattoir en acier inoxydable",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking-accessories/1850178/napoleon-palmyra-coconut-bbq-cleaning-brush-15a854af-47d8-45b1-88df-6cf4d0d89362-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/brosse-pour-barbecue-en-fibres-naturelles-avec-grattoir-en-acier-inoxydable-1850178p.html",
+    "sku": "1850178",
+    "availability": "Il n’en reste que 2 #185-0178-8"
+  },
+  {
+    "title": "Petites assiettes en faux marbre CANVAS, paq. 1",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0597343/canvas-palm-breeze-dinner-plate-b8f56df6-2442-42df-b960-87f421f48764-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 6.99,
+    "salePrice": 2.43,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/petites-assiettes-en-faux-marbre-canvas-paq-1-0597205p.html",
+    "sku": "0597205",
+    "availability": "8 En Stock#059-7205-4"
+  },
+  {
     "title": "Peinture laque acrylique en aérosol pour automobile de qualité supérieure Dupli-Color Perfect Match, sherwood foncé, 227 g",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-body-repair/0472432/chrysler-8oz-deep-sherwood-paint-fec6a01c-cae9-4e89-9eaf-e333b7dc50c5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 24.99,
-    "salePrice": 7.93,
+    "salePrice": 5.93,
     "store": "Canadian Tire",
     "city": "Yonge & Steeles, ON",
     "branch": "Yonge & Steeles, ON",
@@ -228,10 +648,34 @@
     "availability": "Il n’en reste que 5 #047-2432-0"
   },
   {
+    "title": "Applique d'extérieur intégrée à DEL NOMA, noir mat, 13,2 po",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/lighting/1522768/noma-13-2-integrated-led-outdoor-wall-sconce-8979a633-f230-4404-8f55-f2844f1e0dd2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 89.99,
+    "salePrice": 39.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/applique-d-exterieur-integree-a-del-noma-noir-mat-13-2-po-1522768p.html",
+    "sku": "1522768",
+    "availability": "Il n’en reste que 2 #152-2768-0"
+  },
+  {
+    "title": "Plat de service d'extérieur en fibre de bambou CANVAS Summer Palm, 14 po",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/1590044/canvas-bamboo-summer-palm-14-platter-bb2e6866-612c-46ec-a269-0b3fd66589f2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 14.99,
+    "salePrice": 6.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/plat-de-service-d-exterieur-en-fibre-de-bambou-canvas-summer-palm-14-po-1590044p.html",
+    "sku": "1590044",
+    "availability": "Il n’en reste que 4 #159-0044-0"
+  },
+  {
     "title": "Revêtement au graphène Nu Finish, 710 mL",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-chemicals/0393663/nu-finish-graphene-coating-710ml-932af118-3f7d-4777-b16b-da8369ed0a87-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 24.99,
-    "salePrice": 11.93,
+    "salePrice": 8.93,
     "store": "Canadian Tire",
     "city": "Yonge & Steeles, ON",
     "branch": "Yonge & Steeles, ON",
@@ -252,6 +696,18 @@
     "availability": "20 En Stock#043-8660-8"
   },
   {
+    "title": "Sac à dos à 2 compartiments Woods Ridgeline pour randonnée/camping/voyage, bleu, 22 L",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-accessories/0766448/woods-ridgeline-22l-pack-c7f84b85-d99f-4620-852d-05dcbf59de71-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 99.99,
+    "salePrice": 49.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/sac-a-dos-a-2-compartiments-woods-ridgeline-pour-randonnee-camping-voyage-bleu-22-l-0766448p.html",
+    "sku": "0766448",
+    "availability": "Il n’en reste que 1 #076-6448-0"
+  },
+  {
     "title": "Saladier CANVAS avec pince en bambou",
     "image": "https://media-www.canadiantire.ca/product/living/kitchen/dining-and-entertaining/1426361/canvas-salad-bowl-with-bamboo-tongs-445791e9-d2ac-485c-8fbd-79666b54a6e4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 29.99,
@@ -267,7 +723,7 @@
     "title": "Chargeur de batterie intelligent MotoMaster Eliminator de série Precision, entièrement automatique, 4/1 a, 12 V",
     "image": "https://media-www.canadiantire.ca/product/automotive/light-auto-parts/auto-battery-accessories/0111968/motomaster-eliminator-precision-series-4-1a-battery-charger-6f80bf9e-8e45-4d94-93df-190a08bd9b67-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 69.99,
-    "salePrice": 34.93,
+    "salePrice": 24.93,
     "store": "Canadian Tire",
     "city": "Yonge & Steeles, ON",
     "branch": "Yonge & Steeles, ON",
@@ -288,10 +744,34 @@
     "availability": "27 En Stock#082-1088-0"
   },
   {
+    "title": "Anneaux et bâtons de plongée flexibles pour enfants Splash Bombs Dizzy Dive Power, multicolore, 4 ans et plus, activités amusantes de plage/piscine, paq. 6",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-fun/0811192/dizzy-dive-pack-pool-toys-dcad1fe7-0e52-4a89-9eb7-8932384c0620-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 12.99,
+    "salePrice": 4.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/anneaux-et-batons-de-plongee-flexibles-pour-enfants-splash-bombs-dizzy-dive-power-multicolore-4-ans-et-plus-activites-amusantes-de-plage-piscine-paq-6-0811192p.html",
+    "sku": "0811192",
+    "availability": ""
+  },
+  {
+    "title": "Lunettes de natation antibuée à protection UV pour jeunes/adultes Speedo, noir/gris, 14 ans et plus",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-fun/0813963/speedo-adult-goggle-8af16b27-23f0-45dc-868e-976d1fbd4797-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 10.99,
+    "salePrice": 4.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/lunettes-de-natation-antibuee-a-protection-uv-pour-jeunes-adultes-speedo-noir-gris-14-ans-et-plus-0813963p.html",
+    "sku": "0813963",
+    "availability": ""
+  },
+  {
     "title": "Manchon de compression pour le bras Tensor Sport, bleu, choix de tailles",
     "image": "https://media-www.canadiantire.ca/product/playing/hockey/hockey-accessories/0839182/tensor-sport-compression-arm-sleeve-s-m-52e8420f-f211-4e62-9c1d-c3dd486ed643-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 22.99,
-    "salePrice": 10.43,
+    "salePrice": 9.23,
     "store": "Canadian Tire",
     "city": "Yonge & Steeles, ON",
     "branch": "Yonge & Steeles, ON",
@@ -348,6 +828,30 @@
     "availability": "Il n’en reste que 7 #054-0525-4"
   },
   {
+    "title": "Poignée de transport pour kayak Invincible Marine Propel avec quincaillerie, noir",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0793354/kayak-carry-handle-83e3094e-3e3d-4de2-8e43-56f77f5bf296-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 13.99,
+    "salePrice": 4.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/poignee-de-transport-pour-kayak-invincible-marine-propel-avec-quincaillerie-noir-0793354p.html",
+    "sku": "0793354",
+    "availability": "Il n’en reste que 2 #079-3354-4"
+  },
+  {
+    "title": "Onduleur MotoMaster Eliminator de 4000 W avec câbles de batterie, ensemble de fusibles et télécommande câblée",
+    "image": "https://media-www.canadiantire.ca/product/automotive/light-auto-parts/auto-battery-accessories/0112102/motomaster-eliminator-4000w-modified-sine-power-inverter-072b25db-ede1-4f8f-8891-721c110793d4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 549.99,
+    "salePrice": 215.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/onduleur-motomaster-eliminator-de-4000-w-avec-cables-de-batterie-ensemble-de-fusibles-et-telecommande-cablee-0112102p.html",
+    "sku": "0112102",
+    "availability": "Il n’en reste que 1 #011-2102-0"
+  },
+  {
     "title": "Vaporisateur Berkley™ GULP! Alive!",
     "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0781035/berkley-gulp-alive-attractant-crawfish-7caab1cf-b0a9-4f98-97b7-3f82f641dc24-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 13.99,
@@ -370,6 +874,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-nettoyage-portative-pour-fusil-de-chasse-yukon-gear-3750338p.html",
     "sku": "3750338",
     "availability": "Il n’en reste que 5 #375-0338-6"
+  },
+  {
+    "title": "Short cargo Outbound pour hommes, grandes poches, havane",
+    "image": "https://media-www.canadiantire.ca/product/playing/footwear-apparel/summer-footwear-apparel/1873520/outbound-men-s-cargo-shorts-tan-m-c66af4ed-b35b-4c1f-82ee-7afbf190f779-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 25.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/short-cargo-outbound-pour-hommes-grandes-poches-havane-1873520p.html",
+    "sku": "1873520",
+    "availability": ""
   },
   {
     "title": "Tapis d'eau gonflable Jimmy Styks avec pompe à air manuelle, 12 pi",
@@ -417,7 +933,19 @@
     "branch": "Yonge & Steeles, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/chargeur-sans-fil-bluehive-cuir-15-w-certifie-qi-brun-0355543p.html",
     "sku": "0355543",
-    "availability": ""
+    "availability": "Il n’en reste que 2 #035-5543-6"
+  },
+  {
+    "title": "Miroir mural rectangulaire biseauté CANVAS Lamont, argent, 58 x 24 po",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/decor-accents/0681703/canvas-58-lamont-mirror-14da8fa4-f6dd-4917-8206-3101c10aab2f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 154.99,
+    "salePrice": 74.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/miroir-mural-rectangulaire-biseaute-canvas-lamont-argent-58-x-24-po-0681703p.html",
+    "sku": "0681703",
+    "availability": "Il n’en reste que 1 #068-1703-2"
   },
   {
     "title": "Aqua Training Bag - Sac de frappe d'entraînement, 120 lb",
@@ -456,6 +984,18 @@
     "availability": "0 En Stock#026-4915-0"
   },
   {
+    "title": "Plaque de cuisson antiadhésive Coleman Cookout",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking-accessories/0852351/coleman-17-grill-topper-79b75592-e064-4bb4-a814-ba9003c3e9a2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 16.99,
+    "salePrice": 7.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/plaque-de-cuisson-antiadhesive-coleman-cookout-0852351p.html",
+    "sku": "0852351",
+    "availability": ""
+  },
+  {
     "title": "Rallonge d'extérieur NOMA, calibre 14/3, 49 pi 3 po, prise avec mise à la terre, rouge",
     "image": "https://media-www.canadiantire.ca/product/fixing/electrical/power-bars-extension-cords-timers/0522312/noma-red-outdoor-extension-cord-49-3-15m-14-3-1-tap-2a6c7abd-55c3-48ab-8b3e-05adbc350333-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 73.99,
@@ -490,6 +1030,30 @@
     "url": "https://www.canadiantire.ca/fr/pdp/embout-de-vaporisateur-graco-trueairless-515-noir-argente-0492553p.html",
     "sku": "0492553",
     "availability": "Il n’en reste que 3 #049-2553-8"
+  },
+  {
+    "title": "Ensemble-cadeau Vermont Castings, paq. 4",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking-accessories/0852168/vermont-castings-4-piece-gift-set-5a0656b8-6337-41f4-9472-1c0392273563-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 109.99,
+    "salePrice": 49.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ensemble-cadeau-vermont-castings-paq-4-0852168p.html",
+    "sku": "0852168",
+    "availability": "Il n’en reste que 4 #085-2168-8"
+  },
+  {
+    "title": "Tuba, masque et ailettes Speedo, junior, 6 - 14 ans",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-fun/0810216/junior-mask-snorkel-fin-combo-set-de092574-6cc7-4569-85cb-9bf4d9dbd435-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 79.99,
+    "salePrice": 39.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tuba-masque-et-ailettes-speedo-junior-6-14-ans-0810216p.html",
+    "sku": "0810216",
+    "availability": "Il n’en reste que 1 #081-0216-4"
   },
   {
     "title": "Plaque murale sans vis Legrand RWP262NICC6 Radiant, 2 dispositifs, nickel",
@@ -579,7 +1143,7 @@
     "title": "Outils de jardinage en acier inoxydable Garden Club avec tabouret pliant et tablier, 7 pièces",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/outdoor-tools/manual-lawn-garden-tools/0591319/garden-club-7-piece-garden-tools-set-84b06eb5-a61e-4542-8555-1a15fd00ada2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 49.99,
-    "salePrice": 16.43,
+    "salePrice": 14.73,
     "store": "Canadian Tire",
     "city": "Yonge & Steeles, ON",
     "branch": "Yonge & Steeles, ON",
@@ -603,7 +1167,7 @@
     "title": "Combustible en gel pour l'extérieur",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0596533/gel-fuel-f95c4f90-539f-48d8-bbbe-cc9e5e579af2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 9.99,
-    "salePrice": 3.93,
+    "salePrice": 3.43,
     "store": "Canadian Tire",
     "city": "Yonge & Steeles, ON",
     "branch": "Yonge & Steeles, ON",
@@ -639,7 +1203,7 @@
     "title": "Bandage polyvalent Tensor avec pochette de gel chaud/froid, taille unique",
     "image": "https://media-www.canadiantire.ca/product/playing/hockey/hockey-accessories/0833781/tensor-multi-purpose-wrap-with-gel-pack-064fc700-4615-4608-bd77-af334d8dcc2b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 27.99,
-    "salePrice": 8.93,
+    "salePrice": 7.93,
     "store": "Canadian Tire",
     "city": "Yonge & Steeles, ON",
     "branch": "Yonge & Steeles, ON",
@@ -684,6 +1248,18 @@
     "availability": "Il n’en reste que 3 #142-1223-6"
   },
   {
+    "title": "Pagaie de planche debout ajustable Outbound, turquoise, 67 à 86,6 po",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0792069/outbound-stand-up-paddleboard-paddle-aqua-33d6ecfd-4e9f-46ba-9a0a-8f3added2ab6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 79.99,
+    "salePrice": 29.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/pagaie-de-planche-debout-ajustable-outbound-turquoise-67-a-86-6-po-0792069p.html",
+    "sku": "0792069",
+    "availability": "Il n’en reste que 2 #079-2069-0"
+  },
+  {
     "title": "Interrupteur unipolaire Legrand TM870NICC10 Radiant, 15 A, nickel",
     "image": "https://media-www.canadiantire.ca/product/fixing/electrical/rough-electrical/0529163/15a-single-pole-switch-nickel-bc974007-f1f2-4aeb-a529-0256cbeb2835-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 6.79,
@@ -694,6 +1270,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/interrupteur-unipolaire-legrand-tm870nicc10-radiant-15-a-nickel-0529163p.html",
     "sku": "0529163",
     "availability": ""
+  },
+  {
+    "title": "Cabane à insectes Backyard Safari, transparent, 6 ans et plus, pour activités estivales, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/seasonal-toys/0505064/backyard-safari-critter-shack-6a493d17-5041-4d36-abe2-a86d81eb1611-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 13.99,
+    "salePrice": 4.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/cabane-a-insectes-backyard-safari-transparent-6-ans-et-plus-pour-activites-estivales-paq-2-0505064p.html",
+    "sku": "0505064",
+    "availability": "Il n’en reste que 4 #050-5064-8"
   },
   {
     "title": "Lampe USB West & Arrow avec support flexible, blanc",
@@ -708,16 +1296,40 @@
     "availability": "Il n’en reste que 7 #052-6184-2"
   },
   {
+    "title": "Vélo électrique iZip Juice, 20 po, gris",
+    "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycles/0712068/izip-20-juice-xl-f307fc28-4f37-4bca-bfda-bf84d6d7f7d3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 2199.99,
+    "salePrice": 799.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/velo-electrique-izip-juice-20-po-gris-0712068p.html",
+    "sku": "0712068",
+    "availability": ""
+  },
+  {
     "title": "Chapeau de jardinage Garden Club avec visière amovible",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/outdoor-tools/manual-lawn-garden-tools/0591318/garden-club-gardening-bucket-hat-with-detachable-face-shield-505db1e8-bfe7-4989-84db-23ff95493f7b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 14.99,
-    "salePrice": 3.43,
+    "salePrice": 2.93,
     "store": "Canadian Tire",
     "city": "Yonge & Steeles, ON",
     "branch": "Yonge & Steeles, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/chapeau-de-jardinage-garden-club-avec-visiere-amovible-0591318p.html",
     "sku": "0591318",
     "availability": "Il n’en reste que 1 #059-1318-2"
+  },
+  {
+    "title": "Jouet pour chiens Petco, poisson volant",
+    "image": "https://media-www.canadiantire.ca/product/living/pet-care/pet-accessories/2426017/petco-launching-fish-flinger-dog-toy-751e61c9-6e3c-4db7-93e7-f16c09803ed3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 15.99,
+    "salePrice": 4.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/jouet-pour-chiens-petco-poisson-volant-2426017p.html",
+    "sku": "2426017",
+    "availability": "Il n’en reste que 2 #242-6017-0"
   },
   {
     "title": "Boyau guides de tuyau d'auto Sans-Zo Detail Guard, 4-pq",
@@ -744,15 +1356,63 @@
     "availability": "Il n’en reste que 2 #059-5903-4"
   },
   {
-    "title": "Dandinette Northland Whistler, 1/4 oz",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0772569/northland-whistler-jig-1-4-oz-orange-1ea9c101-db51-4495-8d0b-6a86b5522a76-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 6.99,
-    "salePrice": 2.93,
+    "title": "Plaque murale pour interrupteur à bascule en nylon Leviton 00PJ1-755, taille intermédiaire, 1 dispositif, blanc, paq. 10",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/rough-electrical/0522890/toggle-wallplate-1-gang-white-midway-size-10-pack-df008b35-ee33-4654-9437-6ca5224ee4a8-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 11.99,
+    "salePrice": 4.93,
     "store": "Canadian Tire",
     "city": "Yonge & Steeles, ON",
     "branch": "Yonge & Steeles, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/dandinette-northland-whistler-1-4-oz-0772569p.html",
-    "sku": "0772569",
+    "url": "https://www.canadiantire.ca/fr/pdp/plaque-murale-pour-interrupteur-a-bascule-en-nylon-leviton-00pj1-755-taille-intermediaire-1-dispositif-blanc-paq-10-0522890p.html",
+    "sku": "0522890",
+    "availability": "14 En Stock#052-2890-4"
+  },
+  {
+    "title": "Tente Spider-Man pour enfants",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/tents-shelters/0766472/spiderman-kids-tent-98ce55df-994b-41f1-ab85-46d5931d33fc-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 49.99,
+    "salePrice": 24.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tente-spider-man-pour-enfants-0766472p.html",
+    "sku": "0766472",
+    "availability": "Il n’en reste que 2 #076-6472-0"
+  },
+  {
+    "title": "Appât en tube Lunkerhunt Spicy Revealer, 4 1/4 po",
+    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0772133/lunkerhunt-spicy-revealer-tubes-4-1-4-black-neon-efa6552c-6c64-42f3-8c21-78307017e0c5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 8.99,
+    "salePrice": 3.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/appat-en-tube-lunkerhunt-spicy-revealer-4-1-4-po-0772133p.html",
+    "sku": "0772133",
+    "availability": ""
+  },
+  {
+    "title": "Buses Graco TrueCoat 360, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/fixing/paint/paint-accessories/0492554/truecoat-360-spray-tips-2-pack-4c583f3a-780d-4f29-960e-f760bd5e621f.png?im=whresize&wid=200&hei=200",
+    "price": 35.99,
+    "salePrice": 7.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/buses-graco-truecoat-360-paq-2-0492554p.html",
+    "sku": "0492554",
+    "availability": "Il n’en reste que 1 #049-2554-6"
+  },
+  {
+    "title": "Douille inférieure rotative en phénolique Atron Electro Industries LA958, noir, 2 po",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/rough-electrical/0523170/socket-bottom-turn-1b87a93a-9c56-4cc6-852e-608999e6e827-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 4.79,
+    "salePrice": 1.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/douille-inferieure-rotative-en-phenolique-atron-electro-industries-la958-noir-2-po-0523170p.html",
+    "sku": "0523170",
     "availability": ""
   },
   {
@@ -807,7 +1467,7 @@
     "title": "Système de micro-irrigation",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/outdoor-tools/watering/0593514/continental-micro-irrigation-system-spray-set-128c2c95-ddb5-464c-b935-20ad3b4d1932-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 59.99,
-    "salePrice": 27.93,
+    "salePrice": 24.93,
     "store": "Canadian Tire",
     "city": "Yonge & Steeles, ON",
     "branch": "Yonge & Steeles, ON",
@@ -819,7 +1479,7 @@
     "title": "Granules pour barbecue mélange volaille/porc Vida par PADERNO",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking-fuels-flavours/1850321/vida-by-paderno-poultry-pellets-d7b19f87-6cee-49b2-971d-9316a8ee97a7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 9.99,
-    "salePrice": 4.93,
+    "salePrice": 2.93,
     "store": "Canadian Tire",
     "city": "Yonge & Steeles, ON",
     "branch": "Yonge & Steeles, ON",
@@ -843,7 +1503,7 @@
     "title": "Mangeoire solaire champêtre moderne",
     "image": "https://media-www.canadiantire.ca/product/living/pet-care/wild-bird-care/1426604/deluxe-4-way-birding-station-w-baffle-suet-cage-a65ccce8-4a4a-4718-90f0-c7885b7cb4e8-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 39.99,
-    "salePrice": 9.93,
+    "salePrice": 8.93,
     "store": "Canadian Tire",
     "city": "Yonge & Steeles, ON",
     "branch": "Yonge & Steeles, ON",
@@ -855,7 +1515,7 @@
     "title": "Raccord pivotant/col de cygne en métal Continental pour tuyau d’arrosage",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/outdoor-tools/watering/0593428/gooseneck-swivel-connector-0764bd30-205d-47c3-944c-d650d55fc414-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 7.49,
-    "salePrice": 3.43,
+    "salePrice": 2.93,
     "store": "Canadian Tire",
     "city": "Yonge & Steeles, ON",
     "branch": "Yonge & Steeles, ON",
@@ -897,11 +1557,23 @@
     "branch": "Yonge & Steeles, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/nappe-de-fete-scintillante-50e-anniversaire-8420499p.html",
     "sku": "8420499",
-    "availability": "16 En Stock#842-0499-0"
+    "availability": "15 En Stock#842-0499-0"
+  },
+  {
+    "title": "Glissade Bestway H20Go grenouille, 16 pi, 3 ans et plus",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/seasonal-toys/0509167/bestway-friendly-frog-slide-3f748292-cfda-4163-9ce9-e52d8df3a540-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 39.99,
+    "salePrice": 14.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/glissade-bestway-h20go-grenouille-16-pi-3-ans-et-plus-0509167p.html",
+    "sku": "0509167",
+    "availability": "8 En Stock#050-9167-0"
   },
   {
     "title": "Poisson-nageur crapet arlequin Live Target",
-    "image": "undefined?im=whresize&wid=200&hei=200",
+    "image": "undefined",
     "price": 16.99,
     "salePrice": 7.43,
     "store": "Canadian Tire",
@@ -972,6 +1644,18 @@
     "availability": "Il n’en reste que 5 #077-3785-2"
   },
   {
+    "title": "Aspirateur de luxe de fond de piscine Aquarius avec poignée en plastique universelle",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-maintenance/0813579/aquarius-deluxe-underwater-vac-cleaner-b982a718-febc-4e40-896b-6febc915fdea-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 29.99,
+    "salePrice": 14.73,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/aspirateur-de-luxe-de-fond-de-piscine-aquarius-avec-poignee-en-plastique-universelle-0813579p.html",
+    "sku": "0813579",
+    "availability": "Il n’en reste que 3 #081-3579-2"
+  },
+  {
     "title": "Transformers : Le Réveil des Bêtes mode monstre combineur",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/toys-games/1500091/transformers-beast-mode-combiners-5f1af7d7-deb6-4516-bd75-541b48a0b7b8-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 29.99,
@@ -1005,42 +1689,6 @@
     "branch": "Yonge & Steeles, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/guirlande-lumineuse-de-toile-d-araignee-for-living-lumiere-a-del-argent-5-1-2-pi-paq-10-decorations-d-interieur-et-d-exterieur-pour-l-halloween-1519159p.html",
     "sku": "1519159",
-    "availability": ""
-  },
-  {
-    "title": "Tapis touffeté For Living Logan, tailles variées",
-    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0682487/mat-logan3-x4-asst-a3d1f287-1862-470d-8607-59f929fec7cd-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 24.99,
-    "salePrice": 9.93,
-    "store": "Canadian Tire",
-    "city": "Yonge & Steeles, ON",
-    "branch": "Yonge & Steeles, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/tapis-touffete-for-living-logan-tailles-variees-0682486p.html",
-    "sku": "0682486",
-    "availability": ""
-  },
-  {
-    "title": "Soulève-dinde antiadhésif en acier inoxydable, 11,4 x 8,46 x 0,78 po",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-tools-thermometers/0423314/turkey-lifter-46bb3591-bf23-4373-9365-275fb122daeb-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 9.99,
-    "salePrice": 3.93,
-    "store": "Canadian Tire",
-    "city": "Yonge & Steeles, ON",
-    "branch": "Yonge & Steeles, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/souleve-dinde-antiadhesif-en-acier-inoxydable-11-4-x-8-46-x-0-78-po-0423314p.html",
-    "sku": "0423314",
-    "availability": "Il n’en reste que 3 #042-3314-6"
-  },
-  {
-    "title": "Lames dentelées tout usage Mastercraft, paq. 5",
-    "image": "https://media-www.canadiantire.ca/product/fixing/tools/cutting-measuring/0574687/mastercraft-serrated-utility-blades-5-pack-5eb80176-0169-46a8-883b-f4b8f40ed8ca-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 4.99,
-    "salePrice": 1.93,
-    "store": "Canadian Tire",
-    "city": "Yonge & Steeles, ON",
-    "branch": "Yonge & Steeles, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/lames-dentelees-tout-usage-mastercraft-paq-5-0574687p.html",
-    "sku": "0574687",
     "availability": ""
   },
   {
@@ -1233,7 +1881,7 @@
     "branch": "Yonge & Steeles, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/decoration-centre-de-table-en-fontaine-pour-etape-50e-anniversaire-argent-et-or-8420174p.html",
     "sku": "8420174",
-    "availability": "20 En Stock#842-0174-2"
+    "availability": "19 En Stock#842-0174-2"
   },
   {
     "title": "Huile parfumée et diffuseur Air Wick Vibrant",
@@ -1258,6 +1906,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/rouleau-d-attache-precoupee-velcro-one-wrap-pour-arbres-de-jardin-et-plantes-sangle-de-soutien-6-pi-x-12-po-emb-12-1591202p.html",
     "sku": "1591202",
     "availability": ""
+  },
+  {
+    "title": "Bande lumineuse RVB à DEL avec Bluetooth Merkury, 4 m",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0373145/merkury-rgbic-usb-led-strip-light-4m-with-bluetooth-703cfb5b-463d-4199-ab14-2741668a30ec.png?im=whresize&wid=200&hei=200",
+    "price": 37.99,
+    "salePrice": 17.93,
+    "store": "Canadian Tire",
+    "city": "Yonge & Steeles, ON",
+    "branch": "Yonge & Steeles, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/bande-lumineuse-rvb-a-del-avec-bluetooth-merkury-4-m-0373145p.html",
+    "sku": "0373145",
+    "availability": "Il n’en reste que 4 #037-3145-2"
   },
   {
     "title": "Lame de scie sauteuse Mastercraft, en acier, 11 dents par pouces, pour bois, métal et plastique",
@@ -1299,7 +1959,7 @@
     "title": "Marqueur à craie Sharpie, marqueur à effacement à sec, pointe moyenne, blanc, paq. 1",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/home-office-supplies/1429353/sharpie-chalk-white-marker-1ct--f06e6661-4cc4-4653-a266-c1033c9bb155-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 5.49,
-    "salePrice": 1.93,
+    "salePrice": 0.93,
     "store": "Canadian Tire",
     "city": "Yonge & Steeles, ON",
     "branch": "Yonge & Steeles, ON",
