@@ -1,55 +1,60 @@
 {
-  "generatedAt": "2026-05-16T09:35:21.290Z",
+  "generatedAt": "2026-05-16T12:01:13.493Z",
   "stores": [
     {
-      "id": "177",
-      "city": "Hamilton Mt.West, ON",
+      "id": "77",
+      "city": "Owen Sound, ON",
       "status": "committed",
-      "details": "72 produits"
+      "details": "114 produits (after retry)"
     },
     {
-      "id": "657",
-      "city": "Hanmer, ON",
+      "id": "244",
+      "city": "Chelmsford, ON",
       "status": "committed",
-      "details": "25 produits"
+      "details": "44 produits"
     },
     {
-      "id": "27",
-      "city": "Dundas, ON",
+      "id": "49",
+      "city": "Caledonia, ON",
       "status": "committed",
-      "details": "78 produits"
+      "details": "44 produits"
     },
     {
-      "id": "29",
-      "city": "Dunnville, ON",
-      "status": "committed",
-      "details": "83 produits"
-    },
-    {
-      "id": "42",
-      "city": "Guelph Stone Rd, ON",
-      "status": "committed",
-      "details": "98 produits"
-    },
-    {
-      "id": "31",
-      "city": "Centre Wellington, ON",
-      "status": "committed",
-      "details": "88 produits"
-    },
-    {
-      "id": "260",
-      "city": "Guelph North, ON",
-      "status": "committed",
-      "details": "66 produits"
-    },
-    {
-      "id": "639",
-      "city": "Ancaster, ON",
+      "id": "168",
+      "city": "Cambridge Hespeler, ON",
       "status": "committed",
       "details": "100 produits"
+    },
+    {
+      "id": "36",
+      "city": "Cambridge, ON",
+      "status": "committed",
+      "details": "86 produits"
+    },
+    {
+      "id": "35",
+      "city": "Fredericton, NB",
+      "status": "committed",
+      "details": "109 produits"
+    },
+    {
+      "id": "66",
+      "city": "Mount Forest, ON",
+      "status": "committed",
+      "details": "96 produits"
+    },
+    {
+      "id": "337",
+      "city": "Fredericton North, NB",
+      "status": "committed",
+      "details": "73 produits"
     }
   ],
   "failedTwice": [],
-  "retriedAndSucceeded": []
+  "retriedAndSucceeded": [
+    {
+      "id": "77",
+      "city": "Owen Sound, ON"
+    }
+  ]
 }
