@@ -1,15 +1,123 @@
 [
   {
-    "title": "Tapis de couloir d'intérieur et d'extérieur CANVAS Elmken, 3 x 5 pi",
-    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680046/baldi-3x5-outdoor-runner-rug-350670e1-7256-4998-93eb-5ec048a7e9e4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 29.99,
-    "salePrice": 14.93,
+    "title": "Cintres pivotants compacts en velours Type A avec barre à pantalon, couleurs variées, paq. 40",
+    "image": "https://media-www.canadiantire.ca/product/living/home-organization/closet-organization/0688308/type-a-velvet-suit-hanger-black-10pk-4afb3f73-0449-46d6-975c-369ae2760de2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 32.99,
+    "salePrice": 12.93,
     "store": "Canadian Tire",
     "city": "Hamilton Mt.East, ON",
     "branch": "Hamilton Mt.East, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/tapis-de-couloir-d-interieur-et-d-exterieur-canvas-elmken-3-x-5-pi-0680046p.html",
-    "sku": "0680046",
-    "availability": "Il n’en reste que 1 #068-0046-2"
+    "url": "https://www.canadiantire.ca/fr/pdp/cintres-pivotants-compacts-en-velours-type-a-avec-barre-a-pantalon-couleurs-variees-paq-40-0688307p.html",
+    "sku": "0688307",
+    "availability": ""
+  },
+  {
+    "title": "Chaussures de soccer Adidas Goletto II, FG, homme",
+    "image": "https://media-www.canadiantire.ca/product/playing/team-sports-and-golf/field-sports/0898050/adidas-goletto-ii-fg-soccer-shoes-mens-size-7-62a196be-6596-41df-bb24-da370528899d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 74.99,
+    "salePrice": 34.98,
+    "store": "Canadian Tire",
+    "city": "Hamilton Mt.East, ON",
+    "branch": "Hamilton Mt.East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/chaussures-de-soccer-adidas-goletto-ii-fg-homme-0898050p.html",
+    "sku": "0898050",
+    "availability": ""
+  },
+  {
+    "title": "Fauteuil de salle à manger de jardin/d'extérieur en osier CANVAS Jasper, toute saison, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/1880272/canvas-jasper-dining-chair-2pk-2a5479fd-5f27-4f3d-85e2-8b4b9fa230c9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 499.99,
+    "salePrice": 199.93,
+    "store": "Canadian Tire",
+    "city": "Hamilton Mt.East, ON",
+    "branch": "Hamilton Mt.East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/fauteuil-de-salle-a-manger-de-jardin-d-exterieur-en-osier-canvas-jasper-toute-saison-paq-2-1880272p.html",
+    "sku": "1880272",
+    "availability": "Il n’en reste que 1 #188-0272-6"
+  },
+  {
+    "title": "Présentoir d'articles saisonniers Mastercraft avec chariot à plateforme roulante, noir",
+    "image": "https://media-www.canadiantire.ca/product/fixing/tools/garage-organization/0681822/mastercraft-seasonal-storage-rack-4657eb31-2d51-419f-a388-3dcc3e45f853-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 299.99,
+    "salePrice": 149.93,
+    "store": "Canadian Tire",
+    "city": "Hamilton Mt.East, ON",
+    "branch": "Hamilton Mt.East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/presentoir-d-articles-saisonniers-mastercraft-avec-chariot-a-plateforme-roulante-noir-0681822p.html",
+    "sku": "0681822",
+    "availability": "Il n’en reste que 1 #068-1822-8"
+  },
+  {
+    "title": "Chaises de salle à manger rembourrées tête de clou avec pattes en bois massif CANVAS Regent, paq. 2, gris",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/1680087/canvas-regent-chair-2-pack-d7669315-d5c9-4944-9fa5-af38fa9fb225-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 189.99,
+    "salePrice": 69.93,
+    "store": "Canadian Tire",
+    "city": "Hamilton Mt.East, ON",
+    "branch": "Hamilton Mt.East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/chaises-de-salle-a-manger-rembourrees-tete-de-clou-avec-pattes-en-bois-massif-canvas-regent-paq-2-gris-1680087p.html",
+    "sku": "1680087",
+    "availability": "Il n’en reste que 1 #168-0087-6"
+  },
+  {
+    "title": "Foyer électrique CANVAS Marseille, 54 po, 1 400 W, comprend une télécommande, blanc",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/electric-fireplaces/0643176/canvas-marseille-fireplace-fedce335-a386-471e-87b0-b3ad50097466-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 699.99,
+    "salePrice": 349.93,
+    "store": "Canadian Tire",
+    "city": "Hamilton Mt.East, ON",
+    "branch": "Hamilton Mt.East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/foyer-electrique-canvas-marseille-54-po-1-400-w-comprend-une-telecommande-blanc-0643176p.html",
+    "sku": "0643176",
+    "availability": "Il n’en reste que 1 #064-3176-2"
+  },
+  {
+    "title": "Tapis d'intérieur et d'extérieur CANVAS Basca, 8 x 10 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680048/basca-outdoor-rug-9605a092-adeb-4af7-9752-a7e7577775cb-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 72.99,
+    "salePrice": 34.93,
+    "store": "Canadian Tire",
+    "city": "Hamilton Mt.East, ON",
+    "branch": "Hamilton Mt.East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-d-interieur-et-d-exterieur-canvas-basca-8-x-10-pi-0680048p.html",
+    "sku": "0680048",
+    "availability": "Il n’en reste que 4 #068-0048-8"
+  },
+  {
+    "title": "Mastercraft - Soudeuse à fil fourré",
+    "image": "https://media-www.canadiantire.ca/product/fixing/tools/welding-soldering/0588194/mastercraft-flux-core-welder-a47f4709-340e-482c-a52f-cba006e4468b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 249.99,
+    "salePrice": 119.98,
+    "store": "Canadian Tire",
+    "city": "Hamilton Mt.East, ON",
+    "branch": "Hamilton Mt.East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/mastercraft-soudeuse-a-fil-fourre-0588194p.html",
+    "sku": "0588194",
+    "availability": "8 En Stock#058-8194-4"
+  },
+  {
+    "title": "Tapis rond d'intérieur et d'extérieur CANVAS Eperon, 6 x 6 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680047/eperon-round-outdoor-rug-194b3686-4034-4636-b92a-b5fa029609e5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 49.99,
+    "salePrice": 19.93,
+    "store": "Canadian Tire",
+    "city": "Hamilton Mt.East, ON",
+    "branch": "Hamilton Mt.East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-rond-d-interieur-et-d-exterieur-canvas-eperon-6-x-6-pi-0680047p.html",
+    "sku": "0680047",
+    "availability": "Il n’en reste que 2 #068-0047-0"
+  },
+  {
+    "title": "Glacière/réchaud électrique thermoélectrique sur roulettes Mobicool, avec poignée, 45 L, bleu",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/hydration-coolers/0370124/45l-wheeled-12v-cooler-with-adapter-1a3a5430-7fbc-4bde-bbb2-549a37e1e05e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 379.99,
+    "salePrice": 139.93,
+    "store": "Canadian Tire",
+    "city": "Hamilton Mt.East, ON",
+    "branch": "Hamilton Mt.East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/glaciere-rechaud-electrique-thermoelectrique-sur-roulettes-mobicool-avec-poignee-45-l-bleu-0370124p.html",
+    "sku": "0370124",
+    "availability": "Il n’en reste que 3 #037-0124-0"
   },
   {
     "title": "Écouteurs sans fil Hesh Evo de Skullcandy",
@@ -33,19 +141,19 @@
     "branch": "Hamilton Mt.East, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/chiffons-vaisselle-en-coton-gaufre-master-chef-a-motif-a-carreaux-choix-de-couleurs-14-x-14-po-paq-12-1422705p.html",
     "sku": "1422705",
-    "availability": "Il n’en reste que 5 #142-2705-4"
+    "availability": "Il n’en reste que 4 #142-2705-4"
   },
   {
-    "title": "Cache de chasse ignifuge avec 2 chaises trépied Ameristep Enforcer",
-    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-equipment/0751806/ameristep-enforcer-fr-3p-ground-blind-w-2-tripod-chair-combo-4cc0b1ba-83fb-45fd-adb0-3656dd762b0e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 259.99,
-    "salePrice": 119.93,
+    "title": "Pagaie de kayak classique Pelican, aluminium, 220 cm (87 po), vert",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-water-fun/0791265/pelican-kayak-paddle-84-green-76bce811-ce32-4e15-abca-9dde51e5bb40-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 59.99,
+    "salePrice": 24.93,
     "store": "Canadian Tire",
     "city": "Hamilton Mt.East, ON",
     "branch": "Hamilton Mt.East, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/cache-de-chasse-ignifuge-avec-2-chaises-trepied-ameristep-enforcer-0751806p.html",
-    "sku": "0751806",
-    "availability": "Il n’en reste que 1 #075-1806-0"
+    "url": "https://www.canadiantire.ca/fr/pdp/pagaie-de-kayak-classique-pelican-aluminium-220-cm-87-po-vert-0791265p.html",
+    "sku": "0791265",
+    "availability": "Il n’en reste que 2 #079-1265-8"
   },
   {
     "title": "Liquide de protection contre les inondations Flex Seal, protection imperméable contre les inondations, 10 oz",
@@ -58,6 +166,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/liquide-de-protection-contre-les-inondations-flex-seal-protection-impermeable-contre-les-inondations-10-oz-0641544p.html",
     "sku": "0641544",
     "availability": "Il n’en reste que 4 #064-1544-8"
+  },
+  {
+    "title": "Gilet de sauvetage confortable Outbound, adulte, bleu, tailles variées",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-water-fun/0792248/outbound-adult-pfd-paddling-vest-s-m-f6a01101-710b-4ff9-8315-6ab73091694e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 59.99,
+    "salePrice": 24.93,
+    "store": "Canadian Tire",
+    "city": "Hamilton Mt.East, ON",
+    "branch": "Hamilton Mt.East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/gilet-de-sauvetage-confortable-outbound-adulte-bleu-tailles-variees-0792248p.html",
+    "sku": "0792248",
+    "availability": ""
   },
   {
     "title": "Robinet d’évier de cuisine rétractable Danze Smartsense, noir mat",
@@ -75,13 +195,25 @@
     "title": "Gobelet isotherme empilable Woods avec paille, sarcelle, 830 mL",
     "image": "https://media-www.canadiantire.ca/product/playing/camping/hydration-coolers/0766516/woods-stackable-tumbler-teal-2254ac71-702c-44ce-8d20-e01f06e39a96-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 29.99,
-    "salePrice": 14.99,
+    "salePrice": 8.93,
     "store": "Canadian Tire",
     "city": "Hamilton Mt.East, ON",
     "branch": "Hamilton Mt.East, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/gobelet-isotherme-empilable-woods-avec-paille-sarcelle-830-ml-0766516p.html",
     "sku": "0766516",
-    "availability": "36 En Stock#076-6516-8"
+    "availability": "33 En Stock#076-6516-8"
+  },
+  {
+    "title": "Gants de barbecue en cuir à haute température Vermont Castings",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking-accessories/0852153/vermont-castings-gloves-x2-3e942975-acd6-440a-925f-76b262ab5a1d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 49.99,
+    "salePrice": 24.93,
+    "store": "Canadian Tire",
+    "city": "Hamilton Mt.East, ON",
+    "branch": "Hamilton Mt.East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/gants-de-barbecue-en-cuir-a-haute-temperature-vermont-castings-0852153p.html",
+    "sku": "0852153",
+    "availability": "Il n’en reste que 4 #085-2153-2"
   },
   {
     "title": "Contenant The Home Edit par iDesign, outils pour cheveux",
@@ -94,6 +226,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/contenant-the-home-edit-par-idesign-outils-pour-cheveux-0636322p.html",
     "sku": "0636322",
     "availability": "Il n’en reste que 2 #063-6322-8"
+  },
+  {
+    "title": "Chaise longue ombragée Funsicle NuWave, inclinable, 14 et plus",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-fun/0810421/funsicle-nuwave-shaded-lounger-2cc1dd5c-5578-47b3-92e9-8b0bcbcf5320-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 49.99,
+    "salePrice": 19.93,
+    "store": "Canadian Tire",
+    "city": "Hamilton Mt.East, ON",
+    "branch": "Hamilton Mt.East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/chaise-longue-ombragee-funsicle-nuwave-inclinable-14-et-plus-0810421p.html",
+    "sku": "0810421",
+    "availability": "Il n’en reste que 2 #081-0421-4"
   },
   {
     "title": "Leurre Berkley Gulp!, méné, 4 po",
@@ -117,7 +261,43 @@
     "branch": "Hamilton Mt.East, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/raquette-de-tennis-en-composite-graphite-head-speed-pour-enfants-noir-25-po-1841157p.html",
     "sku": "1841157",
-    "availability": "Il n’en reste que 2 #184-1157-4"
+    "availability": "Il n’en reste que 1 #184-1157-4"
+  },
+  {
+    "title": "Ceinture de flottaison gonflable Helly Hansen",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-water-fun/0793041/helly-hansen-personal-flotation-device-belt-inflate-242c3a5b-947d-400e-9648-0f3abaa0f59b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 219.99,
+    "salePrice": 99.93,
+    "store": "Canadian Tire",
+    "city": "Hamilton Mt.East, ON",
+    "branch": "Hamilton Mt.East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ceinture-de-flottaison-gonflable-helly-hansen-0793041p.html",
+    "sku": "0793041",
+    "availability": "9 En Stock#079-3041-8"
+  },
+  {
+    "title": "Fauteuil berçant en toile Outbound",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-furniture/0763719/outbound-webbed-rocking-chair-f5f31df4-403c-456b-8741-b439939df77e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 89.99,
+    "salePrice": 44.93,
+    "store": "Canadian Tire",
+    "city": "Hamilton Mt.East, ON",
+    "branch": "Hamilton Mt.East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/fauteuil-bercant-en-toile-outbound-0763719p.html",
+    "sku": "0763719",
+    "availability": "Il n’en reste que 3 #076-3719-4"
+  },
+  {
+    "title": "Bouteille d'eau Supercycle pour vélo, format économique, sans BPA, transparente, 23,6 oz, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycle-accessories/0733061/supercycle-2-pack-value-pack-ce45dc13-b2da-49cd-979b-b967a2df0d39-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 31.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Hamilton Mt.East, ON",
+    "branch": "Hamilton Mt.East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/bouteille-d-eau-supercycle-pour-velo-format-economique-sans-bpa-transparente-23-6-oz-paq-2-0733061p.html",
+    "sku": "0733061",
+    "availability": "Il n’en reste que 3 #073-3061-2"
   },
   {
     "title": "Gobelet Woods, grand",
@@ -142,6 +322,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/carreaux-muraux-autoadhesifs-peler-et-coller-pour-cuisine-et-salle-de-bain-smart-tiles-penny-davy-0702249p.html",
     "sku": "0702249",
     "availability": "Il n’en reste que 1 #070-2249-0"
+  },
+  {
+    "title": "Chaise de terrasse de camping Coleman Forester avec sac de transport, gris",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-furniture/0766611/coleman-forester-deck-chair-67ab43d6-c95a-494e-8bda-476287539fb9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 129.99,
+    "salePrice": 64.93,
+    "store": "Canadian Tire",
+    "city": "Hamilton Mt.East, ON",
+    "branch": "Hamilton Mt.East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/chaise-de-terrasse-de-camping-coleman-forester-avec-sac-de-transport-gris-0766611p.html",
+    "sku": "0766611",
+    "availability": "Il n’en reste que 2 #076-6611-0"
   },
   {
     "title": "Écouteurs supra-auriculaires JLAB JBUDDIES Studio pour enfants, avec fil",
@@ -204,6 +396,18 @@
     "availability": "Il n’en reste que 1 #040-2965-6"
   },
   {
+    "title": "Balles éclairées Luminator, multicolore, 5 ans et plus, pour plage/piscine, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-fun/0810208/luminator-skim-ball-2-pack-d0aa68e5-3672-426f-aa70-79a3c5cd076f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 12.99,
+    "salePrice": 4.93,
+    "store": "Canadian Tire",
+    "city": "Hamilton Mt.East, ON",
+    "branch": "Hamilton Mt.East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/balles-eclairees-luminator-multicolore-5-ans-et-plus-pour-plage-piscine-paq-2-0810208p.html",
+    "sku": "0810208",
+    "availability": "Il n’en reste que 1 #081-0208-4"
+  },
+  {
     "title": "Meuble-lavabo simple Canvas Creston à 1 porte, dessus en porcelaine vitrifiée, 24 po, blanc",
     "image": "https://media-www.canadiantire.ca/product/fixing/plumbing/faucets-fixtures/0636338/canvas-creston-24-vanity-single-door-white-1b02e4a3-85a9-45b4-b3e6-ea6cffaff640-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 319.99,
@@ -237,7 +441,7 @@
     "branch": "Hamilton Mt.East, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/cuiller-tourn-northland-t-rainbow-parakeet-taille-2-0782632p.html",
     "sku": "0782632",
-    "availability": "Il n’en reste que 2 #078-2632-0"
+    "availability": "Il n’en reste que 1 #078-2632-0"
   },
   {
     "title": "Meuble pour téléviseur et console de rangement multimédia à tablette ouverte CANVAS Ossington, fini chêne salé",
@@ -264,6 +468,18 @@
     "availability": "Il n’en reste que 4 #142-5509-4"
   },
   {
+    "title": "Bol en fibre de bambou CANVAS, gris",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0597850/canvas-dual-tone-organic-dinner-bowl-2ed9ccb1-fb59-464c-baec-bf33c08a0b2c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 6.99,
+    "salePrice": 2.43,
+    "store": "Canadian Tire",
+    "city": "Hamilton Mt.East, ON",
+    "branch": "Hamilton Mt.East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/bol-en-fibre-de-bambou-canvas-gris-0597850p.html",
+    "sku": "0597850",
+    "availability": "Il n’en reste que 2 #059-7850-6"
+  },
+  {
     "title": "TRZ Training - Bande et poignées de résistance",
     "image": "https://media-www.canadiantire.ca/product/playing/exercise/exercise-accessories/1841258/trx-bandit-resistance-band-and-handles-kit-646392ea-ccbf-41cb-b6ab-b5ef3354d8b5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 64.99,
@@ -285,7 +501,7 @@
     "branch": "Hamilton Mt.East, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/accessoires-smart-support-hippo-choix-varie-0355359p.html",
     "sku": "0355359",
-    "availability": "Il n’en reste que 2 #035-5359-6"
+    "availability": "Il n’en reste que 1 #035-5359-6"
   },
   {
     "title": "Plafonnier encastré CANVAS St. Clair",
@@ -300,6 +516,18 @@
     "availability": "Il n’en reste que 1 #052-6104-4"
   },
   {
+    "title": "Combinaison isotherme en néoprène pour femmes Outbound, noir, tailles variées",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-water-fun/0792220/outbound-women-s-wetsuit-small-5e7a7f6a-36e8-4a00-a830-8864192bfe8e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 49.99,
+    "salePrice": 19.93,
+    "store": "Canadian Tire",
+    "city": "Hamilton Mt.East, ON",
+    "branch": "Hamilton Mt.East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/combinaison-isotherme-en-neoprene-pour-femmes-outbound-noir-tailles-variees-0792220p.html",
+    "sku": "0792220",
+    "availability": ""
+  },
+  {
     "title": "Prise simple à boîtier étroit Leviton 05029-751 NEMA 6-15R, 15 A, 250 V, mise à la terre, qualité commerciale, ivoire",
     "image": "https://media-www.canadiantire.ca/product/fixing/electrical/rough-electrical/0527239/receptacle-special-grade-15a-b-d6972ff1-8cb2-4898-a411-2d13210a533b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 9.99,
@@ -310,6 +538,42 @@
     "url": "https://www.canadiantire.ca/fr/pdp/prise-simple-a-boitier-etroit-leviton-05029-751-nema-6-15r-15-a-250-v-mise-a-la-terre-qualite-commerciale-ivoire-0527239p.html",
     "sku": "0527239",
     "availability": "Il n’en reste que 2 #052-7239-8"
+  },
+  {
+    "title": "Pompe à haute pression c.c. Jimmy Styks, basse et haute pression, 12 V",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-water-fun/0799086/jimmy-styks-12v-dc-high-pressure-pump-low-high-pressure-695166d0-113f-4e15-bdc2-b84ecaf18444-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 99.99,
+    "salePrice": 39.93,
+    "store": "Canadian Tire",
+    "city": "Hamilton Mt.East, ON",
+    "branch": "Hamilton Mt.East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/pompe-a-haute-pression-c-c-jimmy-styks-basse-et-haute-pression-12-v-0799086p.html",
+    "sku": "0799086",
+    "availability": "Il n’en reste que 1 #079-9086-6"
+  },
+  {
+    "title": "Cartouche de rechange pour filtre de gourde Woods, 560 L",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/hydration-coolers/0766461/woods-water-bottle-filter-replacement-cartridge-da09fb5c-e5c6-4df2-97bd-1618dd4a9707-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 27.99,
+    "salePrice": 13.43,
+    "store": "Canadian Tire",
+    "city": "Hamilton Mt.East, ON",
+    "branch": "Hamilton Mt.East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/cartouche-de-rechange-pour-filtre-de-gourde-woods-560-l-0766461p.html",
+    "sku": "0766461",
+    "availability": "Il n’en reste que 1 #076-6461-6"
+  },
+  {
+    "title": "Gilet de natation d'entraînement flottant à protection UV pour enfants Narly Noggins, styles variés, 4 à 6 ans",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-fun/0813540/coral-totz-swim-trainer-assorted-60f2c4a3-5033-4b3e-ab77-60df10c310de-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Hamilton Mt.East, ON",
+    "branch": "Hamilton Mt.East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/gilet-de-natation-d-entrainement-flottant-a-protection-uv-pour-enfants-narly-noggins-styles-varies-4-a-6-ans-0813540p.html",
+    "sku": "0813540",
+    "availability": ""
   },
   {
     "title": "Lisière Shur-Trim, 1 po x 3 pi",
@@ -324,6 +588,18 @@
     "availability": "Il n’en reste que 1 #068-2818-4"
   },
   {
+    "title": "Tuba, masque et ailettes Speedo, junior, 6 - 14 ans",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-fun/0810216/junior-mask-snorkel-fin-combo-set-de092574-6cc7-4569-85cb-9bf4d9dbd435-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 79.99,
+    "salePrice": 39.93,
+    "store": "Canadian Tire",
+    "city": "Hamilton Mt.East, ON",
+    "branch": "Hamilton Mt.East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tuba-masque-et-ailettes-speedo-junior-6-14-ans-0810216p.html",
+    "sku": "0810216",
+    "availability": "Il n’en reste que 1 #081-0216-4"
+  },
+  {
     "title": "Leurres multiespèces RedWolf, paq. 80",
     "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0777780/red-wolf-all-species-kit-80-piece--00c62f34-d294-4d0e-8aaf-a3d393322bf0-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 14.99,
@@ -333,7 +609,7 @@
     "branch": "Hamilton Mt.East, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/leurres-multiespeces-redwolf-paq-80-0777780p.html",
     "sku": "0777780",
-    "availability": "Il n’en reste que 2 #077-7780-8"
+    "availability": "Il n’en reste que 1 #077-7780-8"
   },
   {
     "title": "Tapis à motifs géométriques lavable Rug-All, beige, 5 x 7 pi",
@@ -357,7 +633,7 @@
     "branch": "Hamilton Mt.East, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/decalcomanie-browning-rose-6-po-1410576p.html",
     "sku": "1410576",
-    "availability": "9 En Stock#141-0576-4"
+    "availability": "Il n’en reste que 7 #141-0576-4"
   },
   {
     "title": "Câble pour recharge et synchronisation Bluehive, Lightning, noir, 3 pi",
@@ -516,18 +792,6 @@
     "availability": "Il n’en reste que 1 #046-3583-6"
   },
   {
-    "title": "Dandinette ronde Xcalibur, crevette, 3/8 oz",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0773781/matzuo-round-jig-shrimp-3-8-86ace970-d418-4a84-abee-9271b64c9173-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 5.99,
-    "salePrice": 2.43,
-    "store": "Canadian Tire",
-    "city": "Hamilton Mt.East, ON",
-    "branch": "Hamilton Mt.East, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/dandinette-ronde-xcalibur-crevette-3-8-oz-0773781p.html",
-    "sku": "0773781",
-    "availability": "Il n’en reste que 1 #077-3781-0"
-  },
-  {
     "title": "Lance-balle de neige et trousse d'artiste d'hiver pour enfants Snow Fun jouets d'hiver extérieur, paq 5, 5 ans et plus",
     "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/winter-recreation/0821062/ultimate-sno-fun-kit-fb5bcc5a-5626-4179-ba2e-d76bfff6b1c7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 27.99,
@@ -538,6 +802,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/lance-balle-de-neige-et-trousse-d-artiste-d-hiver-pour-enfants-snow-fun-jouets-d-hiver-exterieur-paq-5-5-ans-et-plus-0821062p.html",
     "sku": "0821062",
     "availability": "Il n’en reste que 2 #082-1062-0"
+  },
+  {
+    "title": "Base ronde pour lampe de poupe",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0792468/round-stern-light-base-10cf47c4-a14c-4614-b870-8108cfc98b58-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 18.99,
+    "salePrice": 8.93,
+    "store": "Canadian Tire",
+    "city": "Hamilton Mt.East, ON",
+    "branch": "Hamilton Mt.East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/base-ronde-pour-lampe-de-poupe-0792468p.html",
+    "sku": "0792468",
+    "availability": "Il n’en reste que 2 #079-2468-0"
   },
   {
     "title": "Crampons robustes YakTrax Stabil Maxx2 pour chaussures et bottes pour la glace, adultes, tailles diverses",
@@ -561,13 +837,13 @@
     "branch": "Hamilton Mt.East, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/chemin-de-table-yeehaw-western-8526820p.html",
     "sku": "8526820",
-    "availability": "13 En Stock#852-6820-4"
+    "availability": "12 En Stock#852-6820-4"
   },
   {
     "title": "Cerfs-volants X-Kites Breezy Delta pour enfants, choix de couleurs, 8 ans et plus, pour activités estivales et d'extérieur",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/seasonal-toys/0504091/breezy-delta-30-kites-d5449eb9-8b59-4a8b-8fb5-b730e405fd1e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 19.99,
-    "salePrice": 7.93,
+    "salePrice": 4.93,
     "store": "Canadian Tire",
     "city": "Hamilton Mt.East, ON",
     "branch": "Hamilton Mt.East, ON",
@@ -600,18 +876,6 @@
     "availability": "41 En Stock#854-7049-2"
   },
   {
-    "title": "Tour de recherche Wiltopia Playmobil",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/preschool-toys-activities/1500433/playmobil-wiltopia-research-tower-7c242aae-084a-4546-b473-53db4f99f4cf-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 114.99,
-    "salePrice": 49.99,
-    "store": "Canadian Tire",
-    "city": "Hamilton Mt.East, ON",
-    "branch": "Hamilton Mt.East, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/tour-de-recherche-wiltopia-playmobil-1500433p.html",
-    "sku": "1500433",
-    "availability": "Il n’en reste que 1 #150-0433-2"
-  },
-  {
     "title": "Panneaux muraux décoratifs en bois à peler et coller WallStyles, pin café et crème, 15,71 pi2",
     "image": "https://media-www.canadiantire.ca/product/fixing/paint/paints/0700306/wall-styles-coffee-cream-pine-eda630cf-1be4-44fb-984e-52d8f143dcbb-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 125.99,
@@ -622,18 +886,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/panneaux-muraux-decoratifs-en-bois-a-peler-et-coller-wallstyles-pin-cafe-et-creme-15-71-pi2-0700306p.html",
     "sku": "0700306",
     "availability": "Il n’en reste que 1 #070-0306-6"
-  },
-  {
-    "title": "Ensemble de gestion de câbles Wiremold WMC332 CordMate III, pouvant être peint, blanc",
-    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/rough-electrical/0529157/cordmate-iii-cable-management-kit-4daa9385-06a9-496f-832d-596d69f0fc8a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 41.99,
-    "salePrice": 14.27,
-    "store": "Canadian Tire",
-    "city": "Hamilton Mt.East, ON",
-    "branch": "Hamilton Mt.East, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/ensemble-de-gestion-de-cables-wiremold-wmc332-cordmate-iii-pouvant-etre-peint-blanc-0529157p.html",
-    "sku": "0529157",
-    "availability": "Il n’en reste que 1 #052-9157-0"
   },
   {
     "title": "Cintres en bois naturel Type A, paq. 18",
@@ -682,6 +934,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/attractif-tink-s-e-scent-1759115p.html",
     "sku": "1759115",
     "availability": "Il n’en reste que 1 #175-9115-8"
+  },
+  {
+    "title": "Nourriture sèche pour chiens poulet et orge à ingrédient limité Beyond Simply, 10,8 kg",
+    "image": "https://media-www.canadiantire.ca/product/living/pet-care/pet-food/1429993/beyond-chicken-barley-dry-dog-food-10-8kg-3f92a57f-ef9b-4353-bf50-90c1905a96a0-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 54.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Hamilton Mt.East, ON",
+    "branch": "Hamilton Mt.East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/nourriture-seche-pour-chiens-poulet-et-orge-a-ingredient-limite-beyond-simply-10-8-kg-1429993p.html",
+    "sku": "1429993",
+    "availability": "Il n’en reste que 1 #142-9993-4"
   },
   {
     "title": "Support de coffre à outils tout usage Rampage Trail Can, rouge",
