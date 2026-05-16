@@ -33,13 +33,13 @@
     "branch": "Dunnville, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/tasses-a-mesurer-empilables-en-plastique-master-chef-paq-10-1429676p.html",
     "sku": "1429676",
-    "availability": "9 En Stock#142-9676-0"
+    "availability": "Il n’en reste que 4 #142-9676-0"
   },
   {
     "title": "T-shirt sport à manches courtes et extensibles avec encolure ras du cou Mooselander, hommes, couleur unie, tailles variées, noir/gris, paq. 2",
     "image": "https://media-www.canadiantire.ca/product/playing/footwear-apparel/summer-footwear-apparel/1874066/active-2-pack-short-sleeve-tees-m-l-ce888845-ad24-41df-8604-c50d7052ca02-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 21.99,
-    "salePrice": 4.93,
+    "salePrice": 2.93,
     "store": "Canadian Tire",
     "city": "Dunnville, ON",
     "branch": "Dunnville, ON",
@@ -60,6 +60,42 @@
     "availability": "Il n’en reste que 1 #184-0694-0"
   },
   {
+    "title": "Four à pizza de table portatif au gaz Vida par PADERNO, 1 brûleur, 12 po",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking/0850001/vida-by-paderno-pizza-oven-c3f6852d-30b5-4ad8-96fe-41ea01ff0eaa-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 399.99,
+    "salePrice": 179.93,
+    "store": "Canadian Tire",
+    "city": "Dunnville, ON",
+    "branch": "Dunnville, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/four-a-pizza-de-table-portatif-au-gaz-vida-par-paderno-1-bruleur-12-po-0850001p.html",
+    "sku": "0850001",
+    "availability": "Il n’en reste que 2 #085-0001-6"
+  },
+  {
+    "title": "Substrat de croissance professionnel PRO-MIX HP, MYCORRHIZAE, 42,5 L",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/gardening/lawn-plant-care/0590931/pro-mix-high-porosity-growing-medium-42-5l-5c85e18a-ee49-4327-b8dc-be9b81d4d0ca-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 34.99,
+    "salePrice": 12.99,
+    "store": "Canadian Tire",
+    "city": "Dunnville, ON",
+    "branch": "Dunnville, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/substrat-de-croissance-professionnel-pro-mix-hp-mycorrhizae-42-5-l-0590931p.html",
+    "sku": "0590931",
+    "availability": ""
+  },
+  {
+    "title": "Fauteuil de salle à manger d'extérieur/de terrasse CANVAS Belwood en aluminium et osier, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/0880541/canvas-belwood-aluminum-dining-chair-2-pack-de38f891-c44a-49df-a4e2-897c643e77fb-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 499.99,
+    "salePrice": 249.93,
+    "store": "Canadian Tire",
+    "city": "Dunnville, ON",
+    "branch": "Dunnville, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/fauteuil-de-salle-a-manger-d-exterieur-de-terrasse-canvas-belwood-en-aluminium-et-osier-paq-2-0880541p.html",
+    "sku": "0880541",
+    "availability": "Il n’en reste que 1 #088-0541-4"
+  },
+  {
     "title": "Cintres pivotants compacts en velours Type A avec barre à pantalon, couleurs variées, paq. 40",
     "image": "https://media-www.canadiantire.ca/product/living/home-organization/closet-organization/0688308/type-a-velvet-suit-hanger-black-10pk-4afb3f73-0449-46d6-975c-369ae2760de2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 32.99,
@@ -70,6 +106,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/cintres-pivotants-compacts-en-velours-type-a-avec-barre-a-pantalon-couleurs-variees-paq-40-0688307p.html",
     "sku": "0688307",
     "availability": ""
+  },
+  {
+    "title": "Barbecue MASTER Chef G70220 Turismo, 4 brûleurs, propane avec tablettes latérales, 36 po",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking/0850106/master-chef-grill-turismo-4-burner-gas-griddle-cart-19667163-bb41-4715-b58c-645b95721288-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 399.99,
+    "salePrice": 199.93,
+    "store": "Canadian Tire",
+    "city": "Dunnville, ON",
+    "branch": "Dunnville, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/barbecue-master-chef-g70220-turismo-4-bruleurs-propane-avec-tablettes-laterales-36-po-0850106p.html",
+    "sku": "0850106",
+    "availability": "Il n’en reste que 3 #085-0106-8"
   },
   {
     "title": "Fauteuil de salle à manger de jardin/d'extérieur en osier CANVAS Jasper, toute saison, paq. 2",
@@ -144,10 +192,46 @@
     "availability": "Il n’en reste que 2 #064-3176-2"
   },
   {
+    "title": "Parasol de style marché CANVAS Fabris, rouge-brun, 9 pi",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/0881388/steel-wood-park-bench-0e276529-d786-463a-8b9b-d5b5077d0098-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 99.99,
+    "salePrice": 49.93,
+    "store": "Canadian Tire",
+    "city": "Dunnville, ON",
+    "branch": "Dunnville, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/parasol-de-style-marche-canvas-fabris-rouge-brun-9-pi-0882502p.html",
+    "sku": "0882502",
+    "availability": "Il n’en reste que 4 #088-2502-6"
+  },
+  {
+    "title": "Tapis d'intérieur et d'extérieur CANVAS Basca, 8 x 10 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680048/basca-outdoor-rug-9605a092-adeb-4af7-9752-a7e7577775cb-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 72.99,
+    "salePrice": 34.93,
+    "store": "Canadian Tire",
+    "city": "Dunnville, ON",
+    "branch": "Dunnville, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-d-interieur-et-d-exterieur-canvas-basca-8-x-10-pi-0680048p.html",
+    "sku": "0680048",
+    "availability": "Il n’en reste que 1 #068-0048-8"
+  },
+  {
+    "title": "Suncast - Coffre de rangement d'extérieur en résine,très grand, gris, 200 gal",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-storage/0600632/suncast-200-gallon-extra-large-deck-box-944eb197-8a12-4286-bb38-4bc562189c1b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 399.99,
+    "salePrice": 199.93,
+    "store": "Canadian Tire",
+    "city": "Dunnville, ON",
+    "branch": "Dunnville, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/suncast-coffre-de-rangement-d-exterieur-en-resine-tres-grand-gris-200-gal-0600632p.html",
+    "sku": "0600632",
+    "availability": "Il n’en reste que 2 #060-0632-2"
+  },
+  {
     "title": "Tapis rond d'intérieur et d'extérieur CANVAS Eperon, 6 x 6 pi",
     "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680047/eperon-round-outdoor-rug-194b3686-4034-4636-b92a-b5fa029609e5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 49.99,
-    "salePrice": 24.99,
+    "salePrice": 19.93,
     "store": "Canadian Tire",
     "city": "Dunnville, ON",
     "branch": "Dunnville, ON",
@@ -159,7 +243,7 @@
     "title": "Jouet aquatique gonflable Soak N' Splash & Slide avec gicleur, bleu, 16 pi, 5 ans et plus, pour plage/piscine",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/seasonal-toys/0504211/soak-n-splash-water-slide-16--6fa00059-6643-4304-ad97-12a017f202a2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 14.99,
-    "salePrice": 6.93,
+    "salePrice": 4.93,
     "store": "Canadian Tire",
     "city": "Dunnville, ON",
     "branch": "Dunnville, ON",
@@ -195,13 +279,61 @@
     "title": "Housse de pare-brise 2-en-1 MyRide pour soleil et neige, convient à la plupart des véhicules",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-winter-accessories/0304491/myride-sun-and-snow-windshield-cover-1d0e1f73-cc79-4090-b8a5-bdaefbe970b7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 32.99,
-    "salePrice": 12.93,
+    "salePrice": 9.93,
     "store": "Canadian Tire",
     "city": "Dunnville, ON",
     "branch": "Dunnville, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/housse-de-pare-brise-2-en-1-myride-pour-soleil-et-neige-convient-a-la-plupart-des-vehicules-0304491p.html",
     "sku": "0304491",
     "availability": "9 En Stock#030-4491-4"
+  },
+  {
+    "title": "Coussin de chaise de camping chauffant pleine longueur Woods CALOR avec chargeur USB, 5 heures de fonctionnement",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-furniture/0766404/woods-heated-cover-00618703-cbb6-4cc9-91fe-2cd6a1c86769-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 159.99,
+    "salePrice": 29.93,
+    "store": "Canadian Tire",
+    "city": "Dunnville, ON",
+    "branch": "Dunnville, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/coussin-de-chaise-de-camping-chauffant-pleine-longueur-woods-calor-avec-chargeur-usb-5-heures-de-fonctionnement-0766404p.html",
+    "sku": "0766404",
+    "availability": "Il n’en reste que 2 #076-6404-4"
+  },
+  {
+    "title": "Planche à pagaie pour 1 personne Pelican Flow 106, blanc et vert, 10 pi 6 po",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-water-fun/0792044/pelican-flow-106-stand-up-paddle-board-7136f53a-71e5-4f0a-825f-eab92a92ff42-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 599.99,
+    "salePrice": 299.93,
+    "store": "Canadian Tire",
+    "city": "Dunnville, ON",
+    "branch": "Dunnville, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/planche-a-pagaie-pour-1-personne-pelican-flow-106-blanc-et-vert-10-pi-6-po-0792044p.html",
+    "sku": "0792044",
+    "availability": "Il n’en reste que 2 #079-2044-8"
+  },
+  {
+    "title": "Table à dîner d'extérieur en carreaux CANVAS Jasper, cadre en aluminium, fini marbre, 29 po",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/1880273/canvas-jasper-dining-table-220dddd1-42ac-4979-a86e-935108e39691-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 699.99,
+    "salePrice": 299.93,
+    "store": "Canadian Tire",
+    "city": "Dunnville, ON",
+    "branch": "Dunnville, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/table-a-diner-d-exterieur-en-carreaux-canvas-jasper-cadre-en-aluminium-fini-marbre-29-po-1880273p.html",
+    "sku": "1880273",
+    "availability": "Il n’en reste que 2 #188-0273-4"
+  },
+  {
+    "title": "Pompe à air électrique Coleman QuickPump 12 V avec adaptateur pour auto, matelas pneumatiques et jouets",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-furniture/0760234/coleman-12v-inflate-deflate-quickpump--1e25d88c-6e5a-4c03-8b38-3c767c69f8cf-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 54.99,
+    "salePrice": 24.93,
+    "store": "Canadian Tire",
+    "city": "Dunnville, ON",
+    "branch": "Dunnville, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/pompe-a-air-electrique-coleman-quickpump-12-v-avec-adaptateur-pour-auto-matelas-pneumatiques-et-jouets-0760234p.html",
+    "sku": "0760234",
+    "availability": "Il n’en reste que 2 #076-0234-4"
   },
   {
     "title": "Fauteuil de jeu pivotant ergonomique avec haut-parleur Bluetooth à vibration X Rocker Nemesis 2.1, noir",
@@ -219,13 +351,37 @@
     "title": "Lit de voyage pour chiens Woods Dogwood, polyester, intérieur, bleu, taille unique",
     "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-accessories/0766423/woods-dogwood-dog-bed-204aeb41-a4de-4e9e-8087-c56e21eb53f1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 49.99,
-    "salePrice": 24.93,
+    "salePrice": 22.43,
     "store": "Canadian Tire",
     "city": "Dunnville, ON",
     "branch": "Dunnville, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/lit-de-voyage-pour-chiens-woods-dogwood-polyester-interieur-bleu-taille-unique-0766423p.html",
     "sku": "0766423",
     "availability": "Il n’en reste que 1 #076-6423-8"
+  },
+  {
+    "title": "Sorbetière numérique Vida par PADERNO, machine à crème glacée et gâteries 4-en-1, acier inoxydable, 1,9 L",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0431564/vida-by-paderno-ice-cream-maker-cab802eb-a002-46c2-b174-7fca7a24c75c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 149.99,
+    "salePrice": 49.93,
+    "store": "Canadian Tire",
+    "city": "Dunnville, ON",
+    "branch": "Dunnville, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/sorbetiere-numerique-vida-par-paderno-machine-a-creme-glacee-et-gateries-4-en-1-acier-inoxydable-1-9-l-0431564p.html",
+    "sku": "0431564",
+    "availability": "Il n’en reste que 2 #043-1564-0"
+  },
+  {
+    "title": "Applique murale ou de terrasse solaire à DEL d'extérieur NOMA",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-lighting/0521733/noma-deck-wall-sconce-bda39a12-6af3-4399-ae25-8170920ca104-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 49.99,
+    "salePrice": 24.93,
+    "store": "Canadian Tire",
+    "city": "Dunnville, ON",
+    "branch": "Dunnville, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/applique-murale-ou-de-terrasse-solaire-a-del-d-exterieur-noma-0521733p.html",
+    "sku": "0521733",
+    "availability": "Il n’en reste que 2 #052-1733-6"
   },
   {
     "title": "Cache de chasse ignifuge avec 2 chaises trépied Ameristep Enforcer",
@@ -252,6 +408,18 @@
     "availability": "Il n’en reste que 2 #242-1120-2"
   },
   {
+    "title": "Barbecue portatif de table à granules de bois Pit Boss avec commandes numériques et verrou pour couvercle, acajou",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking/0853193/pit-boss-portable-pellet-grill-dd4f5692-b18a-4d9a-a58f-d7319f139f32-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 449.99,
+    "salePrice": 199.93,
+    "store": "Canadian Tire",
+    "city": "Dunnville, ON",
+    "branch": "Dunnville, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/barbecue-portatif-de-table-a-granules-de-bois-pit-boss-avec-commandes-numeriques-et-verrou-pour-couvercle-acajou-0853193p.html",
+    "sku": "0853193",
+    "availability": "Il n’en reste que 1 #085-3193-0"
+  },
+  {
     "title": "Système d’élimination déchets de cuisine écologique Sepura",
     "image": "https://media-www.canadiantire.ca/product/fixing/plumbing/rough-plumbing/0633486/sepura-in-sink-food-waste-separator-and-collector-9742ff37-21c0-40c1-babb-e09184b6c6bc-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 749.99,
@@ -262,6 +430,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/systeme-d-elimination-dechets-de-cuisine-ecologique-sepura-0633486p.html",
     "sku": "0633486",
     "availability": "Il n’en reste que 1 #063-3486-6"
+  },
+  {
+    "title": "Ventilateur de plafond intelligent NOMA iQ",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/ceiling-fans/1522699/noma-iq-smart-ceiling-fan-2c628ecb-51db-4933-a4e7-c57a846f8efe-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 249.99,
+    "salePrice": 99.93,
+    "store": "Canadian Tire",
+    "city": "Dunnville, ON",
+    "branch": "Dunnville, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ventilateur-de-plafond-intelligent-noma-iq-1522699p.html",
+    "sku": "1522699",
+    "availability": "Il n’en reste que 1 #152-2699-4"
   },
   {
     "title": "Tambour de ponçage et bande abrasive grains de 60 avec tige pour outil rotatif Dremel 430, 1/4 po",
@@ -276,6 +456,42 @@
     "availability": "Il n’en reste que 1 #054-4656-8"
   },
   {
+    "title": "Sac à dos de randonnée imperméable Outbound pour enfants, bleu",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-accessories/0766645/woods-kids-hike-daypack-b82a6afc-2943-4965-a3c8-74ebec8bcd82-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 49.99,
+    "salePrice": 24.93,
+    "store": "Canadian Tire",
+    "city": "Dunnville, ON",
+    "branch": "Dunnville, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/sac-a-dos-de-randonnee-impermeable-outbound-pour-enfants-bleu-0766645p.html",
+    "sku": "0766645",
+    "availability": "Il n’en reste que 1 #076-6645-0"
+  },
+  {
+    "title": "Huile à moteur 10W-30 4 temps BRP XPS Marine, 1 L",
+    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/specialty-oil-lubricants/0281884/brp-xps-4-cycle-10w30-1l-4ff39db0-9e85-4434-86ab-fde25c6b6f2c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 22.99,
+    "salePrice": 10.93,
+    "store": "Canadian Tire",
+    "city": "Dunnville, ON",
+    "branch": "Dunnville, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/huile-a-moteur-10w-30-4-temps-brp-xps-marine-1-l-0281884p.html",
+    "sku": "0281884",
+    "availability": "Il n’en reste que 2 #028-1884-6"
+  },
+  {
+    "title": "Chaise de camping pliante Woods Terra Powerlite avec plateforme de sable/neige et étui de transport",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-furniture/0763212/woods-terra-powerlite-chair-0049ffb3-4e8a-4133-bf02-75a91c87dcf0-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 84.99,
+    "salePrice": 39.93,
+    "store": "Canadian Tire",
+    "city": "Dunnville, ON",
+    "branch": "Dunnville, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/chaise-de-camping-pliante-woods-terra-powerlite-avec-plateforme-de-sable-neige-et-etui-de-transport-0763212p.html",
+    "sku": "0763212",
+    "availability": "Il n’en reste que 1 #076-3212-8"
+  },
+  {
     "title": "Lustre doré à 10 lampes CANVAS Marlene, or brossé",
     "image": "https://media-www.canadiantire.ca/product/living/home-decor/lighting/1522611/canvas-wilton-chandelier-e74d26bf-c6d4-4a18-a36d-c8dcdb26b92e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 249.99,
@@ -286,6 +502,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/lustre-dore-a-10-lampes-canvas-marlene-or-brosse-1522611p.html",
     "sku": "1522611",
     "availability": "Il n’en reste que 1 #152-2611-2"
+  },
+  {
+    "title": "Filtre à eau/douche de camping Woods, 20 L, gris",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/hydration-coolers/0765991/woods-water-filter-camp-shower-combo-8f701d62-642d-43c6-95a3-8630b18cb9c6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 89.99,
+    "salePrice": 44.93,
+    "store": "Canadian Tire",
+    "city": "Dunnville, ON",
+    "branch": "Dunnville, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/filtre-a-eau-douche-de-camping-woods-20-l-gris-0765991p.html",
+    "sku": "0765991",
+    "availability": "Il n’en reste que 2 #076-5991-0"
   },
   {
     "title": "Canapé-lit d'extérieur/patio à assembler CANVAS Banks avec accoudoirs amovibles",
@@ -324,6 +552,18 @@
     "availability": "Il n’en reste que 1 #242-1021-8"
   },
   {
+    "title": "Suspension CANVAS Kostal d'extérieur pour terrasse à tambour en osier",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-lighting/0521724/canvas-kostal-pendant-ac04ef85-4ecf-4a4d-92c9-3a07f600fd56-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 169.99,
+    "salePrice": 79.93,
+    "store": "Canadian Tire",
+    "city": "Dunnville, ON",
+    "branch": "Dunnville, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/suspension-canvas-kostal-d-exterieur-pour-terrasse-a-tambour-en-osier-0521724p.html",
+    "sku": "0521724",
+    "availability": "Il n’en reste que 1 #052-1724-8"
+  },
+  {
     "title": "Raquette de tennis en graphite composite HEAD Speed pour enfants, vert, 23 po",
     "image": "https://media-www.canadiantire.ca/product/playing/team-sports-and-golf/sports-equipment-accessories/1841156/head-speed-jr-tennis-racquet-23--8946110f-b08a-437a-8e0c-453d371c3a52-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 29.99,
@@ -336,16 +576,52 @@
     "availability": "Il n’en reste que 5 #184-1156-6"
   },
   {
-    "title": "Brosse de nettoyage profilée pour pneu SIMONIZ Platinum, noir et gris, 1 pièce",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-tools/0396171/simoniz-platinum-contour-tire-brush-6a86da01-f4ab-4048-9c1c-aee22a2ace99-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 13.99,
-    "salePrice": 4.93,
+    "title": "Sac fourre-tout de camping Woods Haul 45, 45 L, anthracite",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/backpacks-luggage-accessories/0766610/woods-campfire-tote-a68e35d0-677b-486b-ad97-24a2ad763e01-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 99.99,
+    "salePrice": 49.93,
     "store": "Canadian Tire",
     "city": "Dunnville, ON",
     "branch": "Dunnville, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/brosse-de-nettoyage-profilee-pour-pneu-simoniz-platinum-noir-et-gris-1-piece-0396171p.html",
-    "sku": "0396171",
-    "availability": "Il n’en reste que 1 #039-6171-6"
+    "url": "https://www.canadiantire.ca/fr/pdp/sac-fourre-tout-de-camping-woods-haul-45-45-l-anthracite-0766610p.html",
+    "sku": "0766610",
+    "availability": "Il n’en reste que 2 #076-6610-2"
+  },
+  {
+    "title": "Bouteille d'eau Supercycle pour vélo, format économique, sans BPA, transparente, 23,6 oz, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycle-accessories/0733061/supercycle-2-pack-value-pack-ce45dc13-b2da-49cd-979b-b967a2df0d39-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 31.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Dunnville, ON",
+    "branch": "Dunnville, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/bouteille-d-eau-supercycle-pour-velo-format-economique-sans-bpa-transparente-23-6-oz-paq-2-0733061p.html",
+    "sku": "0733061",
+    "availability": "Il n’en reste que 1 #073-3061-2"
+  },
+  {
+    "title": "Statue d'ours de bienvenue For Living, 15,75 po, multicolore",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0596492/for-living-bear-w-welcome-fish-statue-610cd836-8941-4170-b135-36fea157475b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 69.99,
+    "salePrice": 24.93,
+    "store": "Canadian Tire",
+    "city": "Dunnville, ON",
+    "branch": "Dunnville, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/statue-d-ours-de-bienvenue-for-living-15-75-po-multicolore-0596492p.html",
+    "sku": "0596492",
+    "availability": "Il n’en reste que 1 #059-6492-4"
+  },
+  {
+    "title": "Support de plaque d'immatriculation pour repérage de véhicule AutoTrends",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0372925/autotrends-find-my-auto-license-plate-frame-41d8c2a3-7d2a-4373-8046-7d337eb238a9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 8.93,
+    "store": "Canadian Tire",
+    "city": "Dunnville, ON",
+    "branch": "Dunnville, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/support-de-plaque-d-immatriculation-pour-reperage-de-vehicule-autotrends-0372925p.html",
+    "sku": "0372925",
+    "availability": "Il n’en reste que 2 #037-2925-2"
   },
   {
     "title": "Scie à onglets coulissante à biseau simple Evolution R255SMS avec lame de coupe multi-matériaux de 10 po, 15 A",
@@ -360,16 +636,16 @@
     "availability": "Il n’en reste que 2 #055-6779-2"
   },
   {
-    "title": "Table d'appoint de canapé à 1 tiroir avec tablette de rangement ouverte Sauder County Line, fini chêne salé, 24 po",
-    "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/0687564/sauder-county-line-night-stand-74e988a9-0ba2-4743-bd53-e00a7b6876f1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 189.99,
-    "salePrice": 69.93,
+    "title": "Bâton lumineux/lampe de sécurité étanche Outbound, 12 heures, pour le camping, la randonnée et le bateau, paq. 8",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-accessories/0765649/outbound-glow-sticks-69cd1ed2-f0a4-4ea3-85e9-4b204b01518b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 11.99,
+    "salePrice": 4.93,
     "store": "Canadian Tire",
     "city": "Dunnville, ON",
     "branch": "Dunnville, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/table-d-appoint-de-canape-a-1-tiroir-avec-tablette-de-rangement-ouverte-sauder-county-line-fini-chene-sale-24-po-0687564p.html",
-    "sku": "0687564",
-    "availability": "Il n’en reste que 1 #068-7564-6"
+    "url": "https://www.canadiantire.ca/fr/pdp/baton-lumineux-lampe-de-securite-etanche-outbound-12-heures-pour-le-camping-la-randonnee-et-le-bateau-paq-8-0765649p.html",
+    "sku": "0765649",
+    "availability": "Il n’en reste que 3 #076-5649-8"
   },
   {
     "title": "Raquette de tennis léger avec poignée antidérapante Franklin X-1000 MaxGrit, fibre de verre 10 mm, approuvé par USAP, noir",
@@ -387,7 +663,7 @@
     "title": "CANVAS Mercier - Chaise de jardin pour table à manger en corde, gris",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/0882189/canvas-mercier-rope-dining-chair-e105f121-6f42-49ef-9802-c78461129fa7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 109.99,
-    "salePrice": 42.93,
+    "salePrice": 34.93,
     "store": "Canadian Tire",
     "city": "Dunnville, ON",
     "branch": "Dunnville, ON",
@@ -504,6 +780,18 @@
     "availability": ""
   },
   {
+    "title": "Lunettes de natation Speedo Sonic pour enfants, bleu/blanc, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-fun/0810429/speedo-kids-sonic-goggles-2-pack-blue-and-white-97f9edb7-774b-4601-9b90-74e414472ef9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Dunnville, ON",
+    "branch": "Dunnville, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/lunettes-de-natation-speedo-sonic-pour-enfants-bleu-blanc-paq-2-0810429p.html",
+    "sku": "0810429",
+    "availability": "Il n’en reste que 2 #081-0429-8"
+  },
+  {
     "title": "Plaque murale vierge en nylon Leviton 0PJ13-741, taille intermédiaire, 1 dispositif, ivoire",
     "image": "https://media-www.canadiantire.ca/product/fixing/electrical/rough-electrical/0522896/blank-wallplate-1-gang-ivory-midway-size-eb2a3ee5-7617-40e1-a2a0-40d409bc56b0-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 2.79,
@@ -567,7 +855,7 @@
     "title": "Station de recharge sans fil bluehive",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-electronics/0351596/bluehive-wireless-charging-dock-2ce0fb18-8296-4597-b9e3-2bd6b9d59968-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 49.99,
-    "salePrice": 19.93,
+    "salePrice": 14.93,
     "store": "Canadian Tire",
     "city": "Dunnville, ON",
     "branch": "Dunnville, ON",
@@ -577,7 +865,7 @@
   },
   {
     "title": "Plomb fendu sans plomb Red Wolf",
-    "image": "undefined?im=whresize&wid=200&hei=200",
+    "image": "undefined",
     "price": 14.99,
     "salePrice": 6.73,
     "store": "Canadian Tire",
@@ -636,42 +924,6 @@
     "availability": "Il n’en reste que 1 #052-3797-2"
   },
   {
-    "title": "Pomme de douche à main H2Okinetic Delta Faucet SureDock, bouton de pause, 5 réglages, chrome",
-    "image": "https://media-www.canadiantire.ca/product/fixing/plumbing/faucets-fixtures/0631854/delta-suredock-chrome-handheld-shower-head-bfc56ef6-9c91-4c38-92a1-a7b754125d9d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 99.99,
-    "salePrice": 49.99,
-    "store": "Canadian Tire",
-    "city": "Dunnville, ON",
-    "branch": "Dunnville, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/pomme-de-douche-a-main-h2okinetic-delta-faucet-suredock-bouton-de-pause-5-reglages-chrome-0631854p.html",
-    "sku": "0631854",
-    "availability": "Il n’en reste que 1 #063-1854-2"
-  },
-  {
-    "title": "Leurre Redwolf Fancy Popper, paq. 3",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0771719/redwolf-fancy-popper-3-pack-28df5c9c-f256-430c-95cd-b68bd9adbfa6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 19.99,
-    "salePrice": 8.93,
-    "store": "Canadian Tire",
-    "city": "Dunnville, ON",
-    "branch": "Dunnville, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/leurre-redwolf-fancy-popper-paq-3-0771719p.html",
-    "sku": "0771719",
-    "availability": "Il n’en reste que 1 #077-1719-4"
-  },
-  {
-    "title": "Sélecteur de plombs Red Wolf, 25 pièces",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0784906/red-wolf-sinker-selector-14-f2e7edcf-4c99-42d8-a6f0-b8d6a9f8b5ac-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 8.49,
-    "salePrice": 3.73,
-    "store": "Canadian Tire",
-    "city": "Dunnville, ON",
-    "branch": "Dunnville, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/selecteur-de-plombs-red-wolf-25-pieces-0784906p.html",
-    "sku": "0784906",
-    "availability": "Il n’en reste que 2 #078-4906-8"
-  },
-  {
     "title": "Dandinette ronde Xcalibur, lever de soleil, 1/2 oz",
     "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0773783/matzuo-round-jig-sunrise-1-2-6e90197c-1f33-45f6-bac1-251669f17a92-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 5.99,
@@ -696,8 +948,32 @@
     "availability": ""
   },
   {
+    "title": "Selle de vélo de montagne Raleigh",
+    "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycle-accessories/0730591/raleigh-mtb-saddle-f3d80fe2-d102-49df-8710-a97a6b1a3e3d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 54.99,
+    "salePrice": 24.93,
+    "store": "Canadian Tire",
+    "city": "Dunnville, ON",
+    "branch": "Dunnville, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/selle-de-velo-de-montagne-raleigh-0730591p.html",
+    "sku": "0730591",
+    "availability": "Il n’en reste que 4 #073-0591-8"
+  },
+  {
+    "title": "Balançoire portative pour l'extérieur Ripline, 3 ans et plus",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/backyard-amusement/1841046/ripline-swingline-2d59bdd0-8217-4257-ab88-9d7657eca433-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 149.99,
+    "salePrice": 69.93,
+    "store": "Canadian Tire",
+    "city": "Dunnville, ON",
+    "branch": "Dunnville, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/balancoire-portative-pour-l-exterieur-ripline-3-ans-et-plus-1841046p.html",
+    "sku": "1841046",
+    "availability": "Il n’en reste que 1 #184-1046-8"
+  },
+  {
     "title": "Hameçon à ver à très grande ouverture Xcalibur",
-    "image": "undefined?im=whresize&wid=200&hei=200",
+    "image": "undefined",
     "price": 5.49,
     "salePrice": 2.23,
     "store": "Canadian Tire",
@@ -718,17 +994,5 @@
     "url": "https://www.canadiantire.ca/fr/pdp/peinture-de-retouche-scratch-fix-all-in-1-vert-fonce-satine-fu-fw-0475179p.html",
     "sku": "0475179",
     "availability": "Il n’en reste que 1 #047-5179-6"
-  },
-  {
-    "title": "Bluehive – Écouteurs boutons Lightning pour appareils iPhone sélectionnés, noir",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-electronics/0357305/bluehive-lightning-connect-earbuds-af82abb3-f90b-4659-8250-9ba248fffc44-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 39.99,
-    "salePrice": 9.93,
-    "store": "Canadian Tire",
-    "city": "Dunnville, ON",
-    "branch": "Dunnville, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/bluehive-ecouteurs-boutons-lightning-pour-appareils-iphone-selectionnes-noir-0357305p.html",
-    "sku": "0357305",
-    "availability": "Il n’en reste que 1 #035-7305-2"
   }
 ]
