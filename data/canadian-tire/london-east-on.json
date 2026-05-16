@@ -1,17 +1,5 @@
 [
   {
-    "title": "Glacière/réchaud électrique thermoélectrique sur roulettes Mobicool, avec poignée, 45 L, bleu",
-    "image": "https://media-www.canadiantire.ca/product/playing/camping/hydration-coolers/0370124/45l-wheeled-12v-cooler-with-adapter-1a3a5430-7fbc-4bde-bbb2-549a37e1e05e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 379.99,
-    "salePrice": 139.93,
-    "store": "Canadian Tire",
-    "city": "London East, ON",
-    "branch": "London East, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/glaciere-rechaud-electrique-thermoelectrique-sur-roulettes-mobicool-avec-poignee-45-l-bleu-0370124p.html",
-    "sku": "0370124",
-    "availability": "Il n’en reste que 3 #037-0124-0"
-  },
-  {
     "title": "Tabouret de bar métal et bois CANVAS Union, paq. 2, brun",
     "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/0687563/canvas-union-stool-2-pk-29ecf7e3-3af9-4631-ab03-ba8946104db3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 229.99,
@@ -57,7 +45,19 @@
     "branch": "London East, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/everlast-powercore-sac-de-frappe-sur-pied-1840501p.html",
     "sku": "1840501",
-    "availability": "Il n’en reste que 2 #184-0501-0"
+    "availability": "Il n’en reste que 1 #184-0501-0"
+  },
+  {
+    "title": "Panier de basketball d'extérieur fixe Spalding U-TURN, 60 po",
+    "image": "https://media-www.canadiantire.ca/product/playing/team-sports-and-golf/sports-equipment-accessories/1840808/spalding-60-glass-in-ground-basketball-system-0694c723-1f02-444a-99e6-83123f28c329-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 999.99,
+    "salePrice": 499.93,
+    "store": "Canadian Tire",
+    "city": "London East, ON",
+    "branch": "London East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/panier-de-basketball-d-exterieur-fixe-spalding-u-turn-60-po-1840808p.html",
+    "sku": "1840808",
+    "availability": "Il n’en reste que 1 #184-0808-2"
   },
   {
     "title": "Chaise à dîner CANVAS Evans Creek, beige",
@@ -70,6 +70,42 @@
     "url": "https://www.canadiantire.ca/fr/pdp/chaise-a-diner-canvas-evans-creek-beige-1680108p.html",
     "sku": "1680108",
     "availability": "Il n’en reste que 1 #168-0108-8"
+  },
+  {
+    "title": "Tapis d'intérieur et d'extérieur Korhani Luna, 5 x 7 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680033/maville-5x7-indoor-outdoor-rug-2fbded30-72ce-46a7-8c89-dc7dd7287d85-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 114.99,
+    "salePrice": 54.93,
+    "store": "Canadian Tire",
+    "city": "London East, ON",
+    "branch": "London East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-d-interieur-et-d-exterieur-korhani-luna-5-x-7-pi-0680033p.html",
+    "sku": "0680033",
+    "availability": "Il n’en reste que 2 #068-0033-2"
+  },
+  {
+    "title": "Trampoline d'eau gonflable Pathfinder, 9,2 pi",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-water-fun/0791421/pathfinder-water-trampoline-6b774c44-c405-4169-90f9-01a872145868-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 499.99,
+    "salePrice": 199.93,
+    "store": "Canadian Tire",
+    "city": "London East, ON",
+    "branch": "London East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/trampoline-d-eau-gonflable-pathfinder-9-2-pi-0791421p.html",
+    "sku": "0791421",
+    "availability": "Il n’en reste que 1 #079-1421-6"
+  },
+  {
+    "title": "Ceinture de flottaison gonflable Helly Hansen",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-water-fun/0793041/helly-hansen-personal-flotation-device-belt-inflate-242c3a5b-947d-400e-9648-0f3abaa0f59b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 219.99,
+    "salePrice": 99.93,
+    "store": "Canadian Tire",
+    "city": "London East, ON",
+    "branch": "London East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ceinture-de-flottaison-gonflable-helly-hansen-0793041p.html",
+    "sku": "0793041",
+    "availability": "Il n’en reste que 2 #079-3041-8"
   },
   {
     "title": "Lampe de table CANVAS cannelée, 28 po",
@@ -96,6 +132,30 @@
     "availability": "Il n’en reste que 3 #037-3161-2"
   },
   {
+    "title": "Applique d'extérieur intégrée à DEL NOMA, noir mat, 13,2 po",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/lighting/1522768/noma-13-2-integrated-led-outdoor-wall-sconce-8979a633-f230-4404-8f55-f2844f1e0dd2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 89.99,
+    "salePrice": 39.93,
+    "store": "Canadian Tire",
+    "city": "London East, ON",
+    "branch": "London East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/applique-d-exterieur-integree-a-del-noma-noir-mat-13-2-po-1522768p.html",
+    "sku": "1522768",
+    "availability": "Il n’en reste que 2 #152-2768-0"
+  },
+  {
+    "title": "Plat de service d'extérieur en fibre de bambou CANVAS Summer Palm, 14 po",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/1590044/canvas-bamboo-summer-palm-14-platter-bb2e6866-612c-46ec-a269-0b3fd66589f2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 14.99,
+    "salePrice": 6.93,
+    "store": "Canadian Tire",
+    "city": "London East, ON",
+    "branch": "London East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/plat-de-service-d-exterieur-en-fibre-de-bambou-canvas-summer-palm-14-po-1590044p.html",
+    "sku": "1590044",
+    "availability": "Il n’en reste que 5 #159-0044-0"
+  },
+  {
     "title": "Jeu de 6 flotteurs encliquetables",
     "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0782902/danielson-snap-on-float-red-white-2-5-6-pack-1ef81375-e2da-4c03-b9ed-341d02100efe-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 8.49,
@@ -106,6 +166,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/jeu-de-6-flotteurs-encliquetables-0782902p.html",
     "sku": "0782902",
     "availability": "Il n’en reste que 1 #078-2902-8"
+  },
+  {
+    "title": "Lanterne CANVAS Lumière",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/1592485/canvas-lumiere-lantern-a9115e80-e651-42c5-b379-a7e2f9440579-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "London East, ON",
+    "branch": "London East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/lanterne-canvas-lumiere-1592485p.html",
+    "sku": "1592485",
+    "availability": "Il n’en reste que 1 #159-2485-8"
   },
   {
     "title": "Tapis de bain en chenille, gris foncé, 20 x 30 po",
@@ -132,6 +204,30 @@
     "availability": "Il n’en reste que 1 #035-4179-0"
   },
   {
+    "title": "Machine à espresso entièrement automatique KitchenAid avec moulin, acier inoxydable",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430363/kitchen-aid-semi-automatic-espresso-machine-w-grinder-9059f9f7-e78d-4bd6-a030-70ecad61bc9c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 999.99,
+    "salePrice": 499.93,
+    "store": "Canadian Tire",
+    "city": "London East, ON",
+    "branch": "London East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/machine-a-espresso-entierement-automatique-kitchenaid-avec-moulin-acier-inoxydable-0430363p.html",
+    "sku": "0430363",
+    "availability": "Il n’en reste que 2 #043-0363-4"
+  },
+  {
+    "title": "Canapé à bulles Funsicle Mesh, bleu lagon",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-fun/0810452/funsicle-mesh-bubble-sofa-lagoon-blue-69db5d2a-f047-4732-8e96-00e8b6815bb4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 39.99,
+    "salePrice": 14.93,
+    "store": "Canadian Tire",
+    "city": "London East, ON",
+    "branch": "London East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/canape-a-bulles-funsicle-mesh-bleu-lagon-0810452p.html",
+    "sku": "0810452",
+    "availability": "Il n’en reste que 6 #081-0452-0"
+  },
+  {
     "title": "Plafonnier à 3 lampes à têtes pivotantes réglables NOMA, blanc lustré",
     "image": "https://media-www.canadiantire.ca/product/living/home-decor/lighting/0529503/noma-3-light-summerhill-canopy-light-24c19f17-fe6a-4943-a8cd-efc760484c88-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 69.99,
@@ -144,16 +240,28 @@
     "availability": "Il n’en reste que 2 #052-9503-6"
   },
   {
-    "title": "Chevalet de sciage en plastique Mastercraft avec pince, 27 x 15 po",
-    "image": "https://media-www.canadiantire.ca/product/fixing/tools/tool-storage/0586572/mastercraft-clamping-sawhorse-cc7423e5-2d0e-4300-9b90-3a50f1696686-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 79.99,
-    "salePrice": 39.93,
+    "title": "Balle de tir truqué super rebondissante Aerobie Sonic, pour jouer à l'extérieur, 8 ans et plus",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/seasonal-toys/0509710/aerobie-super-bounce-ball-0577bffd-1c36-4536-adb6-e671364c3cc9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 11.99,
+    "salePrice": 4.93,
     "store": "Canadian Tire",
     "city": "London East, ON",
     "branch": "London East, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/chevalet-de-sciage-en-plastique-mastercraft-avec-pince-27-x-15-po-0586572p.html",
-    "sku": "0586572",
-    "availability": "Il n’en reste que 1 #058-6572-6"
+    "url": "https://www.canadiantire.ca/fr/pdp/balle-de-tir-truque-super-rebondissante-aerobie-sonic-pour-jouer-a-l-exterieur-8-ans-et-plus-0509710p.html",
+    "sku": "0509710",
+    "availability": "Il n’en reste que 1 #050-9710-6"
+  },
+  {
+    "title": "Statue commémorative For Living, chien au repos, 5,71 po, brun",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0597886/for-living-resting-dog-memorial-statue-8c9e28da-5d67-4f9d-8d7c-5f088fa89492-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 44.99,
+    "salePrice": 19.93,
+    "store": "Canadian Tire",
+    "city": "London East, ON",
+    "branch": "London East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/statue-commemorative-for-living-chien-au-repos-5-71-po-brun-0597886p.html",
+    "sku": "0597886",
+    "availability": "Il n’en reste que 1 #059-7886-2"
   },
   {
     "title": "Époxy pour bois d'intérieur transparent très lustré Rust-Oleum Stone Effects, 1,2 L/0,3 gallon",
@@ -192,6 +300,18 @@
     "availability": "Il n’en reste que 4 #020-3383-2"
   },
   {
+    "title": "Casque Origine Delta modulaire, visière électrique, noir/titane",
+    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/powersport/0262826/origine-delta-modular-snow-w-elec-shield-black-titanium-s-27d3e06d-7103-4ee1-8c9c-394c946451d7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 289.99,
+    "salePrice": 139.93,
+    "store": "Canadian Tire",
+    "city": "London East, ON",
+    "branch": "London East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/casque-origine-delta-modulaire-visiere-electrique-noir-titane-0262826p.html",
+    "sku": "0262826",
+    "availability": ""
+  },
+  {
     "title": "Lampe à DEL stroboscopique double, blanc",
     "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0203968/led-twinstrobz-amber-18d7b5e1-3479-48cf-a17c-2c3d7b18bbbd-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 43.99,
@@ -202,6 +322,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/lampe-a-del-stroboscopique-double-blanc-0203966p.html",
     "sku": "0203966",
     "availability": "Il n’en reste que 1 #020-3966-6"
+  },
+  {
+    "title": "Crochet en J pour rangement de garage NOMA, 3,5 po, paq. 4",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/power-bars-extension-cords-timers/0521437/noma-j-hook-extension-cord-holder-88mm-6c5d8d89-21df-40de-82c7-c7d29b631092-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 7.49,
+    "salePrice": 2.93,
+    "store": "Canadian Tire",
+    "city": "London East, ON",
+    "branch": "London East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/crochet-en-j-pour-rangement-de-garage-noma-3-5-po-paq-4-0521437p.html",
+    "sku": "0521437",
+    "availability": "Il n’en reste que 1 #052-1437-2"
   },
   {
     "title": "Trousse d'éclairage à DEL pour caisse de camion Type S",
@@ -219,13 +351,25 @@
     "title": "Costume de bain short rayé Outbound à entrejambe de 7 po pour hommes",
     "image": "https://media-www.canadiantire.ca/product/playing/footwear-apparel/summer-footwear-apparel/1873524/outbound-men-s-7-swim-shorts-striped-m-5e401f67-55b4-4cdb-b1e8-25f912faa608-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 22.99,
-    "salePrice": 9.93,
+    "salePrice": 8.93,
     "store": "Canadian Tire",
     "city": "London East, ON",
     "branch": "London East, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/costume-de-bain-short-raye-outbound-a-entrejambe-de-7-po-pour-hommes-1873524p.html",
     "sku": "1873524",
     "availability": ""
+  },
+  {
+    "title": "Lampe de sécurité solaire à deux têtes et à DEL NOMA, détection de mouvement, 1 200 lumens, noir",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/lighting/1523122/noma-solar-security-light-1200-lumens-af729ff1-bca5-4704-8ceb-cabb38aa6b34-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 84.99,
+    "salePrice": 12.93,
+    "store": "Canadian Tire",
+    "city": "London East, ON",
+    "branch": "London East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/lampe-de-securite-solaire-a-deux-tetes-et-a-del-noma-detection-de-mouvement-1-200-lumens-noir-1523122p.html",
+    "sku": "1523122",
+    "availability": "12 En Stock#152-3122-0"
   },
   {
     "title": "Coffret de jeu gâteau Madera Cakeville",
@@ -243,7 +387,7 @@
     "title": "Station de recharge sans fil bluehive",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-electronics/0351596/bluehive-wireless-charging-dock-2ce0fb18-8296-4597-b9e3-2bd6b9d59968-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 49.99,
-    "salePrice": 19.93,
+    "salePrice": 14.93,
     "store": "Canadian Tire",
     "city": "London East, ON",
     "branch": "London East, ON",
@@ -288,6 +432,18 @@
     "availability": "Il n’en reste que 4 #052-1741-6"
   },
   {
+    "title": "Verre à whisky nervuré bleu CANVAS, sans BPA, 15 oz",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/1590047/canvas-blue-ribbed-low-ball-15oz-glass-7d4b0458-3159-4403-9834-df6727803c10-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 4.99,
+    "salePrice": 2.43,
+    "store": "Canadian Tire",
+    "city": "London East, ON",
+    "branch": "London East, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/verre-a-whisky-nervure-bleu-canvas-sans-bpa-15-oz-1590047p.html",
+    "sku": "1590047",
+    "availability": "Il n’en reste que 1 #159-0047-4"
+  },
+  {
     "title": "Briggs & Stratton - Buse compatible avec laveuse haute pression à essence, 4 000 lb/po², 2 pcs",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/pressure-washers-accessories/0398528/briggs-stratton-second-story-kit-cf97c87f-c084-4c56-89f3-22723d812a1d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 33.99,
@@ -327,7 +483,7 @@
     "title": "Chaussures de randonnée basses et légères Outbound Pace pour hommes, noires",
     "image": "https://media-www.canadiantire.ca/product/playing/footwear-apparel/summer-footwear-apparel/1873462/outbound-pace-low-hiking-shoes-black-men-size-7-a452df5b-a1a4-43b3-baf0-670f95f0d87e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 89.99,
-    "salePrice": 37.93,
+    "salePrice": 32.93,
     "store": "Canadian Tire",
     "city": "London East, ON",
     "branch": "London East, ON",
@@ -337,7 +493,7 @@
   },
   {
     "title": "Plomb à fente amovible Xcalibur, taille 5",
-    "image": "undefined?im=whresize&wid=200&hei=200",
+    "image": "undefined",
     "price": 14.99,
     "salePrice": 7.43,
     "store": "Canadian Tire",
@@ -345,6 +501,6 @@
     "branch": "London East, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/plomb-a-fente-amovible-xcalibur-taille-5-0783276p.html",
     "sku": "0783276",
-    "availability": "Il n’en reste que 3 #078-3276-2"
+    "availability": "Il n’en reste que 2 #078-3276-2"
   }
 ]
