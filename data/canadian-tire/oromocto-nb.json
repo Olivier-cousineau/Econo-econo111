@@ -1,41 +1,5 @@
 [
   {
-    "title": "Nettoyant pour plancher dur humide Dyson WashG1",
-    "image": "https://media-www.canadiantire.ca/product/living/cleaning/vacuums-and-floorcare/0437203/dyson-washg1a-is-the-latest-wet-cleaning-technology--78d707ef-8aa9-4cfb-9da1-6723242c10bc-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 905.74,
-    "salePrice": 299.93,
-    "store": "Canadian Tire",
-    "city": "Oromocto, NB",
-    "branch": "Oromocto, NB",
-    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-pour-plancher-dur-humide-dyson-washg1-0437203p.html",
-    "sku": "0437203",
-    "availability": "Il n’en reste que 2 #043-7203-4"
-  },
-  {
-    "title": "Tasses à mesurer empilables en plastique MASTER Chef, paq. 10",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/bakeware-baking-prep/1429676/master-chef-10pc-measuring-cup-set-73c761cb-c28c-42fe-a32e-f57a30c6b9a6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 24.99,
-    "salePrice": 8.93,
-    "store": "Canadian Tire",
-    "city": "Oromocto, NB",
-    "branch": "Oromocto, NB",
-    "url": "https://www.canadiantire.ca/fr/pdp/tasses-a-mesurer-empilables-en-plastique-master-chef-paq-10-1429676p.html",
-    "sku": "1429676",
-    "availability": "Il n’en reste que 4 #142-9676-0"
-  },
-  {
-    "title": "T-shirt sport à manches courtes et extensibles avec encolure ras du cou Mooselander, hommes, couleur unie, tailles variées, noir/gris, paq. 2",
-    "image": "https://media-www.canadiantire.ca/product/playing/footwear-apparel/summer-footwear-apparel/1874066/active-2-pack-short-sleeve-tees-m-l-ce888845-ad24-41df-8604-c50d7052ca02-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 21.99,
-    "salePrice": 4.93,
-    "store": "Canadian Tire",
-    "city": "Oromocto, NB",
-    "branch": "Oromocto, NB",
-    "url": "https://www.canadiantire.ca/fr/pdp/t-shirt-sport-a-manches-courtes-et-extensibles-avec-encolure-ras-du-cou-mooselander-hommes-couleur-unie-tailles-variees-noir-gris-paq-2-1874066p.html",
-    "sku": "1874066",
-    "availability": ""
-  },
-  {
     "title": "Four à pizza de table portatif au gaz Vida par PADERNO, 1 brûleur, 12 po",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking/0850001/vida-by-paderno-pizza-oven-c3f6852d-30b5-4ad8-96fe-41ea01ff0eaa-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 399.99,
@@ -46,6 +10,30 @@
     "url": "https://www.canadiantire.ca/fr/pdp/four-a-pizza-de-table-portatif-au-gaz-vida-par-paderno-1-bruleur-12-po-0850001p.html",
     "sku": "0850001",
     "availability": ""
+  },
+  {
+    "title": "Fauteuil de salle à manger d'extérieur/de terrasse CANVAS Belwood en aluminium et osier, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/0880541/canvas-belwood-aluminum-dining-chair-2-pack-de38f891-c44a-49df-a4e2-897c643e77fb-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 499.99,
+    "salePrice": 249.93,
+    "store": "Canadian Tire",
+    "city": "Oromocto, NB",
+    "branch": "Oromocto, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/fauteuil-de-salle-a-manger-d-exterieur-de-terrasse-canvas-belwood-en-aluminium-et-osier-paq-2-0880541p.html",
+    "sku": "0880541",
+    "availability": "Il n’en reste que 1 #088-0541-4"
+  },
+  {
+    "title": "Tapis d'intérieur et d'extérieur CANVAS Fresco Marven, 8 x 10 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680038/marven-indoor-outdoor-rug-f51c7cd9-ed84-43e2-8599-b714280d7a6c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 199.99,
+    "salePrice": 99.93,
+    "store": "Canadian Tire",
+    "city": "Oromocto, NB",
+    "branch": "Oromocto, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-d-interieur-et-d-exterieur-canvas-fresco-marven-8-x-10-pi-0680038p.html",
+    "sku": "0680038",
+    "availability": "Il n’en reste que 1 #068-0038-2"
   },
   {
     "title": "Cintres pivotants compacts en velours Type A avec barre à pantalon, couleurs variées, paq. 40",
@@ -72,18 +60,6 @@
     "availability": "Il n’en reste que 1 #188-0272-6"
   },
   {
-    "title": "Machine à café et à espresso mince Nespresso Vertuo Next par DeLonghi, gris",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430395/nespresso-vertuo-next-espresso-machine-by-delonghi-grey-fac2366d-dee6-4db4-8252-8086cb68fbba-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 229.99,
-    "salePrice": 114.93,
-    "store": "Canadian Tire",
-    "city": "Oromocto, NB",
-    "branch": "Oromocto, NB",
-    "url": "https://www.canadiantire.ca/fr/pdp/machine-a-cafe-et-a-espresso-mince-nespresso-vertuo-next-par-delonghi-gris-0430395p.html",
-    "sku": "0430395",
-    "availability": "Il n’en reste que 1 #043-0395-8"
-  },
-  {
     "title": "Parka technique de chasse perméable à l'air imperméable coupe-vent Yukon Gear pour hommes, camouflage Realtree Xtra",
     "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-apparel-footwear/3750716/yukon-gear-parka-2-rte-m-a47cf6f2-275c-44e1-93da-5eb1da27165e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 99.99,
@@ -96,10 +72,58 @@
     "availability": ""
   },
   {
+    "title": "Suncast - Coffre de rangement d'extérieur en résine,très grand, gris, 200 gal",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-storage/0600632/suncast-200-gallon-extra-large-deck-box-944eb197-8a12-4286-bb38-4bc562189c1b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 399.99,
+    "salePrice": 199.93,
+    "store": "Canadian Tire",
+    "city": "Oromocto, NB",
+    "branch": "Oromocto, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/suncast-coffre-de-rangement-d-exterieur-en-resine-tres-grand-gris-200-gal-0600632p.html",
+    "sku": "0600632",
+    "availability": ""
+  },
+  {
+    "title": "Sécheuse extensible intérieur/extérieur Type A",
+    "image": "https://media-www.canadiantire.ca/product/living/home-organization/laundry/1429642/type-a-indoor-outdoor-dryer-4f8c50be-fec9-479f-b4f9-efc08ac97fad-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 79.99,
+    "salePrice": 39.93,
+    "store": "Canadian Tire",
+    "city": "Oromocto, NB",
+    "branch": "Oromocto, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/secheuse-extensible-interieur-exterieur-type-a-1429642p.html",
+    "sku": "1429642",
+    "availability": "Il n’en reste que 1 #142-9642-0"
+  },
+  {
+    "title": "Service de vaisselle en grès à rebord orné CANVAS Gatestone, blanc, paq. 12",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/dining-and-entertaining/2421124/canvas-12-pc-ornate-rim-dinnerware-set-ec677528-47a1-4eea-a43d-63735afa1b7e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 99.99,
+    "salePrice": 49.93,
+    "store": "Canadian Tire",
+    "city": "Oromocto, NB",
+    "branch": "Oromocto, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/service-de-vaisselle-en-gres-a-rebord-orne-canvas-gatestone-blanc-paq-12-2421124p.html",
+    "sku": "2421124",
+    "availability": "Il n’en reste que 1 #242-1124-4"
+  },
+  {
+    "title": "Tente de camping Coleman Slylodge pour 10 personnes avec pièce à moustiquaire convertible, double-toit et sac de transport",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/tents-shelters/0766127/coleman-10-person-cabin-tent-with-screen-room-508408d3-620b-447f-8946-288dc1cdbc12-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 489.99,
+    "salePrice": 244.93,
+    "store": "Canadian Tire",
+    "city": "Oromocto, NB",
+    "branch": "Oromocto, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/tente-de-camping-coleman-slylodge-pour-10-personnes-avec-piece-a-moustiquaire-convertible-double-toit-et-sac-de-transport-0766127p.html",
+    "sku": "0766127",
+    "availability": "Il n’en reste que 3 #076-6127-4"
+  },
+  {
     "title": "Vélo électrique tout-terrain Raleigh Getaway 36 V, 700C roues, bleu",
     "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycles/0711932/raleigh-getaway-women-s-electric-bike-700c-8dc09e7f-a9b4-4e61-aa08-2b9e38d895c6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 2799.99,
-    "salePrice": 1399.93,
+    "salePrice": 999.93,
     "store": "Canadian Tire",
     "city": "Oromocto, NB",
     "branch": "Oromocto, NB",
@@ -123,7 +147,7 @@
     "title": "Vélo électrique Raleigh Dobson Comfort, léger, écran ACL intégré, 700C roues, blanc",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/cycling/bicycles/0712020/raleigh-dobson-electric-bike-700c-white-46befcab-abaf-4947-ae19-7764447767ed-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 1999.99,
-    "salePrice": 999.93,
+    "salePrice": 799.93,
     "store": "Canadian Tire",
     "city": "Oromocto, NB",
     "branch": "Oromocto, NB",
@@ -135,7 +159,7 @@
     "title": "Lit de camp pliant portatif pour chiens Woods DOG-WOOD avec sac de transport, capacité de 70 lb, bleu",
     "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-accessories/0766424/woods-dogwood-quad-fold-pet-cot-fe2e4cef-58fa-4578-93b8-795fe70105e1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 79.99,
-    "salePrice": 39.93,
+    "salePrice": 35.93,
     "store": "Canadian Tire",
     "city": "Oromocto, NB",
     "branch": "Oromocto, NB",
@@ -159,7 +183,7 @@
     "title": "Décanteur et verres whisky en verre Trudeau, 5 pièces",
     "image": "https://media-www.canadiantire.ca/product/living/kitchen/dining-and-entertaining/1426174/trudeau-whiskey-set-5-pc-19b99451-15bf-4b77-b69f-9d77f38abab3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 39.99,
-    "salePrice": 19.93,
+    "salePrice": 14.93,
     "store": "Canadian Tire",
     "city": "Oromocto, NB",
     "branch": "Oromocto, NB",
@@ -216,6 +240,42 @@
     "availability": "Il n’en reste que 1 #063-6374-4"
   },
   {
+    "title": "Sac à dos résistant à l’eau léger Woods Chilkoot pour randonnée/camping/voyage, 40 l",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/backpacks-luggage-accessories/0766178/woods-chilkoot-40l-591d1df4-4ef6-4546-88c9-f7d47662ef0a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 139.99,
+    "salePrice": 69.93,
+    "store": "Canadian Tire",
+    "city": "Oromocto, NB",
+    "branch": "Oromocto, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/sac-a-dos-resistant-a-l-eau-leger-woods-chilkoot-pour-randonnee-camping-voyage-40-l-0766178p.html",
+    "sku": "0766178",
+    "availability": "Il n’en reste que 3 #076-6178-2"
+  },
+  {
+    "title": "Tapis d'intérieur et d'extérieur Korhani Luna, 5 x 7 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680033/maville-5x7-indoor-outdoor-rug-2fbded30-72ce-46a7-8c89-dc7dd7287d85-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 114.99,
+    "salePrice": 54.93,
+    "store": "Canadian Tire",
+    "city": "Oromocto, NB",
+    "branch": "Oromocto, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-d-interieur-et-d-exterieur-korhani-luna-5-x-7-pi-0680033p.html",
+    "sku": "0680033",
+    "availability": "Il n’en reste que 1 #068-0033-2"
+  },
+  {
+    "title": "Trampoline d'eau gonflable Pathfinder, 9,2 pi",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-water-fun/0791421/pathfinder-water-trampoline-6b774c44-c405-4169-90f9-01a872145868-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 499.99,
+    "salePrice": 199.93,
+    "store": "Canadian Tire",
+    "city": "Oromocto, NB",
+    "branch": "Oromocto, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/trampoline-d-eau-gonflable-pathfinder-9-2-pi-0791421p.html",
+    "sku": "0791421",
+    "availability": "Il n’en reste que 1 #079-1421-6"
+  },
+  {
     "title": "Décoration de chandelier Pat'Patrouille pour fête d’anniversaire/chambre, paq. 6",
     "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8423637/6ct-3d-strng-deco-paw-ptrl-adv-7159390e-c15c-4bb5-9c90-63758e9c8c3d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 7.49,
@@ -241,7 +301,7 @@
   },
   {
     "title": "Interrupteur silencieux à bascule 3 voies CA Decorator, 15 A, 120 V, aucune mise à la terre, qualité résidentielle, couleurs variées",
-    "image": "undefined?im=whresize&wid=200&hei=200",
+    "image": "undefined",
     "price": 4.79,
     "salePrice": 1.93,
     "store": "Canadian Tire",
@@ -250,6 +310,30 @@
     "url": "https://www.canadiantire.ca/fr/pdp/interrupteur-silencieux-a-bascule-3-voies-ca-decorator-15-a-120-v-aucune-mise-a-la-terre-qualite-residentielle-couleurs-variees-0528225p.html",
     "sku": "0528225",
     "availability": ""
+  },
+  {
+    "title": "Piles solaires rechargeables NOMA, 150 mAh, paq. 4",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-lighting/0526874/solar-batteries-2-3-aa-4-pack-noma-68ece467-9731-4655-8d10-432e7fb12e99-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 13.99,
+    "salePrice": 4.93,
+    "store": "Canadian Tire",
+    "city": "Oromocto, NB",
+    "branch": "Oromocto, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/piles-solaires-rechargeables-noma-150-mah-paq-4-0526874p.html",
+    "sku": "0526874",
+    "availability": "8 En Stock#052-6874-0"
+  },
+  {
+    "title": "Porte-boisson flottant gonflable rond pour piscine à thème de fruit Stella & Finn, choix variés",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-fun/0813493/stella-finn-inflatable-fruit-beverage-holder-assorted-b38690c3-0945-4779-ad45-d571fb059501-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 4.99,
+    "salePrice": 1.93,
+    "store": "Canadian Tire",
+    "city": "Oromocto, NB",
+    "branch": "Oromocto, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/porte-boisson-flottant-gonflable-rond-pour-piscine-a-theme-de-fruit-stella-finn-choix-varies-0813493p.html",
+    "sku": "0813493",
+    "availability": "13 En Stock#081-3493-4"
   },
   {
     "title": "Chemise/manteau de chasse à capuchon Yukon Gear pour hommes avec doublure chaude isolée, camouflage Realtree Xtra",
@@ -291,7 +375,7 @@
     "title": "Poli à métal de VR Simoniz, 500 mL",
     "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0409614/simoniz-metal-polish-500ml-af57ba2e-9bed-4496-9d2b-dea7b7e6436f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 16.99,
-    "salePrice": 6.93,
+    "salePrice": 4.93,
     "store": "Canadian Tire",
     "city": "Oromocto, NB",
     "branch": "Oromocto, NB",
@@ -300,28 +384,28 @@
     "availability": "Il n’en reste que 1 #040-9614-0"
   },
   {
+    "title": "Housse verticale de barbecue Vermont Castings, hydrofuge résistant aux intempéries et aux UV, petit, gris",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking-accessories/0852172/vermont-castings-grill-cover-small-24c9f540-0281-4c3d-ac2b-56a94748634b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 89.99,
+    "salePrice": 39.93,
+    "store": "Canadian Tire",
+    "city": "Oromocto, NB",
+    "branch": "Oromocto, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/housse-verticale-de-barbecue-vermont-castings-hydrofuge-resistant-aux-intemperies-et-aux-uv-petit-gris-0852172p.html",
+    "sku": "0852172",
+    "availability": "Il n’en reste que 1 #085-2172-6"
+  },
+  {
     "title": "Détachant Moneysworth & Best pour le sel, 300 g",
     "image": "https://media-www.canadiantire.ca/product/playing/footwear-apparel/footwear-apparel-accessories/0897100/moneysworth-best-salt-stain-remover-300g--12afd65b-d089-4bac-b7c6-4e677b6b44c4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 12.99,
-    "salePrice": 6.43,
+    "salePrice": 5.73,
     "store": "Canadian Tire",
     "city": "Oromocto, NB",
     "branch": "Oromocto, NB",
     "url": "https://www.canadiantire.ca/fr/pdp/detachant-moneysworth-best-pour-le-sel-300-g-0897100p.html",
     "sku": "0897100",
     "availability": "Il n’en reste que 2 #089-7100-0"
-  },
-  {
-    "title": "Élément de surface Laser 62474 pour cuisinière, cosses, 1 500 W, 240 V, 6 po",
-    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/rough-electrical/0522505/spade-surface-element-6--8db34eaa-8b4e-4c73-8a89-41b1fcef74ca-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 29.99,
-    "salePrice": 14.93,
-    "store": "Canadian Tire",
-    "city": "Oromocto, NB",
-    "branch": "Oromocto, NB",
-    "url": "https://www.canadiantire.ca/fr/pdp/element-de-surface-laser-62474-pour-cuisiniere-cosses-1-500-w-240-v-6-po-0522505p.html",
-    "sku": "0522505",
-    "availability": "Il n’en reste que 1 #052-2505-4"
   },
   {
     "title": "Manteau matelassé d'hiver isolé hydrofuge comprimable Outbound Charlotte, femmes, prune",
@@ -384,6 +468,18 @@
     "availability": ""
   },
   {
+    "title": "Ballon en aluminium satiné lettres attachées Mr and Mrs, or rose, 59 x 10 po, gonflé d'air, pour fiançailles/mariage",
+    "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8423828/rose-gld-blln-script-mr-mrs-b3d6a94e-b619-48cc-9199-89ac32af4edc-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 13.99,
+    "salePrice": 6.93,
+    "store": "Canadian Tire",
+    "city": "Oromocto, NB",
+    "branch": "Oromocto, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/ballon-en-aluminium-satine-lettres-attachees-mr-and-mrs-or-rose-59-x-10-po-gonfle-d-air-pour-fiancailles-mariage-8423828p.html",
+    "sku": "8423828",
+    "availability": "Il n’en reste que 7 #842-3828-0"
+  },
+  {
     "title": "Paillasson en fibre de coco lapin Peeps, multicolore, 18 x 30 po, pour Pâques/printemps",
     "image": "https://media-www.canadiantire.ca/product/party-city/party-city-seasonal/party-city-micro-season-decor/8557739/easter-bunny-peeps-doormat-850bb9ca-32ae-4564-af9f-6ee36c617388-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 16.99,
@@ -406,6 +502,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/crochet-et-attelage-a-boule-integres-reese-1-7-8-po-0409088p.html",
     "sku": "0409088",
     "availability": "Il n’en reste que 1 #040-9088-2"
+  },
+  {
+    "title": "Lampe de travail et haut-parleur 4-en-1 MotoMaster, 1000 lumens",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0379893/4-in-1-worklight-and-speaker-3befce74-4dcc-4ce2-b1f7-96297e54aa10-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 99.99,
+    "salePrice": 41.93,
+    "store": "Canadian Tire",
+    "city": "Oromocto, NB",
+    "branch": "Oromocto, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/lampe-de-travail-et-haut-parleur-4-en-1-motomaster-1000-lumens-0379893p.html",
+    "sku": "0379893",
+    "availability": "Il n’en reste que 5 #037-9893-4"
   },
   {
     "title": "Manuel de réparation automobile Haynes, Chevrolet Astro et GMC Safari 1985 à 2005, 24010",
@@ -528,18 +636,6 @@
     "availability": ""
   },
   {
-    "title": "Support à ventouse pour pare-brise de Bluehive pour la plupart des téléphones intelligents et autres appareils portatifs",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-electronics/0357184/bluehive-windshield-mount-6a4ef738-85ba-418f-a324-717bc93d080c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 29.99,
-    "salePrice": 6.93,
-    "store": "Canadian Tire",
-    "city": "Oromocto, NB",
-    "branch": "Oromocto, NB",
-    "url": "https://www.canadiantire.ca/fr/pdp/support-a-ventouse-pour-pare-brise-de-bluehive-pour-la-plupart-des-telephones-intelligents-et-autres-appareils-portatifs-0357184p.html",
-    "sku": "0357184",
-    "availability": "Il n’en reste que 1 #035-7184-8"
-  },
-  {
     "title": "Crème hydratante pour les mains Glysomed, apaise et soulage la peau sèche, craquelée et iritée, 10 ml",
     "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/winter-recreation/0821048/glysomed-hand-cream-10ml-07ab6cfe-831f-43ac-aa2a-637e2090e14b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 1.49,
@@ -561,7 +657,7 @@
     "branch": "Oromocto, NB",
     "url": "https://www.canadiantire.ca/fr/pdp/dandinette-ronde-xcalibur-crevette-1-2-oz-0773785p.html",
     "sku": "0773785",
-    "availability": "12 En Stock#077-3785-2"
+    "availability": "11 En Stock#077-3785-2"
   },
   {
     "title": "Gâteries pour chats Temptations Bouchées à la viande à saveur de saumon à teneur élevée en protéines, faites avec de la vraie viande, 42,5 g",
@@ -591,7 +687,7 @@
     "title": "Peinture de retouche Scratch Fix All-in-1, SAUGE antique PERLÉE (1B2)",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-body-repair/0475157/scratch-fix-toyota-antique-sage-pearl-all-in-1-b2292936-861d-4ec9-85a2-d9a873718867.png?im=whresize&wid=200&hei=200",
     "price": 28.99,
-    "salePrice": 5.93,
+    "salePrice": 4.93,
     "store": "Canadian Tire",
     "city": "Oromocto, NB",
     "branch": "Oromocto, NB",
@@ -603,7 +699,7 @@
     "title": "Ensemble de plaquettes de frein à disque pour vélo Supercycle J5, métal",
     "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycle-accessories/0737465/supercycle-j5-disc-brake-pads-70ff1ecc-31ca-4915-9d35-846a0ddda520-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 15.99,
-    "salePrice": 7.23,
+    "salePrice": 6.43,
     "store": "Canadian Tire",
     "city": "Oromocto, NB",
     "branch": "Oromocto, NB",
