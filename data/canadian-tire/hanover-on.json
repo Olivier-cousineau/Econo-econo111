@@ -1,77 +1,5 @@
 [
   {
-    "title": "Purificateur d'air de coin NOMA",
-    "image": "https://media-www.canadiantire.ca/product/living/home-environment/home-air-quality-appliances/1430096/noma-corner-purifier-50c0a317-25b1-4848-85ec-c4ea86f70e9d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 279.99,
-    "salePrice": 139.97,
-    "store": "Canadian Tire",
-    "city": "Hanover, ON",
-    "branch": "Hanover, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/purificateur-d-air-de-coin-noma-1430096p.html",
-    "sku": "1430096",
-    "availability": "13 En Stock#143-0096-2"
-  },
-  {
-    "title": "Four à pizza de table portatif au gaz Vida par PADERNO, 1 brûleur, 12 po",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking/0850001/vida-by-paderno-pizza-oven-c3f6852d-30b5-4ad8-96fe-41ea01ff0eaa-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 399.99,
-    "salePrice": 179.93,
-    "store": "Canadian Tire",
-    "city": "Hanover, ON",
-    "branch": "Hanover, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/four-a-pizza-de-table-portatif-au-gaz-vida-par-paderno-1-bruleur-12-po-0850001p.html",
-    "sku": "0850001",
-    "availability": ""
-  },
-  {
-    "title": "Cintres pivotants compacts en velours Type A avec barre à pantalon, couleurs variées, paq. 40",
-    "image": "https://media-www.canadiantire.ca/product/living/home-organization/closet-organization/0688308/type-a-velvet-suit-hanger-black-10pk-4afb3f73-0449-46d6-975c-369ae2760de2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 32.99,
-    "salePrice": 12.93,
-    "store": "Canadian Tire",
-    "city": "Hanover, ON",
-    "branch": "Hanover, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/cintres-pivotants-compacts-en-velours-type-a-avec-barre-a-pantalon-couleurs-variees-paq-40-0688307p.html",
-    "sku": "0688307",
-    "availability": ""
-  },
-  {
-    "title": "Fauteuil de salle à manger de jardin/d'extérieur en osier CANVAS Jasper, toute saison, paq. 2",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/1880272/canvas-jasper-dining-chair-2pk-2a5479fd-5f27-4f3d-85e2-8b4b9fa230c9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 499.99,
-    "salePrice": 199.93,
-    "store": "Canadian Tire",
-    "city": "Hanover, ON",
-    "branch": "Hanover, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/fauteuil-de-salle-a-manger-de-jardin-d-exterieur-en-osier-canvas-jasper-toute-saison-paq-2-1880272p.html",
-    "sku": "1880272",
-    "availability": "Il n’en reste que 2 #188-0272-6"
-  },
-  {
-    "title": "Ampoules à DEL à intensité variable à culot E12 NOMA B10, 2700K, 350 lumens, blanc chaud, 40 W, paq. 2",
-    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/light-bulbs/0529347/noma-2-pack-40w-e12-soft-white-led-lightbulbs-2abc2edf-7b69-449d-b49f-8024c6332e19-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 12.99,
-    "salePrice": 1.93,
-    "store": "Canadian Tire",
-    "city": "Hanover, ON",
-    "branch": "Hanover, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/ampoules-a-del-a-intensite-variable-a-culot-e12-noma-b10-2700k-350-lumens-blanc-chaud-40-w-paq-2-0529347p.html",
-    "sku": "0529347",
-    "availability": "217 En Stock#052-9347-8"
-  },
-  {
-    "title": "Présentoir d'articles saisonniers Mastercraft avec chariot à plateforme roulante, noir",
-    "image": "https://media-www.canadiantire.ca/product/fixing/tools/garage-organization/0681822/mastercraft-seasonal-storage-rack-4657eb31-2d51-419f-a388-3dcc3e45f853-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 299.99,
-    "salePrice": 149.97,
-    "store": "Canadian Tire",
-    "city": "Hanover, ON",
-    "branch": "Hanover, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/presentoir-d-articles-saisonniers-mastercraft-avec-chariot-a-plateforme-roulante-noir-0681822p.html",
-    "sku": "0681822",
-    "availability": "16 En Stock#068-1822-8"
-  },
-  {
     "title": "Parka technique de chasse perméable à l'air imperméable coupe-vent Yukon Gear pour hommes, camouflage Realtree Xtra",
     "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-apparel-footwear/3750716/yukon-gear-parka-2-rte-m-a47cf6f2-275c-44e1-93da-5eb1da27165e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 99.99,
@@ -93,7 +21,19 @@
     "branch": "Hanover, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/chaises-de-salle-a-manger-rembourrees-tete-de-clou-avec-pattes-en-bois-massif-canvas-regent-paq-2-gris-1680087p.html",
     "sku": "1680087",
-    "availability": "Il n’en reste que 3 #168-0087-6"
+    "availability": "Il n’en reste que 2 #168-0087-6"
+  },
+  {
+    "title": "Jouet aquatique gonflable Soak N' Splash & Slide avec gicleur, bleu, 16 pi, 5 ans et plus, pour plage/piscine",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/seasonal-toys/0504211/soak-n-splash-water-slide-16--6fa00059-6643-4304-ad97-12a017f202a2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 14.99,
+    "salePrice": 6.93,
+    "store": "Canadian Tire",
+    "city": "Hanover, ON",
+    "branch": "Hanover, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/jouet-aquatique-gonflable-soak-n-splash-slide-avec-gicleur-bleu-16-pi-5-ans-et-plus-pour-plage-piscine-0504211p.html",
+    "sku": "0504211",
+    "availability": "Il n’en reste que 1 #050-4211-4"
   },
   {
     "title": "Bloc à couteaux Global Jouzu, paq. 5",
@@ -381,7 +321,7 @@
     "branch": "Hanover, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/serviettes-de-table-blush-birthday-paq-16-8537247p.html",
     "sku": "8537247",
-    "availability": "29 En Stock#853-7247-2"
+    "availability": "27 En Stock#853-7247-2"
   },
   {
     "title": "Support de bureau à crochet ENHANCE PC pour casque de jeu à pince, noir",
@@ -393,7 +333,7 @@
     "branch": "Hanover, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/support-de-bureau-a-crochet-enhance-pc-pour-casque-de-jeu-a-pince-noir-0451211p.html",
     "sku": "0451211",
-    "availability": "32 En Stock#045-1211-6"
+    "availability": "31 En Stock#045-1211-6"
   },
   {
     "title": "Chaussures de golf PowerBilt Ace sans crampons pour hommes, tailles variées, noir/gris",
@@ -453,7 +393,7 @@
     "branch": "Hanover, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/dandinette-a-appat-vivant-xcalibur-crevette-1-4-oz-0773789p.html",
     "sku": "0773789",
-    "availability": "20 En Stock#077-3789-4"
+    "availability": "12 En Stock#077-3789-4"
   },
   {
     "title": "Chapeau Bosun Outbound pour hommes, crème",
@@ -720,18 +660,6 @@
     "availability": "Il n’en reste que 1 #151-8463-0"
   },
   {
-    "title": "Hameçons Mustad, achigan",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0777703/mustad-hook-kit-bass-ef2f1439-884e-4356-9e58-fa3189d4cf3c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 14.99,
-    "salePrice": 6.73,
-    "store": "Canadian Tire",
-    "city": "Hanover, ON",
-    "branch": "Hanover, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/hamecons-mustad-achigan-0777703p.html",
-    "sku": "0777703",
-    "availability": "Il n’en reste que 1 #077-7703-4"
-  },
-  {
     "title": "Appât en tube Lunkerhunt Spicy Revealer, 4 1/4 po",
     "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0772133/lunkerhunt-spicy-revealer-tubes-4-1-4-black-neon-efa6552c-6c64-42f3-8c21-78307017e0c5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 8.99,
@@ -765,7 +693,7 @@
     "branch": "Hanover, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/leurres-pour-dore-jaune-redwolf-grand-paq-49-0777763p.html",
     "sku": "0777763",
-    "availability": "Il n’en reste que 4 #077-7763-0"
+    "availability": "Il n’en reste que 3 #077-7763-0"
   },
   {
     "title": "Cosses ouvertes Gardner Bender C14-116, calibre 12 à 10 AWG, calibre de goujon 8 à 10 po, paq. 5",
@@ -802,78 +730,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/coussin-lombaire-chauffant-heatech-mousse-viscoelastique-et-velours-0326781p.html",
     "sku": "0326781",
     "availability": "Il n’en reste que 2 #032-6781-8"
-  },
-  {
-    "title": "Dandinette ronde Xcalibur, crevette, 1/2 oz",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0773785/matzuo-round-jig-shrimp-1-2-82d59151-46f0-4c9e-a973-5260f9bf8d16-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 5.99,
-    "salePrice": 2.43,
-    "store": "Canadian Tire",
-    "city": "Hanover, ON",
-    "branch": "Hanover, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/dandinette-ronde-xcalibur-crevette-1-2-oz-0773785p.html",
-    "sku": "0773785",
-    "availability": "8 En Stock#077-3785-2"
-  },
-  {
-    "title": "Plaque d'interrupteur à bascule Atron Electro Industries 65R, de style aztèque, 1 dispositif, nickel satiné",
-    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/rough-electrical/0522762/aztec-satin-nickel-rocker-a8cda3cf-7f10-4c53-8f3b-4030fb415bb3.png?im=whresize&wid=200&hei=200",
-    "price": 6.99,
-    "salePrice": 0.93,
-    "store": "Canadian Tire",
-    "city": "Hanover, ON",
-    "branch": "Hanover, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/plaque-d-interrupteur-a-bascule-atron-electro-industries-65r-de-style-azteque-1-dispositif-nickel-satine-0522762p.html",
-    "sku": "0522762",
-    "availability": "Il n’en reste que 3 #052-2762-0"
-  },
-  {
-    "title": "Bouquet de ballons en aluminium Monde jurassique pour fête d’anniversaire, gonflage à l’hélium compris, paq. 5",
-    "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8424564/blln-5pc-bqt-jurassic-world-395af4d5-6b09-4081-acef-6a5a63c8531b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 29.99,
-    "salePrice": 2.93,
-    "store": "Canadian Tire",
-    "city": "Hanover, ON",
-    "branch": "Hanover, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/bouquet-de-ballons-en-aluminium-monde-jurassique-pour-fete-d-anniversaire-gonflage-a-l-helium-compris-paq-5-8424564p.html",
-    "sku": "8424564",
-    "availability": "Il n’en reste que 6 #842-4564-0"
-  },
-  {
-    "title": "Décoration de centre de table Happy Birthday Happy Cake Day, vert/doré, 15 po, pour fête d'anniversaire",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8544428/happy-cake-day-table-centerpiece-c6f4b95f-a030-4fba-8aa7-929a54d66378-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 3.99,
-    "salePrice": 1.99,
-    "store": "Canadian Tire",
-    "city": "Hanover, ON",
-    "branch": "Hanover, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/decoration-de-centre-de-table-happy-birthday-happy-cake-day-vert-dore-15-po-pour-fete-d-anniversaire-8544428p.html",
-    "sku": "8544428",
-    "availability": "Il n’en reste que 4 #854-4428-8"
-  },
-  {
-    "title": "Jardinière en plastique auto-arrosante Bloem Ariana, tailles variées, rouge",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/gardening/gardening-plant-accessories/1590501/8-ariana-planter-red-08d2a4e5-73f5-4cd9-a0ae-af0a6bcd696f.png?im=whresize&wid=200&hei=200",
-    "price": 5.49,
-    "salePrice": 2.73,
-    "store": "Canadian Tire",
-    "city": "Hanover, ON",
-    "branch": "Hanover, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/jardiniere-en-plastique-auto-arrosante-bloem-ariana-tailles-variees-rouge-1590500p.html",
-    "sku": "1590500",
-    "availability": ""
-  },
-  {
-    "title": "Surligneurs BIC Brite Liner Grip à pointe biseautée, couleurs variées, paq. 5",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/home-office-supplies/2420351/bic-brite-liner-grip-chisel-point-5pk-ast-f0278621-4955-4f66-bea7-60b6e3bc3e6f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 5.99,
-    "salePrice": 2.93,
-    "store": "Canadian Tire",
-    "city": "Hanover, ON",
-    "branch": "Hanover, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/surligneurs-bic-brite-liner-grip-a-pointe-biseautee-couleurs-variees-paq-5-2420351p.html",
-    "sku": "2420351",
-    "availability": "Il n’en reste que 3 #242-0351-8"
   },
   {
     "title": "Leurre Savage Gear 3D, gobie, 4 po",

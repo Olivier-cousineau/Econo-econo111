@@ -1,27 +1,15 @@
 [
   {
-    "title": "Serviettes de bar MASTER Chef, paq. 8",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/dining-and-entertaining/1429826/master-chef-8-pack-bar-mops-misc-colours-4b1f6a4d-f9b4-4891-8c49-0420c079a6ed-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 7.99,
-    "salePrice": 3.93,
+    "title": "Affûte-couteaux à 3 étapes MASTER Chef",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/cutlery/2421029/master-chef-3stage-knife-sharpener-b9ab2767-c8c0-473e-a296-6cb70527856a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 18.99,
+    "salePrice": 4.93,
     "store": "Canadian Tire",
     "city": "Kitchener South, ON",
     "branch": "Kitchener South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/serviettes-de-bar-master-chef-paq-8-1429826p.html",
-    "sku": "1429826",
-    "availability": "19 En Stock#142-9826-4"
-  },
-  {
-    "title": "Machine à espresso semi-automatique à un toucher avec mousseur à lait Mr. Coffee",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430385/mr-coffee-semi-automatic-espresso-machine-w-milk-frother-482b518b-cfa5-4d80-bb51-f3dc6d06036e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 439.99,
-    "salePrice": 129.93,
-    "store": "Canadian Tire",
-    "city": "Kitchener South, ON",
-    "branch": "Kitchener South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/machine-a-espresso-semi-automatique-a-un-toucher-avec-mousseur-a-lait-mr-coffee-0430385p.html",
-    "sku": "0430385",
-    "availability": "Il n’en reste que 1 #043-0385-2"
+    "url": "https://www.canadiantire.ca/fr/pdp/affute-couteaux-a-3-etapes-master-chef-2421029p.html",
+    "sku": "2421029",
+    "availability": "Il n’en reste que 4 #242-1029-2"
   },
   {
     "title": "Glacière/réchaud électrique thermoélectrique sur roulettes Mobicool, avec poignée, 45 L, bleu",
@@ -82,6 +70,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/chaise-d-exterieur-empilable-en-plastique-leger-canvas-como-pour-la-terrasse-et-la-salle-a-manger-resistante-a-la-decoloration-et-aux-taches-18-po-1880396p.html",
     "sku": "1880396",
     "availability": ""
+  },
+  {
+    "title": "Sorbetière numérique Vida par PADERNO, machine à crème glacée et gâteries 4-en-1, acier inoxydable, 1,9 L",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0431564/vida-by-paderno-ice-cream-maker-cab802eb-a002-46c2-b174-7fca7a24c75c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 149.99,
+    "salePrice": 69.93,
+    "store": "Canadian Tire",
+    "city": "Kitchener South, ON",
+    "branch": "Kitchener South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/sorbetiere-numerique-vida-par-paderno-machine-a-creme-glacee-et-gateries-4-en-1-acier-inoxydable-1-9-l-0431564p.html",
+    "sku": "0431564",
+    "availability": "Il n’en reste que 2 #043-1564-0"
   },
   {
     "title": "Sac de couchage sans fermeture à glissière Outbound Boundless, 2 °C, vert",
@@ -205,7 +205,7 @@
   },
   {
     "title": "Interrupteur silencieux à bascule 3 voies CA Decorator, 15 A, 120 V, aucune mise à la terre, qualité résidentielle, couleurs variées",
-    "image": "undefined?im=whresize&wid=200&hei=200",
+    "image": "undefined",
     "price": 4.79,
     "salePrice": 1.93,
     "store": "Canadian Tire",
@@ -261,7 +261,19 @@
     "branch": "Kitchener South, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/petites-assiettes-en-faux-marbre-canvas-paq-1-0597205p.html",
     "sku": "0597205",
-    "availability": "Il n’en reste que 7 #059-7205-4"
+    "availability": "Il n’en reste que 3 #059-7205-4"
+  },
+  {
+    "title": "Applique d'extérieur intégrée à DEL NOMA, noir mat, 13,2 po",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/lighting/1522768/noma-13-2-integrated-led-outdoor-wall-sconce-8979a633-f230-4404-8f55-f2844f1e0dd2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 89.99,
+    "salePrice": 39.93,
+    "store": "Canadian Tire",
+    "city": "Kitchener South, ON",
+    "branch": "Kitchener South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/applique-d-exterieur-integree-a-del-noma-noir-mat-13-2-po-1522768p.html",
+    "sku": "1522768",
+    "availability": "Il n’en reste que 2 #152-2768-0"
   },
   {
     "title": "Cuiller rapide Northland Crawler Hauler",
@@ -274,6 +286,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/cuiller-rapide-northland-crawler-hauler-0776850p.html",
     "sku": "0776850",
     "availability": ""
+  },
+  {
+    "title": "Décoration de salle d'anniversaire, 60 ans, célébration étincelante, paq. 10",
+    "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8420283/60th-birthday-room-decorat-kit-10pc-sparkling-celeb-f2cbc1bd-eff9-4efd-9aad-b2f11a1e4c1c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 14.99,
+    "salePrice": 7.49,
+    "store": "Canadian Tire",
+    "city": "Kitchener South, ON",
+    "branch": "Kitchener South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/decoration-de-salle-d-anniversaire-60-ans-celebration-etincelante-paq-10-8420283p.html",
+    "sku": "8420283",
+    "availability": "Il n’en reste que 1 #842-0283-2"
   },
   {
     "title": "Casque d'écoute de surveillance résistant à l'eau Cobra MicroTalk, baie",
@@ -553,7 +577,7 @@
   },
   {
     "title": "Poisson-nageur crapet arlequin Live Target",
-    "image": "undefined?im=whresize&wid=200&hei=200",
+    "image": "undefined",
     "price": 16.99,
     "salePrice": 8.43,
     "store": "Canadian Tire",
@@ -586,78 +610,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/verrouilleur-d-abat-jour-en-verre-atron-nickel-satine-0522884p.html",
     "sku": "0522884",
     "availability": "Il n’en reste que 6 #052-2884-0"
-  },
-  {
-    "title": "Boîte Hubbell 1104LBUBAR comprenant un support latéral avec piquets de style clouage, groupable, 12,5 po3",
-    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/rough-electrical/0521227/electrical-box-mounting-bracket-2-1-2-deep-3443d17e-26e3-4b99-ac21-d0204c55071e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 5.79,
-    "salePrice": 1.93,
-    "store": "Canadian Tire",
-    "city": "Kitchener South, ON",
-    "branch": "Kitchener South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/boite-hubbell-1104lbubar-comprenant-un-support-lateral-avec-piquets-de-style-clouage-groupable-12-5-po3-0521227p.html",
-    "sku": "0521227",
-    "availability": "Il n’en reste que 2 #052-1227-2"
-  },
-  {
-    "title": "Collier pour animal de compagnie Perri's, motif guépard",
-    "image": "https://media-www.canadiantire.ca/product/living/pet-care/pet-accessories/1427573/perri-s-pet-collar-cheetah-small-05b8926d-32df-4b25-aa88-c0d02a982350-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 14.99,
-    "salePrice": 3.93,
-    "store": "Canadian Tire",
-    "city": "Kitchener South, ON",
-    "branch": "Kitchener South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/collier-pour-animal-de-compagnie-perri-s-motif-guepard-1427573p.html",
-    "sku": "1427573",
-    "availability": ""
-  },
-  {
-    "title": "Plaque pour interrupteur à bascule Renu de Leviton, écorce de noyer, 1 dispositif",
-    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/rough-electrical/0523454/renu-walnut-bark-wallplate-single-gang-f81f9e7e-9b0a-4612-bd46-189079530cee-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 2.49,
-    "salePrice": 0.43,
-    "store": "Canadian Tire",
-    "city": "Kitchener South, ON",
-    "branch": "Kitchener South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/plaque-pour-interrupteur-a-bascule-renu-de-leviton-ecorce-de-noyer-1-dispositif-0523454p.html",
-    "sku": "0523454",
-    "availability": "Il n’en reste que 2 #052-3454-8"
-  },
-  {
-    "title": "Ballon en aluminium satiné lettres Girl, rose, 22 x 10 po, gonflé d'air, pour fête prénatale",
-    "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8420823/mini-pnk-air-filled-blln-girl-83762b26-de81-467b-81a6-4dddc42c4c55-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 8.99,
-    "salePrice": 1.93,
-    "store": "Canadian Tire",
-    "city": "Kitchener South, ON",
-    "branch": "Kitchener South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/ballon-en-aluminium-satine-lettres-girl-rose-22-x-10-po-gonfle-d-air-pour-fete-prenatale-8420823p.html",
-    "sku": "8420823",
-    "availability": "Il n’en reste que 2 #842-0823-8"
-  },
-  {
-    "title": "Centre d'activités gonflable pour enfants Banzai Jr Splash Discovery, plaisir d'arrosage d'eau extérieur",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pools-spas/0810226/banzai-jr-splash-discovery-activity-center-6464c401-e44c-4da1-803d-a8856b78b8e8-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 17.99,
-    "salePrice": 7.93,
-    "store": "Canadian Tire",
-    "city": "Kitchener South, ON",
-    "branch": "Kitchener South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/centre-d-activites-gonflable-pour-enfants-banzai-jr-splash-discovery-plaisir-d-arrosage-d-eau-exterieur-0810226p.html",
-    "sku": "0810226",
-    "availability": ""
-  },
-  {
-    "title": "Sangles élastiques standard Certified, choix de tailles, paq. 6",
-    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/tarps-cords/0403090/bungee-kit-6-piece-7730b01e-119c-43d9-bf26-a16391e0a95d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 9.99,
-    "salePrice": 2.93,
-    "store": "Canadian Tire",
-    "city": "Kitchener South, ON",
-    "branch": "Kitchener South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/sangles-elastiques-standard-certified-choix-de-tailles-paq-6-0403090p.html",
-    "sku": "0403090",
-    "availability": "Il n’en reste que 4 #040-3090-0"
   },
   {
     "title": "Sacs à surprises en papier kraft d'anniversaire, Battle Royal, paq. 8",
@@ -745,7 +697,7 @@
   },
   {
     "title": "Hameçon à ver à très grande ouverture Xcalibur",
-    "image": "undefined?im=whresize&wid=200&hei=200",
+    "image": "undefined",
     "price": 5.49,
     "salePrice": 2.73,
     "store": "Canadian Tire",
@@ -766,78 +718,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/jardiniere-ronde-en-ceramique-fiore-tailles-variees-gris-1591473p.html",
     "sku": "1591473",
     "availability": ""
-  },
-  {
-    "title": "Jardinière Fiore, Brun",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/gardening/gardening-plant-accessories/1591477/6-fiore-planter-brown-6c340c62-cf90-4b20-b2eb-1514bc332913-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 19.99,
-    "salePrice": 7.93,
-    "store": "Canadian Tire",
-    "city": "Kitchener South, ON",
-    "branch": "Kitchener South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/jardiniere-fiore-brun-1591477p.html",
-    "sku": "1591477",
-    "availability": ""
-  },
-  {
-    "title": "Interrupteur unipolaire à montage en surface Leviton 05231-742, blanc",
-    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/rough-electrical/0528260/white-switch-single-pole-lev-o-let-3902a7f0-ac84-4bc6-86c9-283e04ea992c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 13.99,
-    "salePrice": 4.93,
-    "store": "Canadian Tire",
-    "city": "Kitchener South, ON",
-    "branch": "Kitchener South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/interrupteur-unipolaire-a-montage-en-surface-leviton-05231-742-blanc-0528260p.html",
-    "sku": "0528260",
-    "availability": "Il n’en reste que 1 #052-8260-8"
-  },
-  {
-    "title": "Douille de lampe incandescente à culot moyen Leviton 09854-742, sans interrupteur, 660 W, 250 V, blanc",
-    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/rough-electrical/0527542/lamp-socket-keyless-outdoor-897103c9-8d79-4625-82c4-8076bb180977-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 10.99,
-    "salePrice": 4.93,
-    "store": "Canadian Tire",
-    "city": "Kitchener South, ON",
-    "branch": "Kitchener South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/douille-de-lampe-incandescente-a-culot-moyen-leviton-09854-742-sans-interrupteur-660-w-250-v-blanc-0527542p.html",
-    "sku": "0527542",
-    "availability": "Il n’en reste que 1 #052-7542-4"
-  },
-  {
-    "title": "Lampe de poche et lampe frontale 3-en-1 légère service intense Police Security MORF Removables, 300 lumens",
-    "image": "https://media-www.canadiantire.ca/product/fixing/hardware/household-flashlights/0651765/police-security-morf-removables-3-in-1-headlamp-300-lumen-054d89ad-8b57-469e-89cd-70c4d72ae1fc-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 39.99,
-    "salePrice": 12.93,
-    "store": "Canadian Tire",
-    "city": "Kitchener South, ON",
-    "branch": "Kitchener South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/lampe-de-poche-et-lampe-frontale-3-en-1-legere-service-intense-police-security-morf-removables-300-lumens-0651765p.html",
-    "sku": "0651765",
-    "availability": ""
-  },
-  {
-    "title": "Filet de basketball à cadre en acier pour bord de piscine, blanc/orange, 20 pi, 13 ans et plus, pour plage/piscine",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-fun/0813558/steel-frame-pool-basketball-net-83c89165-27fd-4912-956d-08af59193979-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 69.99,
-    "salePrice": 31.43,
-    "store": "Canadian Tire",
-    "city": "Kitchener South, ON",
-    "branch": "Kitchener South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/filet-de-basketball-a-cadre-en-acier-pour-bord-de-piscine-blanc-orange-20-pi-13-ans-et-plus-pour-plage-piscine-0813558p.html",
-    "sku": "0813558",
-    "availability": "Il n’en reste que 1 #081-3558-2"
-  },
-  {
-    "title": "Centre de table métallique Blush Happy Birthday Celebrate, 14 po",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8547184/14in-cp-blush-bday-fl-56ce2bed-71e0-4155-87c3-73c53d4bc4c2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 4.99,
-    "salePrice": 0.93,
-    "store": "Canadian Tire",
-    "city": "Kitchener South, ON",
-    "branch": "Kitchener South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/centre-de-table-metallique-blush-happy-birthday-celebrate-14-po-8547184p.html",
-    "sku": "8547184",
-    "availability": "28 En Stock#854-7184-8"
   },
   {
     "title": "Feu de proue bicolore, 2 3/8 po",
@@ -876,18 +756,6 @@
     "availability": ""
   },
   {
-    "title": "Poignées en métal Peerless Newton, nickel satiné, 3 po, paq. 2",
-    "image": "https://media-www.canadiantire.ca/product/living/home-decor/decor-accents/0467008/peerless-3-newton-pull-2pk-satin-nickel-a6c23135-a858-43e5-9cf4-11b6f127c1ce-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 5.49,
-    "salePrice": 2.43,
-    "store": "Canadian Tire",
-    "city": "Kitchener South, ON",
-    "branch": "Kitchener South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/poignees-en-metal-peerless-newton-nickel-satine-3-po-paq-2-0467008p.html",
-    "sku": "0467008",
-    "availability": "Il n’en reste que 1 #046-7008-4"
-  },
-  {
     "title": "Connecteur de faisceau stéréo Scosche, véhicules Volkswagen, 2006 à aujourd’hui",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-electronics/0350191/scosche-2006-up-volkswagen-car-stereo-installation-kit-b2b3eaf5-3175-4027-aec6-7a4190021df2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 26.99,
@@ -898,30 +766,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/connecteur-de-faisceau-stereo-scosche-vehicules-volkswagen-2006-a-aujourd-hui-0350191p.html",
     "sku": "0350191",
     "availability": "Il n’en reste que 1 #035-0191-2"
-  },
-  {
-    "title": "Assainisseur d'air 3D California Scents, pin",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0374920/california-scents-3d-hanging-breezy-pine-air-freshener-5a1bbca9-5bfc-4e17-b727-9a5da4a5d51b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 6.99,
-    "salePrice": 2.93,
-    "store": "Canadian Tire",
-    "city": "Kitchener South, ON",
-    "branch": "Kitchener South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/assainisseur-d-air-3d-california-scents-pin-0374920p.html",
-    "sku": "0374920",
-    "availability": "Il n’en reste que 1 #037-4920-0"
-  },
-  {
-    "title": "Niveau de poche à angle spécialisé Lufkin",
-    "image": "https://media-www.canadiantire.ca/product/fixing/tools/cutting-measuring/0575403/lufkin-specialty-angle-pocket-level-37897931-a612-4148-af49-d7e9cb7bef4d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 34.99,
-    "salePrice": 12.93,
-    "store": "Canadian Tire",
-    "city": "Kitchener South, ON",
-    "branch": "Kitchener South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/niveau-de-poche-a-angle-specialise-lufkin-0575403p.html",
-    "sku": "0575403",
-    "availability": "Il n’en reste que 2 #057-5403-8"
   },
   {
     "title": "Arbre à feuillage illuminé CANVAS, 21 po",
@@ -958,42 +802,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/tatouages-jurassic-into-the-wild-8543118p.html",
     "sku": "8543118",
     "availability": "8 En Stock#854-3118-2"
-  },
-  {
-    "title": "Leurre ver Lunkerhunt Versa, 5 po, paq. 8",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/1785297/lunkerhunt-versa-worm-5--359ed69e-a6ff-4b88-8623-bbbc8b31821d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 8.99,
-    "salePrice": 4.43,
-    "store": "Canadian Tire",
-    "city": "Kitchener South, ON",
-    "branch": "Kitchener South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/leurre-ver-lunkerhunt-versa-5-po-paq-8-1785296p.html",
-    "sku": "1785296",
-    "availability": ""
-  },
-  {
-    "title": "Trousse d’installation de tableau de bord Scosche pour véhicules Mazda 2001 à aujourd’hui",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-electronics/0350109/2001-up-mazda-dash-kit-6f473ef5-1c59-46f3-9064-6ad5112882d5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 16.99,
-    "salePrice": 3.93,
-    "store": "Canadian Tire",
-    "city": "Kitchener South, ON",
-    "branch": "Kitchener South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/trousse-d-installation-de-tableau-de-bord-scosche-pour-vehicules-mazda-2001-a-aujourd-hui-0350109p.html",
-    "sku": "0350109",
-    "availability": "Il n’en reste que 2 #035-0109-2"
-  },
-  {
-    "title": "Embout de vaporisateur Graco TrueAirless 413, noir/argenté",
-    "image": "https://media-www.canadiantire.ca/product/fixing/paint/paint-accessories/0492552/trueairless-413-spray-tip-666939d7-bfaf-4208-9469-4f2700919c4f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 59.99,
-    "salePrice": 29.93,
-    "store": "Canadian Tire",
-    "city": "Kitchener South, ON",
-    "branch": "Kitchener South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/embout-de-vaporisateur-graco-trueairless-413-noir-argente-0492552p.html",
-    "sku": "0492552",
-    "availability": "Il n’en reste que 1 #049-2552-0"
   },
   {
     "title": "Porte-skis et planches à neige Groomer de luxe SportRack Universal, argenté",
