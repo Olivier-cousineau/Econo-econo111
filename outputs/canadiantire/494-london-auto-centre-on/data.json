@@ -14,7 +14,7 @@
     "product_id": null,
     "sku": "0430340",
     "sku_formatted": "043-0340-8",
-    "availability": "Il n’en reste que 2 #043-0340-8",
+    "availability": "Il n’en reste que 1 #043-0340-8",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -43,7 +43,7 @@
     "product_id": null,
     "sku": "2421029",
     "sku_formatted": "242-1029-2",
-    "availability": "11 En Stock#242-1029-2",
+    "availability": "10 En Stock#242-1029-2",
     "badges": [
       "Liquidation◊Exclusivité"
     ],
@@ -147,35 +147,6 @@
   {
     "store_id": "494",
     "city": "London Auto Centre, ON",
-    "name": "Ensemble de nettoyants automobiles Armor All, paq. 16",
-    "title": "Ensemble de nettoyants automobiles Armor All, paq. 16",
-    "price": 8.93,
-    "price_raw": "8,93 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-chemicals/0397080/armor-all-car-wash-packs-16ct-8ed7ef02-e539-49d9-8a49-0232d41a7968-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-chemicals/0397080/armor-all-car-wash-packs-16ct-8ed7ef02-e539-49d9-8a49-0232d41a7968-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/ensemble-de-nettoyants-automobiles-armor-all-paq-16-0397080p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/ensemble-de-nettoyants-automobiles-armor-all-paq-16-0397080p.html",
-    "product_id": null,
-    "sku": "0397080",
-    "sku_formatted": "039-7080-6",
-    "availability": "Il n’en reste que 3 #039-7080-6",
-    "badges": [
-      "Liquidation◊Mieux notés"
-    ],
-    "discount_percent": 50.36,
-    "liquidation_price": 8.93,
-    "liquidation_price_raw": "8,93 $",
-    "sale_price": 8.93,
-    "sale_price_raw": "8,93 $",
-    "regular_price": 17.99,
-    "regular_price_raw": "Était±  17,99 $prix était 17,99 $",
-    "price_sale_clean": "8,93",
-    "price_original_clean": "17,99"
-  },
-  {
-    "store_id": "494",
-    "city": "London Auto Centre, ON",
     "name": "Écouteurs-bouton vraiment sans fil sport Bluehive Bluepods, noir",
     "title": "Écouteurs-bouton vraiment sans fil sport Bluehive Bluepods, noir",
     "price": 17.93,
@@ -201,5 +172,34 @@
     "regular_price_raw": "Était±  69,99 $prix était 69,99 $",
     "price_sale_clean": "17,93",
     "price_original_clean": "69,99"
+  },
+  {
+    "store_id": "494",
+    "city": "London Auto Centre, ON",
+    "name": "Sorbetière numérique Vida par PADERNO, machine à crème glacée et gâteries 4-en-1, acier inoxydable, 1,9 L",
+    "title": "Sorbetière numérique Vida par PADERNO, machine à crème glacée et gâteries 4-en-1, acier inoxydable, 1,9 L",
+    "price": 69.93,
+    "price_raw": "69,93 $",
+    "liquidation": true,
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0431564/vida-by-paderno-ice-cream-maker-cab802eb-a002-46c2-b174-7fca7a24c75c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0431564/vida-by-paderno-ice-cream-maker-cab802eb-a002-46c2-b174-7fca7a24c75c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/sorbetiere-numerique-vida-par-paderno-machine-a-creme-glacee-et-gateries-4-en-1-acier-inoxydable-1-9-l-0431564p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/sorbetiere-numerique-vida-par-paderno-machine-a-creme-glacee-et-gateries-4-en-1-acier-inoxydable-1-9-l-0431564p.html",
+    "product_id": null,
+    "sku": "0431564",
+    "sku_formatted": "043-1564-0",
+    "availability": "Il n’en reste que 1 #043-1564-0",
+    "badges": [
+      "Liquidation◊Mieux notés"
+    ],
+    "discount_percent": 53.38,
+    "liquidation_price": 69.93,
+    "liquidation_price_raw": "69,93 $",
+    "sale_price": 69.93,
+    "sale_price_raw": "69,93 $",
+    "regular_price": 149.99,
+    "regular_price_raw": "Était±  149,99 $prix était 149,99 $",
+    "price_sale_clean": "69,93",
+    "price_original_clean": "149,99"
   }
 ]
