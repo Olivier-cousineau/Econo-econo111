@@ -1,5 +1,17 @@
 [
   {
+    "title": "Ensemble de détente pour l’extérieur ou la terrasse en acier CANVAS Gates, paq. 4",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/1880267/canvas-gates-4-piece-conversation-set-4fb798ad-8085-4015-8aab-3afbb2f3e32e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 1699.99,
+    "salePrice": 849.99,
+    "store": "Canadian Tire",
+    "city": "Rothesay, NB",
+    "branch": "Rothesay, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/ensemble-de-detente-pour-l-exterieur-ou-la-terrasse-en-acier-canvas-gates-paq-4-1880267p.html",
+    "sku": "1880267",
+    "availability": "Il n’en reste que 1 #188-0267-0"
+  },
+  {
     "title": "Foyer électrique CANVAS Marseille, 54 po, 1 400 W, comprend une télécommande, blanc",
     "image": "https://media-www.canadiantire.ca/product/living/home-decor/electric-fireplaces/0643176/canvas-marseille-fireplace-fedce335-a386-471e-87b0-b3ad50097466-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 701.34,
@@ -60,16 +72,28 @@
     "availability": "Il n’en reste que 1 #142-6174-2"
   },
   {
+    "title": "Shark HyperAIR IQ - Sèche-cheveux ionique à séchage rapide avec concentrateur 2-en-1",
+    "image": "https://media-www.canadiantire.ca/product/living/personal-garment-care/personal-care/0438670/shark-hyperair-fast-drying-ionic-hair-dryer-9754f838-add4-4a69-ac79-92451a52ad69-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 249.99,
+    "salePrice": 99.93,
+    "store": "Canadian Tire",
+    "city": "Rothesay, NB",
+    "branch": "Rothesay, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/shark-hyperair-iq-seche-cheveux-ionique-a-sechage-rapide-avec-concentrateur-2-en-1-0438670p.html",
+    "sku": "0438670",
+    "availability": "Il n’en reste que 2 #043-8670-4"
+  },
+  {
     "title": "Housse de pare-brise 2-en-1 MyRide pour soleil et neige, convient à la plupart des véhicules",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-winter-accessories/0304491/myride-sun-and-snow-windshield-cover-1d0e1f73-cc79-4090-b8a5-bdaefbe970b7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 32.99,
-    "salePrice": 12.93,
+    "salePrice": 9.93,
     "store": "Canadian Tire",
     "city": "Rothesay, NB",
     "branch": "Rothesay, NB",
     "url": "https://www.canadiantire.ca/fr/pdp/housse-de-pare-brise-2-en-1-myride-pour-soleil-et-neige-convient-a-la-plupart-des-vehicules-0304491p.html",
     "sku": "0304491",
-    "availability": "Il n’en reste que 7 #030-4491-4"
+    "availability": "0 En Stock#030-4491-4"
   },
   {
     "title": "Gaufrier miniature compact antiadhésif Dash, turquoise",
@@ -183,7 +207,7 @@
     "title": "Peinture laque acrylique en aérosol pour automobile de qualité supérieure Dupli-Color Perfect Match, sherwood foncé, 227 g",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-body-repair/0472432/chrysler-8oz-deep-sherwood-paint-fec6a01c-cae9-4e89-9eaf-e333b7dc50c5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 24.99,
-    "salePrice": 7.93,
+    "salePrice": 5.93,
     "store": "Canadian Tire",
     "city": "Rothesay, NB",
     "branch": "Rothesay, NB",
@@ -322,6 +346,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/prise-de-rechange-femelle-30a-pour-vr-camco-powergrip-0401977p.html",
     "sku": "0401977",
     "availability": "Il n’en reste que 2 #040-1977-4"
+  },
+  {
+    "title": "Lustre à 4 lampes CANVAS, gris/nickel brossé",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/lighting/1522688/canvas-4-light-chandelier-grey-brushed-nickel-84b4afd6-a26a-4576-8aed-4370b71718da-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 189.99,
+    "salePrice": 89.93,
+    "store": "Canadian Tire",
+    "city": "Rothesay, NB",
+    "branch": "Rothesay, NB",
+    "url": "https://www.canadiantire.ca/fr/pdp/lustre-a-4-lampes-canvas-gris-nickel-brosse-1522688p.html",
+    "sku": "1522688",
+    "availability": "Il n’en reste que 1 #152-2688-0"
   },
   {
     "title": "Couvre-poignée de rechange Drive Medical pour les cannes HurryCane Freedom et HurryBright, noir",
