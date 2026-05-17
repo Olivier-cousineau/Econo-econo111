@@ -9,7 +9,7 @@
     "branch": "Halifax - Bayers Lake, NS",
     "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-pour-plancher-dur-humide-dyson-washg1-0437203p.html",
     "sku": "0437203",
-    "availability": "16 En Stock#043-7203-4"
+    "availability": "14 En Stock#043-7203-4"
   },
   {
     "title": "Tasses à mesurer empilables en plastique MASTER Chef, paq. 10",
@@ -21,19 +21,7 @@
     "branch": "Halifax - Bayers Lake, NS",
     "url": "https://www.canadiantire.ca/fr/pdp/tasses-a-mesurer-empilables-en-plastique-master-chef-paq-10-1429676p.html",
     "sku": "1429676",
-    "availability": "63 En Stock#142-9676-0"
-  },
-  {
-    "title": "T-shirt sport à manches courtes et extensibles avec encolure ras du cou Mooselander, hommes, couleur unie, tailles variées, noir/gris, paq. 2",
-    "image": "https://media-www.canadiantire.ca/product/playing/footwear-apparel/summer-footwear-apparel/1874066/active-2-pack-short-sleeve-tees-m-l-ce888845-ad24-41df-8604-c50d7052ca02-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 21.99,
-    "salePrice": 4.93,
-    "store": "Canadian Tire",
-    "city": "Halifax - Bayers Lake, NS",
-    "branch": "Halifax - Bayers Lake, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/t-shirt-sport-a-manches-courtes-et-extensibles-avec-encolure-ras-du-cou-mooselander-hommes-couleur-unie-tailles-variees-noir-gris-paq-2-1874066p.html",
-    "sku": "1874066",
-    "availability": ""
+    "availability": "59 En Stock#142-9676-0"
   },
   {
     "title": "Jeu d'arcade de tir de basketball REC-Tek avec 4 balles et tableau de pointage électronique",
@@ -45,7 +33,7 @@
     "branch": "Halifax - Bayers Lake, NS",
     "url": "https://www.canadiantire.ca/fr/pdp/jeu-d-arcade-de-tir-de-basketball-rec-tek-avec-4-balles-et-tableau-de-pointage-electronique-1840694p.html",
     "sku": "1840694",
-    "availability": "0 En Stock#184-0694-0"
+    "availability": ""
   },
   {
     "title": "Cintres pivotants compacts en velours Type A avec barre à pantalon, couleurs variées, paq. 40",
@@ -60,10 +48,70 @@
     "availability": ""
   },
   {
+    "title": "Coffre de rangement extérieur pour terrasse Keter, aspect bois, très grand, brun, 570 L",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-storage/0600296/extra-large-wood-look-deck-box-cfa1dec5-029b-40f1-ad56-e1836f9691fa-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 279.99,
+    "salePrice": 139.93,
+    "store": "Canadian Tire",
+    "city": "Halifax - Bayers Lake, NS",
+    "branch": "Halifax - Bayers Lake, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/coffre-de-rangement-exterieur-pour-terrasse-keter-aspect-bois-tres-grand-brun-570-l-0600296p.html",
+    "sku": "0600296",
+    "availability": ""
+  },
+  {
+    "title": "Présentoir d'articles saisonniers Mastercraft avec chariot à plateforme roulante, noir",
+    "image": "https://media-www.canadiantire.ca/product/fixing/tools/garage-organization/0681822/mastercraft-seasonal-storage-rack-4657eb31-2d51-419f-a388-3dcc3e45f853-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 299.99,
+    "salePrice": 149.93,
+    "store": "Canadian Tire",
+    "city": "Halifax - Bayers Lake, NS",
+    "branch": "Halifax - Bayers Lake, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/presentoir-d-articles-saisonniers-mastercraft-avec-chariot-a-plateforme-roulante-noir-0681822p.html",
+    "sku": "0681822",
+    "availability": "Il n’en reste que 1 #068-1822-8"
+  },
+  {
+    "title": "Parka technique de chasse perméable à l'air imperméable coupe-vent Yukon Gear pour hommes, camouflage Realtree Xtra",
+    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-apparel-footwear/3750716/yukon-gear-parka-2-rte-m-a47cf6f2-275c-44e1-93da-5eb1da27165e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 99.99,
+    "salePrice": 39.93,
+    "store": "Canadian Tire",
+    "city": "Halifax - Bayers Lake, NS",
+    "branch": "Halifax - Bayers Lake, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/parka-technique-de-chasse-permeable-a-l-air-impermeable-coupe-vent-yukon-gear-pour-hommes-camouflage-realtree-xtra-3750716p.html",
+    "sku": "3750716",
+    "availability": ""
+  },
+  {
+    "title": "Service de vaisselle en grès à rebord orné CANVAS Gatestone, blanc, paq. 12",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/dining-and-entertaining/2421124/canvas-12-pc-ornate-rim-dinnerware-set-ec677528-47a1-4eea-a43d-63735afa1b7e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 99.99,
+    "salePrice": 49.93,
+    "store": "Canadian Tire",
+    "city": "Halifax - Bayers Lake, NS",
+    "branch": "Halifax - Bayers Lake, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/service-de-vaisselle-en-gres-a-rebord-orne-canvas-gatestone-blanc-paq-12-2421124p.html",
+    "sku": "2421124",
+    "availability": "Il n’en reste que 1 #242-1124-4"
+  },
+  {
+    "title": "Glacière/réchaud électrique thermoélectrique sur roulettes Mobicool, avec poignée, 45 L, bleu",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/hydration-coolers/0370124/45l-wheeled-12v-cooler-with-adapter-1a3a5430-7fbc-4bde-bbb2-549a37e1e05e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 379.99,
+    "salePrice": 139.93,
+    "store": "Canadian Tire",
+    "city": "Halifax - Bayers Lake, NS",
+    "branch": "Halifax - Bayers Lake, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/glaciere-rechaud-electrique-thermoelectrique-sur-roulettes-mobicool-avec-poignee-45-l-bleu-0370124p.html",
+    "sku": "0370124",
+    "availability": "Il n’en reste que 1 #037-0124-0"
+  },
+  {
     "title": "Vélo électrique tout-terrain Raleigh Getaway 36 V, 700C roues, noir",
     "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycles/0711931/raleigh-getaway-men-s-electric-bike-700c-e4b77c61-6dc1-49c0-b6d7-114a1fe93cc4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 2799.99,
-    "salePrice": 1399.93,
+    "salePrice": 999.93,
     "store": "Canadian Tire",
     "city": "Halifax - Bayers Lake, NS",
     "branch": "Halifax - Bayers Lake, NS",
@@ -87,19 +135,43 @@
     "title": "Vélo électrique tout-terrain Raleigh Getaway 36 V, 700C roues, bleu",
     "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycles/0711932/raleigh-getaway-women-s-electric-bike-700c-8dc09e7f-a9b4-4e61-aa08-2b9e38d895c6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 2799.99,
-    "salePrice": 1399.93,
+    "salePrice": 999.93,
     "store": "Canadian Tire",
     "city": "Halifax - Bayers Lake, NS",
     "branch": "Halifax - Bayers Lake, NS",
     "url": "https://www.canadiantire.ca/fr/pdp/velo-electrique-tout-terrain-raleigh-getaway-36-v-700c-roues-bleu-0711932p.html",
     "sku": "0711932",
-    "availability": "Il n’en reste que 3 #071-1932-6"
+    "availability": "Il n’en reste que 2 #071-1932-6"
+  },
+  {
+    "title": "Tapis d'intérieur et d'extérieur CANVAS Fresco Belfont, 8 x 10 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680039/belfont-indoor-outdoor-rug-2cc2ee2e-72b8-4508-bef2-3b4dbbe72d93-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 199.99,
+    "salePrice": 99.93,
+    "store": "Canadian Tire",
+    "city": "Halifax - Bayers Lake, NS",
+    "branch": "Halifax - Bayers Lake, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-d-interieur-et-d-exterieur-canvas-fresco-belfont-8-x-10-pi-0680039p.html",
+    "sku": "0680039",
+    "availability": "Il n’en reste que 4 #068-0039-0"
+  },
+  {
+    "title": "Tapis d'intérieur et d'extérieur CANVAS Vels Elora, 8 x 10 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680040/vels-indoor-outdoor-rug-818885c7-156c-4fc3-b598-3c31269d50eb-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 239.99,
+    "salePrice": 119.93,
+    "store": "Canadian Tire",
+    "city": "Halifax - Bayers Lake, NS",
+    "branch": "Halifax - Bayers Lake, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-d-interieur-et-d-exterieur-canvas-vels-elora-8-x-10-pi-0680040p.html",
+    "sku": "0680040",
+    "availability": "Il n’en reste que 1 #068-0040-4"
   },
   {
     "title": "Vélo électrique Raleigh Dobson Comfort, léger, écran ACL intégré, 700C roues, blanc",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/cycling/bicycles/0712020/raleigh-dobson-electric-bike-700c-white-46befcab-abaf-4947-ae19-7764447767ed-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 1999.99,
-    "salePrice": 999.93,
+    "salePrice": 799.93,
     "store": "Canadian Tire",
     "city": "Halifax - Bayers Lake, NS",
     "branch": "Halifax - Bayers Lake, NS",
@@ -111,7 +183,7 @@
     "title": "Lit de camp pliant portatif pour chiens Woods DOG-WOOD avec sac de transport, capacité de 70 lb, bleu",
     "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-accessories/0766424/woods-dogwood-quad-fold-pet-cot-fe2e4cef-58fa-4578-93b8-795fe70105e1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 79.99,
-    "salePrice": 39.93,
+    "salePrice": 35.93,
     "store": "Canadian Tire",
     "city": "Halifax - Bayers Lake, NS",
     "branch": "Halifax - Bayers Lake, NS",
@@ -120,10 +192,22 @@
     "availability": "Il n’en reste que 1 #076-6424-6"
   },
   {
+    "title": "Parasol de plage réglable Slumbertrek Pack Umbrella avec vis de sable et sac de transport",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/tents-shelters/0765950/slumbertrek-pack-umbrella-e8ec8d94-c365-4e47-afeb-47db658e5896-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 32.99,
+    "salePrice": 14.93,
+    "store": "Canadian Tire",
+    "city": "Halifax - Bayers Lake, NS",
+    "branch": "Halifax - Bayers Lake, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/parasol-de-plage-reglable-slumbertrek-pack-umbrella-avec-vis-de-sable-et-sac-de-transport-0765950p.html",
+    "sku": "0765950",
+    "availability": "Il n’en reste que 2 #076-5950-8"
+  },
+  {
     "title": "Sac d'aliments pour chiens à fermeture à enrouler Woods PAW-THORN",
     "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-furniture/0766409/woods-o-hara-camp-pad-eaf0561c-b507-479f-8a74-585ab3804103-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 23.99,
-    "salePrice": 8.93,
+    "salePrice": 7.93,
     "store": "Canadian Tire",
     "city": "Halifax - Bayers Lake, NS",
     "branch": "Halifax - Bayers Lake, NS",
@@ -147,13 +231,37 @@
     "title": "Système d'attelage pour chien de camping Woods BALSAM-FUR avec corde réfléchissante, sac de rangement et mousqueton, 26,2 pi",
     "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-accessories/0766428/woods-balsam-fir-leash-hitch-system-7ceb8dca-bd85-4168-9006-4a582dc9b9c8-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 59.99,
-    "salePrice": 24.93,
+    "salePrice": 22.43,
     "store": "Canadian Tire",
     "city": "Halifax - Bayers Lake, NS",
     "branch": "Halifax - Bayers Lake, NS",
     "url": "https://www.canadiantire.ca/fr/pdp/systeme-d-attelage-pour-chien-de-camping-woods-balsam-fur-avec-corde-reflechissante-sac-de-rangement-et-mousqueton-26-2-pi-0766428p.html",
     "sku": "0766428",
     "availability": "Il n’en reste que 1 #076-6428-8"
+  },
+  {
+    "title": "Coussin de chaise CANVAS Adelaide",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0882510/canvas-helene-chair-cushion-b66649b9-4f19-4a2d-a5bc-6f33d401dec9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 114.99,
+    "salePrice": 54.93,
+    "store": "Canadian Tire",
+    "city": "Halifax - Bayers Lake, NS",
+    "branch": "Halifax - Bayers Lake, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/coussin-de-chaise-canvas-adelaide-0882510p.html",
+    "sku": "0882510",
+    "availability": "Il n’en reste que 7 #088-2510-6"
+  },
+  {
+    "title": "Vélo de montagne semi-rigide Raleigh Rogue, pneus surdimensionnés, roue de 26 po, rouge",
+    "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycles/0711974/raleigh-rogue-4-0-fat-tire-hardtail-mountain-bike-26-in-9d6902e1-33ed-4939-aa46-03c0ee34c9bd-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 849.99,
+    "salePrice": 399.93,
+    "store": "Canadian Tire",
+    "city": "Halifax - Bayers Lake, NS",
+    "branch": "Halifax - Bayers Lake, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/velo-de-montagne-semi-rigide-raleigh-rogue-pneus-surdimensionnes-roue-de-26-po-rouge-0711974p.html",
+    "sku": "0711974",
+    "availability": "Il n’en reste que 3 #071-1974-6"
   },
   {
     "title": "Mouton de bonbon Pâques Aero au chocolat au lait lisse, 25 g",
@@ -192,16 +300,28 @@
     "availability": "Il n’en reste que 1 #051-4430-0"
   },
   {
-    "title": "Minioeufs en chocolat de Pâques Cadbury, format familial, 400 g",
-    "image": "https://media-www.canadiantire.ca/product/living/food-drink/seasonal-confectionery/1514375/cadbury-mini-eggs-400g-3f1d4518-0c81-4106-8a5c-691b6f3d9353-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 13.99,
-    "salePrice": 6.99,
+    "title": "Pagaie de kayak en aluminium Pelican Catch Angler, 98,5 po",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0792071/pelican-catch-angler-kayak-paddle-27a6ab5e-3210-4dc7-ac1d-2acba38980f6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 154.99,
+    "salePrice": 69.93,
     "store": "Canadian Tire",
     "city": "Halifax - Bayers Lake, NS",
     "branch": "Halifax - Bayers Lake, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/minioeufs-en-chocolat-de-paques-cadbury-format-familial-400-g-1514375p.html",
-    "sku": "1514375",
-    "availability": "Il n’en reste que 7 #151-4375-4"
+    "url": "https://www.canadiantire.ca/fr/pdp/pagaie-de-kayak-en-aluminium-pelican-catch-angler-98-5-po-0792071p.html",
+    "sku": "0792071",
+    "availability": "Il n’en reste que 2 #079-2071-2"
+  },
+  {
+    "title": "Pagaie de planche debout en aluminium Pelican, noir",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0793303/sup-paddle-for-079-8296-30bd6ee2-2f95-4886-a97b-5c810063b32e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 79.99,
+    "salePrice": 29.93,
+    "store": "Canadian Tire",
+    "city": "Halifax - Bayers Lake, NS",
+    "branch": "Halifax - Bayers Lake, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/pagaie-de-planche-debout-en-aluminium-pelican-noir-0793303p.html",
+    "sku": "0793303",
+    "availability": "Il n’en reste que 1 #079-3303-6"
   },
   {
     "title": "Casque Raider Z8, adulte, noir mat",
@@ -214,6 +334,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/casque-raider-z8-adulte-noir-mat-1278600p.html",
     "sku": "1278600",
     "availability": ""
+  },
+  {
+    "title": "Coussin de fauteuil-hamac CANVAS, rouge",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0882517/canvas-red-sling-chair-cushion-58db4f27-1165-4067-ab7e-488b895eaeaa-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 59.99,
+    "salePrice": 29.93,
+    "store": "Canadian Tire",
+    "city": "Halifax - Bayers Lake, NS",
+    "branch": "Halifax - Bayers Lake, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/coussin-de-fauteuil-hamac-canvas-rouge-0882517p.html",
+    "sku": "0882517",
+    "availability": "10 En Stock#088-2517-2"
   },
   {
     "title": "Meuble-lavabo simple CANVAS Mahone à 1 porte, dessus en porcelaine vitrifiée, 24 po, noir",
@@ -231,13 +363,25 @@
     "title": "Table de soccer de table Ambassador, fini bois, 48 po",
     "image": "https://media-www.canadiantire.ca/product/playing/team-sports-and-golf/sports-equipment-accessories/1840106/-48-foosball--7b2776e4-d562-4d02-bb52-ff449d124dde-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 169.99,
-    "salePrice": 79.93,
+    "salePrice": 69.93,
     "store": "Canadian Tire",
     "city": "Halifax - Bayers Lake, NS",
     "branch": "Halifax - Bayers Lake, NS",
     "url": "https://www.canadiantire.ca/fr/pdp/table-de-soccer-de-table-ambassador-fini-bois-48-po-1840106p.html",
     "sku": "1840106",
     "availability": "Il n’en reste que 1 #184-0106-2"
+  },
+  {
+    "title": "Kayak Pelican Hi Life de Perception, 11 pi, eau calme/usage général, 1 personne, bleu",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-water-fun/0798345/perception-hi-life-11ft-kayak-6c828146-96b2-4f03-a7ed-54cb57f47f96-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 1199.99,
+    "salePrice": 599.93,
+    "store": "Canadian Tire",
+    "city": "Halifax - Bayers Lake, NS",
+    "branch": "Halifax - Bayers Lake, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/kayak-pelican-hi-life-de-perception-11-pi-eau-calme-usage-general-1-personne-bleu-0798345p.html",
+    "sku": "0798345",
+    "availability": "Il n’en reste que 2 #079-8345-6"
   },
   {
     "title": "Minioeufs en chocolat au lait Hershey's, 220 g",
@@ -249,13 +393,13 @@
     "branch": "Halifax - Bayers Lake, NS",
     "url": "https://www.canadiantire.ca/fr/pdp/minioeufs-en-chocolat-au-lait-hershey-s-220-g-0514168p.html",
     "sku": "0514168",
-    "availability": "17 En Stock#051-4168-6"
+    "availability": "11 En Stock#051-4168-6"
   },
   {
     "title": "Bols pour chiens Woods pliants étanches PAW-THORN, camping et voyage, paq. 2, 2 L chacun",
     "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-accessories/0766426/woods-pawthorn-pet-bowls-10c337e6-6f18-495f-a5d6-0f0ef4d7ab3b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 19.99,
-    "salePrice": 9.93,
+    "salePrice": 8.93,
     "store": "Canadian Tire",
     "city": "Halifax - Bayers Lake, NS",
     "branch": "Halifax - Bayers Lake, NS",
@@ -276,10 +420,22 @@
     "availability": "Il n’en reste que 1 #242-0003-8"
   },
   {
+    "title": "Plafonnier encastré à 2 lampes avec abat-jour en cage en cristal CANVAS Chelsea, fini chromé",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/lighting/0522676/canvas-chelsea-flushmount-3010b916-4944-4a77-ada8-c0619734f3a3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 109.99,
+    "salePrice": 49.93,
+    "store": "Canadian Tire",
+    "city": "Halifax - Bayers Lake, NS",
+    "branch": "Halifax - Bayers Lake, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/plafonnier-encastre-a-2-lampes-avec-abat-jour-en-cage-en-cristal-canvas-chelsea-fini-chrome-0522676p.html",
+    "sku": "0522676",
+    "availability": "Il n’en reste que 3 #052-2676-6"
+  },
+  {
     "title": "Hameçon en faucille Xcalibur Octopus",
     "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0770366/matzuo-octopus-sickle-size-6-7ef44089-7bd0-4794-a1f8-2f0cdbbdac95-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 3.99,
-    "salePrice": 1.93,
+    "salePrice": 1.43,
     "store": "Canadian Tire",
     "city": "Halifax - Bayers Lake, NS",
     "branch": "Halifax - Bayers Lake, NS",
@@ -300,6 +456,18 @@
     "availability": "26 En Stock#035-6200-6"
   },
   {
+    "title": "Gobelets empilables ananas For Living",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/1592514/for-living-stackable-pineapple-cups-b68e7f07-1432-4009-bf45-aa371216ab02-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 14.99,
+    "salePrice": 4.93,
+    "store": "Canadian Tire",
+    "city": "Halifax - Bayers Lake, NS",
+    "branch": "Halifax - Bayers Lake, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/gobelets-empilables-ananas-for-living-1592514p.html",
+    "sku": "1592514",
+    "availability": "Il n’en reste que 7 #159-2514-0"
+  },
+  {
     "title": "Station de chargement magnétique sans fil pliable 3-en-1 Bluehive avec support, noir",
     "image": "https://media-www.canadiantire.ca/product/automotive/electronics/mobile-electronics/0357444/bluehive-foldable-3-in-1-wireless-charging-hub-e5a3390f-7d2a-491a-84ea-02ac34389094-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 44.99,
@@ -312,6 +480,18 @@
     "availability": "Il n’en reste que 5 #035-7444-0"
   },
   {
+    "title": "Brosse pour barbecue à soies en nylon Vida de PADERNO pour nettoyer les plaques et les grilles de barbecue",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking-accessories/0850007/vida-palmyra-refill-57c33236-192c-4791-91dc-6fa78a6548f6.png?im=whresize&wid=200&hei=200",
+    "price": 7.99,
+    "salePrice": 3.93,
+    "store": "Canadian Tire",
+    "city": "Halifax - Bayers Lake, NS",
+    "branch": "Halifax - Bayers Lake, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/brosse-pour-barbecue-a-soies-en-nylon-vida-de-paderno-pour-nettoyer-les-plaques-et-les-grilles-de-barbecue-0850007p.html",
+    "sku": "0850007",
+    "availability": "Il n’en reste que 7 #085-0007-4"
+  },
+  {
     "title": "Minioeufs en chocolat assortis Lindt Lindor, 551 g",
     "image": "https://media-www.canadiantire.ca/product/living/food-drink/seasonal-confectionery/1514345/lindt-mini-easter-eggs-551-gram-143c61d9-0880-4350-a526-3ec9c39a9b33-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 32.99,
@@ -321,7 +501,7 @@
     "branch": "Halifax - Bayers Lake, NS",
     "url": "https://www.canadiantire.ca/fr/pdp/minioeufs-en-chocolat-assortis-lindt-lindor-551-g-1514345p.html",
     "sku": "1514345",
-    "availability": "Il n’en reste que 2 #151-4345-6"
+    "availability": "Il n’en reste que 1 #151-4345-6"
   },
   {
     "title": "NERF Rival blaster Vision XXII-800 viseur réglable, 8 billes Accu-Rounds Nerf Rival, 7 ans et plus",
@@ -339,7 +519,7 @@
     "title": "Leurres pour achigan RedWolf, paq. 63",
     "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0777761/red-wolf-bass-kit-63-piece-fcd417c6-c254-458e-a0d1-99d7bd07937f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 16.99,
-    "salePrice": 8.43,
+    "salePrice": 7.43,
     "store": "Canadian Tire",
     "city": "Halifax - Bayers Lake, NS",
     "branch": "Halifax - Bayers Lake, NS",
@@ -369,7 +549,7 @@
     "branch": "Halifax - Bayers Lake, NS",
     "url": "https://www.canadiantire.ca/fr/pdp/nappe-de-fete-d-anniversaire-en-plastique-ballons-paq-3-8420514p.html",
     "sku": "8420514",
-    "availability": "Il n’en reste que 3 #842-0514-4"
+    "availability": "Il n’en reste que 2 #842-0514-4"
   },
   {
     "title": "Pantalon de sécurité en molleton Forcefield avec bande de sécurité, noir",
@@ -396,6 +576,18 @@
     "availability": "Il n’en reste que 1 #052-6185-0"
   },
   {
+    "title": "Bouton-pressoir lumineux hydrofuge sans fil pour sonnette avec montage en surface Globe, plastique blanc",
+    "image": "https://media-www.canadiantire.ca/product/fixing/hardware/curb-appeal/0521743/wireless-push-button-white-plastic-lighted-surface-mount-882c4999-5d5d-4e16-8c55-e410b8ab90ea-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Halifax - Bayers Lake, NS",
+    "branch": "Halifax - Bayers Lake, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/bouton-pressoir-lumineux-hydrofuge-sans-fil-pour-sonnette-avec-montage-en-surface-globe-plastique-blanc-0521743p.html",
+    "sku": "0521743",
+    "availability": "Il n’en reste que 2 #052-1743-2"
+  },
+  {
     "title": "Recharge pour tête de vadrouille à rouleau à récurer Rubbermaid",
     "image": "https://media-www.canadiantire.ca/product/living/cleaning/household-cleaning-tools/1426820/rubbermaid-scrubbing-roller-mop-refill-1470f2cf-526c-4f20-a249-179d9a1efa37-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 7.99,
@@ -406,18 +598,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/recharge-pour-tete-de-vadrouille-a-rouleau-a-recurer-rubbermaid-1426820p.html",
     "sku": "1426820",
     "availability": "Il n’en reste que 4 #142-6820-4"
-  },
-  {
-    "title": "Cadenas pour vélo pour enfants en acier Supercycle avec combinaison de cadran à 3 chiffres, bleu, 3,3 po",
-    "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycle-accessories/0730086/supercycle-kids-combo-cable-lock-blue-a8487c9d-ab97-4e61-bf9d-4f40cc4c42f7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 15.99,
-    "salePrice": 5.23,
-    "store": "Canadian Tire",
-    "city": "Halifax - Bayers Lake, NS",
-    "branch": "Halifax - Bayers Lake, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/cadenas-pour-velo-pour-enfants-en-acier-supercycle-avec-combinaison-de-cadran-a-3-chiffres-bleu-3-3-po-0730086p.html",
-    "sku": "0730086",
-    "availability": "Il n’en reste que 1 #073-0086-2"
   },
   {
     "title": "Prise simple à boîtier étroit Leviton 05029-751 NEMA 6-15R, 15 A, 250 V, mise à la terre, qualité commerciale, ivoire",
@@ -480,18 +660,6 @@
     "availability": "Il n’en reste que 2 #063-9994-0"
   },
   {
-    "title": "Crochet et attelage à boule intégrés REESE, 1-7/8 po",
-    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0409088/pintle-w-1-7-8-ball-receiver-mount-a760f2c7-8ea4-4a6c-a9df-65ab20f89b03-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 199.99,
-    "salePrice": 83.93,
-    "store": "Canadian Tire",
-    "city": "Halifax - Bayers Lake, NS",
-    "branch": "Halifax - Bayers Lake, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/crochet-et-attelage-a-boule-integres-reese-1-7-8-po-0409088p.html",
-    "sku": "0409088",
-    "availability": "Il n’en reste que 1 #040-9088-2"
-  },
-  {
     "title": "Cartouche de soupape PlumbShop Delta Diamond, 2 poignées",
     "image": "https://media-www.canadiantire.ca/product/fixing/plumbing/rough-plumbing/0634748/plumbshop-delta-diamond-valve-2-handle-faucets-eab4ab56-9a12-4a40-ab65-fec874850016.png?im=whresize&wid=200&hei=200",
     "price": 34.99,
@@ -528,6 +696,18 @@
     "availability": "Il n’en reste que 1 #075-8531-0"
   },
   {
+    "title": "Chapeau cloche à facteur de protection solaire (FPS) 50+ Speedo pour enfants avec sangle pour le menton, rose",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-fun/0810212/speedo-bucket-hat-pink-70339610-f51c-43b5-ade8-e77c151f08fe-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 15.99,
+    "salePrice": 7.93,
+    "store": "Canadian Tire",
+    "city": "Halifax - Bayers Lake, NS",
+    "branch": "Halifax - Bayers Lake, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/chapeau-cloche-a-facteur-de-protection-solaire-fps-50-speedo-pour-enfants-avec-sangle-pour-le-menton-rose-0810212p.html",
+    "sku": "0810212",
+    "availability": "Il n’en reste que 1 #081-0212-2"
+  },
+  {
     "title": "Lacets ronds Moneysworth & Best pour chaussures tout-aller/sport, 54 po, 1 paire, blanc",
     "image": "https://media-www.canadiantire.ca/product/playing/footwear-apparel/footwear-apparel-accessories/0870011/sport-laces-white-round-54--b7ae217f-7625-4183-9c6c-6044da9549c1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 4.49,
@@ -543,7 +723,7 @@
     "title": "Leurres Lunkerhunt Wasps, 5 po, paq. 10",
     "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0778335/lunkerhunt-lunker-sticks-wasp-10-pack-5--22bc49a3-0c3f-499d-bdb5-d7bc0ec80b41-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 9.99,
-    "salePrice": 4.93,
+    "salePrice": 4.43,
     "store": "Canadian Tire",
     "city": "Halifax - Bayers Lake, NS",
     "branch": "Halifax - Bayers Lake, NS",
@@ -661,7 +841,7 @@
   },
   {
     "title": "Écrous à tête hexagonale Hillman, laiton",
-    "image": "undefined?im=whresize&wid=200&hei=200",
+    "image": "undefined",
     "price": 2.1,
     "salePrice": 0.93,
     "store": "Canadian Tire",
