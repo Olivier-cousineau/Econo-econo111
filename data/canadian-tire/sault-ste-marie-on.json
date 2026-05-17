@@ -1,21 +1,9 @@
 [
   {
-    "title": "Machine à espresso semi-automatique à un toucher avec mousseur à lait Mr. Coffee",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430385/mr-coffee-semi-automatic-espresso-machine-w-milk-frother-482b518b-cfa5-4d80-bb51-f3dc6d06036e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 439.99,
-    "salePrice": 129.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/machine-a-espresso-semi-automatique-a-un-toucher-avec-mousseur-a-lait-mr-coffee-0430385p.html",
-    "sku": "0430385",
-    "availability": "Il n’en reste que 5 #043-0385-2"
-  },
-  {
     "title": "Portemanteau d'entrée à 5 crochets avec banc de rangement et support pour chaussures CANVAS Langham",
     "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/1680085/canvas-langham-hall-tree-034fa996-d28a-4ee8-bd8f-0ce8bcd81d20-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 259.99,
-    "salePrice": 124.93,
+    "salePrice": 119.93,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
@@ -45,7 +33,7 @@
     "branch": "Sault Ste. Marie, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/foyer-avec-manteau-for-living-0644024p.html",
     "sku": "0644024",
-    "availability": "Il n’en reste que 2 #064-4024-8"
+    "availability": "Il n’en reste que 1 #064-4024-8"
   },
   {
     "title": "Système d’élimination déchets de cuisine écologique Sepura",
@@ -69,7 +57,7 @@
     "branch": "Sault Ste. Marie, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/assortiment-d-hamecons-montes-danielson-paq-12-0783244p.html",
     "sku": "0783244",
-    "availability": "9 En Stock#078-3244-8"
+    "availability": "8 En Stock#078-3244-8"
   },
   {
     "title": "Caméra de tableau de bord HD 1080p myGEKOgear Orbit 130 avec vue grand-angle",
@@ -99,7 +87,7 @@
     "title": "Costume de bain short Outbound à entrejambe de 7 po pour hommes, noir",
     "image": "https://media-www.canadiantire.ca/product/playing/footwear-apparel/summer-footwear-apparel/1873516/outbound-men-s-7-swim-shorts-black-m-c537a4b2-7c1a-4049-8fd7-489191ff0b03-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 22.99,
-    "salePrice": 9.93,
+    "salePrice": 8.93,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
@@ -129,7 +117,7 @@
     "branch": "Sault Ste. Marie, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/leurre-northland-impulse-rig-crawler-6-po-naturel-0770730p.html",
     "sku": "0770730",
-    "availability": "8 En Stock#077-0730-0"
+    "availability": "Il n’en reste que 7 #077-0730-0"
   },
   {
     "title": "Lumières encastrées à DEL CCT Trenz Lighting CCT, 4 po, paq. 4",
@@ -156,6 +144,18 @@
     "availability": ""
   },
   {
+    "title": "Casque de motoneige Origine Novelus, jeunes, choix de tailles",
+    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/powersport/0261220/origine-novelus-youth-helmet-small-a03f1098-eddd-453c-901a-bbd1acb09436-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 154.99,
+    "salePrice": 69.93,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/casque-de-motoneige-origine-novelus-jeunes-choix-de-tailles-0261220p.html",
+    "sku": "0261220",
+    "availability": ""
+  },
+  {
     "title": "Mouche à saumon Superfly, vert, taille 06",
     "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0788602/superfly-salmon-bug-black-size-06-8a7f969c-e64c-499e-8896-7dafbc785434-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 6.49,
@@ -166,30 +166,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/mouche-a-saumon-superfly-vert-taille-06-0788594p.html",
     "sku": "0788594",
     "availability": ""
-  },
-  {
-    "title": "Ballon en aluminium satiné rond arc-en-ciel prismatique 100, blanc/argent, 18 po, gonflement à l'hélium et ruban inclus, pour fête d'anniversaire",
-    "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8424538/blln-std-heres-to-your-bday100-1b223b98-9b4a-4d5e-b828-2437ef28d5c3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 6.99,
-    "salePrice": 0.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/ballon-en-aluminium-satine-rond-arc-en-ciel-prismatique-100-blanc-argent-18-po-gonflement-a-l-helium-et-ruban-inclus-pour-fete-d-anniversaire-8424538p.html",
-    "sku": "8424538",
-    "availability": "Il n’en reste que 6 #842-4538-4"
-  },
-  {
-    "title": "Ballon en aluminium satiné rond 3D célébration étincelante 18, noir/or, à pois, 32 po, gonflement à l'hélium et ruban inclus, pour fête d'anniversaire",
-    "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8424045/fl-bn-mlt-sprkl-bday-e3ed2485-1953-4a40-934d-9216fda81d67-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 24.99,
-    "salePrice": 9.99,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/ballon-en-aluminium-satine-rond-3d-celebration-etincelante-18-noir-or-a-pois-32-po-gonflement-a-l-helium-et-ruban-inclus-pour-fete-d-anniversaire-8424045p.html",
-    "sku": "8424045",
-    "availability": "Il n’en reste que 4 #842-4045-6"
   },
   {
     "title": "Bouton-pressoir lumineux hydrofuge à fil pour sonnette avec montage encastré Globe, métal noir",
@@ -216,30 +192,6 @@
     "availability": "Il n’en reste que 1 #076-2160-6"
   },
   {
-    "title": "Commande à bascule Hendo, 240 W, noir",
-    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0203821/hendo-240w-rocker-switch-controller-2938c9ad-ebc6-4700-8ff5-99887e1438ad-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 79.99,
-    "salePrice": 29.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/commande-a-bascule-hendo-240-w-noir-0203821p.html",
-    "sku": "0203821",
-    "availability": "Il n’en reste que 1 #020-3821-0"
-  },
-  {
-    "title": "Trousse de connexion de batterie de radiateurs Remington, Black & Decker/Porter Cable",
-    "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-living/0766329/battery-connection-kit-black-decker-and-porter-cable-42bdabad-dc30-47c2-9191-9443e7f3077a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 37.99,
-    "salePrice": 11.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-connexion-de-batterie-de-radiateurs-remington-black-decker-porter-cable-0766329p.html",
-    "sku": "0766329",
-    "availability": "Il n’en reste que 1 #076-6329-4"
-  },
-  {
     "title": "Base de lunette de visée à montage supérieur Weaver 48025, no 25, paq. 2",
     "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-equipment/0762143/weaver-top-mount-base-browning-lever-action-25-black-c4abb10a-def0-43b4-84d4-15c5cbd35756-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 6.99,
@@ -250,17 +202,5 @@
     "url": "https://www.canadiantire.ca/fr/pdp/base-de-lunette-de-visee-a-montage-superieur-weaver-48025-no-25-paq-2-0762143p.html",
     "sku": "0762143",
     "availability": "Il n’en reste que 3 #076-2143-8"
-  },
-  {
-    "title": "Appât Northland Walleye Crawler Hauler, nickel, nº 4",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0772566/northland-walleye-crawler-hauler-4-hex-nickel-90f89510-c5a0-4af5-b03a-92e2972cd81f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 4.99,
-    "salePrice": 1.93,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/appat-northland-walleye-crawler-hauler-nickel-no-4-0772566p.html",
-    "sku": "0772566",
-    "availability": "Il n’en reste que 1 #077-2566-0"
   }
 ]

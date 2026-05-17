@@ -12,28 +12,16 @@
     "availability": "Il n’en reste que 1 #242-1029-2"
   },
   {
-    "title": "Tasses à mesurer empilables en plastique MASTER Chef, paq. 10",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/bakeware-baking-prep/1429676/master-chef-10pc-measuring-cup-set-73c761cb-c28c-42fe-a32e-f57a30c6b9a6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 24.99,
-    "salePrice": 8.93,
+    "title": "Tapis d'intérieur et d'extérieur CANVAS Morency, 6 x 9 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680042/morency-outdoor-rug-d723df32-0b9c-4c2a-86c8-9c791795e3b2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 49.99,
+    "salePrice": 19.93,
     "store": "Canadian Tire",
     "city": "Windsor South, ON",
     "branch": "Windsor South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/tasses-a-mesurer-empilables-en-plastique-master-chef-paq-10-1429676p.html",
-    "sku": "1429676",
-    "availability": "10 En Stock#142-9676-0"
-  },
-  {
-    "title": "Jeu d'arcade de tir de basketball REC-Tek avec 4 balles et tableau de pointage électronique",
-    "image": "https://media-www.canadiantire.ca/product/playing/team-sports-and-golf/indoor-games/1840694/rec-tek-basketball-shootout-challenge-game-b5d7e061-32a3-40d8-a913-45673257eaf7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 129.99,
-    "salePrice": 54.93,
-    "store": "Canadian Tire",
-    "city": "Windsor South, ON",
-    "branch": "Windsor South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/jeu-d-arcade-de-tir-de-basketball-rec-tek-avec-4-balles-et-tableau-de-pointage-electronique-1840694p.html",
-    "sku": "1840694",
-    "availability": "Il n’en reste que 2 #184-0694-0"
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-d-interieur-et-d-exterieur-canvas-morency-6-x-9-pi-0680042p.html",
+    "sku": "0680042",
+    "availability": ""
   },
   {
     "title": "Cintres pivotants compacts en velours Type A avec barre à pantalon, couleurs variées, paq. 40",
@@ -57,13 +45,121 @@
     "branch": "Windsor South, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/ampoules-a-del-a-intensite-variable-a-culot-e12-noma-b10-2700k-350-lumens-blanc-chaud-40-w-paq-2-0529347p.html",
     "sku": "0529347",
-    "availability": "347 En Stock#052-9347-8"
+    "availability": "339 En Stock#052-9347-8"
+  },
+  {
+    "title": "Présentoir d'articles saisonniers Mastercraft avec chariot à plateforme roulante, noir",
+    "image": "https://media-www.canadiantire.ca/product/fixing/tools/garage-organization/0681822/mastercraft-seasonal-storage-rack-4657eb31-2d51-419f-a388-3dcc3e45f853-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 299.99,
+    "salePrice": 149.93,
+    "store": "Canadian Tire",
+    "city": "Windsor South, ON",
+    "branch": "Windsor South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/presentoir-d-articles-saisonniers-mastercraft-avec-chariot-a-plateforme-roulante-noir-0681822p.html",
+    "sku": "0681822",
+    "availability": "Il n’en reste que 2 #068-1822-8"
+  },
+  {
+    "title": "Parka technique de chasse perméable à l'air imperméable coupe-vent Yukon Gear pour hommes, camouflage Realtree Xtra",
+    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-apparel-footwear/3750716/yukon-gear-parka-2-rte-m-a47cf6f2-275c-44e1-93da-5eb1da27165e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 99.99,
+    "salePrice": 39.93,
+    "store": "Canadian Tire",
+    "city": "Windsor South, ON",
+    "branch": "Windsor South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/parka-technique-de-chasse-permeable-a-l-air-impermeable-coupe-vent-yukon-gear-pour-hommes-camouflage-realtree-xtra-3750716p.html",
+    "sku": "3750716",
+    "availability": ""
+  },
+  {
+    "title": "Tapis d'intérieur et d'extérieur CANVAS Basca, 8 x 10 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680048/basca-outdoor-rug-9605a092-adeb-4af7-9752-a7e7577775cb-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 72.99,
+    "salePrice": 34.93,
+    "store": "Canadian Tire",
+    "city": "Windsor South, ON",
+    "branch": "Windsor South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-d-interieur-et-d-exterieur-canvas-basca-8-x-10-pi-0680048p.html",
+    "sku": "0680048",
+    "availability": "Il n’en reste que 2 #068-0048-8"
+  },
+  {
+    "title": "Vélo électrique tout-terrain Raleigh Getaway 36 V, 700C roues, noir",
+    "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycles/0711931/raleigh-getaway-men-s-electric-bike-700c-e4b77c61-6dc1-49c0-b6d7-114a1fe93cc4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 2799.99,
+    "salePrice": 999.93,
+    "store": "Canadian Tire",
+    "city": "Windsor South, ON",
+    "branch": "Windsor South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/velo-electrique-tout-terrain-raleigh-getaway-36-v-700c-roues-noir-0711931p.html",
+    "sku": "0711931",
+    "availability": "Il n’en reste que 1 #071-1931-8"
+  },
+  {
+    "title": "Vélo électrique tout-terrain Raleigh Getaway 36 V, 700C roues, bleu",
+    "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycles/0711932/raleigh-getaway-women-s-electric-bike-700c-8dc09e7f-a9b4-4e61-aa08-2b9e38d895c6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 2799.99,
+    "salePrice": 999.93,
+    "store": "Canadian Tire",
+    "city": "Windsor South, ON",
+    "branch": "Windsor South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/velo-electrique-tout-terrain-raleigh-getaway-36-v-700c-roues-bleu-0711932p.html",
+    "sku": "0711932",
+    "availability": "Il n’en reste que 1 #071-1932-6"
+  },
+  {
+    "title": "Tabouret de bar métal et bois CANVAS Union, paq. 2, brun",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/0687563/canvas-union-stool-2-pk-29ecf7e3-3af9-4631-ab03-ba8946104db3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 229.99,
+    "salePrice": 74.93,
+    "store": "Canadian Tire",
+    "city": "Windsor South, ON",
+    "branch": "Windsor South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tabouret-de-bar-metal-et-bois-canvas-union-paq-2-brun-0687563p.html",
+    "sku": "0687563",
+    "availability": "Il n’en reste que 3 #068-7563-8"
+  },
+  {
+    "title": "Tapis d'intérieur et d'extérieur CANVAS Vels Elora, 8 x 10 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680040/vels-indoor-outdoor-rug-818885c7-156c-4fc3-b598-3c31269d50eb-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 239.99,
+    "salePrice": 119.93,
+    "store": "Canadian Tire",
+    "city": "Windsor South, ON",
+    "branch": "Windsor South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-d-interieur-et-d-exterieur-canvas-vels-elora-8-x-10-pi-0680040p.html",
+    "sku": "0680040",
+    "availability": ""
+  },
+  {
+    "title": "Vélo électrique Raleigh Dobson Comfort, léger, écran ACL intégré, 700C roues, blanc",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/cycling/bicycles/0712020/raleigh-dobson-electric-bike-700c-white-46befcab-abaf-4947-ae19-7764447767ed-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 1999.99,
+    "salePrice": 799.93,
+    "store": "Canadian Tire",
+    "city": "Windsor South, ON",
+    "branch": "Windsor South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/velo-electrique-raleigh-dobson-comfort-leger-ecran-acl-integre-700c-roues-blanc-0712020p.html",
+    "sku": "0712020",
+    "availability": "Il n’en reste que 1 #071-2020-0"
+  },
+  {
+    "title": "Coussins de chaise longue de jardin CANVAS Bloom, résistants à l'eau et aux taches, rouge",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0880064/canvas-bloom-lumbar-cushion-3288b418-43f9-4bfd-a4fd-2d8e1b76356b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 85.99,
+    "salePrice": 39.93,
+    "store": "Canadian Tire",
+    "city": "Windsor South, ON",
+    "branch": "Windsor South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/coussins-de-chaise-longue-de-jardin-canvas-bloom-resistants-a-l-eau-et-aux-taches-rouge-0880063p.html",
+    "sku": "0880063",
+    "availability": "9 En Stock#088-0063-2"
   },
   {
     "title": "Tapis de couloir d'intérieur et d'extérieur CANVAS Elfin, 3 x 5 pi",
     "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680045/elfin-outdoor-runner-rug-f81ffe3f-6368-4f13-8809-4b772e430737-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 29.99,
-    "salePrice": 14.93,
+    "salePrice": 9.93,
     "store": "Canadian Tire",
     "city": "Windsor South, ON",
     "branch": "Windsor South, ON",
@@ -87,7 +183,7 @@
     "title": "Abri de camping à auvent chapiteau Woods",
     "image": "https://media-www.canadiantire.ca/product/playing/camping/tents-shelters/0766532/woods-marquee-camp-shelter-098d48ca-7473-4b64-a3a7-00643d1edbd7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 289.99,
-    "salePrice": 139.93,
+    "salePrice": 99.93,
     "store": "Canadian Tire",
     "city": "Windsor South, ON",
     "branch": "Windsor South, ON",
@@ -99,7 +195,7 @@
     "title": "Pagaie de kayak standard Pelican, noir, 89 po (2,26 m)",
     "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0793365/kayak-paddle-90f64628-f3f6-4b2f-8666-1d68fcb360e4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 64.99,
-    "salePrice": 32.49,
+    "salePrice": 24.93,
     "store": "Canadian Tire",
     "city": "Windsor South, ON",
     "branch": "Windsor South, ON",
@@ -120,6 +216,18 @@
     "availability": ""
   },
   {
+    "title": "Coffre à outils portatif à plusieurs niveaux DEWALT Triangle avec prise de courant intégrée, 36 po",
+    "image": "https://media-www.canadiantire.ca/product/fixing/tools/tool-storage/0580124/dewalt-36-triangle-tool-box-dc3e82d5-2404-40c2-96eb-db1ef6bec8d8-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 799.99,
+    "salePrice": 399.93,
+    "store": "Canadian Tire",
+    "city": "Windsor South, ON",
+    "branch": "Windsor South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/coffre-a-outils-portatif-a-plusieurs-niveaux-dewalt-triangle-avec-prise-de-courant-integree-36-po-0580124p.html",
+    "sku": "0580124",
+    "availability": "Il n’en reste que 2 #058-0124-0"
+  },
+  {
     "title": "Sac de frappe lourd Everlast Cardio Blast, rose, 40 lb",
     "image": "https://media-www.canadiantire.ca/product/playing/exercise/combat-sports-fitness-accessories/0847892/everlast-cardio-blast-40-lbs-4c00c2c6-3bd6-4765-a2aa-f1c0fd862d18-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 149.99,
@@ -130,6 +238,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/sac-de-frappe-lourd-everlast-cardio-blast-rose-40-lb-0847892p.html",
     "sku": "0847892",
     "availability": "Il n’en reste que 1 #084-7892-4"
+  },
+  {
+    "title": "Pagaie 2-en-1 pour kayak ou planche à pagaie Outbound, réglable, 85 po",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0792067/outbound-2-in-1-kayak-sup-paddle-d4eb97d2-7846-423b-9b2d-8b7e6efd9d90-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 74.99,
+    "salePrice": 29.93,
+    "store": "Canadian Tire",
+    "city": "Windsor South, ON",
+    "branch": "Windsor South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/pagaie-2-en-1-pour-kayak-ou-planche-a-pagaie-outbound-reglable-85-po-0792067p.html",
+    "sku": "0792067",
+    "availability": "Il n’en reste que 5 #079-2067-4"
   },
   {
     "title": "Cuillère Danielson Hypocrite, 1/2 oz",
@@ -156,6 +276,42 @@
     "availability": "Il n’en reste que 1 #078-2930-0"
   },
   {
+    "title": "Ensemble de rôtisserie robuste Vida by PADERNOMC",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking-accessories/0850011/vida-rotisserie-kit-fe7718b3-3b94-4026-a549-37b352656333-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 94.99,
+    "salePrice": 44.93,
+    "store": "Canadian Tire",
+    "city": "Windsor South, ON",
+    "branch": "Windsor South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ensemble-de-rotisserie-robuste-vida-by-padernomc-0850011p.html",
+    "sku": "0850011",
+    "availability": "Il n’en reste que 2 #085-0011-2"
+  },
+  {
+    "title": "Aspirateur de déchets secs/humides compact 3-en-1 Simoniz PWR POD avec tuyau et accessoires",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-tools/0398256/simoniz-pwr-pod-wet-dry-vac-5f04eace-45c9-4895-9e3d-774df8898131-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 189.99,
+    "salePrice": 90.93,
+    "store": "Canadian Tire",
+    "city": "Windsor South, ON",
+    "branch": "Windsor South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/aspirateur-de-dechets-secs-humides-compact-3-en-1-simoniz-pwr-pod-avec-tuyau-et-accessoires-0398256p.html",
+    "sku": "0398256",
+    "availability": "Il n’en reste que 2 #039-8256-4"
+  },
+  {
+    "title": "VFI Helly Hansen à gonflage automatique",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-water-fun/0793043/helly-hansen-personal-flotation-device-automatic-inflate-2caed308-e4c4-4792-a4f0-e0dfb43af7d1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 249.99,
+    "salePrice": 99.93,
+    "store": "Canadian Tire",
+    "city": "Windsor South, ON",
+    "branch": "Windsor South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/vfi-helly-hansen-a-gonflage-automatique-0793043p.html",
+    "sku": "0793043",
+    "availability": "Il n’en reste que 2 #079-3043-4"
+  },
+  {
     "title": "Ampoules à DEL à intensité variable globe à culot E26 NOMA G25, 350 lumens, blanc chaud, 40 W, paq. 2",
     "image": "https://media-www.canadiantire.ca/product/fixing/electrical/light-bulbs/0529899/noma-40w-g25-clear-warm-white-2-pack-led-bulbs-db97b8fa-1061-4bd6-a9b4-72d1a5c1b328-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 18.99,
@@ -166,6 +322,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/ampoules-a-del-a-intensite-variable-globe-a-culot-e26-noma-g25-350-lumens-blanc-chaud-40-w-paq-2-0529899p.html",
     "sku": "0529899",
     "availability": "65 En Stock#052-9899-4"
+  },
+  {
+    "title": "Grandes assiettes en fibre de bambou CANVAS, paq. 1, gris",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0597852/canvas-dual-tone-organic-dinner-plate-3d0be8b4-1843-43ea-b675-1263bd5ab2e8-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 7.99,
+    "salePrice": 3.93,
+    "store": "Canadian Tire",
+    "city": "Windsor South, ON",
+    "branch": "Windsor South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/grandes-assiettes-en-fibre-de-bambou-canvas-paq-1-gris-0597852p.html",
+    "sku": "0597852",
+    "availability": "Il n’en reste que 5 #059-7852-2"
   },
   {
     "title": "Captiva Capterra - Causeuse de jardin en plastique recyclé , beige",
@@ -195,7 +363,7 @@
     "title": "Sacs pour cadeaux-surprises La Reine des neiges 2, paq. 8",
     "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8420233/frozen-2-favour-bags-8ct-83513744-dd34-4e89-b6c1-5475e9ff9c65-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 8.99,
-    "salePrice": 3.93,
+    "salePrice": 2.93,
     "store": "Canadian Tire",
     "city": "Windsor South, ON",
     "branch": "Windsor South, ON",
@@ -264,6 +432,18 @@
     "availability": ""
   },
   {
+    "title": "Lustre à 5 lampes CANVAS Carlaw, noir mat",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/lighting/1522603/canvas-carlaw-chandelier-ef5bf9bd-067d-4da3-a17e-a6a58e40ec10-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 249.99,
+    "salePrice": 99.93,
+    "store": "Canadian Tire",
+    "city": "Windsor South, ON",
+    "branch": "Windsor South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/lustre-a-5-lampes-canvas-carlaw-noir-mat-1522603p.html",
+    "sku": "1522603",
+    "availability": "Il n’en reste que 3 #152-2603-2"
+  },
+  {
     "title": "Île flottante gonflable flamant rose pour fête avec glacière pour 5 personnes, rose",
     "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-water-fun/0797172/flamingo-party-island-b71f8770-4e8b-4db4-b101-be4c92655286-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 199.99,
@@ -274,6 +454,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/ile-flottante-gonflable-flamant-rose-pour-fete-avec-glaciere-pour-5-personnes-rose-0797172p.html",
     "sku": "0797172",
     "availability": "Il n’en reste que 1 #079-7172-2"
+  },
+  {
+    "title": "Aerobie Flingo",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/seasonal-toys/0508726/aerobie-flingo-c60622f4-3597-41af-9b21-15aca2bdd034-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 32.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Windsor South, ON",
+    "branch": "Windsor South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/aerobie-flingo-0508726p.html",
+    "sku": "0508726",
+    "availability": "Il n’en reste que 3 #050-8726-6"
   },
   {
     "title": "Filtre à carburant portatif FloTool Mr. Funnel, F3NC",
@@ -297,7 +489,7 @@
     "branch": "Windsor South, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/pinces-maximum-acier-forge-de-haute-qualite-prise-souple-en-vinyle-embouts-a-code-de-couleur-paq-4-0589754p.html",
     "sku": "0589754",
-    "availability": "Il n’en reste que 3 #058-9754-6"
+    "availability": "Il n’en reste que 2 #058-9754-6"
   },
   {
     "title": "Garde-boues avant et arrière personnalisés Husky Liners 56896 pour camion Sierra de GMC, 2014 à 2018, paquet de 4",
@@ -324,16 +516,28 @@
     "availability": "Il n’en reste que 1 #052-2855-0"
   },
   {
-    "title": "Leurre Powerbait Swim Shad, 4 po",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0775565/berkley-powerbait-swim-shad-blue-gill-4--61bd7785-b30d-44af-9926-1af3e81e0198-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 8.99,
-    "salePrice": 4.43,
+    "title": "Statue de pélican en métal For Living, 18,90 po",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0597390/for-living-metal-pelican-statue-fa1d088f-f773-4f19-8a87-46d16f58d100-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 49.99,
+    "salePrice": 19.93,
     "store": "Canadian Tire",
     "city": "Windsor South, ON",
     "branch": "Windsor South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/leurre-powerbait-swim-shad-4-po-0775564p.html",
-    "sku": "0775564",
-    "availability": ""
+    "url": "https://www.canadiantire.ca/fr/pdp/statue-de-pelican-en-metal-for-living-18-90-po-0597390p.html",
+    "sku": "0597390",
+    "availability": "Il n’en reste que 1 #059-7390-0"
+  },
+  {
+    "title": "Gilet de sauvetage/VFI dessin animé Marvel Spider-Man pour poupons, rouge",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-water-fun/0791893/marvel-cartoon-infant-boy-nylon-pfd-9dc5e8a9-60de-441c-ad51-26f6f3db5b2c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 57.99,
+    "salePrice": 24.93,
+    "store": "Canadian Tire",
+    "city": "Windsor South, ON",
+    "branch": "Windsor South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/gilet-de-sauvetage-vfi-dessin-anime-marvel-spider-man-pour-poupons-rouge-0791893p.html",
+    "sku": "0791893",
+    "availability": "Il n’en reste que 2 #079-1893-2"
   },
   {
     "title": "Brosse à manchette en nylon pour doublure de caisse Sure Seal Dominion",
@@ -432,30 +636,6 @@
     "availability": "Il n’en reste que 1 #037-9257-0"
   },
   {
-    "title": "Montre intelligente VTech Kidizoom Dx4 avec 2 caméras, mauve",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/preschool-toys-activities/1501196/vtecha-kidizooma-smartwatch-dx4-purple-281f528b-eb74-4daf-bdb3-8b4db9fae4e9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 69.99,
-    "salePrice": 34.99,
-    "store": "Canadian Tire",
-    "city": "Windsor South, ON",
-    "branch": "Windsor South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/montre-intelligente-vtech-kidizoom-dx4-avec-2-cameras-mauve-1501196p.html",
-    "sku": "1501196",
-    "availability": "Il n’en reste que 1 #150-1196-0"
-  },
-  {
-    "title": "Véhicule de sauvetage Chase PAT'Patrouille, camion jouet, 3 ans et +",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/preschool-toys-activities/1501053/paw-patrol-rescue-theme-vehicle-chase-solid-2d04d9df-80e8-4eb2-abff-9b1c670598e6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 24.99,
-    "salePrice": 10,
-    "store": "Canadian Tire",
-    "city": "Windsor South, ON",
-    "branch": "Windsor South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/vehicule-de-sauvetage-chase-pat-patrouille-camion-jouet-3-ans-et-1501053p.html",
-    "sku": "1501053",
-    "availability": "20 En Stock#150-1053-0"
-  },
-  {
     "title": "Banderole 65e anniversaire prismat célébration étincelante",
     "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8420220/prismatic-65th-birthday-banner-sparkling-celebration-b53f1cd4-964b-4f4e-87ae-d51b8ff79ff5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 6.99,
@@ -504,6 +684,18 @@
     "availability": "Il n’en reste que 2 #150-1195-2"
   },
   {
+    "title": "Ruban autocollant non marquant Invincible Marine, noir, 2 po x 10 pi",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0790408/nonskid-tape-2-x10-black-74900f5f-e8e2-44d5-b3f1-d3182c41a6a4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 17.99,
+    "salePrice": 8.93,
+    "store": "Canadian Tire",
+    "city": "Windsor South, ON",
+    "branch": "Windsor South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ruban-autocollant-non-marquant-invincible-marine-noir-2-po-x-10-pi-0790408p.html",
+    "sku": "0790408",
+    "availability": "Il n’en reste que 2 #079-0408-6"
+  },
+  {
     "title": "Tête de dandinette à tube Danielson, non peinte, paq. 10",
     "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0787763/danielson-jig-head-unpainted-tube-1-4oz-a8cba4dd-f1cf-4bcd-9875-5f33556c0066-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 4.99,
@@ -540,6 +732,18 @@
     "availability": "Il n’en reste que 1 #060-1571-0"
   },
   {
+    "title": "Support de boule d'attelage de remorques et accessoires de démarrage REESE Towpower Interlock, abaissement de 5 po",
+    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0408618/reese-towpower-class-v-interlock-towing-starter-kit-5in-drop-2a673dbd-8136-4f0d-96a1-1676ee7f6926-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 149.99,
+    "salePrice": 69.93,
+    "store": "Canadian Tire",
+    "city": "Windsor South, ON",
+    "branch": "Windsor South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/support-de-boule-d-attelage-de-remorques-et-accessoires-de-demarrage-reese-towpower-interlock-abaissement-de-5-po-0408618p.html",
+    "sku": "0408618",
+    "availability": "Il n’en reste que 1 #040-8618-8"
+  },
+  {
     "title": "Rallonge connecteur plat à 4 fils Hopkins Towing Solution, 48 po",
     "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0409654/4-wire-flat-48-extension-3ec1227d-bc37-4568-8651-5d32d7b8ff84-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 11.99,
@@ -564,16 +768,16 @@
     "availability": "Il n’en reste que 1 #020-3755-8"
   },
   {
-    "title": "Ampoule à DEL à culot E26 et adaptateur de culot non variable Feit Electric, 5000K, lumière du jour, 338 W",
-    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/light-bulbs/0528064/feit-led-cylindrical-medium-base-bulb-38w-non-dimmable-eb57731e-d503-4c1a-96a7-da3082c52731-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 59.99,
-    "salePrice": 29.99,
+    "title": "Haut antifrottements Outbound à manches longues, coupe décontractée, protection UV, hommes, bleu",
+    "image": "https://media-www.canadiantire.ca/product/playing/footwear-apparel/summer-footwear-apparel/1873384/outbound-upf-long-sleeve-rashguard-men-size-m-46da2a91-f345-4e70-89b8-a336851a961a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 27.99,
+    "salePrice": 9.93,
     "store": "Canadian Tire",
     "city": "Windsor South, ON",
     "branch": "Windsor South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/ampoule-a-del-a-culot-e26-et-adaptateur-de-culot-non-variable-feit-electric-5000k-lumiere-du-jour-338-w-0528064p.html",
-    "sku": "0528064",
-    "availability": "Il n’en reste que 3 #052-8064-6"
+    "url": "https://www.canadiantire.ca/fr/pdp/haut-antifrottements-outbound-a-manches-longues-coupe-decontractee-protection-uv-hommes-bleu-1873384p.html",
+    "sku": "1873384",
+    "availability": ""
   },
   {
     "title": "Lames tout usage de rechange Cold Steel pour couteaux Replace-A-Blade, 3-1/2 po, paq. 6",
@@ -621,7 +825,7 @@
     "branch": "Windsor South, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/minuterie-d-arrosage-melnor-bluetooth-pour-1-zone-1591318p.html",
     "sku": "1591318",
-    "availability": "Il n’en reste que 3 #159-1318-4"
+    "availability": "Il n’en reste que 2 #159-1318-4"
   },
   {
     "title": "Crochets triples Peerless, acier inoxydable, nickel satiné, paq. 3",
@@ -684,30 +888,6 @@
     "availability": "Il n’en reste que 1 #063-0619-0"
   },
   {
-    "title": "Serpentin en mousse pour dévoilement du sexe fille, paq. 2",
-    "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8436917/girl-gender-reveal-streamer-string-2ct-d72beef0-73fc-4426-b109-b9f24ed6ab11-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 12.99,
-    "salePrice": 6.49,
-    "store": "Canadian Tire",
-    "city": "Windsor South, ON",
-    "branch": "Windsor South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/serpentin-en-mousse-pour-devoilement-du-sexe-fille-paq-2-8436917p.html",
-    "sku": "8436917",
-    "availability": "Il n’en reste que 1 #843-6917-8"
-  },
-  {
-    "title": "Connecteur VR à lame à 7 voies côté remorque et support Hopkins Towing Solution Endurance",
-    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0409649/endurance-7-rv-blade-trailer-end-with-bracket--354e1fc4-0ed8-4b03-bf9f-b4dffb7248f8-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 23.99,
-    "salePrice": 11.99,
-    "store": "Canadian Tire",
-    "city": "Windsor South, ON",
-    "branch": "Windsor South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/connecteur-vr-a-lame-a-7-voies-cote-remorque-et-support-hopkins-towing-solution-endurance-0409649p.html",
-    "sku": "0409649",
-    "availability": "Il n’en reste que 3 #040-9649-8"
-  },
-  {
     "title": "Gril en fonte Wilderness avec manche en bois, Rome, 28 po",
     "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-living/0766182/wilderness-grill-cast-iron-49e723ae-91ee-444f-b928-3e1a121d59b4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 29.99,
@@ -759,7 +939,7 @@
     "title": "Mèche pour radiateur",
     "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-living/0762913/wick-for-radiant-heater-8f32bade-461f-47af-8a38-400327693396-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 29.99,
-    "salePrice": 4.93,
+    "salePrice": 4.43,
     "store": "Canadian Tire",
     "city": "Windsor South, ON",
     "branch": "Windsor South, ON",
@@ -816,18 +996,6 @@
     "availability": "Il n’en reste que 1 #032-3941-6"
   },
   {
-    "title": "Traîneau/luge d'hiver pour bébés et tout-petits ERA Peanut avec housse de protection contre les intempéries et corde de remorquage",
-    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/winter-recreation/0820014/peanut-baby-sled-with-cover-98809854-a5b2-40cc-9d49-2cc1e56f0f9d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 59.99,
-    "salePrice": 29.99,
-    "store": "Canadian Tire",
-    "city": "Windsor South, ON",
-    "branch": "Windsor South, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/traineau-luge-d-hiver-pour-bebes-et-tout-petits-era-peanut-avec-housse-de-protection-contre-les-intemperies-et-corde-de-remorquage-0820014p.html",
-    "sku": "0820014",
-    "availability": "Il n’en reste que 5 #082-0014-2"
-  },
-  {
     "title": "Leurre monté Savage Gear 3D, vraie anguille, 12 po",
     "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/1784825/savage-gear-3d-eel-12-2-3-4oz-slow-sink-black-green-pearl-6fe690de-f11e-4388-ae58-6579fe257b6f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 19.99,
@@ -838,6 +1006,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/leurre-monte-savage-gear-3d-vraie-anguille-12-po-1784824p.html",
     "sku": "1784824",
     "availability": ""
+  },
+  {
+    "title": "Gants de travail d'extérieur longs en cuir Midwest, hommes, grand, gris/blanc",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/outdoor-tools/manual-lawn-garden-tools/1591285/midwest-mens-long-outdoor-work-gloves-l-0eba3a99-c6a2-4acd-9c7a-3c62b8679f72-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 32.99,
+    "salePrice": 15.93,
+    "store": "Canadian Tire",
+    "city": "Windsor South, ON",
+    "branch": "Windsor South, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/gants-de-travail-d-exterieur-longs-en-cuir-midwest-hommes-grand-gris-blanc-1591285p.html",
+    "sku": "1591285",
+    "availability": "Il n’en reste que 1 #159-1285-0"
   },
   {
     "title": "Serviettes de table pour boisson, Hibiscus blanches",
