@@ -1,15 +1,15 @@
 [
   {
-    "title": "Friteuse à air chaud à deux zones T-Fal Easy Fry, 8,3 L/8,7 ptes",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430340/t-fal-dual-zone-air-fryer-f30f9c50-9b02-4977-a8b9-2e9b9249a74e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 199.99,
-    "salePrice": 99.93,
+    "title": "Affûte-couteaux à 3 étapes MASTER Chef",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/cutlery/2421029/master-chef-3stage-knife-sharpener-b9ab2767-c8c0-473e-a296-6cb70527856a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 18.99,
+    "salePrice": 4.93,
     "store": "Canadian Tire",
     "city": "Strathroy, ON",
     "branch": "Strathroy, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/friteuse-a-air-chaud-a-deux-zones-t-fal-easy-fry-8-3-l-8-7-ptes-0430340p.html",
-    "sku": "0430340",
-    "availability": "Il n’en reste que 1 #043-0340-8"
+    "url": "https://www.canadiantire.ca/fr/pdp/affute-couteaux-a-3-etapes-master-chef-2421029p.html",
+    "sku": "2421029",
+    "availability": "Il n’en reste que 1 #242-1029-2"
   },
   {
     "title": "Jeu d'arcade de tir de basketball REC-Tek avec 4 balles et tableau de pointage électronique",
@@ -24,6 +24,18 @@
     "availability": "Il n’en reste que 3 #184-0694-0"
   },
   {
+    "title": "Toile pare soleil triangulaire ShelterLogic, 12 pi",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/0882240/shelter-logic-triangle-shade-sail-12--2c190960-0271-482d-a439-b31dbf8f42e7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 54.99,
+    "salePrice": 24.93,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/toile-pare-soleil-triangulaire-shelterlogic-12-pi-0882307p.html",
+    "sku": "0882307",
+    "availability": "Il n’en reste que 4 #088-2307-2"
+  },
+  {
     "title": "Four à pizza de table portatif au gaz Vida par PADERNO, 1 brûleur, 12 po",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking/0850001/vida-by-paderno-pizza-oven-c3f6852d-30b5-4ad8-96fe-41ea01ff0eaa-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 399.99,
@@ -36,16 +48,40 @@
     "availability": "Il n’en reste que 1 #085-0001-6"
   },
   {
+    "title": "Fauteuil de salle à manger d'extérieur/de terrasse CANVAS Belwood en aluminium et osier, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/0880541/canvas-belwood-aluminum-dining-chair-2-pack-de38f891-c44a-49df-a4e2-897c643e77fb-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 499.99,
+    "salePrice": 249.93,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/fauteuil-de-salle-a-manger-d-exterieur-de-terrasse-canvas-belwood-en-aluminium-et-osier-paq-2-0880541p.html",
+    "sku": "0880541",
+    "availability": "Il n’en reste que 1 #088-0541-4"
+  },
+  {
     "title": "Cintres pivotants compacts en velours Type A avec barre à pantalon, couleurs variées, paq. 40",
     "image": "https://media-www.canadiantire.ca/product/living/home-organization/closet-organization/0688308/type-a-velvet-suit-hanger-black-10pk-4afb3f73-0449-46d6-975c-369ae2760de2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 32.99,
-    "salePrice": 12.93,
+    "salePrice": 11.93,
     "store": "Canadian Tire",
     "city": "Strathroy, ON",
     "branch": "Strathroy, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/cintres-pivotants-compacts-en-velours-type-a-avec-barre-a-pantalon-couleurs-variees-paq-40-0688307p.html",
     "sku": "0688307",
     "availability": ""
+  },
+  {
+    "title": "Barbecue MASTER Chef G70220 Turismo, 4 brûleurs, propane avec tablettes latérales, 36 po",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking/0850106/master-chef-grill-turismo-4-burner-gas-griddle-cart-19667163-bb41-4715-b58c-645b95721288-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 399.99,
+    "salePrice": 199.93,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/barbecue-master-chef-g70220-turismo-4-bruleurs-propane-avec-tablettes-laterales-36-po-0850106p.html",
+    "sku": "0850106",
+    "availability": "Il n’en reste que 1 #085-0106-8"
   },
   {
     "title": "Ampoules à DEL à intensité variable à culot E12 NOMA B10, 2700K, 350 lumens, blanc chaud, 40 W, paq. 2",
@@ -75,7 +111,7 @@
     "title": "Parka technique de chasse perméable à l'air imperméable coupe-vent Yukon Gear pour hommes, camouflage Realtree Xtra",
     "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-apparel-footwear/3750716/yukon-gear-parka-2-rte-m-a47cf6f2-275c-44e1-93da-5eb1da27165e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 99.99,
-    "salePrice": 39.93,
+    "salePrice": 34.93,
     "store": "Canadian Tire",
     "city": "Strathroy, ON",
     "branch": "Strathroy, ON",
@@ -120,10 +156,34 @@
     "availability": "Il n’en reste que 1 #168-0221-6"
   },
   {
+    "title": "Tapis d'intérieur et d'extérieur CANVAS Basca, 8 x 10 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680048/basca-outdoor-rug-9605a092-adeb-4af7-9752-a7e7577775cb-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 72.99,
+    "salePrice": 34.93,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-d-interieur-et-d-exterieur-canvas-basca-8-x-10-pi-0680048p.html",
+    "sku": "0680048",
+    "availability": "Il n’en reste que 5 #068-0048-8"
+  },
+  {
+    "title": "Cadre et balançoire d'extérieur Plum Tamarin, prune",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/backyard-amusement/1841398/plum-tamarin-climbing-frame-4dba5804-8e4d-49e6-bc97-fcdef51d9d87-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 499.99,
+    "salePrice": 249.93,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/cadre-et-balancoire-d-exterieur-plum-tamarin-prune-1841398p.html",
+    "sku": "1841398",
+    "availability": "Il n’en reste que 1 #184-1398-0"
+  },
+  {
     "title": "Vélo électrique tout-terrain Raleigh Getaway 36 V, 700C roues, noir",
     "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycles/0711931/raleigh-getaway-men-s-electric-bike-700c-e4b77c61-6dc1-49c0-b6d7-114a1fe93cc4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 2799.99,
-    "salePrice": 1349.93,
+    "salePrice": 999.93,
     "store": "Canadian Tire",
     "city": "Strathroy, ON",
     "branch": "Strathroy, ON",
@@ -135,25 +195,49 @@
     "title": "Housse de pare-brise 2-en-1 MyRide pour soleil et neige, convient à la plupart des véhicules",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-winter-accessories/0304491/myride-sun-and-snow-windshield-cover-1d0e1f73-cc79-4090-b8a5-bdaefbe970b7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 32.99,
-    "salePrice": 12.93,
+    "salePrice": 9.93,
     "store": "Canadian Tire",
     "city": "Strathroy, ON",
     "branch": "Strathroy, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/housse-de-pare-brise-2-en-1-myride-pour-soleil-et-neige-convient-a-la-plupart-des-vehicules-0304491p.html",
     "sku": "0304491",
-    "availability": "Il n’en reste que 6 #030-4491-4"
+    "availability": "Il n’en reste que 5 #030-4491-4"
+  },
+  {
+    "title": "Dispositif de géolocalisation Bluetooth Bluehive, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/automotive/electronics/mobile-electronics/0355475/bluetooth-item-tracker-2-pack-86e73bc6-6622-4979-abea-6a9516c11a63-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 37.99,
+    "salePrice": 16.93,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/dispositif-de-geolocalisation-bluetooth-bluehive-paq-2-0355475p.html",
+    "sku": "0355475",
+    "availability": "15 En Stock#035-5475-8"
   },
   {
     "title": "Tapis de couloir d'intérieur et d'extérieur CANVAS Elmken, 3 x 5 pi",
     "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680046/baldi-3x5-outdoor-runner-rug-350670e1-7256-4998-93eb-5ec048a7e9e4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 29.99,
-    "salePrice": 14.93,
+    "salePrice": 9.93,
     "store": "Canadian Tire",
     "city": "Strathroy, ON",
     "branch": "Strathroy, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/tapis-de-couloir-d-interieur-et-d-exterieur-canvas-elmken-3-x-5-pi-0680046p.html",
     "sku": "0680046",
     "availability": "Il n’en reste que 1 #068-0046-2"
+  },
+  {
+    "title": "Lampe de sécurité à détecteur de mouvement à DEL solaire NOMA, noir",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/lighting/0529261/noma-solar-powered-led-motion-flood-light-52ea8793-3ce6-473d-8782-427bcf948e34-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 119.99,
+    "salePrice": 59.93,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/lampe-de-securite-a-detecteur-de-mouvement-a-del-solaire-noma-noir-0529261p.html",
+    "sku": "0529261",
+    "availability": "Il n’en reste que 2 #052-9261-0"
   },
   {
     "title": "Napperons ronds tressés CANVAS, crème, paq. 4",
@@ -171,7 +255,7 @@
     "title": "Table basse d'extérieur/de jardin CANVAS Hunter Circle, brun",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/1880276/canvas-hunter-coffee-table-491473be-72a0-4025-be82-acb6220fc9a0-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 279.99,
-    "salePrice": 132.93,
+    "salePrice": 119.93,
     "store": "Canadian Tire",
     "city": "Strathroy, ON",
     "branch": "Strathroy, ON",
@@ -180,16 +264,88 @@
     "availability": "Il n’en reste que 2 #188-0276-8"
   },
   {
+    "title": "Coussin de siège CANVAS Helene",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0882518/canvas-adelaide-seat-pad-79c13923-af04-4139-88e8-5a253b100930-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 52.99,
+    "salePrice": 24.93,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/coussin-de-siege-canvas-helene-0882518p.html",
+    "sku": "0882518",
+    "availability": "Il n’en reste que 1 #088-2518-0"
+  },
+  {
     "title": "Système d'attelage pour chien de camping Woods BALSAM-FUR avec corde réfléchissante, sac de rangement et mousqueton, 26,2 pi",
     "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-accessories/0766428/woods-balsam-fir-leash-hitch-system-7ceb8dca-bd85-4168-9006-4a582dc9b9c8-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 59.99,
-    "salePrice": 24.93,
+    "salePrice": 22.43,
     "store": "Canadian Tire",
     "city": "Strathroy, ON",
     "branch": "Strathroy, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/systeme-d-attelage-pour-chien-de-camping-woods-balsam-fur-avec-corde-reflechissante-sac-de-rangement-et-mousqueton-26-2-pi-0766428p.html",
     "sku": "0766428",
     "availability": "Il n’en reste que 2 #076-6428-8"
+  },
+  {
+    "title": "Vélo de montagne semi-rigide Raleigh Rogue, pneus surdimensionnés, roue de 26 po, rouge",
+    "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycles/0711974/raleigh-rogue-4-0-fat-tire-hardtail-mountain-bike-26-in-9d6902e1-33ed-4939-aa46-03c0ee34c9bd-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 849.99,
+    "salePrice": 399.93,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/velo-de-montagne-semi-rigide-raleigh-rogue-pneus-surdimensionnes-roue-de-26-po-rouge-0711974p.html",
+    "sku": "0711974",
+    "availability": "Il n’en reste que 1 #071-1974-6"
+  },
+  {
+    "title": "Lampes solaires sur piquet For Living, oiseau, 36,22 po, choix varié",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0597300/for-living-bird-stakes-assorted-30b467ea-303c-4241-ac34-039a62d2bc6e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 49.99,
+    "salePrice": 19.93,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/lampes-solaires-sur-piquet-for-living-oiseau-36-22-po-choix-varie-0597300p.html",
+    "sku": "0597300",
+    "availability": ""
+  },
+  {
+    "title": "Chaise haute d'extérieur CANVAS Mercier, cadre en acier, noir",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/1880295/canvas-mercier-high-dining-chair-b64fb3b2-0103-4328-ba64-8121ce4b07d4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 119.99,
+    "salePrice": 59.93,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/chaise-haute-d-exterieur-canvas-mercier-cadre-en-acier-noir-1880295p.html",
+    "sku": "1880295",
+    "availability": "Il n’en reste que 4 #188-0295-2"
+  },
+  {
+    "title": "Mini lanterne de camping à piles Outbound avec crochet de suspension, 130 lumens",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-living/0765620/outbound-mini-lantern-d60f44b8-fcd7-4c23-a4e5-fc550534f8a1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 44.99,
+    "salePrice": 22.43,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/mini-lanterne-de-camping-a-piles-outbound-avec-crochet-de-suspension-130-lumens-0765620p.html",
+    "sku": "0765620",
+    "availability": "Il n’en reste que 4 #076-5620-4"
+  },
+  {
+    "title": "Table à dîner haute d'extérieur/de jardin CANVAS Mercier avec dessus en verre trempé, noir",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/1880294/canvas-mercier-high-dining-table-a1e4ede4-bd3b-4e48-b361-73188e8df24d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 249.99,
+    "salePrice": 99.93,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/table-a-diner-haute-d-exterieur-de-jardin-canvas-mercier-avec-dessus-en-verre-trempe-noir-1880294p.html",
+    "sku": "1880294",
+    "availability": "Il n’en reste que 1 #188-0294-4"
   },
   {
     "title": "Panneau solaire cristallin de type mallette Coleman, 60 W",
@@ -207,7 +363,7 @@
     "title": "Lampe à faisceau large à DEL Mastercraft, 1500 lumens, compatible PWR POD",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0372969/mastercraft-1500-lumens-spotlight-pwr-pod-compatible-363c7083-04a4-4a37-b863-da8214fd1958-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 119.99,
-    "salePrice": 44.93,
+    "salePrice": 31.93,
     "store": "Canadian Tire",
     "city": "Strathroy, ON",
     "branch": "Strathroy, ON",
@@ -219,7 +375,7 @@
     "title": "Bec verseur de rechange Reliance, 53 mm",
     "image": "https://media-www.canadiantire.ca/product/playing/camping/hydration-coolers/0854308/reliance-replacement-spout-assembly-084b6ed6-c410-4129-915c-26becd3c163c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 9.99,
-    "salePrice": 4.93,
+    "salePrice": 4.43,
     "store": "Canadian Tire",
     "city": "Strathroy, ON",
     "branch": "Strathroy, ON",
@@ -240,6 +396,30 @@
     "availability": "33 En Stock#076-6474-6"
   },
   {
+    "title": "Lampe tulipe à énergie solaire sur piquet For Living, choix varié",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/1590077/for-living-solar-powered-tulip-stake-assorted-67716efc-ba0f-46c6-ae49-281197afc2ad-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 7.93,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/lampe-tulipe-a-energie-solaire-sur-piquet-for-living-choix-varie-1590077p.html",
+    "sku": "1590077",
+    "availability": "Il n’en reste que 3 #159-0077-2"
+  },
+  {
+    "title": "Lit pneumatique double hauteur Coleman, matelas pneumatique avec pompe rechargeable, lit 1 place",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-furniture/0763775/coleman-rechargeable-built-in-pump-double-high-airbed-queen-d1fdbccf-d1a2-4729-b63e-a0304ff7694a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 199.99,
+    "salePrice": 99.93,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/lit-pneumatique-double-hauteur-coleman-matelas-pneumatique-avec-pompe-rechargeable-lit-1-place-0763774p.html",
+    "sku": "0763774",
+    "availability": ""
+  },
+  {
     "title": "Détecteur de métal étanche Bounty Hunter Fisher F22",
     "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-living/0792236/fisher-f22-weatherproof-metal-detector-0e9268de-9109-4b78-a402-447c85071309-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 409.99,
@@ -252,6 +432,18 @@
     "availability": "Il n’en reste que 1 #079-2236-2"
   },
   {
+    "title": "Tournebroche universel pour barbecue MASTER Chef",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking-accessories/0852228/master-chef-rotisserie-69650bd9-9170-4689-9dcb-c61a36aa2c25-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 74.99,
+    "salePrice": 34.93,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tournebroche-universel-pour-barbecue-master-chef-0852228p.html",
+    "sku": "0852228",
+    "availability": "Il n’en reste que 4 #085-2228-6"
+  },
+  {
     "title": "Trousse de sécurités de récupération MotoMaster Overland",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-winter-accessories/0304237/overland-safety-kit-3adb39d0-fe41-4b7f-be8f-94aacac84a8d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 124.99,
@@ -262,6 +454,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-securites-de-recuperation-motomaster-overland-0304237p.html",
     "sku": "0304237",
     "availability": "Il n’en reste que 3 #030-4237-2"
+  },
+  {
+    "title": "Barre d'alimentation d'extérieur CANVAS Horizon",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/1881322/canvas-horizon-outdoor-power-bar-24b43fe3-fdba-4407-9d9e-7150807584fd-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 49.99,
+    "salePrice": 24.93,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/barre-d-alimentation-d-exterieur-canvas-horizon-1881322p.html",
+    "sku": "1881322",
+    "availability": "Il n’en reste que 2 #188-1322-2"
   },
   {
     "title": "Panneau solaire cristallin hors réseau Coleman de 175 W pour batteries de 12 V",
@@ -291,7 +495,7 @@
     "title": "Éclairage à DEL de meuble de salle de bain Artika Crystal Nest",
     "image": "https://media-www.canadiantire.ca/product/living/home-decor/lighting/0521707/artika-crystal-nest-vanity-fecadf35-01bd-490c-9199-1b8e9633a284-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 144.99,
-    "salePrice": 59.93,
+    "salePrice": 31.93,
     "store": "Canadian Tire",
     "city": "Strathroy, ON",
     "branch": "Strathroy, ON",
@@ -310,6 +514,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/batterie-au-lithium-ion-de-rechange-yardworks-36-v-2-ah-0601765p.html",
     "sku": "0601765",
     "availability": "Il n’en reste que 7 #060-1765-0"
+  },
+  {
+    "title": "Scellant en vaporisateur Sonax Spray and Seal, 473 mL",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-chemicals/0393678/sonax-spray-and-seal-473ml-43c2fbd5-6c36-4273-b228-48dc3cba1e38-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 29.99,
+    "salePrice": 11.93,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/scellant-en-vaporisateur-sonax-spray-and-seal-473-ml-0393678p.html",
+    "sku": "0393678",
+    "availability": "Il n’en reste que 3 #039-3678-0"
   },
   {
     "title": "Gourde Woods, moyen",
@@ -351,7 +567,7 @@
     "title": "Pomme de douche Danze Sheridan à poignée simple et 1 pulvérisation, pour baignoire et douche, chrome",
     "image": "https://media-www.canadiantire.ca/product/fixing/plumbing/faucets-fixtures/0638012/danze-sheridan-1-handle-tub-shower-faucet-chrome-d1b5c804-0cdb-4e9e-ab4c-83dc880f0f2b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 149.99,
-    "salePrice": 59.93,
+    "salePrice": 54.93,
     "store": "Canadian Tire",
     "city": "Strathroy, ON",
     "branch": "Strathroy, ON",
@@ -360,10 +576,34 @@
     "availability": "Il n’en reste que 1 #063-8012-4"
   },
   {
+    "title": "Sangle à cliquet MotoMaster Tire Bonnet, résistance à la rupture de 10 000 lb, 2 po",
+    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/tarps-cords/0403059/10-000lb-tire-bonnet-ratchet-tie-down-1-pk-486469da-61b4-4ac6-b835-7eed7496afde-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 52.99,
+    "salePrice": 24.93,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/sangle-a-cliquet-motomaster-tire-bonnet-resistance-a-la-rupture-de-10-000-lb-2-po-0403059p.html",
+    "sku": "0403059",
+    "availability": "Il n’en reste que 1 #040-3059-8"
+  },
+  {
+    "title": "Chaîne à maillons ovales robustes Atron Electro Industries, calibre 8, 3 pi, couleurs variées",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/rough-electrical/0522856/heavy-duty-chain-8-gauge-chrome-3--f1c23bea-bed9-4796-a1ab-77e6c4057eae-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 4.99,
+    "salePrice": 1.93,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/chaine-a-maillons-ovales-robustes-atron-electro-industries-calibre-8-3-pi-couleurs-variees-0522856p.html",
+    "sku": "0522856",
+    "availability": ""
+  },
+  {
     "title": "Trousse de sécurité pour camionnette MotoMaster",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-winter-accessories/0304236/truck-safety-kit-d498c5fe-902d-4659-a756-22f086ca6de9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 124.99,
-    "salePrice": 52.93,
+    "salePrice": 37.93,
     "store": "Canadian Tire",
     "city": "Strathroy, ON",
     "branch": "Strathroy, ON",
@@ -396,16 +636,40 @@
     "availability": "Il n’en reste que 5 #046-3369-8"
   },
   {
+    "title": "Balles éclairées Luminator, multicolore, 5 ans et plus, pour plage/piscine, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-fun/0810208/luminator-skim-ball-2-pack-d0aa68e5-3672-426f-aa70-79a3c5cd076f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 12.99,
+    "salePrice": 4.93,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/balles-eclairees-luminator-multicolore-5-ans-et-plus-pour-plage-piscine-paq-2-0810208p.html",
+    "sku": "0810208",
+    "availability": "Il n’en reste que 3 #081-0208-4"
+  },
+  {
     "title": "Filet fin pour tête résistant aux insectes Bushline pour jeunes pour le camping, la pêche et la randonnée",
     "image": "https://media-www.canadiantire.ca/product/playing/footwear-apparel/summer-footwear-apparel/1871187/youth-fine-mesh-head-net-9-5-diameter-6a672508-ccf9-4e85-9eac-b94d2c016617-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 5.99,
-    "salePrice": 1.93,
+    "salePrice": 1.43,
     "store": "Canadian Tire",
     "city": "Strathroy, ON",
     "branch": "Strathroy, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/filet-fin-pour-tete-resistant-aux-insectes-bushline-pour-jeunes-pour-le-camping-la-peche-et-la-randonnee-1871187p.html",
     "sku": "1871187",
     "availability": "Il n’en reste que 7 #187-1187-6"
+  },
+  {
+    "title": "Fontaine de jardin d’extérieur prince grenouille For Living",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/1590071/for-living-frog-prince-fountain-05597899-04be-49ac-b62d-723ad57fbb1f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 99.99,
+    "salePrice": 49.93,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/fontaine-de-jardin-d-exterieur-prince-grenouille-for-living-1590071p.html",
+    "sku": "1590071",
+    "availability": "Il n’en reste que 1 #159-0071-4"
   },
   {
     "title": "Barre lumineuse et projecteur à DEL Alpena TREKTECMC D22P, 6 300 lumens",
@@ -420,10 +684,34 @@
     "availability": "Il n’en reste que 2 #020-3535-2"
   },
   {
+    "title": "Ampoule Edison rétro suspendue en plastique avec pince For Living",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-lighting/0521726/for-living-edison-bulb-clip-light-49cbe450-e5bf-4c9c-9615-24efee3b4f3d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 12.99,
+    "salePrice": 4.93,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ampoule-edison-retro-suspendue-en-plastique-avec-pince-for-living-0521726p.html",
+    "sku": "0521726",
+    "availability": "Il n’en reste que 7 #052-1726-4"
+  },
+  {
+    "title": "Housse verticale de barbecue Vermont Castings, hydrofuge résistant aux intempéries et aux UV, petit, gris",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking-accessories/0852172/vermont-castings-grill-cover-small-24c9f540-0281-4c3d-ac2b-56a94748634b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 89.99,
+    "salePrice": 39.93,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/housse-verticale-de-barbecue-vermont-castings-hydrofuge-resistant-aux-intemperies-et-aux-uv-petit-gris-0852172p.html",
+    "sku": "0852172",
+    "availability": "Il n’en reste que 1 #085-2172-6"
+  },
+  {
     "title": "Chargeur d'auto à 2 ports, charge principale rapide, compatible avec la plupart des appareils",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-electronics/0355519/bulk-fast-charge-dual-port-car-charger-d7b172c0-37fb-4747-84f5-580cc1850364-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 9.99,
-    "salePrice": 3.93,
+    "salePrice": 2.93,
     "store": "Canadian Tire",
     "city": "Strathroy, ON",
     "branch": "Strathroy, ON",
@@ -444,10 +732,22 @@
     "availability": "Il n’en reste que 1 #040-1978-2"
   },
   {
+    "title": "Trousse de marquage pour terrain de tennis léger Matrix, extérieur et intérieur",
+    "image": "https://media-www.canadiantire.ca/product/playing/team-sports-and-golf/court-sports/1841582/matrix-pickleball-court-marking-kit-86d4bf9f-f745-4404-99de-d2cc4f33c786-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 37.99,
+    "salePrice": 16.93,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-marquage-pour-terrain-de-tennis-leger-matrix-exterieur-et-interieur-1841582p.html",
+    "sku": "1841582",
+    "availability": "Il n’en reste que 1 #184-1582-0"
+  },
+  {
     "title": "Rail d'éclairage à 4 lampes avec abat-jour en cristal NOMA Cora, chrome",
     "image": "https://media-www.canadiantire.ca/product/living/home-decor/lighting/0528002/track-4-light-cora-73437bd7-39f4-4580-99f7-c545f545db5e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 139.99,
-    "salePrice": 59.93,
+    "salePrice": 39.93,
     "store": "Canadian Tire",
     "city": "Strathroy, ON",
     "branch": "Strathroy, ON",
@@ -456,10 +756,22 @@
     "availability": "Il n’en reste que 1 #052-8002-4"
   },
   {
+    "title": "Sac de guidon grand format Raleigh",
+    "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycle-accessories/0730559/raleigh-bulk-handlebar-bag-a761db84-2894-4390-a8a2-abfb605a0db5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 45.99,
+    "salePrice": 22.43,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/sac-de-guidon-grand-format-raleigh-0730559p.html",
+    "sku": "0730559",
+    "availability": ""
+  },
+  {
     "title": "Pantalon de chasse isolé imperméable coupe-vent Yukon Gear Max 5, camouflage Realtree Max 5",
     "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-apparel-footwear/1758580/yukon-gear-realtree-max-5-pants-m-a244d43e-2c4b-4acc-8837-bdd79ebe07d1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 149.99,
-    "salePrice": 61.43,
+    "salePrice": 59.93,
     "store": "Canadian Tire",
     "city": "Strathroy, ON",
     "branch": "Strathroy, ON",
@@ -471,25 +783,61 @@
     "title": "Housse hydrofuge pour trampoline rond, 12 pi, sangles robustes, bleu",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/backyard-amusement/0846890/trampoline-cover-8--8c784a3a-3ac1-4366-81b8-72f341ce4c04-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 29.99,
-    "salePrice": 3.93,
+    "salePrice": 3.43,
     "store": "Canadian Tire",
     "city": "Strathroy, ON",
     "branch": "Strathroy, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/housse-hydrofuge-pour-trampoline-rond-12-pi-sangles-robustes-bleu-0846893p.html",
     "sku": "0846893",
-    "availability": "Il n’en reste que 5 #084-6893-8"
+    "availability": "Il n’en reste que 4 #084-6893-8"
   },
   {
     "title": "Garde-boue arrière réglable Raleigh pour vélo, pour la plupart des vélos, 31,8 mm",
     "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycle-accessories/0733072/raleigh-adjustable-rear-fender-573905a0-0bff-493b-948d-fcdcf09766a1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 33.99,
-    "salePrice": 16.43,
+    "salePrice": 14.73,
     "store": "Canadian Tire",
     "city": "Strathroy, ON",
     "branch": "Strathroy, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/garde-boue-arriere-reglable-raleigh-pour-velo-pour-la-plupart-des-velos-31-8-mm-0733072p.html",
     "sku": "0733072",
     "availability": ""
+  },
+  {
+    "title": "Glissade d'eau à une voie Zuru Bunch O Balloons, fête tropicale",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/seasonal-toys/0509711/bunch-o-balloons-tropical-party-single-lane-water-slide-f90cfdaa-b1ec-4672-84e8-07e4b7371019-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 25.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/glissade-d-eau-a-une-voie-zuru-bunch-o-balloons-fete-tropicale-0509711p.html",
+    "sku": "0509711",
+    "availability": ""
+  },
+  {
+    "title": "Masque de plongée teinté antibuée pour jeunes et adultes Bestway Hydro-ProMC, G/TG, bleu",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-fun/0813870/hydro-force-flowtech-snorkeling-mask-l-xl-6d97dc69-f8ce-493e-9903-58b92212e931-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 79.99,
+    "salePrice": 39.93,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/masque-de-plongee-teinte-antibuee-pour-jeunes-et-adultes-bestway-hydro-promc-g-tg-bleu-0813870p.html",
+    "sku": "0813870",
+    "availability": "Il n’en reste que 2 #081-3870-6"
+  },
+  {
+    "title": "Boule de lave requin Goofy Foot, pour l'intérieur et l'extérieur, 3 ans et plus",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/seasonal-toys/0509737/shark-lava-ball-b417b47f-a51b-4d1a-b8b6-4bd4e60eeef9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 9.99,
+    "salePrice": 1.93,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/boule-de-lave-requin-goofy-foot-pour-l-interieur-et-l-exterieur-3-ans-et-plus-0509737p.html",
+    "sku": "0509737",
+    "availability": "143 En Stock#050-9737-4"
   },
   {
     "title": "Rouleau décoratif pour décor mural Battle Royal",
@@ -516,6 +864,18 @@
     "availability": ""
   },
   {
+    "title": "Housse robuste de barbecue à granules Vermont Castings, hydrofuge résistant aux intempéries et aux rayons UV, moyen, noir",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking-accessories/0852364/vermont-castings-750-sq-in-pellet-grill-cover-37717a30-bcbc-47cc-8337-9517281caeeb-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 109.99,
+    "salePrice": 49.93,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/housse-robuste-de-barbecue-a-granules-vermont-castings-hydrofuge-resistant-aux-intemperies-et-aux-rayons-uv-moyen-noir-0852364p.html",
+    "sku": "0852364",
+    "availability": "Il n’en reste que 1 #085-2364-0"
+  },
+  {
     "title": "Filtre pour aspirateur Hoover Power Vac",
     "image": "https://media-www.canadiantire.ca/product/living/cleaning/vacuums-and-floorcare/0438100/hoover-power-vac-filter-d8c10f2b-3ed2-4a1a-bae9-c2f8eb59ba8e.png?im=whresize&wid=200&hei=200",
     "price": 17.99,
@@ -526,6 +886,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/filtre-pour-aspirateur-hoover-power-vac-0438100p.html",
     "sku": "0438100",
     "availability": "Il n’en reste que 1 #043-8100-2"
+  },
+  {
+    "title": "Housse de pare-brise Mallory Artic",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-winter-accessories/0304231/mallory-artic-windshield-cover-011618a4-6e16-4b05-acca-39665bdfee0b.png?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/housse-de-pare-brise-mallory-artic-0304231p.html",
+    "sku": "0304231",
+    "availability": "Il n’en reste que 3 #030-4231-4"
   },
   {
     "title": "Lampe d'appoint avec abat-jour en métal CANVAS Stellan, 10,4 po, noyer/béton",
@@ -564,8 +936,32 @@
     "availability": "Il n’en reste que 4 #842-0292-0"
   },
   {
+    "title": "Jouet interactif animal numérique Punirunes",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/preschool-toys-activities/1501068/punirume-c646059f-31b7-4c2c-8315-85a226ffdde1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 59.99,
+    "salePrice": 29.93,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/jouet-interactif-animal-numerique-punirunes-1501068p.html",
+    "sku": "1501068",
+    "availability": "Il n’en reste que 4 #150-1068-6"
+  },
+  {
+    "title": "Masque et tuba Speedo Expedition pour adulte",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-fun/0810426/speedo-adult-expedition-mask-and-snorkel-set-f40f8d01-5643-42b7-a31c-88719dcc120b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 59.99,
+    "salePrice": 29.93,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/masque-et-tuba-speedo-expedition-pour-adulte-0810426p.html",
+    "sku": "0810426",
+    "availability": "Il n’en reste que 2 #081-0426-4"
+  },
+  {
     "title": "Plomb fendu sans plomb Red Wolf",
-    "image": "undefined?im=whresize&wid=200&hei=200",
+    "image": "undefined",
     "price": 14.99,
     "salePrice": 6.73,
     "store": "Canadian Tire",
@@ -603,7 +999,7 @@
     "title": "Chaîne à maillons ovales Atron Electro Industries LA736, calibre 8, chrome, 3 pi",
     "image": "https://media-www.canadiantire.ca/product/fixing/electrical/rough-electrical/0523184/3-chrome-chain-3e6e5307-04fd-4275-9163-37f03ab17308-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 3.99,
-    "salePrice": 1.43,
+    "salePrice": 0.93,
     "store": "Canadian Tire",
     "city": "Strathroy, ON",
     "branch": "Strathroy, ON",
@@ -660,6 +1056,18 @@
     "availability": ""
   },
   {
+    "title": "Ballon en aluminium satiné, fantôme, blanc irisé, 28 po, gonflement à l'hélium et ruban inclus, pour l'Halloween",
+    "image": "https://media-www.canadiantire.ca/product/automotive/party-city-everyday/party-city-balloons-accessories/8431610/giant-iridescent-ghost-supershape-balloon-1b6712c3-1e8d-413e-84e7-f6c25dc8eaa9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 16.99,
+    "salePrice": 6.93,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ballon-en-aluminium-satine-fantome-blanc-irise-28-po-gonflement-a-l-helium-et-ruban-inclus-pour-l-halloween-8431610p.html",
+    "sku": "8431610",
+    "availability": "Il n’en reste que 1 #843-1610-6"
+  },
+  {
     "title": "Boucles Atron Electro Industries LA766, type mâle, bronze huilé, 1/8 IPS",
     "image": "https://media-www.canadiantire.ca/product/fixing/electrical/rough-electrical/0522875/oil-rubbed-bronze-male-loops-8231521b-1e73-48cb-87b8-eca4fa5b86eb-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 2.79,
@@ -687,7 +1095,7 @@
     "title": "Chaussures/sandales de randonnée à bout fermé Outbound Cove pour enfants avec semelle d'usure durable, gris/rose",
     "image": "https://media-www.canadiantire.ca/product/playing/footwear-apparel/summer-footwear-apparel/1872773/outbound-girls-cove-closed-toe-sandal-1-8ab6e4bd-45a1-43c8-af5c-05d789cc4fae-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 39.99,
-    "salePrice": 7.93,
+    "salePrice": 6.93,
     "store": "Canadian Tire",
     "city": "Strathroy, ON",
     "branch": "Strathroy, ON",
@@ -795,7 +1203,7 @@
     "title": "Peinture de retouche Scratch Fix All-in-1, Platine vif (M) (PS4, MS4)",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-body-repair/0474939/scratch-fix-chrysler-bright-platinum-all-in-1-d30af41e-d058-4198-869e-345a7039977c.png?im=whresize&wid=200&hei=200",
     "price": 28.99,
-    "salePrice": 5.93,
+    "salePrice": 4.93,
     "store": "Canadian Tire",
     "city": "Strathroy, ON",
     "branch": "Strathroy, ON",
@@ -831,13 +1239,25 @@
     "title": "Accessoire pour grille-pain de rechange pliant Outbound",
     "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-living/0763298/outbound-toaster-285b1a25-5b5c-4ea7-be67-5e57980fe9e3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 9.99,
-    "salePrice": 2.93,
+    "salePrice": 2.43,
     "store": "Canadian Tire",
     "city": "Strathroy, ON",
     "branch": "Strathroy, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/accessoire-pour-grille-pain-de-rechange-pliant-outbound-0763298p.html",
     "sku": "0763298",
     "availability": "Il n’en reste que 1 #076-3298-4"
+  },
+  {
+    "title": "Crochet pivotant décoratif Atron Electro Industries LA728, matériel inclus, blanc",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/rough-electrical/0523024/hook-swivel-white-2d222682-4245-4142-a999-c42047ef477f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 3.29,
+    "salePrice": 0.93,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/crochet-pivotant-decoratif-atron-electro-industries-la728-materiel-inclus-blanc-0523024p.html",
+    "sku": "0523024",
+    "availability": "Il n’en reste que 2 #052-3024-2"
   },
   {
     "title": "Assainisseur d'air pour voiture à suspendre California Scents Palms, paq. 4",
@@ -864,6 +1284,18 @@
     "availability": "Il n’en reste que 1 #046-7408-2"
   },
   {
+    "title": "Ensemble masque et tuba Speedo Junior Reefscout",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-fun/0810427/speedo-junior-reefscout-mask-and-snorkel-set-00e6cb26-6c4b-4027-b827-e35ab0d42df0-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 44.99,
+    "salePrice": 19.93,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ensemble-masque-et-tuba-speedo-junior-reefscout-0810427p.html",
+    "sku": "0810427",
+    "availability": "Il n’en reste que 1 #081-0427-2"
+  },
+  {
     "title": "Pieds de rechange Drive Medical pour les cannes HurryCane Freedom, Go & HurryBright, noir, paq. 3",
     "image": "https://media-www.canadiantire.ca/product/living/personal-garment-care/personal-care/0439190/hurrycane-replacement-foot-18fc9837-43be-402b-ad91-fc18c771fabd-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 16.99,
@@ -888,15 +1320,39 @@
     "availability": ""
   },
   {
+    "title": "Guirlande de ballons, rose",
+    "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8539196/pnk-blln-grlnd-kit-578d33c5-3923-47f9-8480-b8fe355fcafc-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 36.99,
+    "salePrice": 17.93,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/guirlande-de-ballons-rose-8539196p.html",
+    "sku": "8539196",
+    "availability": "Il n’en reste que 1 #853-9196-0"
+  },
+  {
     "title": "Lyre de lampe Atron Electro Industries LA103, quincaillerie comprise, laiton, 9 po",
     "image": "https://media-www.canadiantire.ca/product/fixing/electrical/rough-electrical/0523123/lamp-harp-kit-9--85a6f421-928d-4a42-a4d8-8a06a81355ae-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 5.29,
-    "salePrice": 1.93,
+    "salePrice": 0.93,
     "store": "Canadian Tire",
     "city": "Strathroy, ON",
     "branch": "Strathroy, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/lyre-de-lampe-atron-electro-industries-la103-quincaillerie-comprise-laiton-9-po-0523123p.html",
     "sku": "0523123",
     "availability": "Il n’en reste que 2 #052-3123-6"
+  },
+  {
+    "title": "Lampe pour barbecue à DEL étanche flexible Coleman pour intérieur et extérieur, 24 po",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking-accessories/0850104/coleman-led-grill-light-82696736-2f18-4855-b741-82cae9c58a51-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 37.99,
+    "salePrice": 14.93,
+    "store": "Canadian Tire",
+    "city": "Strathroy, ON",
+    "branch": "Strathroy, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/lampe-pour-barbecue-a-del-etanche-flexible-coleman-pour-interieur-et-exterieur-24-po-0850104p.html",
+    "sku": "0850104",
+    "availability": "Il n’en reste que 1 #085-0104-2"
   }
 ]
