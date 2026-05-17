@@ -1,15 +1,39 @@
 [
   {
-    "title": "Affûte-couteaux à 3 étapes MASTER Chef",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/cutlery/2421029/master-chef-3stage-knife-sharpener-b9ab2767-c8c0-473e-a296-6cb70527856a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 18.99,
-    "salePrice": 4.93,
+    "title": "Cintres pivotants compacts en velours Type A avec barre à pantalon, couleurs variées, paq. 40",
+    "image": "https://media-www.canadiantire.ca/product/living/home-organization/closet-organization/0688308/type-a-velvet-suit-hanger-black-10pk-4afb3f73-0449-46d6-975c-369ae2760de2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 32.99,
+    "salePrice": 12.93,
     "store": "Canadian Tire",
     "city": "Amherst, NS",
     "branch": "Amherst, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/affute-couteaux-a-3-etapes-master-chef-2421029p.html",
-    "sku": "2421029",
-    "availability": "Il n’en reste que 1 #242-1029-2"
+    "url": "https://www.canadiantire.ca/fr/pdp/cintres-pivotants-compacts-en-velours-type-a-avec-barre-a-pantalon-couleurs-variees-paq-40-0688307p.html",
+    "sku": "0688307",
+    "availability": ""
+  },
+  {
+    "title": "Machine à espresso semi-automatique à un toucher avec mousseur à lait Mr. Coffee",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430385/mr-coffee-semi-automatic-espresso-machine-w-milk-frother-482b518b-cfa5-4d80-bb51-f3dc6d06036e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 439.99,
+    "salePrice": 199.93,
+    "store": "Canadian Tire",
+    "city": "Amherst, NS",
+    "branch": "Amherst, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/machine-a-espresso-semi-automatique-a-un-toucher-avec-mousseur-a-lait-mr-coffee-0430385p.html",
+    "sku": "0430385",
+    "availability": "Il n’en reste que 1 #043-0385-2"
+  },
+  {
+    "title": "Projecteur à DEL de 1 000 lumens Mastercraft pour service intense",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0372426/mastercraft-1000lumen-heavy-duty-spotlight-c0d329db-7a7e-4302-a634-a31ceb039174-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 149.99,
+    "salePrice": 54.93,
+    "store": "Canadian Tire",
+    "city": "Amherst, NS",
+    "branch": "Amherst, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/projecteur-a-del-de-1-000-lumens-mastercraft-pour-service-intense-0372426p.html",
+    "sku": "0372426",
+    "availability": "Il n’en reste que 2 #037-2426-0"
   },
   {
     "title": "Trousse de batterie compacte DeWALT 20 V MAX, 4 Ah",
@@ -58,6 +82,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/devon-a-saccades-flottant-xcalibur-1-2-oz-0771229p.html",
     "sku": "0771229",
     "availability": ""
+  },
+  {
+    "title": "Applique d'ext. à capteur mouv. NOMA, 13 po, crépuscule-aube",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/lighting/1522792/noma-dusk-to-dawn-13a-outdoor-wall-sconce-523c1a7b-8575-4e83-a368-e2a01e78270a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 89.99,
+    "salePrice": 39.93,
+    "store": "Canadian Tire",
+    "city": "Amherst, NS",
+    "branch": "Amherst, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/applique-d-ext-a-capteur-mouv-noma-13-po-crepuscule-aube-1522792p.html",
+    "sku": "1522792",
+    "availability": "Il n’en reste que 1 #152-2792-0"
   },
   {
     "title": "Tiges de siège pour bateau en aluminium brossé Lock ’N-Pin, avec poteau de siège, 11 po",

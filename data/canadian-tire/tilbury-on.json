@@ -36,6 +36,18 @@
     "availability": "Il n’en reste que 2 #043-0196-2"
   },
   {
+    "title": "Barbecue MASTER Chef G70220 Turismo, 4 brûleurs, propane avec tablettes latérales, 36 po",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking/0850106/master-chef-grill-turismo-4-burner-gas-griddle-cart-19667163-bb41-4715-b58c-645b95721288-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 399.99,
+    "salePrice": 199.93,
+    "store": "Canadian Tire",
+    "city": "Tilbury, ON",
+    "branch": "Tilbury, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/barbecue-master-chef-g70220-turismo-4-bruleurs-propane-avec-tablettes-laterales-36-po-0850106p.html",
+    "sku": "0850106",
+    "availability": "Il n’en reste que 1 #085-0106-8"
+  },
+  {
     "title": "Ampoules à DEL à intensité variable à culot E12 NOMA B10, 2700K, 350 lumens, blanc chaud, 40 W, paq. 2",
     "image": "https://media-www.canadiantire.ca/product/fixing/electrical/light-bulbs/0529347/noma-2-pack-40w-e12-soft-white-led-lightbulbs-2abc2edf-7b69-449d-b49f-8024c6332e19-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 12.99,
@@ -57,7 +69,7 @@
     "branch": "Tilbury, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/presentoir-d-articles-saisonniers-mastercraft-avec-chariot-a-plateforme-roulante-noir-0681822p.html",
     "sku": "0681822",
-    "availability": ""
+    "availability": "0 En Stock#068-1822-8"
   },
   {
     "title": "Parka technique de chasse perméable à l'air imperméable coupe-vent Yukon Gear pour hommes, camouflage Realtree Xtra",
@@ -96,22 +108,10 @@
     "availability": "Il n’en reste que 1 #064-3176-2"
   },
   {
-    "title": "Glacière/réchaud électrique thermoélectrique sur roulettes Mobicool, avec poignée, 45 L, bleu",
-    "image": "https://media-www.canadiantire.ca/product/playing/camping/hydration-coolers/0370124/45l-wheeled-12v-cooler-with-adapter-1a3a5430-7fbc-4bde-bbb2-549a37e1e05e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 379.99,
-    "salePrice": 139.93,
-    "store": "Canadian Tire",
-    "city": "Tilbury, ON",
-    "branch": "Tilbury, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/glaciere-rechaud-electrique-thermoelectrique-sur-roulettes-mobicool-avec-poignee-45-l-bleu-0370124p.html",
-    "sku": "0370124",
-    "availability": "Il n’en reste que 2 #037-0124-0"
-  },
-  {
     "title": "Jouet aquatique gonflable Soak N' Splash & Slide avec gicleur, bleu, 16 pi, 5 ans et plus, pour plage/piscine",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/seasonal-toys/0504211/soak-n-splash-water-slide-16--6fa00059-6643-4304-ad97-12a017f202a2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 14.99,
-    "salePrice": 6.93,
+    "salePrice": 4.93,
     "store": "Canadian Tire",
     "city": "Tilbury, ON",
     "branch": "Tilbury, ON",
@@ -132,16 +132,88 @@
     "availability": "Il n’en reste que 1 #242-5201-6"
   },
   {
+    "title": "Tapis d'intérieur et d'extérieur CANVAS Fresco Belfont, 8 x 10 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680039/belfont-indoor-outdoor-rug-2cc2ee2e-72b8-4508-bef2-3b4dbbe72d93-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 199.99,
+    "salePrice": 99.93,
+    "store": "Canadian Tire",
+    "city": "Tilbury, ON",
+    "branch": "Tilbury, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-d-interieur-et-d-exterieur-canvas-fresco-belfont-8-x-10-pi-0680039p.html",
+    "sku": "0680039",
+    "availability": ""
+  },
+  {
+    "title": "Meuble pour téléviseur avec foyer électrique multimédia CANVAS Lotus, 67 po, 1 500 W, télécommande comprise, brun",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/electric-fireplaces/0643590/masterflame-lotus-fireplace-29773e4b-4b40-472b-be08-9c8722e7d97f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 549.99,
+    "salePrice": 274.93,
+    "store": "Canadian Tire",
+    "city": "Tilbury, ON",
+    "branch": "Tilbury, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/meuble-pour-televiseur-avec-foyer-electrique-multimedia-canvas-lotus-67-po-1-500-w-telecommande-comprise-brun-0643590p.html",
+    "sku": "0643590",
+    "availability": "Il n’en reste que 1 #064-3590-4"
+  },
+  {
     "title": "Tapis de couloir d'intérieur et d'extérieur CANVAS Elfin, 3 x 5 pi",
     "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680045/elfin-outdoor-runner-rug-f81ffe3f-6368-4f13-8809-4b772e430737-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 29.99,
-    "salePrice": 14.93,
+    "salePrice": 9.93,
     "store": "Canadian Tire",
     "city": "Tilbury, ON",
     "branch": "Tilbury, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/tapis-de-couloir-d-interieur-et-d-exterieur-canvas-elfin-3-x-5-pi-0680045p.html",
     "sku": "0680045",
     "availability": "Il n’en reste que 6 #068-0045-4"
+  },
+  {
+    "title": "Planche à pagaie pour 1 personne Pelican Flow 106, blanc et vert, 10 pi 6 po",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-water-fun/0792044/pelican-flow-106-stand-up-paddle-board-7136f53a-71e5-4f0a-825f-eab92a92ff42-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 599.99,
+    "salePrice": 299.93,
+    "store": "Canadian Tire",
+    "city": "Tilbury, ON",
+    "branch": "Tilbury, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/planche-a-pagaie-pour-1-personne-pelican-flow-106-blanc-et-vert-10-pi-6-po-0792044p.html",
+    "sku": "0792044",
+    "availability": "Il n’en reste que 2 #079-2044-8"
+  },
+  {
+    "title": "Coussin de siège hydrofuge résistant aux taches CANVAS Bloom, rouge",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0880065/canvas-bloom-seat-pad-1d3da447-831c-4fde-92ed-cc17548d4152-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 30.99,
+    "salePrice": 14.93,
+    "store": "Canadian Tire",
+    "city": "Tilbury, ON",
+    "branch": "Tilbury, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/coussin-de-siege-hydrofuge-resistant-aux-taches-canvas-bloom-rouge-0880065p.html",
+    "sku": "0880065",
+    "availability": "Il n’en reste que 2 #088-0065-8"
+  },
+  {
+    "title": "MASTER Chef Spiedini - Barbecue portatif au charbon de bois",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking/0853192/master-chef-spiedini-portable-charcoal-grill-78851b6a-dde2-4558-b419-f80aadecf3f0-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 149.99,
+    "salePrice": 74.93,
+    "store": "Canadian Tire",
+    "city": "Tilbury, ON",
+    "branch": "Tilbury, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/master-chef-spiedini-barbecue-portatif-au-charbon-de-bois-0853192p.html",
+    "sku": "0853192",
+    "availability": "Il n’en reste que 1 #085-3192-2"
+  },
+  {
+    "title": "Pagaie 2-en-1 pour kayak ou planche à pagaie Outbound, réglable, 85 po",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0792067/outbound-2-in-1-kayak-sup-paddle-d4eb97d2-7846-423b-9b2d-8b7e6efd9d90-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 74.99,
+    "salePrice": 29.93,
+    "store": "Canadian Tire",
+    "city": "Tilbury, ON",
+    "branch": "Tilbury, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/pagaie-2-en-1-pour-kayak-ou-planche-a-pagaie-outbound-reglable-85-po-0792067p.html",
+    "sku": "0792067",
+    "availability": "Il n’en reste que 5 #079-2067-4"
   },
   {
     "title": "Couteaux en acier forgés Henckels French avec bloc, paq. 13",
@@ -168,16 +240,40 @@
     "availability": "Il n’en reste que 1 #039-8549-8"
   },
   {
-    "title": "Jeu de lumières solaires à DEL étanche d'extérieur pour terrasse et spa NOMA",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0521728/noma-waterproof-dock-hot-tub-string-light-2d2ec298-f8da-40e6-a7e4-186adfc9b6e3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 59.99,
+    "title": "Barre d'alimentation PowerCurve77 avec cordon de 6 pieds, tressé, blanc",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/power-bars-extension-cords-timers/1522719/powercurve-77-power-bar-f4c3e58d-88a3-48ae-86f8-ea989bdf6918-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 79.99,
     "salePrice": 29.93,
     "store": "Canadian Tire",
     "city": "Tilbury, ON",
     "branch": "Tilbury, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/jeu-de-lumieres-solaires-a-del-etanche-d-exterieur-pour-terrasse-et-spa-noma-0521728p.html",
-    "sku": "0521728",
-    "availability": "Il n’en reste que 1 #052-1728-0"
+    "url": "https://www.canadiantire.ca/fr/pdp/barre-d-alimentation-powercurve77-avec-cordon-de-6-pieds-tresse-blanc-1522719p.html",
+    "sku": "1522719",
+    "availability": "Il n’en reste que 1 #152-2719-8"
+  },
+  {
+    "title": "Machine à espresso entièrement automatique KitchenAid avec moulin, acier inoxydable",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430363/kitchen-aid-semi-automatic-espresso-machine-w-grinder-9059f9f7-e78d-4bd6-a030-70ecad61bc9c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 999.99,
+    "salePrice": 499.93,
+    "store": "Canadian Tire",
+    "city": "Tilbury, ON",
+    "branch": "Tilbury, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/machine-a-espresso-entierement-automatique-kitchenaid-avec-moulin-acier-inoxydable-0430363p.html",
+    "sku": "0430363",
+    "availability": "Il n’en reste que 1 #043-0363-4"
+  },
+  {
+    "title": "Canapé à bulles Funsicle Mesh, bleu lagon",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-fun/0810452/funsicle-mesh-bubble-sofa-lagoon-blue-69db5d2a-f047-4732-8e96-00e8b6815bb4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 39.99,
+    "salePrice": 14.93,
+    "store": "Canadian Tire",
+    "city": "Tilbury, ON",
+    "branch": "Tilbury, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/canape-a-bulles-funsicle-mesh-bleu-lagon-0810452p.html",
+    "sku": "0810452",
+    "availability": "Il n’en reste que 2 #081-0452-0"
   },
   {
     "title": "Table d'appoint ronde de canapé en métal avec plateau amovible CANVAS Slate, noir, 21 po",
@@ -219,7 +315,7 @@
     "title": "Chaussures tout-aller à enfiler légères Excalibur Outbound pour femmes, gris/rose",
     "image": "https://media-www.canadiantire.ca/product/playing/footwear-apparel/summer-footwear-apparel/1871412/outbound-women-s-athleisure-sandal-print-w5-c4da8071-df7b-43d9-93b2-9e7c9a03fc00-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 29.99,
-    "salePrice": 14.93,
+    "salePrice": 13.43,
     "store": "Canadian Tire",
     "city": "Tilbury, ON",
     "branch": "Tilbury, ON",
@@ -298,6 +394,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/decanteur-a-vin-en-verre-trudeau-pour-bouteille-de-750-ml-boite-cadeau-1-5-l-1426178p.html",
     "sku": "1426178",
     "availability": "Il n’en reste que 3 #142-6178-4"
+  },
+  {
+    "title": "Masque de plongée Speedo Explorer, adultes",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-fun/0810249/speedo-adult-explorer-dive-mask-11fa1106-5cae-44f7-a287-76de30ff6e9a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 34.99,
+    "salePrice": 14.93,
+    "store": "Canadian Tire",
+    "city": "Tilbury, ON",
+    "branch": "Tilbury, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/masque-de-plongee-speedo-explorer-adultes-0810249p.html",
+    "sku": "0810249",
+    "availability": "Il n’en reste que 2 #081-0249-6"
   },
   {
     "title": "Manivelle de lève-vitre Dorman HELP, Chrysler, chromé / noir",

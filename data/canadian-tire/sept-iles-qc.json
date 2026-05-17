@@ -1,41 +1,5 @@
 [
   {
-    "title": "Affûte-couteaux à 3 étapes MASTER Chef",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/cutlery/2421029/master-chef-3stage-knife-sharpener-b9ab2767-c8c0-473e-a296-6cb70527856a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 18.99,
-    "salePrice": 4.93,
-    "store": "Canadian Tire",
-    "city": "Sept-Iles, QC",
-    "branch": "Sept-Iles, QC",
-    "url": "https://www.canadiantire.ca/fr/pdp/affute-couteaux-a-3-etapes-master-chef-2421029p.html",
-    "sku": "2421029",
-    "availability": "8 En Stock#242-1029-2"
-  },
-  {
-    "title": "Tasses à mesurer empilables en plastique MASTER Chef, paq. 10",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/bakeware-baking-prep/1429676/master-chef-10pc-measuring-cup-set-73c761cb-c28c-42fe-a32e-f57a30c6b9a6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 24.99,
-    "salePrice": 8.93,
-    "store": "Canadian Tire",
-    "city": "Sept-Iles, QC",
-    "branch": "Sept-Iles, QC",
-    "url": "https://www.canadiantire.ca/fr/pdp/tasses-a-mesurer-empilables-en-plastique-master-chef-paq-10-1429676p.html",
-    "sku": "1429676",
-    "availability": "20 En Stock#142-9676-0"
-  },
-  {
-    "title": "T-shirt sport à manches courtes et extensibles avec encolure ras du cou Mooselander, hommes, couleur unie, tailles variées, noir/gris, paq. 2",
-    "image": "https://media-www.canadiantire.ca/product/playing/footwear-apparel/summer-footwear-apparel/1874066/active-2-pack-short-sleeve-tees-m-l-ce888845-ad24-41df-8604-c50d7052ca02-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 21.99,
-    "salePrice": 9.95,
-    "store": "Canadian Tire",
-    "city": "Sept-Iles, QC",
-    "branch": "Sept-Iles, QC",
-    "url": "https://www.canadiantire.ca/fr/pdp/t-shirt-sport-a-manches-courtes-et-extensibles-avec-encolure-ras-du-cou-mooselander-hommes-couleur-unie-tailles-variees-noir-gris-paq-2-1874066p.html",
-    "sku": "1874066",
-    "availability": ""
-  },
-  {
     "title": "Jeu d'arcade de tir de basketball REC-Tek avec 4 balles et tableau de pointage électronique",
     "image": "https://media-www.canadiantire.ca/product/playing/team-sports-and-golf/indoor-games/1840694/rec-tek-basketball-shootout-challenge-game-b5d7e061-32a3-40d8-a913-45673257eaf7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 129.99,
@@ -45,7 +9,43 @@
     "branch": "Sept-Iles, QC",
     "url": "https://www.canadiantire.ca/fr/pdp/jeu-d-arcade-de-tir-de-basketball-rec-tek-avec-4-balles-et-tableau-de-pointage-electronique-1840694p.html",
     "sku": "1840694",
-    "availability": "Il n’en reste que 3 #184-0694-0"
+    "availability": "Il n’en reste que 1 #184-0694-0"
+  },
+  {
+    "title": "Mini-sonnette de vélo Supercycle en alliage avec levier réglable, son puissant, argent",
+    "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycle-accessories/0730615/supercycle-mini-bike-bell-08c70060-138d-4890-99f1-96684411dade-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 7.49,
+    "salePrice": 3.43,
+    "store": "Canadian Tire",
+    "city": "Sept-Iles, QC",
+    "branch": "Sept-Iles, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/mini-sonnette-de-velo-supercycle-en-alliage-avec-levier-reglable-son-puissant-argent-0730615p.html",
+    "sku": "0730615",
+    "availability": "Il n’en reste que 7 #073-0615-4"
+  },
+  {
+    "title": "Fauteuil de salle à manger d'extérieur/de terrasse CANVAS Belwood en aluminium et osier, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/0880541/canvas-belwood-aluminum-dining-chair-2-pack-de38f891-c44a-49df-a4e2-897c643e77fb-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 499.99,
+    "salePrice": 249.93,
+    "store": "Canadian Tire",
+    "city": "Sept-Iles, QC",
+    "branch": "Sept-Iles, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/fauteuil-de-salle-a-manger-d-exterieur-de-terrasse-canvas-belwood-en-aluminium-et-osier-paq-2-0880541p.html",
+    "sku": "0880541",
+    "availability": "Il n’en reste que 2 #088-0541-4"
+  },
+  {
+    "title": "Tapis d'intérieur et d'extérieur CANVAS Morency, 6 x 9 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680042/morency-outdoor-rug-d723df32-0b9c-4c2a-86c8-9c791795e3b2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 49.99,
+    "salePrice": 19.93,
+    "store": "Canadian Tire",
+    "city": "Sept-Iles, QC",
+    "branch": "Sept-Iles, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-d-interieur-et-d-exterieur-canvas-morency-6-x-9-pi-0680042p.html",
+    "sku": "0680042",
+    "availability": "8 En Stock#068-0042-0"
   },
   {
     "title": "Distributeur d'eau chaude de MASTER Chef avec poignée, noir, 3,5 L",
@@ -81,7 +81,7 @@
     "branch": "Sept-Iles, QC",
     "url": "https://www.canadiantire.ca/fr/pdp/serviettes-de-bar-master-chef-paq-8-1429826p.html",
     "sku": "1429826",
-    "availability": "Il n’en reste que 7 #142-9826-4"
+    "availability": "Il n’en reste que 5 #142-9826-4"
   },
   {
     "title": "Machine à espresso semi-automatique à un toucher avec mousseur à lait Mr. Coffee",
@@ -96,28 +96,52 @@
     "availability": "Il n’en reste que 5 #043-0385-2"
   },
   {
-    "title": "Fauteuil de salle à manger de jardin/d'extérieur en osier CANVAS Jasper, toute saison, paq. 2",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/1880272/canvas-jasper-dining-chair-2pk-2a5479fd-5f27-4f3d-85e2-8b4b9fa230c9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 499.99,
-    "salePrice": 199.93,
+    "title": "Machine à café et à espresso mince Nespresso Vertuo Next par DeLonghi, gris",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430395/nespresso-vertuo-next-espresso-machine-by-delonghi-grey-fac2366d-dee6-4db4-8252-8086cb68fbba-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 229.99,
+    "salePrice": 114.93,
     "store": "Canadian Tire",
     "city": "Sept-Iles, QC",
     "branch": "Sept-Iles, QC",
-    "url": "https://www.canadiantire.ca/fr/pdp/fauteuil-de-salle-a-manger-de-jardin-d-exterieur-en-osier-canvas-jasper-toute-saison-paq-2-1880272p.html",
-    "sku": "1880272",
-    "availability": "Il n’en reste que 1 #188-0272-6"
+    "url": "https://www.canadiantire.ca/fr/pdp/machine-a-cafe-et-a-espresso-mince-nespresso-vertuo-next-par-delonghi-gris-0430395p.html",
+    "sku": "0430395",
+    "availability": "Il n’en reste que 1 #043-0395-8"
   },
   {
-    "title": "Ampoules à DEL à intensité variable à culot E12 NOMA B10, 2700K, 350 lumens, blanc chaud, 40 W, paq. 2",
-    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/light-bulbs/0529347/noma-2-pack-40w-e12-soft-white-led-lightbulbs-2abc2edf-7b69-449d-b49f-8024c6332e19-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 12.99,
-    "salePrice": 1.93,
+    "title": "Pantalon Huntshield Sutton No Fly Zone, hommes, gris",
+    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-apparel-footwear/3751415/mens-sutton-no-fly-zone-pants-m-grey-d6d714cf-1a68-4dfd-a8d1-674b83deb7b6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 69.99,
+    "salePrice": 29.95,
     "store": "Canadian Tire",
     "city": "Sept-Iles, QC",
     "branch": "Sept-Iles, QC",
-    "url": "https://www.canadiantire.ca/fr/pdp/ampoules-a-del-a-intensite-variable-a-culot-e12-noma-b10-2700k-350-lumens-blanc-chaud-40-w-paq-2-0529347p.html",
-    "sku": "0529347",
-    "availability": "20 En Stock#052-9347-8"
+    "url": "https://www.canadiantire.ca/fr/pdp/pantalon-huntshield-sutton-no-fly-zone-hommes-gris-3751415p.html",
+    "sku": "3751415",
+    "availability": ""
+  },
+  {
+    "title": "Parka technique de chasse perméable à l'air imperméable coupe-vent Yukon Gear pour hommes, camouflage Realtree Xtra",
+    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-apparel-footwear/3750716/yukon-gear-parka-2-rte-m-a47cf6f2-275c-44e1-93da-5eb1da27165e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 99.99,
+    "salePrice": 49.95,
+    "store": "Canadian Tire",
+    "city": "Sept-Iles, QC",
+    "branch": "Sept-Iles, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/parka-technique-de-chasse-permeable-a-l-air-impermeable-coupe-vent-yukon-gear-pour-hommes-camouflage-realtree-xtra-3750716p.html",
+    "sku": "3750716",
+    "availability": ""
+  },
+  {
+    "title": "Ouvre-porte de garage à entraînement à chaîne avec Wi-Fi Chamberlain C2202C, 1/2-HP",
+    "image": "https://media-www.canadiantire.ca/product/fixing/tools/garage-organization/0460960/chamberlain-1-2-hp-chain-drive-wifi-garage-door-opener-595868a5-e6b0-441e-944c-d15945af1929-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 379.99,
+    "salePrice": 179.93,
+    "store": "Canadian Tire",
+    "city": "Sept-Iles, QC",
+    "branch": "Sept-Iles, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/ouvre-porte-de-garage-a-entrainement-a-chaine-avec-wi-fi-chamberlain-c2202c-1-2-hp-0460960p.html",
+    "sku": "0460960",
+    "availability": "Il n’en reste que 2 #046-0960-6"
   },
   {
     "title": "Chaises de salle à manger rembourrées tête de clou avec pattes en bois massif CANVAS Regent, paq. 2, gris",
@@ -144,16 +168,76 @@
     "availability": "Il n’en reste que 1 #159-0844-6"
   },
   {
+    "title": "Vélo de montagne semi-rigide Raleigh Ridge HS, roue de 29 po, gris",
+    "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycles/0711973/raleigh-ridge-hs-hardtail-mountain-bike-29-in-596a498d-6722-4e40-9f03-8324534770d5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 799.99,
+    "salePrice": 399.93,
+    "store": "Canadian Tire",
+    "city": "Sept-Iles, QC",
+    "branch": "Sept-Iles, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/velo-de-montagne-semi-rigide-raleigh-ridge-hs-roue-de-29-po-gris-0711973p.html",
+    "sku": "0711973",
+    "availability": "Il n’en reste que 1 #071-1973-8"
+  },
+  {
+    "title": "Montre d’activité intelligente Sech Fusion avec écran tactile couleur",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-electronics/0356235/sech-fusion-smart-watch-1d020c43-5e7f-4869-b241-5bcb75be795c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 69.99,
+    "salePrice": 25.88,
+    "store": "Canadian Tire",
+    "city": "Sept-Iles, QC",
+    "branch": "Sept-Iles, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/montre-d-activite-intelligente-sech-fusion-avec-ecran-tactile-couleur-0356235p.html",
+    "sku": "0356235",
+    "availability": "10 En Stock#035-6235-4"
+  },
+  {
+    "title": "Barbecue électrique pour balcon Vermont Castings Ascent à 3 brûleurs avec couvercle en fonte",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking/0853188/vermont-castings-electric-grill-177bcaa9-dfaf-4c3c-964a-6ba85ac3e518-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 699.99,
+    "salePrice": 349.93,
+    "store": "Canadian Tire",
+    "city": "Sept-Iles, QC",
+    "branch": "Sept-Iles, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/barbecue-electrique-pour-balcon-vermont-castings-ascent-a-3-bruleurs-avec-couvercle-en-fonte-0853188p.html",
+    "sku": "0853188",
+    "availability": "Il n’en reste que 2 #085-3188-4"
+  },
+  {
     "title": "Projecteur à DEL de 1 000 lumens Mastercraft pour service intense",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0372426/mastercraft-1000lumen-heavy-duty-spotlight-c0d329db-7a7e-4302-a634-a31ceb039174-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 149.99,
-    "salePrice": 54.99,
+    "salePrice": 38.99,
     "store": "Canadian Tire",
     "city": "Sept-Iles, QC",
     "branch": "Sept-Iles, QC",
     "url": "https://www.canadiantire.ca/fr/pdp/projecteur-a-del-de-1-000-lumens-mastercraft-pour-service-intense-0372426p.html",
     "sku": "0372426",
     "availability": "Il n’en reste que 4 #037-2426-0"
+  },
+  {
+    "title": "Coussin de siège CANVAS Helene",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0882518/canvas-adelaide-seat-pad-79c13923-af04-4139-88e8-5a253b100930-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 52.99,
+    "salePrice": 24.93,
+    "store": "Canadian Tire",
+    "city": "Sept-Iles, QC",
+    "branch": "Sept-Iles, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/coussin-de-siege-canvas-helene-0882518p.html",
+    "sku": "0882518",
+    "availability": "Il n’en reste que 4 #088-2518-0"
+  },
+  {
+    "title": "Rainbow Blobz de Bestway avec aire de jeux d’eau, 3 ans et plus",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/seasonal-toys/0509163/rainbow-blobz-f27f5662-28f9-4cea-95c7-57c9e63376d0-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 54.99,
+    "salePrice": 19.93,
+    "store": "Canadian Tire",
+    "city": "Sept-Iles, QC",
+    "branch": "Sept-Iles, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/rainbow-blobz-de-bestway-avec-aire-de-jeux-d-eau-3-ans-et-plus-0509163p.html",
+    "sku": "0509163",
+    "availability": "Il n’en reste que 1 #050-9163-8"
   },
   {
     "title": "Meuble pour téléviseur avec foyer électrique CANVAS Eastwood, 60 po, 1 500 W, télécommande comprise, brun",
@@ -225,7 +309,7 @@
     "branch": "Sept-Iles, QC",
     "url": "https://www.canadiantire.ca/fr/pdp/canne-en-chocolat-blanc-hershey-s-cookies-n-creme-kisses-50-g-friandises-de-paques-1519668p.html",
     "sku": "1519668",
-    "availability": "57 En Stock#151-9668-8"
+    "availability": "56 En Stock#151-9668-8"
   },
   {
     "title": "Plombs amovibles ronds à fente",
@@ -252,6 +336,54 @@
     "availability": "11 En Stock#059-6605-8"
   },
   {
+    "title": "Fontaine de jardin de table d'extérieur fleur For Living",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/1590070/for-living-flower-tabletop-fountain-8cb57a21-e33f-4e14-9028-bc83b3315e3f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 99.99,
+    "salePrice": 49.93,
+    "store": "Canadian Tire",
+    "city": "Sept-Iles, QC",
+    "branch": "Sept-Iles, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/fontaine-de-jardin-de-table-d-exterieur-fleur-for-living-1590070p.html",
+    "sku": "1590070",
+    "availability": "Il n’en reste que 1 #159-0070-6"
+  },
+  {
+    "title": "Verre à boisson haut incassable CANVAS, transparent, 21,3 oz",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/1592105/canvas-clear-shatterproof-glass-885afbd7-a71b-4145-82d7-bef8cfee69b9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 8.99,
+    "salePrice": 3.93,
+    "store": "Canadian Tire",
+    "city": "Sept-Iles, QC",
+    "branch": "Sept-Iles, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/verre-a-boisson-haut-incassable-canvas-transparent-21-3-oz-1592105p.html",
+    "sku": "1592105",
+    "availability": "14 En Stock#159-2105-4"
+  },
+  {
+    "title": "Bateau gonflable Outbound, 2 personnes, 6 ans et plus",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-water-fun/0798313/2-person-inflatable-boat-set-7b11aa03-fddd-4477-ada1-c5f82db3059c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 49.99,
+    "salePrice": 24.93,
+    "store": "Canadian Tire",
+    "city": "Sept-Iles, QC",
+    "branch": "Sept-Iles, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/bateau-gonflable-outbound-2-personnes-6-ans-et-plus-0798313p.html",
+    "sku": "0798313",
+    "availability": "Il n’en reste que 7 #079-8313-2"
+  },
+  {
+    "title": "Filtre à eau/douche de camping Woods, 20 L, gris",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/hydration-coolers/0765991/woods-water-filter-camp-shower-combo-8f701d62-642d-43c6-95a3-8630b18cb9c6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 89.99,
+    "salePrice": 44.93,
+    "store": "Canadian Tire",
+    "city": "Sept-Iles, QC",
+    "branch": "Sept-Iles, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/filtre-a-eau-douche-de-camping-woods-20-l-gris-0765991p.html",
+    "sku": "0765991",
+    "availability": "Il n’en reste que 2 #076-5991-0"
+  },
+  {
     "title": "Canapé-lit d'extérieur/patio à assembler CANVAS Banks avec accoudoirs amovibles",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/1880263/canvas-banks-sofa-seat-77bcfbb9-afdb-409d-8ca0-1620fa9bace0-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 399.99,
@@ -262,6 +394,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/canape-lit-d-exterieur-patio-a-assembler-canvas-banks-avec-accoudoirs-amovibles-1880263p.html",
     "sku": "1880263",
     "availability": "Il n’en reste que 1 #188-0263-8"
+  },
+  {
+    "title": "Trousse de nettoyage biodégradable pour barbecue Vermont Castings",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking-accessories/0852386/vermont-castings-cleaning-kit--450d630f-9878-4fb9-b23f-97474ec421bb-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 32.99,
+    "salePrice": 14.93,
+    "store": "Canadian Tire",
+    "city": "Sept-Iles, QC",
+    "branch": "Sept-Iles, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-nettoyage-biodegradable-pour-barbecue-vermont-castings-0852386p.html",
+    "sku": "0852386",
+    "availability": "Il n’en reste que 1 #085-2386-8"
   },
   {
     "title": "Câble auxiliaire à Lightning Bluehive pour téléphone, tablette, iPod et ordinateur portatif, blanc, 4 po",
@@ -286,6 +430,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/lapin-de-paques-en-chocolat-ferrero-rocher-70-g-friandises-de-paques-1519655p.html",
     "sku": "1519655",
     "availability": ""
+  },
+  {
+    "title": "Pastilles de traitement pour VR CAMCO 41600 TST ultra-concentrées, brise d'hibiscus, paq. 15",
+    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0409729/camco-tst-hibiscus-drop-ins-holding-tank-treatment-15-pk-ebfdb65e-24a8-4477-a45c-52449e5deaf7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 21.99,
+    "salePrice": 8.93,
+    "store": "Canadian Tire",
+    "city": "Sept-Iles, QC",
+    "branch": "Sept-Iles, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/pastilles-de-traitement-pour-vr-camco-41600-tst-ultra-concentrees-brise-d-hibiscus-paq-15-0409729p.html",
+    "sku": "0409729",
+    "availability": "Il n’en reste que 1 #040-9729-8"
   },
   {
     "title": "Câble de chargement mini USB de type C Bluehive, 3 pi",
@@ -336,6 +492,54 @@
     "availability": "Il n’en reste que 3 #175-9525-2"
   },
   {
+    "title": "Flotteur à protection UV avec poignées et auvent pour bébés Swimways, motif de sirène, 3 à 9 mois",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-fun/0810222/infant-spring-float-7ef31253-989e-417d-bf15-c341988c3ed6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 59.99,
+    "salePrice": 29.93,
+    "store": "Canadian Tire",
+    "city": "Sept-Iles, QC",
+    "branch": "Sept-Iles, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/flotteur-a-protection-uv-avec-poignees-et-auvent-pour-bebes-swimways-motif-de-sirene-3-a-9-mois-0810222p.html",
+    "sku": "0810222",
+    "availability": "Il n’en reste que 1 #081-0222-8"
+  },
+  {
+    "title": "Applique d'extérieur intégrée à DEL NOMA, noir mat, 13,2 po",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/lighting/1522768/noma-13-2-integrated-led-outdoor-wall-sconce-8979a633-f230-4404-8f55-f2844f1e0dd2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 89.99,
+    "salePrice": 39.93,
+    "store": "Canadian Tire",
+    "city": "Sept-Iles, QC",
+    "branch": "Sept-Iles, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/applique-d-exterieur-integree-a-del-noma-noir-mat-13-2-po-1522768p.html",
+    "sku": "1522768",
+    "availability": "Il n’en reste que 3 #152-2768-0"
+  },
+  {
+    "title": "Plat de service d'extérieur en fibre de bambou CANVAS Summer Palm, 14 po",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/1590044/canvas-bamboo-summer-palm-14-platter-bb2e6866-612c-46ec-a269-0b3fd66589f2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 14.99,
+    "salePrice": 6.93,
+    "store": "Canadian Tire",
+    "city": "Sept-Iles, QC",
+    "branch": "Sept-Iles, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/plat-de-service-d-exterieur-en-fibre-de-bambou-canvas-summer-palm-14-po-1590044p.html",
+    "sku": "1590044",
+    "availability": "Il n’en reste que 7 #159-0044-0"
+  },
+  {
+    "title": "Ampoule pour projecteur à DEL à culot E26 non variable capteur de mouvement NOMA Advanced PAR38, 5000K, lumière du jour, 90 W",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/light-bulbs/0520930/noma-advanced-led-par38-90w-eq-dusk-to-dawn-motion-sensor-eec26b11-b9fb-4546-9974-e6796975cc9a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 29.99,
+    "salePrice": 12.93,
+    "store": "Canadian Tire",
+    "city": "Sept-Iles, QC",
+    "branch": "Sept-Iles, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/ampoule-pour-projecteur-a-del-a-culot-e26-non-variable-capteur-de-mouvement-noma-advanced-par38-5000k-lumiere-du-jour-90-w-0520930p.html",
+    "sku": "0520930",
+    "availability": "Il n’en reste que 6 #052-0930-2"
+  },
+  {
     "title": "Range-tout universel pour véhicule AutoTrends, noir",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0372981/car-seat-organizer-514db0a1-4873-40d8-883c-016bed5a6e0a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 34.99,
@@ -360,6 +564,18 @@
     "availability": ""
   },
   {
+    "title": "Applique à 1 lampe CANVAS Ambleside, noir",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/lighting/1522608/canvas-ambleside-wall-sconce-5f161ca9-8f79-4160-8e68-d82720c0005f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 99.99,
+    "salePrice": 49.93,
+    "store": "Canadian Tire",
+    "city": "Sept-Iles, QC",
+    "branch": "Sept-Iles, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/applique-a-1-lampe-canvas-ambleside-noir-1522608p.html",
+    "sku": "1522608",
+    "availability": "Il n’en reste que 2 #152-2608-2"
+  },
+  {
     "title": "Émerillon en laiton South Bend, taille 5, paq. 5",
     "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0779671/south-bend-snap-swivel-brass-size-5-e888d6c0-7e98-4fac-bab5-75081768efa3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 2.99,
@@ -369,19 +585,43 @@
     "branch": "Sept-Iles, QC",
     "url": "https://www.canadiantire.ca/fr/pdp/emerillon-en-laiton-south-bend-taille-5-paq-5-0779671p.html",
     "sku": "0779671",
-    "availability": "11 En Stock#077-9671-6"
+    "availability": "10 En Stock#077-9671-6"
   },
   {
-    "title": "Lapin de Pâques au chocolat au lait Kit Kat, 85 g",
-    "image": "https://media-www.canadiantire.ca/product/living/food-drink/seasonal-confectionery/1515257/kitkat-bunny-85-g-9e0e5aed-445e-4ce5-91d7-eb74ef17bb13-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 6.99,
-    "salePrice": 3.49,
+    "title": "Gilet de sauvetage et combinaison pour enfants 2-en-1 Stearns Puddle Jumpers",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-water-fun/0793004/2-in-1-puddle-jumper-boys-86fefc55-a03b-4905-892a-74ededea0db3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 64.99,
+    "salePrice": 24.93,
     "store": "Canadian Tire",
     "city": "Sept-Iles, QC",
     "branch": "Sept-Iles, QC",
-    "url": "https://www.canadiantire.ca/fr/pdp/lapin-de-paques-au-chocolat-au-lait-kit-kat-85-g-1515257p.html",
-    "sku": "1515257",
-    "availability": "Il n’en reste que 1 #151-5257-0"
+    "url": "https://www.canadiantire.ca/fr/pdp/gilet-de-sauvetage-et-combinaison-pour-enfants-2-en-1-stearns-puddle-jumpers-0793002p.html",
+    "sku": "0793002",
+    "availability": ""
+  },
+  {
+    "title": "Machine à espresso entièrement automatique KitchenAid avec moulin, acier inoxydable",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430363/kitchen-aid-semi-automatic-espresso-machine-w-grinder-9059f9f7-e78d-4bd6-a030-70ecad61bc9c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 999.99,
+    "salePrice": 499.93,
+    "store": "Canadian Tire",
+    "city": "Sept-Iles, QC",
+    "branch": "Sept-Iles, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/machine-a-espresso-entierement-automatique-kitchenaid-avec-moulin-acier-inoxydable-0430363p.html",
+    "sku": "0430363",
+    "availability": "Il n’en reste que 1 #043-0363-4"
+  },
+  {
+    "title": "Canapé à bulles Funsicle Mesh, bleu lagon",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-fun/0810452/funsicle-mesh-bubble-sofa-lagoon-blue-69db5d2a-f047-4732-8e96-00e8b6815bb4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 39.99,
+    "salePrice": 14.93,
+    "store": "Canadian Tire",
+    "city": "Sept-Iles, QC",
+    "branch": "Sept-Iles, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/canape-a-bulles-funsicle-mesh-bleu-lagon-0810452p.html",
+    "sku": "0810452",
+    "availability": "Il n’en reste que 2 #081-0452-0"
   },
   {
     "title": "Coiffe à polir en tissu éponge SIMONIZ, 8 po, paq. 2",
@@ -420,6 +660,18 @@
     "availability": "Il n’en reste que 1 #077-4398-8"
   },
   {
+    "title": "Grattoir pour barbecue en bois Vermont Castings avec poignée facile à saisir",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking-accessories/0852152/vermont-castings-wood-grill-scrape-84a8887a-91b4-4249-be4d-18fba0f790fa-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 31.99,
+    "salePrice": 14.93,
+    "store": "Canadian Tire",
+    "city": "Sept-Iles, QC",
+    "branch": "Sept-Iles, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/grattoir-pour-barbecue-en-bois-vermont-castings-avec-poignee-facile-a-saisir-0852152p.html",
+    "sku": "0852152",
+    "availability": "Il n’en reste que 5 #085-2152-4"
+  },
+  {
     "title": "Émerillon à barillet Danielson, laiton, taille 3, paq. 5",
     "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0774429/danielson-barrel-swivel-brass-size-3-5pk-1f1139bc-ef32-4051-b26d-ec1f41e16739-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 0.99,
@@ -442,6 +694,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/pot-d-hydroponie-en-feutre-root-farm-23-9-l-1590127p.html",
     "sku": "1590127",
     "availability": ""
+  },
+  {
+    "title": "Sac de guidon grand format Raleigh",
+    "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycle-accessories/0730559/raleigh-bulk-handlebar-bag-a761db84-2894-4390-a8a2-abfb605a0db5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 45.99,
+    "salePrice": 22.43,
+    "store": "Canadian Tire",
+    "city": "Sept-Iles, QC",
+    "branch": "Sept-Iles, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/sac-de-guidon-grand-format-raleigh-0730559p.html",
+    "sku": "0730559",
+    "availability": "Il n’en reste que 5 #073-0559-8"
   },
   {
     "title": "Phare stroboscopique à DEL Alpena prime, 2 couleurs, blanc, ambre",
@@ -504,6 +768,18 @@
     "availability": "Il n’en reste que 1 #043-8263-4"
   },
   {
+    "title": "Masque de natation Speedo Luca pour enfants avec tuba et lentilles antibuée, 3 ans et plus",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-fun/0810215/kids-luca-mask-w-snorkel-1e76cf32-8c00-46b0-84f9-d2dfc7f068fb-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 39.99,
+    "salePrice": 19.93,
+    "store": "Canadian Tire",
+    "city": "Sept-Iles, QC",
+    "branch": "Sept-Iles, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/masque-de-natation-speedo-luca-pour-enfants-avec-tuba-et-lentilles-antibuee-3-ans-et-plus-0810215p.html",
+    "sku": "0810215",
+    "availability": "Il n’en reste que 1 #081-0215-6"
+  },
+  {
     "title": "Verrou de sûreté et stabilité pour climatiseur de fenêtre, acier",
     "image": "https://media-www.canadiantire.ca/product/fixing/home-environment/summer-climate-control/0438292/ac-security-and-stability-lock-f569c610-919c-4028-99bb-bf495321ada1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 14.99,
@@ -514,6 +790,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/verrou-de-surete-et-stabilite-pour-climatiseur-de-fenetre-acier-0438292p.html",
     "sku": "0438292",
     "availability": "Il n’en reste que 2 #043-8292-4"
+  },
+  {
+    "title": "Verre à whisky haut nervuré bleu CANVAS, sans BPA, 19 oz",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/1590047/canvas-blue-ribbed-low-ball-15oz-glass-e9de210a-72b7-485d-bfd4-433a70eb4205-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 6.99,
+    "salePrice": 2.43,
+    "store": "Canadian Tire",
+    "city": "Sept-Iles, QC",
+    "branch": "Sept-Iles, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/verre-a-whisky-haut-nervure-bleu-canvas-sans-bpa-19-oz-1590048p.html",
+    "sku": "1590048",
+    "availability": "Il n’en reste que 4 #159-0048-2"
   },
   {
     "title": "Leurre Berkley Gulp Alive! Bocal à appâts pour leurre nageur Paddleshad, demi-pinte, 4 po",
@@ -543,7 +831,7 @@
     "title": "Système d’inversion universel FlexiFit pour baril d’eau de pluie, trousse Easy Connect",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/outdoor-tools/watering/0597194/rain-barrel-ez-connect-kit-ae6a9e52-8006-4074-a4fe-6c22500c098b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 64.99,
-    "salePrice": 32.43,
+    "salePrice": 28.93,
     "store": "Canadian Tire",
     "city": "Sept-Iles, QC",
     "branch": "Sept-Iles, QC",
@@ -555,7 +843,7 @@
     "title": "Bandage polyvalent Tensor avec pochette de gel chaud/froid, taille unique",
     "image": "https://media-www.canadiantire.ca/product/playing/hockey/hockey-accessories/0833781/tensor-multi-purpose-wrap-with-gel-pack-064fc700-4615-4608-bd77-af334d8dcc2b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 27.99,
-    "salePrice": 8.93,
+    "salePrice": 7.93,
     "store": "Canadian Tire",
     "city": "Sept-Iles, QC",
     "branch": "Sept-Iles, QC",
@@ -576,10 +864,22 @@
     "availability": "Il n’en reste que 3 #047-5114-0"
   },
   {
+    "title": "Anneau d’écoulement d’eau pour pagaies de kayak, noir, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0793339/sealectdesigns-1-1-16-kayak-paddle-drip-ring-056ec302-a07a-49d2-b198-86f387386f50-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 7.99,
+    "salePrice": 2.93,
+    "store": "Canadian Tire",
+    "city": "Sept-Iles, QC",
+    "branch": "Sept-Iles, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/anneau-d-ecoulement-d-eau-pour-pagaies-de-kayak-noir-paq-2-0793339p.html",
+    "sku": "0793339",
+    "availability": "Il n’en reste que 7 #079-3339-2"
+  },
+  {
     "title": "Gant de golf Nike Dura Feel X junior, main droite",
     "image": "https://media-www.canadiantire.ca/product/playing/team-sports-and-golf/golf/0860826/nike-dura-feel-ix-junior-golf-glove-left-hand-small-e411dabb-78be-4701-94bd-2d26b9484ba6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 14.99,
-    "salePrice": 6.93,
+    "salePrice": 6.23,
     "store": "Canadian Tire",
     "city": "Sept-Iles, QC",
     "branch": "Sept-Iles, QC",
@@ -615,7 +915,7 @@
     "title": "Ceinture de baseball Rawlings, sénior, marine",
     "image": "https://media-www.canadiantire.ca/product/playing/team-sports-and-golf/sports-equipment-accessories/0804574/rawlings-baseball-belt-navy-senior-a7d590ee-abe0-4531-81b6-ebe4423af20d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 10.99,
-    "salePrice": 3.93,
+    "salePrice": 3.43,
     "store": "Canadian Tire",
     "city": "Sept-Iles, QC",
     "branch": "Sept-Iles, QC",
@@ -645,7 +945,7 @@
     "branch": "Sept-Iles, QC",
     "url": "https://www.canadiantire.ca/fr/pdp/emerillon-en-laiton-south-bend-taille-10-paq-7-0779675p.html",
     "sku": "0779675",
-    "availability": "17 En Stock#077-9675-8"
+    "availability": "14 En Stock#077-9675-8"
   },
   {
     "title": "Tuque en maille torsadée avec doublure en molleton ski et sports d'hiver chaude Woods pour femmes",
@@ -670,6 +970,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/pantalon-a-bretelles-de-chasse-cargo-coupe-vent-impermeable-huntshield-pour-hommes-camouflage-neige-1756685p.html",
     "sku": "1756685",
     "availability": ""
+  },
+  {
+    "title": "Verre à whisky nervuré bleu CANVAS, sans BPA, 15 oz",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/1590047/canvas-blue-ribbed-low-ball-15oz-glass-7d4b0458-3159-4403-9834-df6727803c10-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 4.99,
+    "salePrice": 2.43,
+    "store": "Canadian Tire",
+    "city": "Sept-Iles, QC",
+    "branch": "Sept-Iles, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/verre-a-whisky-nervure-bleu-canvas-sans-bpa-15-oz-1590047p.html",
+    "sku": "1590047",
+    "availability": "Il n’en reste que 5 #159-0047-4"
   },
   {
     "title": "Appât pour pêche blanche Lunkerhunt Nose Down Straight Up",
@@ -730,6 +1042,54 @@
     "url": "https://www.canadiantire.ca/fr/pdp/tuque-en-tricot-avec-doublure-rebord-a-pompon-en-similifourrure-ski-et-sports-d-hiver-chaude-woods-pour-femmes-1873011p.html",
     "sku": "1873011",
     "availability": "Il n’en reste que 5 #187-3011-2"
+  },
+  {
+    "title": "CANVAS Shanghai - Parasol de marché avec manivelle, bleu sarcelle, 9 pi",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/0881902/canvas-market-umbrella-shanghai-teal-9-ft-7bf213d9-1f4f-4dc4-9116-ee30428554bf-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 179.99,
+    "salePrice": 69.98,
+    "store": "Canadian Tire",
+    "city": "Sept-Iles, QC",
+    "branch": "Sept-Iles, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/canvas-shanghai-parasol-de-marche-avec-manivelle-bleu-sarcelle-9-pi-0881902p.html",
+    "sku": "0881902",
+    "availability": "Il n’en reste que 1 #088-1902-0"
+  },
+  {
+    "title": "Housse hydrofuge pour trampoline rond, 13 pi, sangles robustes, noir",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/backyard-amusement/0846892/outbound-trampoline-cover-13--2ded4f32-107f-48bd-8d2a-73283b2700e1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 39.99,
+    "salePrice": 6.93,
+    "store": "Canadian Tire",
+    "city": "Sept-Iles, QC",
+    "branch": "Sept-Iles, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/housse-hydrofuge-pour-trampoline-rond-13-pi-sangles-robustes-noir-0846892p.html",
+    "sku": "0846892",
+    "availability": "13 En Stock#084-6892-0"
+  },
+  {
+    "title": "Boutons pour cuisinière au gaz/électrique Laser 62651/2, blanc, paq. 5",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/rough-electrical/0522633/white-stove-dial-kit-5pc-d0531eb4-b92a-4187-bedf-dadd6ae089e1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 18.49,
+    "salePrice": 7.93,
+    "store": "Canadian Tire",
+    "city": "Sept-Iles, QC",
+    "branch": "Sept-Iles, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/boutons-pour-cuisiniere-au-gaz-electrique-laser-62651-2-blanc-paq-5-0522633p.html",
+    "sku": "0522633",
+    "availability": "Il n’en reste que 1 #052-2633-8"
+  },
+  {
+    "title": "Gnome squelette gonflable For Living avec lumière à DEL, violet/orange, 6 pi, décoration d'extérieur autogonflante pour l'Halloween",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/seasonal/halloween-harvest/1519155/4ft-gnome-skeleton-inflatable-25a2aa4d-dee6-4e28-8fb4-daf25cb209ed-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 34.99,
+    "salePrice": 16.93,
+    "store": "Canadian Tire",
+    "city": "Sept-Iles, QC",
+    "branch": "Sept-Iles, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/gnome-squelette-gonflable-for-living-avec-lumiere-a-del-violet-orange-6-pi-decoration-d-exterieur-autogonflante-pour-l-halloween-1519155p.html",
+    "sku": "1519155",
+    "availability": ""
   },
   {
     "title": "Bougies en cire spiralées scintillantes, rose/mauve/vert/bleu, 3,2 po, paq. 24, pour fête d'anniversaire",
@@ -802,6 +1162,54 @@
     "url": "https://www.canadiantire.ca/fr/pdp/cuillers-len-thompson-platinum-siwash-5-pces-1783641p.html",
     "sku": "1783641",
     "availability": "Il n’en reste que 2 #178-3641-4"
+  },
+  {
+    "title": "Bouée avec câbles de remorquage Airhead",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-water-fun/0797203/airhead-booster-ball-821a04ec-b87d-4c08-970b-0bbb4a056564-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 199.99,
+    "salePrice": 79.93,
+    "store": "Canadian Tire",
+    "city": "Sept-Iles, QC",
+    "branch": "Sept-Iles, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/bouee-avec-cables-de-remorquage-airhead-0797203p.html",
+    "sku": "0797203",
+    "availability": "Il n’en reste que 1 #079-7203-0"
+  },
+  {
+    "title": "Peinture de retouche Scratch Fix All-in-1, Vert dragon perlé (LC6P)",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-body-repair/0475172/scratch-fix-volkswagon-dragon-green-prl-all-in-1-844b6e03-2044-4f47-9ec3-07b3f0547530-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 20.99,
+    "salePrice": 1.73,
+    "store": "Canadian Tire",
+    "city": "Sept-Iles, QC",
+    "branch": "Sept-Iles, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/peinture-de-retouche-scratch-fix-all-in-1-vert-dragon-perle-lc6p-0475172p.html",
+    "sku": "0475172",
+    "availability": ""
+  },
+  {
+    "title": "Aube en caoutchouc de rechange Certified pour souffleuses Toro (ReP 117-7700)",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/outdoor-tools/tractor-lawn-mower-snowthrower-parts/0604577/certified-rubber-paddle-rotor-blade-fits-toro-rep-117-7700--317cdef4-4120-44a6-88e8-ac7e90288e9f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 42.99,
+    "salePrice": 17.93,
+    "store": "Canadian Tire",
+    "city": "Sept-Iles, QC",
+    "branch": "Sept-Iles, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/aube-en-caoutchouc-de-rechange-certified-pour-souffleuses-toro-rep-117-7700-0604577p.html",
+    "sku": "0604577",
+    "availability": "Il n’en reste que 2 #060-4577-0"
+  },
+  {
+    "title": "Projecteur de fantômes bleus clignotant et s'estompant",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/seasonal/halloween-harvest/1519576/flashing-fading-blue-ghost-projector-c0ecf191-8562-426a-abec-e75a67911353-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 39.99,
+    "salePrice": 17.93,
+    "store": "Canadian Tire",
+    "city": "Sept-Iles, QC",
+    "branch": "Sept-Iles, QC",
+    "url": "https://www.canadiantire.ca/fr/pdp/projecteur-de-fantomes-bleus-clignotant-et-s-estompant-1519576p.html",
+    "sku": "1519576",
+    "availability": ""
   },
   {
     "title": "Microdandinette pour pêche blanche en eau dure HT, Moon Glow, paq. 5",
@@ -879,7 +1287,7 @@
     "title": "Mini bougie gonflable, Diwali, 3,5 pi",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/party-city-seasonal/party-city-micro-season-decor/8527703/3-5-diwali-tea-light-inflatable-ab4b465e-79b5-4ac0-8ccc-f8e2cced962e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 43.99,
-    "salePrice": 15.93,
+    "salePrice": 11.93,
     "store": "Canadian Tire",
     "city": "Sept-Iles, QC",
     "branch": "Sept-Iles, QC",
