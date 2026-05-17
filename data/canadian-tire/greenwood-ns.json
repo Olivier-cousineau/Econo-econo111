@@ -12,6 +12,42 @@
     "availability": "17 En Stock#043-0340-8"
   },
   {
+    "title": "Affûte-couteaux à 3 étapes MASTER Chef",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/cutlery/2421029/master-chef-3stage-knife-sharpener-b9ab2767-c8c0-473e-a296-6cb70527856a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 18.99,
+    "salePrice": 8.99,
+    "store": "Canadian Tire",
+    "city": "Greenwood, NS",
+    "branch": "Greenwood, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/affute-couteaux-a-3-etapes-master-chef-2421029p.html",
+    "sku": "2421029",
+    "availability": "13 En Stock#242-1029-2"
+  },
+  {
+    "title": "Distributeur d'eau chaude de MASTER Chef avec poignée, noir, 3,5 L",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430196/master-chef-hot-water-dispenser-9e2e8ff7-2445-4f25-9bde-ac042fe07b54-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 99.99,
+    "salePrice": 49.93,
+    "store": "Canadian Tire",
+    "city": "Greenwood, NS",
+    "branch": "Greenwood, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/distributeur-d-eau-chaude-de-master-chef-avec-poignee-noir-3-5-l-0430196p.html",
+    "sku": "0430196",
+    "availability": "Il n’en reste que 2 #043-0196-2"
+  },
+  {
+    "title": "Cintres pivotants compacts en velours Type A avec barre à pantalon, couleurs variées, paq. 40",
+    "image": "https://media-www.canadiantire.ca/product/living/home-organization/closet-organization/0688308/type-a-velvet-suit-hanger-black-10pk-4afb3f73-0449-46d6-975c-369ae2760de2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 32.99,
+    "salePrice": 9.98,
+    "store": "Canadian Tire",
+    "city": "Greenwood, NS",
+    "branch": "Greenwood, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/cintres-pivotants-compacts-en-velours-type-a-avec-barre-a-pantalon-couleurs-variees-paq-40-0688307p.html",
+    "sku": "0688307",
+    "availability": ""
+  },
+  {
     "title": "Machine à espresso semi-automatique à un toucher avec mousseur à lait Mr. Coffee",
     "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430385/mr-coffee-semi-automatic-espresso-machine-w-milk-frother-482b518b-cfa5-4d80-bb51-f3dc6d06036e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 439.99,
@@ -108,18 +144,6 @@
     "availability": "Il n’en reste que 1 #242-5201-6"
   },
   {
-    "title": "Vélo électrique tout-terrain Raleigh Getaway 36 V, 700C roues, noir",
-    "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycles/0711931/raleigh-getaway-men-s-electric-bike-700c-e4b77c61-6dc1-49c0-b6d7-114a1fe93cc4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 2799.99,
-    "salePrice": 1399.93,
-    "store": "Canadian Tire",
-    "city": "Greenwood, NS",
-    "branch": "Greenwood, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/velo-electrique-tout-terrain-raleigh-getaway-36-v-700c-roues-noir-0711931p.html",
-    "sku": "0711931",
-    "availability": "Il n’en reste que 1 #071-1931-8"
-  },
-  {
     "title": "Meuble pour téléviseur avec foyer électrique multimédia CANVAS Hanover, 58 po, 1 400 W, télécommande comprise, brun",
     "image": "https://media-www.canadiantire.ca/product/living/home-decor/electric-fireplaces/0644016/58-hanover-media-fireplace-80aaedf9-1443-4308-90a8-136be62f1565-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 699.99,
@@ -130,6 +154,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/meuble-pour-televiseur-avec-foyer-electrique-multimedia-canvas-hanover-58-po-1-400-w-telecommande-comprise-brun-0644016p.html",
     "sku": "0644016",
     "availability": "Il n’en reste que 1 #064-4016-8"
+  },
+  {
+    "title": "Matelas pneumatique grand double hauteur Coleman SupportRest Elite avec pompe intégrée de 120 V",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-furniture/0765334/coleman-queen-bed-8226096c-0d14-4479-ae71-14b094045b09-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 279.99,
+    "salePrice": 139.93,
+    "store": "Canadian Tire",
+    "city": "Greenwood, NS",
+    "branch": "Greenwood, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/matelas-pneumatique-grand-double-hauteur-coleman-supportrest-elite-avec-pompe-integree-de-120-v-0765334p.html",
+    "sku": "0765334",
+    "availability": "Il n’en reste que 1 #076-5334-6"
   },
   {
     "title": "Tabouret de bar métal et bois CANVAS Union, paq. 2, brun",
@@ -144,16 +180,16 @@
     "availability": "Il n’en reste que 2 #068-7563-8"
   },
   {
-    "title": "Lit de camp pliant portatif pour chiens Woods DOG-WOOD avec sac de transport, capacité de 70 lb, bleu",
-    "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-accessories/0766424/woods-dogwood-quad-fold-pet-cot-fe2e4cef-58fa-4578-93b8-795fe70105e1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 79.99,
-    "salePrice": 39.93,
+    "title": "CANVAS Minden - Fauteuil Adirondack empilable rembourré, gris",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/0882190/canvas-minden-padded-sling-adirondack-chair-22bfb86d-0e5b-4775-9dbb-b82e723cafcd-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 129.99,
+    "salePrice": 59.93,
     "store": "Canadian Tire",
     "city": "Greenwood, NS",
     "branch": "Greenwood, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/lit-de-camp-pliant-portatif-pour-chiens-woods-dog-wood-avec-sac-de-transport-capacite-de-70-lb-bleu-0766424p.html",
-    "sku": "0766424",
-    "availability": "Il n’en reste que 1 #076-6424-6"
+    "url": "https://www.canadiantire.ca/fr/pdp/canvas-minden-fauteuil-adirondack-empilable-rembourre-gris-0882190p.html",
+    "sku": "0882190",
+    "availability": "9 En Stock#088-2190-6"
   },
   {
     "title": "Trousse de départ pour conservation et entreposage d'aliments Fresh & Save de Zwilling avec pompe à dépression portative",
@@ -180,6 +216,42 @@
     "availability": "Il n’en reste que 1 #188-0273-4"
   },
   {
+    "title": "Pompe à air électrique Coleman QuickPump 12 V avec adaptateur pour auto, matelas pneumatiques et jouets",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-furniture/0760234/coleman-12v-inflate-deflate-quickpump--1e25d88c-6e5a-4c03-8b38-3c767c69f8cf-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 54.99,
+    "salePrice": 24.93,
+    "store": "Canadian Tire",
+    "city": "Greenwood, NS",
+    "branch": "Greenwood, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/pompe-a-air-electrique-coleman-quickpump-12-v-avec-adaptateur-pour-auto-matelas-pneumatiques-et-jouets-0760234p.html",
+    "sku": "0760234",
+    "availability": "Il n’en reste que 5 #076-0234-4"
+  },
+  {
+    "title": "Pompe à air électrique Coleman QuickPump, 120 V, rechargeable, gonflage et dégonflage",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-furniture/0760214/coleman-120v-quickpump-bc47206a-86db-476c-b910-64be02da84ed-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 59.99,
+    "salePrice": 29.93,
+    "store": "Canadian Tire",
+    "city": "Greenwood, NS",
+    "branch": "Greenwood, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/pompe-a-air-electrique-coleman-quickpump-120-v-rechargeable-gonflage-et-degonflage-0760214p.html",
+    "sku": "0760214",
+    "availability": "Il n’en reste que 5 #076-0214-2"
+  },
+  {
+    "title": "For Living - Auvent de rechange octogonal pour gazebo, beige, 153 x 124 x 35 po",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/0881635/for-living-canopy-for-octagon-179677f6-f9ea-4c8f-82df-4cf8841a4342-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 199.99,
+    "salePrice": 94.93,
+    "store": "Canadian Tire",
+    "city": "Greenwood, NS",
+    "branch": "Greenwood, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/for-living-auvent-de-rechange-octogonal-pour-gazebo-beige-153-x-124-x-35-po-0881635p.html",
+    "sku": "0881635",
+    "availability": "Il n’en reste que 1 #088-1635-6"
+  },
+  {
     "title": "Tasse en grès CANVAS, géométrique, 13 oz",
     "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/1427929/canvas-geo-mug-215d7db0-0dc6-4bb7-944d-d46412e3fe06-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 5.49,
@@ -189,7 +261,31 @@
     "branch": "Greenwood, NS",
     "url": "https://www.canadiantire.ca/fr/pdp/tasse-en-gres-canvas-geometrique-13-oz-1427929p.html",
     "sku": "1427929",
-    "availability": "Il n’en reste que 6 #142-7929-2"
+    "availability": "Il n’en reste que 1 #142-7929-2"
+  },
+  {
+    "title": "Pagaie de planche debout en aluminium Pelican, noir",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-power-boating/0793303/sup-paddle-for-079-8296-30bd6ee2-2f95-4886-a97b-5c810063b32e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 79.99,
+    "salePrice": 39.99,
+    "store": "Canadian Tire",
+    "city": "Greenwood, NS",
+    "branch": "Greenwood, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/pagaie-de-planche-debout-en-aluminium-pelican-noir-0793303p.html",
+    "sku": "0793303",
+    "availability": "Il n’en reste que 4 #079-3303-6"
+  },
+  {
+    "title": "Île flottante Intex Seascape",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-water-fun/0791426/seascape-island-3883c0e4-5bba-4438-8127-5337e64b5884-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 249.99,
+    "salePrice": 99.93,
+    "store": "Canadian Tire",
+    "city": "Greenwood, NS",
+    "branch": "Greenwood, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/ile-flottante-intex-seascape-0791426p.html",
+    "sku": "0791426",
+    "availability": "Il n’en reste que 1 #079-1426-6"
   },
   {
     "title": "Applique de salle de bains à 3 lampes CANVAS Abbeyglen, laiton mat",
@@ -202,6 +298,30 @@
     "url": "https://www.canadiantire.ca/fr/pdp/applique-de-salle-de-bains-a-3-lampes-canvas-abbeyglen-laiton-mat-1522634p.html",
     "sku": "1522634",
     "availability": "Il n’en reste que 2 #152-2634-8"
+  },
+  {
+    "title": "Piquet de jardin en métal For Living, 72,05 po",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0597880/for-living-72-kinetic-spinner-stake-assorted-8cd3f599-1157-406e-a2b7-1fa6aa58d555-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 35.99,
+    "salePrice": 14.93,
+    "store": "Canadian Tire",
+    "city": "Greenwood, NS",
+    "branch": "Greenwood, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/piquet-de-jardin-en-metal-for-living-72-05-po-0597880p.html",
+    "sku": "0597880",
+    "availability": "Il n’en reste que 6 #059-7880-4"
+  },
+  {
+    "title": "Bande lumineuse à DEL RVB USB avec Bluetooth Merkury, 13 pi",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/3999455/led-light-strip-4m-bt-df57ae3e-c2bc-47f7-8d42-b86b6a733f1d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Greenwood, NS",
+    "branch": "Greenwood, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/bande-lumineuse-a-del-rvb-usb-avec-bluetooth-merkury-13-pi-0373143p.html",
+    "sku": "0373143",
+    "availability": "Il n’en reste que 6 #037-3143-6"
   },
   {
     "title": "Woods™ - Accessoire de rangement pour lits de camping, bleu",
@@ -264,18 +384,6 @@
     "availability": "Il n’en reste que 5 #049-2532-8"
   },
   {
-    "title": "Engrais pH Balance plus Root Farm, engrais pour aliments végétaux, 236 mL",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/gardening/lawn-plant-care/1590135/root-farm-ph-balance-up-236ml-15--4589f80b-6569-4324-a0ea-a681f5c232ec-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 9.99,
-    "salePrice": 2.93,
-    "store": "Canadian Tire",
-    "city": "Greenwood, NS",
-    "branch": "Greenwood, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/engrais-ph-balance-plus-root-farm-engrais-pour-aliments-vegetaux-236-ml-1590135p.html",
-    "sku": "1590135",
-    "availability": "Il n’en reste que 3 #159-0135-4"
-  },
-  {
     "title": "Wok antiadhésif Lagostina Ticino allant au lave-vaisselle et au four, 28 cm",
     "image": "https://media-www.canadiantire.ca/product/living/kitchen/cookware/0420247/lagostina-ticino-28cm-non-stick-wok-6aa11c04-1210-4ee7-900b-bcadbd1a1b40-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 49.99,
@@ -286,18 +394,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/wok-antiadhesif-lagostina-ticino-allant-au-lave-vaisselle-et-au-four-28-cm-0420247p.html",
     "sku": "0420247",
     "availability": "8 En Stock#042-0247-4"
-  },
-  {
-    "title": "Dandinette à appât vivant Xcalibur, lever de soleil, 3/8 oz",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0773791/matzuo-live-bait-jig-sunrise-3-8-3d1c1f67-e0ca-4fe2-ba17-43a6fdb838c0-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 5.99,
-    "salePrice": 2.93,
-    "store": "Canadian Tire",
-    "city": "Greenwood, NS",
-    "branch": "Greenwood, NS",
-    "url": "https://www.canadiantire.ca/fr/pdp/dandinette-a-appat-vivant-xcalibur-lever-de-soleil-3-8-oz-0773791p.html",
-    "sku": "0773791",
-    "availability": "Il n’en reste que 1 #077-3791-6"
   },
   {
     "title": "Cache de chasse à moyeu Huntshield avec 2 côtés en filet transparent",
@@ -358,6 +454,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/bouquet-de-ballons-en-aluminium-satine-etoile-happy-new-year-noir-or-paq-5-gonflement-a-l-helium-et-ruban-inclus-pour-veille-du-jour-de-l-an-8548813p.html",
     "sku": "8548813",
     "availability": "Il n’en reste que 3 #854-8813-6"
+  },
+  {
+    "title": "Barre attelage abaissement Reese Towpower carbone 1 1/4x2 po",
+    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0403028/reese-carbon-forged-ball-mount-1-1-4-x-2-black-ac125133-3ead-43ee-80cd-95d01fba97e3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 46.99,
+    "salePrice": 19.93,
+    "store": "Canadian Tire",
+    "city": "Greenwood, NS",
+    "branch": "Greenwood, NS",
+    "url": "https://www.canadiantire.ca/fr/pdp/barre-attelage-abaissement-reese-towpower-carbone-1-1-4x2-po-0403028p.html",
+    "sku": "0403028",
+    "availability": "Il n’en reste que 3 #040-3028-2"
   },
   {
     "title": "Câble coaxial RCA, blanc, longueurs variées",
