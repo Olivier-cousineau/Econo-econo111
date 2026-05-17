@@ -14,7 +14,7 @@
     "product_id": null,
     "sku": "2421029",
     "sku_formatted": "242-1029-2",
-    "availability": "157 En Stock#242-1029-2",
+    "availability": "137 En Stock#242-1029-2",
     "badges": [
       "Liquidation◊Exclusivité"
     ],
@@ -31,31 +31,89 @@
   {
     "store_id": "94",
     "city": "Sarnia, ON",
-    "name": "Chaises de salle à manger rembourrées tête de clou avec pattes en bois massif CANVAS Regent, paq. 2, gris",
-    "title": "Chaises de salle à manger rembourrées tête de clou avec pattes en bois massif CANVAS Regent, paq. 2, gris",
-    "price": 69.98,
-    "price_raw": "69,98 $",
+    "name": "Cintres pivotants compacts en velours Type A avec barre à pantalon, couleurs variées, paq. 40",
+    "title": "Cintres pivotants compacts en velours Type A avec barre à pantalon, couleurs variées, paq. 40",
+    "price": 9.98,
+    "price_raw": "9,98 $",
     "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/1680087/canvas-regent-chair-2-pack-d7669315-d5c9-4944-9fa5-af38fa9fb225-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/1680087/canvas-regent-chair-2-pack-d7669315-d5c9-4944-9fa5-af38fa9fb225-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/chaises-de-salle-a-manger-rembourrees-tete-de-clou-avec-pattes-en-bois-massif-canvas-regent-paq-2-gris-1680087p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/chaises-de-salle-a-manger-rembourrees-tete-de-clou-avec-pattes-en-bois-massif-canvas-regent-paq-2-gris-1680087p.html",
+    "image": "https://media-www.canadiantire.ca/product/living/home-organization/closet-organization/0688308/type-a-velvet-suit-hanger-black-10pk-4afb3f73-0449-46d6-975c-369ae2760de2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/living/home-organization/closet-organization/0688308/type-a-velvet-suit-hanger-black-10pk-4afb3f73-0449-46d6-975c-369ae2760de2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/cintres-pivotants-compacts-en-velours-type-a-avec-barre-a-pantalon-couleurs-variees-paq-40-0688307p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/cintres-pivotants-compacts-en-velours-type-a-avec-barre-a-pantalon-couleurs-variees-paq-40-0688307p.html",
     "product_id": null,
-    "sku": "1680087",
-    "sku_formatted": "168-0087-6",
-    "availability": "Il n’en reste que 3 #168-0087-6",
+    "sku": "0688307",
+    "sku_formatted": "068-8307",
+    "availability": null,
+    "badges": [
+      "Liquidation◊Mieux notés"
+    ],
+    "discount_percent": 69.75,
+    "liquidation_price": 9.98,
+    "liquidation_price_raw": "9,98 $",
+    "sale_price": 9.98,
+    "sale_price_raw": "9,98 $",
+    "regular_price": 32.99,
+    "regular_price_raw": "32,99 $Était   et+ prix était à partir de 32,99 $",
+    "price_sale_clean": "9,98",
+    "price_original_clean": "32,99"
+  },
+  {
+    "store_id": "94",
+    "city": "Sarnia, ON",
+    "name": "Machine à espresso semi-automatique à un toucher avec mousseur à lait Mr. Coffee",
+    "title": "Machine à espresso semi-automatique à un toucher avec mousseur à lait Mr. Coffee",
+    "price": 129.93,
+    "price_raw": "129,93 $",
+    "liquidation": true,
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430385/mr-coffee-semi-automatic-espresso-machine-w-milk-frother-482b518b-cfa5-4d80-bb51-f3dc6d06036e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430385/mr-coffee-semi-automatic-espresso-machine-w-milk-frother-482b518b-cfa5-4d80-bb51-f3dc6d06036e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/machine-a-espresso-semi-automatique-a-un-toucher-avec-mousseur-a-lait-mr-coffee-0430385p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/machine-a-espresso-semi-automatique-a-un-toucher-avec-mousseur-a-lait-mr-coffee-0430385p.html",
+    "product_id": null,
+    "sku": "0430385",
+    "sku_formatted": "043-0385-2",
+    "availability": "10 En Stock#043-0385-2",
+    "badges": [
+      "Liquidation◊Mieux notés"
+    ],
+    "discount_percent": 70.47,
+    "liquidation_price": 129.93,
+    "liquidation_price_raw": "129,93 $",
+    "sale_price": 129.93,
+    "sale_price_raw": "129,93 $",
+    "regular_price": 439.99,
+    "regular_price_raw": "Était±  439,99 $prix était 439,99 $",
+    "price_sale_clean": "129,93",
+    "price_original_clean": "439,99"
+  },
+  {
+    "store_id": "94",
+    "city": "Sarnia, ON",
+    "name": "Fauteuil de salle à manger de jardin/d'extérieur en osier CANVAS Jasper, toute saison, paq. 2",
+    "title": "Fauteuil de salle à manger de jardin/d'extérieur en osier CANVAS Jasper, toute saison, paq. 2",
+    "price": 249.98,
+    "price_raw": "249,98 $",
+    "liquidation": true,
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/1880272/canvas-jasper-dining-chair-2pk-2a5479fd-5f27-4f3d-85e2-8b4b9fa230c9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "image_url": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/1880272/canvas-jasper-dining-chair-2pk-2a5479fd-5f27-4f3d-85e2-8b4b9fa230c9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "url": "https://www.canadiantire.ca/fr/pdp/fauteuil-de-salle-a-manger-de-jardin-d-exterieur-en-osier-canvas-jasper-toute-saison-paq-2-1880272p.html",
+    "link": "https://www.canadiantire.ca/fr/pdp/fauteuil-de-salle-a-manger-de-jardin-d-exterieur-en-osier-canvas-jasper-toute-saison-paq-2-1880272p.html",
+    "product_id": null,
+    "sku": "1880272",
+    "sku_formatted": "188-0272-6",
+    "availability": "Il n’en reste que 1 #188-0272-6",
     "badges": [
       "Liquidation◊Exclusivité"
     ],
-    "discount_percent": 63.17,
-    "liquidation_price": 69.98,
-    "liquidation_price_raw": "69,98 $",
-    "sale_price": 69.98,
-    "sale_price_raw": "69,98 $",
-    "regular_price": 189.99,
-    "regular_price_raw": "Était±  189,99 $prix était 189,99 $",
-    "price_sale_clean": "69,98",
-    "price_original_clean": "189,99"
+    "discount_percent": 50,
+    "liquidation_price": 249.98,
+    "liquidation_price_raw": "249,98 $",
+    "sale_price": 249.98,
+    "sale_price_raw": "249,98 $",
+    "regular_price": 499.99,
+    "regular_price_raw": "Était±  499,99 $prix était 499,99 $",
+    "price_sale_clean": "249,98",
+    "price_original_clean": "499,99"
   },
   {
     "store_id": "94",
@@ -72,7 +130,7 @@
     "product_id": null,
     "sku": "0350748",
     "sku_formatted": "035-0748-0",
-    "availability": "19 En Stock#035-0748-0",
+    "availability": "10 En Stock#035-0748-0",
     "badges": [
       "Liquidation◊Exclusivité"
     ],
@@ -85,35 +143,6 @@
     "regular_price_raw": "Était±  159,99 $prix était 159,99 $",
     "price_sale_clean": "29,98",
     "price_original_clean": "159,99"
-  },
-  {
-    "store_id": "94",
-    "city": "Sarnia, ON",
-    "name": "Meuble pour téléviseur avec foyer électrique multimédia CANVAS Kingwood, 57 po, 1 500 W, télécommande comprise, brun",
-    "title": "Meuble pour téléviseur avec foyer électrique multimédia CANVAS Kingwood, 57 po, 1 500 W, télécommande comprise, brun",
-    "price": 190,
-    "price_raw": "190,00 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/living/home-decor/electric-fireplaces/0643556/masterflame-kingwood-media-frplc-1a6a64a9-425a-4b61-9d8c-e37dba00072d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/living/home-decor/electric-fireplaces/0643556/masterflame-kingwood-media-frplc-1a6a64a9-425a-4b61-9d8c-e37dba00072d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/meuble-pour-televiseur-avec-foyer-electrique-multimedia-canvas-kingwood-57-po-1-500-w-telecommande-comprise-brun-0643556p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/meuble-pour-televiseur-avec-foyer-electrique-multimedia-canvas-kingwood-57-po-1-500-w-telecommande-comprise-brun-0643556p.html",
-    "product_id": null,
-    "sku": "0643556",
-    "sku_formatted": "064-3556-8",
-    "availability": "Il n’en reste que 1 #064-3556-8",
-    "badges": [
-      "Liquidation◊Mieux notés"
-    ],
-    "discount_percent": 64.15,
-    "liquidation_price": 190,
-    "liquidation_price_raw": "190,00 $",
-    "sale_price": 190,
-    "sale_price_raw": "190,00 $",
-    "regular_price": 529.99,
-    "regular_price_raw": "Était±  529,99 $prix était 529,99 $",
-    "price_sale_clean": "190,00",
-    "price_original_clean": "529,99"
   },
   {
     "store_id": "94",
@@ -246,7 +275,7 @@
     "product_id": null,
     "sku": "1519668",
     "sku_formatted": "151-9668-8",
-    "availability": "24 En Stock#151-9668-8",
+    "availability": "21 En Stock#151-9668-8",
     "badges": [
       "Liquidation◊"
     ],
@@ -304,7 +333,7 @@
     "product_id": null,
     "sku": "0438657",
     "sku_formatted": "043-8657-8",
-    "availability": "23 En Stock#043-8657-8",
+    "availability": "20 En Stock#043-8657-8",
     "badges": [
       "Liquidation◊Exclusivité"
     ],
@@ -362,7 +391,7 @@
     "product_id": null,
     "sku": "1427779",
     "sku_formatted": "142-7779-8",
-    "availability": "60 En Stock#142-7779-8",
+    "availability": "57 En Stock#142-7779-8",
     "badges": [
       "Liquidation◊Mieux notés"
     ],
@@ -652,7 +681,7 @@
     "product_id": null,
     "sku": "0755369",
     "sku_formatted": "075-5369-6",
-    "availability": "Il n’en reste que 2 #075-5369-6",
+    "availability": "Il n’en reste que 1 #075-5369-6",
     "badges": [
       "Liquidation◊"
     ],
@@ -1058,7 +1087,7 @@
     "product_id": null,
     "sku": "8537122",
     "sku_formatted": "853-7122-8",
-    "availability": "9 En Stock#853-7122-8",
+    "availability": "Il n’en reste que 7 #853-7122-8",
     "badges": [
       "Liquidation◊"
     ],
@@ -1100,34 +1129,5 @@
     "regular_price_raw": "5,49 $Était   et+ prix était à partir de 5,49 $",
     "price_sale_clean": "2,43",
     "price_original_clean": "5,49"
-  },
-  {
-    "store_id": "94",
-    "city": "Sarnia, ON",
-    "name": "Grand sac-cadeau en papier Little Lovely Baby",
-    "title": "Grand sac-cadeau en papier Little Lovely Baby",
-    "price": 1.99,
-    "price_raw": "1,99 $",
-    "liquidation": true,
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8536745/bag-large-baby-little-lovely-9ec1f82d-6be7-49c3-86d7-70049b4e9010-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "image_url": "https://media-www.canadiantire.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8536745/bag-large-baby-little-lovely-9ec1f82d-6be7-49c3-86d7-70049b4e9010-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "url": "https://www.canadiantire.ca/fr/pdp/grand-sac-cadeau-en-papier-little-lovely-baby-8536745p.html",
-    "link": "https://www.canadiantire.ca/fr/pdp/grand-sac-cadeau-en-papier-little-lovely-baby-8536745p.html",
-    "product_id": null,
-    "sku": "8536745",
-    "sku_formatted": "853-6745-2",
-    "availability": "Il n’en reste que 1 #853-6745-2",
-    "badges": [
-      "Liquidation◊"
-    ],
-    "discount_percent": 50.13,
-    "liquidation_price": 1.99,
-    "liquidation_price_raw": "1,99 $",
-    "sale_price": 1.99,
-    "sale_price_raw": "1,99 $",
-    "regular_price": 3.99,
-    "regular_price_raw": "Était±  3,99 $prix était 3,99 $",
-    "price_sale_clean": "1,99",
-    "price_original_clean": "3,99"
   }
 ]
