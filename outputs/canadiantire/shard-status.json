@@ -1,55 +1,60 @@
 {
-  "generatedAt": "2026-05-16T23:00:52.141Z",
+  "generatedAt": "2026-05-17T02:39:31.180Z",
   "stores": [
     {
-      "id": "141",
-      "city": "Exeter, ON",
+      "id": "92",
+      "city": "St. Thomas, ON",
       "status": "committed",
-      "details": "71 produits"
+      "details": "60 produits (after retry)"
     },
     {
-      "id": "494",
-      "city": "London Auto Centre, ON",
+      "id": "136",
+      "city": "Miramichi, NB",
       "status": "committed",
-      "details": "7 produits"
+      "details": "90 produits"
     },
     {
-      "id": "58",
-      "city": "London South, ON",
+      "id": "11",
+      "city": "Bathurst, NB",
       "status": "committed",
-      "details": "159 produits"
+      "details": "31 produits"
     },
     {
-      "id": "106",
-      "city": "Sussex, NB",
-      "status": "committed",
-      "details": "60 produits"
-    },
-    {
-      "id": "25",
-      "city": "Digby, NS",
-      "status": "committed",
-      "details": "48 produits"
-    },
-    {
-      "id": "125",
-      "city": "Yarmouth, NS",
-      "status": "committed",
-      "details": "35 produits"
-    },
-    {
-      "id": "425",
-      "city": "London North, ON",
+      "id": "167",
+      "city": "Elliot Lake, ON",
       "status": "committed",
       "details": "45 produits"
     },
     {
-      "id": "208",
-      "city": "London West, ON",
+      "id": "104",
+      "city": "Strathroy, ON",
       "status": "committed",
-      "details": "72 produits"
+      "details": "113 produits"
+    },
+    {
+      "id": "32",
+      "city": "Forest, ON",
+      "status": "committed",
+      "details": "36 produits"
+    },
+    {
+      "id": "249",
+      "city": "Moncton Mountain Rd, NB",
+      "status": "committed",
+      "details": "53 produits"
+    },
+    {
+      "id": "463",
+      "city": "Paspebiac, QC",
+      "status": "committed",
+      "details": "115 produits"
     }
   ],
   "failedTwice": [],
-  "retriedAndSucceeded": []
+  "retriedAndSucceeded": [
+    {
+      "id": "92",
+      "city": "St. Thomas, ON"
+    }
+  ]
 }
