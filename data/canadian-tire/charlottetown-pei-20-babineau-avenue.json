@@ -1,39 +1,39 @@
 [
   {
-    "title": "Affûte-couteaux à 3 étapes MASTER Chef",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/cutlery/2421029/master-chef-3stage-knife-sharpener-b9ab2767-c8c0-473e-a296-6cb70527856a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 18.99,
-    "salePrice": 5.99,
+    "title": "Cintres pivotants compacts en velours Type A avec barre à pantalon, couleurs variées, paq. 40",
+    "image": "https://media-www.canadiantire.ca/product/living/home-organization/closet-organization/0688308/type-a-velvet-suit-hanger-black-10pk-4afb3f73-0449-46d6-975c-369ae2760de2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 32.99,
+    "salePrice": 12.93,
     "store": "Canadian Tire",
     "city": "Charlottetown, PEI 20 Babineau Avenue",
     "branch": "Charlottetown, PEI 20 Babineau Avenue",
-    "url": "https://www.canadiantire.ca/fr/pdp/affute-couteaux-a-3-etapes-master-chef-2421029p.html",
-    "sku": "2421029",
-    "availability": "55 En Stock#242-1029-2"
+    "url": "https://www.canadiantire.ca/fr/pdp/cintres-pivotants-compacts-en-velours-type-a-avec-barre-a-pantalon-couleurs-variees-paq-40-0688307p.html",
+    "sku": "0688307",
+    "availability": ""
   },
   {
-    "title": "Tasses à mesurer empilables en plastique MASTER Chef, paq. 10",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/bakeware-baking-prep/1429676/master-chef-10pc-measuring-cup-set-73c761cb-c28c-42fe-a32e-f57a30c6b9a6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 24.99,
-    "salePrice": 7.99,
+    "title": "Fauteuil de salle à manger de jardin/d'extérieur en osier CANVAS Jasper, toute saison, paq. 2",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/1880272/canvas-jasper-dining-chair-2pk-2a5479fd-5f27-4f3d-85e2-8b4b9fa230c9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 499.99,
+    "salePrice": 199.93,
     "store": "Canadian Tire",
     "city": "Charlottetown, PEI 20 Babineau Avenue",
     "branch": "Charlottetown, PEI 20 Babineau Avenue",
-    "url": "https://www.canadiantire.ca/fr/pdp/tasses-a-mesurer-empilables-en-plastique-master-chef-paq-10-1429676p.html",
-    "sku": "1429676",
-    "availability": "256 En Stock#142-9676-0"
+    "url": "https://www.canadiantire.ca/fr/pdp/fauteuil-de-salle-a-manger-de-jardin-d-exterieur-en-osier-canvas-jasper-toute-saison-paq-2-1880272p.html",
+    "sku": "1880272",
+    "availability": "Il n’en reste que 1 #188-0272-6"
   },
   {
-    "title": "Ouvre-porte de garage à courroie ultra silencieux avec Wi-Fi et caméra intégrée Chamberlain B4643TC, 3/4 HP",
-    "image": "https://media-www.canadiantire.ca/product/fixing/tools/garage-organization/0460985/chamberlain-3-4-hp-belt-garage-door-opener-with-wifi-camera-809fe420-8b59-4bea-8a74-5bf3b2c5f9e3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 599.99,
-    "salePrice": 299.93,
+    "title": "Pantalon Huntshield Sutton No Fly Zone, hommes, gris",
+    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-apparel-footwear/3751415/mens-sutton-no-fly-zone-pants-m-grey-d6d714cf-1a68-4dfd-a8d1-674b83deb7b6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 69.99,
+    "salePrice": 29.93,
     "store": "Canadian Tire",
     "city": "Charlottetown, PEI 20 Babineau Avenue",
     "branch": "Charlottetown, PEI 20 Babineau Avenue",
-    "url": "https://www.canadiantire.ca/fr/pdp/ouvre-porte-de-garage-a-courroie-ultra-silencieux-avec-wi-fi-et-camera-integree-chamberlain-b4643tc-3-4-hp-0460985p.html",
-    "sku": "0460985",
-    "availability": "Il n’en reste que 1 #046-0985-8"
+    "url": "https://www.canadiantire.ca/fr/pdp/pantalon-huntshield-sutton-no-fly-zone-hommes-gris-3751415p.html",
+    "sku": "3751415",
+    "availability": ""
   },
   {
     "title": "Parka technique de chasse perméable à l'air imperméable coupe-vent Yukon Gear pour hommes, camouflage Realtree Xtra",
@@ -69,7 +69,7 @@
     "branch": "Charlottetown, PEI 20 Babineau Avenue",
     "url": "https://www.canadiantire.ca/fr/pdp/foyer-electrique-canvas-marseille-54-po-1-400-w-comprend-une-telecommande-blanc-0643176p.html",
     "sku": "0643176",
-    "availability": "Il n’en reste que 2 #064-3176-2"
+    "availability": "Il n’en reste que 1 #064-3176-2"
   },
   {
     "title": "Meuble de rangement d'angle ouvert à 9 cubes For Living, blanc",
@@ -120,28 +120,16 @@
     "availability": "Il n’en reste que 4 #142-6174-2"
   },
   {
-    "title": "Oeuf en chocolat à la crème Cadbury, 34 g",
-    "image": "https://media-www.canadiantire.ca/product/living/food-drink/seasonal-confectionery/0514185/cadbury-creme-egg-34g-deb3ef99-2070-47b3-a7c7-3a0c4466d278-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 1.99,
-    "salePrice": 0.99,
+    "title": "Sorbetière numérique Vida par PADERNO, machine à crème glacée et gâteries 4-en-1, acier inoxydable, 1,9 L",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0431564/vida-by-paderno-ice-cream-maker-cab802eb-a002-46c2-b174-7fca7a24c75c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 149.99,
+    "salePrice": 59.99,
     "store": "Canadian Tire",
     "city": "Charlottetown, PEI 20 Babineau Avenue",
     "branch": "Charlottetown, PEI 20 Babineau Avenue",
-    "url": "https://www.canadiantire.ca/fr/pdp/oeuf-en-chocolat-a-la-creme-cadbury-34-g-0514185p.html",
-    "sku": "0514185",
-    "availability": ""
-  },
-  {
-    "title": "Sac de couchage sans fermeture à glissière Outbound Boundless, 2 °C, vert",
-    "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-furniture/0766640/outbound-2c-zipperless-sleeping-bag-92015620-b8aa-4f67-9bdb-5dda79ef1552-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 139.99,
-    "salePrice": 49.93,
-    "store": "Canadian Tire",
-    "city": "Charlottetown, PEI 20 Babineau Avenue",
-    "branch": "Charlottetown, PEI 20 Babineau Avenue",
-    "url": "https://www.canadiantire.ca/fr/pdp/sac-de-couchage-sans-fermeture-a-glissiere-outbound-boundless-2-c-vert-0766640p.html",
-    "sku": "0766640",
-    "availability": "Il n’en reste que 1 #076-6640-0"
+    "url": "https://www.canadiantire.ca/fr/pdp/sorbetiere-numerique-vida-par-paderno-machine-a-creme-glacee-et-gateries-4-en-1-acier-inoxydable-1-9-l-0431564p.html",
+    "sku": "0431564",
+    "availability": "53 En Stock#043-1564-0"
   },
   {
     "title": "Meuble-lavabo simple CANVAS Milford à 2 portes, dessus en marbre, 24 po, blanc",
@@ -202,18 +190,6 @@
     "url": "https://www.canadiantire.ca/fr/pdp/bande-lumineuse-a-del-intelligente-wi-fi-geeni-6-5-pi-0522135p.html",
     "sku": "0522135",
     "availability": "Il n’en reste que 6 #052-2135-4"
-  },
-  {
-    "title": "Lapin doré en chocolat au lait Lindt, 100 g",
-    "image": "https://media-www.canadiantire.ca/product/living/food-drink/seasonal-confectionery/0514292/lindt-chocolate-gold-bunny-100g-362a3d51-8ab8-4141-8198-c97e5e6af3cb-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 12.99,
-    "salePrice": 6.49,
-    "store": "Canadian Tire",
-    "city": "Charlottetown, PEI 20 Babineau Avenue",
-    "branch": "Charlottetown, PEI 20 Babineau Avenue",
-    "url": "https://www.canadiantire.ca/fr/pdp/lapin-dore-en-chocolat-au-lait-lindt-100-g-0514292p.html",
-    "sku": "0514292",
-    "availability": ""
   },
   {
     "title": "Sacs à provisions réutilisables en polyester Joie pour fruits et légumes, paq. 5",
@@ -333,7 +309,7 @@
     "branch": "Charlottetown, PEI 20 Babineau Avenue",
     "url": "https://www.canadiantire.ca/fr/pdp/melanges-de-chocolat-chaud-batman-paq-4-1519520p.html",
     "sku": "1519520",
-    "availability": "10 En Stock#151-9520-8"
+    "availability": "Il n’en reste que 6 #151-9520-8"
   },
   {
     "title": "Ampoule de rechange pour tue-moustiques/tue-insectes à lumière UV Stinger, compatible avec la série BKC90, paq. 2",
@@ -370,6 +346,42 @@
     "url": "https://www.canadiantire.ca/fr/pdp/boite-a-mouches-avec-garniture-en-mousse-plano-choix-de-tailles-transparent-1780035p.html",
     "sku": "1780035",
     "availability": ""
+  },
+  {
+    "title": "Joint de rechange Graco TrueAirless, à utiliser avec le protecteur Hand-Tight RAC IV",
+    "image": "https://media-www.canadiantire.ca/product/fixing/paint/paint-accessories/0492556/trueairless-single-seal-dec86a48-d64d-4d31-86d9-bb95629724ed-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Charlottetown, PEI 20 Babineau Avenue",
+    "branch": "Charlottetown, PEI 20 Babineau Avenue",
+    "url": "https://www.canadiantire.ca/fr/pdp/joint-de-rechange-graco-trueairless-a-utiliser-avec-le-protecteur-hand-tight-rac-iv-0492556p.html",
+    "sku": "0492556",
+    "availability": "Il n’en reste que 3 #049-2556-2"
+  },
+  {
+    "title": "Gradateur numérique unipolaire et à 3 voies Leviton REL06-742 Renu, DEL/CFL, plaque murale non incluse, blanc",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/rough-electrical/0528285/renu-dimmer-single-pold-3-way-a4eef8bf-8fe6-410e-8fc5-7dd2d0db477e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 30.99,
+    "salePrice": 14.93,
+    "store": "Canadian Tire",
+    "city": "Charlottetown, PEI 20 Babineau Avenue",
+    "branch": "Charlottetown, PEI 20 Babineau Avenue",
+    "url": "https://www.canadiantire.ca/fr/pdp/gradateur-numerique-unipolaire-et-a-3-voies-leviton-rel06-742-renu-del-cfl-plaque-murale-non-incluse-blanc-0528285p.html",
+    "sku": "0528285",
+    "availability": "Il n’en reste que 2 #052-8285-0"
+  },
+  {
+    "title": "Manuel automobile Haynes, 36074",
+    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/auto-shop-equipment-supplies/0259308/36074-ford-taurus-mercury-sable-86-95-d156125e-0921-445f-abd1-f44cf60045e8-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 32.99,
+    "salePrice": 1.93,
+    "store": "Canadian Tire",
+    "city": "Charlottetown, PEI 20 Babineau Avenue",
+    "branch": "Charlottetown, PEI 20 Babineau Avenue",
+    "url": "https://www.canadiantire.ca/fr/pdp/manuel-automobile-haynes-36074-0259308p.html",
+    "sku": "0259308",
+    "availability": "Il n’en reste que 1 #025-9308-8"
   },
   {
     "title": "Enduit d'allumage MotoMaster, 170 g",
@@ -501,7 +513,7 @@
     "branch": "Charlottetown, PEI 20 Babineau Avenue",
     "url": "https://www.canadiantire.ca/fr/pdp/connecteur-rond-6-poles-en-metal-cote-vehicule-hopkins-towing-solution-endurance-0409680p.html",
     "sku": "0409680",
-    "availability": "Il n’en reste que 5 #040-9680-0"
+    "availability": ""
   },
   {
     "title": "Cuiller de pêche blanche VMC Flash Champ, 1/8 oz",
@@ -537,7 +549,7 @@
     "branch": "Charlottetown, PEI 20 Babineau Avenue",
     "url": "https://www.canadiantire.ca/fr/pdp/connecteur-de-faisceau-stereo-scosche-vehicules-volkswagen-2006-a-aujourd-hui-0350191p.html",
     "sku": "0350191",
-    "availability": "Il n’en reste que 2 #035-0191-2"
+    "availability": "Il n’en reste que 1 #035-0191-2"
   },
   {
     "title": "Tatouages temporaires Play Time Cocomelon, multicolore, paq. 8, pour fête d'anniversaire",
