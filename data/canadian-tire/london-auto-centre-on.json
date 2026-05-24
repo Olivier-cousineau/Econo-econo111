@@ -1,53 +1,5 @@
 [
   {
-    "title": "Friteuse à air chaud à deux zones T-Fal Easy Fry, 8,3 L/8,7 ptes",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430340/t-fal-dual-zone-air-fryer-f30f9c50-9b02-4977-a8b9-2e9b9249a74e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 199.99,
-    "salePrice": 99.93,
-    "store": "Canadian Tire",
-    "city": "London Auto Centre, ON",
-    "branch": "London Auto Centre, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/friteuse-a-air-chaud-a-deux-zones-t-fal-easy-fry-8-3-l-8-7-ptes-0430340p.html",
-    "sku": "0430340",
-    "availability": "Il n’en reste que 1 #043-0340-8"
-  },
-  {
-    "title": "Affûte-couteaux à 3 étapes MASTER Chef",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/cutlery/2421029/master-chef-3stage-knife-sharpener-b9ab2767-c8c0-473e-a296-6cb70527856a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 18.99,
-    "salePrice": 4.93,
-    "store": "Canadian Tire",
-    "city": "London Auto Centre, ON",
-    "branch": "London Auto Centre, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/affute-couteaux-a-3-etapes-master-chef-2421029p.html",
-    "sku": "2421029",
-    "availability": "10 En Stock#242-1029-2"
-  },
-  {
-    "title": "Tasses à mesurer empilables en plastique MASTER Chef, paq. 10",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/bakeware-baking-prep/1429676/master-chef-10pc-measuring-cup-set-73c761cb-c28c-42fe-a32e-f57a30c6b9a6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 24.99,
-    "salePrice": 8.93,
-    "store": "Canadian Tire",
-    "city": "London Auto Centre, ON",
-    "branch": "London Auto Centre, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/tasses-a-mesurer-empilables-en-plastique-master-chef-paq-10-1429676p.html",
-    "sku": "1429676",
-    "availability": "36 En Stock#142-9676-0"
-  },
-  {
-    "title": "Cintres pivotants compacts en velours Type A avec barre à pantalon, couleurs variées, paq. 40",
-    "image": "https://media-www.canadiantire.ca/product/living/home-organization/closet-organization/0688308/type-a-velvet-suit-hanger-black-10pk-4afb3f73-0449-46d6-975c-369ae2760de2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 32.99,
-    "salePrice": 12.93,
-    "store": "Canadian Tire",
-    "city": "London Auto Centre, ON",
-    "branch": "London Auto Centre, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/cintres-pivotants-compacts-en-velours-type-a-avec-barre-a-pantalon-couleurs-variees-paq-40-0688307p.html",
-    "sku": "0688307",
-    "availability": ""
-  },
-  {
     "title": "Papier abrasif 3M Wetordry, 4 x 9 po, paq. 5",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-body-repair/0475842/3m-imperial-wetordry-sandpaper-p400-3f901c4f-8345-4630-9155-5ec371ea3509-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 10.99,
@@ -60,27 +12,63 @@
     "availability": ""
   },
   {
-    "title": "Écouteurs-bouton vraiment sans fil sport Bluehive Bluepods, noir",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-electronics/0358089/bluehive-bluepods-sport-true-wireless-earbuds-black-1c54ce42-6fbe-4f4b-8a11-3a24c5470b0e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 69.99,
-    "salePrice": 17.93,
+    "title": "Ensemble de nettoyants automobiles Armor All, paq. 16",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-chemicals/0397080/armor-all-car-wash-packs-16ct-8ed7ef02-e539-49d9-8a49-0232d41a7968-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 17.99,
+    "salePrice": 8.93,
     "store": "Canadian Tire",
     "city": "London Auto Centre, ON",
     "branch": "London Auto Centre, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/ecouteurs-bouton-vraiment-sans-fil-sport-bluehive-bluepods-noir-0358089p.html",
-    "sku": "0358089",
-    "availability": "Il n’en reste que 1 #035-8089-0"
+    "url": "https://www.canadiantire.ca/fr/pdp/ensemble-de-nettoyants-automobiles-armor-all-paq-16-0397080p.html",
+    "sku": "0397080",
+    "availability": "Il n’en reste que 3 #039-7080-6"
   },
   {
-    "title": "Sorbetière numérique Vida par PADERNO, machine à crème glacée et gâteries 4-en-1, acier inoxydable, 1,9 L",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0431564/vida-by-paderno-ice-cream-maker-cab802eb-a002-46c2-b174-7fca7a24c75c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 149.99,
-    "salePrice": 69.93,
+    "title": "Pistolet mousse sans fil SIMONIZ, outil seul, compatible PWRPOD",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-tools/0393650/simoniz-cordless-foam-gun-bare-tool--d9e374cc-260e-4071-806a-f16d2d580548-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 79.99,
+    "salePrice": 34.93,
     "store": "Canadian Tire",
     "city": "London Auto Centre, ON",
     "branch": "London Auto Centre, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/sorbetiere-numerique-vida-par-paderno-machine-a-creme-glacee-et-gateries-4-en-1-acier-inoxydable-1-9-l-0431564p.html",
-    "sku": "0431564",
-    "availability": "Il n’en reste que 1 #043-1564-0"
+    "url": "https://www.canadiantire.ca/fr/pdp/pistolet-mousse-sans-fil-simoniz-outil-seul-compatible-pwrpod-0393650p.html",
+    "sku": "0393650",
+    "availability": "Il n’en reste que 1 #039-3650-4"
+  },
+  {
+    "title": "Bandes lave-auto prémesurées biodégradables Nature Clean, paq. 36",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-chemicals/0396097/nature-clean-car-wash-strips-178be73a-215b-4d50-9b8c-8801de11a125-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 13.99,
+    "salePrice": 6.93,
+    "store": "Canadian Tire",
+    "city": "London Auto Centre, ON",
+    "branch": "London Auto Centre, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/bandes-lave-auto-premesurees-biodegradables-nature-clean-paq-36-0396097p.html",
+    "sku": "0396097",
+    "availability": "Il n’en reste que 3 #039-6097-4"
+  },
+  {
+    "title": "Woods™ - Panneau solaire portatif, 21 W",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/outdoor-tools/power-creation/0112519/woods-21-watt-portable-solar-panel-1bba4b05-37e0-498a-a09f-807789090e11-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 139.99,
+    "salePrice": 49.93,
+    "store": "Canadian Tire",
+    "city": "London Auto Centre, ON",
+    "branch": "London Auto Centre, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/woodstm-panneau-solaire-portatif-21-w-0112519p.html",
+    "sku": "0112519",
+    "availability": ""
+  },
+  {
+    "title": "Trousse de câblage pour connecteur métallique à 4 broches plates à 6 broches rondes Hopkins",
+    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/1407233/hopkins-4-flat-to-6-round-wiring-kit-metal--aa93cdea-5675-459b-93bd-96d163c5de2a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 44.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "London Auto Centre, ON",
+    "branch": "London Auto Centre, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-cablage-pour-connecteur-metallique-a-4-broches-plates-a-6-broches-rondes-hopkins-1407233p.html",
+    "sku": "1407233",
+    "availability": ""
   }
 ]
