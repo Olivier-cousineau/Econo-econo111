@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-05-30T00:46:09.949Z",
+  "generatedAt": "2026-05-30T09:31:05.794Z",
   "stores": [
     {
-      "id": "145",
-      "city": "St. Catharines S., ON",
+      "id": "122",
+      "city": "Burlington Fairview, ON",
       "status": "committed",
-      "details": "35 produits"
+      "details": "137 produits"
     },
     {
-      "id": "411",
-      "city": "Brampton Trinity Common, ON",
+      "id": "154",
+      "city": "Hamilton East, ON",
       "status": "committed",
-      "details": "175 produits"
+      "details": "122 produits"
     },
     {
-      "id": "346",
-      "city": "Miss.Mavis & Dundas, ON",
+      "id": "129",
+      "city": "Hamilton Centre, ON",
       "status": "committed",
-      "details": "65 produits"
+      "details": "124 produits"
     },
     {
-      "id": "108",
-      "city": "Collingwood, ON",
+      "id": "278",
+      "city": "Sudbury North, ON",
       "status": "committed",
-      "details": "70 produits"
+      "details": "147 produits"
     },
     {
-      "id": "90",
-      "city": "St. Catharines, ON",
+      "id": "220",
+      "city": "Waterdown, ON",
       "status": "committed",
-      "details": "97 produits"
+      "details": "84 produits"
     },
     {
-      "id": "320",
-      "city": "Rimouski, QC",
+      "id": "45",
+      "city": "Hamilton Main, ON",
       "status": "committed",
-      "details": "32 produits"
+      "details": "99 produits"
     },
     {
-      "id": "10",
-      "city": "Brampton Shoppers World, ON",
+      "id": "194",
+      "city": "Hamilton Mt.East, ON",
       "status": "committed",
-      "details": "98 produits"
+      "details": "88 produits"
     },
     {
-      "id": "497",
-      "city": "Mississauga Heartland, ON",
+      "id": "445",
+      "city": "Sudbury South, ON",
       "status": "committed",
-      "details": "65 produits"
+      "details": "61 produits"
     }
   ],
   "failedTwice": [],
