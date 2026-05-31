@@ -1,60 +1,55 @@
 {
-  "generatedAt": "2026-05-31T03:55:41.264Z",
+  "generatedAt": "2026-05-31T06:53:22.801Z",
   "stores": [
     {
-      "id": "691",
-      "city": "Riverview, NB",
+      "id": "178",
+      "city": "Kapuskasing, ON",
       "status": "committed",
-      "details": "57 produits"
+      "details": "74 produits"
     },
     {
-      "id": "261",
-      "city": "Greenwood, NS",
+      "id": "307",
+      "city": "Sept-Iles, QC",
       "status": "committed",
-      "details": "42 produits"
+      "details": "125 produits"
     },
     {
-      "id": "63",
-      "city": "Moncton Dieppe, NB",
-      "status": "committed",
-      "details": "65 produits"
-    },
-    {
-      "id": "491",
-      "city": "Tracadie - Sheila, NB",
+      "id": "21",
+      "city": "Chatham, ON",
       "status": "committed",
       "details": "75 produits"
     },
     {
-      "id": "647",
-      "city": "Shediac, NB",
+      "id": "135",
+      "city": "Wallaceburg, ON",
       "status": "committed",
-      "details": "51 produits"
+      "details": "78 produits"
     },
     {
-      "id": "94",
-      "city": "Sarnia, ON",
-      "status": "failed_twice",
-      "details": "failed twice – accepted"
+      "id": "13",
+      "city": "Bridgewater, NS",
+      "status": "committed",
+      "details": "110 produits"
     },
     {
-      "id": "8",
-      "city": "Blenheim, ON",
+      "id": "3",
+      "city": "Amherst, NS",
       "status": "committed",
-      "details": "92 produits"
+      "details": "10 produits"
     },
     {
-      "id": "54",
-      "city": "New Minas, NS",
+      "id": "215",
+      "city": "Tilbury, ON",
       "status": "committed",
-      "details": "79 produits"
+      "details": "55 produits"
+    },
+    {
+      "id": "132",
+      "city": "Summerside, PEI 474 Granville Street",
+      "status": "committed",
+      "details": "72 produits"
     }
   ],
-  "failedTwice": [
-    {
-      "id": "94",
-      "city": "Sarnia, ON"
-    }
-  ],
+  "failedTwice": [],
   "retriedAndSucceeded": []
 }
