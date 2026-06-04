@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-06-04T10:52:12.727Z",
+  "generatedAt": "2026-06-04T19:09:34.229Z",
   "stores": [
     {
-      "id": "196",
-      "city": "Maniwaki, QC",
-      "status": "committed",
-      "details": "40 produits"
-    },
-    {
-      "id": "85",
-      "city": "Prescott, ON",
-      "status": "committed",
-      "details": "77 produits"
-    },
-    {
-      "id": "348",
-      "city": "Sherbrooke Fleurimont, QC",
-      "status": "committed",
-      "details": "112 produits"
-    },
-    {
-      "id": "18",
-      "city": "Carleton Place, ON",
+      "id": "184",
+      "city": "Beauport, QC",
       "status": "committed",
       "details": "92 produits"
     },
     {
-      "id": "14",
-      "city": "Brockville, ON",
+      "id": "173",
+      "city": "St. Georges, QC",
       "status": "committed",
-      "details": "122 produits"
+      "details": "60 produits"
     },
     {
-      "id": "98",
-      "city": "Smiths Falls, ON",
+      "id": "694",
+      "city": "Kingston Division St., ON",
       "status": "committed",
-      "details": "40 produits"
+      "details": "130 produits"
     },
     {
-      "id": "4",
-      "city": "Arnprior, ON",
+      "id": "195",
+      "city": "Kingston, ON",
       "status": "committed",
-      "details": "123 produits"
+      "details": "103 produits"
     },
     {
-      "id": "99",
-      "city": "Shawville, QC",
+      "id": "417",
+      "city": "Kingston Township, ON",
       "status": "committed",
-      "details": "37 produits"
+      "details": "96 produits"
+    },
+    {
+      "id": "253",
+      "city": "Deep River, ON",
+      "status": "committed",
+      "details": "7 produits"
+    },
+    {
+      "id": "65",
+      "city": "Napanee, ON",
+      "status": "committed",
+      "details": "79 produits"
+    },
+    {
+      "id": "180",
+      "city": "Montmagny, QC",
+      "status": "committed",
+      "details": "29 produits"
     }
   ],
   "failedTwice": [],
