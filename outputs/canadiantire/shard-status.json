@@ -1,55 +1,60 @@
 {
-  "generatedAt": "2026-06-06T03:30:38.949Z",
+  "generatedAt": "2026-06-06T05:44:13.939Z",
   "stores": [
     {
-      "id": "241",
-      "city": "Mississauga Southdown, ON",
+      "id": "159",
+      "city": "Georgetown, ON",
       "status": "committed",
-      "details": "96 produits"
+      "details": "59 produits (after retry)"
     },
     {
-      "id": "675",
-      "city": "Brampton McLaughlin Road, ON",
+      "id": "73",
+      "city": "Orangeville, ON",
       "status": "committed",
-      "details": "164 produits"
+      "details": "83 produits"
     },
     {
-      "id": "424",
-      "city": "Oak., Winston Churchill, ON",
+      "id": "128",
+      "city": "Port Colborne, ON",
       "status": "committed",
-      "details": "96 produits"
+      "details": "64 produits"
     },
     {
-      "id": "233",
-      "city": "La Sarre, QC",
+      "id": "140",
+      "city": "Milton, ON",
       "status": "committed",
-      "details": "82 produits"
+      "details": "48 produits"
     },
     {
-      "id": "118",
-      "city": "Welland, ON",
+      "id": "40",
+      "city": "Grimsby, ON",
       "status": "committed",
-      "details": "77 produits"
+      "details": "71 produits"
     },
     {
-      "id": "169",
-      "city": "Meadowvale, ON",
-      "status": "committed",
-      "details": "95 produits"
-    },
-    {
-      "id": "429",
-      "city": "Oakville North, ON",
-      "status": "committed",
-      "details": "136 produits"
-    },
-    {
-      "id": "143",
-      "city": "Oakville, ON",
+      "id": "232",
+      "city": "St. Stephen, NB",
       "status": "committed",
       "details": "79 produits"
+    },
+    {
+      "id": "52",
+      "city": "Kirkland Lake, ON",
+      "status": "committed",
+      "details": "60 produits"
+    },
+    {
+      "id": "412",
+      "city": "Burlington North, ON",
+      "status": "committed",
+      "details": "106 produits"
     }
   ],
   "failedTwice": [],
-  "retriedAndSucceeded": []
+  "retriedAndSucceeded": [
+    {
+      "id": "159",
+      "city": "Georgetown, ON"
+    }
+  ]
 }
