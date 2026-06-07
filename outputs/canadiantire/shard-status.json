@@ -1,55 +1,60 @@
 {
-  "generatedAt": "2026-06-07T02:34:44.783Z",
+  "generatedAt": "2026-06-07T03:56:32.641Z",
   "stores": [
     {
-      "id": "92",
-      "city": "St. Thomas, ON",
+      "id": "691",
+      "city": "Riverview, NB",
       "status": "committed",
-      "details": "104 produits"
+      "details": "55 produits"
     },
     {
-      "id": "136",
-      "city": "Miramichi, NB",
+      "id": "261",
+      "city": "Greenwood, NS",
       "status": "committed",
-      "details": "76 produits"
+      "details": "44 produits"
     },
     {
-      "id": "11",
-      "city": "Bathurst, NB",
+      "id": "63",
+      "city": "Moncton Dieppe, NB",
       "status": "committed",
-      "details": "56 produits"
+      "details": "53 produits"
     },
     {
-      "id": "167",
-      "city": "Elliot Lake, ON",
+      "id": "491",
+      "city": "Tracadie - Sheila, NB",
       "status": "committed",
-      "details": "39 produits"
+      "details": "72 produits"
     },
     {
-      "id": "104",
-      "city": "Strathroy, ON",
+      "id": "647",
+      "city": "Shediac, NB",
       "status": "committed",
-      "details": "91 produits"
+      "details": "45 produits"
     },
     {
-      "id": "32",
-      "city": "Forest, ON",
-      "status": "committed",
-      "details": "34 produits"
+      "id": "94",
+      "city": "Sarnia, ON",
+      "status": "failed_twice",
+      "details": "failed twice – accepted"
     },
     {
-      "id": "249",
-      "city": "Moncton Mountain Rd, NB",
+      "id": "8",
+      "city": "Blenheim, ON",
       "status": "committed",
-      "details": "67 produits"
+      "details": "108 produits"
     },
     {
-      "id": "463",
-      "city": "Paspebiac, QC",
+      "id": "54",
+      "city": "New Minas, NS",
       "status": "committed",
-      "details": "117 produits"
+      "details": "71 produits"
     }
   ],
-  "failedTwice": [],
+  "failedTwice": [
+    {
+      "id": "94",
+      "city": "Sarnia, ON"
+    }
+  ],
   "retriedAndSucceeded": []
 }
