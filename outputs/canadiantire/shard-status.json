@@ -1,19 +1,64 @@
 {
-  "generatedAt": "2026-06-07T15:27:35.706Z",
+  "generatedAt": "2026-06-10T10:17:26.152Z",
   "stores": [
     {
-      "id": "213",
-      "city": "Port Hawkesbury, NS",
+      "id": "271",
+      "city": "St. Jerome, QC",
       "status": "committed",
-      "details": "94 produits"
+      "details": "321 produits (after retry)"
     },
     {
-      "id": "451",
-      "city": "Marathon, ON",
+      "id": "649",
+      "city": "Blainville, QC",
       "status": "committed",
-      "details": "55 produits"
+      "details": "114 produits"
+    },
+    {
+      "id": "418",
+      "city": "Rosemere, QC",
+      "status": "committed",
+      "details": "120 produits"
+    },
+    {
+      "id": "641",
+      "city": "La Plaine, QC",
+      "status": "committed",
+      "details": "115 produits (after retry)"
+    },
+    {
+      "id": "218",
+      "city": "St. Eustache, QC",
+      "status": "committed",
+      "details": "204 produits"
+    },
+    {
+      "id": "690",
+      "city": "Laval Fabreville, QC",
+      "status": "committed",
+      "details": "134 produits"
+    },
+    {
+      "id": "312",
+      "city": "Terrebonne, QC",
+      "status": "committed",
+      "details": "146 produits"
+    },
+    {
+      "id": "231",
+      "city": "Laval Vimont, QC",
+      "status": "committed",
+      "details": "174 produits"
     }
   ],
   "failedTwice": [],
-  "retriedAndSucceeded": []
+  "retriedAndSucceeded": [
+    {
+      "id": "641",
+      "city": "La Plaine, QC"
+    },
+    {
+      "id": "271",
+      "city": "St. Jerome, QC"
+    }
+  ]
 }
