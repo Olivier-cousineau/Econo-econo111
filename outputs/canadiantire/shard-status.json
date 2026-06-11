@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-06-11T13:23:30.501Z",
+  "generatedAt": "2026-06-11T16:10:31.613Z",
   "stores": [
     {
-      "id": "423",
-      "city": "Donnacona, QC",
+      "id": "342",
+      "city": "Quebec Les Saules, QC",
       "status": "committed",
-      "details": "129 produits"
+      "details": "165 produits"
     },
     {
-      "id": "80",
-      "city": "Perth, ON",
+      "id": "245",
+      "city": "Quebec Ste. Foy, QC",
       "status": "committed",
-      "details": "115 produits"
+      "details": "66 produits"
     },
     {
-      "id": "352",
-      "city": "La Tuque, QC",
+      "id": "79",
+      "city": "Pembroke, ON",
       "status": "committed",
-      "details": "72 produits"
+      "details": "58 produits"
     },
     {
-      "id": "86",
-      "city": "Renfrew, ON",
+      "id": "405",
+      "city": "Lebourgneuf, QC",
       "status": "committed",
-      "details": "102 produits"
+      "details": "94 produits"
     },
     {
-      "id": "156",
-      "city": "Thetford Mines, QC",
-      "status": "committed",
-      "details": "76 produits"
-    },
-    {
-      "id": "692",
-      "city": "Ancienne Lorette, QC",
+      "id": "101",
+      "city": "Quebec Vanier, QC",
       "status": "committed",
       "details": "92 produits"
     },
     {
-      "id": "37",
-      "city": "Gananoque, ON",
+      "id": "416",
+      "city": "Ste. Marie De Beauce, QC",
       "status": "committed",
-      "details": "37 produits"
+      "details": "48 produits"
     },
     {
-      "id": "624",
-      "city": "St. Romuald, QC",
+      "id": "225",
+      "city": "Lac Megantic, QC",
       "status": "committed",
-      "details": "95 produits"
+      "details": "74 produits"
+    },
+    {
+      "id": "165",
+      "city": "Levis, QC",
+      "status": "committed",
+      "details": "85 produits"
     }
   ],
   "failedTwice": [],
