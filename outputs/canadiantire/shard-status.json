@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-06-11T16:10:31.613Z",
+  "generatedAt": "2026-06-11T19:02:15.564Z",
   "stores": [
     {
-      "id": "342",
-      "city": "Quebec Les Saules, QC",
+      "id": "184",
+      "city": "Beauport, QC",
       "status": "committed",
-      "details": "165 produits"
+      "details": "96 produits"
     },
     {
-      "id": "245",
-      "city": "Quebec Ste. Foy, QC",
+      "id": "173",
+      "city": "St. Georges, QC",
       "status": "committed",
-      "details": "66 produits"
+      "details": "67 produits"
     },
     {
-      "id": "79",
-      "city": "Pembroke, ON",
+      "id": "694",
+      "city": "Kingston Division St., ON",
       "status": "committed",
-      "details": "58 produits"
+      "details": "134 produits"
     },
     {
-      "id": "405",
-      "city": "Lebourgneuf, QC",
+      "id": "195",
+      "city": "Kingston, ON",
       "status": "committed",
-      "details": "94 produits"
+      "details": "119 produits"
     },
     {
-      "id": "101",
-      "city": "Quebec Vanier, QC",
+      "id": "417",
+      "city": "Kingston Township, ON",
       "status": "committed",
-      "details": "92 produits"
+      "details": "77 produits"
     },
     {
-      "id": "416",
-      "city": "Ste. Marie De Beauce, QC",
+      "id": "253",
+      "city": "Deep River, ON",
       "status": "committed",
-      "details": "48 produits"
+      "details": "43 produits"
     },
     {
-      "id": "225",
-      "city": "Lac Megantic, QC",
+      "id": "65",
+      "city": "Napanee, ON",
       "status": "committed",
-      "details": "74 produits"
+      "details": "65 produits"
     },
     {
-      "id": "165",
-      "city": "Levis, QC",
+      "id": "180",
+      "city": "Montmagny, QC",
       "status": "committed",
-      "details": "85 produits"
+      "details": "91 produits"
     }
   ],
   "failedTwice": [],
