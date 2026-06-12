@@ -1,17 +1,5 @@
 [
   {
-    "title": "T-shirt sport à manches courtes et extensibles avec encolure ras du cou Mooselander, hommes, couleur unie, tailles variées, noir/gris, paq. 2",
-    "image": "https://media-www.canadiantire.ca/product/playing/footwear-apparel/summer-footwear-apparel/1874066/active-2-pack-short-sleeve-tees-m-l-ce888845-ad24-41df-8604-c50d7052ca02-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 21.99,
-    "salePrice": 2.93,
-    "store": "Canadian Tire",
-    "city": "Dufferin & Finch Auto Ctr, ON",
-    "branch": "Dufferin & Finch Auto Ctr, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/t-shirt-sport-a-manches-courtes-et-extensibles-avec-encolure-ras-du-cou-mooselander-hommes-couleur-unie-tailles-variees-noir-gris-paq-2-1874066p.html",
-    "sku": "1874066",
-    "availability": ""
-  },
-  {
     "title": "Tasses à mesurer empilables en plastique MASTER Chef, paq. 10",
     "image": "https://media-www.canadiantire.ca/product/living/kitchen/bakeware-baking-prep/1429676/master-chef-10pc-measuring-cup-set-73c761cb-c28c-42fe-a32e-f57a30c6b9a6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 24.99,
@@ -24,52 +12,16 @@
     "availability": "8 En Stock#142-9676-0"
   },
   {
-    "title": "Barbecue MASTER Chef G70220 Turismo, 4 brûleurs, propane avec tablettes latérales, 36 po",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking/0850106/master-chef-grill-turismo-4-burner-gas-griddle-cart-19667163-bb41-4715-b58c-645b95721288-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "title": "Suncast - Coffre de rangement d'extérieur en résine,très grand, gris, 200 gal",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-storage/0600632/suncast-200-gallon-extra-large-deck-box-944eb197-8a12-4286-bb38-4bc562189c1b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 399.99,
     "salePrice": 199.93,
     "store": "Canadian Tire",
     "city": "Dufferin & Finch Auto Ctr, ON",
     "branch": "Dufferin & Finch Auto Ctr, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/barbecue-master-chef-g70220-turismo-4-bruleurs-propane-avec-tablettes-laterales-36-po-0850106p.html",
-    "sku": "0850106",
-    "availability": "Il n’en reste que 1 #085-0106-8"
-  },
-  {
-    "title": "Poêle à frire antiadhésive en titane dur T-fal, va au lave-vaisselle et au four, grise, tailles assorties",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/cookware/1428813/t-fal-26cm-titanium-non-stick-frypan-e3b8aad2-b671-4eb9-97ba-849f5a29b4e3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 32.99,
-    "salePrice": 14.93,
-    "store": "Canadian Tire",
-    "city": "Dufferin & Finch Auto Ctr, ON",
-    "branch": "Dufferin & Finch Auto Ctr, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/poele-a-frire-antiadhesive-en-titane-dur-t-fal-va-au-lave-vaisselle-et-au-four-grise-tailles-assorties-1428813p.html",
-    "sku": "1428813",
-    "availability": ""
-  },
-  {
-    "title": "Gaufrier miniature compact antiadhésif en forme de coeur Dash, rouge",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430375/dash-heart-mini-waffle-maker-red-5355d5fb-cea9-4969-88de-99bf11ab3589-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 20.99,
-    "salePrice": 9.93,
-    "store": "Canadian Tire",
-    "city": "Dufferin & Finch Auto Ctr, ON",
-    "branch": "Dufferin & Finch Auto Ctr, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/gaufrier-miniature-compact-antiadhesif-en-forme-de-coeur-dash-rouge-0430375p.html",
-    "sku": "0430375",
-    "availability": "Il n’en reste que 6 #043-0375-6"
-  },
-  {
-    "title": "Bluehive - Ecouteurs boutons sans fil, 22h autonomie et charge rapide",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-electronics/0355551/bluehive-bluepods-true-wireless-earbuds-d801aae0-977a-4b93-998a-00bad4241385-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 39.99,
-    "salePrice": 14.93,
-    "store": "Canadian Tire",
-    "city": "Dufferin & Finch Auto Ctr, ON",
-    "branch": "Dufferin & Finch Auto Ctr, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/bluehive-ecouteurs-boutons-sans-fil-22h-autonomie-et-charge-rapide-0355551p.html",
-    "sku": "0355551",
-    "availability": "Il n’en reste que 3 #035-5551-6"
+    "url": "https://www.canadiantire.ca/fr/pdp/suncast-coffre-de-rangement-d-exterieur-en-resine-tres-grand-gris-200-gal-0600632p.html",
+    "sku": "0600632",
+    "availability": "Il n’en reste que 1 #060-0632-2"
   },
   {
     "title": "Ampoules à DEL à intensité variable à culot E12 NOMA B10, 2700K, 350 lumens, blanc chaud, 40 W, paq. 2",
@@ -81,7 +33,7 @@
     "branch": "Dufferin & Finch Auto Ctr, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/ampoules-a-del-a-intensite-variable-a-culot-e12-noma-b10-2700k-350-lumens-blanc-chaud-40-w-paq-2-0529347p.html",
     "sku": "0529347",
-    "availability": "142 En Stock#052-9347-8"
+    "availability": "141 En Stock#052-9347-8"
   },
   {
     "title": "Service de vaisselle en porcelaine festonnée CANVAS Odessa, blanc, paq. 12",
@@ -96,18 +48,6 @@
     "availability": "Il n’en reste que 1 #242-1125-2"
   },
   {
-    "title": "Bibliothèque For Living, 5 tablettes, style Dakota, chêne",
-    "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/1680199/for-living-5-shelf-bookcase-dakota-oak-92e182af-be3c-47c4-927c-5831ce70de5d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 199.99,
-    "salePrice": 99.93,
-    "store": "Canadian Tire",
-    "city": "Dufferin & Finch Auto Ctr, ON",
-    "branch": "Dufferin & Finch Auto Ctr, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/bibliotheque-for-living-5-tablettes-style-dakota-chene-1680199p.html",
-    "sku": "1680199",
-    "availability": "Il n’en reste que 2 #168-0199-0"
-  },
-  {
     "title": "Serviettes de cuisine en coton gaufré MASTER Chef, motif à carreaux, 22 x 32 po, choix de couleurs, paq. 5",
     "image": "https://media-www.canadiantire.ca/product/living/kitchen/dining-and-entertaining/1422703/masterchef-5-pack-kitchen-towel-f792214c-17b8-45de-ab32-6fd9a1e21c54-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 19.99,
@@ -120,40 +60,16 @@
     "availability": "Il n’en reste que 4 #142-2703-8"
   },
   {
-    "title": "Tampons nettoyants Effaceur magique M. Net original avec Durafoam, paq. 2",
-    "image": "https://media-www.canadiantire.ca/product/living/cleaning/household-cleaning-solutions/0530969/mr-clean-magic-eraser-2-pack-44511b89-b8e2-4623-aa0e-4058123f7f62-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 4.49,
-    "salePrice": 1.93,
+    "title": "Bibliothèque For Living, 5 tablettes, style Dakota, chêne",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/1680199/for-living-5-shelf-bookcase-dakota-oak-92e182af-be3c-47c4-927c-5831ce70de5d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 199.99,
+    "salePrice": 99.93,
     "store": "Canadian Tire",
     "city": "Dufferin & Finch Auto Ctr, ON",
     "branch": "Dufferin & Finch Auto Ctr, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/tampons-nettoyants-effaceur-magique-m-net-original-avec-durafoam-paq-2-0530969p.html",
-    "sku": "0530969",
-    "availability": ""
-  },
-  {
-    "title": "Lampe à faisceau large à DEL Mastercraft, 1500 lumens, compatible PWR POD",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0372969/mastercraft-1500-lumens-spotlight-pwr-pod-compatible-363c7083-04a4-4a37-b863-da8214fd1958-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 119.99,
-    "salePrice": 31.93,
-    "store": "Canadian Tire",
-    "city": "Dufferin & Finch Auto Ctr, ON",
-    "branch": "Dufferin & Finch Auto Ctr, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/lampe-a-faisceau-large-a-del-mastercraft-1500-lumens-compatible-pwr-pod-0372969p.html",
-    "sku": "0372969",
-    "availability": "Il n’en reste que 6 #037-2969-8"
-  },
-  {
-    "title": "Lampes de table d’extérieur à DEL CANVAS Raven, noir mat, paq. 2",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-lighting/0525990/canvas-raven-led-outdoor-table-lamp-set-2pk-ed896a16-9154-446d-8dd9-c5170905bed9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 69.99,
-    "salePrice": 34.93,
-    "store": "Canadian Tire",
-    "city": "Dufferin & Finch Auto Ctr, ON",
-    "branch": "Dufferin & Finch Auto Ctr, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/lampes-de-table-d-exterieur-a-del-canvas-raven-noir-mat-paq-2-0525990p.html",
-    "sku": "0525990",
-    "availability": "Il n’en reste que 2 #052-5990-8"
+    "url": "https://www.canadiantire.ca/fr/pdp/bibliotheque-for-living-5-tablettes-style-dakota-chene-1680199p.html",
+    "sku": "1680199",
+    "availability": "Il n’en reste que 2 #168-0199-0"
   },
   {
     "title": "Ciseaux à prise confortable pour enfants de Merangue, pointe arrondie, couleurs variées, 5 po, paq. 2",
@@ -168,40 +84,64 @@
     "availability": "Il n’en reste que 3 #142-0189-4"
   },
   {
-    "title": "Barre d'attelage réglable MotoMaster, 2 po, 5 000 lb",
-    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0406575/reese-towpower-adjustable-ball-mount-ce57ec66-3694-489a-8c97-36bc3fa161e8-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 49.99,
-    "salePrice": 24.93,
+    "title": "Lampe à faisceau large à DEL Mastercraft, 1500 lumens, compatible PWR POD",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0372969/mastercraft-1500-lumens-spotlight-pwr-pod-compatible-363c7083-04a4-4a37-b863-da8214fd1958-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 119.99,
+    "salePrice": 31.93,
     "store": "Canadian Tire",
     "city": "Dufferin & Finch Auto Ctr, ON",
     "branch": "Dufferin & Finch Auto Ctr, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/barre-d-attelage-reglable-motomaster-2-po-5-000-lb-0406575p.html",
-    "sku": "0406575",
-    "availability": "Il n’en reste que 2 #040-6575-0"
+    "url": "https://www.canadiantire.ca/fr/pdp/lampe-a-faisceau-large-a-del-mastercraft-1500-lumens-compatible-pwr-pod-0372969p.html",
+    "sku": "0372969",
+    "availability": "Il n’en reste que 6 #037-2969-8"
   },
   {
-    "title": "Tente de camping Coleman Slylodge pour 10 personnes avec pièce à moustiquaire convertible, double-toit et sac de transport",
-    "image": "https://media-www.canadiantire.ca/product/playing/camping/tents-shelters/0766127/coleman-10-person-cabin-tent-with-screen-room-508408d3-620b-447f-8946-288dc1cdbc12-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 489.99,
-    "salePrice": 244.93,
+    "title": "Verrou de volant universel en forme de T Certified",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0372977/certified-universal-steering-wheel-lock-c09a6d0d-b5e9-4201-82b6-5cf88b4f0bd8-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 37.99,
+    "salePrice": 17.93,
     "store": "Canadian Tire",
     "city": "Dufferin & Finch Auto Ctr, ON",
     "branch": "Dufferin & Finch Auto Ctr, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/tente-de-camping-coleman-slylodge-pour-10-personnes-avec-piece-a-moustiquaire-convertible-double-toit-et-sac-de-transport-0766127p.html",
-    "sku": "0766127",
-    "availability": "Il n’en reste que 2 #076-6127-4"
+    "url": "https://www.canadiantire.ca/fr/pdp/verrou-de-volant-universel-en-forme-de-t-certified-0372977p.html",
+    "sku": "0372977",
+    "availability": "17 En Stock#037-2977-8"
   },
   {
-    "title": "Ensemble de nettoyants automobiles Armor All, paq. 16",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-chemicals/0397080/armor-all-car-wash-packs-16ct-8ed7ef02-e539-49d9-8a49-0232d41a7968-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 17.99,
-    "salePrice": 6.93,
+    "title": "Surligneurs BIC Intensity à pointe biseautée, pastel, paq. 6",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/home-office-supplies/2420342/bic-intensity-highlighter-pastel-6pk-92a94091-d9ce-46d8-ad02-49d33c9dfd66-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 6.99,
+    "salePrice": 3.43,
     "store": "Canadian Tire",
     "city": "Dufferin & Finch Auto Ctr, ON",
     "branch": "Dufferin & Finch Auto Ctr, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/ensemble-de-nettoyants-automobiles-armor-all-paq-16-0397080p.html",
-    "sku": "0397080",
-    "availability": "11 En Stock#039-7080-6"
+    "url": "https://www.canadiantire.ca/fr/pdp/surligneurs-bic-intensity-a-pointe-biseautee-pastel-paq-6-2420342p.html",
+    "sku": "2420342",
+    "availability": "Il n’en reste que 4 #242-0342-0"
+  },
+  {
+    "title": "Huile à moteur 10W-30 4 temps BRP XPS Marine, 1 L",
+    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/specialty-oil-lubricants/0281884/brp-xps-4-cycle-10w30-1l-4ff39db0-9e85-4434-86ab-fde25c6b6f2c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 22.99,
+    "salePrice": 10.93,
+    "store": "Canadian Tire",
+    "city": "Dufferin & Finch Auto Ctr, ON",
+    "branch": "Dufferin & Finch Auto Ctr, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/huile-a-moteur-10w-30-4-temps-brp-xps-marine-1-l-0281884p.html",
+    "sku": "0281884",
+    "availability": "8 En Stock#028-1884-6"
+  },
+  {
+    "title": "Support de plaque d'immatriculation pour repérage de véhicule AutoTrends",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0372925/autotrends-find-my-auto-license-plate-frame-41d8c2a3-7d2a-4373-8046-7d337eb238a9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 8.93,
+    "store": "Canadian Tire",
+    "city": "Dufferin & Finch Auto Ctr, ON",
+    "branch": "Dufferin & Finch Auto Ctr, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/support-de-plaque-d-immatriculation-pour-reperage-de-vehicule-autotrends-0372925p.html",
+    "sku": "0372925",
+    "availability": "Il n’en reste que 2 #037-2925-2"
   },
   {
     "title": "Faitout PADERNO en fonte durable, allant au four, rouge, 5 pintes",
@@ -216,40 +156,52 @@
     "availability": "Il n’en reste que 1 #142-3478-8"
   },
   {
-    "title": "Surligneurs BIC Brite Liner Grip à pointe biseautée, couleurs variées, paq. 5",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/home-office-supplies/2420351/bic-brite-liner-grip-chisel-point-5pk-ast-f0278621-4955-4f66-bea7-60b6e3bc3e6f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 5.99,
-    "salePrice": 2.93,
+    "title": "Table et train en bois Rocky Mountain, paq. 50",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/preschool-toys-activities/1501272/rocky-mountain-wooden-train-set-and-table-d9702a1d-eceb-406f-99bf-dc0cf5d5b2e9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 149.99,
+    "salePrice": 55.93,
     "store": "Canadian Tire",
     "city": "Dufferin & Finch Auto Ctr, ON",
     "branch": "Dufferin & Finch Auto Ctr, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/surligneurs-bic-brite-liner-grip-a-pointe-biseautee-couleurs-variees-paq-5-2420351p.html",
-    "sku": "2420351",
-    "availability": "8 En Stock#242-0351-8"
+    "url": "https://www.canadiantire.ca/fr/pdp/table-et-train-en-bois-rocky-mountain-paq-50-1501272p.html",
+    "sku": "1501272",
+    "availability": "Il n’en reste que 1 #150-1272-8"
   },
   {
-    "title": "Plats de cuisson antiadhésifs Paderno Vida, paq. 4",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/bakeware-baking-prep/1429584/vida-4pc-metal-bakeware-set-3441ec2e-dc9f-4c49-8906-1a23d9a68520-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 99.99,
-    "salePrice": 49.93,
+    "title": "Friteuse à air chaud avec 10 préréglages PowerXL Luminex, chauffage infrarouge, 5 L",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430397/power-xl-luminex-air-fryer-5l-02022883-f407-4a18-abff-15b0873b676d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 194.99,
+    "salePrice": 79.93,
     "store": "Canadian Tire",
     "city": "Dufferin & Finch Auto Ctr, ON",
     "branch": "Dufferin & Finch Auto Ctr, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/plats-de-cuisson-antiadhesifs-paderno-vida-paq-4-1429584p.html",
-    "sku": "1429584",
-    "availability": "Il n’en reste que 3 #142-9584-8"
+    "url": "https://www.canadiantire.ca/fr/pdp/friteuse-a-air-chaud-avec-10-prereglages-powerxl-luminex-chauffage-infrarouge-5-l-0430397p.html",
+    "sku": "0430397",
+    "availability": "Il n’en reste que 3 #043-0397-4"
   },
   {
-    "title": "Protection contre les inondations Flex Tape Flex Seal, 3,75 po x 20 pi",
-    "image": "https://media-www.canadiantire.ca/product/fixing/paint/surface-prep-maintenance/0641546/flex-tape-flood-protection-3-75a-x-20a--f00485f5-8548-4ee3-8ecd-da418af06bc1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 29.99,
-    "salePrice": 14.93,
+    "title": "Batterie de cuisine en cuivre Lagostina Artiste-Clad allant au four, paq. 12",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/cookware/1422641/lagostina-12-piece-copper-hand-hammered-cookware-set-8efd56aa-f4d9-43a3-830a-345e63def203-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 599.99,
+    "salePrice": 299.93,
     "store": "Canadian Tire",
     "city": "Dufferin & Finch Auto Ctr, ON",
     "branch": "Dufferin & Finch Auto Ctr, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/protection-contre-les-inondations-flex-tape-flex-seal-3-75-po-x-20-pi-0641546p.html",
-    "sku": "0641546",
-    "availability": "Il n’en reste que 3 #064-1546-4"
+    "url": "https://www.canadiantire.ca/fr/pdp/batterie-de-cuisine-en-cuivre-lagostina-artiste-clad-allant-au-four-paq-12-1422641p.html",
+    "sku": "1422641",
+    "availability": "Il n’en reste que 3 #142-2641-4"
+  },
+  {
+    "title": "Embouts pour vissage à percussion CA2 MAXIMUM, boîte de Tic-Tac, 1 po, paq. 16",
+    "image": "https://media-www.canadiantire.ca/product/fixing/tools/power-tool-accessories/0540521/maximum-1-sq2-impact-ready-tic-tac-with-holder-16pk-1aaa6f12-d6f1-4f2a-9d1e-e38b030cf3e0-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 18.99,
+    "salePrice": 7.93,
+    "store": "Canadian Tire",
+    "city": "Dufferin & Finch Auto Ctr, ON",
+    "branch": "Dufferin & Finch Auto Ctr, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/embouts-pour-vissage-a-percussion-ca2-maximum-boite-de-tic-tac-1-po-paq-16-0540521p.html",
+    "sku": "0540521",
+    "availability": "Il n’en reste que 6 #054-0521-2"
   },
   {
     "title": "Huile pour fourches synthétique Lucas, 15, 473 mL",
@@ -264,54 +216,6 @@
     "availability": "9 En Stock#028-1842-6"
   },
   {
-    "title": "Forets pour perceuse-tournevis plaqués au titane Mastercraft, paq. 304",
-    "image": "https://media-www.canadiantire.ca/product/fixing/tools/power-tool-accessories/0542375/mastercraft-304-piece-drill-drive-bit-set-18bc491c-53ad-4527-bd4f-af93162fffb3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 199.99,
-    "salePrice": 99.93,
-    "store": "Canadian Tire",
-    "city": "Dufferin & Finch Auto Ctr, ON",
-    "branch": "Dufferin & Finch Auto Ctr, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/forets-pour-perceuse-tournevis-plaques-au-titane-mastercraft-paq-304-0542375p.html",
-    "sku": "0542375",
-    "availability": "Il n’en reste que 2 #054-2375-8"
-  },
-  {
-    "title": "Caméra de recul type S à montage flexible avec écran de 5 po",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-electronics/0350183/type-s-flex-mount-5-backup-camera-c6057e28-17ee-48d8-bc9e-1cc2ee79c1f3-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 299.99,
-    "salePrice": 62.93,
-    "store": "Canadian Tire",
-    "city": "Dufferin & Finch Auto Ctr, ON",
-    "branch": "Dufferin & Finch Auto Ctr, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/camera-de-recul-type-s-a-montage-flexible-avec-ecran-de-5-po-0350183p.html",
-    "sku": "0350183",
-    "availability": ""
-  },
-  {
-    "title": "Simoniz universel - Laveuse haute pression à filtre à eau",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/pressure-washers-accessories/0398616/simoniz-electric-gas-pressure-washer-water-filter-hose-e4c815d6-d8b8-4c5a-9185-45ad08e6a5a6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 34.99,
-    "salePrice": 5.93,
-    "store": "Canadian Tire",
-    "city": "Dufferin & Finch Auto Ctr, ON",
-    "branch": "Dufferin & Finch Auto Ctr, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/simoniz-universel-laveuse-haute-pression-a-filtre-a-eau-0398616p.html",
-    "sku": "0398616",
-    "availability": "Il n’en reste que 1 #039-8616-8"
-  },
-  {
-    "title": "Nettoyant Meguiar’s Hot Rims pour roues chromées, 709 mL",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-chemicals/0390494/meguiar-s-hot-rims-chrome-wheel-cleaner-93cbe5bc-4b0d-4caa-ad3a-e0ab527dd81e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 19.99,
-    "salePrice": 6.93,
-    "store": "Canadian Tire",
-    "city": "Dufferin & Finch Auto Ctr, ON",
-    "branch": "Dufferin & Finch Auto Ctr, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-meguiar-s-hot-rims-pour-roues-chromees-709-ml-0390494p.html",
-    "sku": "0390494",
-    "availability": ""
-  },
-  {
     "title": "Lampe de poche Police Security Tornado étanche en aluminium, 300 lumens, piles incluses, noir",
     "image": "https://media-www.canadiantire.ca/product/fixing/hardware/household-flashlights/0651723/police-security-tornado-flashlight-300-lumen-03d5dca3-d3b0-4b98-a14d-756f955ebf17-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 39.99,
@@ -324,63 +228,99 @@
     "availability": "Il n’en reste que 5 #065-1723-0"
   },
   {
-    "title": "Lampe de travail à capteur MotoMaster, 100 lumens, lumière chaude",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0373186/motomaster-puck-light-with-motion-sensor-e3d65ec1-7acc-4592-bf18-d3b1678340ab-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 19.99,
+    "title": "Simoniz - Lance en métal ajustable compatible avec laveuse haute pression électrique de 2300 lb/po², 13 po",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/pressure-washers-accessories/0398538/simoniz-electric-pressure-washer-replacement-metal-adjustabl-47566b10-1eff-478c-aaf8-e83e8a28e410-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 53.99,
+    "salePrice": 6.93,
+    "store": "Canadian Tire",
+    "city": "Dufferin & Finch Auto Ctr, ON",
+    "branch": "Dufferin & Finch Auto Ctr, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/simoniz-lance-en-metal-ajustable-compatible-avec-laveuse-haute-pression-electrique-de-2300-lb-po2-13-po-0398538p.html",
+    "sku": "0398538",
+    "availability": "Il n’en reste que 2 #039-8538-4"
+  },
+  {
+    "title": "Collier pour chat/chien, bleu/orange",
+    "image": "https://media-www.canadiantire.ca/product/living/pet-care/pet-accessories/1427569/perri-s-pet-collar-blue-orange-multi-small-564bef44-a3be-495c-bc22-d1682eb4660a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 14.99,
     "salePrice": 4.93,
     "store": "Canadian Tire",
     "city": "Dufferin & Finch Auto Ctr, ON",
     "branch": "Dufferin & Finch Auto Ctr, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/lampe-de-travail-a-capteur-motomaster-100-lumens-lumiere-chaude-0373186p.html",
-    "sku": "0373186",
-    "availability": "Il n’en reste que 5 #037-3186-4"
+    "url": "https://www.canadiantire.ca/fr/pdp/collier-pour-chat-chien-bleu-orange-1427569p.html",
+    "sku": "1427569",
+    "availability": "Vérifiez la disponibilité#142-7569X"
   },
   {
-    "title": "Zesteur d'agrumes PADERNO West Blade avec lame en acier inoxydable, moyen",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-tools-thermometers/1423674/paderno-west-blade-zester-medium-433ef190-43b4-4d1b-82b0-bceacd6c2fb1-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 11.99,
-    "salePrice": 4.93,
+    "title": "Coussinet en mousse pour ceinture de sécurité, Type S",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0375083/type-s-grey-memory-foam-seatbelt-pad-3ae456b9-3d74-482a-a50a-ad12863fb0fa-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 13.99,
+    "salePrice": 6.93,
     "store": "Canadian Tire",
     "city": "Dufferin & Finch Auto Ctr, ON",
     "branch": "Dufferin & Finch Auto Ctr, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/zesteur-d-agrumes-paderno-west-blade-avec-lame-en-acier-inoxydable-moyen-1423674p.html",
-    "sku": "1423674",
-    "availability": "Il n’en reste que 2 #142-3674-0"
+    "url": "https://www.canadiantire.ca/fr/pdp/coussinet-en-mousse-pour-ceinture-de-securite-type-s-0375083p.html",
+    "sku": "0375083",
+    "availability": "9 En Stock#037-5083-6"
   },
   {
-    "title": "Tournevis de précision MAXIMUM avec embouts S2 en oxyde noir et étui en plastique, paq. 25",
-    "image": "https://media-www.canadiantire.ca/product/fixing/tools/manual-fastening/0573420/maximum-25-piece-precision-driver-set-0ec1bef6-49a8-4da1-9542-647d778f9868-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 19.99,
-    "salePrice": 9.93,
+    "title": "Pistolet graisseur pneumatique à simple action MotoMaster, 3 méthodes de remplissage, jusqu'à 3 600 lb/po2",
+    "image": "https://media-www.canadiantire.ca/product/automotive/auto-maintenance/oil-change-and-fuel-accessories/0282705/air-powered-single-action-grease-gun-fd456a91-30fa-4ce9-b019-cb019ea086c5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 99.99,
+    "salePrice": 17.93,
     "store": "Canadian Tire",
     "city": "Dufferin & Finch Auto Ctr, ON",
     "branch": "Dufferin & Finch Auto Ctr, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/tournevis-de-precision-maximum-avec-embouts-s2-en-oxyde-noir-et-etui-en-plastique-paq-25-0573420p.html",
-    "sku": "0573420",
-    "availability": "Il n’en reste que 2 #057-3420-8"
+    "url": "https://www.canadiantire.ca/fr/pdp/pistolet-graisseur-pneumatique-a-simple-action-motomaster-3-methodes-de-remplissage-jusqu-a-3-600-lb-po2-0282705p.html",
+    "sku": "0282705",
+    "availability": "Il n’en reste que 5 #028-2705-8"
   },
   {
-    "title": "Couvre-roulements de roues de remorque MotoMaster",
-    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0408494/trailer-wheel-bearing-cover-3ceb091d-d578-4ca5-9143-fcc59b828fec-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 8.99,
+    "title": "Casque supra-auriculaire sans fil JLAB Studio, noir",
+    "image": "https://media-www.canadiantire.ca/product/living/electronics/home-entertainment-accessories/0442407/jlab-studio-wireless-on-ear-headphones-black-3aa5f370-8bfa-41fb-8bb6-0f432bb21473-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 44.99,
+    "salePrice": 17.93,
+    "store": "Canadian Tire",
+    "city": "Dufferin & Finch Auto Ctr, ON",
+    "branch": "Dufferin & Finch Auto Ctr, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/casque-supra-auriculaire-sans-fil-jlab-studio-noir-0442407p.html",
+    "sku": "0442407",
+    "availability": "Il n’en reste que 2 #044-2407-8"
+  },
+  {
+    "title": "Pailles réutilisables en acier inoxydable Manna avec embout en silicone et goupillon pour paille, paq. 4",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/food-storage/1424920/manna-4-piece-stainless-steel-silicone-tip-straw-68f185d2-bbf2-466e-8320-6d890ff79758-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 9.99,
+    "salePrice": 3.93,
+    "store": "Canadian Tire",
+    "city": "Dufferin & Finch Auto Ctr, ON",
+    "branch": "Dufferin & Finch Auto Ctr, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/pailles-reutilisables-en-acier-inoxydable-manna-avec-embout-en-silicone-et-goupillon-pour-paille-paq-4-1424920p.html",
+    "sku": "1424920",
+    "availability": ""
+  },
+  {
+    "title": "Embouts de tournevis carrés Mastercraft en carbure, pour métal, plastique, maçonnerie, 1 po, paq. 5",
+    "image": "https://media-www.canadiantire.ca/product/fixing/tools/power-tool-accessories/0540780/mastercraft-1-sq1-screwdriver-bit-5-pk-6cedeaa0-c993-4a96-a958-428451203ace-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 6.79,
     "salePrice": 2.93,
     "store": "Canadian Tire",
     "city": "Dufferin & Finch Auto Ctr, ON",
     "branch": "Dufferin & Finch Auto Ctr, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/couvre-roulements-de-roues-de-remorque-motomaster-0408494p.html",
-    "sku": "0408494",
-    "availability": "Il n’en reste que 1 #040-8494-0"
+    "url": "https://www.canadiantire.ca/fr/pdp/embouts-de-tournevis-carres-mastercraft-en-carbure-pour-metal-plastique-maconnerie-1-po-paq-5-0540780p.html",
+    "sku": "0540780",
+    "availability": "Vérifiez la disponibilité#054-0780X"
   },
   {
-    "title": "Everlast Recovery 6.0 - Pistolet de massage à percussion",
-    "image": "https://media-www.canadiantire.ca/product/playing/exercise/exercise-accessories/1841209/everlast-6-0-recovery-percussion-massage-gun-960156f7-f3eb-4148-bbca-cd7cd96375de-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 249.99,
-    "salePrice": 99.93,
+    "title": "Entonnoir de mise en conserve en plastique allant au lave-vaisselle Starfrit, pour bocaux Mason à ouverture standard et large",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/canning/1421222/canningfunnel-60a65b78-75a1-4a8e-9e9b-f9c942088f89-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 8.99,
+    "salePrice": 3.93,
     "store": "Canadian Tire",
     "city": "Dufferin & Finch Auto Ctr, ON",
     "branch": "Dufferin & Finch Auto Ctr, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/everlast-recovery-6-0-pistolet-de-massage-a-percussion-1841209p.html",
-    "sku": "1841209",
-    "availability": ""
+    "url": "https://www.canadiantire.ca/fr/pdp/entonnoir-de-mise-en-conserve-en-plastique-allant-au-lave-vaisselle-starfrit-pour-bocaux-mason-a-ouverture-standard-et-large-1421222p.html",
+    "sku": "1421222",
+    "availability": "Il n’en reste que 2 #142-1222-8"
   }
 ]
