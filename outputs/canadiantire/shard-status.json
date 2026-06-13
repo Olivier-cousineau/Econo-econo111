@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-06-13T15:59:03.316Z",
+  "generatedAt": "2026-06-13T18:25:18.539Z",
   "stores": [
     {
-      "id": "674",
-      "city": "Waterloo West, ON",
+      "id": "16",
+      "city": "Atholville, NB",
+      "status": "committed",
+      "details": "93 produits"
+    },
+    {
+      "id": "193",
+      "city": "Delhi, ON",
+      "status": "committed",
+      "details": "84 produits"
+    },
+    {
+      "id": "124",
+      "city": "Woodstock, ON",
+      "status": "committed",
+      "details": "188 produits"
+    },
+    {
+      "id": "103",
+      "city": "Stratford, ON",
+      "status": "committed",
+      "details": "112 produits"
+    },
+    {
+      "id": "349",
+      "city": "Saint John Fairville, NB",
+      "status": "committed",
+      "details": "49 produits"
+    },
+    {
+      "id": "254",
+      "city": "Saint John - Westmorland Road, NB",
+      "status": "committed",
+      "details": "40 produits"
+    },
+    {
+      "id": "476",
+      "city": "Rothesay, NB",
+      "status": "committed",
+      "details": "38 produits"
+    },
+    {
+      "id": "51",
+      "city": "Kincardine, ON",
       "status": "committed",
       "details": "72 produits"
-    },
-    {
-      "id": "309",
-      "city": "Oromocto, NB",
-      "status": "committed",
-      "details": "83 produits"
-    },
-    {
-      "id": "43",
-      "city": "Paris, ON",
-      "status": "committed",
-      "details": "62 produits"
-    },
-    {
-      "id": "315",
-      "city": "Matane, QC",
-      "status": "committed",
-      "details": "129 produits"
-    },
-    {
-      "id": "57",
-      "city": "Listowel, ON",
-      "status": "committed",
-      "details": "71 produits"
-    },
-    {
-      "id": "97",
-      "city": "Simcoe, ON",
-      "status": "committed",
-      "details": "59 produits"
-    },
-    {
-      "id": "269",
-      "city": "Port Elgin, ON",
-      "status": "committed",
-      "details": "61 produits"
-    },
-    {
-      "id": "22",
-      "city": "Espanola, ON",
-      "status": "committed",
-      "details": "48 produits"
     }
   ],
   "failedTwice": [],
