@@ -1,17 +1,5 @@
 [
   {
-    "title": "ZIVA Performance - Haltère hexagonal en polyuréthane rigide,1 pc",
-    "image": "https://media-www.canadiantire.ca/product/playing/exercise/exercise-accessories/1841073/ziva-performance-hexagon-steel-dumbbell-5lb-78f6a48c-3644-41eb-a1ee-e989bed8f58c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 16.99,
-    "salePrice": 8.49,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/ziva-performance-haltere-hexagonal-en-polyurethane-rigide-1-pc-1841073p.html",
-    "sku": "1841073",
-    "availability": ""
-  },
-  {
     "title": "Vélo électrique tout-terrain Raleigh Getaway 36 V, 700C roues, noir",
     "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycles/0711931/raleigh-getaway-men-s-electric-bike-700c-e4b77c61-6dc1-49c0-b6d7-114a1fe93cc4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 2799.99,
@@ -45,19 +33,31 @@
     "branch": "Sault Ste. Marie, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/machine-a-espresso-semi-automatique-a-un-toucher-avec-mousseur-a-lait-mr-coffee-0430385p.html",
     "sku": "0430385",
-    "availability": "Il n’en reste que 3 #043-0385-2"
+    "availability": "Il n’en reste que 2 #043-0385-2"
   },
   {
-    "title": "Trousse de départ pour conservation et entreposage d'aliments Fresh & Save de Zwilling avec pompe à dépression portative",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430335/zwilling-food-storage-starter-kit-8pc-ee27a980-a5f6-4ca9-860b-310987524806-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 189.99,
-    "salePrice": 49.93,
+    "title": "Vélo électrique Raleigh Transit Urban avec phares avant et arrière, roue de 27,5 po, gris",
+    "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycles/0712023/raleigh-fuse-urban-electric-bike-27-5-in-ee465953-ba24-47c3-bb41-0a086440b6c2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 2199.99,
+    "salePrice": 999.93,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-depart-pour-conservation-et-entreposage-d-aliments-fresh-save-de-zwilling-avec-pompe-a-depression-portative-0430335p.html",
-    "sku": "0430335",
-    "availability": "37 En Stock#043-0335-2"
+    "url": "https://www.canadiantire.ca/fr/pdp/velo-electrique-raleigh-transit-urban-avec-phares-avant-et-arriere-roue-de-27-5-po-gris-0712023p.html",
+    "sku": "0712023",
+    "availability": "Il n’en reste que 1 #071-2023-4"
+  },
+  {
+    "title": "Plomb pour ver",
+    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0784909/danielson-sinker-worm-size-3-1-4-oz-fe6683f5-60ca-40ca-a054-84638f38a614-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 3.49,
+    "salePrice": 1.23,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/plomb-pour-ver-0784909p.html",
+    "sku": "0784909",
+    "availability": "Vérifiez la disponibilité#078-4909X"
   },
   {
     "title": "Housse/étui de protection pour rasoir Outbound, pour le camping, les randonnées et les voyages, convient aux rasoirs standard",
@@ -69,73 +69,97 @@
     "branch": "Sault Ste. Marie, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/housse-etui-de-protection-pour-rasoir-outbound-pour-le-camping-les-randonnees-et-les-voyages-convient-aux-rasoirs-standard-0763292p.html",
     "sku": "0763292",
-    "availability": "11 En Stock#076-3292-6"
+    "availability": "10 En Stock#076-3292-6"
   },
   {
-    "title": "Tabouret de bar rembourré hauteur et dossier réglables CANVAS Finn, gris",
-    "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/0687825/canvas-finn-stool-grey-cf07955e-5e50-460c-b20c-7190fd964547-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "title": "Cerf-volant en nylon X-Kites Micro avec queues volantes pour enfants, choix de couleurs, 5 po, 8 ans et plus, pour activités estivales/d'extérieur",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/seasonal-toys/0505056/micro-kite-34f143cd-9fbf-4e44-a7aa-43afb1ec312a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 4.99,
+    "salePrice": 1.93,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/cerf-volant-en-nylon-x-kites-micro-avec-queues-volantes-pour-enfants-choix-de-couleurs-5-po-8-ans-et-plus-pour-activites-estivales-d-exterieur-0505056p.html",
+    "sku": "0505056",
+    "availability": "Il n’en reste que 5 #050-5056-8"
+  },
+  {
+    "title": "Anneaux diviseurs",
+    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0785004/danielson-split-ring-size-4-74882971-9134-4f97-9dbb-6c21bb3e3c7e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 2.99,
+    "salePrice": 0.93,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/anneaux-diviseurs-0785004p.html",
+    "sku": "0785004",
+    "availability": "Vérifiez la disponibilité#078-5004X"
+  },
+  {
+    "title": "Support de bac de recyclage en métal galvanisé pour utilisation avec les bacs de recyclage de 59 L à 90 L",
+    "image": "https://media-www.canadiantire.ca/product/living/cleaning/refuse-containers/1426700/recycling-bin-cradle-9cf84ce3-f2d4-472c-9e0d-e5cf5699e77d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 6.93,
+    "store": "Canadian Tire",
+    "city": "Sault Ste. Marie, ON",
+    "branch": "Sault Ste. Marie, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/support-de-bac-de-recyclage-en-metal-galvanise-pour-utilisation-avec-les-bacs-de-recyclage-de-59-l-a-90-l-1426700p.html",
+    "sku": "1426700",
+    "availability": "Il n’en reste que 1 #142-6700-0"
+  },
+  {
+    "title": "Garde-boues avant et arrière personnalisés Husky Liners 58476 pour camion à service intense Ford F-250 avec élargisseur d’ailes d’origine, 2017 à 2020, paquet de 4",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0376243/husky-mud-flaps-ford-f250-sd-oem-fender-flares-2017-20-4pc-752e1508-31b9-4182-88e5-22221bdb0958-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 119.99,
     "salePrice": 49.93,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/tabouret-de-bar-rembourre-hauteur-et-dossier-reglables-canvas-finn-gris-0687825p.html",
-    "sku": "0687825",
-    "availability": "16 En Stock#068-7825-6"
+    "url": "https://www.canadiantire.ca/fr/pdp/garde-boues-avant-et-arriere-personnalises-husky-liners-58476-pour-camion-a-service-intense-ford-f-250-avec-elargisseur-d-ailes-d-origine-2017-a-2020-paquet-de-4-0376243p.html",
+    "sku": "0376243",
+    "availability": "Il n’en reste que 2 #037-6243-0"
   },
   {
-    "title": "Moule à gâteau voûté à bord étroit PADERNO, antiadhésif",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/bakeware-baking-prep/1424995/paderno-fine-edge-arched-cake-pan-b4279cec-37a2-45cf-807b-28bf98b98e01-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 62.99,
-    "salePrice": 27.93,
+    "title": "Casque d'écoute de surveillance résistant à l'eau Cobra MicroTalk, baie",
+    "image": "https://media-www.canadiantire.ca/product/automotive/electronics/home-electronics/0695011/cobra-ga-sv01-surveillance-headset-with-microphone-e13faaff-4eb8-44d4-a9de-ec524031b82b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 49.99,
+    "salePrice": 11.93,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/moule-a-gateau-voute-a-bord-etroit-paderno-antiadhesif-1424995p.html",
-    "sku": "1424995",
-    "availability": "Il n’en reste que 1 #142-4995-0"
+    "url": "https://www.canadiantire.ca/fr/pdp/casque-d-ecoute-de-surveillance-resistant-a-l-eau-cobra-microtalk-baie-0695011p.html",
+    "sku": "0695011",
+    "availability": "Il n’en reste que 1 #069-5011-2"
   },
   {
-    "title": "Hameçon Danielson Aberdeen, bronze, taille 8",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0774116/danielson-aberdeen-hook-bronze-size-8-63eabc04-98c9-4a40-bd92-5c15e1f3485c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 1.99,
-    "salePrice": 0.43,
+    "title": "Moule à brie en céramique CANVAS",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/dining-and-entertaining/1426470/canvas-ceramic-brie-baker-11320d9b-30e7-431f-8d17-c43c3b05b918-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 16.99,
+    "salePrice": 6.93,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/hamecon-danielson-aberdeen-bronze-taille-8-0774116p.html",
-    "sku": "0774116",
-    "availability": "24 En Stock#077-4116-0"
+    "url": "https://www.canadiantire.ca/fr/pdp/moule-a-brie-en-ceramique-canvas-1426470p.html",
+    "sku": "1426470",
+    "availability": "20 En Stock#142-6470-6"
   },
   {
-    "title": "Caméra de tableau de bord HD 1080p myGEKOgear Orbit 130 avec vue grand-angle",
-    "image": "https://media-www.canadiantire.ca/product/automotive/electronics/auto-electronics/0350707/mygekogear-orbit-full-hd-130-dash-cam-e20891b0-49a6-4042-9b7a-1c2453f51baf-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 104.99,
-    "salePrice": 49.93,
+    "title": "Trousse de câblage pour connecteur métallique à 4 broches plates à 6 broches rondes Hopkins",
+    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/1407233/hopkins-4-flat-to-6-round-wiring-kit-metal--aa93cdea-5675-459b-93bd-96d163c5de2a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 44.99,
+    "salePrice": 7.93,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/camera-de-tableau-de-bord-hd-1080p-mygekogear-orbit-130-avec-vue-grand-angle-0350707p.html",
-    "sku": "0350707",
-    "availability": "9 En Stock#035-0707-8"
-  },
-  {
-    "title": "Boîte à mouches avec garniture en mousse Plano, choix de tailles, transparent",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-equipment/1780035/plano-foam-lined-fly-box-small-1de99409-cf45-40c6-ac9c-0b8a5fc26397-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 19.99,
-    "salePrice": 9.99,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/boite-a-mouches-avec-garniture-en-mousse-plano-choix-de-tailles-transparent-1780035p.html",
-    "sku": "1780035",
+    "url": "https://www.canadiantire.ca/fr/pdp/trousse-de-cablage-pour-connecteur-metallique-a-4-broches-plates-a-6-broches-rondes-hopkins-1407233p.html",
+    "sku": "1407233",
     "availability": ""
   },
   {
     "title": "Table de travail à toupie Mastercraft avec jauge à onglets coulissante",
     "image": "https://media-www.canadiantire.ca/product/fixing/tools/stationary-tools/0546841/mastercraft-custom-router-table-55c4433f-db66-4044-9dad-cc35fa554730-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 199.99,
-    "salePrice": 99.93,
+    "salePrice": 89.93,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
@@ -144,39 +168,27 @@
     "availability": "Il n’en reste que 2 #054-6841-4"
   },
   {
-    "title": "Couvercles de remplacement Quattro Stagioni pour pots Mason réguliers, paq. 2",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/canning/1426449/quattro-stagioni-2pk-regular-mouth-1pc-lids-14f48e30-b03d-432d-abc0-8a06969d1133-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 3.29,
-    "salePrice": 1.43,
+    "title": "Banderole métallique à pampille Blush Happy Birthday",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8541585/9ft-bnr-kit-blush-bday-47dea1cb-22a6-4677-a55e-bbfd645998ed-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 9.99,
+    "salePrice": 3.93,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/couvercles-de-remplacement-quattro-stagioni-pour-pots-mason-reguliers-paq-2-1426449p.html",
-    "sku": "1426449",
-    "availability": "64 En Stock#142-6449-0"
+    "url": "https://www.canadiantire.ca/fr/pdp/banderole-metallique-a-pampille-blush-happy-birthday-8541585p.html",
+    "sku": "8541585",
+    "availability": "0 En Stock#854-1585-0"
   },
   {
-    "title": "Leurre Arbogast Hula Popper, noir, 2 po",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0770082/arbogast-hula-popper-2-black-b4c94d5f-1ed8-4901-b773-f58811e74694-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 11.99,
-    "salePrice": 5.43,
+    "title": "Leurre Rapala X-Rap, alose, 2 1/2 po",
+    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/1780714/rapala-x-rap-shad-hot-steel-06-6a5220ef-111e-45b0-b0d0-a508f561ee1c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 20.99,
+    "salePrice": 9.43,
     "store": "Canadian Tire",
     "city": "Sault Ste. Marie, ON",
     "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/leurre-arbogast-hula-popper-noir-2-po-0770082p.html",
-    "sku": "0770082",
-    "availability": "Il n’en reste que 1 #077-0082-2"
-  },
-  {
-    "title": "Base de lunette de visée à montage supérieur Weaver 48035, no 35, paq. 2",
-    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-equipment/0762145/weaver-top-mount-base-rem-700-hwa-35-black-c64847e7-d0f2-4764-bbf4-c160b1cb6f32-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 5.99,
-    "salePrice": 1.99,
-    "store": "Canadian Tire",
-    "city": "Sault Ste. Marie, ON",
-    "branch": "Sault Ste. Marie, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/base-de-lunette-de-visee-a-montage-superieur-weaver-48035-no-35-paq-2-0762145p.html",
-    "sku": "0762145",
-    "availability": "Il n’en reste que 7 #076-2145-4"
+    "url": "https://www.canadiantire.ca/fr/pdp/leurre-rapala-x-rap-alose-2-1-2-po-1780711p.html",
+    "sku": "1780711",
+    "availability": "Vérifiez la disponibilité#178-0711X"
   }
 ]
