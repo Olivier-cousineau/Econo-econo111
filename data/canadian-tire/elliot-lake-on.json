@@ -1,29 +1,5 @@
 [
   {
-    "title": "Garde-robe à 2 portes et à 2 tiroirs Sauder, chêne",
-    "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/1680210/sauder-2-door-2-drawer-wardrobe-oak-31c02b71-6ff9-4fa2-9f91-475be0bb7229-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 299.99,
-    "salePrice": 149.93,
-    "store": "Canadian Tire",
-    "city": "Elliot Lake, ON",
-    "branch": "Elliot Lake, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/garde-robe-a-2-portes-et-a-2-tiroirs-sauder-chene-1680210p.html",
-    "sku": "1680210",
-    "availability": "Il n’en reste que 1 #168-0210-2"
-  },
-  {
-    "title": "Affûte-couteaux à 3 étapes MASTER Chef",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/cutlery/2421029/master-chef-3stage-knife-sharpener-b9ab2767-c8c0-473e-a296-6cb70527856a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 18.99,
-    "salePrice": 4.93,
-    "store": "Canadian Tire",
-    "city": "Elliot Lake, ON",
-    "branch": "Elliot Lake, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/affute-couteaux-a-3-etapes-master-chef-2421029p.html",
-    "sku": "2421029",
-    "availability": "Il n’en reste que 1 #242-1029-2"
-  },
-  {
     "title": "T-shirt sport à manches courtes et extensibles avec encolure ras du cou Mooselander, hommes, couleur unie, tailles variées, noir/gris, paq. 2",
     "image": "https://media-www.canadiantire.ca/product/playing/footwear-apparel/summer-footwear-apparel/1874066/active-2-pack-short-sleeve-tees-m-l-ce888845-ad24-41df-8604-c50d7052ca02-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 21.99,
@@ -33,7 +9,7 @@
     "branch": "Elliot Lake, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/t-shirt-sport-a-manches-courtes-et-extensibles-avec-encolure-ras-du-cou-mooselander-hommes-couleur-unie-tailles-variees-noir-gris-paq-2-1874066p.html",
     "sku": "1874066",
-    "availability": ""
+    "availability": "Vérifiez la disponibilité#187-4066X"
   },
   {
     "title": "Tasses à mesurer empilables en plastique MASTER Chef, paq. 10",
@@ -48,16 +24,16 @@
     "availability": "9 En Stock#142-9676-0"
   },
   {
-    "title": "Jouet aquatique gonflable Soak N' Splash & Slide avec gicleur, bleu, 16 pi, 5 ans et plus, pour plage/piscine",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/seasonal-toys/0504211/soak-n-splash-water-slide-16--6fa00059-6643-4304-ad97-12a017f202a2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 14.99,
-    "salePrice": 4.93,
+    "title": "Garde-robe à 2 portes et à 2 tiroirs Sauder, chêne",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/1680210/sauder-2-door-2-drawer-wardrobe-oak-31c02b71-6ff9-4fa2-9f91-475be0bb7229-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 299.99,
+    "salePrice": 149.93,
     "store": "Canadian Tire",
     "city": "Elliot Lake, ON",
     "branch": "Elliot Lake, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/jouet-aquatique-gonflable-soak-n-splash-slide-avec-gicleur-bleu-16-pi-5-ans-et-plus-pour-plage-piscine-0504211p.html",
-    "sku": "0504211",
-    "availability": "Il n’en reste que 3 #050-4211-4"
+    "url": "https://www.canadiantire.ca/fr/pdp/garde-robe-a-2-portes-et-a-2-tiroirs-sauder-chene-1680210p.html",
+    "sku": "1680210",
+    "availability": "Il n’en reste que 1 #168-0210-2"
   },
   {
     "title": "Ensemble de détente For Living Avenue, 4 pièces",
@@ -72,6 +48,18 @@
     "availability": ""
   },
   {
+    "title": "Gaufrier miniature compact antiadhésif en forme de coeur Dash, rouge",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430375/dash-heart-mini-waffle-maker-red-5355d5fb-cea9-4969-88de-99bf11ab3589-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 20.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Elliot Lake, ON",
+    "branch": "Elliot Lake, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/gaufrier-miniature-compact-antiadhesif-en-forme-de-coeur-dash-rouge-0430375p.html",
+    "sku": "0430375",
+    "availability": "Il n’en reste que 4 #043-0375-6"
+  },
+  {
     "title": "Cintres pivotants compacts en velours Type A avec barre à pantalon, couleurs variées, paq. 40",
     "image": "https://media-www.canadiantire.ca/product/living/home-organization/closet-organization/0688308/type-a-velvet-suit-hanger-black-10pk-4afb3f73-0449-46d6-975c-369ae2760de2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 32.99,
@@ -81,7 +69,19 @@
     "branch": "Elliot Lake, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/cintres-pivotants-compacts-en-velours-type-a-avec-barre-a-pantalon-couleurs-variees-paq-40-0688307p.html",
     "sku": "0688307",
-    "availability": ""
+    "availability": "Vérifiez la disponibilité#068-8307X"
+  },
+  {
+    "title": "Contenants en verre étanche pour aliments LockNLock Easy Match de Starfrit avec couvercle hermétique à pinces, paq. 12",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/food-storage/2423481/12-pc-lock-n-lock-glass-easy-match-container-set-5f204714-5fee-4ebe-b96a-e36ac87d84a7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 49.99,
+    "salePrice": 24.93,
+    "store": "Canadian Tire",
+    "city": "Elliot Lake, ON",
+    "branch": "Elliot Lake, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/contenants-en-verre-etanche-pour-aliments-locknlock-easy-match-de-starfrit-avec-couvercle-hermetique-a-pinces-paq-12-2423481p.html",
+    "sku": "2423481",
+    "availability": "Il n’en reste que 1 #242-3481-0"
   },
   {
     "title": "Chargeur portatif Bluehive avec câbles, noir, 10 000 mAh",
@@ -108,16 +108,16 @@
     "availability": "9 En Stock#050-9725-2"
   },
   {
-    "title": "Contenants en verre étanche pour aliments LockNLock Easy Match de Starfrit avec couvercle hermétique à pinces, paq. 12",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/food-storage/2423481/12-pc-lock-n-lock-glass-easy-match-container-set-5f204714-5fee-4ebe-b96a-e36ac87d84a7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 49.99,
-    "salePrice": 24.93,
+    "title": "Fauteuil de jeu pivotant ergonomique avec haut-parleur Bluetooth à vibration X Rocker Nemesis 2.1, noir",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/1680114/x-rocker-nemesis-2-1-pedestal-with-vibration-c04afa7a-a8e5-4138-9c0b-6ae9edac7abe-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 269.99,
+    "salePrice": 134.93,
     "store": "Canadian Tire",
     "city": "Elliot Lake, ON",
     "branch": "Elliot Lake, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/contenants-en-verre-etanche-pour-aliments-locknlock-easy-match-de-starfrit-avec-couvercle-hermetique-a-pinces-paq-12-2423481p.html",
-    "sku": "2423481",
-    "availability": "Il n’en reste que 1 #242-3481-0"
+    "url": "https://www.canadiantire.ca/fr/pdp/fauteuil-de-jeu-pivotant-ergonomique-avec-haut-parleur-bluetooth-a-vibration-x-rocker-nemesis-2-1-noir-1680114p.html",
+    "sku": "1680114",
+    "availability": "Il n’en reste que 1 #168-0114-2"
   },
   {
     "title": "Ampoules à DEL à intensité variable à culot E12 NOMA B10, 2700K, 350 lumens, blanc chaud, 40 W, paq. 2",
@@ -130,6 +130,18 @@
     "url": "https://www.canadiantire.ca/fr/pdp/ampoules-a-del-a-intensite-variable-a-culot-e12-noma-b10-2700k-350-lumens-blanc-chaud-40-w-paq-2-0529347p.html",
     "sku": "0529347",
     "availability": "Il n’en reste que 3 #052-9347-8"
+  },
+  {
+    "title": "Pompe à air électrique Coleman QuickPump 12 V avec adaptateur pour auto, matelas pneumatiques et jouets",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-furniture/0760234/coleman-12v-inflate-deflate-quickpump--1e25d88c-6e5a-4c03-8b38-3c767c69f8cf-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 54.99,
+    "salePrice": 24.93,
+    "store": "Canadian Tire",
+    "city": "Elliot Lake, ON",
+    "branch": "Elliot Lake, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/pompe-a-air-electrique-coleman-quickpump-12-v-avec-adaptateur-pour-auto-matelas-pneumatiques-et-jouets-0760234p.html",
+    "sku": "0760234",
+    "availability": "Il n’en reste que 2 #076-0234-4"
   },
   {
     "title": "CANVAS Bala - Table à manger de jardin en osier à plateau en similibois pour toutes les conditions",
@@ -156,40 +168,16 @@
     "availability": "Il n’en reste que 2 #076-5334-6"
   },
   {
-    "title": "Coussin de chaise profond CANVAS Helene",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0882511/canvas-adelaide-deep-seat-cushion-cab52210-f37d-4540-a9be-9ad4c65dab3c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 129.99,
-    "salePrice": 59.93,
+    "title": "Tapis de couloir d'intérieur et d'extérieur CANVAS Elfin, 3 x 5 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680045/elfin-outdoor-runner-rug-f81ffe3f-6368-4f13-8809-4b772e430737-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 29.99,
+    "salePrice": 9.93,
     "store": "Canadian Tire",
     "city": "Elliot Lake, ON",
     "branch": "Elliot Lake, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/coussin-de-chaise-profond-canvas-helene-0882511p.html",
-    "sku": "0882511",
-    "availability": ""
-  },
-  {
-    "title": "Contenants alimentaires rectangulaires Clearlock avec base TritanMC, emboîtable, 4 pièces",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/food-storage/2421068/clearlock-4-pc-set-rectangle-91219bfb-09b2-42eb-9ef8-8d3db1209131-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 18.99,
-    "salePrice": 8.93,
-    "store": "Canadian Tire",
-    "city": "Elliot Lake, ON",
-    "branch": "Elliot Lake, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/contenants-alimentaires-rectangulaires-clearlock-avec-base-tritan-sup-mc-sup-emboitable-4-pieces-2421068p.html",
-    "sku": "2421068",
-    "availability": "Il n’en reste que 1 #242-1068-8"
-  },
-  {
-    "title": "Lampe à faisceau large à DEL Mastercraft, 1500 lumens, compatible PWR POD",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0372969/mastercraft-1500-lumens-spotlight-pwr-pod-compatible-363c7083-04a4-4a37-b863-da8214fd1958-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 119.99,
-    "salePrice": 31.93,
-    "store": "Canadian Tire",
-    "city": "Elliot Lake, ON",
-    "branch": "Elliot Lake, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/lampe-a-faisceau-large-a-del-mastercraft-1500-lumens-compatible-pwr-pod-0372969p.html",
-    "sku": "0372969",
-    "availability": "Il n’en reste que 3 #037-2969-8"
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-de-couloir-d-interieur-et-d-exterieur-canvas-elfin-3-x-5-pi-0680045p.html",
+    "sku": "0680045",
+    "availability": "Il n’en reste que 1 #068-0045-4"
   },
   {
     "title": "Banc pliant à dossier Outbound pour 4 personnes, gris",
@@ -204,64 +192,16 @@
     "availability": "Il n’en reste que 2 #076-6407-8"
   },
   {
-    "title": "Tampons nettoyants Effaceur magique M. Net original avec Durafoam, paq. 2",
-    "image": "https://media-www.canadiantire.ca/product/living/cleaning/household-cleaning-solutions/0530969/mr-clean-magic-eraser-2-pack-44511b89-b8e2-4623-aa0e-4058123f7f62-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 4.49,
-    "salePrice": 1.93,
+    "title": "Lampe à faisceau large à DEL Mastercraft, 1500 lumens, compatible PWR POD",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0372969/mastercraft-1500-lumens-spotlight-pwr-pod-compatible-363c7083-04a4-4a37-b863-da8214fd1958-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 119.99,
+    "salePrice": 31.93,
     "store": "Canadian Tire",
     "city": "Elliot Lake, ON",
     "branch": "Elliot Lake, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/tampons-nettoyants-effaceur-magique-m-net-original-avec-durafoam-paq-2-0530969p.html",
-    "sku": "0530969",
-    "availability": "Il n’en reste que 5 #053-0969-0"
-  },
-  {
-    "title": "Chandail Huntshield Brome No Fly Zone, hommes, gris",
-    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-apparel-footwear/3751411/mens-brome-no-fly-zone-shirt-m-grey-421aa9a4-0769-4460-b7a2-0de01a1a2957-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 69.99,
-    "salePrice": 29.93,
-    "store": "Canadian Tire",
-    "city": "Elliot Lake, ON",
-    "branch": "Elliot Lake, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/chandail-huntshield-brome-no-fly-zone-hommes-gris-3751411p.html",
-    "sku": "3751411",
-    "availability": ""
-  },
-  {
-    "title": "Coussin lombaire CANVAS Boho, 20 x 12 po",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0880045/canvas-boho-lumbar-cushion-e6c61a20-8862-4efd-a476-35c071bb3731-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 32.99,
-    "salePrice": 14.93,
-    "store": "Canadian Tire",
-    "city": "Elliot Lake, ON",
-    "branch": "Elliot Lake, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/coussin-lombaire-canvas-boho-20-x-12-po-0880045p.html",
-    "sku": "0880045",
-    "availability": "Il n’en reste que 2 #088-0045-6"
-  },
-  {
-    "title": "Chaise longue ombragée Funsicle NuWave, inclinable, 14 et plus",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-fun/0810421/funsicle-nuwave-shaded-lounger-2cc1dd5c-5578-47b3-92e9-8b0bcbcf5320-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 49.99,
-    "salePrice": 19.93,
-    "store": "Canadian Tire",
-    "city": "Elliot Lake, ON",
-    "branch": "Elliot Lake, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/chaise-longue-ombragee-funsicle-nuwave-inclinable-14-et-plus-0810421p.html",
-    "sku": "0810421",
-    "availability": "Il n’en reste que 1 #081-0421-4"
-  },
-  {
-    "title": "Short cargo Outbound pour hommes, grandes poches, havane",
-    "image": "https://media-www.canadiantire.ca/product/playing/footwear-apparel/summer-footwear-apparel/1873520/outbound-men-s-cargo-shorts-tan-m-c66af4ed-b35b-4c1f-82ee-7afbf190f779-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 25.99,
-    "salePrice": 9.93,
-    "store": "Canadian Tire",
-    "city": "Elliot Lake, ON",
-    "branch": "Elliot Lake, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/short-cargo-outbound-pour-hommes-grandes-poches-havane-1873520p.html",
-    "sku": "1873520",
-    "availability": ""
+    "url": "https://www.canadiantire.ca/fr/pdp/lampe-a-faisceau-large-a-del-mastercraft-1500-lumens-compatible-pwr-pod-0372969p.html",
+    "sku": "0372969",
+    "availability": "Il n’en reste que 3 #037-2969-8"
   },
   {
     "title": "Île flottante gonflable pour plusieurs personnes Outbound avec glacière pour rivières et lacs, blanc/bleu",
@@ -273,198 +213,234 @@
     "branch": "Elliot Lake, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/ile-flottante-gonflable-pour-plusieurs-personnes-outbound-avec-glaciere-pour-rivieres-et-lacs-blanc-bleu-0797162p.html",
     "sku": "0797162",
-    "availability": "Il n’en reste que 4 #079-7162-6"
+    "availability": "Il n’en reste que 2 #079-7162-6"
   },
   {
-    "title": "Thermomètre à viande numérique sans fil Vermont Castings",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking-accessories/0853780/vermont-castings-digital-thermometer-d071313c-23d6-4a8e-9c07-7cef9f0e81fd-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 119.99,
-    "salePrice": 59.93,
+    "title": "Tapis de couloir d'intérieur et d'extérieur CANVAS Elmken, 3 x 5 pi",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/floor-window-decor/0680046/baldi-3x5-outdoor-runner-rug-350670e1-7256-4998-93eb-5ec048a7e9e4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 29.99,
+    "salePrice": 9.93,
     "store": "Canadian Tire",
     "city": "Elliot Lake, ON",
     "branch": "Elliot Lake, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/thermometre-a-viande-numerique-sans-fil-vermont-castings-0853780p.html",
-    "sku": "0853780",
-    "availability": "Il n’en reste que 2 #085-3780-2"
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-de-couloir-d-interieur-et-d-exterieur-canvas-elmken-3-x-5-pi-0680046p.html",
+    "sku": "0680046",
+    "availability": "Il n’en reste que 1 #068-0046-2"
   },
   {
-    "title": "Lampe de travail à DEL portative à pince MotoMaster, 500 lumens",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0376391/motomaster-clamping-handheld-led-worklight-13968ef0-0250-4a75-b085-f9ef351d7415-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 62.99,
+    "title": "Barre d'attelage réglable MotoMaster, 2 po, 5 000 lb",
+    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0406575/reese-towpower-adjustable-ball-mount-ce57ec66-3694-489a-8c97-36bc3fa161e8-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 49.99,
     "salePrice": 24.93,
     "store": "Canadian Tire",
     "city": "Elliot Lake, ON",
     "branch": "Elliot Lake, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/lampe-de-travail-a-del-portative-a-pince-motomaster-500-lumens-0376391p.html",
-    "sku": "0376391",
-    "availability": ""
+    "url": "https://www.canadiantire.ca/fr/pdp/barre-d-attelage-reglable-motomaster-2-po-5-000-lb-0406575p.html",
+    "sku": "0406575",
+    "availability": "Il n’en reste que 1 #040-6575-0"
   },
   {
-    "title": "Tube Lunkerhunt, 3 po",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0776970/lunkerhunt-unsalted-tube-pumpkinseed-8-pack-3--5049c485-a542-4322-8682-16a8d221a00c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 7.99,
-    "salePrice": 3.43,
-    "store": "Canadian Tire",
-    "city": "Elliot Lake, ON",
-    "branch": "Elliot Lake, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/tube-lunkerhunt-3-po-0776966p.html",
-    "sku": "0776966",
-    "availability": ""
-  },
-  {
-    "title": "Support d'attelage de remorques à 3 boules REESE, noir, tige de 2-1/2 po",
-    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0406926/reese-towpower-black-tri-ball-trailer-hitch-mount-class-v-6038f1ab-f106-485f-a23f-e1eab44eee97-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 99.99,
-    "salePrice": 48.93,
-    "store": "Canadian Tire",
-    "city": "Elliot Lake, ON",
-    "branch": "Elliot Lake, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/support-d-attelage-de-remorques-a-3-boules-reese-noir-tige-de-2-1-2-po-0406926p.html",
-    "sku": "0406926",
-    "availability": "Il n’en reste que 4 #040-6926-6"
-  },
-  {
-    "title": "Répulsif pour animaux à vaporiser prêt à l'emploi pour l'extérieur Ortho Animal B Gon MAX, 400 g",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/gardening/weed-insect-rodent-control/0591116/ortho-animal-b-gon-aerosol-400-g--1f4d5997-66b8-4095-aa7c-5984f4aaac1d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 9.99,
-    "salePrice": 4.93,
-    "store": "Canadian Tire",
-    "city": "Elliot Lake, ON",
-    "branch": "Elliot Lake, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/repulsif-pour-animaux-a-vaporiser-pret-a-l-emploi-pour-l-exterieur-ortho-animal-b-gon-max-400-g-0591116p.html",
-    "sku": "0591116",
-    "availability": "Il n’en reste que 6 #059-1116-2"
-  },
-  {
-    "title": "Câble auxiliaire de 3,5 mm pour iPod, iPhone, iPad, téléphone intelligent Android, tablette, maison, choix varié, 3 pi",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-electronics/0355191/3-5mm-auxiliary-cable-e27bf9db-9846-4eac-a0cc-7746f1d5513d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 5.99,
-    "salePrice": 2.93,
-    "store": "Canadian Tire",
-    "city": "Elliot Lake, ON",
-    "branch": "Elliot Lake, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/cable-auxiliaire-de-3-5-mm-pour-ipod-iphone-ipad-telephone-intelligent-android-tablette-maison-choix-varie-3-pi-0355191p.html",
-    "sku": "0355191",
-    "availability": "Il n’en reste que 1 #035-5191-2"
-  },
-  {
-    "title": "Craquelins chocolat chaud des Fêtes Thoughtfully, paq. 4",
-    "image": "https://media-www.canadiantire.ca/product/living/food-drink/seasonal-confectionery/1519534/holiday-hot-cocoa-crackers-4-pk-0ab339f2-6585-4313-a988-ea2f641667a9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 10.99,
-    "salePrice": 4.93,
-    "store": "Canadian Tire",
-    "city": "Elliot Lake, ON",
-    "branch": "Elliot Lake, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/craquelins-chocolat-chaud-des-fetes-thoughtfully-paq-4-1519534p.html",
-    "sku": "1519534",
-    "availability": "Il n’en reste que 1 #151-9534-6"
-  },
-  {
-    "title": "Nettoyeur à planchers durs Shark Hydrosweep",
-    "image": "https://media-www.canadiantire.ca/product/living/cleaning/vacuums-and-floorcare/0437208/shark-hydrosweep-hard-floor-cleaner-7d02b31d-1806-4b8f-ae3c-c949fe5ae231-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 199.99,
-    "salePrice": 99.93,
-    "store": "Canadian Tire",
-    "city": "Elliot Lake, ON",
-    "branch": "Elliot Lake, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/nettoyeur-a-planchers-durs-shark-hydrosweep-0437208p.html",
-    "sku": "0437208",
-    "availability": ""
-  },
-  {
-    "title": "Gobelets en plastique farouche, sans faille et fabuleuse, rose, 9 oz, paq. 30",
-    "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8420323/fierce-fabulous-pink-plastic-cups-30ct-f76eefbe-7e98-4487-b9ca-d07fee8c7b16-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 13.99,
+    "title": "Ensemble de nettoyants automobiles Armor All, paq. 16",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-chemicals/0397080/armor-all-car-wash-packs-16ct-8ed7ef02-e539-49d9-8a49-0232d41a7968-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 17.99,
     "salePrice": 6.93,
     "store": "Canadian Tire",
     "city": "Elliot Lake, ON",
     "branch": "Elliot Lake, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/gobelets-en-plastique-farouche-sans-faille-et-fabuleuse-rose-9-oz-paq-30-8420323p.html",
-    "sku": "8420323",
-    "availability": "0 En Stock#842-0323-8"
+    "url": "https://www.canadiantire.ca/fr/pdp/ensemble-de-nettoyants-automobiles-armor-all-paq-16-0397080p.html",
+    "sku": "0397080",
+    "availability": "Il n’en reste que 2 #039-7080-6"
   },
   {
-    "title": "Chaussures tout-aller à enfiler légères Excalibur Outbound pour femmes, gris/rose",
-    "image": "https://media-www.canadiantire.ca/product/playing/footwear-apparel/summer-footwear-apparel/1871412/outbound-women-s-athleisure-sandal-print-w5-c4da8071-df7b-43d9-93b2-9e7c9a03fc00-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "title": "Gilet de sauvetage confortable Outbound, adulte, bleu, tailles variées",
+    "image": "https://media-www.canadiantire.ca/product/playing/seasonal-recreation/marine-water-fun/0792248/outbound-adult-pfd-paddling-vest-s-m-f6a01101-710b-4ff9-8315-6ab73091694e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 59.99,
+    "salePrice": 24.93,
+    "store": "Canadian Tire",
+    "city": "Elliot Lake, ON",
+    "branch": "Elliot Lake, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/gilet-de-sauvetage-confortable-outbound-adulte-bleu-tailles-variees-0792248p.html",
+    "sku": "0792248",
+    "availability": "Vérifiez la disponibilité#079-2248X"
+  },
+  {
+    "title": "Cache de chasse au sol ignifuge Ameristep Assassin",
+    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-equipment/0751807/ameristep-assassin-fire-retardant-2-person-ground-blind-7cae2893-888a-42a7-b815-e8d2984b9161-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 199.99,
+    "salePrice": 59.93,
+    "store": "Canadian Tire",
+    "city": "Elliot Lake, ON",
+    "branch": "Elliot Lake, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/cache-de-chasse-au-sol-ignifuge-ameristep-assassin-0751807p.html",
+    "sku": "0751807",
+    "availability": "Il n’en reste que 1 #075-1807-8"
+  },
+  {
+    "title": "Shampoing sec à vaporiser pour chats Burt's Bees, 10 oz",
+    "image": "https://media-www.canadiantire.ca/product/living/pet-care/pet-accessories/1429451/burt-s-bees-waterless-cat-shampoo-spray-10oz-b6551fd6-c71d-416a-8104-477489b33d79-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 9.99,
+    "salePrice": 4.92,
+    "store": "Canadian Tire",
+    "city": "Elliot Lake, ON",
+    "branch": "Elliot Lake, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/shampoing-sec-a-vaporiser-pour-chats-burt-s-bees-10-oz-1429451p.html",
+    "sku": "1429451",
+    "availability": "Il n’en reste que 6 #142-9451-4"
+  },
+  {
+    "title": "Gobelet isotherme empilable Woods avec paille, noir, 830 mL",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/hydration-coolers/0766515/woods-stackable-tumbler-black-9e31fc77-bacd-4076-9f32-af594d9de79f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 29.99,
-    "salePrice": 13.43,
+    "salePrice": 8.93,
     "store": "Canadian Tire",
     "city": "Elliot Lake, ON",
     "branch": "Elliot Lake, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/chaussures-tout-aller-a-enfiler-legeres-excalibur-outbound-pour-femmes-gris-rose-1871418p.html",
-    "sku": "1871418",
+    "url": "https://www.canadiantire.ca/fr/pdp/gobelet-isotherme-empilable-woods-avec-paille-noir-830-ml-0766515p.html",
+    "sku": "0766515",
+    "availability": "Il n’en reste que 4 #076-6515-0"
+  },
+  {
+    "title": "For Living - Base de parasol déporté, noir, 19 lb",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/0881771/for-living-offset-umbrella-base-0626118b-7e2c-45dc-9ba9-686c57a7cd5b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 129.99,
+    "salePrice": 39.93,
+    "store": "Canadian Tire",
+    "city": "Elliot Lake, ON",
+    "branch": "Elliot Lake, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/for-living-base-de-parasol-deporte-noir-19-lb-0881771p.html",
+    "sku": "0881771",
+    "availability": "Il n’en reste que 3 #088-1771-0"
+  },
+  {
+    "title": "Tapis de chargement sans fil Bluehive avec lampe DEL pour appareils compatibles Qi, blanc",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-electronics/0357352/bluehive-wireless-charge-pad-with-led-lamp-white-c89dbf13-ea92-4073-8a17-9414b9908e7b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 39.99,
+    "salePrice": 9.93,
+    "store": "Canadian Tire",
+    "city": "Elliot Lake, ON",
+    "branch": "Elliot Lake, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-de-chargement-sans-fil-bluehive-avec-lampe-del-pour-appareils-compatibles-qi-blanc-0357352p.html",
+    "sku": "0357352",
+    "availability": "Il n’en reste que 1 #035-7352-8"
+  },
+  {
+    "title": "Pastilles de traitement pour VR CAMCO 41570 TST, ultra-concentrées, parfum citron, paq. 15",
+    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0409728/camco-tst-lemon-drop-ins-holding-tank-treatment-15-pk-9ac23cb6-34e2-4c27-ba36-54fec0ae3544-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 21.99,
+    "salePrice": 8.93,
+    "store": "Canadian Tire",
+    "city": "Elliot Lake, ON",
+    "branch": "Elliot Lake, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/pastilles-de-traitement-pour-vr-camco-41570-tst-ultra-concentrees-parfum-citron-paq-15-0409728p.html",
+    "sku": "0409728",
+    "availability": "Il n’en reste que 2 #040-9728-0"
+  },
+  {
+    "title": "5 flotteurs Danielson rouges et blancs assortis",
+    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0782900/danielson-snap-on-float-red-white-5-pack-359a8d71-f143-422a-88f5-df73a8a66109-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 5.99,
+    "salePrice": 2.43,
+    "store": "Canadian Tire",
+    "city": "Elliot Lake, ON",
+    "branch": "Elliot Lake, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/5-flotteurs-danielson-rouges-et-blancs-assortis-0782900p.html",
+    "sku": "0782900",
     "availability": ""
   },
   {
-    "title": "Flotteur en mousse enclipsable Redwolf, 1,5 po",
+    "title": "Brosse pour barbecue à soies en nylon et tête amovible Vida de PADERNO pour nettoyer les plaques et les grilles de barbecue",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking-accessories/0850006/vida-palmyra-brush-0c247e13-1dad-4237-8a70-6aef786bd031-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 14.99,
+    "salePrice": 4.93,
+    "store": "Canadian Tire",
+    "city": "Elliot Lake, ON",
+    "branch": "Elliot Lake, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/brosse-pour-barbecue-a-soies-en-nylon-et-tete-amovible-vida-de-paderno-pour-nettoyer-les-plaques-et-les-grilles-de-barbecue-0850006p.html",
+    "sku": "0850006",
+    "availability": "Il n’en reste que 3 #085-0006-6"
+  },
+  {
+    "title": "Hameçon à ver à très grande ouverture Xcalibur",
     "image": "undefined",
+    "price": 5.49,
+    "salePrice": 2.23,
+    "store": "Canadian Tire",
+    "city": "Elliot Lake, ON",
+    "branch": "Elliot Lake, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/hamecon-a-ver-a-tres-grande-ouverture-xcalibur-0770371p.html",
+    "sku": "0770371",
+    "availability": "Vérifiez la disponibilité#077-0371X"
+  },
+  {
+    "title": "Gobelets en plastique Happy Birthday, or métallique, paq. 30",
+    "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8420322/metallic-gold-birthday-plastic-tumblers-30ct-f5e19b69-75a4-4747-905e-51dd007af98d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 13.99,
+    "salePrice": 2.93,
+    "store": "Canadian Tire",
+    "city": "Elliot Lake, ON",
+    "branch": "Elliot Lake, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/gobelets-en-plastique-happy-birthday-or-metallique-paq-30-8420322p.html",
+    "sku": "8420322",
+    "availability": ""
+  },
+  {
+    "title": "Pastilles de traitement pour VR CAMCO 41600 TST ultra-concentrées, brise d'hibiscus, paq. 15",
+    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0409729/camco-tst-hibiscus-drop-ins-holding-tank-treatment-15-pk-ebfdb65e-24a8-4477-a45c-52449e5deaf7-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 21.99,
+    "salePrice": 8.93,
+    "store": "Canadian Tire",
+    "city": "Elliot Lake, ON",
+    "branch": "Elliot Lake, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/pastilles-de-traitement-pour-vr-camco-41600-tst-ultra-concentrees-brise-d-hibiscus-paq-15-0409729p.html",
+    "sku": "0409729",
+    "availability": "Il n’en reste que 3 #040-9729-8"
+  },
+  {
+    "title": "Cadenas à combinaison numérique à 3 chiffres préréglé Master Lock, 48 mm de largeur, argent",
+    "image": "https://media-www.canadiantire.ca/product/fixing/hardware/curb-appeal/0461217/master-combination-padlock-9d5e6961-27f8-4b48-8896-6837d880f79b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 9.79,
+    "salePrice": 3.93,
+    "store": "Canadian Tire",
+    "city": "Elliot Lake, ON",
+    "branch": "Elliot Lake, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/cadenas-a-combinaison-numerique-a-3-chiffres-preregle-master-lock-48-mm-de-largeur-argent-0461217p.html",
+    "sku": "0461217",
+    "availability": ""
+  },
+  {
+    "title": "Nettoyant Meguiar’s Hot Rims pour roues chromées, 709 mL",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-chemicals/0390494/meguiar-s-hot-rims-chrome-wheel-cleaner-93cbe5bc-4b0d-4caa-ad3a-e0ab527dd81e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 19.99,
+    "salePrice": 6.93,
+    "store": "Canadian Tire",
+    "city": "Elliot Lake, ON",
+    "branch": "Elliot Lake, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-meguiar-s-hot-rims-pour-roues-chromees-709-ml-0390494p.html",
+    "sku": "0390494",
+    "availability": ""
+  },
+  {
+    "title": "Décoration centre de table en fontaine personnalisable, argent et or",
+    "image": "https://media-www.partycity.ca/product/seasonal-gardening/party-city-everyday/party-city-party-supplies-decor/8420175/sparkling-celebration-happy-birthday-spray-centerpiece-kit-c2dd46cd-4fe2-4b65-9428-53bc3118eecd-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 7.99,
+    "salePrice": 2.93,
+    "store": "Canadian Tire",
+    "city": "Elliot Lake, ON",
+    "branch": "Elliot Lake, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/decoration-centre-de-table-en-fontaine-personnalisable-argent-et-or-8420175p.html",
+    "sku": "8420175",
+    "availability": "Il n’en reste que 3 #842-0175-0"
+  },
+  {
+    "title": "Gobelets ondulés CANVAS, sans BPA, paq. 1",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-living-accessories/0591658/ripple-tumbler-7d45cf14-7c51-4be1-abae-dbe98933baf9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 3.99,
-    "salePrice": 1.43,
+    "salePrice": 1.93,
     "store": "Canadian Tire",
     "city": "Elliot Lake, ON",
     "branch": "Elliot Lake, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/flotteur-en-mousse-enclipsable-redwolf-1-5-po-0787515p.html",
-    "sku": "0787515",
-    "availability": "Il n’en reste que 1 #078-7515-0"
-  },
-  {
-    "title": "Hameçon en faucille Xcalibur Octopus",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0770366/matzuo-octopus-sickle-size-6-7ef44089-7bd0-4794-a1f8-2f0cdbbdac95-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 3.99,
-    "salePrice": 1.43,
-    "store": "Canadian Tire",
-    "city": "Elliot Lake, ON",
-    "branch": "Elliot Lake, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/hamecon-en-faucille-xcalibur-octopus-0770366p.html",
-    "sku": "0770366",
-    "availability": ""
-  },
-  {
-    "title": "Porte-ustensiles universel à bande magnétique pour barbecue MASTER Chef",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-cooking-accessories/0850111/master-chef-magnet-strip-51c54f1c-f61d-4760-911c-0d1d822071fa-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 11.99,
-    "salePrice": 4.93,
-    "store": "Canadian Tire",
-    "city": "Elliot Lake, ON",
-    "branch": "Elliot Lake, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/porte-ustensiles-universel-a-bande-magnetique-pour-barbecue-master-chef-0850111p.html",
-    "sku": "0850111",
-    "availability": ""
-  },
-  {
-    "title": "Support à téléphone aimanté Bluehive bouche d'aération, noir",
-    "image": "https://media-www.canadiantire.ca/product/automotive/electronics/mobile-electronics/0357413/bluehive-rotating-magnetic-car-vent-mount-black-f41c7130-d158-4d71-962b-14f9462f1cec-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 15.99,
-    "salePrice": 4.93,
-    "store": "Canadian Tire",
-    "city": "Elliot Lake, ON",
-    "branch": "Elliot Lake, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/support-a-telephone-aimante-bluehive-bouche-d-aeration-noir-0357413p.html",
-    "sku": "0357413",
-    "availability": "Il n’en reste que 1 #035-7413-4"
-  },
-  {
-    "title": "Émerillon à barillet Danielson, bouton de blocage, nickel, taille 3, p4",
-    "image": "https://media-www.canadiantire.ca/product/playing/fishing/fishing-lures/0774423/danielson-barrel-swivel-w-interlock-snap-nickel-size-3-4pk-39e2c1e2-03a7-4ba8-a0fd-ea7d82714042-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 1.49,
-    "salePrice": 0.23,
-    "store": "Canadian Tire",
-    "city": "Elliot Lake, ON",
-    "branch": "Elliot Lake, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/emerillon-a-barillet-danielson-bouton-de-blocage-nickel-taille-3-p4-0774423p.html",
-    "sku": "0774423",
-    "availability": ""
-  },
-  {
-    "title": "Lunettes antibuée anti-rayures Just1 pour sports motorisés, noir",
-    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/powersport/0272594/just1-powersport-goggles-black--128ec76a-0719-4802-b825-fb69f6bbddc4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 84.99,
-    "salePrice": 41.93,
-    "store": "Canadian Tire",
-    "city": "Elliot Lake, ON",
-    "branch": "Elliot Lake, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/lunettes-antibuee-anti-rayures-just1-pour-sports-motorises-noir-0272594p.html",
-    "sku": "0272594",
-    "availability": "Il n’en reste que 1 #027-2594-2"
+    "url": "https://www.canadiantire.ca/fr/pdp/gobelets-ondules-canvas-sans-bpa-paq-1-0591658p.html",
+    "sku": "0591658",
+    "availability": "Il n’en reste que 1 #059-1658-2"
   }
 ]
