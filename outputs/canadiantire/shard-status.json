@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-06-19T09:12:15.199Z",
+  "generatedAt": "2026-06-19T11:09:56.838Z",
   "stores": [
     {
-      "id": "74",
-      "city": "Orillia, ON",
+      "id": "399",
+      "city": "Markham East, ON",
       "status": "committed",
-      "details": "119 produits"
+      "details": "171 produits"
     },
     {
-      "id": "127",
-      "city": "Uxbridge, ON",
+      "id": "93",
+      "city": "Edmundston, NB",
       "status": "committed",
-      "details": "102 produits"
+      "details": "147 produits"
     },
     {
-      "id": "160",
-      "city": "Ajax, ON",
+      "id": "687",
+      "city": "Innisfil, ON",
       "status": "committed",
-      "details": "89 produits"
+      "details": "121 produits"
     },
     {
-      "id": "324",
-      "city": "Pickering, ON",
+      "id": "175",
+      "city": "Scarborough, ON",
       "status": "committed",
-      "details": "128 produits"
+      "details": "147 produits"
     },
     {
-      "id": "102",
-      "city": "Sturgeon Falls, ON",
+      "id": "89",
+      "city": "Rouyn, QC",
       "status": "committed",
-      "details": "68 produits"
+      "details": "107 produits"
     },
     {
-      "id": "134",
-      "city": "Keswick, ON",
+      "id": "78",
+      "city": "Parry Sound, ON",
       "status": "committed",
       "details": "103 produits"
     },
     {
-      "id": "427",
-      "city": "Scarborough East, ON",
+      "id": "264",
+      "city": "Agincourt, ON",
       "status": "committed",
-      "details": "88 produits"
+      "details": "142 produits"
     },
     {
-      "id": "280",
-      "city": "Stouffville, ON",
+      "id": "189",
+      "city": "Aurora, ON",
       "status": "committed",
-      "details": "92 produits"
+      "details": "82 produits"
     }
   ],
   "failedTwice": [],
