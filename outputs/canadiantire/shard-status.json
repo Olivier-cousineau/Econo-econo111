@@ -1,60 +1,55 @@
 {
-  "generatedAt": "2026-06-25T08:57:25.561Z",
+  "generatedAt": "2026-06-25T10:35:45.723Z",
   "stores": [
     {
-      "id": "290",
-      "city": "Ottawa Carling Ave, ON",
-      "status": "committed",
-      "details": "82 produits"
-    },
-    {
-      "id": "442",
-      "city": "Barrhaven, ON",
+      "id": "196",
+      "city": "Maniwaki, QC",
       "status": "committed",
       "details": "93 produits"
     },
     {
-      "id": "272",
-      "city": "Ottawa Bells Cnrs, ON",
+      "id": "85",
+      "city": "Prescott, ON",
       "status": "committed",
-      "details": "77 produits (after retry)"
+      "details": "102 produits"
     },
     {
-      "id": "227",
-      "city": "Kemptville, ON",
+      "id": "348",
+      "city": "Sherbrooke Fleurimont, QC",
       "status": "committed",
-      "details": "61 produits"
+      "details": "90 produits"
     },
     {
-      "id": "240",
-      "city": "Magog, QC",
+      "id": "18",
+      "city": "Carleton Place, ON",
       "status": "committed",
-      "details": "109 produits"
+      "details": "74 produits"
     },
     {
-      "id": "457",
-      "city": "Kanata, ON",
+      "id": "14",
+      "city": "Brockville, ON",
       "status": "committed",
-      "details": "58 produits"
+      "details": "122 produits"
     },
     {
-      "id": "243",
-      "city": "Victoriaville, QC",
+      "id": "98",
+      "city": "Smiths Falls, ON",
       "status": "committed",
-      "details": "121 produits"
+      "details": "65 produits"
     },
     {
-      "id": "96",
-      "city": "Sherbrooke, QC",
+      "id": "4",
+      "city": "Arnprior, ON",
       "status": "committed",
-      "details": "134 produits"
+      "details": "33 produits"
+    },
+    {
+      "id": "99",
+      "city": "Shawville, QC",
+      "status": "committed",
+      "details": "86 produits"
     }
   ],
   "failedTwice": [],
-  "retriedAndSucceeded": [
-    {
-      "id": "272",
-      "city": "Ottawa Bells Cnrs, ON"
-    }
-  ]
+  "retriedAndSucceeded": []
 }
