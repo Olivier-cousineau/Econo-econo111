@@ -1,17 +1,5 @@
 [
   {
-    "title": "Poussette familiale tout-terrain Evenflo Pivot XPLORE",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/child-travel-baby/1461131/evenflo-pivot-xplore-wagon-4b2160a2-d71c-4bc6-aeee-e6376539535d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 599.99,
-    "salePrice": 249.98,
-    "store": "Canadian Tire",
-    "city": "Pembroke, ON",
-    "branch": "Pembroke, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/poussette-familiale-tout-terrain-evenflo-pivot-xplore-1461131p.html",
-    "sku": "1461131",
-    "availability": "22 En Stock#146-1131-6"
-  },
-  {
     "title": "Échelle de piscine en A en acier Bestway Flowclear avec rampe, 42 po",
     "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-fun/pool-maintenance/0813926/42-pool-ladder-1e5af39a-d711-4efc-88d9-7f79508fac9d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 99.99,
@@ -21,19 +9,91 @@
     "branch": "Pembroke, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/echelle-de-piscine-en-a-en-acier-bestway-flowclear-avec-rampe-42-po-0813926p.html",
     "sku": "0813926",
-    "availability": "16 En Stock#081-3926-6"
+    "availability": "17 En Stock#081-3926-6"
   },
   {
-    "title": "Vélo électrique tout-terrain Raleigh Getaway 36 V, 700C roues, bleu",
-    "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycles/0711932/raleigh-getaway-women-s-electric-bike-700c-8dc09e7f-a9b4-4e61-aa08-2b9e38d895c6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "title": "Poussette familiale tout-terrain Evenflo Pivot XPLORE",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/child-travel-baby/1461131/evenflo-pivot-xplore-wagon-4b2160a2-d71c-4bc6-aeee-e6376539535d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 599.99,
+    "salePrice": 249.98,
+    "store": "Canadian Tire",
+    "city": "Pembroke, ON",
+    "branch": "Pembroke, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/poussette-familiale-tout-terrain-evenflo-pivot-xplore-1461131p.html",
+    "sku": "1461131",
+    "availability": "19 En Stock#146-1131-6"
+  },
+  {
+    "title": "Tasses à mesurer empilables en plastique MASTER Chef, paq. 10",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/bakeware-baking-prep/1429676/master-chef-10pc-measuring-cup-set-73c761cb-c28c-42fe-a32e-f57a30c6b9a6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 24.99,
+    "salePrice": 6.98,
+    "store": "Canadian Tire",
+    "city": "Pembroke, ON",
+    "branch": "Pembroke, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tasses-a-mesurer-empilables-en-plastique-master-chef-paq-10-1429676p.html",
+    "sku": "1429676",
+    "availability": "341 En Stock#142-9676-0"
+  },
+  {
+    "title": "Ensemble de détente pour l’extérieur ou la terrasse en acier CANVAS Gates, paq. 4",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/1880267/canvas-gates-4-piece-conversation-set-4fb798ad-8085-4015-8aab-3afbb2f3e32e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 1699.99,
+    "salePrice": 599.98,
+    "store": "Canadian Tire",
+    "city": "Pembroke, ON",
+    "branch": "Pembroke, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ensemble-de-detente-pour-l-exterieur-ou-la-terrasse-en-acier-canvas-gates-paq-4-1880267p.html",
+    "sku": "1880267",
+    "availability": "36 En Stock#188-0267-0"
+  },
+  {
+    "title": "Friteuse à air chaud à deux zones T-Fal Easy Fry, 8,3 L/8,7 ptes",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430340/t-fal-dual-zone-air-fryer-f30f9c50-9b02-4977-a8b9-2e9b9249a74e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 199.99,
+    "salePrice": 99.98,
+    "store": "Canadian Tire",
+    "city": "Pembroke, ON",
+    "branch": "Pembroke, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/friteuse-a-air-chaud-a-deux-zones-t-fal-easy-fry-8-3-l-8-7-ptes-0430340p.html",
+    "sku": "0430340",
+    "availability": "78 En Stock#043-0340-8"
+  },
+  {
+    "title": "Vélo électrique tout-terrain Raleigh Getaway 36 V, 700C roues, noir",
+    "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycles/0711931/raleigh-getaway-men-s-electric-bike-700c-e4b77c61-6dc1-49c0-b6d7-114a1fe93cc4-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 2799.99,
     "salePrice": 1299.98,
     "store": "Canadian Tire",
     "city": "Pembroke, ON",
     "branch": "Pembroke, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/velo-electrique-tout-terrain-raleigh-getaway-36-v-700c-roues-bleu-0711932p.html",
-    "sku": "0711932",
-    "availability": "10 En Stock#071-1932-6"
+    "url": "https://www.canadiantire.ca/fr/pdp/velo-electrique-tout-terrain-raleigh-getaway-36-v-700c-roues-noir-0711931p.html",
+    "sku": "0711931",
+    "availability": "Il n’en reste que 2 #071-1931-8"
+  },
+  {
+    "title": "Pergola modulaire CANVAS Horizon, extérieur et patio, 10 x 10 pi",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/1880240/canvas-horizon-10-x-10-modular-pergola-036babcc-70d8-48f1-b1f2-73666688de06-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 1199.99,
+    "salePrice": 599.93,
+    "store": "Canadian Tire",
+    "city": "Pembroke, ON",
+    "branch": "Pembroke, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/pergola-modulaire-canvas-horizon-exterieur-et-patio-10-x-10-pi-1880240p.html",
+    "sku": "1880240",
+    "availability": "Il n’en reste que 1 #188-0240-2"
+  },
+  {
+    "title": "Garde-manger modulaire Canvas",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/1680202/canvas-modular-pantry-788d444a-46dc-4a9b-b811-f4c884e0e682-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 299.99,
+    "salePrice": 149.93,
+    "store": "Canadian Tire",
+    "city": "Pembroke, ON",
+    "branch": "Pembroke, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/garde-manger-modulaire-canvas-1680202p.html",
+    "sku": "1680202",
+    "availability": "Il n’en reste que 1 #168-0202-2"
   },
   {
     "title": "Machine à espresso semi-automatique à un toucher avec mousseur à lait Mr. Coffee",
@@ -57,91 +117,7 @@
     "branch": "Pembroke, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/barre-d-attelage-reglable-motomaster-2-po-5-000-lb-0406575p.html",
     "sku": "0406575",
-    "availability": "311 En Stock#040-6575-0"
-  },
-  {
-    "title": "Poêle géante PADERNO Signature canadienne, antiadhésive, allant au four, 5 pintes",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/cookware/1425570/paderno-canadian-signature-5qt-non-stick-jumbo-cooker-27d5b1f8-fa37-4ebc-b7c9-b28d012b8116-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 169.99,
-    "salePrice": 79.93,
-    "store": "Canadian Tire",
-    "city": "Pembroke, ON",
-    "branch": "Pembroke, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/poele-geante-paderno-signature-canadienne-antiadhesive-allant-au-four-5-pintes-1425570p.html",
-    "sku": "1425570",
-    "availability": "Il n’en reste que 1 #142-5570-4"
-  },
-  {
-    "title": "Meuble de rangement d'angle ouvert à tablette et 9 cubes For Living, blanc",
-    "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/1680221/for-living-corner-9-cube-organizer-7b7dc5f9-de00-4529-ab60-96254faa2854-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 159.99,
-    "salePrice": 79.93,
-    "store": "Canadian Tire",
-    "city": "Pembroke, ON",
-    "branch": "Pembroke, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/meuble-de-rangement-d-angle-ouvert-a-tablette-et-9-cubes-for-living-blanc-1680221p.html",
-    "sku": "1680221",
-    "availability": "Il n’en reste que 1 #168-0221-6"
-  },
-  {
-    "title": "Contenants pour aliments en verre Anchor Hocking TrueLock avec couvercles verrouillables, paq. 12",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/food-storage/2425439/anchor-hocking-truelock-glass-12-pc-box-set-locking-lids-1de4417d-cf9e-48e7-bba7-cae3c9a02d20-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 64.99,
-    "salePrice": 29.93,
-    "store": "Canadian Tire",
-    "city": "Pembroke, ON",
-    "branch": "Pembroke, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/contenants-pour-aliments-en-verre-anchor-hocking-truelock-avec-couvercles-verrouillables-paq-12-2425439p.html",
-    "sku": "2425439",
-    "availability": "Il n’en reste que 1 #242-5439-2"
-  },
-  {
-    "title": "Projecteur à DEL de 1 000 lumens Mastercraft pour service intense",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0372426/mastercraft-1000lumen-heavy-duty-spotlight-c0d329db-7a7e-4302-a634-a31ceb039174-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 149.99,
-    "salePrice": 49.98,
-    "store": "Canadian Tire",
-    "city": "Pembroke, ON",
-    "branch": "Pembroke, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/projecteur-a-del-de-1-000-lumens-mastercraft-pour-service-intense-0372426p.html",
-    "sku": "0372426",
-    "availability": "175 En Stock#037-2426-0"
-  },
-  {
-    "title": "Garde-manger modulaire Canvas",
-    "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/1680202/canvas-modular-pantry-788d444a-46dc-4a9b-b811-f4c884e0e682-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 299.99,
-    "salePrice": 149.93,
-    "store": "Canadian Tire",
-    "city": "Pembroke, ON",
-    "branch": "Pembroke, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/garde-manger-modulaire-canvas-1680202p.html",
-    "sku": "1680202",
-    "availability": "Il n’en reste que 1 #168-0202-2"
-  },
-  {
-    "title": "Garde-robe compacte Canvas",
-    "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/1680204/canvas-slim-wardrobe-98f1ed6a-144b-4f67-a348-6ea6f35a5649-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 349.99,
-    "salePrice": 174.93,
-    "store": "Canadian Tire",
-    "city": "Pembroke, ON",
-    "branch": "Pembroke, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/garde-robe-compacte-canvas-1680204p.html",
-    "sku": "1680204",
-    "availability": "Il n’en reste que 1 #168-0204-8"
-  },
-  {
-    "title": "Pantalon Huntshield Sutton No Fly Zone, hommes, gris",
-    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-apparel-footwear/3751415/mens-sutton-no-fly-zone-pants-m-grey-d6d714cf-1a68-4dfd-a8d1-674b83deb7b6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 69.99,
-    "salePrice": 29.98,
-    "store": "Canadian Tire",
-    "city": "Pembroke, ON",
-    "branch": "Pembroke, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/pantalon-huntshield-sutton-no-fly-zone-hommes-gris-3751415p.html",
-    "sku": "3751415",
-    "availability": "Vérifiez la disponibilité#375-1415X"
+    "availability": "306 En Stock#040-6575-0"
   },
   {
     "title": "Vélo électrique Raleigh Dobson Comfort, léger, écran ACL intégré, 700C roues, blanc",
@@ -156,16 +132,64 @@
     "availability": "Il n’en reste que 7 #071-2020-0"
   },
   {
-    "title": "Portemines à pression Merangue 0,7 mm, avec gomme et mines de rechange, paq. 5",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/home-office-supplies/1428920/5-pack-grip-click-combo-pencil-74c3b6d2-0c0a-4097-9ccd-1514c835ba40-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 3.99,
-    "salePrice": 1.93,
+    "title": "Projecteur à DEL de 1 000 lumens Mastercraft pour service intense",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0372426/mastercraft-1000lumen-heavy-duty-spotlight-c0d329db-7a7e-4302-a634-a31ceb039174-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 149.99,
+    "salePrice": 49.98,
     "store": "Canadian Tire",
     "city": "Pembroke, ON",
     "branch": "Pembroke, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/portemines-a-pression-merangue-0-7-mm-avec-gomme-et-mines-de-rechange-paq-5-1428920p.html",
-    "sku": "1428920",
-    "availability": "Il n’en reste que 1 #142-8920-4"
+    "url": "https://www.canadiantire.ca/fr/pdp/projecteur-a-del-de-1-000-lumens-mastercraft-pour-service-intense-0372426p.html",
+    "sku": "0372426",
+    "availability": "164 En Stock#037-2426-0"
+  },
+  {
+    "title": "Vélo électrique tout-terrain Raleigh Getaway 36 V, 700C roues, bleu",
+    "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycles/0711932/raleigh-getaway-women-s-electric-bike-700c-8dc09e7f-a9b4-4e61-aa08-2b9e38d895c6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 2799.99,
+    "salePrice": 1299.98,
+    "store": "Canadian Tire",
+    "city": "Pembroke, ON",
+    "branch": "Pembroke, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/velo-electrique-tout-terrain-raleigh-getaway-36-v-700c-roues-bleu-0711932p.html",
+    "sku": "0711932",
+    "availability": "10 En Stock#071-1932-6"
+  },
+  {
+    "title": "Meuble de rangement d'angle ouvert à tablette et 9 cubes For Living, blanc",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/1680221/for-living-corner-9-cube-organizer-7b7dc5f9-de00-4529-ab60-96254faa2854-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 159.99,
+    "salePrice": 79.93,
+    "store": "Canadian Tire",
+    "city": "Pembroke, ON",
+    "branch": "Pembroke, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/meuble-de-rangement-d-angle-ouvert-a-tablette-et-9-cubes-for-living-blanc-1680221p.html",
+    "sku": "1680221",
+    "availability": "Il n’en reste que 1 #168-0221-6"
+  },
+  {
+    "title": "Poêle géante PADERNO Signature canadienne, antiadhésive, allant au four, 5 pintes",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/cookware/1425570/paderno-canadian-signature-5qt-non-stick-jumbo-cooker-27d5b1f8-fa37-4ebc-b7c9-b28d012b8116-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 169.99,
+    "salePrice": 79.93,
+    "store": "Canadian Tire",
+    "city": "Pembroke, ON",
+    "branch": "Pembroke, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/poele-geante-paderno-signature-canadienne-antiadhesive-allant-au-four-5-pintes-1425570p.html",
+    "sku": "1425570",
+    "availability": "Il n’en reste que 1 #142-5570-4"
+  },
+  {
+    "title": "Garde-robe compacte Canvas",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/1680204/canvas-slim-wardrobe-98f1ed6a-144b-4f67-a348-6ea6f35a5649-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 349.99,
+    "salePrice": 174.93,
+    "store": "Canadian Tire",
+    "city": "Pembroke, ON",
+    "branch": "Pembroke, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/garde-robe-compacte-canvas-1680204p.html",
+    "sku": "1680204",
+    "availability": "Il n’en reste que 1 #168-0204-8"
   },
   {
     "title": "Ensemble de nettoyants automobiles Armor All, paq. 16",
@@ -177,43 +201,7 @@
     "branch": "Pembroke, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/ensemble-de-nettoyants-automobiles-armor-all-paq-16-0397080p.html",
     "sku": "0397080",
-    "availability": "896 En Stock#039-7080-6"
-  },
-  {
-    "title": "Table à dîner haute d'extérieur/de jardin CANVAS Mercier avec dessus en verre trempé, noir",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/backyard-living/outdoor-furniture/1880294/canvas-mercier-high-dining-table-a1e4ede4-bd3b-4e48-b361-73188e8df24d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 249.99,
-    "salePrice": 99.93,
-    "store": "Canadian Tire",
-    "city": "Pembroke, ON",
-    "branch": "Pembroke, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/table-a-diner-haute-d-exterieur-de-jardin-canvas-mercier-avec-dessus-en-verre-trempe-noir-1880294p.html",
-    "sku": "1880294",
-    "availability": "Il n’en reste que 2 #188-0294-4"
-  },
-  {
-    "title": "Tabouret de bar pivotant en métal hauteur réglable CANVAS Turner, paq. 2, noir/brun",
-    "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/0687554/canvas-turner-stool-2-pack-84c1b1ad-45f7-4a96-a4c4-5a3f394d31ee-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 174.99,
-    "salePrice": 79.93,
-    "store": "Canadian Tire",
-    "city": "Pembroke, ON",
-    "branch": "Pembroke, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/tabouret-de-bar-pivotant-en-metal-hauteur-reglable-canvas-turner-paq-2-noir-brun-0687554p.html",
-    "sku": "0687554",
-    "availability": "Il n’en reste que 1 #068-7554-0"
-  },
-  {
-    "title": "Chandail Huntshield Brome No Fly Zone, hommes, gris",
-    "image": "https://media-www.canadiantire.ca/product/playing/hunting/hunting-apparel-footwear/3751411/mens-brome-no-fly-zone-shirt-m-grey-421aa9a4-0769-4460-b7a2-0de01a1a2957-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 69.99,
-    "salePrice": 29.98,
-    "store": "Canadian Tire",
-    "city": "Pembroke, ON",
-    "branch": "Pembroke, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/chandail-huntshield-brome-no-fly-zone-hommes-gris-3751411p.html",
-    "sku": "3751411",
-    "availability": "Vérifiez la disponibilité#375-1411X"
+    "availability": "890 En Stock#039-7080-6"
   },
   {
     "title": "Vélo hybride Stratus Endure, noir, 700C",
@@ -228,52 +216,40 @@
     "availability": "Vérifiez la disponibilité#071-2059X"
   },
   {
-    "title": "Coussin de chaise de camping chauffant pleine longueur Woods CALOR avec chargeur USB, 5 heures de fonctionnement",
-    "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-furniture/0766404/woods-heated-cover-00618703-cbb6-4cc9-91fe-2cd6a1c86769-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 159.99,
-    "salePrice": 49.98,
+    "title": "Cintres minces en bois naturel antidérapants Type A avec barre à pantalons, choix de couleurs, paq. 40",
+    "image": "https://media-www.canadiantire.ca/product/living/home-organization/closet-organization/0688322/type-a-black-slim-wood-hanger-with-pant-bar-10pk-a4a3cc33-36f7-4ef8-87b7-fe22955fcc46-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 52.99,
+    "salePrice": 24.98,
     "store": "Canadian Tire",
     "city": "Pembroke, ON",
     "branch": "Pembroke, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/coussin-de-chaise-de-camping-chauffant-pleine-longueur-woods-calor-avec-chargeur-usb-5-heures-de-fonctionnement-0766404p.html",
-    "sku": "0766404",
-    "availability": "21 En Stock#076-6404-4"
+    "url": "https://www.canadiantire.ca/fr/pdp/cintres-minces-en-bois-naturel-antiderapants-type-a-avec-barre-a-pantalons-choix-de-couleurs-paq-40-0688324p.html",
+    "sku": "0688324",
+    "availability": "Vérifiez la disponibilité#068-8324X"
   },
   {
-    "title": "Sac de couchage 3 saisons isolé en duvet de canard avec sac de compression Woods Arctic, grande longueur, -7 °C",
-    "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-furniture/0766816/woods-7c-down-mummy-sleeping-bag-9e25b37f-8e01-45e3-beb7-99add7ac4ac6-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 299.99,
-    "salePrice": 99.98,
+    "title": "Fauteuil de bureau personnalisable For Living",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/1680183/for-living-customizable-office-chair-90561d36-5424-4fd4-98ad-503f0c1d7e9e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 399.99,
+    "salePrice": 199.93,
     "store": "Canadian Tire",
     "city": "Pembroke, ON",
     "branch": "Pembroke, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/sac-de-couchage-3-saisons-isole-en-duvet-de-canard-avec-sac-de-compression-woods-arctic-grande-longueur-7-c-0766816p.html",
-    "sku": "0766816",
-    "availability": "92 En Stock#076-6816-4"
+    "url": "https://www.canadiantire.ca/fr/pdp/fauteuil-de-bureau-personnalisable-for-living-1680183p.html",
+    "sku": "1680183",
+    "availability": "Il n’en reste que 1 #168-0183-6"
   },
   {
-    "title": "Range-tout profond The Home Edit par iDesign, grand",
-    "image": "https://media-www.canadiantire.ca/product/living/home-decor/bed-bath-decor/0636334/the-home-edit-tall-bin-divider-3aa2b3a8-6073-4152-829e-b0ed3b456fee-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 19.99,
-    "salePrice": 9.93,
+    "title": "Support sécuritaire robuste pour climatiseur de fenêtre, réglable, acier",
+    "image": "https://media-www.canadiantire.ca/product/fixing/home-environment/summer-climate-control/0438290/no-tools-needed-ac-bracket-4f164477-1035-4bc9-b938-ea8aee6e4a2f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 84.99,
+    "salePrice": 34.93,
     "store": "Canadian Tire",
     "city": "Pembroke, ON",
     "branch": "Pembroke, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/range-tout-profond-the-home-edit-par-idesign-grand-0636317p.html",
-    "sku": "0636317",
-    "availability": "Il n’en reste que 2 #063-6317-2"
-  },
-  {
-    "title": "Chaise à dîner CANVAS Windsor, blanc",
-    "image": "https://media-www.canadiantire.ca/product/living/home-decor/furniture/1680126/canvas-windsor-white-dining-chair-308adadd-fff5-4b03-9585-49671be60cca-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 169.99,
-    "salePrice": 84.93,
-    "store": "Canadian Tire",
-    "city": "Pembroke, ON",
-    "branch": "Pembroke, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/chaise-a-diner-canvas-windsor-blanc-1680126p.html",
-    "sku": "1680126",
-    "availability": "Il n’en reste que 3 #168-0126-4"
+    "url": "https://www.canadiantire.ca/fr/pdp/support-securitaire-robuste-pour-climatiseur-de-fenetre-reglable-acier-0438290p.html",
+    "sku": "0438290",
+    "availability": "Il n’en reste que 2 #043-8290-8"
   },
   {
     "title": "Webcaméra Sylvania SWCM230 1080p, noir",
@@ -288,30 +264,6 @@
     "availability": "Il n’en reste que 3 #069-1921-0"
   },
   {
-    "title": "Lampe de travail à DEL portative à pince MotoMaster, 500 lumens",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0376391/motomaster-clamping-handheld-led-worklight-13968ef0-0250-4a75-b085-f9ef351d7415-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 62.99,
-    "salePrice": 24.93,
-    "store": "Canadian Tire",
-    "city": "Pembroke, ON",
-    "branch": "Pembroke, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/lampe-de-travail-a-del-portative-a-pince-motomaster-500-lumens-0376391p.html",
-    "sku": "0376391",
-    "availability": "Il n’en reste que 1 #037-6391-6"
-  },
-  {
-    "title": "Casque de vélo Supercycle Pursuit, tout-petit, étoiles",
-    "image": "https://media-www.canadiantire.ca/product/playing/cycling/bicycle-accessories/0730542/supercycle-pursuit-toddler-confetti-80faf61d-c2e4-4ac4-8cf2-afa602d24bd9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 39.99,
-    "salePrice": 19.93,
-    "store": "Canadian Tire",
-    "city": "Pembroke, ON",
-    "branch": "Pembroke, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/casque-de-velo-supercycle-pursuit-tout-petit-etoiles-0730543p.html",
-    "sku": "0730543",
-    "availability": "Il n’en reste que 1 #073-0543-4"
-  },
-  {
     "title": "Teinture à bois à base d'eau Minwax, opaque, 946 mL",
     "image": "https://media-www.canadiantire.ca/product/fixing/paint/paints/0480943/minwax-water-based-solid-wood-stain-classic-gray-946ml-76bd923d-4c29-47e7-90f5-88e322e1512b-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 29.99,
@@ -324,16 +276,52 @@
     "availability": "Vérifiez la disponibilité#048-0941X"
   },
   {
-    "title": "Gobelet de retouche de peinture Premier",
-    "image": "https://media-www.canadiantire.ca/product/fixing/paint/paint-accessories/0495850/premier-single-touch-up-cup-51899b96-1e87-439b-b0fa-b3ec674c0e97-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 7.99,
-    "salePrice": 3.93,
+    "title": "Outils pneumatiques Mastercraft, paq. 71",
+    "image": "https://media-www.canadiantire.ca/product/fixing/tools/air-tools-accessories/0581951/mastercraft-71-piece-air-tool-kit-45ba2467-1f89-4fee-ae02-22eef4da4fee-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 199.99,
+    "salePrice": 99.98,
     "store": "Canadian Tire",
     "city": "Pembroke, ON",
     "branch": "Pembroke, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/gobelet-de-retouche-de-peinture-premier-0495850p.html",
-    "sku": "0495850",
-    "availability": "Vérifiez la disponibilité#049-5850X"
+    "url": "https://www.canadiantire.ca/fr/pdp/outils-pneumatiques-mastercraft-paq-71-0581951p.html",
+    "sku": "0581951",
+    "availability": "8 En Stock#058-1951-4"
+  },
+  {
+    "title": "Masque de soudeur auto-obscurcissant Lincoln Electric Teintes 9-13, camouflage",
+    "image": "https://media-www.canadiantire.ca/product/fixing/tools/welding-soldering/0580060/lincoln-electric-camo-auto-darkening-welding-helmet--66976caa-5fe7-4b87-9fdd-a0ca8b4cda42-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 299.99,
+    "salePrice": 149.98,
+    "store": "Canadian Tire",
+    "city": "Pembroke, ON",
+    "branch": "Pembroke, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/masque-de-soudeur-auto-obscurcissant-lincoln-electric-teintes-9-13-camouflage-0580060p.html",
+    "sku": "0580060",
+    "availability": "Il n’en reste que 1 #058-0060-0"
+  },
+  {
+    "title": "Applique de salle de bain à 4 lampes abat-jour en verre givré opale CANVAS Lindaura, chrome",
+    "image": "https://media-www.canadiantire.ca/product/living/home-decor/lighting/0523639/canvas-lindaura-vanity-4-light-050d91a6-866e-4fc8-a49d-f54dab84bf1c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 169.99,
+    "salePrice": 39.93,
+    "store": "Canadian Tire",
+    "city": "Pembroke, ON",
+    "branch": "Pembroke, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/applique-de-salle-de-bain-a-4-lampes-abat-jour-en-verre-givre-opale-canvas-lindaura-chrome-0523639p.html",
+    "sku": "0523639",
+    "availability": "Il n’en reste que 1 #052-3639-0"
+  },
+  {
+    "title": "Affûteuse à forets et à couteaux Drill Doctor",
+    "image": "https://media-www.canadiantire.ca/product/fixing/tools/power-tool-accessories/0540567/drill-doctor-multi-functional-sharpener-0cd2f0c3-f95f-4855-a3a5-94b4a927be62-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 199.99,
+    "salePrice": 79.98,
+    "store": "Canadian Tire",
+    "city": "Pembroke, ON",
+    "branch": "Pembroke, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/affuteuse-a-forets-et-a-couteaux-drill-doctor-0540567p.html",
+    "sku": "0540567",
+    "availability": "98 En Stock#054-0567-4"
   },
   {
     "title": "Chemise/manteau de chasse à capuchon Yukon Gear pour hommes avec doublure chaude isolée, camouflage Realtree Xtra",
@@ -348,28 +336,52 @@
     "availability": "Vérifiez la disponibilité#375-0751X"
   },
   {
-    "title": "Plaque murale pour interrupteur à bascule en nylon Leviton PJ262-741 Decora, taille intermédiaire, 2 dispositifs, ivoire",
-    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/rough-electrical/0523425/decora-wallplate-2-gang-ivory-midway-size-5f09071e-b8f7-4240-b59c-85c2679f82bc-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 3.99,
-    "salePrice": 1.43,
+    "title": "Adaptateur 6 voies vers 4 voies plat pour remorque REESE Towpower avec multimètre à DEL",
+    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0406844/adapter6to4wledtester-472c624b-c367-4021-a5a3-f7a62f8854fc-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 29.99,
+    "salePrice": 11.43,
     "store": "Canadian Tire",
     "city": "Pembroke, ON",
     "branch": "Pembroke, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/plaque-murale-pour-interrupteur-a-bascule-en-nylon-leviton-pj262-741-decora-taille-intermediaire-2-dispositifs-ivoire-0523425p.html",
-    "sku": "0523425",
-    "availability": "Il n’en reste que 5 #052-3425-8"
+    "url": "https://www.canadiantire.ca/fr/pdp/adaptateur-6-voies-vers-4-voies-plat-pour-remorque-reese-towpower-avec-multimetre-a-del-0406844p.html",
+    "sku": "0406844",
+    "availability": "Il n’en reste que 1 #040-6844-0"
   },
   {
-    "title": "Nettoyant et protecteur rapide pour l'intérieur en lingettes Chemical Guys InnerClean, nettoyant tout usage pour l'auto, paq. 50",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-chemicals/0396590/chemical-guys-quick-detailer-and-protectant-50-wipes-912e7952-9056-4971-bc36-68207fd8f1f2-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "title": "Teinture à bois à base d'eau Minwax, semi-transparente, 946 mL",
+    "image": "https://media-www.canadiantire.ca/product/fixing/paint/paints/0480939/minwax-water-based-semit-wood-stain-classic-gray-946ml-0461f25e-23c4-4871-b919-097a520832da-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 29.99,
+    "salePrice": 14.93,
+    "store": "Canadian Tire",
+    "city": "Pembroke, ON",
+    "branch": "Pembroke, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/teinture-a-bois-a-base-d-eau-minwax-semi-transparente-946-ml-0480937p.html",
+    "sku": "0480937",
+    "availability": "Vérifiez la disponibilité#048-0937X"
+  },
+  {
+    "title": "Ampoules pour projecteur à DEL non variable à culot E26 pour la maison NOMA A19, 2700K, 800 lumens, blanc chaud, 60 W, paq. 6",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/light-bulbs/0527055/noma-led-a19-bulb-60w-soft-white-6-pack-non-dimmable-fc7b6eb0-4083-4b09-8358-44e61eb6610c-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 17.99,
+    "salePrice": 6.98,
+    "store": "Canadian Tire",
+    "city": "Pembroke, ON",
+    "branch": "Pembroke, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/ampoules-pour-projecteur-a-del-non-variable-a-culot-e26-pour-la-maison-noma-a19-2700k-800-lumens-blanc-chaud-60-w-paq-6-0527055p.html",
+    "sku": "0527055",
+    "availability": "149 En Stock#052-7055-4"
+  },
+  {
+    "title": "Carillon de porte avec fil Globe Heath Zenith, fini métallique",
+    "image": "https://media-www.canadiantire.ca/product/fixing/hardware/curb-appeal/0521745/wired-buzzer-metal-719f587d-4a0a-48aa-b5e8-df76639e53a5-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 19.99,
     "salePrice": 9.93,
     "store": "Canadian Tire",
     "city": "Pembroke, ON",
     "branch": "Pembroke, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/nettoyant-et-protecteur-rapide-pour-l-interieur-en-lingettes-chemical-guys-innerclean-nettoyant-tout-usage-pour-l-auto-paq-50-0396590p.html",
-    "sku": "0396590",
-    "availability": "Il n’en reste que 1 #039-6590-8"
+    "url": "https://www.canadiantire.ca/fr/pdp/carillon-de-porte-avec-fil-globe-heath-zenith-fini-metallique-0521745p.html",
+    "sku": "0521745",
+    "availability": "Il n’en reste que 3 #052-1745-8"
   },
   {
     "title": "Corde à sauter à DEL pour enfants Light-Ups avec poignées scintillantes, multicolore, 7 pi, choix variés, 6 ans et plus, pour activités estivales et d'extérieur",
@@ -384,63 +396,51 @@
     "availability": ""
   },
   {
-    "title": "Brides à visser PlumbShop, laiton massif",
-    "image": "https://media-www.canadiantire.ca/product/fixing/plumbing/rough-plumbing/0630537/plumbshop-flange-screw-set-solid-brass-8dc4a983-c7ec-4c52-8efe-3587103edca9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 7.99,
-    "salePrice": 0.43,
+    "title": "Friteuse à air chaud à écran DEL avec grille Heritage, 6 L",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-appliances/0430101/heritage-6l-air-fryer-with-grill-53eab818-5a02-4049-a6ac-0a400a77fca0-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 199.99,
+    "salePrice": 79.98,
     "store": "Canadian Tire",
     "city": "Pembroke, ON",
     "branch": "Pembroke, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/brides-a-visser-plumbshop-laiton-massif-0630537p.html",
-    "sku": "0630537",
-    "availability": "Il n’en reste que 1 #063-0537-4"
+    "url": "https://www.canadiantire.ca/fr/pdp/friteuse-a-air-chaud-a-ecran-del-avec-grille-heritage-6-l-0430101p.html",
+    "sku": "0430101",
+    "availability": "Il n’en reste que 3 #043-0101-8"
   },
   {
-    "title": "Détachant à graisse et à huile Motsenbockerʼs Lift Off, 133 mL",
-    "image": "https://media-www.canadiantire.ca/product/living/home-essentials/laundry-hand-dish-cleaning-solutions/1531559/liftoff-grease-and-oil-stain-remover-133ml-6750425e-fc10-4ad3-81a3-3ddaaeaca057-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 8.99,
-    "salePrice": 4.49,
+    "title": "Bouton-pressoir lumineux hydrofuge à fil pour sonnette avec montage encastré Globe, métal blanc",
+    "image": "https://media-www.canadiantire.ca/product/fixing/hardware/curb-appeal/0521741/wired-push-button-white-metal-lighted-recess-mount-ea476911-5c41-4a2e-b60d-d249e1381e3f-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 15.99,
+    "salePrice": 7.93,
     "store": "Canadian Tire",
     "city": "Pembroke, ON",
     "branch": "Pembroke, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/detachant-a-graisse-et-a-huile-motsenbocker-s-lift-off-133-ml-1531559p.html",
-    "sku": "1531559",
-    "availability": "Il n’en reste que 1 #153-1559-2"
+    "url": "https://www.canadiantire.ca/fr/pdp/bouton-pressoir-lumineux-hydrofuge-a-fil-pour-sonnette-avec-montage-encastre-globe-metal-blanc-0521741p.html",
+    "sku": "0521741",
+    "availability": "Il n’en reste que 1 #052-1741-6"
   },
   {
-    "title": "Valentino magique bougeant et parlant et Star Disney Wish avec sons, grande figurine interactive de 12 po pour enfants, 3 ans et plus",
-    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/toys-games/1501731/disney-wish-interactive-valentino-star-large-doll-a11df479-c616-49c6-b69d-8644eb27944d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 84.99,
-    "salePrice": 42.49,
+    "title": "Recharge pour tête de vadrouille rotative plate en microfibre Rubbermaid",
+    "image": "https://media-www.canadiantire.ca/product/living/cleaning/household-cleaning-tools/1425877/rubbermaid-flat-spin-mop-refill-ffa8b3be-ad03-4d22-ab62-b78e79367cae-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 10.99,
+    "salePrice": 3.93,
     "store": "Canadian Tire",
     "city": "Pembroke, ON",
     "branch": "Pembroke, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/valentino-magique-bougeant-et-parlant-et-star-disney-wish-avec-sons-grande-figurine-interactive-de-12-po-pour-enfants-3-ans-et-plus-1501731p.html",
-    "sku": "1501731",
-    "availability": "Il n’en reste que 1 #150-1731-6"
+    "url": "https://www.canadiantire.ca/fr/pdp/recharge-pour-tete-de-vadrouille-rotative-plate-en-microfibre-rubbermaid-1425877p.html",
+    "sku": "1425877",
+    "availability": "Il n’en reste que 1 #142-5877-6"
   },
   {
-    "title": "Ampoules à DEL d’intérieur Alpena 1156, blanc, paq. 2",
-    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0203372/alpena-led-blub-1156-white-1b785543-20ba-4e3f-a2d2-e0c644521560-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 29.99,
-    "salePrice": 9.98,
+    "title": "Gants de lavage en microfibres SIMONIZ, bleu, paq. 1",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-tools/0397024/simoniz-microfibre-chenille-wash-mitt-e513fa98-efc6-44c6-83ee-349ca8536e2a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 9.99,
+    "salePrice": 4.93,
     "store": "Canadian Tire",
     "city": "Pembroke, ON",
     "branch": "Pembroke, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/ampoules-a-del-d-interieur-alpena-1156-blanc-paq-2-0203372p.html",
-    "sku": "0203372",
-    "availability": "Il n’en reste que 4 #020-3372-8"
-  },
-  {
-    "title": "Garde-boues avant et arrière personnalisés Husky Liners 58266 pour camion Chevrolet Silverado 1500, 2019 à 2021, paquet de 4",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-accessories/0372676/husky-mud-flaps-2019-2021-chevrolet-silverado-1500-c9293249-2831-4822-920d-42c116813c8e-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 139.99,
-    "salePrice": 19.98,
-    "store": "Canadian Tire",
-    "city": "Pembroke, ON",
-    "branch": "Pembroke, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/garde-boues-avant-et-arriere-personnalises-husky-liners-58266-pour-camion-chevrolet-silverado-1500-2019-a-2021-paquet-de-4-0372676p.html",
-    "sku": "0372676",
-    "availability": "16 En Stock#037-2676-4"
+    "url": "https://www.canadiantire.ca/fr/pdp/gants-de-lavage-en-microfibres-simoniz-bleu-paq-1-0397024p.html",
+    "sku": "0397024",
+    "availability": ""
   }
 ]
