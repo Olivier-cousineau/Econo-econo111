@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-06-27T11:39:54.727Z",
+  "generatedAt": "2026-06-27T13:55:41.680Z",
   "stores": [
     {
-      "id": "77",
-      "city": "Owen Sound, ON",
-      "status": "committed",
-      "details": "117 produits"
-    },
-    {
-      "id": "244",
-      "city": "Chelmsford, ON",
-      "status": "committed",
-      "details": "47 produits"
-    },
-    {
-      "id": "49",
-      "city": "Caledonia, ON",
-      "status": "committed",
-      "details": "65 produits"
-    },
-    {
-      "id": "168",
-      "city": "Cambridge Hespeler, ON",
+      "id": "139",
+      "city": "Kitchener East, ON",
       "status": "committed",
       "details": "141 produits"
     },
     {
-      "id": "36",
-      "city": "Cambridge, ON",
+      "id": "616",
+      "city": "Elmira, ON",
       "status": "committed",
-      "details": "119 produits"
+      "details": "88 produits"
     },
     {
-      "id": "35",
-      "city": "Fredericton, NB",
+      "id": "53",
+      "city": "Kitchener South, ON",
       "status": "committed",
-      "details": "91 produits"
+      "details": "96 produits"
     },
     {
-      "id": "66",
-      "city": "Mount Forest, ON",
-      "status": "committed",
-      "details": "93 produits"
-    },
-    {
-      "id": "337",
-      "city": "Fredericton North, NB",
+      "id": "664",
+      "city": "Brantford North, ON",
       "status": "committed",
       "details": "85 produits"
+    },
+    {
+      "id": "265",
+      "city": "Baie-Comeau, QC",
+      "status": "committed",
+      "details": "75 produits"
+    },
+    {
+      "id": "251",
+      "city": "Waterloo, ON",
+      "status": "committed",
+      "details": "97 produits"
+    },
+    {
+      "id": "420",
+      "city": "Kitchener West, ON",
+      "status": "committed",
+      "details": "113 produits"
+    },
+    {
+      "id": "46",
+      "city": "Hanover, ON",
+      "status": "committed",
+      "details": "94 produits"
     }
   ],
   "failedTwice": [],
