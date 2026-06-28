@@ -1,53 +1,17 @@
 {
-  "generatedAt": "2026-06-28T13:56:53.618Z",
+  "generatedAt": "2026-06-28T15:23:54.032Z",
   "stores": [
     {
-      "id": "113",
-      "city": "Truro, NS",
+      "id": "213",
+      "city": "Port Hawkesbury, NS",
       "status": "committed",
-      "details": "54 produits"
+      "details": "85 produits"
     },
     {
-      "id": "281",
-      "city": "Amherstburg, ON",
+      "id": "451",
+      "city": "Marathon, ON",
       "status": "committed",
-      "details": "97 produits"
-    },
-    {
-      "id": "20",
-      "city": "Charlottetown, PEI 20 Babineau Avenue",
-      "status": "committed",
-      "details": "62 produits"
-    },
-    {
-      "id": "406",
-      "city": "Hearst, ON",
-      "status": "committed",
-      "details": "46 produits"
-    },
-    {
-      "id": "279",
-      "city": "Wawa, ON",
-      "status": "committed",
-      "details": "48 produits"
-    },
-    {
-      "id": "67",
-      "city": "New Glasgow, NS",
-      "status": "committed",
-      "details": "57 produits"
-    },
-    {
-      "id": "2",
-      "city": "Antigonish, NS",
-      "status": "committed",
-      "details": "97 produits"
-    },
-    {
-      "id": "901",
-      "city": "Labrador City, NL",
-      "status": "committed",
-      "details": "120 produits"
+      "details": "51 produits"
     }
   ],
   "failedTwice": [],
