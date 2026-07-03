@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-07-03T13:05:19.063Z",
+  "generatedAt": "2026-07-03T16:12:13.098Z",
   "stores": [
     {
-      "id": "69",
-      "city": "Newmarket, ON",
+      "id": "446",
+      "city": "Bradford, ON",
+      "status": "committed",
+      "details": "125 produits"
+    },
+    {
+      "id": "697",
+      "city": "Richmond Hill North, ON",
       "status": "committed",
       "details": "122 produits"
     },
     {
-      "id": "209",
-      "city": "Kingston Rd, ON",
+      "id": "87",
+      "city": "Richmond Hill, ON",
       "status": "committed",
-      "details": "131 produits"
+      "details": "165 produits"
     },
     {
-      "id": "164",
-      "city": "Markham, ON",
+      "id": "273",
+      "city": "Toronto Main & Danforth, ON",
       "status": "committed",
-      "details": "205 produits"
+      "details": "96 produits"
     },
     {
-      "id": "6",
-      "city": "Barrie, ON",
+      "id": "192",
+      "city": "Sheppard Ave., ON",
       "status": "committed",
-      "details": "77 produits"
+      "details": "166 produits"
     },
     {
-      "id": "68",
-      "city": "New Liskeard, ON",
+      "id": "126",
+      "city": "Yonge & Steeles, ON",
       "status": "committed",
-      "details": "82 produits"
+      "details": "178 produits"
     },
     {
-      "id": "444",
-      "city": "Barrie South, ON",
+      "id": "459",
+      "city": "Eglinton & Laird, ON",
       "status": "committed",
-      "details": "151 produits"
+      "details": "100 produits"
     },
     {
-      "id": "30",
-      "city": "Warden & Eglinton, ON",
+      "id": "654",
+      "city": "Leslie & Lake Shore, ON",
       "status": "committed",
-      "details": "113 produits"
-    },
-    {
-      "id": "61",
-      "city": "Midland, ON",
-      "status": "committed",
-      "details": "102 produits"
+      "details": "103 produits"
     }
   ],
   "failedTwice": [],
