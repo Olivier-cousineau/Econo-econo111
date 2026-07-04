@@ -9,19 +9,7 @@
     "branch": "London Auto Centre, ON",
     "url": "https://www.canadiantire.ca/fr/pdp/tasses-a-mesurer-empilables-en-plastique-master-chef-paq-10-1429676p.html",
     "sku": "1429676",
-    "availability": "35 En Stock#142-9676-0"
-  },
-  {
-    "title": "Affûteur de couteaux et de ciseaux facile à utiliser en 3 étapes MASTER Chef",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/cutlery/2421029/master-chef-3stage-knife-sharpener-b9ab2767-c8c0-473e-a296-6cb70527856a-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 18.99,
-    "salePrice": 4.93,
-    "store": "Canadian Tire",
-    "city": "London Auto Centre, ON",
-    "branch": "London Auto Centre, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/affuteur-de-couteaux-et-de-ciseaux-facile-a-utiliser-en-3-etapes-master-chef-2421029p.html",
-    "sku": "2421029",
-    "availability": "Il n’en reste que 5 #242-1029-2"
+    "availability": "34 En Stock#142-9676-0"
   },
   {
     "title": "Cintres pivotants compacts en velours Type A avec barre à pantalon, couleurs variées, paq. 40",
@@ -36,6 +24,18 @@
     "availability": "Vérifiez la disponibilité#068-8307X"
   },
   {
+    "title": "Papier abrasif 3M Wetordry, 4 x 9 po, paq. 5",
+    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-body-repair/0475842/3m-imperial-wetordry-sandpaper-p400-3f901c4f-8345-4630-9155-5ec371ea3509-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 10.99,
+    "salePrice": 2.93,
+    "store": "Canadian Tire",
+    "city": "London Auto Centre, ON",
+    "branch": "London Auto Centre, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/papier-abrasif-3m-wetordry-4-x-9-po-paq-5-0475844p.html",
+    "sku": "0475844",
+    "availability": "Vérifiez la disponibilité#047-5842X"
+  },
+  {
     "title": "Ensemble de nettoyants automobiles Armor All, paq. 16",
     "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-chemicals/0397080/armor-all-car-wash-packs-16ct-8ed7ef02-e539-49d9-8a49-0232d41a7968-jpgrendition.jpg?im=whresize&wid=200&hei=200",
     "price": 17.99,
@@ -48,27 +48,87 @@
     "availability": "Il n’en reste que 1 #039-7080-6"
   },
   {
-    "title": "Séchoir et souffleur Chemical Guys ProBlow",
-    "image": "https://media-www.canadiantire.ca/product/automotive/car-care-accessories/auto-cleaning-tools/0393676/chemical-guys-problow-dryer-and-blower-caf10355-3e99-41f5-8d96-f48e24ad5376-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 159.99,
-    "salePrice": 69.93,
+    "title": "Lampe de sécurité à DEL NOMA à 2 têtes, fonctionnement à piles, détection de mouvement, 1200 lumens, noir",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/lighting/1523122/noma-solar-security-light-1200-lumens-af729ff1-bca5-4704-8ceb-cabb38aa6b34-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 84.99,
+    "salePrice": 12.93,
     "store": "Canadian Tire",
     "city": "London Auto Centre, ON",
     "branch": "London Auto Centre, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/sechoir-et-souffleur-chemical-guys-problow-0393676p.html",
-    "sku": "0393676",
-    "availability": "Il n’en reste que 1 #039-3676-4"
+    "url": "https://www.canadiantire.ca/fr/pdp/lampe-de-securite-a-del-noma-a-2-tetes-fonctionnement-a-piles-detection-de-mouvement-1200-lumens-noir-1523122p.html",
+    "sku": "1523122",
+    "availability": "Il n’en reste que 2 #152-3122-0"
   },
   {
-    "title": "Pinceau à badigeonner en silicone MASTER Chef, choix varié, 10 po",
-    "image": "https://media-www.canadiantire.ca/product/living/kitchen/kitchen-tools-thermometers/1424241/masterchef-e-silicone-basting-brush-11670634-372a-4d09-85a1-5a1ebbfe986d-jpgrendition.jpg?im=whresize&wid=200&hei=200",
-    "price": 7.99,
-    "salePrice": 2.93,
+    "title": "Batterie de cuisine pour sac à dos Woods O'Hara",
+    "image": "https://media-www.canadiantire.ca/product/playing/camping/camping-living/0766500/woods-o-hara-pot-set-0428ba47-d5f6-481e-9910-2a9cf8f10b99-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 52.99,
+    "salePrice": 24.93,
     "store": "Canadian Tire",
     "city": "London Auto Centre, ON",
     "branch": "London Auto Centre, ON",
-    "url": "https://www.canadiantire.ca/fr/pdp/pinceau-a-badigeonner-en-silicone-master-chef-choix-varie-10-po-1424241p.html",
-    "sku": "1424241",
-    "availability": "Il n’en reste que 1 #142-4241-4"
+    "url": "https://www.canadiantire.ca/fr/pdp/batterie-de-cuisine-pour-sac-a-dos-woods-o-hara-0766500p.html",
+    "sku": "0766500",
+    "availability": ""
+  },
+  {
+    "title": "Table et train en bois Rocky Mountain, paq. 50",
+    "image": "https://media-www.canadiantire.ca/product/seasonal-gardening/toys/preschool-toys-activities/1501272/rocky-mountain-wooden-train-set-and-table-d9702a1d-eceb-406f-99bf-dc0cf5d5b2e9-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 149.99,
+    "salePrice": 55.93,
+    "store": "Canadian Tire",
+    "city": "London Auto Centre, ON",
+    "branch": "London Auto Centre, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/table-et-train-en-bois-rocky-mountain-paq-50-1501272p.html",
+    "sku": "1501272",
+    "availability": "Il n’en reste que 3 #150-1272-8"
+  },
+  {
+    "title": "Rallonge d'extérieur NOMA, calibre 16/2, 3 prises, blanc",
+    "image": "https://media-www.canadiantire.ca/product/fixing/electrical/power-bars-extension-cords-timers/0522444/noma-white-9-10-3m-outdoor-cord-16-2-3-tap-8b83ae64-ec4b-4a9b-915b-b68d0454edbf-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 12.99,
+    "salePrice": 5.93,
+    "store": "Canadian Tire",
+    "city": "London Auto Centre, ON",
+    "branch": "London Auto Centre, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/rallonge-d-exterieur-noma-calibre-16-2-3-prises-blanc-0522444p.html",
+    "sku": "0522444",
+    "availability": "Vérifiez la disponibilité#052-2444X"
+  },
+  {
+    "title": "Couteaux en acier forgés Henckels French avec bloc, paq. 13",
+    "image": "https://media-www.canadiantire.ca/product/living/kitchen/cutlery/1429302/henckels-13-piece-french-forged-knife-block-set--0190937d-38d1-4738-8d1f-df0394f29733-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 299.99,
+    "salePrice": 149.93,
+    "store": "Canadian Tire",
+    "city": "London Auto Centre, ON",
+    "branch": "London Auto Centre, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/couteaux-en-acier-forges-henckels-french-avec-bloc-paq-13-1429302p.html",
+    "sku": "1429302",
+    "availability": "Il n’en reste que 2 #142-9302-0"
+  },
+  {
+    "title": "Filet pour panier de toit élastique SportRack SR0033, 40 x 36 po",
+    "image": "https://media-www.canadiantire.ca/product/automotive/automotive-outdoor-adventure/auto-travel-storage/0401146/sport-rack-roof-basket-1659bde3-a046-49ef-8fe4-b7c8ed4e72e0-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 69.99,
+    "salePrice": 14.93,
+    "store": "Canadian Tire",
+    "city": "London Auto Centre, ON",
+    "branch": "London Auto Centre, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/filet-pour-panier-de-toit-elastique-sportrack-sr0033-40-x-36-po-0401147p.html",
+    "sku": "0401147",
+    "availability": ""
+  },
+  {
+    "title": "Tapis de recharge sans fil en tissu Bluehive, 10 W",
+    "image": "https://media-www.canadiantire.ca/product/automotive/electronics/mobile-electronics/0357142/bluehive-fabric-wireless-charging-pad-a5bac5a3-896e-4cff-b61a-553f7627b960-jpgrendition.jpg?im=whresize&wid=200&hei=200",
+    "price": 24.99,
+    "salePrice": 8.93,
+    "store": "Canadian Tire",
+    "city": "London Auto Centre, ON",
+    "branch": "London Auto Centre, ON",
+    "url": "https://www.canadiantire.ca/fr/pdp/tapis-de-recharge-sans-fil-en-tissu-bluehive-10-w-0357142p.html",
+    "sku": "0357142",
+    "availability": "17 En Stock#035-7142-8"
   }
 ]
