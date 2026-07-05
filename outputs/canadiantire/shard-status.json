@@ -1,55 +1,60 @@
 {
-  "generatedAt": "2026-07-04T23:00:38.344Z",
+  "generatedAt": "2026-07-05T02:29:42.677Z",
   "stores": [
     {
-      "id": "141",
-      "city": "Exeter, ON",
+      "id": "92",
+      "city": "St. Thomas, ON",
       "status": "committed",
-      "details": "83 produits"
+      "details": "100 produits"
     },
     {
-      "id": "494",
-      "city": "London Auto Centre, ON",
+      "id": "136",
+      "city": "Miramichi, NB",
       "status": "committed",
-      "details": "11 produits"
+      "details": "88 produits"
     },
     {
-      "id": "58",
-      "city": "London South, ON",
+      "id": "11",
+      "city": "Bathurst, NB",
       "status": "committed",
-      "details": "113 produits"
+      "details": "33 produits"
     },
     {
-      "id": "106",
-      "city": "Sussex, NB",
-      "status": "committed",
-      "details": "82 produits"
-    },
-    {
-      "id": "25",
-      "city": "Digby, NS",
-      "status": "committed",
-      "details": "54 produits"
-    },
-    {
-      "id": "125",
-      "city": "Yarmouth, NS",
+      "id": "167",
+      "city": "Elliot Lake, ON",
       "status": "committed",
       "details": "49 produits"
     },
     {
-      "id": "425",
-      "city": "London North, ON",
+      "id": "104",
+      "city": "Strathroy, ON",
       "status": "committed",
-      "details": "77 produits"
+      "details": "92 produits"
     },
     {
-      "id": "208",
-      "city": "London West, ON",
+      "id": "32",
+      "city": "Forest, ON",
       "status": "committed",
-      "details": "57 produits"
+      "details": "40 produits"
+    },
+    {
+      "id": "249",
+      "city": "Moncton Mountain Rd, NB",
+      "status": "committed",
+      "details": "54 produits (after retry)"
+    },
+    {
+      "id": "463",
+      "city": "Paspebiac, QC",
+      "status": "committed",
+      "details": "126 produits"
     }
   ],
   "failedTwice": [],
-  "retriedAndSucceeded": []
+  "retriedAndSucceeded": [
+    {
+      "id": "249",
+      "city": "Moncton Mountain Rd, NB"
+    }
+  ]
 }
