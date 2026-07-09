@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-07-09T15:55:48.884Z",
+  "generatedAt": "2026-07-09T18:35:22.221Z",
   "stores": [
     {
-      "id": "342",
-      "city": "Quebec Les Saules, QC",
-      "status": "committed",
-      "details": "118 produits"
-    },
-    {
-      "id": "245",
-      "city": "Quebec Ste. Foy, QC",
-      "status": "committed",
-      "details": "62 produits"
-    },
-    {
-      "id": "79",
-      "city": "Pembroke, ON",
-      "status": "committed",
-      "details": "47 produits"
-    },
-    {
-      "id": "405",
-      "city": "Lebourgneuf, QC",
-      "status": "committed",
-      "details": "85 produits"
-    },
-    {
-      "id": "101",
-      "city": "Quebec Vanier, QC",
+      "id": "184",
+      "city": "Beauport, QC",
       "status": "committed",
       "details": "102 produits"
     },
     {
-      "id": "416",
-      "city": "Ste. Marie De Beauce, QC",
+      "id": "173",
+      "city": "St. Georges, QC",
       "status": "committed",
-      "details": "58 produits"
+      "details": "66 produits"
     },
     {
-      "id": "225",
-      "city": "Lac Megantic, QC",
+      "id": "694",
+      "city": "Kingston Division St., ON",
       "status": "committed",
-      "details": "70 produits"
+      "details": "142 produits"
     },
     {
-      "id": "165",
-      "city": "Levis, QC",
+      "id": "195",
+      "city": "Kingston, ON",
       "status": "committed",
-      "details": "79 produits"
+      "details": "111 produits"
+    },
+    {
+      "id": "417",
+      "city": "Kingston Township, ON",
+      "status": "committed",
+      "details": "83 produits"
+    },
+    {
+      "id": "253",
+      "city": "Deep River, ON",
+      "status": "committed",
+      "details": "42 produits"
+    },
+    {
+      "id": "65",
+      "city": "Napanee, ON",
+      "status": "committed",
+      "details": "90 produits"
+    },
+    {
+      "id": "180",
+      "city": "Montmagny, QC",
+      "status": "committed",
+      "details": "105 produits"
     }
   ],
   "failedTwice": [],
