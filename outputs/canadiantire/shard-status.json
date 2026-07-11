@@ -1,55 +1,60 @@
 {
-  "generatedAt": "2026-07-11T11:24:16.313Z",
+  "generatedAt": "2026-07-11T14:15:25.749Z",
   "stores": [
     {
-      "id": "77",
-      "city": "Owen Sound, ON",
+      "id": "139",
+      "city": "Kitchener East, ON",
+      "status": "committed",
+      "details": "122 produits"
+    },
+    {
+      "id": "616",
+      "city": "Elmira, ON",
+      "status": "committed",
+      "details": "97 produits"
+    },
+    {
+      "id": "53",
+      "city": "Kitchener South, ON",
       "status": "committed",
       "details": "104 produits"
     },
     {
-      "id": "244",
-      "city": "Chelmsford, ON",
+      "id": "664",
+      "city": "Brantford North, ON",
       "status": "committed",
-      "details": "76 produits"
+      "details": "93 produits (after retry)"
     },
     {
-      "id": "49",
-      "city": "Caledonia, ON",
+      "id": "265",
+      "city": "Baie-Comeau, QC",
       "status": "committed",
-      "details": "80 produits"
+      "details": "52 produits"
     },
     {
-      "id": "168",
-      "city": "Cambridge Hespeler, ON",
+      "id": "251",
+      "city": "Waterloo, ON",
       "status": "committed",
-      "details": "128 produits"
+      "details": "113 produits"
     },
     {
-      "id": "36",
-      "city": "Cambridge, ON",
+      "id": "420",
+      "city": "Kitchener West, ON",
       "status": "committed",
-      "details": "125 produits"
+      "details": "127 produits"
     },
     {
-      "id": "35",
-      "city": "Fredericton, NB",
+      "id": "46",
+      "city": "Hanover, ON",
       "status": "committed",
-      "details": "103 produits"
-    },
-    {
-      "id": "66",
-      "city": "Mount Forest, ON",
-      "status": "committed",
-      "details": "107 produits"
-    },
-    {
-      "id": "337",
-      "city": "Fredericton North, NB",
-      "status": "committed",
-      "details": "97 produits"
+      "details": "95 produits"
     }
   ],
   "failedTwice": [],
-  "retriedAndSucceeded": []
+  "retriedAndSucceeded": [
+    {
+      "id": "664",
+      "city": "Brantford North, ON"
+    }
+  ]
 }
