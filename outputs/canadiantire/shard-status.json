@@ -1,55 +1,60 @@
 {
-  "generatedAt": "2026-07-17T17:37:05.584Z",
+  "generatedAt": "2026-07-17T19:55:50.525Z",
   "stores": [
     {
-      "id": "321",
-      "city": "Dufferin & 407, ON",
+      "id": "237",
+      "city": "Woodbridge, ON",
       "status": "committed",
-      "details": "258 produits"
+      "details": "332 produits"
     },
     {
-      "id": "150",
-      "city": "Toronto, Yonge & Church, ON",
+      "id": "182",
+      "city": "West Toronto (Stockyards), ON",
       "status": "committed",
-      "details": "166 produits"
+      "details": "172 produits"
     },
     {
-      "id": "485",
-      "city": "Dufferin & Finch Auto Ctr, ON",
+      "id": "119",
+      "city": "Weston Road & 401, ON",
       "status": "committed",
-      "details": "79 produits"
+      "details": "260 produits"
     },
     {
-      "id": "600",
-      "city": "Toronto Eaton Centre, ON",
+      "id": "137",
+      "city": "Woodstock, NB",
       "status": "committed",
-      "details": "221 produits"
+      "details": "104 produits"
     },
     {
-      "id": "19",
-      "city": "Lawrence & Allen Expwy, ON",
+      "id": "294",
+      "city": "Etobicoke, Albion & Kipling, ON",
       "status": "committed",
-      "details": "111 produits"
+      "details": "278 produits"
     },
     {
-      "id": "653",
-      "city": "Maple, ON",
-      "status": "committed",
-      "details": "112 produits"
+      "id": "242",
+      "city": "Rexdale, ON",
+      "status": "failed_twice",
+      "details": "failed twice – accepted"
     },
     {
-      "id": "621",
-      "city": "Liberty Village, ON",
+      "id": "1",
+      "city": "Alliston, ON",
       "status": "committed",
-      "details": "133 produits"
+      "details": "183 produits"
     },
     {
-      "id": "214",
-      "city": "Eglinton & Caledonia, Toronto, ON",
+      "id": "652",
+      "city": "Wasaga Beach, ON",
       "status": "committed",
-      "details": "134 produits"
+      "details": "131 produits"
     }
   ],
-  "failedTwice": [],
+  "failedTwice": [
+    {
+      "id": "242",
+      "city": "Rexdale, ON"
+    }
+  ],
   "retriedAndSucceeded": []
 }
