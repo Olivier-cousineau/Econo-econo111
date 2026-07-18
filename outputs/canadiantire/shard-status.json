@@ -1,55 +1,60 @@
 {
-  "generatedAt": "2026-07-18T06:30:09.619Z",
+  "generatedAt": "2026-07-18T08:38:13.897Z",
   "stores": [
     {
-      "id": "159",
-      "city": "Georgetown, ON",
+      "id": "122",
+      "city": "Burlington Fairview, ON",
       "status": "committed",
-      "details": "62 produits"
+      "details": "290 produits"
     },
     {
-      "id": "73",
-      "city": "Orangeville, ON",
+      "id": "154",
+      "city": "Hamilton East, ON",
       "status": "committed",
-      "details": "73 produits"
+      "details": "211 produits"
     },
     {
-      "id": "128",
-      "city": "Port Colborne, ON",
+      "id": "129",
+      "city": "Hamilton Centre, ON",
       "status": "committed",
-      "details": "77 produits"
+      "details": "272 produits"
     },
     {
-      "id": "140",
-      "city": "Milton, ON",
+      "id": "278",
+      "city": "Sudbury North, ON",
       "status": "committed",
-      "details": "50 produits"
+      "details": "191 produits"
     },
     {
-      "id": "40",
-      "city": "Grimsby, ON",
+      "id": "220",
+      "city": "Waterdown, ON",
       "status": "committed",
-      "details": "70 produits"
+      "details": "191 produits"
     },
     {
-      "id": "232",
-      "city": "St. Stephen, NB",
+      "id": "45",
+      "city": "Hamilton Main, ON",
       "status": "committed",
-      "details": "70 produits"
+      "details": "263 produits"
     },
     {
-      "id": "52",
-      "city": "Kirkland Lake, ON",
+      "id": "194",
+      "city": "Hamilton Mt.East, ON",
       "status": "committed",
-      "details": "59 produits"
+      "details": "128 produits (after retry)"
     },
     {
-      "id": "412",
-      "city": "Burlington North, ON",
+      "id": "445",
+      "city": "Sudbury South, ON",
       "status": "committed",
-      "details": "101 produits"
+      "details": "123 produits"
     }
   ],
   "failedTwice": [],
-  "retriedAndSucceeded": []
+  "retriedAndSucceeded": [
+    {
+      "id": "194",
+      "city": "Hamilton Mt.East, ON"
+    }
+  ]
 }
