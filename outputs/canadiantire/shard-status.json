@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-07-19T12:05:15.214Z",
+  "generatedAt": "2026-07-19T14:58:17.380Z",
   "stores": [
     {
-      "id": "224",
-      "city": "Halifax - Bedford, NS",
+      "id": "113",
+      "city": "Truro, NS",
       "status": "committed",
-      "details": "373 produits"
+      "details": "32 produits"
     },
     {
-      "id": "465",
-      "city": "Halifax - Bayers Lake, NS",
+      "id": "281",
+      "city": "Amherstburg, ON",
       "status": "committed",
-      "details": "174 produits"
+      "details": "114 produits"
     },
     {
-      "id": "121",
-      "city": "Windsor University Plaza, ON",
+      "id": "20",
+      "city": "Charlottetown, PEI 20 Babineau Avenue",
       "status": "committed",
-      "details": "205 produits"
+      "details": "50 produits"
     },
     {
-      "id": "186",
-      "city": "Halifax - Spryfield, NS",
+      "id": "406",
+      "city": "Hearst, ON",
+      "status": "committed",
+      "details": "33 produits"
+    },
+    {
+      "id": "279",
+      "city": "Wawa, ON",
+      "status": "committed",
+      "details": "37 produits"
+    },
+    {
+      "id": "67",
+      "city": "New Glasgow, NS",
+      "status": "committed",
+      "details": "52 produits"
+    },
+    {
+      "id": "2",
+      "city": "Antigonish, NS",
       "status": "committed",
       "details": "83 produits"
     },
     {
-      "id": "619",
-      "city": "Elmsdale, NS",
+      "id": "901",
+      "city": "Labrador City, NL",
       "status": "committed",
-      "details": "125 produits"
-    },
-    {
-      "id": "44",
-      "city": "Halifax, NS",
-      "status": "committed",
-      "details": "208 produits"
-    },
-    {
-      "id": "41",
-      "city": "Dartmouth Crossing, NS",
-      "status": "committed",
-      "details": "102 produits"
-    },
-    {
-      "id": "436",
-      "city": "Halifax - Cole Harbour, NS",
-      "status": "committed",
-      "details": "79 produits"
+      "details": "105 produits"
     }
   ],
   "failedTwice": [],
