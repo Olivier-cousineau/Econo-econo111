@@ -1,55 +1,60 @@
 {
-  "generatedAt": "2026-07-24T18:44:09.289Z",
+  "generatedAt": "2026-07-24T20:57:09.330Z",
   "stores": [
     {
-      "id": "321",
-      "city": "Dufferin & 407, ON",
+      "id": "237",
+      "city": "Woodbridge, ON",
       "status": "committed",
-      "details": "161 produits"
+      "details": "125 produits"
     },
     {
-      "id": "150",
-      "city": "Toronto, Yonge & Church, ON",
+      "id": "182",
+      "city": "West Toronto (Stockyards), ON",
       "status": "committed",
-      "details": "129 produits"
+      "details": "124 produits"
     },
     {
-      "id": "485",
-      "city": "Dufferin & Finch Auto Ctr, ON",
+      "id": "119",
+      "city": "Weston Road & 401, ON",
       "status": "committed",
-      "details": "30 produits"
+      "details": "124 produits"
     },
     {
-      "id": "600",
-      "city": "Toronto Eaton Centre, ON",
+      "id": "137",
+      "city": "Woodstock, NB",
       "status": "committed",
-      "details": "133 produits"
+      "details": "64 produits"
     },
     {
-      "id": "19",
-      "city": "Lawrence & Allen Expwy, ON",
+      "id": "294",
+      "city": "Etobicoke, Albion & Kipling, ON",
       "status": "committed",
-      "details": "66 produits"
+      "details": "157 produits"
     },
     {
-      "id": "653",
-      "city": "Maple, ON",
-      "status": "committed",
-      "details": "145 produits"
+      "id": "242",
+      "city": "Rexdale, ON",
+      "status": "failed_twice",
+      "details": "failed twice – accepted"
     },
     {
-      "id": "621",
-      "city": "Liberty Village, ON",
+      "id": "1",
+      "city": "Alliston, ON",
       "status": "committed",
-      "details": "156 produits"
+      "details": "109 produits"
     },
     {
-      "id": "214",
-      "city": "Eglinton & Caledonia, Toronto, ON",
+      "id": "652",
+      "city": "Wasaga Beach, ON",
       "status": "committed",
-      "details": "115 produits"
+      "details": "64 produits"
     }
   ],
-  "failedTwice": [],
+  "failedTwice": [
+    {
+      "id": "242",
+      "city": "Rexdale, ON"
+    }
+  ],
   "retriedAndSucceeded": []
 }
