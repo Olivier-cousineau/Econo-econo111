@@ -1,60 +1,60 @@
 {
-  "generatedAt": "2026-07-24T20:57:09.330Z",
+  "generatedAt": "2026-07-24T23:43:55.919Z",
   "stores": [
     {
-      "id": "237",
-      "city": "Woodbridge, ON",
+      "id": "197",
+      "city": "Bolton, ON",
       "status": "committed",
-      "details": "125 produits"
+      "details": "241 produits"
     },
     {
-      "id": "182",
-      "city": "West Toronto (Stockyards), ON",
+      "id": "219",
+      "city": "Grand Falls, NB",
       "status": "committed",
-      "details": "124 produits"
+      "details": "45 produits"
     },
     {
-      "id": "119",
-      "city": "Weston Road & 401, ON",
+      "id": "70",
+      "city": "The Queensway, ON",
       "status": "committed",
-      "details": "124 produits"
+      "details": "197 produits"
     },
     {
-      "id": "137",
-      "city": "Woodstock, NB",
+      "id": "152",
+      "city": "Miss. Dixie & Dundas, ON",
       "status": "committed",
-      "details": "64 produits"
+      "details": "113 produits"
     },
     {
-      "id": "294",
-      "city": "Etobicoke, Albion & Kipling, ON",
+      "id": "71",
+      "city": "Niagara Falls North, ON",
       "status": "committed",
-      "details": "157 produits"
+      "details": "95 produits (after retry)"
     },
     {
-      "id": "242",
-      "city": "Rexdale, ON",
-      "status": "failed_twice",
-      "details": "failed twice – accepted"
+      "id": "305",
+      "city": "Brampton Bramalea, ON",
+      "status": "committed",
+      "details": "407 produits"
     },
     {
-      "id": "1",
-      "city": "Alliston, ON",
+      "id": "162",
+      "city": "St. Catharines N., ON",
       "status": "committed",
-      "details": "109 produits"
+      "details": "94 produits"
     },
     {
-      "id": "652",
-      "city": "Wasaga Beach, ON",
+      "id": "33",
+      "city": "Fort Erie, ON",
       "status": "committed",
-      "details": "64 produits"
+      "details": "99 produits"
     }
   ],
-  "failedTwice": [
+  "failedTwice": [],
+  "retriedAndSucceeded": [
     {
-      "id": "242",
-      "city": "Rexdale, ON"
+      "id": "71",
+      "city": "Niagara Falls North, ON"
     }
-  ],
-  "retriedAndSucceeded": []
+  ]
 }
