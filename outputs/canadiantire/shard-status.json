@@ -1,60 +1,55 @@
 {
-  "generatedAt": "2026-07-24T23:43:55.919Z",
+  "generatedAt": "2026-07-25T01:05:11.270Z",
   "stores": [
     {
-      "id": "197",
-      "city": "Bolton, ON",
+      "id": "145",
+      "city": "St. Catharines S., ON",
       "status": "committed",
-      "details": "241 produits"
+      "details": "136 produits"
     },
     {
-      "id": "219",
-      "city": "Grand Falls, NB",
+      "id": "411",
+      "city": "Brampton Trinity Common, ON",
       "status": "committed",
-      "details": "45 produits"
+      "details": "274 produits"
     },
     {
-      "id": "70",
-      "city": "The Queensway, ON",
+      "id": "346",
+      "city": "Miss.Mavis & Dundas, ON",
       "status": "committed",
-      "details": "197 produits"
+      "details": "229 produits"
     },
     {
-      "id": "152",
-      "city": "Miss. Dixie & Dundas, ON",
+      "id": "108",
+      "city": "Collingwood, ON",
       "status": "committed",
-      "details": "113 produits"
+      "details": "27 produits"
     },
     {
-      "id": "71",
-      "city": "Niagara Falls North, ON",
+      "id": "90",
+      "city": "St. Catharines, ON",
       "status": "committed",
-      "details": "95 produits (after retry)"
+      "details": "159 produits"
     },
     {
-      "id": "305",
-      "city": "Brampton Bramalea, ON",
+      "id": "320",
+      "city": "Rimouski, QC",
       "status": "committed",
-      "details": "407 produits"
+      "details": "180 produits"
     },
     {
-      "id": "162",
-      "city": "St. Catharines N., ON",
+      "id": "10",
+      "city": "Brampton Shoppers World, ON",
       "status": "committed",
-      "details": "94 produits"
+      "details": "220 produits"
     },
     {
-      "id": "33",
-      "city": "Fort Erie, ON",
+      "id": "497",
+      "city": "Mississauga Heartland, ON",
       "status": "committed",
-      "details": "99 produits"
+      "details": "194 produits"
     }
   ],
   "failedTwice": [],
-  "retriedAndSucceeded": [
-    {
-      "id": "71",
-      "city": "Niagara Falls North, ON"
-    }
-  ]
+  "retriedAndSucceeded": []
 }
