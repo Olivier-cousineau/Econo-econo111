@@ -1,55 +1,60 @@
 {
-  "generatedAt": "2026-07-26T05:02:47.027Z",
+  "generatedAt": "2026-07-26T06:42:08.554Z",
   "stores": [
     {
-      "id": "92",
-      "city": "St. Thomas, ON",
-      "status": "committed",
-      "details": "100 produits"
-    },
-    {
-      "id": "136",
-      "city": "Miramichi, NB",
-      "status": "committed",
-      "details": "141 produits"
-    },
-    {
-      "id": "11",
-      "city": "Bathurst, NB",
-      "status": "committed",
-      "details": "35 produits"
-    },
-    {
-      "id": "167",
-      "city": "Elliot Lake, ON",
-      "status": "committed",
-      "details": "51 produits"
-    },
-    {
-      "id": "104",
-      "city": "Strathroy, ON",
-      "status": "committed",
-      "details": "156 produits"
-    },
-    {
-      "id": "32",
-      "city": "Forest, ON",
-      "status": "committed",
-      "details": "34 produits"
-    },
-    {
-      "id": "249",
-      "city": "Moncton Mountain Rd, NB",
+      "id": "691",
+      "city": "Riverview, NB",
       "status": "committed",
       "details": "122 produits"
     },
     {
-      "id": "463",
-      "city": "Paspebiac, QC",
+      "id": "261",
+      "city": "Greenwood, NS",
+      "status": "committed",
+      "details": "36 produits"
+    },
+    {
+      "id": "63",
+      "city": "Moncton Dieppe, NB",
+      "status": "committed",
+      "details": "94 produits"
+    },
+    {
+      "id": "491",
+      "city": "Tracadie - Sheila, NB",
+      "status": "committed",
+      "details": "106 produits"
+    },
+    {
+      "id": "647",
+      "city": "Shediac, NB",
+      "status": "committed",
+      "details": "100 produits"
+    },
+    {
+      "id": "94",
+      "city": "Sarnia, ON",
       "status": "committed",
       "details": "177 produits"
+    },
+    {
+      "id": "8",
+      "city": "Blenheim, ON",
+      "status": "committed",
+      "details": "179 produits (after retry)"
+    },
+    {
+      "id": "54",
+      "city": "New Minas, NS",
+      "status": "committed",
+      "details": "112 produits"
     }
   ],
   "failedTwice": [],
-  "retriedAndSucceeded": []
+  "retriedAndSucceeded": [
+    {
+      "id": "8",
+      "city": "Blenheim, ON"
+    }
+  ]
 }
