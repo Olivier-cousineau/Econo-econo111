@@ -1,60 +1,55 @@
 {
-  "generatedAt": "2026-07-26T06:42:08.554Z",
+  "generatedAt": "2026-07-26T08:01:01.160Z",
   "stores": [
     {
-      "id": "691",
-      "city": "Riverview, NB",
+      "id": "178",
+      "city": "Kapuskasing, ON",
       "status": "committed",
-      "details": "122 produits"
+      "details": "71 produits"
     },
     {
-      "id": "261",
-      "city": "Greenwood, NS",
+      "id": "307",
+      "city": "Sept-Iles, QC",
       "status": "committed",
-      "details": "36 produits"
+      "details": "126 produits"
     },
     {
-      "id": "63",
-      "city": "Moncton Dieppe, NB",
+      "id": "21",
+      "city": "Chatham, ON",
       "status": "committed",
-      "details": "94 produits"
+      "details": "121 produits"
     },
     {
-      "id": "491",
-      "city": "Tracadie - Sheila, NB",
+      "id": "135",
+      "city": "Wallaceburg, ON",
       "status": "committed",
-      "details": "106 produits"
+      "details": "70 produits"
     },
     {
-      "id": "647",
-      "city": "Shediac, NB",
+      "id": "13",
+      "city": "Bridgewater, NS",
       "status": "committed",
-      "details": "100 produits"
+      "details": "93 produits"
     },
     {
-      "id": "94",
-      "city": "Sarnia, ON",
+      "id": "3",
+      "city": "Amherst, NS",
       "status": "committed",
-      "details": "177 produits"
+      "details": "42 produits"
     },
     {
-      "id": "8",
-      "city": "Blenheim, ON",
+      "id": "215",
+      "city": "Tilbury, ON",
       "status": "committed",
-      "details": "179 produits (after retry)"
+      "details": "44 produits"
     },
     {
-      "id": "54",
-      "city": "New Minas, NS",
+      "id": "132",
+      "city": "Summerside, PEI 474 Granville Street",
       "status": "committed",
-      "details": "112 produits"
+      "details": "59 produits"
     }
   ],
   "failedTwice": [],
-  "retriedAndSucceeded": [
-    {
-      "id": "8",
-      "city": "Blenheim, ON"
-    }
-  ]
+  "retriedAndSucceeded": []
 }
