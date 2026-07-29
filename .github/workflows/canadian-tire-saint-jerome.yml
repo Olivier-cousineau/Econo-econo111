@@ -1,0 +1,37 @@
+name: Scraper Canadian Tire Liquidation St-Jérôme
+
+on:
+  schedule:
+    - cron: "0 4 * * *"
+  workflow_dispatch:
+
+jobs:
+  run-scraper:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          playwright install --with-deps chromium
+
+      - name: Run scraper script
+        run: python scraper_canadian_tire_liquidation.py
+
+      - name: Commit and push dataset
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/canadian-tire/saint-jerome.json
+          git commit -m "Mise à jour quotidienne liquidation Canadian Tire St-Jérôme" || echo "No changes to commit"
+          git push
