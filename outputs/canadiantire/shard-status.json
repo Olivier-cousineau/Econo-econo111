@@ -1,53 +1,53 @@
 {
-  "generatedAt": "2026-07-30T22:25:55.889Z",
+  "generatedAt": "2026-07-31T06:03:13.755Z",
   "stores": [
     {
-      "id": "5",
-      "city": "Bancroft, ON",
+      "id": "23",
+      "city": "Cobourg, ON",
       "status": "committed",
-      "details": "110 produits"
+      "details": "158 produits"
     },
     {
-      "id": "82",
-      "city": "Picton, ON",
+      "id": "114",
+      "city": "Val d'Or, QC",
       "status": "committed",
-      "details": "154 produits"
+      "details": "157 produits"
     },
     {
-      "id": "7",
-      "city": "Belleville, ON",
+      "id": "38",
+      "city": "Fenelon Falls, ON",
       "status": "committed",
-      "details": "156 produits"
+      "details": "177 produits"
     },
     {
-      "id": "458",
-      "city": "Roberval, QC",
+      "id": "56",
+      "city": "Lindsay, ON",
       "status": "committed",
-      "details": "102 produits"
+      "details": "173 produits"
     },
     {
-      "id": "112",
-      "city": "Trenton, ON",
+      "id": "323",
+      "city": "Riviere du Loup, QC",
       "status": "committed",
-      "details": "62 produits"
+      "details": "98 produits"
     },
     {
-      "id": "17",
-      "city": "Campbellford, ON",
+      "id": "47",
+      "city": "Huntsville, ON",
       "status": "committed",
-      "details": "26 produits"
+      "details": "57 produits"
     },
     {
-      "id": "633",
-      "city": "La Pocatiere, QC",
+      "id": "206",
+      "city": "Bracebridge, ON",
       "status": "committed",
-      "details": "69 produits"
+      "details": "36 produits"
     },
     {
-      "id": "298",
-      "city": "Alma, QC",
+      "id": "170",
+      "city": "Bowmanville, ON",
       "status": "committed",
-      "details": "49 produits"
+      "details": "185 produits"
     }
   ],
   "failedTwice": [],
