@@ -1,60 +1,55 @@
 {
-  "generatedAt": "2026-08-02T12:41:10.190Z",
+  "generatedAt": "2026-08-02T15:01:49.127Z",
   "stores": [
     {
-      "id": "224",
-      "city": "Halifax - Bedford, NS",
+      "id": "113",
+      "city": "Truro, NS",
       "status": "committed",
-      "details": "197 produits"
+      "details": "38 produits"
     },
     {
-      "id": "465",
-      "city": "Halifax - Bayers Lake, NS",
+      "id": "281",
+      "city": "Amherstburg, ON",
+      "status": "committed",
+      "details": "118 produits"
+    },
+    {
+      "id": "20",
+      "city": "Charlottetown, PEI 20 Babineau Avenue",
       "status": "committed",
       "details": "59 produits"
     },
     {
-      "id": "121",
-      "city": "Windsor University Plaza, ON",
+      "id": "406",
+      "city": "Hearst, ON",
       "status": "committed",
-      "details": "121 produits"
+      "details": "41 produits"
     },
     {
-      "id": "186",
-      "city": "Halifax - Spryfield, NS",
+      "id": "279",
+      "city": "Wawa, ON",
       "status": "committed",
-      "details": "70 produits"
+      "details": "43 produits"
     },
     {
-      "id": "619",
-      "city": "Elmsdale, NS",
+      "id": "67",
+      "city": "New Glasgow, NS",
       "status": "committed",
-      "details": "26 produits"
+      "details": "49 produits"
     },
     {
-      "id": "44",
-      "city": "Halifax, NS",
+      "id": "2",
+      "city": "Antigonish, NS",
       "status": "committed",
-      "details": "91 produits (after retry)"
+      "details": "75 produits"
     },
     {
-      "id": "41",
-      "city": "Dartmouth Crossing, NS",
+      "id": "901",
+      "city": "Labrador City, NL",
       "status": "committed",
-      "details": "35 produits"
-    },
-    {
-      "id": "436",
-      "city": "Halifax - Cole Harbour, NS",
-      "status": "committed",
-      "details": "72 produits"
+      "details": "94 produits"
     }
   ],
   "failedTwice": [],
-  "retriedAndSucceeded": [
-    {
-      "id": "44",
-      "city": "Halifax, NS"
-    }
-  ]
+  "retriedAndSucceeded": []
 }
