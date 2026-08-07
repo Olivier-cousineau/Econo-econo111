@@ -1,87 +1,87 @@
 {
-  "generatedAt": "2026-08-07T08:24:28.896Z",
+  "generatedAt": "2026-08-07T10:19:19.557Z",
   "stores": [
     {
-      "id": "74",
-      "city": "Orillia, ON",
+      "id": "399",
+      "city": "Markham East, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "127",
-      "city": "Uxbridge, ON",
+      "id": "93",
+      "city": "Edmundston, NB",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "160",
-      "city": "Ajax, ON",
+      "id": "687",
+      "city": "Innisfil, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "324",
-      "city": "Pickering, ON",
+      "id": "175",
+      "city": "Scarborough, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "102",
-      "city": "Sturgeon Falls, ON",
+      "id": "89",
+      "city": "Rouyn, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "134",
-      "city": "Keswick, ON",
+      "id": "78",
+      "city": "Parry Sound, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "427",
-      "city": "Scarborough East, ON",
+      "id": "264",
+      "city": "Agincourt, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "280",
-      "city": "Stouffville, ON",
+      "id": "189",
+      "city": "Aurora, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     }
   ],
   "failedTwice": [
     {
-      "id": "127",
-      "city": "Uxbridge, ON"
+      "id": "93",
+      "city": "Edmundston, NB"
     },
     {
-      "id": "324",
-      "city": "Pickering, ON"
+      "id": "175",
+      "city": "Scarborough, ON"
     },
     {
-      "id": "74",
-      "city": "Orillia, ON"
+      "id": "399",
+      "city": "Markham East, ON"
     },
     {
-      "id": "160",
-      "city": "Ajax, ON"
+      "id": "687",
+      "city": "Innisfil, ON"
     },
     {
-      "id": "134",
-      "city": "Keswick, ON"
+      "id": "89",
+      "city": "Rouyn, QC"
     },
     {
-      "id": "427",
-      "city": "Scarborough East, ON"
+      "id": "78",
+      "city": "Parry Sound, ON"
     },
     {
-      "id": "280",
-      "city": "Stouffville, ON"
+      "id": "264",
+      "city": "Agincourt, ON"
     },
     {
-      "id": "102",
-      "city": "Sturgeon Falls, ON"
+      "id": "189",
+      "city": "Aurora, ON"
     }
   ],
   "retriedAndSucceeded": []
