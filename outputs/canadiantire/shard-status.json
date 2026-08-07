@@ -1,87 +1,87 @@
 {
-  "generatedAt": "2026-08-06T14:00:48.487Z",
+  "generatedAt": "2026-08-07T01:59:11.887Z",
   "stores": [
     {
-      "id": "423",
-      "city": "Donnacona, QC",
+      "id": "5",
+      "city": "Bancroft, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "80",
-      "city": "Perth, ON",
+      "id": "82",
+      "city": "Picton, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "352",
-      "city": "La Tuque, QC",
+      "id": "7",
+      "city": "Belleville, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "86",
-      "city": "Renfrew, ON",
+      "id": "458",
+      "city": "Roberval, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "156",
-      "city": "Thetford Mines, QC",
+      "id": "112",
+      "city": "Trenton, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "692",
-      "city": "Ancienne Lorette, QC",
+      "id": "17",
+      "city": "Campbellford, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "37",
-      "city": "Gananoque, ON",
+      "id": "633",
+      "city": "La Pocatiere, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "624",
-      "city": "St. Romuald, QC",
+      "id": "298",
+      "city": "Alma, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     }
   ],
   "failedTwice": [
     {
-      "id": "80",
-      "city": "Perth, ON"
+      "id": "5",
+      "city": "Bancroft, ON"
     },
     {
-      "id": "423",
-      "city": "Donnacona, QC"
+      "id": "458",
+      "city": "Roberval, QC"
     },
     {
-      "id": "86",
-      "city": "Renfrew, ON"
+      "id": "82",
+      "city": "Picton, ON"
     },
     {
-      "id": "352",
-      "city": "La Tuque, QC"
+      "id": "7",
+      "city": "Belleville, ON"
     },
     {
-      "id": "156",
-      "city": "Thetford Mines, QC"
+      "id": "633",
+      "city": "La Pocatiere, QC"
     },
     {
-      "id": "692",
-      "city": "Ancienne Lorette, QC"
+      "id": "112",
+      "city": "Trenton, ON"
     },
     {
-      "id": "37",
-      "city": "Gananoque, ON"
+      "id": "17",
+      "city": "Campbellford, ON"
     },
     {
-      "id": "624",
-      "city": "St. Romuald, QC"
+      "id": "298",
+      "city": "Alma, QC"
     }
   ],
   "retriedAndSucceeded": []
