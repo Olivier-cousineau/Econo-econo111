@@ -1,87 +1,87 @@
 {
-  "generatedAt": "2026-08-08T07:08:23.589Z",
+  "generatedAt": "2026-08-08T09:41:57.170Z",
   "stores": [
     {
-      "id": "122",
-      "city": "Burlington Fairview, ON",
+      "id": "177",
+      "city": "Hamilton Mt.West, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "154",
-      "city": "Hamilton East, ON",
+      "id": "657",
+      "city": "Hanmer, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "129",
-      "city": "Hamilton Centre, ON",
+      "id": "27",
+      "city": "Dundas, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "278",
-      "city": "Sudbury North, ON",
+      "id": "29",
+      "city": "Dunnville, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "220",
-      "city": "Waterdown, ON",
+      "id": "42",
+      "city": "Guelph Stone Rd, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "45",
-      "city": "Hamilton Main, ON",
+      "id": "31",
+      "city": "Centre Wellington, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "194",
-      "city": "Hamilton Mt.East, ON",
+      "id": "260",
+      "city": "Guelph North, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "445",
-      "city": "Sudbury South, ON",
+      "id": "639",
+      "city": "Ancaster, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     }
   ],
   "failedTwice": [
     {
-      "id": "129",
-      "city": "Hamilton Centre, ON"
+      "id": "177",
+      "city": "Hamilton Mt.West, ON"
     },
     {
-      "id": "154",
-      "city": "Hamilton East, ON"
+      "id": "657",
+      "city": "Hanmer, ON"
     },
     {
-      "id": "278",
-      "city": "Sudbury North, ON"
+      "id": "27",
+      "city": "Dundas, ON"
     },
     {
-      "id": "122",
-      "city": "Burlington Fairview, ON"
+      "id": "29",
+      "city": "Dunnville, ON"
     },
     {
-      "id": "45",
-      "city": "Hamilton Main, ON"
+      "id": "42",
+      "city": "Guelph Stone Rd, ON"
     },
     {
-      "id": "445",
-      "city": "Sudbury South, ON"
+      "id": "31",
+      "city": "Centre Wellington, ON"
     },
     {
-      "id": "194",
-      "city": "Hamilton Mt.East, ON"
+      "id": "639",
+      "city": "Ancaster, ON"
     },
     {
-      "id": "220",
-      "city": "Waterdown, ON"
+      "id": "260",
+      "city": "Guelph North, ON"
     }
   ],
   "retriedAndSucceeded": []
