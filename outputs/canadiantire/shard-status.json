@@ -1,87 +1,87 @@
 {
-  "generatedAt": "2026-08-08T20:58:32.580Z",
+  "generatedAt": "2026-08-08T23:20:05.981Z",
   "stores": [
     {
-      "id": "48",
-      "city": "Ingersoll, ON",
+      "id": "141",
+      "city": "Exeter, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "110",
-      "city": "Tillsonburg, ON",
+      "id": "494",
+      "city": "London Auto Centre, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "91",
-      "city": "St. Marys, ON",
+      "id": "58",
+      "city": "London South, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "111",
-      "city": "Timmins, ON",
+      "id": "106",
+      "city": "Sussex, NB",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "24",
-      "city": "Cochrane, ON",
+      "id": "25",
+      "city": "Digby, NS",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "130",
-      "city": "London East, ON",
+      "id": "125",
+      "city": "Yarmouth, NS",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "142",
-      "city": "Aylmer, ON",
+      "id": "425",
+      "city": "London North, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "39",
-      "city": "Goderich, ON",
+      "id": "208",
+      "city": "London West, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     }
   ],
   "failedTwice": [
     {
-      "id": "91",
-      "city": "St. Marys, ON"
+      "id": "494",
+      "city": "London Auto Centre, ON"
     },
     {
-      "id": "110",
-      "city": "Tillsonburg, ON"
+      "id": "106",
+      "city": "Sussex, NB"
     },
     {
-      "id": "111",
-      "city": "Timmins, ON"
+      "id": "141",
+      "city": "Exeter, ON"
     },
     {
-      "id": "48",
-      "city": "Ingersoll, ON"
+      "id": "58",
+      "city": "London South, ON"
     },
     {
-      "id": "39",
-      "city": "Goderich, ON"
+      "id": "125",
+      "city": "Yarmouth, NS"
     },
     {
-      "id": "24",
-      "city": "Cochrane, ON"
+      "id": "425",
+      "city": "London North, ON"
     },
     {
-      "id": "142",
-      "city": "Aylmer, ON"
+      "id": "25",
+      "city": "Digby, NS"
     },
     {
-      "id": "130",
-      "city": "London East, ON"
+      "id": "208",
+      "city": "London West, ON"
     }
   ],
   "retriedAndSucceeded": []
