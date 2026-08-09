@@ -1,87 +1,87 @@
 {
-  "generatedAt": "2026-08-09T06:30:27.754Z",
+  "generatedAt": "2026-08-09T09:10:30.150Z",
   "stores": [
     {
-      "id": "178",
-      "city": "Kapuskasing, ON",
+      "id": "456",
+      "city": "Gaspe, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "307",
-      "city": "Sept-Iles, QC",
+      "id": "95",
+      "city": "Sault Ste. Marie, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "21",
-      "city": "Chatham, ON",
+      "id": "618",
+      "city": "Tantallon, NS",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "135",
-      "city": "Wallaceburg, ON",
+      "id": "55",
+      "city": "Leamington, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "13",
-      "city": "Bridgewater, NS",
+      "id": "199",
+      "city": "Windsor East, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "3",
-      "city": "Amherst, NS",
+      "id": "172",
+      "city": "Essex, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "215",
-      "city": "Tilbury, ON",
+      "id": "289",
+      "city": "Halifax - Lwr. Sackville, NS",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "132",
-      "city": "Summerside, PEI 474 Granville Street",
+      "id": "236",
+      "city": "Windsor South, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     }
   ],
   "failedTwice": [
     {
-      "id": "135",
-      "city": "Wallaceburg, ON"
+      "id": "618",
+      "city": "Tantallon, NS"
     },
     {
-      "id": "178",
-      "city": "Kapuskasing, ON"
+      "id": "456",
+      "city": "Gaspe, QC"
     },
     {
-      "id": "21",
-      "city": "Chatham, ON"
+      "id": "55",
+      "city": "Leamington, ON"
     },
     {
-      "id": "307",
-      "city": "Sept-Iles, QC"
+      "id": "95",
+      "city": "Sault Ste. Marie, ON"
     },
     {
-      "id": "13",
-      "city": "Bridgewater, NS"
+      "id": "199",
+      "city": "Windsor East, ON"
     },
     {
-      "id": "132",
-      "city": "Summerside, PEI 474 Granville Street"
+      "id": "289",
+      "city": "Halifax - Lwr. Sackville, NS"
     },
     {
-      "id": "3",
-      "city": "Amherst, NS"
+      "id": "172",
+      "city": "Essex, ON"
     },
     {
-      "id": "215",
-      "city": "Tilbury, ON"
+      "id": "236",
+      "city": "Windsor South, ON"
     }
   ],
   "retriedAndSucceeded": []
