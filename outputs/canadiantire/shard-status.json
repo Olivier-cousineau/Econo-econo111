@@ -1,87 +1,87 @@
 {
-  "generatedAt": "2026-08-09T09:10:30.150Z",
+  "generatedAt": "2026-08-09T11:40:54.277Z",
   "stores": [
     {
-      "id": "456",
-      "city": "Gaspe, QC",
+      "id": "224",
+      "city": "Halifax - Bedford, NS",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "95",
-      "city": "Sault Ste. Marie, ON",
+      "id": "465",
+      "city": "Halifax - Bayers Lake, NS",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "618",
-      "city": "Tantallon, NS",
+      "id": "121",
+      "city": "Windsor University Plaza, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "55",
-      "city": "Leamington, ON",
+      "id": "186",
+      "city": "Halifax - Spryfield, NS",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "199",
-      "city": "Windsor East, ON",
+      "id": "619",
+      "city": "Elmsdale, NS",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "172",
-      "city": "Essex, ON",
+      "id": "44",
+      "city": "Halifax, NS",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "289",
-      "city": "Halifax - Lwr. Sackville, NS",
+      "id": "41",
+      "city": "Dartmouth Crossing, NS",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "236",
-      "city": "Windsor South, ON",
+      "id": "436",
+      "city": "Halifax - Cole Harbour, NS",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     }
   ],
   "failedTwice": [
     {
-      "id": "618",
-      "city": "Tantallon, NS"
+      "id": "224",
+      "city": "Halifax - Bedford, NS"
     },
     {
-      "id": "456",
-      "city": "Gaspe, QC"
+      "id": "465",
+      "city": "Halifax - Bayers Lake, NS"
     },
     {
-      "id": "55",
-      "city": "Leamington, ON"
+      "id": "186",
+      "city": "Halifax - Spryfield, NS"
     },
     {
-      "id": "95",
-      "city": "Sault Ste. Marie, ON"
+      "id": "121",
+      "city": "Windsor University Plaza, ON"
     },
     {
-      "id": "199",
-      "city": "Windsor East, ON"
+      "id": "619",
+      "city": "Elmsdale, NS"
     },
     {
-      "id": "289",
-      "city": "Halifax - Lwr. Sackville, NS"
+      "id": "44",
+      "city": "Halifax, NS"
     },
     {
-      "id": "172",
-      "city": "Essex, ON"
+      "id": "436",
+      "city": "Halifax - Cole Harbour, NS"
     },
     {
-      "id": "236",
-      "city": "Windsor South, ON"
+      "id": "41",
+      "city": "Dartmouth Crossing, NS"
     }
   ],
   "retriedAndSucceeded": []
