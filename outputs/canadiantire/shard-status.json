@@ -1,87 +1,87 @@
 {
-  "generatedAt": "2026-08-15T11:08:53.446Z",
+  "generatedAt": "2026-08-15T13:45:57.020Z",
   "stores": [
     {
-      "id": "77",
-      "city": "Owen Sound, ON",
+      "id": "139",
+      "city": "Kitchener East, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "244",
-      "city": "Chelmsford, ON",
+      "id": "616",
+      "city": "Elmira, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "49",
-      "city": "Caledonia, ON",
+      "id": "53",
+      "city": "Kitchener South, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "168",
-      "city": "Cambridge Hespeler, ON",
+      "id": "664",
+      "city": "Brantford North, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "36",
-      "city": "Cambridge, ON",
+      "id": "265",
+      "city": "Baie-Comeau, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "35",
-      "city": "Fredericton, NB",
+      "id": "251",
+      "city": "Waterloo, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "66",
-      "city": "Mount Forest, ON",
+      "id": "420",
+      "city": "Kitchener West, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "337",
-      "city": "Fredericton North, NB",
+      "id": "46",
+      "city": "Hanover, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     }
   ],
   "failedTwice": [
     {
-      "id": "244",
-      "city": "Chelmsford, ON"
+      "id": "664",
+      "city": "Brantford North, ON"
     },
     {
-      "id": "77",
-      "city": "Owen Sound, ON"
+      "id": "53",
+      "city": "Kitchener South, ON"
     },
     {
-      "id": "49",
-      "city": "Caledonia, ON"
+      "id": "139",
+      "city": "Kitchener East, ON"
     },
     {
-      "id": "168",
-      "city": "Cambridge Hespeler, ON"
+      "id": "616",
+      "city": "Elmira, ON"
     },
     {
-      "id": "36",
-      "city": "Cambridge, ON"
+      "id": "265",
+      "city": "Baie-Comeau, QC"
     },
     {
-      "id": "35",
-      "city": "Fredericton, NB"
+      "id": "251",
+      "city": "Waterloo, ON"
     },
     {
-      "id": "337",
-      "city": "Fredericton North, NB"
+      "id": "420",
+      "city": "Kitchener West, ON"
     },
     {
-      "id": "66",
-      "city": "Mount Forest, ON"
+      "id": "46",
+      "city": "Hanover, ON"
     }
   ],
   "retriedAndSucceeded": []
