@@ -1,87 +1,27 @@
 {
-  "generatedAt": "2026-08-16T13:48:43.949Z",
+  "generatedAt": "2026-08-16T14:58:03.118Z",
   "stores": [
     {
-      "id": "113",
-      "city": "Truro, NS",
+      "id": "213",
+      "city": "Port Hawkesbury, NS",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "281",
-      "city": "Amherstburg, ON",
-      "status": "failed_twice",
-      "details": "failed twice – accepted"
-    },
-    {
-      "id": "20",
-      "city": "Charlottetown, PEI 20 Babineau Avenue",
-      "status": "failed_twice",
-      "details": "failed twice – accepted"
-    },
-    {
-      "id": "406",
-      "city": "Hearst, ON",
-      "status": "failed_twice",
-      "details": "failed twice – accepted"
-    },
-    {
-      "id": "279",
-      "city": "Wawa, ON",
-      "status": "failed_twice",
-      "details": "failed twice – accepted"
-    },
-    {
-      "id": "67",
-      "city": "New Glasgow, NS",
-      "status": "failed_twice",
-      "details": "failed twice – accepted"
-    },
-    {
-      "id": "2",
-      "city": "Antigonish, NS",
-      "status": "failed_twice",
-      "details": "failed twice – accepted"
-    },
-    {
-      "id": "901",
-      "city": "Labrador City, NL",
+      "id": "451",
+      "city": "Marathon, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     }
   ],
   "failedTwice": [
     {
-      "id": "281",
-      "city": "Amherstburg, ON"
+      "id": "213",
+      "city": "Port Hawkesbury, NS"
     },
     {
-      "id": "113",
-      "city": "Truro, NS"
-    },
-    {
-      "id": "20",
-      "city": "Charlottetown, PEI 20 Babineau Avenue"
-    },
-    {
-      "id": "406",
-      "city": "Hearst, ON"
-    },
-    {
-      "id": "279",
-      "city": "Wawa, ON"
-    },
-    {
-      "id": "67",
-      "city": "New Glasgow, NS"
-    },
-    {
-      "id": "901",
-      "city": "Labrador City, NL"
-    },
-    {
-      "id": "2",
-      "city": "Antigonish, NS"
+      "id": "451",
+      "city": "Marathon, ON"
     }
   ],
   "retriedAndSucceeded": []
