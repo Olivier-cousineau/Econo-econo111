@@ -1,87 +1,87 @@
 {
-  "generatedAt": "2026-08-16T11:10:16.697Z",
+  "generatedAt": "2026-08-16T13:48:43.949Z",
   "stores": [
     {
-      "id": "224",
-      "city": "Halifax - Bedford, NS",
+      "id": "113",
+      "city": "Truro, NS",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "465",
-      "city": "Halifax - Bayers Lake, NS",
+      "id": "281",
+      "city": "Amherstburg, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "121",
-      "city": "Windsor University Plaza, ON",
+      "id": "20",
+      "city": "Charlottetown, PEI 20 Babineau Avenue",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "186",
-      "city": "Halifax - Spryfield, NS",
+      "id": "406",
+      "city": "Hearst, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "619",
-      "city": "Elmsdale, NS",
+      "id": "279",
+      "city": "Wawa, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "44",
-      "city": "Halifax, NS",
+      "id": "67",
+      "city": "New Glasgow, NS",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "41",
-      "city": "Dartmouth Crossing, NS",
+      "id": "2",
+      "city": "Antigonish, NS",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "436",
-      "city": "Halifax - Cole Harbour, NS",
+      "id": "901",
+      "city": "Labrador City, NL",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     }
   ],
   "failedTwice": [
     {
-      "id": "186",
-      "city": "Halifax - Spryfield, NS"
+      "id": "281",
+      "city": "Amherstburg, ON"
     },
     {
-      "id": "224",
-      "city": "Halifax - Bedford, NS"
+      "id": "113",
+      "city": "Truro, NS"
     },
     {
-      "id": "465",
-      "city": "Halifax - Bayers Lake, NS"
+      "id": "20",
+      "city": "Charlottetown, PEI 20 Babineau Avenue"
     },
     {
-      "id": "121",
-      "city": "Windsor University Plaza, ON"
+      "id": "406",
+      "city": "Hearst, ON"
     },
     {
-      "id": "619",
-      "city": "Elmsdale, NS"
+      "id": "279",
+      "city": "Wawa, ON"
     },
     {
-      "id": "44",
-      "city": "Halifax, NS"
+      "id": "67",
+      "city": "New Glasgow, NS"
     },
     {
-      "id": "41",
-      "city": "Dartmouth Crossing, NS"
+      "id": "901",
+      "city": "Labrador City, NL"
     },
     {
-      "id": "436",
-      "city": "Halifax - Cole Harbour, NS"
+      "id": "2",
+      "city": "Antigonish, NS"
     }
   ],
   "retriedAndSucceeded": []
