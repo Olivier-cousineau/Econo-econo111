@@ -1,27 +1,87 @@
 {
-  "generatedAt": "2026-08-16T14:58:03.118Z",
+  "generatedAt": "2026-08-19T07:27:11.823Z",
   "stores": [
     {
-      "id": "213",
-      "city": "Port Hawkesbury, NS",
+      "id": "271",
+      "city": "St. Jerome, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "451",
-      "city": "Marathon, ON",
+      "id": "649",
+      "city": "Blainville, QC",
+      "status": "failed_twice",
+      "details": "failed twice – accepted"
+    },
+    {
+      "id": "418",
+      "city": "Rosemere, QC",
+      "status": "failed_twice",
+      "details": "failed twice – accepted"
+    },
+    {
+      "id": "641",
+      "city": "La Plaine, QC",
+      "status": "failed_twice",
+      "details": "failed twice – accepted"
+    },
+    {
+      "id": "218",
+      "city": "St. Eustache, QC",
+      "status": "failed_twice",
+      "details": "failed twice – accepted"
+    },
+    {
+      "id": "690",
+      "city": "Laval Fabreville, QC",
+      "status": "failed_twice",
+      "details": "failed twice – accepted"
+    },
+    {
+      "id": "312",
+      "city": "Terrebonne, QC",
+      "status": "failed_twice",
+      "details": "failed twice – accepted"
+    },
+    {
+      "id": "231",
+      "city": "Laval Vimont, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     }
   ],
   "failedTwice": [
     {
-      "id": "213",
-      "city": "Port Hawkesbury, NS"
+      "id": "649",
+      "city": "Blainville, QC"
     },
     {
-      "id": "451",
-      "city": "Marathon, ON"
+      "id": "641",
+      "city": "La Plaine, QC"
+    },
+    {
+      "id": "418",
+      "city": "Rosemere, QC"
+    },
+    {
+      "id": "271",
+      "city": "St. Jerome, QC"
+    },
+    {
+      "id": "218",
+      "city": "St. Eustache, QC"
+    },
+    {
+      "id": "690",
+      "city": "Laval Fabreville, QC"
+    },
+    {
+      "id": "231",
+      "city": "Laval Vimont, QC"
+    },
+    {
+      "id": "312",
+      "city": "Terrebonne, QC"
     }
   ],
   "retriedAndSucceeded": []
