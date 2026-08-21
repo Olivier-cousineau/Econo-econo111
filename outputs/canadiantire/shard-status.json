@@ -1,87 +1,87 @@
 {
-  "generatedAt": "2026-08-20T23:09:36.328Z",
+  "generatedAt": "2026-08-21T01:29:56.405Z",
   "stores": [
     {
-      "id": "306",
-      "city": "La Malbaie, QC",
+      "id": "23",
+      "city": "Cobourg, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "221",
-      "city": "Jonquiere, QC",
+      "id": "114",
+      "city": "Val d'Or, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "268",
-      "city": "Chicoutimi, QC",
+      "id": "38",
+      "city": "Fenelon Falls, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "335",
-      "city": "La Baie, QC",
+      "id": "56",
+      "city": "Lindsay, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "284",
-      "city": "Dolbeau-Mistassini, QC",
+      "id": "323",
+      "city": "Riviere du Loup, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "660",
-      "city": "Peterborough North, ON",
+      "id": "47",
+      "city": "Huntsville, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "81",
-      "city": "Peterborough, ON",
+      "id": "206",
+      "city": "Bracebridge, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "682",
-      "city": "Minden, ON",
+      "id": "170",
+      "city": "Bowmanville, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     }
   ],
   "failedTwice": [
     {
-      "id": "306",
-      "city": "La Malbaie, QC"
+      "id": "114",
+      "city": "Val d'Or, QC"
     },
     {
-      "id": "268",
-      "city": "Chicoutimi, QC"
+      "id": "56",
+      "city": "Lindsay, ON"
     },
     {
-      "id": "335",
-      "city": "La Baie, QC"
+      "id": "38",
+      "city": "Fenelon Falls, ON"
     },
     {
-      "id": "221",
-      "city": "Jonquiere, QC"
+      "id": "23",
+      "city": "Cobourg, ON"
     },
     {
-      "id": "660",
-      "city": "Peterborough North, ON"
+      "id": "47",
+      "city": "Huntsville, ON"
     },
     {
-      "id": "284",
-      "city": "Dolbeau-Mistassini, QC"
+      "id": "323",
+      "city": "Riviere du Loup, QC"
     },
     {
-      "id": "682",
-      "city": "Minden, ON"
+      "id": "206",
+      "city": "Bracebridge, ON"
     },
     {
-      "id": "81",
-      "city": "Peterborough, ON"
+      "id": "170",
+      "city": "Bowmanville, ON"
     }
   ],
   "retriedAndSucceeded": []
