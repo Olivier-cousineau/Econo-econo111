@@ -1,87 +1,87 @@
 {
-  "generatedAt": "2026-08-21T22:07:07.973Z",
+  "generatedAt": "2026-08-22T00:09:53.615Z",
   "stores": [
     {
-      "id": "197",
-      "city": "Bolton, ON",
+      "id": "145",
+      "city": "St. Catharines S., ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "219",
-      "city": "Grand Falls, NB",
+      "id": "411",
+      "city": "Brampton Trinity Common, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "70",
-      "city": "The Queensway, ON",
+      "id": "346",
+      "city": "Miss.Mavis & Dundas, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "152",
-      "city": "Miss. Dixie & Dundas, ON",
+      "id": "108",
+      "city": "Collingwood, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "71",
-      "city": "Niagara Falls North, ON",
+      "id": "90",
+      "city": "St. Catharines, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "305",
-      "city": "Brampton Bramalea, ON",
+      "id": "320",
+      "city": "Rimouski, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "162",
-      "city": "St. Catharines N., ON",
+      "id": "10",
+      "city": "Brampton Shoppers World, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "33",
-      "city": "Fort Erie, ON",
+      "id": "497",
+      "city": "Mississauga Heartland, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     }
   ],
   "failedTwice": [
     {
-      "id": "152",
-      "city": "Miss. Dixie & Dundas, ON"
+      "id": "145",
+      "city": "St. Catharines S., ON"
     },
     {
-      "id": "70",
-      "city": "The Queensway, ON"
+      "id": "411",
+      "city": "Brampton Trinity Common, ON"
     },
     {
-      "id": "219",
-      "city": "Grand Falls, NB"
+      "id": "346",
+      "city": "Miss.Mavis & Dundas, ON"
     },
     {
-      "id": "197",
-      "city": "Bolton, ON"
+      "id": "108",
+      "city": "Collingwood, ON"
     },
     {
-      "id": "71",
-      "city": "Niagara Falls North, ON"
+      "id": "320",
+      "city": "Rimouski, QC"
     },
     {
-      "id": "305",
-      "city": "Brampton Bramalea, ON"
+      "id": "90",
+      "city": "St. Catharines, ON"
     },
     {
-      "id": "162",
-      "city": "St. Catharines N., ON"
+      "id": "497",
+      "city": "Mississauga Heartland, ON"
     },
     {
-      "id": "33",
-      "city": "Fort Erie, ON"
+      "id": "10",
+      "city": "Brampton Shoppers World, ON"
     }
   ],
   "retriedAndSucceeded": []
