@@ -1,87 +1,87 @@
 {
-  "generatedAt": "2026-08-23T01:47:57.587Z",
+  "generatedAt": "2026-08-23T03:31:26.999Z",
   "stores": [
     {
-      "id": "92",
-      "city": "St. Thomas, ON",
+      "id": "691",
+      "city": "Riverview, NB",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "136",
-      "city": "Miramichi, NB",
+      "id": "261",
+      "city": "Greenwood, NS",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "11",
-      "city": "Bathurst, NB",
+      "id": "63",
+      "city": "Moncton Dieppe, NB",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "167",
-      "city": "Elliot Lake, ON",
+      "id": "491",
+      "city": "Tracadie - Sheila, NB",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "104",
-      "city": "Strathroy, ON",
+      "id": "647",
+      "city": "Shediac, NB",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "32",
-      "city": "Forest, ON",
+      "id": "94",
+      "city": "Sarnia, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "249",
-      "city": "Moncton Mountain Rd, NB",
+      "id": "8",
+      "city": "Blenheim, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "463",
-      "city": "Paspebiac, QC",
+      "id": "54",
+      "city": "New Minas, NS",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     }
   ],
   "failedTwice": [
     {
-      "id": "167",
-      "city": "Elliot Lake, ON"
+      "id": "261",
+      "city": "Greenwood, NS"
     },
     {
-      "id": "11",
-      "city": "Bathurst, NB"
+      "id": "491",
+      "city": "Tracadie - Sheila, NB"
     },
     {
-      "id": "92",
-      "city": "St. Thomas, ON"
+      "id": "691",
+      "city": "Riverview, NB"
     },
     {
-      "id": "136",
-      "city": "Miramichi, NB"
+      "id": "63",
+      "city": "Moncton Dieppe, NB"
     },
     {
-      "id": "249",
-      "city": "Moncton Mountain Rd, NB"
+      "id": "647",
+      "city": "Shediac, NB"
     },
     {
-      "id": "32",
-      "city": "Forest, ON"
+      "id": "94",
+      "city": "Sarnia, ON"
     },
     {
-      "id": "104",
-      "city": "Strathroy, ON"
+      "id": "8",
+      "city": "Blenheim, ON"
     },
     {
-      "id": "463",
-      "city": "Paspebiac, QC"
+      "id": "54",
+      "city": "New Minas, NS"
     }
   ],
   "retriedAndSucceeded": []
