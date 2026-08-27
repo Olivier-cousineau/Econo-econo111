@@ -1,87 +1,87 @@
 {
-  "generatedAt": "2026-08-27T15:46:44.743Z",
+  "generatedAt": "2026-08-27T18:52:03.271Z",
   "stores": [
     {
-      "id": "423",
-      "city": "Donnacona, QC",
+      "id": "342",
+      "city": "Quebec Les Saules, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "80",
-      "city": "Perth, ON",
+      "id": "245",
+      "city": "Quebec Ste. Foy, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "352",
-      "city": "La Tuque, QC",
+      "id": "79",
+      "city": "Pembroke, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "86",
-      "city": "Renfrew, ON",
+      "id": "405",
+      "city": "Lebourgneuf, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "156",
-      "city": "Thetford Mines, QC",
+      "id": "101",
+      "city": "Quebec Vanier, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "692",
-      "city": "Ancienne Lorette, QC",
+      "id": "416",
+      "city": "Ste. Marie De Beauce, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "37",
-      "city": "Gananoque, ON",
+      "id": "225",
+      "city": "Lac Megantic, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "624",
-      "city": "St. Romuald, QC",
+      "id": "165",
+      "city": "Levis, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     }
   ],
   "failedTwice": [
     {
-      "id": "423",
-      "city": "Donnacona, QC"
+      "id": "405",
+      "city": "Lebourgneuf, QC"
     },
     {
-      "id": "86",
-      "city": "Renfrew, ON"
+      "id": "342",
+      "city": "Quebec Les Saules, QC"
     },
     {
-      "id": "80",
-      "city": "Perth, ON"
+      "id": "79",
+      "city": "Pembroke, ON"
     },
     {
-      "id": "352",
-      "city": "La Tuque, QC"
+      "id": "245",
+      "city": "Quebec Ste. Foy, QC"
     },
     {
-      "id": "692",
-      "city": "Ancienne Lorette, QC"
+      "id": "416",
+      "city": "Ste. Marie De Beauce, QC"
     },
     {
-      "id": "624",
-      "city": "St. Romuald, QC"
+      "id": "225",
+      "city": "Lac Megantic, QC"
     },
     {
-      "id": "156",
-      "city": "Thetford Mines, QC"
+      "id": "101",
+      "city": "Quebec Vanier, QC"
     },
     {
-      "id": "37",
-      "city": "Gananoque, ON"
+      "id": "165",
+      "city": "Levis, QC"
     }
   ],
   "retriedAndSucceeded": []
