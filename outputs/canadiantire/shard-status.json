@@ -1,87 +1,87 @@
 {
-  "generatedAt": "2026-08-27T10:18:41.631Z",
+  "generatedAt": "2026-08-27T13:02:09.640Z",
   "stores": [
     {
-      "id": "290",
-      "city": "Ottawa Carling Ave, ON",
+      "id": "196",
+      "city": "Maniwaki, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "442",
-      "city": "Barrhaven, ON",
+      "id": "85",
+      "city": "Prescott, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "272",
-      "city": "Ottawa Bells Cnrs, ON",
+      "id": "348",
+      "city": "Sherbrooke Fleurimont, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "227",
-      "city": "Kemptville, ON",
+      "id": "18",
+      "city": "Carleton Place, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "240",
-      "city": "Magog, QC",
+      "id": "14",
+      "city": "Brockville, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "457",
-      "city": "Kanata, ON",
+      "id": "98",
+      "city": "Smiths Falls, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "243",
-      "city": "Victoriaville, QC",
+      "id": "4",
+      "city": "Arnprior, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "96",
-      "city": "Sherbrooke, QC",
+      "id": "99",
+      "city": "Shawville, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     }
   ],
   "failedTwice": [
     {
-      "id": "227",
-      "city": "Kemptville, ON"
+      "id": "18",
+      "city": "Carleton Place, ON"
     },
     {
-      "id": "272",
-      "city": "Ottawa Bells Cnrs, ON"
+      "id": "196",
+      "city": "Maniwaki, QC"
     },
     {
-      "id": "442",
-      "city": "Barrhaven, ON"
+      "id": "85",
+      "city": "Prescott, ON"
     },
     {
-      "id": "290",
-      "city": "Ottawa Carling Ave, ON"
+      "id": "348",
+      "city": "Sherbrooke Fleurimont, QC"
     },
     {
-      "id": "240",
-      "city": "Magog, QC"
+      "id": "98",
+      "city": "Smiths Falls, ON"
     },
     {
-      "id": "96",
-      "city": "Sherbrooke, QC"
+      "id": "99",
+      "city": "Shawville, QC"
     },
     {
-      "id": "457",
-      "city": "Kanata, ON"
+      "id": "14",
+      "city": "Brockville, ON"
     },
     {
-      "id": "243",
-      "city": "Victoriaville, QC"
+      "id": "4",
+      "city": "Arnprior, ON"
     }
   ],
   "retriedAndSucceeded": []
