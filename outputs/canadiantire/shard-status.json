@@ -1,87 +1,87 @@
 {
-  "generatedAt": "2026-08-28T21:05:20.646Z",
+  "generatedAt": "2026-08-28T22:51:05.237Z",
   "stores": [
     {
-      "id": "321",
-      "city": "Dufferin & 407, ON",
+      "id": "237",
+      "city": "Woodbridge, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "150",
-      "city": "Toronto, Yonge & Church, ON",
+      "id": "182",
+      "city": "West Toronto (Stockyards), ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "485",
-      "city": "Dufferin & Finch Auto Ctr, ON",
+      "id": "119",
+      "city": "Weston Road & 401, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "600",
-      "city": "Toronto Eaton Centre, ON",
+      "id": "137",
+      "city": "Woodstock, NB",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "19",
-      "city": "Lawrence & Allen Expwy, ON",
+      "id": "294",
+      "city": "Etobicoke, Albion & Kipling, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "653",
-      "city": "Maple, ON",
+      "id": "242",
+      "city": "Rexdale, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "621",
-      "city": "Liberty Village, ON",
+      "id": "1",
+      "city": "Alliston, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "214",
-      "city": "Eglinton & Caledonia, Toronto, ON",
+      "id": "652",
+      "city": "Wasaga Beach, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     }
   ],
   "failedTwice": [
     {
-      "id": "485",
-      "city": "Dufferin & Finch Auto Ctr, ON"
+      "id": "182",
+      "city": "West Toronto (Stockyards), ON"
     },
     {
-      "id": "321",
-      "city": "Dufferin & 407, ON"
+      "id": "137",
+      "city": "Woodstock, NB"
     },
     {
-      "id": "600",
-      "city": "Toronto Eaton Centre, ON"
+      "id": "237",
+      "city": "Woodbridge, ON"
     },
     {
-      "id": "150",
-      "city": "Toronto, Yonge & Church, ON"
+      "id": "119",
+      "city": "Weston Road & 401, ON"
     },
     {
-      "id": "214",
-      "city": "Eglinton & Caledonia, Toronto, ON"
+      "id": "242",
+      "city": "Rexdale, ON"
     },
     {
-      "id": "621",
-      "city": "Liberty Village, ON"
+      "id": "1",
+      "city": "Alliston, ON"
     },
     {
-      "id": "653",
-      "city": "Maple, ON"
+      "id": "652",
+      "city": "Wasaga Beach, ON"
     },
     {
-      "id": "19",
-      "city": "Lawrence & Allen Expwy, ON"
+      "id": "294",
+      "city": "Etobicoke, Albion & Kipling, ON"
     }
   ],
   "retriedAndSucceeded": []
