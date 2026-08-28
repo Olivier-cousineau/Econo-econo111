@@ -1,87 +1,87 @@
 {
-  "generatedAt": "2026-08-27T21:27:45.142Z",
+  "generatedAt": "2026-08-28T00:46:23.152Z",
   "stores": [
     {
-      "id": "184",
-      "city": "Beauport, QC",
+      "id": "5",
+      "city": "Bancroft, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "173",
-      "city": "St. Georges, QC",
+      "id": "82",
+      "city": "Picton, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "694",
-      "city": "Kingston Division St., ON",
+      "id": "7",
+      "city": "Belleville, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "195",
-      "city": "Kingston, ON",
+      "id": "458",
+      "city": "Roberval, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "417",
-      "city": "Kingston Township, ON",
+      "id": "112",
+      "city": "Trenton, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "253",
-      "city": "Deep River, ON",
+      "id": "17",
+      "city": "Campbellford, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "65",
-      "city": "Napanee, ON",
+      "id": "633",
+      "city": "La Pocatiere, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "180",
-      "city": "Montmagny, QC",
+      "id": "298",
+      "city": "Alma, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     }
   ],
   "failedTwice": [
     {
-      "id": "184",
-      "city": "Beauport, QC"
+      "id": "5",
+      "city": "Bancroft, ON"
     },
     {
-      "id": "173",
-      "city": "St. Georges, QC"
+      "id": "458",
+      "city": "Roberval, QC"
     },
     {
-      "id": "694",
-      "city": "Kingston Division St., ON"
+      "id": "82",
+      "city": "Picton, ON"
     },
     {
-      "id": "195",
-      "city": "Kingston, ON"
+      "id": "7",
+      "city": "Belleville, ON"
     },
     {
-      "id": "417",
-      "city": "Kingston Township, ON"
+      "id": "17",
+      "city": "Campbellford, ON"
     },
     {
-      "id": "253",
-      "city": "Deep River, ON"
+      "id": "298",
+      "city": "Alma, QC"
     },
     {
-      "id": "65",
-      "city": "Napanee, ON"
+      "id": "633",
+      "city": "La Pocatiere, QC"
     },
     {
-      "id": "180",
-      "city": "Montmagny, QC"
+      "id": "112",
+      "city": "Trenton, ON"
     }
   ],
   "retriedAndSucceeded": []
