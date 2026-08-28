@@ -1,87 +1,87 @@
 {
-  "generatedAt": "2026-08-28T19:06:15.229Z",
+  "generatedAt": "2026-08-28T21:05:20.646Z",
   "stores": [
     {
-      "id": "446",
-      "city": "Bradford, ON",
+      "id": "321",
+      "city": "Dufferin & 407, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "697",
-      "city": "Richmond Hill North, ON",
+      "id": "150",
+      "city": "Toronto, Yonge & Church, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "87",
-      "city": "Richmond Hill, ON",
+      "id": "485",
+      "city": "Dufferin & Finch Auto Ctr, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "273",
-      "city": "Toronto Main & Danforth, ON",
+      "id": "600",
+      "city": "Toronto Eaton Centre, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "192",
-      "city": "Sheppard Ave., ON",
+      "id": "19",
+      "city": "Lawrence & Allen Expwy, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "126",
-      "city": "Yonge & Steeles, ON",
+      "id": "653",
+      "city": "Maple, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "459",
-      "city": "Eglinton & Laird, ON",
+      "id": "621",
+      "city": "Liberty Village, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "654",
-      "city": "Leslie & Lake Shore, ON",
+      "id": "214",
+      "city": "Eglinton & Caledonia, Toronto, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     }
   ],
   "failedTwice": [
     {
-      "id": "697",
-      "city": "Richmond Hill North, ON"
+      "id": "485",
+      "city": "Dufferin & Finch Auto Ctr, ON"
     },
     {
-      "id": "87",
-      "city": "Richmond Hill, ON"
+      "id": "321",
+      "city": "Dufferin & 407, ON"
     },
     {
-      "id": "273",
-      "city": "Toronto Main & Danforth, ON"
+      "id": "600",
+      "city": "Toronto Eaton Centre, ON"
     },
     {
-      "id": "446",
-      "city": "Bradford, ON"
+      "id": "150",
+      "city": "Toronto, Yonge & Church, ON"
     },
     {
-      "id": "192",
-      "city": "Sheppard Ave., ON"
+      "id": "214",
+      "city": "Eglinton & Caledonia, Toronto, ON"
     },
     {
-      "id": "459",
-      "city": "Eglinton & Laird, ON"
+      "id": "621",
+      "city": "Liberty Village, ON"
     },
     {
-      "id": "126",
-      "city": "Yonge & Steeles, ON"
+      "id": "653",
+      "city": "Maple, ON"
     },
     {
-      "id": "654",
-      "city": "Leslie & Lake Shore, ON"
+      "id": "19",
+      "city": "Lawrence & Allen Expwy, ON"
     }
   ],
   "retriedAndSucceeded": []
