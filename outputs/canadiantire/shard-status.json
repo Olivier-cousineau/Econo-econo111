@@ -1,87 +1,87 @@
 {
-  "generatedAt": "2026-08-28T13:09:20.129Z",
+  "generatedAt": "2026-08-28T16:04:48.082Z",
   "stores": [
     {
-      "id": "399",
-      "city": "Markham East, ON",
+      "id": "69",
+      "city": "Newmarket, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "93",
-      "city": "Edmundston, NB",
+      "id": "209",
+      "city": "Kingston Rd, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "687",
-      "city": "Innisfil, ON",
+      "id": "164",
+      "city": "Markham, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "175",
-      "city": "Scarborough, ON",
+      "id": "6",
+      "city": "Barrie, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "89",
-      "city": "Rouyn, QC",
+      "id": "68",
+      "city": "New Liskeard, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "78",
-      "city": "Parry Sound, ON",
+      "id": "444",
+      "city": "Barrie South, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "264",
-      "city": "Agincourt, ON",
+      "id": "30",
+      "city": "Warden & Eglinton, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "189",
-      "city": "Aurora, ON",
+      "id": "61",
+      "city": "Midland, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     }
   ],
   "failedTwice": [
     {
-      "id": "93",
-      "city": "Edmundston, NB"
+      "id": "6",
+      "city": "Barrie, ON"
     },
     {
-      "id": "175",
-      "city": "Scarborough, ON"
+      "id": "209",
+      "city": "Kingston Rd, ON"
     },
     {
-      "id": "687",
-      "city": "Innisfil, ON"
+      "id": "164",
+      "city": "Markham, ON"
     },
     {
-      "id": "399",
-      "city": "Markham East, ON"
+      "id": "69",
+      "city": "Newmarket, ON"
     },
     {
-      "id": "89",
-      "city": "Rouyn, QC"
+      "id": "444",
+      "city": "Barrie South, ON"
     },
     {
-      "id": "78",
-      "city": "Parry Sound, ON"
+      "id": "30",
+      "city": "Warden & Eglinton, ON"
     },
     {
-      "id": "189",
-      "city": "Aurora, ON"
+      "id": "68",
+      "city": "New Liskeard, ON"
     },
     {
-      "id": "264",
-      "city": "Agincourt, ON"
+      "id": "61",
+      "city": "Midland, ON"
     }
   ],
   "retriedAndSucceeded": []
