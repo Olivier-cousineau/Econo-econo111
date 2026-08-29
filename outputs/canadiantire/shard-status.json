@@ -1,87 +1,87 @@
 {
-  "generatedAt": "2026-08-29T09:15:35.076Z",
+  "generatedAt": "2026-08-29T11:12:19.627Z",
   "stores": [
     {
-      "id": "177",
-      "city": "Hamilton Mt.West, ON",
+      "id": "77",
+      "city": "Owen Sound, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "657",
-      "city": "Hanmer, ON",
+      "id": "244",
+      "city": "Chelmsford, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "27",
-      "city": "Dundas, ON",
+      "id": "49",
+      "city": "Caledonia, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "29",
-      "city": "Dunnville, ON",
+      "id": "168",
+      "city": "Cambridge Hespeler, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "42",
-      "city": "Guelph Stone Rd, ON",
+      "id": "36",
+      "city": "Cambridge, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "31",
-      "city": "Centre Wellington, ON",
+      "id": "35",
+      "city": "Fredericton, NB",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "260",
-      "city": "Guelph North, ON",
+      "id": "66",
+      "city": "Mount Forest, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "639",
-      "city": "Ancaster, ON",
+      "id": "337",
+      "city": "Fredericton North, NB",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     }
   ],
   "failedTwice": [
     {
-      "id": "177",
-      "city": "Hamilton Mt.West, ON"
+      "id": "77",
+      "city": "Owen Sound, ON"
     },
     {
-      "id": "657",
-      "city": "Hanmer, ON"
+      "id": "168",
+      "city": "Cambridge Hespeler, ON"
     },
     {
-      "id": "29",
-      "city": "Dunnville, ON"
+      "id": "244",
+      "city": "Chelmsford, ON"
     },
     {
-      "id": "27",
-      "city": "Dundas, ON"
+      "id": "49",
+      "city": "Caledonia, ON"
     },
     {
-      "id": "42",
-      "city": "Guelph Stone Rd, ON"
+      "id": "36",
+      "city": "Cambridge, ON"
     },
     {
-      "id": "639",
-      "city": "Ancaster, ON"
+      "id": "66",
+      "city": "Mount Forest, ON"
     },
     {
-      "id": "31",
-      "city": "Centre Wellington, ON"
+      "id": "35",
+      "city": "Fredericton, NB"
     },
     {
-      "id": "260",
-      "city": "Guelph North, ON"
+      "id": "337",
+      "city": "Fredericton North, NB"
     }
   ],
   "retriedAndSucceeded": []
