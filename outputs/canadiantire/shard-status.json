@@ -1,87 +1,87 @@
 {
-  "generatedAt": "2026-09-03T09:46:07.177Z",
+  "generatedAt": "2026-09-03T12:15:26.539Z",
   "stores": [
     {
-      "id": "196",
-      "city": "Maniwaki, QC",
+      "id": "423",
+      "city": "Donnacona, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "85",
-      "city": "Prescott, ON",
+      "id": "80",
+      "city": "Perth, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "348",
-      "city": "Sherbrooke Fleurimont, QC",
+      "id": "352",
+      "city": "La Tuque, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "18",
-      "city": "Carleton Place, ON",
+      "id": "86",
+      "city": "Renfrew, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "14",
-      "city": "Brockville, ON",
+      "id": "156",
+      "city": "Thetford Mines, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "98",
-      "city": "Smiths Falls, ON",
+      "id": "692",
+      "city": "Ancienne Lorette, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "4",
-      "city": "Arnprior, ON",
+      "id": "37",
+      "city": "Gananoque, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "99",
-      "city": "Shawville, QC",
+      "id": "624",
+      "city": "St. Romuald, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     }
   ],
   "failedTwice": [
     {
-      "id": "196",
-      "city": "Maniwaki, QC"
+      "id": "352",
+      "city": "La Tuque, QC"
     },
     {
-      "id": "348",
-      "city": "Sherbrooke Fleurimont, QC"
+      "id": "86",
+      "city": "Renfrew, ON"
     },
     {
-      "id": "18",
-      "city": "Carleton Place, ON"
+      "id": "80",
+      "city": "Perth, ON"
     },
     {
-      "id": "85",
-      "city": "Prescott, ON"
+      "id": "423",
+      "city": "Donnacona, QC"
     },
     {
-      "id": "14",
-      "city": "Brockville, ON"
+      "id": "692",
+      "city": "Ancienne Lorette, QC"
     },
     {
-      "id": "4",
-      "city": "Arnprior, ON"
+      "id": "156",
+      "city": "Thetford Mines, QC"
     },
     {
-      "id": "98",
-      "city": "Smiths Falls, ON"
+      "id": "624",
+      "city": "St. Romuald, QC"
     },
     {
-      "id": "99",
-      "city": "Shawville, QC"
+      "id": "37",
+      "city": "Gananoque, ON"
     }
   ],
   "retriedAndSucceeded": []
