@@ -1,87 +1,87 @@
 {
-  "generatedAt": "2026-09-03T21:36:43.837Z",
+  "generatedAt": "2026-09-03T23:16:53.505Z",
   "stores": [
     {
-      "id": "5",
-      "city": "Bancroft, ON",
+      "id": "306",
+      "city": "La Malbaie, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "82",
-      "city": "Picton, ON",
+      "id": "221",
+      "city": "Jonquiere, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "7",
-      "city": "Belleville, ON",
+      "id": "268",
+      "city": "Chicoutimi, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "458",
-      "city": "Roberval, QC",
+      "id": "335",
+      "city": "La Baie, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "112",
-      "city": "Trenton, ON",
+      "id": "284",
+      "city": "Dolbeau-Mistassini, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "17",
-      "city": "Campbellford, ON",
+      "id": "660",
+      "city": "Peterborough North, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "633",
-      "city": "La Pocatiere, QC",
+      "id": "81",
+      "city": "Peterborough, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "298",
-      "city": "Alma, QC",
+      "id": "682",
+      "city": "Minden, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     }
   ],
   "failedTwice": [
     {
-      "id": "458",
-      "city": "Roberval, QC"
+      "id": "268",
+      "city": "Chicoutimi, QC"
     },
     {
-      "id": "82",
-      "city": "Picton, ON"
+      "id": "221",
+      "city": "Jonquiere, QC"
     },
     {
-      "id": "5",
-      "city": "Bancroft, ON"
+      "id": "306",
+      "city": "La Malbaie, QC"
     },
     {
-      "id": "7",
-      "city": "Belleville, ON"
+      "id": "335",
+      "city": "La Baie, QC"
     },
     {
-      "id": "17",
-      "city": "Campbellford, ON"
+      "id": "660",
+      "city": "Peterborough North, ON"
     },
     {
-      "id": "112",
-      "city": "Trenton, ON"
+      "id": "284",
+      "city": "Dolbeau-Mistassini, QC"
     },
     {
-      "id": "633",
-      "city": "La Pocatiere, QC"
+      "id": "81",
+      "city": "Peterborough, ON"
     },
     {
-      "id": "298",
-      "city": "Alma, QC"
+      "id": "682",
+      "city": "Minden, ON"
     }
   ],
   "retriedAndSucceeded": []
