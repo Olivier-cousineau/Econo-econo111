@@ -1,87 +1,87 @@
 {
-  "generatedAt": "2026-09-05T04:15:47.404Z",
+  "generatedAt": "2026-09-05T06:37:33.149Z",
   "stores": [
     {
-      "id": "159",
-      "city": "Georgetown, ON",
+      "id": "122",
+      "city": "Burlington Fairview, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "73",
-      "city": "Orangeville, ON",
+      "id": "154",
+      "city": "Hamilton East, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "128",
-      "city": "Port Colborne, ON",
+      "id": "129",
+      "city": "Hamilton Centre, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "140",
-      "city": "Milton, ON",
+      "id": "278",
+      "city": "Sudbury North, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "40",
-      "city": "Grimsby, ON",
+      "id": "220",
+      "city": "Waterdown, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "232",
-      "city": "St. Stephen, NB",
+      "id": "45",
+      "city": "Hamilton Main, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "52",
-      "city": "Kirkland Lake, ON",
+      "id": "194",
+      "city": "Hamilton Mt.East, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "412",
-      "city": "Burlington North, ON",
+      "id": "445",
+      "city": "Sudbury South, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     }
   ],
   "failedTwice": [
     {
-      "id": "159",
-      "city": "Georgetown, ON"
+      "id": "278",
+      "city": "Sudbury North, ON"
     },
     {
-      "id": "73",
-      "city": "Orangeville, ON"
+      "id": "122",
+      "city": "Burlington Fairview, ON"
     },
     {
-      "id": "140",
-      "city": "Milton, ON"
+      "id": "129",
+      "city": "Hamilton Centre, ON"
     },
     {
-      "id": "128",
-      "city": "Port Colborne, ON"
+      "id": "154",
+      "city": "Hamilton East, ON"
     },
     {
-      "id": "40",
-      "city": "Grimsby, ON"
+      "id": "220",
+      "city": "Waterdown, ON"
     },
     {
-      "id": "412",
-      "city": "Burlington North, ON"
+      "id": "45",
+      "city": "Hamilton Main, ON"
     },
     {
-      "id": "52",
-      "city": "Kirkland Lake, ON"
+      "id": "194",
+      "city": "Hamilton Mt.East, ON"
     },
     {
-      "id": "232",
-      "city": "St. Stephen, NB"
+      "id": "445",
+      "city": "Sudbury South, ON"
     }
   ],
   "retriedAndSucceeded": []
