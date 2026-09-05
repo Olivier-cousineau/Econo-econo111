@@ -1,87 +1,87 @@
 {
-  "generatedAt": "2026-09-05T02:44:36.764Z",
+  "generatedAt": "2026-09-05T04:15:47.404Z",
   "stores": [
     {
-      "id": "241",
-      "city": "Mississauga Southdown, ON",
+      "id": "159",
+      "city": "Georgetown, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "675",
-      "city": "Brampton McLaughlin Road, ON",
+      "id": "73",
+      "city": "Orangeville, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "424",
-      "city": "Oak., Winston Churchill, ON",
+      "id": "128",
+      "city": "Port Colborne, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "233",
-      "city": "La Sarre, QC",
+      "id": "140",
+      "city": "Milton, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "118",
-      "city": "Welland, ON",
+      "id": "40",
+      "city": "Grimsby, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "169",
-      "city": "Meadowvale, ON",
+      "id": "232",
+      "city": "St. Stephen, NB",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "429",
-      "city": "Oakville North, ON",
+      "id": "52",
+      "city": "Kirkland Lake, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "143",
-      "city": "Oakville, ON",
+      "id": "412",
+      "city": "Burlington North, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     }
   ],
   "failedTwice": [
     {
-      "id": "675",
-      "city": "Brampton McLaughlin Road, ON"
+      "id": "159",
+      "city": "Georgetown, ON"
     },
     {
-      "id": "233",
-      "city": "La Sarre, QC"
+      "id": "73",
+      "city": "Orangeville, ON"
     },
     {
-      "id": "241",
-      "city": "Mississauga Southdown, ON"
+      "id": "140",
+      "city": "Milton, ON"
     },
     {
-      "id": "424",
-      "city": "Oak., Winston Churchill, ON"
+      "id": "128",
+      "city": "Port Colborne, ON"
     },
     {
-      "id": "169",
-      "city": "Meadowvale, ON"
+      "id": "40",
+      "city": "Grimsby, ON"
     },
     {
-      "id": "429",
-      "city": "Oakville North, ON"
+      "id": "412",
+      "city": "Burlington North, ON"
     },
     {
-      "id": "143",
-      "city": "Oakville, ON"
+      "id": "52",
+      "city": "Kirkland Lake, ON"
     },
     {
-      "id": "118",
-      "city": "Welland, ON"
+      "id": "232",
+      "city": "St. Stephen, NB"
     }
   ],
   "retriedAndSucceeded": []
