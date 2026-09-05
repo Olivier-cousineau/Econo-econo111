@@ -1,87 +1,87 @@
 {
-  "generatedAt": "2026-09-05T13:39:30.861Z",
+  "generatedAt": "2026-09-05T15:39:15.233Z",
   "stores": [
     {
-      "id": "139",
-      "city": "Kitchener East, ON",
+      "id": "674",
+      "city": "Waterloo West, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "616",
-      "city": "Elmira, ON",
+      "id": "309",
+      "city": "Oromocto, NB",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "53",
-      "city": "Kitchener South, ON",
+      "id": "43",
+      "city": "Paris, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "664",
-      "city": "Brantford North, ON",
+      "id": "315",
+      "city": "Matane, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "265",
-      "city": "Baie-Comeau, QC",
+      "id": "57",
+      "city": "Listowel, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "251",
-      "city": "Waterloo, ON",
+      "id": "97",
+      "city": "Simcoe, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "420",
-      "city": "Kitchener West, ON",
+      "id": "269",
+      "city": "Port Elgin, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "46",
-      "city": "Hanover, ON",
+      "id": "22",
+      "city": "Espanola, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     }
   ],
   "failedTwice": [
     {
-      "id": "664",
-      "city": "Brantford North, ON"
+      "id": "674",
+      "city": "Waterloo West, ON"
     },
     {
-      "id": "139",
-      "city": "Kitchener East, ON"
+      "id": "309",
+      "city": "Oromocto, NB"
     },
     {
-      "id": "616",
-      "city": "Elmira, ON"
+      "id": "43",
+      "city": "Paris, ON"
     },
     {
-      "id": "53",
-      "city": "Kitchener South, ON"
+      "id": "315",
+      "city": "Matane, QC"
     },
     {
-      "id": "265",
-      "city": "Baie-Comeau, QC"
+      "id": "269",
+      "city": "Port Elgin, ON"
     },
     {
-      "id": "46",
-      "city": "Hanover, ON"
+      "id": "97",
+      "city": "Simcoe, ON"
     },
     {
-      "id": "251",
-      "city": "Waterloo, ON"
+      "id": "57",
+      "city": "Listowel, ON"
     },
     {
-      "id": "420",
-      "city": "Kitchener West, ON"
+      "id": "22",
+      "city": "Espanola, ON"
     }
   ],
   "retriedAndSucceeded": []
