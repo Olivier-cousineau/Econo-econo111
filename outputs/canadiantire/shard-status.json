@@ -1,87 +1,87 @@
 {
-  "generatedAt": "2026-09-24T15:21:25.372Z",
+  "generatedAt": "2026-09-24T18:07:06.348Z",
   "stores": [
     {
-      "id": "342",
-      "city": "Quebec Les Saules, QC",
+      "id": "184",
+      "city": "Beauport, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "245",
-      "city": "Quebec Ste. Foy, QC",
+      "id": "173",
+      "city": "St. Georges, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "79",
-      "city": "Pembroke, ON",
+      "id": "694",
+      "city": "Kingston Division St., ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "405",
-      "city": "Lebourgneuf, QC",
+      "id": "195",
+      "city": "Kingston, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "101",
-      "city": "Quebec Vanier, QC",
+      "id": "417",
+      "city": "Kingston Township, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "416",
-      "city": "Ste. Marie De Beauce, QC",
+      "id": "253",
+      "city": "Deep River, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "225",
-      "city": "Lac Megantic, QC",
+      "id": "65",
+      "city": "Napanee, ON",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     },
     {
-      "id": "165",
-      "city": "Levis, QC",
+      "id": "180",
+      "city": "Montmagny, QC",
       "status": "failed_twice",
       "details": "failed twice – accepted"
     }
   ],
   "failedTwice": [
     {
-      "id": "79",
-      "city": "Pembroke, ON"
+      "id": "694",
+      "city": "Kingston Division St., ON"
     },
     {
-      "id": "342",
-      "city": "Quebec Les Saules, QC"
+      "id": "184",
+      "city": "Beauport, QC"
     },
     {
-      "id": "405",
-      "city": "Lebourgneuf, QC"
+      "id": "173",
+      "city": "St. Georges, QC"
     },
     {
-      "id": "245",
-      "city": "Quebec Ste. Foy, QC"
+      "id": "195",
+      "city": "Kingston, ON"
     },
     {
-      "id": "101",
-      "city": "Quebec Vanier, QC"
+      "id": "417",
+      "city": "Kingston Township, ON"
     },
     {
-      "id": "165",
-      "city": "Levis, QC"
+      "id": "253",
+      "city": "Deep River, ON"
     },
     {
-      "id": "225",
-      "city": "Lac Megantic, QC"
+      "id": "180",
+      "city": "Montmagny, QC"
     },
     {
-      "id": "416",
-      "city": "Ste. Marie De Beauce, QC"
+      "id": "65",
+      "city": "Napanee, ON"
     }
   ],
   "retriedAndSucceeded": []
